@@ -684,7 +684,7 @@ HOME = {
             "dites-le sur le Discord, je lis tout.",
         ],
         "log_title": "Derniers changements",
-        "log_lede": "Tirés de l'historique du code, du plus récent au plus ancien.",
+        "log_lede": "Les versions publiées, de la plus récente à la plus ancienne.",
     },
     "en": {
         "title": "Raye Linux · Public beta",
@@ -799,34 +799,32 @@ HOME = {
             "Discord, I read everything.",
         ],
         "log_title": "Latest changes",
-        "log_lede": "Taken from the code history, newest first.",
+        "log_lede": "The versions we shipped, newest first.",
     },
 }
 
-# The "latest changes" list on the home page. Every line is a commit in one
-# of the Raye repositories, dated by its author date; keep them newest first
-# and rewrite the old ones out rather than letting the list grow.
+# The "latest changes" list on the home page: one line per published version,
+# newest first; rewrite the old ones out rather than letting the list grow.
 CHANGES = [
-    ("2026-11-08", "theme 1c0c19f",
-     {"fr": "Le bouton des réglages rapides apparaît maintenant dans la barre des tâches "
-            "dès la première connexion.",
-      "en": "The quick settings button now shows on the taskbar at the very first "
-            "sign-in."}),
-    ("2026-11-07", "theme 6282497",
-     {"fr": "Une fenêtre réduite perdait son bouton dans la barre, et un clic sur l'icône "
-            "ouvrait une deuxième copie de l'appli. Elle le garde maintenant.",
-      "en": "A minimized window lost its taskbar button, and clicking the icon started a "
-            "second copy of the app. It keeps its button now."}),
-    ("2026-11-07", "installer 29bd5f8",
-     {"fr": "L'installateur a sa propre page Disque, et il relit le disque juste avant "
-            "d'écrire : si quelque chose a changé, il s'arrête.",
-      "en": "The installer has its own Disk page, and it reads the disk again just before "
-            "writing: if anything changed, it stops."}),
-    ("2026-11-07", "iso c88b083",
-     {"fr": "Une session en français a enfin ses dossiers en français (Documents, "
-            "Téléchargements, Images…) et Firefox en français.",
-      "en": "A French session finally gets French folder names (Documents, "
-            "Téléchargements, Images…) and Firefox in French."}),
+    ("2026-11-15", "0.5.6",
+     {"fr": "Les notifications ne restent plus figées au milieu de l'écran, la barre des "
+            "tâches est lisible en mode clair, et Raye Update fait le ménage après une mise à jour.",
+      "en": "Notifications no longer get stuck in the middle of the screen, the taskbar is "
+            "readable in light mode, and Raye Update cleans up after an update."}),
+    ("2026-11-15", "0.5.4",
+     {"fr": "La page Compte des Paramètres est refaite : connexion à votre compte Raye "
+            "et synchronisation de vos réglages.",
+      "en": "The Account page in Settings is redone: sign in to your Raye account and "
+            "sync your settings."}),
+    ("2026-11-14", "0.5.2",
+     {"fr": "L'écran des mises à jour au démarrage est plus rapide et n'affiche plus "
+            "l'ancien pourcentage.",
+      "en": "The update screen at startup is faster and no longer shows the old "
+            "percentage."}),
+    ("2026-11-14", "0.5",
+     {"fr": "La bêta publique de Raye Linux est sortie : téléchargement libre sur "
+            "rayelinux.com.",
+      "en": "The Raye Linux public beta is out: free to download on rayelinux.com."}),
 ]
 
 
