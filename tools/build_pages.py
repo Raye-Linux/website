@@ -180,6 +180,11 @@ DOWNLOAD = {
         ],
         "known": "Problèmes connus de la bêta",
         "known_items": [
+            "<strong>Écran noir</strong> avec certaines cartes graphiques AMD plus anciennes "
+            "(RX 550…), un correctif arrive cette semaine. En attendant : sur la clé, choisissez "
+            "« Safe graphics ». Après l'installation, au démarrage, appuyez sur Échap jusqu'au "
+            "menu Raye, puis <code>e</code>, ajoutez <code>nomodeset</code> après "
+            "<code>quiet splash</code> et appuyez sur F10.",
             "Le terminal, l'outil de capture et quelques boîtes de dialogue sont aux couleurs "
             "de Raye, mais pas encore redessinés en applis Raye.",
             "Les programmes .exe : le premier lancement prend quelques secondes et tous ne fonctionnent pas.",
@@ -259,6 +264,10 @@ DOWNLOAD = {
         ],
         "known": "Known issues in the beta",
         "known_items": [
+            "<strong>Black screen</strong> with some older AMD graphics cards (RX 550…), a fix "
+            "is coming this week. Until then: on the USB stick, pick \"Safe graphics\". After "
+            "installing, at startup tap Esc until the Raye menu, press <code>e</code>, add "
+            "<code>nomodeset</code> after <code>quiet splash</code> and press F10.",
             "The terminal, the screenshot tool and a few dialogs wear Raye's colors but are "
             "not redrawn as Raye apps yet.",
             ".exe programs: the first start takes a few seconds, and not all of them run.",

@@ -80,7 +80,7 @@
   {
    "id": "download:fr:5.0",
    "lang": "fr",
-   "text": "Le terminal, l'outil de capture et quelques boîtes de dialogue sont aux couleurs de Raye, mais pas encore redessinés en applis Raye.\n\nLes programmes .exe : le premier lancement prend quelques secondes et tous ne fonctionnent pas.\n\nHors ligne, les Paramètres indiquent que les mises à jour n'ont pas pu être vérifiées.",
+   "text": "Écran noir avec certaines cartes graphiques AMD plus anciennes (RX 550…), un correctif arrive cette semaine. En attendant : sur la clé, choisissez « Safe graphics ». Après l'installation, au démarrage, appuyez sur Échap jusqu'au menu Raye, puis e, ajoutez nomodeset après quiet splash et appuyez sur F10.\n\nLe terminal, l'outil de capture et quelques boîtes de dialogue sont aux couleurs de Raye, mais pas encore redessinés en applis Raye.\n\nLes programmes .exe : le premier lancement prend quelques secondes et tous ne fonctionnent pas.\n\nHors ligne, les Paramètres indiquent que les mises à jour n'ont pas pu être vérifiées.",
    "title": "Problèmes connus de la bêta",
    "url": "/fr/telecharger/"
   },
@@ -171,7 +171,7 @@
   {
    "id": "download:en:5.0",
    "lang": "en",
-   "text": "The terminal, the screenshot tool and a few dialogs wear Raye's colors but are not redrawn as Raye apps yet.\n\n.exe programs: the first start takes a few seconds, and not all of them run.\n\nOffline, Settings says updates could not be checked.",
+   "text": "Black screen with some older AMD graphics cards (RX 550…), a fix is coming this week. Until then: on the USB stick, pick \"Safe graphics\". After installing, at startup tap Esc until the Raye menu, press e, add nomodeset after quiet splash and press F10.\n\nThe terminal, the screenshot tool and a few dialogs wear Raye's colors but are not redrawn as Raye apps yet.\n\n.exe programs: the first start takes a few seconds, and not all of them run.\n\nOffline, Settings says updates could not be checked.",
    "title": "Known issues in the beta",
    "url": "/en/download/"
   },
@@ -1043,7 +1043,7 @@
   "0.5-beta/release-notes-0.5-beta.fr.md": "b33e18072a1dcde4",
   "0.5-beta/release-notes-0.5-beta.md": "af6872469ae5f833",
   "discord/texts.py": "5bff52e13c468251",
-  "download/index.html": "56af5d17916ed435",
+  "download/index.html": "d1088b8c00997369",
   "en/01-installing.md": "730f1ce48d186ca3",
   "en/02-first-steps.md": "327774439b2c0c38",
   "en/03-updates.md": "55e63fd65d21506a",
@@ -1066,6 +1066,6 @@
   "fr/09-windows-a-cote.md": "7eb36202d9916723",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
   "fr/index.html": "4f54271676fb036f",
-  "telecharger/index.html": "a02d34bdbd065165"
+  "telecharger/index.html": "750fde0d4f3634ce"
  }
 }
