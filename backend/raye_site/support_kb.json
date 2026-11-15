@@ -185,36 +185,43 @@
   {
    "id": "handbook:fr:01-installer:0",
    "lang": "fr",
-   "text": "Il vous faut une clé USB d'au moins 8 Go et 25 Go de libre sur\nl'ordinateur. Tout ce qui est sur la clé sera effacé.",
-   "title": "Installer Raye Linux",
+   "text": "- Un PC 64 bits (Intel ou AMD) qui démarre en mode UEFI, 4 Go de mémoire\n (8 Go conseillés) et 25 Go d'espace libre.\n- Une clé USB de 8 Go ou plus. Tout ce qu'elle contient sera effacé.\n- Une vingtaine de minutes, et une sauvegarde de vos fichiers importants :\n l'installation peut effacer le disque choisi.",
+   "title": "Installer Raye Linux › Ce qu'il vous faut",
    "url": null
   },
   {
    "id": "handbook:fr:01-installer:1",
    "lang": "fr",
-   "text": "Téléchargez l'image de Raye (le fichier `.iso`), puis copiez-la sur la\nclé avec un outil comme balenaEtcher ou Rufus (mode « image DD »). Ce\nn'est pas un simple copier-coller : l'outil rend la clé démarrable.",
-   "title": "Installer Raye Linux › 1. Préparer la clé",
+   "text": "Téléchargez l'image de Raye (le fichier `.iso`, environ 2,9 Go) sur\nrayelinux.com. Pour être sûr que le téléchargement est complet, sa taille\ndoit correspondre à celle de la page de téléchargement, et son SHA-256 à\ncelui qui y est indiqué.",
+   "title": "Installer Raye Linux › 1. Télécharger l'image",
    "url": null
   },
   {
    "id": "handbook:fr:01-installer:2",
    "lang": "fr",
-   "text": "Branchez la clé, redémarrez, et ouvrez le menu de démarrage de votre\nordinateur. La touche dépend de la marque : souvent F12 (Dell, Lenovo),\nF9 (HP), F8 (ASUS) ou Échap. Choisissez la clé USB.\n\nRaye démarre avec le Secure Boot activé, vous n'avez rien à changer\ndans les réglages de l'ordinateur.",
-   "title": "Installer Raye Linux › 2. Démarrer sur la clé",
+   "text": "Copier le fichier sur la clé ne suffit pas : un outil doit la rendre\ndémarrable.\n\n- **Sous Windows :** Rufus (rufus.ie). Choisissez la clé sous Périphérique,\n cliquez sur SÉLECTION et choisissez l'image, cliquez sur DÉMARRER, puis\n choisissez **le mode DD** quand il le demande. Attendez « PRÊT ».\n- **Sous Windows, Mac ou Linux :** balenaEtcher. Flash from file (l'image),\n Select target (la clé), Flash. Sous Windows, si ça échoue, faites un clic\n droit dessus et lancez-le avec tous les droits.\n- **Sous Linux Mint :** clic droit sur l'image, « Créer une clé USB\n démarrable ». Fedora Media Writer et GNOME Disques (« Restaurer l'image\n disque ») fonctionnent aussi.\n- Ventoy n'est pas encore testé. Il peut fonctionner (avec le Secure Boot,\n il demande une fois d'enregistrer sa clé), mais Rufus en mode DD reste le\n plus sûr.\n\nSi l'outil dit que l'écriture a échoué, essayez un autre port USB, lancez\nl'outil avec tous les droits, ou prenez une autre clé : les clés sans marque\néchouent souvent sur les gros fichiers.",
+   "title": "Installer Raye Linux › 2. Préparer la clé USB",
    "url": null
   },
   {
    "id": "handbook:fr:01-installer:3",
    "lang": "fr",
-   "text": "La clé lance l'installation. Essayer Raye sans l'installer n'est pas\nencore possible : ça arrive dans une prochaine mise à jour.",
-   "title": "Installer Raye Linux › 3. Installer",
+   "text": "Branchez la clé, redémarrez, et ouvrez le menu de démarrage de l'ordinateur\ndès qu'il s'allume. La touche dépend de la marque : F12 (Dell, Lenovo, Acer),\nF9 (HP, puis choisissez le périphérique USB), F8 (ASUS), F11 (MSI) ou Échap.\nChoisissez la clé USB, l'entrée UEFI s'il y en a deux.\n\nRaye démarre avec le Secure Boot activé, vous n'avez rien à changer dans les\nréglages de l'ordinateur.\n\nLa clé affiche un menu : **Install Raye Linux** (anglais), **Installer Raye\nLinux** (français) et **Safe graphics**. Essayer Raye sans l'installer n'est\npas encore possible : ça arrive dans une prochaine mise à jour.",
+   "title": "Installer Raye Linux › 3. Démarrer sur la clé",
    "url": null
   },
   {
    "id": "handbook:fr:01-installer:4",
    "lang": "fr",
-   "text": "1. **Wi-Fi** : si l'ordinateur n'est pas branché par câble, choisissez\n votre réseau. Raye s'en sert pour régler l'heure toute seule.\n2. **Langue** et **clavier**.\n3. **Fuseau horaire** : déjà rempli si vous êtes connecté.\n4. **Disque** : « Effacer le disque » installe Raye seul sur\n l'ordinateur. Cochez « Chiffrer » pour protéger vos fichiers par un\n mot de passe si l'ordinateur est volé.\n5. **Votre compte** : votre nom, votre identifiant et un mot de passe.\n\nComptez une dizaine de minutes. À la fin, redémarrez : l'ordinateur\ndémarre directement sur Raye, même si la clé est encore branchée. Vous\npouvez la retirer.",
+   "text": "1. **Région** : votre langue et votre clavier.\n2. **Réseau** : si l'ordinateur n'est pas branché par câble, choisissez votre\n Wi-Fi. Raye s'en sert pour régler l'heure et le fuseau tout seul.\n3. **Disque** : choisissez le disque, puis comment Raye l'utilise.\n - **Installer à côté de Windows** : Raye prend une partie de l'espace\n libre et garde Windows. À chaque démarrage, vous choisissez lequel.\n - **Effacer ce disque** : Raye est seul sur ce disque. Tout ce qu'il\n contient est supprimé.\n - **Chiffrer Raye avec un mot de passe** protège vos fichiers si\n l'ordinateur est volé.\n Lisez le résumé en bas : il montre ce que chaque système obtiendra.\n4. **Compte** : votre nom, un identifiant et un mot de passe. Vous pouvez\n aussi vous connecter à un compte Raye (facultatif) pour synchroniser vos\n réglages.\n5. **Confidentialité** : vos choix, tous désactivés par défaut.\n6. **Installation** : une dizaine de minutes.\n\nÀ la fin, redémarrez et retirez la clé quand l'écran vous le demande.\nL'ordinateur démarre alors sur Raye.",
    "title": "Installer Raye Linux › 4. Les étapes de l'installation",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:01-installer:5",
+   "lang": "fr",
+   "text": "- **Écran noir** au démarrage de la clé : choisissez **Safe graphics** dans\n son menu. Si l'écran devient noir après l'installation : à l'allumage,\n appuyez sur Échap jusqu'au menu Raye, choisissez **Raye Linux (safe\n graphics)** s'il est là, ou appuyez sur `e`, ajoutez `nomodeset` après\n `quiet splash` et appuyez sur F10. Certaines cartes graphiques AMD plus\n anciennes sont concernées ; un correctif arrive.\n- **« you need to load the kernel first »** : retéléchargez l'image (la\n version corrigée date du 15 novembre) et réécrivez la clé.\n- **La clé n'apparaît pas dans le menu de démarrage** : réécrivez-la en mode\n DD, essayez un autre port USB, et vérifiez que l'ordinateur démarre en\n mode UEFI.\n- Toujours bloqué ? Demandez sur le Discord de Raye Linux, dans #help, avec\n le modèle de votre ordinateur et une photo de l'écran.",
+   "title": "Installer Raye Linux › En cas de problème",
    "url": null
   },
   {
@@ -479,36 +486,43 @@
   {
    "id": "handbook:en:01-installing:0",
    "lang": "en",
-   "text": "You need a USB stick of at least 8 GB and 25 GB free on the computer.\nEverything on the stick will be erased.",
-   "title": "Installing Raye Linux",
+   "text": "- A 64-bit PC (Intel or AMD) that starts in UEFI mode, 4 GB of memory (8 GB\n recommended) and 25 GB of free disk space.\n- A USB stick of 8 GB or more. Everything on it will be erased.\n- About 20 minutes, and a backup of your important files: installing can\n erase the disk you pick.",
+   "title": "Installing Raye Linux › What you need",
    "url": null
   },
   {
    "id": "handbook:en:01-installing:1",
    "lang": "en",
-   "text": "Download the Raye image (the `.iso` file) and write it to the stick with\na tool such as balenaEtcher or Rufus (\"DD image\" mode). Copying the file\nby hand is not enough: the tool makes the stick bootable.",
-   "title": "Installing Raye Linux › 1. Make the stick",
+   "text": "Download the Raye image (the `.iso` file, about 2.9 GB) from\nrayelinux.com. To be sure the download is complete, its size must match the\none on the download page, and its SHA-256 must match the one shown there.",
+   "title": "Installing Raye Linux › 1. Download the image",
    "url": null
   },
   {
    "id": "handbook:en:01-installing:2",
    "lang": "en",
-   "text": "Plug the stick in, restart, and open your computer's boot menu. The key\ndepends on the brand: often F12 (Dell, Lenovo), F9 (HP), F8 (ASUS) or\nEsc. Pick the USB stick.\n\nRaye starts with Secure Boot on, there is nothing to change in the\ncomputer's settings.",
-   "title": "Installing Raye Linux › 2. Start from the stick",
+   "text": "Copying the file onto the stick is not enough: a tool has to make it\nbootable.\n\n- **On Windows:** Rufus (rufus.ie). Pick the stick under Device, click\n SELECT and choose the image, click START, and when it asks, choose\n **DD mode**. Wait until it says READY.\n- **On Windows, Mac or Linux:** balenaEtcher. Flash from file (the image),\n Select target (the stick), Flash. On Windows, if it fails, right-click it\n and start it with full rights.\n- **On Linux Mint:** right-click the image and choose \"Make bootable USB\n stick\". Fedora Media Writer and GNOME Disks (\"Restore Disk Image\") work too.\n- Ventoy is not tested yet. It may work (with Secure Boot it asks once to\n enroll its key), but Rufus in DD mode is the surest.\n\nIf the tool says the write failed, try another USB port, start the tool\nwith full rights, or use another stick: cheap no-name sticks often fail on\nlarge writes.",
+   "title": "Installing Raye Linux › 2. Make the USB stick",
    "url": null
   },
   {
    "id": "handbook:en:01-installing:3",
    "lang": "en",
-   "text": "The stick starts the installer. Trying Raye without installing it is not\navailable yet: it is coming in a future update.",
-   "title": "Installing Raye Linux › 3. Install",
+   "text": "Plug the stick in, restart, and open your computer's boot menu right when\nit powers on. The key depends on the brand: F12 (Dell, Lenovo, Acer), F9\n(HP, then pick the USB device), F8 (ASUS), F11 (MSI) or Esc. Pick the USB\nstick, the UEFI entry if there are two.\n\nRaye starts with Secure Boot on, there is nothing to change in the\ncomputer's settings.\n\nThe stick shows a menu: **Install Raye Linux** (English), **Installer Raye\nLinux** (French) and **Safe graphics**. Trying Raye without installing it is\nnot available yet: it is coming in a future update.",
+   "title": "Installing Raye Linux › 3. Start from the stick",
    "url": null
   },
   {
    "id": "handbook:en:01-installing:4",
    "lang": "en",
-   "text": "1. **Wi-Fi**: if the computer has no cable, pick your network. Raye uses\n it to set the clock by itself.\n2. **Language** and **keyboard**.\n3. **Time zone**: already filled in when you are online.\n4. **Disk**: \"Erase disk\" puts Raye alone on the computer. Tick\n \"Encrypt\" to protect your files with a password if the computer is\n stolen.\n5. **Your account**: your name, a login and a password.\n\nIt takes about ten minutes. When it is done, restart: the computer goes\nstraight to Raye, even with the stick still in. You can take it out.",
+   "text": "1. **Region**: your language and keyboard.\n2. **Network**: if the computer has no cable, pick your Wi-Fi. Raye uses it\n to set the clock and the time zone by itself.\n3. **Disk**: pick the disk, then how Raye uses it.\n - **Install next to Windows**: Raye takes part of the free space and keeps\n Windows. At each start you choose which one to use.\n - **Erase this disk**: Raye is alone on that disk. Everything on it is\n deleted.\n - **Encrypt Raye with a password** protects your files if the computer\n is stolen.\n Read the summary at the bottom: it shows what each system will get.\n4. **Account**: your name, a login and a password. You can also sign in to a\n Raye account (optional) to sync your settings.\n5. **Privacy**: your choices, all off by default.\n6. **Install**: it takes about ten minutes.\n\nWhen it is done, restart and take the stick out when the screen asks. The\ncomputer then starts on Raye.",
    "title": "Installing Raye Linux › 4. The installer, step by step",
+   "url": null
+  },
+  {
+   "id": "handbook:en:01-installing:5",
+   "lang": "en",
+   "text": "- **Black screen** when starting the stick: choose **Safe graphics** in its\n menu. If the screen goes black after installing: at power on, tap Esc\n until the Raye menu shows, pick **Raye Linux (safe graphics)** if it is\n there, or press `e`, add `nomodeset` after `quiet splash` and press F10.\n Some older AMD graphics cards are affected; a fix is on the way.\n- **\"you need to load the kernel first\"**: download the image again (the\n fixed one is dated November 15) and rewrite the stick.\n- **The stick does not show in the boot menu**: rewrite it in DD mode, try\n another USB port, and check that the computer starts in UEFI mode.\n- Still stuck? Ask on the Raye Linux Discord, in #help, with your computer's\n model and a photo of the screen.",
+   "title": "Installing Raye Linux › If something goes wrong",
    "url": null
   },
   {
@@ -1044,7 +1058,7 @@
   "0.5-beta/release-notes-0.5-beta.md": "af6872469ae5f833",
   "discord/texts.py": "5bff52e13c468251",
   "download/index.html": "c4a225dc8f1563f5",
-  "en/01-installing.md": "730f1ce48d186ca3",
+  "en/01-installing.md": "395684ff312893d0",
   "en/02-first-steps.md": "327774439b2c0c38",
   "en/03-updates.md": "55e63fd65d21506a",
   "en/04-windows-programs.md": "566dc5bf7cd9c6aa",
@@ -1055,7 +1069,7 @@
   "en/09-windows-alongside.md": "3036d6b4bac8c2fc",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
   "en/index.html": "73b7d0b73743aff4",
-  "fr/01-installer.md": "7e250bca1b5b46c2",
+  "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
   "fr/04-programmes-windows.md": "8fea29e8a0806a07",
