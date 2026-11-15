@@ -1,0 +1,2 @@
+# Built and tested, but not on the server yet: rsync patterns, relative
+# to site/. Empty this file when tools/build_pages.py says DOWNLOAD_LIVE = True.

@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+"""Entry point of the rayelinux.com backend (run by raye-site.service)."""
+import sys
+
+from raye_site.server import main
+
+sys.exit(main())

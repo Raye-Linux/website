@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security and privacy · Raye Linux</title>
+<meta name="description" content="Secure Boot, the encrypted disk opened by the TPM chip, the recovery key, the password prompt, and what Raye Linux sends over the Internet.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://rayelinux.com/en/security/">
+<link rel="alternate" hreflang="en" href="https://rayelinux.com/en/security/">
+<link rel="alternate" hreflang="fr" href="https://rayelinux.com/securite/">
+<link rel="alternate" hreflang="x-default" href="https://rayelinux.com/securite/">
+<link rel="icon" href="/assets/favicon.svg?v=f2f36e0fd3" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=a6bcb976d7">
+<link rel="stylesheet" href="/assets/v1.css?v=3347fdaf0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Security and privacy · Raye Linux">
+<meta property="og:description" content="Secure Boot, the encrypted disk opened by the TPM chip, the recovery key, the password prompt, and what Raye Linux sends over the Internet.">
+<meta property="og:url" content="https://rayelinux.com/en/security/">
+<meta property="og:locale" content="en_CA">
+<script src="/assets/lang.js?v=2ab842208c"></script>
+<script src="/assets/app.js?v=61041bb972" defer></script>
+</head>
+<body class="v1 page-security">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/en/" aria-label="Raye Linux, home">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/securite/" hreflang="fr" lang="fr"
+   data-set-lang="fr" aria-label="Lire cette page en français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>Français</span></a>
+<a class="btn btn-accent btn-small" href="/en/download/">Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Look around</p>
+<h1>Security and privacy</h1>
+<p class="lede">On a PC with a TPM chip, you type only one password at startup, your account's, and yet the disk is encrypted. Here is what that protects, and what it doesn't.</p>
+</header>
+<div class="article">
+<h2 id="secureboot">Secure Boot</h2>
+<p>Raye starts with Secure Boot turned on and the keys most PCs ship with: on the test machine, I didn't have to change anything in the firmware. Some PCs, often sold as “Secured-core”, only accept Windows out of the box; you then have to allow the so-called “third-party” keys in the firmware settings. If your PC still refuses to start Raye, send me its model.</p>
+<h2 id="encryption">The encrypted disk</h2>
+<p>If you tick “Encrypt the Raye system” on the installer's Disk page, you pick a disk password, and the whole system is encrypted. Taken out of the PC and plugged in elsewhere, the disk can't be read without that password or the recovery key.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="setup-encrypt">
+<p class="todo-label">Screenshot to take · <code>setup-encrypt</code></p>
+<p class="todo-what">The installer's Disk page, “Encrypt the Raye system” ticked, with the two disk password fields.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<p>On a PC with a TPM chip, the chip opens the disk at startup. On that PC, your account password is therefore what protects your files, as with BitLocker. The chip only watches the Secure Boot settings: if they change, or the disk is put in another PC, Raye asks for the disk password again. Other changes in the startup don't ask for it. Without a TPM chip, the disk password is asked at every startup.</p>
+<p>I tried it once on the test machine: a firmware update that revokes old startup keys, and the disk opened by itself afterwards. If an update of that kind installs along with others at a restart, you may be asked for the recovery key once.</p>
+<h2 id="recovery">The recovery key</h2>
+<p>At your first sign-in, a window shows a recovery key: eight groups of six digits. It opens the disk if you forget its password. Copy it, write it down on paper or in a password manager, keep it somewhere other than the computer, then confirm with “I saved my key”.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="recovery-key">
+<p class="todo-label">Screenshot to take · <code>recovery-key</code></p>
+<p class="todo-what">The recovery key window at the first sign-in, the key itself blurred.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="prompt">The password before an app changes the system</h2>
+<p>When an app wants to change the system, the screen dims and Raye asks for your password, with the publisher's name, as in Windows 11. The prompt doesn't time out: on a standard account, you have time to go and ask the PC's administrator for the password. Updates, on the other hand, install without asking for it.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="uac">
+<p class="todo-label">Screenshot to take · <code>uac</code></p>
+<p class="todo-what">The password prompt: the dimmed screen, “Verified publisher: Raye Linux”, Yes and No.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-prompt prompt">
+<p class="limits-title" id="limits-prompt">What is still missing</p>
+<ul>
+<li>The prompt sometimes names the technical program rather than the app asking.</li>
+<li>You can't encrypt or decrypt the disk once Raye is installed yet: it's a choice made when installing.</li>
+</ul>
+</aside>
+<h2 id="crash">If the PC crashes</h2>
+<p>The Raye kernel, which you turn on in Settings, Drivers, shows a violet screen with the Raye eye if the system crashes, then restarts by itself after 30 seconds. The original kernel stays installed and stays the default.</p>
+<p>With Secure Boot, its key is enrolled at the next restart, in three steps: a blue screen shows up, press a key within 10 seconds, choose “Enroll MOK”, then type the six-digit code Settings showed you. If the 10 seconds go by, Raye starts on the original kernel.</p>
+<h2 id="network">What Raye sends over the Internet</h2>
+<p>Raye Update asks the two copies of Raye's packages, the base system's servers, Mozilla's for Firefox, and the firmware service for BIOS and device updates. The Store asks Flathub. The system also checks that the Internet answers, to spot a hotel network that wants you to sign in, and sets its clock from a time server. Firefox opens rayelinux.com when it starts, with no ads and no “managed by your organization” banner.</p>
+<p>Two things only go out if you agreed to them: your location, when an app asks for it and you say yes, and anonymous usage statistics, a box left unticked on the installer's Privacy page.</p>
+<p>This list comes from what I know of the code. I haven't yet watched a fresh install for an hour to check it address by address; once that's done, the record will be on this page.</p>
+<p>This website sets no cookies and loads nothing from another site; its <a href="/en/privacy/">privacy policy</a> says what it keeps.</p>
+</div>
+<nav class="next wrap" aria-label="Next">
+<a href="/en/hardware/"><span>Next</span><strong>Hardware</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+</div>
+<div>
+<h2>Look around</h2>
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/updates/">Updates</a></li>
+<li><a href="/en/security/">Security and privacy</a></li>
+</ul>
+</div>
+<div>
+<h2>Before you install</h2>
+<ul>
+<li><a href="/en/hardware/">Hardware</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/download/">Download</a></li>
+</ul>
+</div>
+<div>
+<h2>The project</h2>
+<ul>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/about/">About</a></li>
+<li><a href="/en/privacy/">Site privacy</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Updates · Raye Linux</title>
+<meta name="description" content="How Raye Linux updates: what installs while you work, what waits for the restart, and the restore points.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://rayelinux.com/en/updates/">
+<link rel="alternate" hreflang="en" href="https://rayelinux.com/en/updates/">
+<link rel="alternate" hreflang="fr" href="https://rayelinux.com/mises-a-jour/">
+<link rel="alternate" hreflang="x-default" href="https://rayelinux.com/mises-a-jour/">
+<link rel="icon" href="/assets/favicon.svg?v=f2f36e0fd3" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=a6bcb976d7">
+<link rel="stylesheet" href="/assets/v1.css?v=3347fdaf0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Updates · Raye Linux">
+<meta property="og:description" content="How Raye Linux updates: what installs while you work, what waits for the restart, and the restore points.">
+<meta property="og:url" content="https://rayelinux.com/en/updates/">
+<meta property="og:locale" content="en_CA">
+<script src="/assets/lang.js?v=2ab842208c"></script>
+<script src="/assets/app.js?v=61041bb972" defer></script>
+</head>
+<body class="v1 page-updates">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/en/" aria-label="Raye Linux, home">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/mises-a-jour/" hreflang="fr" lang="fr"
+   data-set-lang="fr" aria-label="Lire cette page en français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>Français</span></a>
+<a class="btn btn-accent btn-small" href="/en/download/">Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Look around</p>
+<h1>Updates</h1>
+<p class="lede">On November 11, 2026, three updates came in on the test machine. The Store and Calendar installed while the session was open; the desktop theme waited for the restart.</p>
+</header>
+<div class="article">
+<h2 id="live">What installs right away, what waits</h2>
+<p>What waits for the restart is what the system keeps loaded while it runs: the kernel, drivers, firmware, the core pieces of the system and the desktop itself. An update of that kind carries the label “Restart required”. The rest installs as soon as it's downloaded, with nothing for you to do.</p>
+<p>Security fixes are the exception: they install right away, even for those pieces.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="update-live">
+<p class="todo-label">Screenshot to take · <code>update-live</code></p>
+<p class="todo-what">Raye Update in Settings: updates already installed and a single one marked “Restart required”.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="restart">The restart</h2>
+<p>What waits installs when you choose “Update and restart”, in Start, in the notification or in Settings. An ordinary restart installs nothing, and Raye doesn't restart on its own unless you asked it to outside your active hours. While it installs, the Raye picture shows a ring and “Installing updates” with the percentage. For the desktop theme, 24 s passed between the startup picture and the sign-in screen on the test machine.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="update-boot">
+<p class="todo-label">Screenshot to take · <code>update-boot</code></p>
+<p class="todo-what">The restart screen: the Raye eye, the ring and “Installing updates” with the percentage.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-restart restart">
+<p class="limits-title" id="limits-restart">What is still missing</p>
+<ul>
+<li>When a second update of the same package is waiting, the “Restart required” notification doesn't come back.</li>
+<li>The lock screen and <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> don't offer “Update and restart” yet.</li>
+</ul>
+</aside>
+<h2 id="when">When Raye downloads, and when it waits</h2>
+<p>Updates download in the background and wait while your laptop is on battery below 40%, on a metered connection or playing a game. You can pause everything for one to five weeks, except security. Checking for and downloading 42 updates, 60 MB in all, took 22 s on the test machine.</p>
+<aside class="limits" aria-labelledby="limits-when when">
+<p class="limits-title" id="limits-when">What is still missing</p>
+<ul>
+<li>Below 40% battery, “Install now” does nothing, and shows nothing.</li>
+</ul>
+</aside>
+<h2 id="restore">Restore points</h2>
+<p>Before and after every update, Raye takes a restore point of the system, and the oldest go by themselves. You can also make one in Settings, Recovery.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="restore">
+<p class="todo-label">Screenshot to take · <code>restore</code></p>
+<p class="todo-what">Restore points with the “Before updates” and “After updates” pair.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-restore restore">
+<p class="limits-title" id="limits-restore">What is still missing</p>
+<ul>
+<li>Going back to the “Before updates” point reinstalls the same updates at the next start: don't count on it yet to undo an update.</li>
+<li>A point made by hand can be deleted, with no warning, by those of the following updates.</li>
+<li>A restore point keeps the system, not your personal files. Back them up separately.</li>
+<li>You can't yet start from an earlier state through the startup menu.</li>
+</ul>
+</aside>
+<h2 id="source">Where updates come from</h2>
+<p>Raye's packages come from <code>dl.rayelinux.com</code> and <code>raye-linux.github.io/packages</code>, two copies identical file by file, signed by the key whose fingerprint is <code>EA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E</code>. Firefox comes from Mozilla, and the rest of the system from the base system's servers; if the main one stops answering, Raye moves to two others by itself.</p>
+<aside class="limits" aria-labelledby="limits-source source">
+<p class="limits-title" id="limits-source">What is still missing</p>
+<ul>
+<li>Without a connection, Raye Update says it could not check: it didn't reach the servers, nothing is broken.</li>
+</ul>
+</aside>
+</div>
+<nav class="next wrap" aria-label="Next">
+<a href="/en/security/"><span>Next</span><strong>Security and privacy</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+</div>
+<div>
+<h2>Look around</h2>
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/updates/">Updates</a></li>
+<li><a href="/en/security/">Security and privacy</a></li>
+</ul>
+</div>
+<div>
+<h2>Before you install</h2>
+<ul>
+<li><a href="/en/hardware/">Hardware</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/download/">Download</a></li>
+</ul>
+</div>
+<div>
+<h2>The project</h2>
+<ul>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/about/">About</a></li>
+<li><a href="/en/privacy/">Site privacy</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

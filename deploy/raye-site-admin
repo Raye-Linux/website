@@ -1,0 +1,15 @@
+#!/bin/sh
+# Launch-list admin for rayelinux.com. Runs the command as the service's
+# own (dynamic) user so the database never ends up owned by root.
+#   raye-site-admin count | list | export | delete ADDRESS | purge
+set -eu
+if [ "$(id -u)" -ne 0 ]; then
+    echo "run as root (sudo raye-site-admin ...)" >&2
+    exit 1
+fi
+exec systemd-run --quiet --wait --pipe --collect --service-type=exec \
+    -p User=raye-site -p DynamicUser=yes \
+    -p StateDirectory=raye-site -p StateDirectoryMode=0700 \
+    -p UMask=0077 -p NoNewPrivileges=yes -p ProtectSystem=strict -p ProtectHome=yes \
+    -p PrivateTmp=yes -p PrivateNetwork=yes \
+    /usr/bin/python3 -E -s -B /opt/raye-site/backend/raye-site-admin "$@"

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité · Raye Linux</title>
+<meta name="description" content="Ce que rayelinux.com garde quand vous vous inscrivez à sa liste, combien de temps, et comment tout faire effacer.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://rayelinux.com/confidentialite/">
+<link rel="alternate" hreflang="fr" href="https://rayelinux.com/confidentialite/">
+<link rel="alternate" hreflang="en" href="https://rayelinux.com/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://rayelinux.com/confidentialite/">
+<link rel="icon" href="/assets/favicon.svg?v=f2f36e0fd3" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=a6bcb976d7">
+<link rel="stylesheet" href="/assets/v1.css?v=3347fdaf0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Politique de confidentialité · Raye Linux">
+<meta property="og:description" content="Ce que rayelinux.com garde quand vous vous inscrivez à sa liste, combien de temps, et comment tout faire effacer.">
+<meta property="og:url" content="https://rayelinux.com/confidentialite/">
+<meta property="og:locale" content="fr_CA">
+<script src="/assets/lang.js?v=2ab842208c"></script>
+<script src="/assets/app.js?v=61041bb972" defer></script>
+</head>
+<body class="v1 page-privacy">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/" aria-label="Raye Linux, accueil">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/questions/">Questions</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/en/privacy/" hreflang="en" lang="en"
+   data-set-lang="en" aria-label="Read this page in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>English</span></a>
+<a class="btn btn-accent btn-small" href="/telecharger/">Télécharger</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Le projet</p>
+<h1>Politique de confidentialité</h1>
+</header>
+<div class="article prose-v1">
+<p class="updated">Dernière mise à jour : 14 novembre 2026 · version 3.0</p>
+
+<aside class="legal-summary" aria-labelledby="summary-title">
+<p class="legal-summary-title" id="summary-title">En bref</p>
+<ul>
+<li>Je garde le moins possible, je ne vends rien, il n'y a ni publicité, ni pistage, ni témoin (cookie).</li>
+<li>Le site, la bulle d'aide et la liste de courriels tournent sur mes propres serveurs, au Québec. Les connexions passent par Cloudflare (États-Unis).</li>
+<li>La liste de courriels garde votre adresse, votre langue et la preuve de votre consentement, jusqu'à votre désabonnement.</li>
+<li>Les questions de la bulle d'aide ne sont pas gardées. Les rapports de bogue publiés vont sur notre serveur Discord ; le moyen de vous joindre n'y est jamais publié.</li>
+<li>Raye Linux n'envoie aucun rapport d'utilisation ni de plantage depuis votre PC.</li>
+<li>Vous pouvez tout consulter, corriger ou faire effacer : écrivez à bonjour@rayelinux.com, réponse sous 30 jours.</li>
+</ul>
+</aside>
+
+<nav class="toc" aria-labelledby="toc-title">
+<p class="toc-title" id="toc-title">Sommaire</p>
+<ol>
+<li><a href="#scope">À quoi sert cette politique</a></li>
+<li><a href="#definitions">Les mots utilisés ici</a></li>
+<li><a href="#who">Qui est responsable et comment me joindre</a></li>
+<li><a href="#overview">Ce qui est recueilli, en un tableau</a></li>
+<li><a href="#mailing-list">La liste de courriels</a></li>
+<li><a href="#help">La bulle d'aide</a></li>
+<li><a href="#bugs">Signaler un bogue</a></li>
+<li><a href="#logs">Les journaux des serveurs</a></li>
+<li><a href="#cloudflare">Cloudflare et les téléchargements</a></li>
+<li><a href="#browser">Témoins et stockage dans votre navigateur</a></li>
+<li><a href="#discord">Le serveur Discord</a></li>
+<li><a href="#email">Quand vous m'écrivez</a></li>
+<li><a href="#accounts">Les comptes Raye (quand ils ouvriront)</a></li>
+<li><a href="#software">Ce que Raye Linux contacte depuis votre PC</a></li>
+<li><a href="#bases">Pourquoi et sur quelle base, en résumé</a></li>
+<li><a href="#recipients">Qui reçoit vos renseignements, et hors du Québec</a></li>
+<li><a href="#security">Comment vos renseignements sont protégés</a></li>
+<li><a href="#rights">Vos droits, et comment les exercer</a></li>
+<li><a href="#incidents">Incidents de sécurité</a></li>
+<li><a href="#minors">Les mineurs</a></li>
+<li><a href="#changes">Changements et historique</a></li>
+</ol>
+</nav>
+
+<section id="scope" tabindex="-1">
+<h2>À quoi sert cette politique</h2>
+<p>Cette politique dit quels renseignements personnels sont recueillis quand vous utilisez le site rayelinux.com, sa bulle d'aide, son formulaire de rapport de bogue, sa liste de courriels, notre serveur Discord et le logiciel Raye Linux, pourquoi ils le sont, où ils vont, combien de temps ils restent et comment exercer vos droits. Elle est écrite à partir du code et des serveurs tels qu'ils fonctionnent réellement, et elle dit aussi ce qui n'est pas encore parfait.</p>
+<p>Elle suit la Loi sur la protection des renseignements personnels dans le secteur privé du Québec (la « Loi 25 ») et, pour les personnes qui se trouvent dans l'Union européenne, le Règlement général sur la protection des données (RGPD). Si une loi de votre pays vous donne plus de droits, ces droits s'appliquent aussi.</p>
+</section>
+
+<section id="definitions" tabindex="-1">
+<h2>Les mots utilisés ici</h2>
+<ul>
+<li><strong>Renseignement personnel</strong> : toute information qui concerne une personne et permet de l'identifier, directement ou non (une adresse courriel, une adresse IP, un pseudonyme Discord).</li>
+<li><strong>Je</strong>, <strong>moi</strong> : la personne qui fait Raye Linux et ce site, présentée plus bas. <strong>Nous</strong>, <strong>l'équipe</strong> : cette personne et les personnes qui modèrent le serveur Discord avec elle.</li>
+<li><strong>Le site</strong> : rayelinux.com et ses pages, en français sous /fr/ et en anglais sous /en/.</li>
+<li><strong>La bulle d'aide</strong> : le bouton « Aide » en bas des pages, qui répond aux questions et contient le formulaire « Signaler un bogue ».</li>
+<li><strong>Raye</strong> ou <strong>le logiciel</strong> : le système Raye Linux, tel que vous le téléchargez et l'installez.</li>
+<li><strong>Sous-traitant</strong> : une entreprise qui traite des renseignements pour moi ou sur le chemin de vos données (Cloudflare, Contabo, Discord).</li>
+</ul>
+</section>
+
+<section id="who" tabindex="-1">
+<h2>Qui est responsable et comment me joindre</h2>
+<p>Raye Linux et ce site sont faits par une seule personne, au Québec, sous le pseudonyme « techoraye ». C'est elle qui décide de ce qui est recueilli et pourquoi, et c'est aussi la personne responsable de la protection des renseignements personnels au sens de la Loi 25.</p>
+<p>Pour toute question, demande ou plainte sur vos renseignements : <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a>. Écrivez en français ou en anglais. Aucun représentant n'est désigné dans l'Union européenne.</p>
+</section>
+
+<section id="overview" tabindex="-1">
+<h2>Ce qui est recueilli, en un tableau</h2>
+<p>Le tableau donne la durée de conservation de chaque renseignement. Les sections qui suivent donnent le détail.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Quoi</th><th scope="col">Où</th><th scope="col">Combien de temps</th></tr></thead>
+<tbody>
+<tr><td>Inscription à la liste (adresse, langue, choix des nouvelles, dates, version du consentement)</td><td>mon serveur, au Québec</td><td>jusqu'au désabonnement, puis effacée sous 30 jours ; non confirmée : 48 heures</td></tr>
+<tr><td>Questions et réponses de la bulle d'aide</td><td>en mémoire, le temps de répondre</td><td>rien n'est gardé</td></tr>
+<tr><td>Rapport de bogue publié (texte, étapes, capture, langue, navigateur)</td><td>Discord, États-Unis</td><td>jusqu'à sa suppression</td></tr>
+<tr><td>Moyen de vous joindre, rapport retenu pour relecture</td><td>salon privé Discord, États-Unis</td><td>jusqu'à sa suppression</td></tr>
+<tr><td>Empreinte du texte d'un rapport</td><td>mémoire de mon serveur</td><td>24 heures</td></tr>
+<tr><td>Adresse IP pour limiter les abus</td><td>mémoire de mon serveur</td><td>10 minutes à 1 heure</td></tr>
+<tr><td>Journal du serveur d'entrée (IP, date, page, navigateur)</td><td>mon serveur, au Québec</td><td>sans limite pour l'instant (à corriger : 14 jours)</td></tr>
+<tr><td>Courriels que vous m'écrivez</td><td>mon serveur de courrier, au Québec</td><td>le temps de vous répondre et de suivre la demande</td></tr>
+<tr><td>Choix de langue</td><td>votre navigateur</td><td>jusqu'à ce que vous l'effaciez</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section id="mailing-list" tabindex="-1">
+<h2>La liste de courriels</h2>
+<h3>Ce qui est gardé</h3>
+<p>Si vous vous inscrivez, je garde votre <strong>adresse courriel</strong>, la <strong>langue</strong> choisie, votre choix de recevoir ou non de rares nouvelles, la date de votre inscription et de votre confirmation, et la version du texte de consentement accepté. Pour envoyer les courriels, le serveur garde aussi, le temps de l'envoi, une file des messages à partir et, sous forme d'empreinte seulement, les jetons des liens de confirmation et de désabonnement : ces liens ne sont jamais gardés lisibles.</p>
+<p>Votre adresse IP n'est pas enregistrée avec l'inscription : elle sert seulement, en mémoire et pendant au plus une heure, à bloquer les abus (5 inscriptions par heure et par adresse au plus).</p>
+<h3>Pourquoi, et sur quelle base</h3>
+<p>Pour vous écrire au lancement et, seulement si vous l'avez demandé, de rares nouvelles du projet. La base est votre <strong>consentement exprès</strong>, donné en cochant la case et confirmé par le lien reçu par courriel (double confirmation). Vous pouvez le retirer à tout moment.</p>
+<h3>Combien de temps</h3>
+<ul>
+<li>Une inscription non confirmée est effacée 48 heures après l'envoi du courriel de confirmation (au plus 7 jours si ce courriel n'a pas pu partir).</li>
+<li>Une adresse confirmée est gardée jusqu'à votre désabonnement ou votre demande d'effacement.</li>
+<li>Une adresse désabonnée est effacée sous 30 jours. Ce délai sert seulement à ne pas vous réinscrire par erreur.</li>
+<li>La liste n'existe qu'à un seul endroit : il n'en existe aucune copie de sauvegarde.</li>
+</ul>
+<h3>Comment les courriels partent</h3>
+<p>Les courriels partent de mon propre serveur de courrier, au Québec, et sortent sur Internet par un serveur que je loue chez Contabo, en Allemagne, relié à la maison par un tunnel chiffré : le message y transite, il n'y est pas gardé. Votre fournisseur de courrier reçoit ensuite le message, selon ses propres règles.</p>
+<p>Chaque courriel contient un lien de désabonnement en un clic. Aucun courriel ne contient de pixel espion ni de lien de suivi.</p>
+</section>
+
+<section id="help" tabindex="-1">
+<h2>La bulle d'aide</h2>
+<p>Les questions posées dans la bulle d'aide sont envoyées à un modèle de langue qui tourne sur mon propre serveur, au Québec. Il répond à partir du manuel de Raye, des pages du site et des notes de version. Les questions ne sont envoyées à aucune autre entreprise, et ne servent pas à entraîner un modèle.</p>
+<p>Ni vos questions ni les réponses ne sont gardées : pas sur le disque, pas dans les journaux. Le serveur ne compte que le nombre de questions. La conversation vit dans la page ouverte et disparaît quand vous la fermez ou rechargez la page. Votre adresse IP sert, en mémoire et pendant au plus 10 minutes, à limiter le nombre de questions (20 par période de 10 minutes).</p>
+<p>La base : vous demandez une réponse, et je vous la donne (votre demande ; au sens du RGPD, l'exécution du service demandé). Les réponses sont produites automatiquement et peuvent être fausses : en cas de doute, demandez à une personne sur Discord. <strong>N'écrivez pas de renseignements personnels dans vos questions</strong> : elles traversent Cloudflare comme le reste du site.</p>
+</section>
+
+<section id="bugs" tabindex="-1">
+<h2>Signaler un bogue</h2>
+<h3>Ce que le formulaire envoie</h3>
+<p>Le formulaire « Signaler un bogue » de la bulle d'aide envoie à mon serveur ce que vous y écrivez (ce qui s'est passé, comment le refaire, et le moyen de vous joindre si vous en donnez un), la capture d'écran si vous en ajoutez une, l'adresse de la page, la langue de la page et le nom de votre navigateur. La capture est réduite dans votre navigateur avant l'envoi. Tous les champs sauf « ce qui s'est passé » sont facultatifs.</p>
+<h3>La vérification avant publication</h3>
+<p>Avant toute publication, le rapport est vérifié par des filtres et par le modèle de langue de la bulle d'aide, sur mon propre serveur ; rien n'est envoyé à un tiers pour cette vérification. Selon le résultat, le rapport est :</p>
+<ul>
+<li><strong>publié</strong> dans le forum #bugs de notre serveur Discord, si c'est clairement un bogue ;</li>
+<li><strong>retenu</strong> pour qu'une personne le relise, dans un salon privé de l'équipe : texte trop court, coordonnées dans le texte, lien, mention, gros mots, capture d'écran, doute du modèle, ou modèle indisponible ;</li>
+<li><strong>écarté</strong> sans être envoyé nulle part, s'il contient des insultes haineuses ou des menaces, ou s'il répète un rapport déjà reçu dans les 24 heures.</li>
+</ul>
+<p>C'est une décision prise automatiquement. Vous pouvez demander à une personne de la revoir, et savoir quels renseignements et quelles raisons l'ont menée : écrivez à <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a>.</p>
+<h3>Ce qui est publié, et ce qui ne l'est jamais</h3>
+<p>Un rapport publié contient ce qui s'est passé, les étapes, la langue et un nom court du navigateur et du système (par exemple « Firefox 160 sur Linux »). Les membres du serveur Discord peuvent le lire et y répondre. <strong>Le moyen de vous joindre n'est jamais publié</strong> : il va seulement dans le salon privé de l'équipe. L'adresse de la page et la chaîne complète du navigateur ne sont jamais publiées non plus.</p>
+<h3>Où, combien de temps, sur quelle base</h3>
+<p>Mon serveur ne garde rien de tout ça, sauf, en mémoire et pendant 24 heures, une empreinte du texte pour repérer les doublons (le texte lui-même ne peut pas en être retrouvé). Votre adresse IP sert, en mémoire et pendant au plus une heure, à limiter le nombre de rapports (3 par heure). C'est mon serveur qui envoie le rapport à Discord : Discord ne voit pas votre adresse IP. Discord est une entreprise des États-Unis : le rapport, publié ou retenu, est donc gardé hors du Québec, chez Discord, jusqu'à ce qu'on le supprime.</p>
+<p>La base : votre consentement, donné en envoyant le formulaire, pour publier le rapport et vous joindre ; et mon intérêt légitime à garder le forum lisible et sans abus, pour la vérification. Pour faire retirer un rapport ou vos coordonnées, écrivez à <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a>.</p>
+</section>
+
+<section id="logs" tabindex="-1">
+<h2>Les journaux des serveurs</h2>
+<p>Le serveur qui reçoit les visites (un serveur que j'héberge chez moi, au Québec) note pour chaque demande l'adresse IP, la date, la page demandée, la page d'où vous venez et le navigateur. Le serveur du site lui-même note seulement la page, le résultat et la durée, sans adresse et sans le reste de l'adresse de la page (où voyagent les jetons des liens de courriel). Le service du site note des compteurs (questions reçues, rapports envoyés), jamais un texte, une adresse courriel ou une adresse IP.</p>
+<p>Ces journaux servent à la sécurité et au dépannage (intérêt légitime). Le serveur d'entrée est copié chaque nuit, et ces copies sont gardées 7 jours sur un disque chez moi.</p>
+<p><strong>À corriger :</strong> aujourd'hui, les journaux du serveur d'entrée ne sont pas encore effacés automatiquement ; ils existent depuis le 30 octobre 2026. Je mets en place leur effacement après 14 jours. En attendant, vous pouvez me demander d'effacer les lignes qui concernent votre adresse.</p>
+</section>
+
+<section id="cloudflare" tabindex="-1">
+<h2>Cloudflare et les téléchargements</h2>
+<p>Toutes les connexions au site passent par Cloudflare, Inc., une entreprise des États-Unis, qui les chiffre et protège le site des attaques. Cloudflare déchiffre la connexion sur ses serveurs puis la transmet à mon serveur par un tunnel chiffré : ce que vous envoyez au site, y compris dans la bulle d'aide et le formulaire de bogue, passe donc par les serveurs de Cloudflare.</p>
+<p>Le fichier ISO est servi par le stockage de Cloudflare (dl.rayelinux.com). Cloudflare voit donc votre adresse IP et les pages et fichiers demandés, et ces renseignements peuvent être traités hors du Québec et du Canada, selon sa propre politique de confidentialité. Cloudflare essaie d'ajouter un script de mesure d'audience aux pages ; la politique de sécurité du site le bloque, il ne s'exécute pas.</p>
+<p>La base : mon intérêt légitime à servir le site de façon sûre et rapide.</p>
+</section>
+
+<section id="browser" tabindex="-1">
+<h2>Témoins et stockage dans votre navigateur</h2>
+<p>Le site n'utilise <strong>aucun témoin (cookie)</strong>, aucun pixel, aucune police ni aucun script d'un tiers. Il ne mesure pas l'audience.</p>
+<p>Une seule chose peut rester dans votre navigateur : si vous choisissez une langue avec le bouton de langue, ce choix est gardé dans le stockage local (clé « raye-lang », valeur « fr » ou « en »), sur votre appareil seulement. L'adresse rayelinux.com le lit pour vous ouvrir la bonne langue. Il n'est jamais envoyé au serveur. Pour l'effacer, videz les données du site dans votre navigateur.</p>
+<p>La bulle d'aide et la case à cocher de la page de téléchargement ne gardent rien : tout disparaît quand vous fermez la page.</p>
+</section>
+
+<section id="discord" tabindex="-1">
+<h2>Le serveur Discord</h2>
+<p>La communauté se retrouve sur un serveur Discord. Discord est un service tiers, avec ses propres conditions et sa propre politique de confidentialité, et il faut avoir l'âge qu'il exige pour y aller. Ce que vous y écrivez est vu par les membres du serveur et par Discord. Les annonces y sont publiées par RivenBot, un robot Discord que je fais aussi ; ce qu'il garde est décrit dans sa propre politique, sur rivenbot.ca.</p>
+<p>Les modérateurs peuvent supprimer des messages et exclure des membres selon les règles du serveur. Vous pouvez supprimer vos propres messages à tout moment.</p>
+</section>
+
+<section id="email" tabindex="-1">
+<h2>Quand vous m'écrivez</h2>
+<p>Un courriel envoyé à bonjour@rayelinux.com arrive sur mon serveur de courrier, au Québec, qui est copié chaque nuit sur un disque chez moi. Je le garde le temps de vous répondre et de suivre votre demande ; vous pouvez me demander de l'effacer ensuite. Pour une demande sur vos droits, je garde une trace de la demande et de ma réponse, parce que la loi peut me demander de prouver ma réponse.</p>
+</section>
+
+<section id="accounts" tabindex="-1">
+<h2>Les comptes Raye (quand ils ouvriront)</h2>
+<p>Les comptes Raye ne sont <strong>pas encore ouverts</strong> : aucun serveur de comptes ne tourne. Ce qui suit décrit ce que le compte gardera, d'après son code. Raye fonctionne pareil sans compte, et rien dans le système n'en exige un.</p>
+<ul>
+<li>Gardé : votre courriel, votre nom, votre photo (refaite en image de 256 pixels, ce qui retire sa position GPS et ses autres données), une liste fermée de 153 réglages de Raye (apparence, barre des tâches, langue et région, accessibilité et quelques autres), votre bibliothèque d'applications du Store et une ligne par PC.</li>
+<li>Jamais lisibles : votre mot de passe, vos jetons et vos codes de secours ne sont gardés que sous forme d'empreinte ; votre secret de validation en deux étapes est scellé par une clé qui n'est pas dans la base.</li>
+<li>Pas gardé : votre adresse IP, ce que vous naviguez, vos fichiers, ce que vous lancez, quand vous utilisez votre PC. Le serveur ne tient aucun journal des demandes. Mots de passe Wi-Fi et autres mots de passe : pas synchronisés.</li>
+<li>Le site des comptes utilisera un témoin de session et, si vous choisissez une langue, un témoin qui la retient ; aucun autre.</li>
+<li>Vous pourrez tout exporter en un fichier et supprimer le compte en une fois, avec votre mot de passe. La base sera alors l'exécution du service que vous demandez.</li>
+</ul>
+<p>Avant l'ouverture, cette section sera complétée (où tourne le serveur, durée des sauvegardes après une suppression) et datée dans l'historique plus bas.</p>
+</section>
+
+<section id="software" tabindex="-1">
+<h2>Ce que Raye Linux contacte depuis votre PC</h2>
+<ul>
+<li><strong>Raye Update</strong> télécharge les mises à jour de Raye depuis dl.rayelinux.com (Cloudflare) et raye-linux.github.io (GitHub), et celles du système de base depuis ses serveurs officiels, puisque Raye est basé sur Ubuntu 26.04 LTS.</li>
+<li>Les mises à jour de micrologiciel viennent du service public LVFS, quand vous les acceptez.</li>
+<li>Le Store contacte Flathub pour les applications et odrs.gnome.org pour les avis.</li>
+<li>Firefox se met à jour depuis le dépôt de Mozilla.</li>
+</ul>
+<p>Comme tout téléchargement, ces serveurs voient l'adresse IP de votre PC et ce qui est téléchargé, selon leurs propres règles. Raye n'envoie <strong>aucun rapport d'utilisation ni rapport de plantage</strong> : les outils qui le faisaient sont retirés de l'image. Ce que vous faites sur votre PC reste sur votre PC.</p>
+</section>
+
+<section id="bases" tabindex="-1">
+<h2>Pourquoi et sur quelle base, en résumé</h2>
+<p>Je n'utilise vos renseignements que pour ces fins. Je ne les vends pas, je ne les loue pas, je ne les utilise pas pour de la publicité ni pour établir un profil.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Traitement</th><th scope="col">Fin</th><th scope="col">Base</th></tr></thead>
+<tbody>
+<tr><td>Liste de courriels</td><td>vous prévenir du lancement, nouvelles si demandées</td><td>consentement exprès</td></tr>
+<tr><td>Bulle d'aide</td><td>répondre à votre question</td><td>votre demande</td></tr>
+<tr><td>Rapport de bogue</td><td>corriger Raye, vous recontacter</td><td>consentement</td></tr>
+<tr><td>Vérification des rapports</td><td>forum lisible, sans abus</td><td>intérêt légitime</td></tr>
+<tr><td>Limites par adresse IP</td><td>bloquer les abus</td><td>intérêt légitime</td></tr>
+<tr><td>Journaux, Cloudflare</td><td>sécurité, dépannage, service du site</td><td>intérêt légitime</td></tr>
+<tr><td>Vos courriels</td><td>vous répondre, prouver une réponse</td><td>votre demande, obligation légale</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section id="recipients" tabindex="-1">
+<h2>Qui reçoit vos renseignements, et hors du Québec</h2>
+<p>Personne d'autre que moi n'a accès à la liste de courriels, aux journaux et à mes serveurs. Les seules entreprises sur le chemin de vos renseignements sont :</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Entreprise</th><th scope="col">Rôle</th><th scope="col">Pays</th></tr></thead>
+<tbody>
+<tr><td>Cloudflare, Inc.</td><td>connexions au site, protection, fichiers à télécharger</td><td>États-Unis</td></tr>
+<tr><td>Contabo GmbH</td><td>passage des courriels sortants</td><td>Allemagne</td></tr>
+<tr><td>Discord, Inc.</td><td>forum #bugs, salon privé de l'équipe, communauté</td><td>États-Unis</td></tr>
+</tbody>
+</table></div>
+<p>Ces pays n'ont pas les mêmes lois que le Québec : un gouvernement étranger peut, selon ses lois, demander l'accès aux renseignements qu'une entreprise y garde. Je limite ce qui y va au strict nécessaire : rien de la liste de courriels ni de la bulle d'aide n'est gardé chez ces entreprises, et un rapport de bogue n'y va que si vous l'envoyez.</p>
+<p>Je ne communiquerai vos renseignements à une autorité que si une loi m'y oblige, et je vous en préviendrai si la loi me le permet.</p>
+</section>
+
+<section id="security" tabindex="-1">
+<h2>Comment vos renseignements sont protégés</h2>
+<ul>
+<li>Chaque service tourne dans sa propre machine, derrière son propre pare-feu ; le serveur du site n'accepte que le serveur d'entrée, et toute connexion d'administration passe par une passerelle qui la trace.</li>
+<li>La base de la liste de courriels n'est lisible que par le service du site ; les réglages du courrier sont lus comme des secrets, jamais écrits dans les journaux.</li>
+<li>Les jetons des liens de courriel ne sont gardés que sous forme d'empreinte, et expirent.</li>
+<li>Le site interdit tout script, police ou image d'ailleurs, et ses pages ne peuvent pas être affichées dans un autre site.</li>
+<li>Les connexions sont chiffrées de votre navigateur jusqu'à chez moi.</li>
+</ul>
+<p>Aucune mesure n'est parfaite. Si vous trouvez une faille, écrivez-moi à <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a> avant d'en parler publiquement, pour que je puisse la corriger.</p>
+</section>
+
+<section id="rights" tabindex="-1">
+<h2>Vos droits, et comment les exercer</h2>
+<p>Vous pouvez, à tout moment et sans frais :</p>
+<ul>
+<li><strong>savoir</strong> si je garde des renseignements sur vous, et les <strong>consulter</strong> ;</li>
+<li>les faire <strong>corriger</strong> s'ils sont inexacts, incomplets ou équivoques ;</li>
+<li>les faire <strong>effacer</strong>, et faire cesser leur diffusion (par exemple un rapport publié) ;</li>
+<li>en recevoir une <strong>copie</strong> dans un format courant et lisible par ordinateur ;</li>
+<li><strong>retirer votre consentement</strong> (chaque courriel a un lien de désabonnement en un clic) ;</li>
+<li>être informé d'une décision prise automatiquement à votre sujet, de ses raisons, et demander qu'une personne la revoie ;</li>
+<li>dans l'Union européenne, aussi vous <strong>opposer</strong> à un traitement fondé sur l'intérêt légitime et en demander la <strong>limitation</strong>.</li>
+</ul>
+<h3>Comment faire</h3>
+<ol>
+<li>Écrivez à <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a>, de préférence depuis l'adresse concernée.</li>
+<li>Dites ce que vous voulez : consulter, corriger, effacer, recevoir une copie. Pour un rapport de bogue, donnez son titre ou la date.</li>
+<li>Je peux vous demander de prouver que l'adresse ou le rapport est le vôtre, et rien de plus.</li>
+<li>Je réponds par écrit dans un délai de <strong>30 jours</strong>. Si je refuse, je vous dis pourquoi et quels recours vous avez.</li>
+</ol>
+<p>Pour la liste de courriels, le lien de désabonnement suffit : il ne demande rien d'autre et l'effet est immédiat.</p>
+<h3>Si ma réponse ne vous satisfait pas</h3>
+<p>Vous pouvez porter plainte auprès de la Commission d'accès à l'information du Québec (cai.gouv.qc.ca). Ailleurs au Canada, vous pouvez vous adresser au Commissariat à la protection de la vie privée du Canada. Dans l'Union européenne, vous pouvez porter plainte auprès de l'autorité de protection des données de votre pays.</p>
+</section>
+
+<section id="incidents" tabindex="-1">
+<h2>Incidents de sécurité</h2>
+<p>Si un incident touche vos renseignements (un accès, une perte ou une fuite non autorisés), je prends tout de suite les mesures pour en réduire l'effet et éviter qu'il se reproduise. S'il présente un risque de préjudice sérieux, je vous préviens, ainsi que la Commission d'accès à l'information, sans attendre. Chaque incident, même sans risque sérieux, est noté dans un registre des incidents.</p>
+</section>
+
+<section id="minors" tabindex="-1">
+<h2>Les mineurs</h2>
+<p>Le site ne s'adresse pas aux enfants et ne recueille rien sur eux à dessein. Si vous avez moins de 14 ans, un parent ou tuteur doit consentir pour vous avant que vous vous inscriviez à la liste ou envoyiez un rapport de bogue. Si vous pensez qu'un enfant m'a donné des renseignements sans ce consentement, écrivez-moi : je les efface.</p>
+</section>
+
+<section id="changes" tabindex="-1">
+<h2>Changements et historique</h2>
+<p>Si cette politique change, la date et la version en haut de la page changent aussi, et la liste ci-dessous dit ce qui a changé. Si un changement touche ce que vous avez accepté (la liste de courriels, par exemple), je vous le demande de nouveau avant de l'appliquer à vos renseignements.</p>
+<ul>
+<li><strong>3.0, 14 novembre 2026</strong> : politique réécrite en entier : mots utilisés, tableau des durées, bases de chaque traitement, entreprises et pays, mesures de sécurité, façon d'exercer vos droits, décision automatisée des rapports de bogue ; nombre de réglages des comptes corrigé (153) ; pages déplacées sous /fr/ et /en/.</li>
+<li><strong>2.1, 14 novembre 2026</strong> : vérification des rapports de bogue avant publication, moyen de vous joindre envoyé seulement à l'équipe.</li>
+<li><strong>2.0, 14 novembre 2026</strong> : politique réécrite à partir de ce que les serveurs gardent ; bulle d'aide, rapports de bogue, journaux, Cloudflare, comptes et logiciel.</li>
+<li><strong>1.0, 31 octobre 2026</strong> : première version, pour la liste de courriels (texte de consentement du 31 octobre 2026).</li>
+</ul>
+</section>
+
+<p class="back-top"><a href="#main">Haut de la page</a></p>
+</div>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+</div>
+<div>
+<h2>Découvrir</h2>
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/mises-a-jour/">Mises à jour</a></li>
+<li><a href="/securite/">Sécurité et vie privée</a></li>
+</ul>
+</div>
+<div>
+<h2>Avant d'installer</h2>
+<ul>
+<li><a href="/materiel/">Matériel</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/telecharger/">Télécharger</a></li>
+</ul>
+</div>
+<div>
+<h2>Le projet</h2>
+<ul>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/versions/">Versions</a></li>
+<li><a href="/a-propos/">À propos</a></li>
+<li><a href="/confidentialite/">Confidentialité du site</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

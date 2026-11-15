@@ -1,0 +1,6 @@
+[Unit]
+Description=Reload SMTP settings of the rayelinux.com backend
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl try-restart raye-site.service

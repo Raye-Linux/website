@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Raye desktop and apps · Raye Linux</title>
+<meta name="description" content="The taskbar, Start, the shortcuts, File Explorer and the other Raye apps: what they do, and what they still lack.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://rayelinux.com/en/desktop/">
+<link rel="alternate" hreflang="en" href="https://rayelinux.com/en/desktop/">
+<link rel="alternate" hreflang="fr" href="https://rayelinux.com/bureau/">
+<link rel="alternate" hreflang="x-default" href="https://rayelinux.com/bureau/">
+<link rel="icon" href="/assets/favicon.svg?v=f2f36e0fd3" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=a6bcb976d7">
+<link rel="stylesheet" href="/assets/v1.css?v=3347fdaf0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="The Raye desktop and apps · Raye Linux">
+<meta property="og:description" content="The taskbar, Start, the shortcuts, File Explorer and the other Raye apps: what they do, and what they still lack.">
+<meta property="og:url" content="https://rayelinux.com/en/desktop/">
+<meta property="og:locale" content="en_CA">
+<script src="/assets/lang.js?v=2ab842208c"></script>
+<script src="/assets/app.js?v=61041bb972" defer></script>
+</head>
+<body class="v1 page-desktop">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/en/" aria-label="Raye Linux, home">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/en/desktop/" aria-current="page">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/bureau/" hreflang="fr" lang="fr"
+   data-set-lang="fr" aria-label="Lire cette page en français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>Français</span></a>
+<a class="btn btn-accent btn-small" href="/en/download/">Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Look around</p>
+<h1>The Raye desktop and apps</h1>
+<p class="lede">I tried everything described here in a Raye session, not just read the code. When I know of a flaw, or haven't finished trying something, it's written right below it.</p>
+</header>
+<div class="article">
+<h2 id="taskbar">The taskbar and Start</h2>
+<p>The taskbar is centered: Start, search, your pinned apps, then the clock on the right. With two screens each one gets its own taskbar and clock; the notification icons stay on the main screen, as in Windows 11. A minimized window keeps its button.</p>
+<p>Start shows your pinned apps, then “All apps” as categories, a grid or a list. The apps carry their Windows names: Calculator, Paint, Photos, Media Player, Task Manager.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="start-all">
+<p class="todo-label">Screenshot to take · <code>start-all</code></p>
+<p class="todo-what">The Start menu on All apps, sorted into categories.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-taskbar taskbar">
+<p class="limits-title" id="limits-taskbar">What is still missing</p>
+<ul>
+<li>The search field and the Recommended section are not yet the Windows 11 ones.</li>
+<li>Start and some menus open with a lag, and their animations are not yet the Windows 11 ones.</li>
+</ul>
+</aside>
+<h2 id="keys">The shortcuts</h2>
+<p>These were tried one by one. The <kbd>Win</kbd>+<kbd>X</kbd> menu also opens with a right-click on Start, on the screen where the mouse is.</p>
+<dl class="keys">
+<div>
+<dt><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd></dt>
+<dd>Task Manager</dd>
+</div>
+<div>
+<dt><kbd>Win</kbd>+<kbd>E</kbd></dt>
+<dd>File Explorer</dd>
+</div>
+<div>
+<dt><kbd>Win</kbd>+<kbd>R</kbd></dt>
+<dd>Run: <code>control</code>, <code>regedit</code>, and <code>notepad</code>, which opens the text editor</dd>
+</div>
+<div>
+<dt><kbd>Win</kbd>+<kbd>X</kbd></dt>
+<dd>Quick links: installed apps, disk management, terminal, shut down…</dd>
+</div>
+</dl>
+<figure class="shot">
+<div class="shot-todo" data-shot="win-x">
+<p class="todo-label">Screenshot to take · <code>win-x</code></p>
+<p class="todo-what">The quick links menu opened by Win+X, above the Start button.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="windows">Arranging windows</h2>
+<p>Drag a window to the top of the screen: the layout bar shows up, and a pale area shows where the window will land. Let go and it snaps there. A 1920×1080 screen gets six layouts. On the desktop, <kbd>Ctrl</kbd> and the mouse wheel change the icon size.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="snap">
+<p class="todo-label">Screenshot to take · <code>snap</code></p>
+<p class="todo-what">A window dragged to the top of the screen: the layout bar and the area where it will land.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="quick">Quick settings</h2>
+<p>A click on the right of the taskbar opens network, sound and, on a laptop, brightness. A click in the middle of a tile turns it on or off; its arrow opens a small page in the panel; a right-click leads to Settings. With a cable plugged in, the tile is called Ethernet.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="quick">
+<p class="todo-label">Screenshot to take · <code>quick</code></p>
+<p class="todo-what">Quick settings opened from the taskbar: network and sound, with the Ethernet tile of the wired network.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="explorer">File Explorer</h2>
+<p>Folders open in tabs, in the title bar, and the address bar also searches. A drive's Properties give the used and free space to the byte, with a Clean up button to make room.</p>
+<p>There are no drive letters. In This PC the system disk is called Raye, and a Windows partition is called Windows. It's a choice: a letter says nothing about what's on the drive.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="thispc">
+<p class="todo-label">Screenshot to take · <code>thispc</code></p>
+<p class="todo-what">This PC in File Explorer, and the Properties window of the Raye drive with the used and free space.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="taskmgr">Task Manager</h2>
+<p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd> opens it on Processes. It also has Performance, Startup apps, Users, Details and Services, with the services running on your PC.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="taskmgr">
+<p class="todo-label">Screenshot to take · <code>taskmgr</code></p>
+<p class="todo-what">Task Manager on the Processes page, opened with Ctrl+Shift+Esc.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-taskmgr taskmgr">
+<p class="limits-title" id="limits-taskmgr">What is still missing</p>
+<ul>
+<li>The first start takes several seconds.</li>
+<li>I have only seen the pages other than Processes on a virtual screen, not yet in a signed-in session.</li>
+<li>“Run as administrator” doesn't start a program that has a window, and says nothing.</li>
+<li>Four confirmation messages stay in English in a French session.</li>
+<li>The Users page has no “Sign out” button.</li>
+<li>Starting or stopping a service from the Services page has not been tried all the way yet.</li>
+</ul>
+</aside>
+<h2 id="settings">Settings</h2>
+<p>One window, the list of categories on the left. That's where you pick the main screen, updates, drivers. When a Windows page has no counterpart in Raye, it says so and points to the handbook instead of staying empty.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="settings">
+<p class="todo-label">Screenshot to take · <code>settings</code></p>
+<p class="todo-what">The Settings window on the System page, with the list of categories on the left.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-settings settings">
+<p class="limits-title" id="limits-settings">What is still missing</p>
+<ul>
+<li>In Installed apps, the “…” menu shows up see-through.</li>
+<li>Several pages are not finished.</li>
+</ul>
+</aside>
+<h2 id="control">Control Panel and the Registry Editor</h2>
+<p><kbd>Win</kbd>+<kbd>R</kbd>, <code>control</code>: Control Panel, by category. “Change the background” opens the right page of Settings.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="control">
+<p class="todo-label">Screenshot to take · <code>control</code></p>
+<p class="todo-what">Control Panel opened with Win+R then control, in the category view.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<p><kbd>Win</kbd>+<kbd>R</kbd>, <code>regedit</code>: the Raye Registry Editor. Raye has no registry; the editor shows its real settings files as a tree, HKEY_CURRENT_USER for yours, HKEY_LOCAL_MACHINE for the system's. Writing to the system asks for your password, a copy is made before every write, and Edit, Undo puts the file back exactly as it was.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="regedit">
+<p class="todo-label">Screenshot to take · <code>regedit</code></p>
+<p class="todo-what">The Raye Registry Editor on a key, with the password prompt on top before a system write.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-control control">
+<p class="limits-title" id="limits-control">What is still missing</p>
+<ul>
+<li><kbd>Ctrl</kbd>+<kbd>Z</kbd> does nothing yet: use the Edit menu.</li>
+<li>Once you've typed your password, the editor can write to the system for five minutes without asking again.</li>
+<li>A settings file of a Raye app changed here is no longer replaced by that app's later updates.</li>
+</ul>
+</aside>
+<h2 id="calendar">Calendar</h2>
+<p>Create an event, close the window: between two reminders, no Calendar program is running. The reminder still arrives on time, with “Later” and “Dismiss”. The taskbar clock shows the day's events. Everything lives in one .ics file on your PC, which you can import and export.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="calendar">
+<p class="todo-label">Screenshot to take · <code>calendar</code></p>
+<p class="todo-what">The taskbar clock opened on the month, and a Calendar reminder shown as a notification.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-calendar calendar">
+<p class="limits-title" id="limits-calendar">What is still missing</p>
+<ul>
+<li>You can't drag an event yet, change a single occurrence of a series, or show week numbers.</li>
+<li>In English, dates are still in the French order, and reminder times on a 24-hour clock.</li>
+</ul>
+</aside>
+<h2 id="store">The Raye Store</h2>
+<p>Apps from Flathub and Raye's own, in one place. While an app installs you see the progress and can cancel; afterwards, Open and Uninstall. An app offered by two sources shows up once.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="store">
+<p class="todo-label">Screenshot to take · <code>store</code></p>
+<p class="todo-what">The Raye Store while an app installs, with the progress and the Cancel button.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="lock">Lock and sign-in</h2>
+<p>The password field shows on the screen where the mouse is. Shut down and Restart work from the sign-in screen.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="lock">
+<p class="todo-label">Screenshot to take · <code>lock</code></p>
+<p class="todo-what">The Raye lock screen, with the time, the date and the password field.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-lock lock">
+<p class="limits-title" id="limits-lock">What is still missing</p>
+<ul>
+<li>The account picture is not the same at sign-in and on the lock screen.</li>
+</ul>
+</aside>
+<h2 id="unfinished">What doesn't have Raye's shape yet</h2>
+<p>The terminal, the screenshot tool and a few dialogs wear Raye's colors, but not its shape yet. There is no Notepad app: <code>notepad</code> opens the text editor.</p>
+</div>
+<nav class="next wrap" aria-label="Next">
+<a href="/en/windows-programs/"><span>Next</span><strong>Windows programs</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+</div>
+<div>
+<h2>Look around</h2>
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/updates/">Updates</a></li>
+<li><a href="/en/security/">Security and privacy</a></li>
+</ul>
+</div>
+<div>
+<h2>Before you install</h2>
+<ul>
+<li><a href="/en/hardware/">Hardware</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/download/">Download</a></li>
+</ul>
+</div>
+<div>
+<h2>The project</h2>
+<ul>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/about/">About</a></li>
+<li><a href="/en/privacy/">Site privacy</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

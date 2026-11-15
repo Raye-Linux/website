@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+"""Entry point of raye-site-admin (see deploy/raye-site-admin)."""
+import sys
+
+from raye_site.admin import main
+
+sys.exit(main())

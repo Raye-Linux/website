@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="38 16 168 168" role="img" aria-label="Raye">
+<title>Raye</title>
+<defs>
+<linearGradient id="frim" x1="44" y1="0" x2="196" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#7B3CFF"/><stop offset="1" stop-color="#D946EF"/></linearGradient>
+<radialGradient id="firis" cx="120" cy="100" r="25" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#E0A458"/><stop offset="0.440" stop-color="#E0A458"/>
+<stop offset="0.560" stop-color="#B88CFF"/>
+<stop offset="0.760" stop-color="#7B3CFF"/><stop offset="1" stop-color="#2A1052"/></radialGradient>
+<clipPath id="finner"><path d="M50.85 100A96.94 96.94 0 0 1 189.15 100A96.94 96.94 0 0 1 50.85 100Z"/></clipPath>
+<clipPath id="frest"><rect x="0" y="0" width="320" height="85"/><rect x="0" y="89" width="320" height="16"/><rect x="0" y="108" width="320" height="11"/><rect x="0" y="121" width="320" height="119"/></clipPath>
+<clipPath id="fs0"><rect x="0" y="84.65" width="320" height="4.7"/></clipPath><clipPath id="fs1"><rect x="0" y="104.65" width="320" height="3.7"/></clipPath><clipPath id="fs2"><rect x="0" y="118.65" width="320" height="2.7"/></clipPath>
+<g id="feye">
+<path d="M50.85 100A96.94 96.94 0 0 1 189.15 100A96.94 96.94 0 0 1 50.85 100Z" fill="#12081F"/>
+<circle cx="120" cy="100" r="25" fill="url(#firis)" clip-path="url(#finner)"/>
+<circle cx="120" cy="100" r="10" fill="#000"/>
+<circle cx="114" cy="94" r="3" fill="#F3EAFF"/>
+<circle cx="124" cy="104" r="1.2" fill="#F3EAFF"/>
+<path d="M44.00 100A101.94 101.94 0 0 1 196.00 100A101.94 101.94 0 0 1 44.00 100ZM50.85 100A96.94 96.94 0 0 1 189.15 100A96.94 96.94 0 0 1 50.85 100Z" fill="url(#frim)" fill-rule="evenodd"/>
+</g>
+<linearGradient id="ft0"><stop offset="0" stop-color="#D946EF"/><stop offset=".45" stop-color="#D946EF" stop-opacity=".38"/><stop offset="1" stop-color="#D946EF" stop-opacity="0"/></linearGradient><linearGradient id="ft1"><stop offset="0" stop-color="#B88CFF"/><stop offset=".45" stop-color="#B88CFF" stop-opacity=".38"/><stop offset="1" stop-color="#B88CFF" stop-opacity="0"/></linearGradient><linearGradient id="ft2"><stop offset="0" stop-color="#D946EF"/><stop offset=".45" stop-color="#D946EF" stop-opacity=".38"/><stop offset="1" stop-color="#D946EF" stop-opacity="0"/></linearGradient>
+</defs>
+<rect x="38" y="16" width="168" height="168" rx="38" fill="#141318"/>
+<use href="#feye" clip-path="url(#frest)"/>
+<g transform="translate(7 0)"><use href="#feye" clip-path="url(#fs0)"/></g>
+<g transform="translate(-5 0)"><use href="#feye" clip-path="url(#fs1)"/></g>
+<g transform="translate(10 0)"><use href="#feye" clip-path="url(#fs2)"/></g>
+</svg>

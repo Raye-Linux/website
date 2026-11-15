@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installer Raye, étape par étape · Raye Linux</title>
+<meta name="description" content="Préparer la clé USB, l&#x27;installateur étape par étape, garder Windows à côté, et ce que l&#x27;installateur ne fait pas.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://rayelinux.com/installer/">
+<link rel="alternate" hreflang="fr" href="https://rayelinux.com/installer/">
+<link rel="alternate" hreflang="en" href="https://rayelinux.com/en/install/">
+<link rel="alternate" hreflang="x-default" href="https://rayelinux.com/installer/">
+<link rel="icon" href="/assets/favicon.svg?v=f2f36e0fd3" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=a6bcb976d7">
+<link rel="stylesheet" href="/assets/v1.css?v=3347fdaf0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Installer Raye, étape par étape · Raye Linux">
+<meta property="og:description" content="Préparer la clé USB, l&#x27;installateur étape par étape, garder Windows à côté, et ce que l&#x27;installateur ne fait pas.">
+<meta property="og:url" content="https://rayelinux.com/installer/">
+<meta property="og:locale" content="fr_CA">
+<script src="/assets/lang.js?v=2ab842208c"></script>
+<script src="/assets/app.js?v=61041bb972" defer></script>
+</head>
+<body class="v1 page-install">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/" aria-label="Raye Linux, accueil">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/installer/" aria-current="page">Installer</a></li>
+<li><a href="/questions/">Questions</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/en/install/" hreflang="en" lang="en"
+   data-set-lang="en" aria-label="Read this page in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>English</span></a>
+<a class="btn btn-accent btn-small" href="/telecharger/">Télécharger</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Avant d'installer</p>
+<h1>Installer Raye, étape par étape</h1>
+<p class="lede">L'installateur pose ses questions en six étapes, que sa barre du haut affiche, et l'installation elle-même a pris 5 min 50 s sur la machine de test. Avant de commencer, sauvegardez vos fichiers. Je le dirais pour n'importe quel système ; je le dis deux fois pour un système aussi jeune.</p>
+</header>
+<div class="article">
+<h2 id="before">Avant de commencer</h2>
+<p>Vérifiez que votre PC a ce qu'il faut (page <a href="/materiel/">Matériel</a>). Une connexion Internet pendant l'installation est utile, pas obligatoire. Si vous gardez Windows, éteignez-le vraiment : désactivez le démarrage rapide et la veille prolongée. L'installateur vous prévient si Windows n'a pas été complètement arrêté.</p>
+<p>Si Windows est chiffré, par BitLocker ou par le « Chiffrement de l'appareil » que beaucoup de PC vendus avec Windows 11 ont d'office, Raye ne peut pas réduire sa partition. Désactivez ce chiffrement dans Windows et attendez la fin du déchiffrement, en gardant votre clé de récupération BitLocker. L'installateur dit encore de « suspendre la protection » : ça ne suffit pas, la partition reste chiffrée.</p>
+<h2 id="usb">La clé USB</h2>
+<ol class="step-list">
+<li>
+<h3>Téléchargez l'image</h3>
+<p>Une fois l'image publiée, la page Télécharger donne le fichier, sa somme de contrôle et la façon de la vérifier.</p>
+</li>
+<li>
+<h3>Écrivez-la sur la clé</h3>
+<p>Avec Rufus, choisissez le <strong>mode image DD</strong> quand il le demande : le mode ISO donne une clé qui ne démarre pas. balenaEtcher marche aussi. Tout ce que la clé contient sera effacé.</p>
+</li>
+<li>
+<h3>Démarrez sur la clé</h3>
+<p>À l'allumage, souvent avec F12, F11, F8 ou Échap. Raye démarre une session d'essai, d'où vous lancez l'installateur.</p>
+</li>
+</ol>
+<h2 id="pages">L'installateur, étape par étape</h2>
+<ol class="step-list">
+<li>
+<h3>Région</h3>
+<p>Français ou anglais, le fuseau horaire, puis la disposition du clavier.</p>
+</li>
+<li>
+<h3>Réseau</h3>
+<p>La page suit votre connexion en direct : un câble branché apparaît tout de suite.</p>
+</li>
+<li>
+<h3>Disque</h3>
+<p>Quatre choix : effacer le disque, installer à côté de Windows en réduisant sa partition, utiliser l'espace libre, ou remplacer une partition. La case « Chiffrer le système Raye » est sur la même page : cochée, elle vous fait choisir un mot de passe du disque. Avec une puce TPM, vous n'aurez pas à le taper au démarrage.</p>
+</li>
+<li>
+<h3>Compte</h3>
+<p>Le nom du PC, puis votre nom et votre mot de passe. La page du compte Raye se passe avec « Utiliser plutôt un compte local ».</p>
+</li>
+<li>
+<h3>Confidentialité</h3>
+<p>La position et les statistiques d'usage, que vous pourrez changer plus tard dans les Paramètres.</p>
+</li>
+<li>
+<h3>Installation</h3>
+<p>« Prêt pour l'installation » dit tout ce qui va se passer, avec un bandeau rouge si quelque chose va être effacé.</p>
+</li>
+</ol>
+<figure class="shot">
+<div class="shot-todo" data-shot="setup-disk">
+<p class="todo-label">Capture à prendre · <code>setup-disk</code></p>
+<p class="todo-what">La page Disque de l'installateur, sur « Installer à côté de Windows », avec la réglette qui partage le disque.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<p>Juste avant d'écrire, l'installateur relit le disque. Si quoi que ce soit a changé depuis votre choix, il s'arrête au lieu de continuer.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="setup-summary">
+<p class="todo-label">Capture à prendre · <code>setup-summary</code></p>
+<p class="todo-what">Le résumé « Prêt pour l'installation » de l'installateur, avec le bandeau rouge qui dit ce qui sera effacé.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<h2 id="alongside">Garder Windows à côté</h2>
+<p>« Installer à côté de Windows » réduit la partition Windows pour faire de la place, et les deux systèmes partagent la partition de démarrage. Au démarrage, un menu propose Raye Linux et Windows pendant 10 secondes. Depuis Raye, « Redémarrer sous Windows », dans Démarrer, redémarre directement dans Windows, une fois.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="boot-menu">
+<p class="todo-label">Capture à prendre · <code>boot-menu</code></p>
+<p class="todo-what">Le menu de démarrage avec deux choix, Raye Linux et Windows, et le compte à rebours.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-alongside alongside">
+<p class="limits-title" id="limits-alongside">Ce qui manque encore</p>
+<ul>
+<li>Je l'ai prouvé sur une partition Windows de test, dans la machine de test : 50 Go réduits à 23 Go, et chaque fichier de Windows identique avant et après. Pas encore sur un vrai Windows réduit puis redémarré. Sauvegardez avant.</li>
+<li>Le menu de démarrage affiche encore « Raye Linux GNU/Linux » au lieu de « Raye Linux ».</li>
+</ul>
+</aside>
+<h2 id="not">Ce que l'installateur ne fait pas</h2>
+<ul class="text-list">
+<li>Pas de partitionnement à la main.</li>
+<li>Seule une partition Windows (NTFS) non chiffrée peut être réduite.</li>
+<li>Un disque qui porte déjà un autre Linux n'a que le choix « Effacer » : pas de troisième système.</li>
+<li>Pas de PC qui ne démarre qu'en mode BIOS.</li>
+</ul>
+<h2 id="after">Après</h2>
+<p>Au premier démarrage, si vous avez chiffré le disque, la puce TPM l'ouvre (sans puce, Raye demande le mot de passe du disque), puis vous tapez le mot de passe de votre compte. La clé de récupération s'affiche à la première connexion (voir <a href="/securite/">Sécurité</a>). Deux minutes plus tard, Raye prépare l'espace des programmes Windows en arrière-plan.</p>
+<aside class="limits" aria-labelledby="limits-after after">
+<p class="limits-title" id="limits-after">Ce qui manque encore</p>
+<ul>
+<li>Sans chiffrement, le menu de démarrage reste affiché 5 secondes à chaque démarrage.</li>
+</ul>
+</aside>
+<h2 id="back">Revenir à Windows</h2>
+<p>Si vous avez gardé Windows à côté, il reste là : choisissez-le dans le menu de démarrage, ou « Redémarrer sous Windows » dans Démarrer. Retirer Raye du disque pour rendre toute la place à Windows n'a pas encore d'outil, et je n'ai pas encore essayé de marche à suivre : je ne vous en donne donc pas une.</p>
+</div>
+<nav class="next wrap" aria-label="La suite">
+<a href="/telecharger/"><span>La suite</span><strong>Télécharger</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+</div>
+<div>
+<h2>Découvrir</h2>
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/mises-a-jour/">Mises à jour</a></li>
+<li><a href="/securite/">Sécurité et vie privée</a></li>
+</ul>
+</div>
+<div>
+<h2>Avant d'installer</h2>
+<ul>
+<li><a href="/materiel/">Matériel</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/telecharger/">Télécharger</a></li>
+</ul>
+</div>
+<div>
+<h2>Le projet</h2>
+<ul>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/versions/">Versions</a></li>
+<li><a href="/a-propos/">À propos</a></li>
+<li><a href="/confidentialite/">Confidentialité du site</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

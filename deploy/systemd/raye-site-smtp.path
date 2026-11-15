@@ -1,0 +1,9 @@
+[Unit]
+Description=Restart the rayelinux.com backend when its SMTP settings change
+
+[Path]
+PathChanged=/etc/raye-site/smtp.env
+Unit=raye-site-smtp.service
+
+[Install]
+WantedBy=multi-user.target

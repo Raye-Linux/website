@@ -1,0 +1,19 @@
+{
+  "release": "0.5-beta",
+  "title": "Raye Linux 0.5 Beta Alpenglow",
+  "date": "2026-11-14",
+  "iso": "raye-0.5-beta-amd64.iso",
+  "size": 2864971776,
+  "sha256": "f813f5f025f917d46bf31554f01ea0508edca84a9a894e0dbfd9e1e882b49de1",
+  "urls": {
+    "r2": "https://dl.rayelinux.com/iso/0.5-beta/raye-0.5-beta-amd64.iso",
+    "r2_folder": "https://dl.rayelinux.com/iso/0.5-beta/",
+    "github": "https://github.com/Raye-Linux/releases/releases/tag/v0.5-beta",
+    "github_download": "https://github.com/Raye-Linux/releases/releases/download/v0.5-beta/",
+    "issues": "https://github.com/Raye-Linux/releases/issues"
+  },
+  "parts": [
+    "raye-0.5-beta-amd64.iso.part1",
+    "raye-0.5-beta-amd64.iso.part2"
+  ]
+}
