@@ -206,8 +206,8 @@
   {
    "id": "handbook:fr:01-installer:3",
    "lang": "fr",
-   "text": "Une fenêtre vous propose d'**essayer** Raye sans rien toucher à\nl'ordinateur, ou de l'**installer**. Essayer, c'est utile pour voir si le\nWi-Fi, le son et l'écran fonctionnent avant de vous décider.",
-   "title": "Installer Raye Linux › 3. Essayer ou installer",
+   "text": "La clé lance l'installation. Essayer Raye sans l'installer n'est pas\nencore possible : ça arrive dans une prochaine mise à jour.",
+   "title": "Installer Raye Linux › 3. Installer",
    "url": null
   },
   {
@@ -500,8 +500,8 @@
   {
    "id": "handbook:en:01-installing:3",
    "lang": "en",
-   "text": "A window lets you **try** Raye without touching the computer, or\n**install** it. Trying is a good way to check Wi-Fi, sound and the screen\nbefore you decide.",
-   "title": "Installing Raye Linux › 3. Try or install",
+   "text": "The stick starts the installer. Trying Raye without installing it is not\navailable yet: it is coming in a future update.",
+   "title": "Installing Raye Linux › 3. Install",
    "url": null
   },
   {
@@ -1043,8 +1043,8 @@
   "0.5-beta/release-notes-0.5-beta.fr.md": "b33e18072a1dcde4",
   "0.5-beta/release-notes-0.5-beta.md": "af6872469ae5f833",
   "discord/texts.py": "5bff52e13c468251",
-  "download/index.html": "5203a24699476a4c",
-  "en/01-installing.md": "1b10d433bfc882f4",
+  "download/index.html": "56af5d17916ed435",
+  "en/01-installing.md": "730f1ce48d186ca3",
   "en/02-first-steps.md": "327774439b2c0c38",
   "en/03-updates.md": "55e63fd65d21506a",
   "en/04-windows-programs.md": "566dc5bf7cd9c6aa",
@@ -1055,7 +1055,7 @@
   "en/09-windows-alongside.md": "3036d6b4bac8c2fc",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
   "en/index.html": "90b673f1552410f4",
-  "fr/01-installer.md": "daa6a19b973e3c15",
+  "fr/01-installer.md": "7e250bca1b5b46c2",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
   "fr/04-programmes-windows.md": "8fea29e8a0806a07",
@@ -1066,6 +1066,6 @@
   "fr/09-windows-a-cote.md": "7eb36202d9916723",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
   "fr/index.html": "3bfe00995d944832",
-  "telecharger/index.html": "edb9661c9cea72a5"
+  "telecharger/index.html": "a02d34bdbd065165"
  }
 }

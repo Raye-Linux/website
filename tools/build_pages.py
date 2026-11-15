@@ -138,7 +138,7 @@ DOWNLOAD = {
         "accept_close": "Annuler",
         "status": "Bêta publique",
         "get_title": "Télécharger",
-        "lede": "L'image de Raye Linux, à écrire sur une clé USB pour l'essayer ou l'installer. "
+        "lede": "L'image de Raye Linux, à écrire sur une clé USB pour l'installer. "
                 "Si quelque chose ne marche pas, écrivez-moi.",
         "file": "Image ISO",
         "kind": "ISO 64 bits, démarrage UEFI",
@@ -217,7 +217,7 @@ DOWNLOAD = {
         "accept_close": "Cancel",
         "status": "Public beta",
         "get_title": "Download",
-        "lede": "The Raye Linux image, to write to a USB stick to try it or install it. If "
+        "lede": "The Raye Linux image, to write to a USB stick to install it. If "
                 "something doesn't work, write to me.",
         "file": "ISO image",
         "kind": "64-bit ISO, UEFI start",
