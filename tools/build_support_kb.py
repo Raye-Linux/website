@@ -27,6 +27,13 @@ SITE = os.path.join(WEBSITE, "site")
 OUT = os.path.join(WEBSITE, "backend", "raye_site", "support_kb.json")
 RELEASE = os.path.join(HERE, "release.json")
 
+# the values for one machine live in deploy/site.env (not in git), like for deploy.sh
+_LOCAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "deploy", "site.env")
+if os.path.isfile(_LOCAL):
+    for _line in open(_LOCAL, encoding="utf-8"):
+        _key, _sep, _value = _line.strip().partition("=")
+        if _sep and _key.startswith("RAYE_") and not _line.lstrip().startswith("#"):
+            os.environ.setdefault(_key, _value.strip().strip('"').strip("'"))
 HANDBOOK = os.environ.get("RAYE_HANDBOOK", os.path.join(WEBSITE, "..", "handbook"))
 PUBLISH = os.environ.get("RAYE_PUBLISH", "/srv/publish/release")
 DISCORD_TEXTS = os.environ.get("RAYE_DISCORD_TEXTS", "discord-texts.py")

@@ -353,14 +353,14 @@
   {
    "id": "handbook:fr:06-signaler-un-probleme:5",
    "lang": "fr",
-   "text": "Rien ici ne demande de mot de passe, et rien ici ne demande votre **clé\nde récupération**. Aucun compte rendu de Raye n'en contient. Si vous\ncopiez des fichiers de votre dossier personnel pour les joindre, laissez\n`.local/share/raye/recovery-key` où il est — voir Sécurité.",
+   "text": "Rien ici ne demande de mot de passe, et rien ici ne demande votre **clé\nde récupération**. Aucun compte rendu de Raye n'en contient. Si vous\ncopiez des fichiers de votre dossier personnel pour les joindre, laissez\n`.local/share/raye/recovery-key` où il est - voir Sécurité.",
    "title": "Signaler un problème › Une chose à ne pas envoyer",
    "url": null
   },
   {
    "id": "handbook:fr:07-cette-beta:0",
    "lang": "fr",
-   "text": "La liste ci-dessous est la liste complète, dans l'ordre où les notes de\nversion la donnent. Elle est ici parce que c'est la page qu'on ouvre quand\nquelque chose ne marche pas, et trouver son problème déjà écrit est plus\nrapide que de le signaler.\n\n<a id=\"known-1\"></a>\n**L'écran devient noir un instant avant l'écran de connexion.** Pendant 3\nà 5 secondes, entre l'image de Raye et l'écran de connexion. Rien n'est\ncassé : attendez, l'écran de connexion arrive.\n\n<a id=\"known-2\"></a>\n**Quelques applis n'ont pas l'allure de Raye.** Le terminal, l'outil de\ncapture et certaines boîtes de dialogue portent les couleurs de Raye mais\nne sont pas encore redessinés.\n\n<a id=\"known-3\"></a>\n**Le menu Démarrer et la barre des tâches sont proches de Windows 11, pas\nidentiques.** Le champ de recherche et la section Recommandé sont les\nparties qui manquent encore.\n\n<a id=\"known-4\"></a>\n**Les écrans de connexion et de verrouillage ne s'accordent pas sur votre\nimage.** L'image de compte par défaut n'est pas la même des deux côtés. Un\nbouton **OK** isolé s'affiche aussi sous « Mot de passe incorrect ».\n\n<a id=\"known-5\"></a>\n**Tous les programmes Windows ne fonctionnent pas.** Le premier que vous\nouvrez après l'installation prend du temps, certains installateurs\nmontrent une fenêtre grise à l'ancienne, et certains programmes ne\ndémarrent pas du tout. Quand un programme existe aussi pour Raye —\nDiscord, Steam — installez-le plutôt depuis le Raye Store ; voir\nLes programmes Windows.",
+   "text": "La liste ci-dessous est la liste complète, dans l'ordre où les notes de\nversion la donnent. Elle est ici parce que c'est la page qu'on ouvre quand\nquelque chose ne marche pas, et trouver son problème déjà écrit est plus\nrapide que de le signaler.\n\n<a id=\"known-1\"></a>\n**L'écran devient noir un instant avant l'écran de connexion.** Pendant 3\nà 5 secondes, entre l'image de Raye et l'écran de connexion. Rien n'est\ncassé : attendez, l'écran de connexion arrive.\n\n<a id=\"known-2\"></a>\n**Quelques applis n'ont pas l'allure de Raye.** Le terminal, l'outil de\ncapture et certaines boîtes de dialogue portent les couleurs de Raye mais\nne sont pas encore redessinés.\n\n<a id=\"known-3\"></a>\n**Le menu Démarrer et la barre des tâches sont proches de Windows 11, pas\nidentiques.** Le champ de recherche et la section Recommandé sont les\nparties qui manquent encore.\n\n<a id=\"known-4\"></a>\n**Les écrans de connexion et de verrouillage ne s'accordent pas sur votre\nimage.** L'image de compte par défaut n'est pas la même des deux côtés. Un\nbouton **OK** isolé s'affiche aussi sous « Mot de passe incorrect ».\n\n<a id=\"known-5\"></a>\n**Tous les programmes Windows ne fonctionnent pas.** Le premier que vous\nouvrez après l'installation prend du temps, certains installateurs\nmontrent une fenêtre grise à l'ancienne, et certains programmes ne\ndémarrent pas du tout. Quand un programme existe aussi pour Raye - \nDiscord, Steam - installez-le plutôt depuis le Raye Store ; voir\nLes programmes Windows.",
    "title": "Ce que cette bêta fait encore mal",
    "url": null
   },
@@ -437,21 +437,21 @@
   {
    "id": "handbook:fr:09-windows-a-cote:1",
    "lang": "fr",
-   "text": "Windows est livré avec le **démarrage rapide** activé. Avec lui,\n« Arrêter » n'arrête pas : il enregistre le système en cours sur le disque\net s'arrête là. Le disque reste à moitié ouvert, et l'outil qui fait de la\nplace pour Raye **refuse de toucher un disque dans cet état**. Ce refus\nest volontaire. Forcer le redimensionnement d'un Windows à moitié\nouvert, c'est comme ça qu'on perd des fichiers.\n\nDonc, dans Windows : **Panneau de configuration → Options d'alimentation\n→ Choisir l'action des boutons d'alimentation**, décochez **Activer le\ndémarrage rapide**, puis arrêtez l'ordinateur. La veille prolongée laisse\nla même trace : ne revenez pas d'une veille prolongée non plus.\n\nRaye le vérifie lui-même. Si Windows n'a pas été arrêté correctement, le\ntout premier écran de l'installation le dit, avant que rien ne soit écrit.\n\nLe même écran prévient de deux autres choses :\n\n- **BitLocker.** Démarrez Windows, ouvrez **Gérer BitLocker**, choisissez\n **Suspendre la protection**, puis revenez — et gardez votre clé de\n récupération BitLocker sous la main.\n- **Un autre Linux sur le même disque.** Raye remplacerait sa façon de\n démarrer. Effacez le disque en le voulant, ou choisissez-en un autre.",
+   "text": "Windows est livré avec le **démarrage rapide** activé. Avec lui,\n« Arrêter » n'arrête pas : il enregistre le système en cours sur le disque\net s'arrête là. Le disque reste à moitié ouvert, et l'outil qui fait de la\nplace pour Raye **refuse de toucher un disque dans cet état**. Ce refus\nest volontaire. Forcer le redimensionnement d'un Windows à moitié\nouvert, c'est comme ça qu'on perd des fichiers.\n\nDonc, dans Windows : **Panneau de configuration → Options d'alimentation\n→ Choisir l'action des boutons d'alimentation**, décochez **Activer le\ndémarrage rapide**, puis arrêtez l'ordinateur. La veille prolongée laisse\nla même trace : ne revenez pas d'une veille prolongée non plus.\n\nRaye le vérifie lui-même. Si Windows n'a pas été arrêté correctement, le\ntout premier écran de l'installation le dit, avant que rien ne soit écrit.\n\nLe même écran prévient de deux autres choses :\n\n- **BitLocker.** Démarrez Windows, ouvrez **Gérer BitLocker**, choisissez\n **Suspendre la protection**, puis revenez - et gardez votre clé de\n récupération BitLocker sous la main.\n- **Un autre Linux sur le même disque.** Raye remplacerait sa façon de\n démarrer. Effacez le disque en le voulant, ou choisissez-en un autre.",
    "title": "Installer à côté de Windows › D'abord, dans Windows : l'éteindre pour de vrai",
    "url": null
   },
   {
    "id": "handbook:fr:09-windows-a-cote:2",
    "lang": "fr",
-   "text": "Au moins **25 Go** de libre : l'installation refuse d'aller plus loin en\ndessous. C'est le plancher, pas un chiffre confortable — ce que Raye\nlui-même finit par occuper n'a pas été mesuré.",
+   "text": "Au moins **25 Go** de libre : l'installation refuse d'aller plus loin en\ndessous. C'est le plancher, pas un chiffre confortable - ce que Raye\nlui-même finit par occuper n'a pas été mesuré.",
    "title": "Installer à côté de Windows › La place",
    "url": null
   },
   {
    "id": "handbook:fr:09-windows-a-cote:3",
    "lang": "fr",
-   "text": "Cette page de l'installation est en anglais même si vous avez choisi le\nfrançais — voir Ce que cette bêta fait encore mal.\nTrois choix :\n\n- **Erase disk** (effacer le disque) — Raye tout seul. Déjà sélectionné :\n ne le laissez pas par distraction.\n- **Install alongside** (installer à côté) — celui que vous voulez. Raye\n rétrécit une partition pour faire de la place. Choisissez la partition\n de Windows, puis tirez la barre du bas pour décider ce que Windows garde\n et ce que Raye reçoit.\n- **Replace a partition** (remplacer une partition) — met Raye à la place\n d'une partition et efface ce qu'elle contenait.\n\nVous ne pouvez pas découper les partitions à la main ici : cet\ninstallateur ne le propose pas. Si la disposition dont vous avez besoin\nn'est pas l'un de ces trois choix, Raye ne sait pas encore la faire.\n\nRaye utilise la partition EFI que Windows a déjà créée au lieu d'en\najouter une. Le rétrécissement, lui, réécrit bien la taille de la\npartition Windows — c'est toute la raison pour laquelle Windows doit\navoir été arrêté correctement d'abord.",
+   "text": "Cette page de l'installation est en anglais même si vous avez choisi le\nfrançais - voir Ce que cette bêta fait encore mal.\nTrois choix :\n\n- **Erase disk** (effacer le disque) - Raye tout seul. Déjà sélectionné :\n ne le laissez pas par distraction.\n- **Install alongside** (installer à côté) - celui que vous voulez. Raye\n rétrécit une partition pour faire de la place. Choisissez la partition\n de Windows, puis tirez la barre du bas pour décider ce que Windows garde\n et ce que Raye reçoit.\n- **Replace a partition** (remplacer une partition) - met Raye à la place\n d'une partition et efface ce qu'elle contenait.\n\nVous ne pouvez pas découper les partitions à la main ici : cet\ninstallateur ne le propose pas. Si la disposition dont vous avez besoin\nn'est pas l'un de ces trois choix, Raye ne sait pas encore la faire.\n\nRaye utilise la partition EFI que Windows a déjà créée au lieu d'en\najouter une. Le rétrécissement, lui, réécrit bien la taille de la\npartition Windows - c'est toute la raison pour laquelle Windows doit\navoir été arrêté correctement d'abord.",
    "title": "Installer à côté de Windows › La page du disque",
    "url": null
   },
@@ -626,7 +626,7 @@
   {
    "id": "handbook:en:06-report-a-bug:2",
    "lang": "en",
-   "text": "**Settings → System → About** has a **Copy** button next to each of its\ntwo blocks. The first copies the computer — processor, memory, graphics,\nstorage, model. The second copies Raye's own side, including the\n**Version** line, which says exactly which build you are on. Paste both\ninto the report and nobody has to ask.",
+   "text": "**Settings → System → About** has a **Copy** button next to each of its\ntwo blocks. The first copies the computer - processor, memory, graphics,\nstorage, model. The second copies Raye's own side, including the\n**Version** line, which says exactly which build you are on. Paste both\ninto the report and nobody has to ask.",
    "title": "Reporting a problem › The two blocks worth pasting in",
    "url": null
   },
@@ -647,14 +647,14 @@
   {
    "id": "handbook:en:06-report-a-bug:5",
    "lang": "en",
-   "text": "Nothing here needs a password, and nothing here needs your **recovery\nkey**. No Raye report contains either. If you are copying files out of\nyour home folder to attach them, leave `.local/share/raye/recovery-key` where it\nis — see Security.",
+   "text": "Nothing here needs a password, and nothing here needs your **recovery\nkey**. No Raye report contains either. If you are copying files out of\nyour home folder to attach them, leave `.local/share/raye/recovery-key` where it\nis - see Security.",
    "title": "Reporting a problem › One thing not to send",
    "url": null
   },
   {
    "id": "handbook:en:07-this-beta:0",
    "lang": "en",
-   "text": "The list below is the whole list, in the order the release notes give it.\nIt is here because this is the page you open when something does not work,\nand finding your problem already written down is faster than reporting it.\n\n<a id=\"known-1\"></a>\n**The screen goes black for a moment before the sign-in screen.** For 3\nto 5 seconds, between the Raye picture and the sign-in screen. Nothing is\nwrong: wait, and the sign-in screen comes.\n\n<a id=\"known-2\"></a>\n**A few apps do not look like Raye.** The terminal, the screenshot tool\nand some dialogs wear Raye's colors but have not been redrawn yet.\n\n<a id=\"known-3\"></a>\n**The Start menu and the taskbar are close to Windows 11, not identical.**\nThe search field and the recommended section are the parts still missing.\n\n<a id=\"known-4\"></a>\n**The sign-in and lock screens disagree about your picture.** The default\naccount picture is not the same on both. A lone **OK** button also shows\nunder \"Wrong password\".\n\n<a id=\"known-5\"></a>\n**Not every Windows program runs.** The first one you open after setup\ntakes a while, some installers show a gray old-style window, and some\nprograms do not start at all. When a program also exists for Raye —\nDiscord, Steam — install it from the Raye Store instead; see\nWindows programs.\n\n<a id=\"known-6\"></a>\n**Microsoft's fonts come later.** Arial, Times New Roman and Verdana\nare Microsoft's, so the image does not carry them: Raye fetches them in\nthe background the first time the PC is online after setup, with the\nVisual C++ runtimes, and puts them in every Windows space. A program\nopened before that uses the system's fonts, and its text can come out in\ndifferent type, or the wrong size for its box.",
+   "text": "The list below is the whole list, in the order the release notes give it.\nIt is here because this is the page you open when something does not work,\nand finding your problem already written down is faster than reporting it.\n\n<a id=\"known-1\"></a>\n**The screen goes black for a moment before the sign-in screen.** For 3\nto 5 seconds, between the Raye picture and the sign-in screen. Nothing is\nwrong: wait, and the sign-in screen comes.\n\n<a id=\"known-2\"></a>\n**A few apps do not look like Raye.** The terminal, the screenshot tool\nand some dialogs wear Raye's colors but have not been redrawn yet.\n\n<a id=\"known-3\"></a>\n**The Start menu and the taskbar are close to Windows 11, not identical.**\nThe search field and the recommended section are the parts still missing.\n\n<a id=\"known-4\"></a>\n**The sign-in and lock screens disagree about your picture.** The default\naccount picture is not the same on both. A lone **OK** button also shows\nunder \"Wrong password\".\n\n<a id=\"known-5\"></a>\n**Not every Windows program runs.** The first one you open after setup\ntakes a while, some installers show a gray old-style window, and some\nprograms do not start at all. When a program also exists for Raye - \nDiscord, Steam - install it from the Raye Store instead; see\nWindows programs.\n\n<a id=\"known-6\"></a>\n**Microsoft's fonts come later.** Arial, Times New Roman and Verdana\nare Microsoft's, so the image does not carry them: Raye fetches them in\nthe background the first time the PC is online after setup, with the\nVisual C++ runtimes, and puts them in every Windows space. A program\nopened before that uses the system's fonts, and its text can come out in\ndifferent type, or the wrong size for its box.",
    "title": "What this beta still gets wrong",
    "url": null
   },
@@ -731,21 +731,21 @@
   {
    "id": "handbook:en:09-windows-alongside:1",
    "lang": "en",
-   "text": "Windows ships with **Fast Startup** on. With it, \"Shut down\" does not shut\ndown: it saves the running system to the disk and stops. The disk is left\nhalf-open, and the tool that makes room for Raye **refuses to touch a disk\nin that state**. That refusal is on purpose. Forcing a resize onto a\nhalf-open Windows is how people lose files.\n\nSo, in Windows: **Control Panel → Power Options → Choose what the power\nbuttons do**, untick **Turn on fast startup**, then shut the computer\ndown. Hibernation leaves the same trace, so do not come back from\nhibernation either.\n\nRaye checks this itself. If Windows was not shut down properly, the very\nfirst screen of setup says so, before anything is written.\n\nThe same screen warns about two other things:\n\n- **BitLocker.** Start Windows, open **Manage BitLocker**, choose\n **Suspend protection**, then come back — and keep your BitLocker\n recovery key at hand.\n- **Another Linux on the same disk.** Raye would replace the way it\n starts. Erase the disk on purpose, or pick a different one.",
+   "text": "Windows ships with **Fast Startup** on. With it, \"Shut down\" does not shut\ndown: it saves the running system to the disk and stops. The disk is left\nhalf-open, and the tool that makes room for Raye **refuses to touch a disk\nin that state**. That refusal is on purpose. Forcing a resize onto a\nhalf-open Windows is how people lose files.\n\nSo, in Windows: **Control Panel → Power Options → Choose what the power\nbuttons do**, untick **Turn on fast startup**, then shut the computer\ndown. Hibernation leaves the same trace, so do not come back from\nhibernation either.\n\nRaye checks this itself. If Windows was not shut down properly, the very\nfirst screen of setup says so, before anything is written.\n\nThe same screen warns about two other things:\n\n- **BitLocker.** Start Windows, open **Manage BitLocker**, choose\n **Suspend protection**, then come back - and keep your BitLocker\n recovery key at hand.\n- **Another Linux on the same disk.** Raye would replace the way it\n starts. Erase the disk on purpose, or pick a different one.",
    "title": "Installing next to Windows › First, in Windows: shut it down for real",
    "url": null
   },
   {
    "id": "handbook:en:09-windows-alongside:2",
    "lang": "en",
-   "text": "At least **25 GB** free: setup refuses to go on below that. It is the\nfloor, not a comfortable figure — how much Raye itself ends up using has\nnot been measured.",
+   "text": "At least **25 GB** free: setup refuses to go on below that. It is the\nfloor, not a comfortable figure - how much Raye itself ends up using has\nnot been measured.",
    "title": "Installing next to Windows › Room",
    "url": null
   },
   {
    "id": "handbook:en:09-windows-alongside:3",
    "lang": "en",
-   "text": "This page of setup is in English even if you chose French — see\nWhat this beta still gets wrong. Three choices:\n\n- **Erase disk** — Raye alone. Already selected, so do not leave it by\n accident.\n- **Install alongside** — the one you want. Raye shrinks a partition to\n make room. Pick the Windows partition, then drag the bar at the bottom\n to decide how much Windows keeps and how much Raye gets.\n- **Replace a partition** — puts Raye in place of one partition and\n deletes what was on it.\n\nYou cannot carve partitions by hand here: this installer does not offer\nit. If the layout you need is not one of those three, it is not a Raye\nthing to do yet.\n\nRaye uses the EFI partition Windows already made rather than adding one.\nShrinking, though, does rewrite the size of the Windows partition — which\nis the whole reason Windows has to have been shut down properly first.",
+   "text": "This page of setup is in English even if you chose French - see\nWhat this beta still gets wrong. Three choices:\n\n- **Erase disk** - Raye alone. Already selected, so do not leave it by\n accident.\n- **Install alongside** - the one you want. Raye shrinks a partition to\n make room. Pick the Windows partition, then drag the bar at the bottom\n to decide how much Windows keeps and how much Raye gets.\n- **Replace a partition** - puts Raye in place of one partition and\n deletes what was on it.\n\nYou cannot carve partitions by hand here: this installer does not offer\nit. If the layout you need is not one of those three, it is not a Raye\nthing to do yet.\n\nRaye uses the EFI partition Windows already made rather than adding one.\nShrinking, though, does rewrite the size of the Windows partition - which\nis the whole reason Windows has to have been shut down properly first.",
    "title": "Installing next to Windows › The disk page",
    "url": null
   },
@@ -1043,29 +1043,29 @@
   "0.5-beta/release-notes-0.5-beta.fr.md": "b33e18072a1dcde4",
   "0.5-beta/release-notes-0.5-beta.md": "af6872469ae5f833",
   "discord/texts.py": "5bff52e13c468251",
-  "download/index.html": "ba15e006025563ff",
+  "download/index.html": "5203a24699476a4c",
   "en/01-installing.md": "1b10d433bfc882f4",
   "en/02-first-steps.md": "327774439b2c0c38",
   "en/03-updates.md": "55e63fd65d21506a",
   "en/04-windows-programs.md": "566dc5bf7cd9c6aa",
   "en/05-security.md": "06b496b267dbd7eb",
-  "en/06-report-a-bug.md": "5e05a26ac5511b4b",
-  "en/07-this-beta.md": "7a8e157075675d09",
+  "en/06-report-a-bug.md": "0e3b630da0a09162",
+  "en/07-this-beta.md": "9e32faf8e05ac707",
   "en/08-not-in-raye.md": "1225d088730e8bea",
-  "en/09-windows-alongside.md": "cbc782c6a976dde7",
+  "en/09-windows-alongside.md": "3036d6b4bac8c2fc",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
-  "en/index.html": "ae3c170e92d724e0",
+  "en/index.html": "90b673f1552410f4",
   "fr/01-installer.md": "daa6a19b973e3c15",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
   "fr/04-programmes-windows.md": "8fea29e8a0806a07",
   "fr/05-securite.md": "5a85fc98373913bf",
-  "fr/06-signaler-un-probleme.md": "0753b8ce424387a8",
-  "fr/07-cette-beta.md": "02b0e1ac2ef0d5da",
+  "fr/06-signaler-un-probleme.md": "5400dba1478cf2a8",
+  "fr/07-cette-beta.md": "916266b5f659e88c",
   "fr/08-not-in-raye.md": "7d7869d5dc502398",
-  "fr/09-windows-a-cote.md": "32780398d358c307",
+  "fr/09-windows-a-cote.md": "7eb36202d9916723",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
-  "fr/index.html": "98e0d0faf422896c",
-  "telecharger/index.html": "8b51db48077c2b57"
+  "fr/index.html": "3bfe00995d944832",
+  "telecharger/index.html": "edb9661c9cea72a5"
  }
 }

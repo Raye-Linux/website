@@ -42,9 +42,10 @@ GITHUB_MIRROR = False
 PATHS = {
     "fr": {"home": "/fr/", "privacy": "/fr/confidentialite/", "download": "/fr/telecharger/",
            "terms": "/fr/conditions/", "notice": "/fr/mentions-legales/",
-           "licenses": "/fr/licences/"},
+           "licenses": "/fr/licences/", "source": "/fr/code-source/"},
     "en": {"home": "/en/", "privacy": "/en/privacy/", "download": "/en/download/",
-           "terms": "/en/terms/", "notice": "/en/legal/", "licenses": "/en/licenses/"},
+           "terms": "/en/terms/", "notice": "/en/legal/", "licenses": "/en/licenses/",
+           "source": "/en/source/"},
 }
 
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
@@ -549,6 +550,7 @@ def footer(lang, note=""):
 <li><a href="{p['terms']}">{legal_text.TITLES['terms'][lang]}</a></li>
 <li><a href="{p['notice']}">{legal_text.TITLES['notice'][lang]}</a></li>
 <li><a href="{p['licenses']}">{f['licenses']}</a></li>
+<li><a href="{p['source']}">{SOURCE[lang]['title']}</a></li>
 </ul>
 </div>
 </div>{note}
@@ -1006,6 +1008,94 @@ def legal(lang, page):
 """
 
 
+# The source code page. Every repository is on GitHub and copied, commit for
+# commit, to Codeberg, GitLab and our own server (plain git over HTTPS).
+# GitLab reserves the names "files" and "update", so those two carry a prefix there.
+REPOS = [
+    ("iso", "The build of the installation image and the base packages.",
+     "La fabrication de l'image d'installation et les paquets de base."),
+    ("installer", "Everything from the USB stick to the first desktop.",
+     "Tout ce qui se passe entre la clé USB et le premier bureau."),
+    ("theme", "How Raye looks: colours, icons, taskbar, Start menu.",
+     "L'apparence de Raye : couleurs, icônes, barre des tâches, menu Démarrer."),
+    ("desktop", "Raye's builds of the desktop, with its patches.",
+     "Les paquets du bureau, avec les correctifs de Raye."),
+    ("files", "Raye Explorer, the file manager.", "L'Explorateur Raye, le gestionnaire de fichiers."),
+    ("settings", "The Settings app.", "L'application Paramètres."),
+    ("store", "Raye Store, for apps and games.", "Le Raye Store, pour les applis et les jeux."),
+    ("update", "Raye Update, the system updates.", "Raye Update, les mises à jour du système."),
+    ("apps", "Terminal, Notepad, Task Manager, Calculator and the other small apps.",
+     "Terminal, Bloc-notes, Gestionnaire des tâches, Calculatrice et les autres petites applis."),
+    ("archive", "Opening and extracting ZIP, 7z, RAR and other archives.",
+     "L'ouverture et l'extraction des ZIP, 7z, RAR et autres archives."),
+    # the Windows layer repo is left off this page until it is renamed (its
+    # current name must not appear in what users read); it is public all the same
+    ("account", "Raye accounts: the server and the client.", "Les comptes Raye : le serveur et le client."),
+    ("kernel", "The kernel, with Raye's changes for PCs and laptops.",
+     "Le noyau, avec les changements de Raye pour les PC et portables."),
+    ("handbook", "The user guide.", "Le guide d'utilisation."),
+    ("website", "This website.", "Ce site."),
+]
+GITLAB_NAME = {"files": "raye-files", "update": "raye-update"}
+SOURCE = {
+    "en": {"title": "Source code",
+           "lead": "Raye Linux is free software. All of its code is public, mostly under the GPL; "
+                   "each repository says which licence applies. It lives on GitHub and is copied to "
+                   "three other places, so it stays available if one of them goes down.",
+           "clone": "To get a copy, clone from any of the four, for example from our own server:",
+           "where": "Where to find it", "repo": "Repository", "ours": "Raye server",
+           "help": "Found a bug or want to suggest something? Tell us on "
+                   "<a href=\"{discord}\" rel=\"noopener\">Discord</a> or at "
+                   "<a href=\"mailto:bonjour@rayelinux.com\">bonjour@rayelinux.com</a>."},
+    "fr": {"title": "Code source",
+           "lead": "Raye Linux est un logiciel libre. Tout son code est public, surtout sous licence GPL ; "
+                   "chaque dépôt indique la sienne. Il est sur GitHub et copié à trois autres endroits, "
+                   "pour rester disponible si l'un d'eux tombe.",
+           "clone": "Pour en avoir une copie, clonez depuis n'importe lequel des quatre, par exemple depuis notre serveur :",
+           "where": "Où le trouver", "repo": "Dépôt", "ours": "Serveur Raye",
+           "help": "Un bogue, une idée ? Dites-le-nous sur "
+                   "<a href=\"{discord}\" rel=\"noopener\">Discord</a> ou à "
+                   "<a href=\"mailto:bonjour@rayelinux.com\">bonjour@rayelinux.com</a>."},
+}
+
+
+def source(lang):
+    t, s = T[lang], SOURCE[lang]
+    rows = []
+    for name, en, fr in REPOS:
+        links = [("GitHub", f"https://github.com/Raye-Linux/{name}"),
+                 ("Codeberg", f"https://codeberg.org/Raye-Linux/{name}"),
+                 ("GitLab", f"https://gitlab.com/raye-linux/{GITLAB_NAME.get(name, name)}"),
+                 (s["ours"], f"https://dl.rayelinux.com/git/{name}.git")]
+        buttons = " · ".join(f'<a href="{url}" rel="noopener">{label}</a>' for label, url in links)
+        rows.append(f'<tr><th scope="row">{name}</th><td>{fr if lang == "fr" else en}</td>'
+                    f'<td class="source-links">{buttons}</td></tr>')
+    return f"""{head(lang, 'source', s['title'] + ' · Raye Linux', s['lead'])}
+<body>
+<a class="skip-link" href="#main">{'Aller au contenu' if lang == 'fr' else 'Skip to content'}</a>
+{topbar(lang, 'source')}
+<main id="main">
+<article class="prose card">
+<h1>{s['title']}</h1>
+<p>{s['lead']}</p>
+<p>{s['clone']}</p>
+{pre("git clone https://dl.rayelinux.com/git/iso.git")}
+<h2>{s['where']}</h2>
+<div class="table-wrap"><table class="source-table">
+<thead><tr><th scope="col">{s['repo']}</th><th scope="col"></th><th scope="col"></th></tr></thead>
+<tbody>
+{chr(10).join(rows)}
+</tbody>
+</table></div>
+<p>{s['help'].format(discord=DISCORD)}</p>
+</article>
+</main>
+{footer(lang)}
+</body>
+</html>
+"""
+
+
 def not_found():
     """One page for both languages: nginx cannot know which one was meant."""
     return f"""{head('fr', 'home', 'Page introuvable · Page not found', T['fr']['description'])}
@@ -1115,6 +1205,8 @@ def main():
                 text = legal(lang, page)
                 write(PATHS[lang][page].lstrip("/") + "index.html",
                       french(text) if lang == "fr" else text)
+        write("fr/code-source/index.html", french(source("fr")))
+        write("en/source/index.html", source("en"))
         write("fr/telecharger/index.html", french(download("fr")))
         write("en/download/index.html", download("en"))
         write("404.html", french(strip_links(not_found())))
