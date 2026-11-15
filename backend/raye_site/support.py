@@ -118,6 +118,12 @@ def sources_of(chunks):
     return out[:3]
 
 
+# Shared with Raye Assistant on Discord: one file, so both say the same thing.
+_FACTS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "support_facts.md")
+FACTS = "\n".join(l for l in open(_FACTS_PATH, encoding="utf-8").read().splitlines()
+                  if not l.startswith("# ")).strip() if os.path.isfile(_FACTS_PATH) else ""
+
+
 def system_prompt(kb, lang, chunks):
     docs = ""
     for c in chunks:
@@ -156,6 +162,7 @@ def system_prompt(kb, lang, chunks):
         "at most about 120 words. Don't open with an apology or a greeting formula, no "
         "\"Great question\", no emoji, no "
         "dashes as punctuation. You may use **bold**, short lists and `code`.\n\n"
+        "Facts about Raye (always true, use them too):\n" + FACTS + "\n"
         "Documentation:\n" + (docs or "(nothing relevant found)\n")
     )
 
