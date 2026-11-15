@@ -66,6 +66,11 @@ def words(text):
     return out
 
 
+def stems(ws):
+    """Short stems, so "installe", "installer" and "installation" meet."""
+    return {w[:6] for w in ws}
+
+
 def best_language(kb, question, lang):
     """The language whose pages match the question best. A French question
     asked on an English page must find the French handbook; on a tie, the
@@ -88,7 +93,8 @@ def select(kb, question, lang, cap):
         if c["lang"] != lang:
             continue
         title, text = words(c["title"]), words(c["text"])
-        score = sum(3 * (w in title) + (w in text) for w in q)
+        st, sx = stems(title), stems(text)
+        score = sum(3 * (w in title or w[:6] in st) + (w in text or w[:6] in sx) for w in q)
         if score:
             scored.append((score, c["id"].startswith("faq:"), c))
     scored.sort(key=lambda s: (-s[0], not s[1]))

@@ -330,3 +330,10 @@ class EndpointTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class StemTests(unittest.TestCase):
+    def test_word_forms_share_a_stem(self):
+        from raye_site import support as sp
+        self.assertEqual(sp.stems(sp.words("installe")), sp.stems(sp.words("installer")))
+        self.assertTrue(sp.stems(sp.words("installation")) & sp.stems(sp.words("Comment j'installe Raye Linux ?")))
