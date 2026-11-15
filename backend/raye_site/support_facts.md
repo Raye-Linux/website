@@ -57,3 +57,7 @@ FILES AND APPS
 - Hidden files and folders (names starting with a dot, like .var or .config): in Raye Explorer press Ctrl+H to show or hide them.
 - Flatpak apps keep their settings in ~/.var/app/<app id>/ (hidden). Sober (Roblox): ~/.var/app/org.vinegarhq.Sober/config/sober/config.json; FPS limit = add "DFIntTaskSchedulerTargetFps": <number> in its "fflags" section, with Sober closed.
 - There is NO "Optional updates" section in Raye Update right now: never mention it. Drivers (NVIDIA etc.) install by themselves on the first start; otherwise updates come from Raye Update. Never invent a menu, button or setting: if you are not sure it exists, say so and point to #help.
+
+X11 AND WAYLAND
+- Raye runs on Wayland (KDE Plasma). Apps and games made for X11 still run without doing anything: they go through XWayland automatically.
+- There is no X11 session to install or pick in Raye right now (it is not supported). If someone asks how to install X11, explain that their app should already work, and ask which app or game has a problem so the team can look at it (post in #help or #game-optimization-requests).
