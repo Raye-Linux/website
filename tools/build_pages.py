@@ -815,6 +815,12 @@ HOME = {
 # The "latest changes" list on the home page: one line per published version,
 # newest first; rewrite the old ones out rather than letting the list grow.
 CHANGES = [
+    ("2026-11-15", "0.5.7",
+     {"fr": "Écran noir avec certaines cartes graphiques : le menu de démarrage s'affiche 3 secondes "
+            "avec une entrée « Raye Linux (safe graphics) », et une installation faite en Safe "
+            "graphics le reste ensuite.",
+      "en": "Black screen with some graphics cards: the boot menu now shows for 3 seconds with a "
+            "\"Raye Linux (safe graphics)\" entry, and an install made in Safe graphics stays that way."}),
     ("2026-11-15", "0.5 USB",
      {"fr": "La clé USB démarre maintenant sur tous les PC : certains s'arrêtaient sur "
             "« you need to load the kernel first ». Si ça vous est arrivé, retéléchargez l'image.",
