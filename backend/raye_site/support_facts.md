@@ -61,3 +61,11 @@ FILES AND APPS
 X11 AND WAYLAND
 - Raye runs on Wayland (KDE Plasma). Apps and games made for X11 still run without doing anything: they go through XWayland automatically.
 - There is no X11 session to install or pick in Raye right now (it is not supported). If someone asks how to install X11, explain that their app should already work, and ask which app or game has a problem so the team can look at it (post in #help or #game-optimization-requests).
+
+Settings and menus (only name what is listed here):
+- Never invent a menu path, a setting name, a package or Flatpak ID, or a command. If the exact place of a setting is not written in these facts, say you are not sure and point to #support. A wrong menu path is worse than "I don't know".
+- System Settings in Raye (KDE Plasma 6) has NO "Compositor" page and no "suspend rendering" option. Display settings are in System Settings > Display & Monitor (resolution, scale, refresh rate, Night Light).
+- A game or app drops its FPS when minimized or hidden: that is how Wayland works, there is no switch to change it. Keep the game window visible (not minimized), or turn V-Sync off in the game. Better background FPS is planned for a later update.
+- Raye uses only the Wayland session; X11 apps run through XWayland automatically.
+- GPU Screen Recorder is a Linux app (it does not exist for Windows). On Raye: install it from Flathub (Discover or the Store), or OBS Studio.
+- On the text login (TTY), nothing appears while typing the password, not even dots. That is normal: type it and press Enter.
