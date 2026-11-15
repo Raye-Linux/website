@@ -815,6 +815,11 @@ HOME = {
 # The "latest changes" list on the home page: one line per published version,
 # newest first; rewrite the old ones out rather than letting the list grow.
 CHANGES = [
+    ("2026-11-15", "0.5 USB",
+     {"fr": "La clé USB démarre maintenant sur tous les PC : certains s'arrêtaient sur "
+            "« you need to load the kernel first ». Si ça vous est arrivé, retéléchargez l'image.",
+      "en": "The USB stick now starts on every PC: some stopped on \"you need to load the "
+            "kernel first\". If that happened to you, download the image again."}),
     ("2026-11-15", "0.5.6",
      {"fr": "Les notifications ne restent plus figées au milieu de l'écran, la barre des "
             "tâches est lisible en mode clair, et Raye Update fait le ménage après une mise à jour.",
