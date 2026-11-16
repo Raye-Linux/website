@@ -815,32 +815,32 @@ HOME = {
 # The "latest changes" list on the home page: one line per published version,
 # newest first; rewrite the old ones out rather than letting the list grow.
 CHANGES = [
+    ("2026-11-16", "Raye Update",
+     {"fr": "Mises à jour plus simples : plus d'étape « Install now », « Restart now » seulement à la toute fin, "
+            "les applis Raye ouvertes se ferment et se rouvrent seules, et plus d'écran « 0 % » à la fin d'une installation.",
+      "en": "Simpler updates: no more \"Install now\" step, \"Restart now\" only at the very end, open Raye apps "
+            "close and reopen by themselves, and no more \"0%\" screen at the end of an install."}),
+    ("2026-11-16", "Desktop",
+     {"fr": "Les applis s'ouvrent à leur propre taille, la réduction s'anime vers la barre des tâches, les icônes "
+            "glissées restent dans la barre, et brancher un 2e écran ne gèle plus le bureau.",
+      "en": "Apps open at their own size, minimizing animates into the taskbar, dragged icons stay in the taskbar, "
+            "and plugging in a second screen no longer freezes the desktop."}),
+    ("2026-11-16", "Explorer",
+     {"fr": "Clés USB et disques visibles dans Ce PC et ouverts en un clic, copie vers une clé qui ne bloque plus "
+            "avec une vraie progression, et tous les fichiers affichés.",
+      "en": "USB sticks and drives show in This PC and open in one click, copying to a stick no longer stalls and "
+            "shows real progress, and every file is shown."}),
+    ("2026-11-16", "Boot",
+     {"fr": "Le menu de démarrage retrouve sa présentation habituelle avec le noyau Raye par défaut, et "
+            "le redémarrage vers votre autre système n'est proposé que s'il est encore installé.",
+      "en": "The boot menu is back to its usual layout with the Raye kernel by default, and restarting into "
+            "your other system is only offered when it is still installed."}),
     ("2026-11-15", "0.5.7",
      {"fr": "Écran noir avec certaines cartes graphiques : le menu de démarrage s'affiche 3 secondes "
             "avec une entrée « Raye Linux (safe graphics) », et une installation faite en Safe "
             "graphics le reste ensuite.",
       "en": "Black screen with some graphics cards: the boot menu now shows for 3 seconds with a "
             "\"Raye Linux (safe graphics)\" entry, and an install made in Safe graphics stays that way."}),
-    ("2026-11-15", "0.5 USB",
-     {"fr": "La clé USB démarre maintenant sur tous les PC : certains s'arrêtaient sur "
-            "« you need to load the kernel first ». Si ça vous est arrivé, retéléchargez l'image.",
-      "en": "The USB stick now starts on every PC: some stopped on \"you need to load the "
-            "kernel first\". If that happened to you, download the image again."}),
-    ("2026-11-15", "0.5.6",
-     {"fr": "Les notifications ne restent plus figées au milieu de l'écran, la barre des "
-            "tâches est lisible en mode clair, et Raye Update fait le ménage après une mise à jour.",
-      "en": "Notifications no longer get stuck in the middle of the screen, the taskbar is "
-            "readable in light mode, and Raye Update cleans up after an update."}),
-    ("2026-11-15", "0.5.4",
-     {"fr": "La page Compte des Paramètres est refaite : connexion à votre compte Raye "
-            "et synchronisation de vos réglages.",
-      "en": "The Account page in Settings is redone: sign in to your Raye account and "
-            "sync your settings."}),
-    ("2026-11-14", "0.5.2",
-     {"fr": "L'écran des mises à jour au démarrage est plus rapide et n'affiche plus "
-            "l'ancien pourcentage.",
-      "en": "The update screen at startup is faster and no longer shows the old "
-            "percentage."}),
     ("2026-11-14", "0.5",
      {"fr": "La bêta publique de Raye Linux est sortie : téléchargement libre sur "
             "rayelinux.com.",
