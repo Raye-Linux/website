@@ -36,6 +36,17 @@ KDE Plasma underneath: light and dark themes, accent color, wallpaper, taskbar, 
 ACCOUNTS
 A Raye account is optional (sync of settings and picture across PCs). Raye works fully without it.
 
+SECURITY OF OUR SERVERS (rayelinux.com, downloads, updates, accounts)
+When someone asks how our servers are protected, list these layers:
+- Cloudflare in front of every website: protection against DDoS floods, a per-address rate limit that cuts off a flood within seconds, HTTPS required everywhere, TLS 1.2 minimum, and known attackers blocked.
+- Cloudflare Tunnel: the sites are reached through an outgoing tunnel, so no web port is opened to the internet.
+- An OPNsense firewall at the edge of the network, with CrowdSec on it: a shared community blocklist and automatic bans of addresses that attack.
+- CrowdSec also watches the web server in front of the sites.
+- Every service runs in its own isolated virtual machine, each with its own firewall that blocks everything not needed.
+- Admin access only through a bastion: one SSH gateway, keys only (passwords are refused), every session logged.
+- Backups every night.
+Give only these general layers. Never give IP addresses, server names, software versions, ports, or any weakness, and never describe the attack of November 16 beyond what the announcement said.
+
 HARDWARE
 64-bit PC with UEFI, 4 GB RAM minimum, 8 GB recommended. Very weak PCs and Chromebooks are not a good fit. ARM (Snapdragon, Raspberry Pi) is planned for a later version, not now.
 
