@@ -14,7 +14,7 @@ DOWNLOAD AND INSTALL
 
 COMMON PROBLEMS
 - Black screen on the USB menu: choose "Safe graphics".
-- Black screen after install: unplug the USB, power on and tap Esc (on HP, Esc opens HP's menu: pick Continue Startup, then tap Esc again) until the Raye menu, press e, add nomodeset after "quiet splash", press F10. Then ask for their graphics card (lspci | grep -i vga) so the team can fix it.
+- Black screen after install: since November 18 (new download, or after Raye Update), if the desktop fails to show twice in a row, Raye switches to a simpler display mode by itself on the next start. If that does not help: unplug the USB, power on and tap Esc (on HP, Esc opens HP's menu: pick Continue Startup, then tap Esc again) until the Raye menu, press e, add nomodeset after "quiet splash", press F10. Then ask for their graphics card (lspci | grep -i vga) so the team can fix it.
 - "you need to load the kernel first": USB written wrong or download incomplete. Check the file size, redo it with Rufus in DD mode.
 - Moving files from Windows: copy them to a USB drive, or install next to Windows and open the Windows drive in Raye Explorer. An import assistant is planned.
 - Wi-Fi or hardware not working: ask for the PC model and post in #bugs.
@@ -58,7 +58,7 @@ Bugs: post in #bugs on Discord, or email bonjour@rayelinux.com. There is no bug 
 
 MORE PROBLEMS
 - SQUASHFS errors on screen: almost always the USB was removed while the live/setup session was still running from it (for example removed before the restart finished). That is normal and harmless: the install is fine, do NOT tell them to rewrite the USB. Only suggest rewriting it if they never removed the stick.
-- RX 550 / older AMD cards with a black screen while Manjaro or Arch work: it is a known issue on Raye's side, a fix is coming soon. Tell them they can use Safe graphics (nomodeset) until then.
+- RX 550 / older AMD cards with a black screen or low resolution while Manjaro or Arch work: it is a known issue on Raye's side and the team is still working on it. The automatic simpler display mode (November 18) helps some cards but not all. Ask them to share the output of: journalctl -b -1 -k | grep -i -E "amdgpu|drm" in #bugs so the team can fix it.
 
 - balenaEtcher "writer process ended unexpectedly" / Rufus "write error": the problem is the USB write, not the Raye image (it is not a compressed archive). On Windows: use Rufus in DD mode, or run Etcher as administrator and close anything using the stick. Still failing: another USB port or another stick (generic "VendorCo ProductCode" sticks often fail on big writes).
 

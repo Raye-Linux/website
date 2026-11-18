@@ -823,6 +823,11 @@ HOME = {
 # The "latest changes" list on the home page: one line per published version,
 # newest first; rewrite the old ones out rather than letting the list grow.
 CHANGES = [
+    ("2026-11-18", "Graphics",
+     {"fr": "Cartes graphiques plus anciennes : si le bureau ne s'affiche pas deux fois de suite, Raye passe "
+            "tout seul à un mode d'affichage plus simple. Nouveau téléchargement disponible.",
+      "en": "Older graphics cards: if the desktop fails to show twice in a row, Raye switches to a simpler "
+            "display mode by itself. New download available."}),
     ("2026-11-16", "Raye Update",
      {"fr": "Mises à jour plus simples : plus d'étape « Install now », « Restart now » seulement à la toute fin, "
             "les applis Raye ouvertes se ferment et se rouvrent seules, et plus d'écran « 0 % » à la fin d'une installation.",
@@ -849,10 +854,6 @@ CHANGES = [
             "graphics le reste ensuite.",
       "en": "Black screen with some graphics cards: the boot menu now shows for 3 seconds with a "
             "\"Raye Linux (safe graphics)\" entry, and an install made in Safe graphics stays that way."}),
-    ("2026-11-14", "0.5",
-     {"fr": "La bêta publique de Raye Linux est sortie : téléchargement libre sur "
-            "rayelinux.com.",
-      "en": "The Raye Linux public beta is out: free to download on rayelinux.com."}),
 ]
 
 
