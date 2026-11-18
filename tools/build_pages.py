@@ -672,6 +672,10 @@ HOME = {
              "mémoire. Une fois démarré, sans rien d'ouvert, Raye en utilise environ "
              "1,2 Go (mesuré avec deux écrans) : le reste est pour vos applis, et 8 Go "
              "valent mieux pour beaucoup d'onglets ou les jeux. {full_list}"),
+            ("Je peux aider à faire Raye ?",
+             "Oui, l'équipe recrute : développeurs, modérateurs, aide aux utilisateurs, testeurs, "
+             "traducteurs, designers et créateurs de vidéos. Rejoignez le serveur Discord et postulez "
+             "dans le salon #join-the-team : quelques questions, puis l'équipe vous répond."),
             ("Et la version 1.0 ?",
              "Elle arrive après la bêta, d'ici une à deux semaines. Laissez votre courriel "
              "si vous voulez que je vous écrive le jour de sa sortie."),
@@ -787,6 +791,10 @@ HOME = {
              "memory. Once started, with nothing open, Raye uses about 1.2 GB of it "
              "(measured with two screens): the rest is for your apps, and 8 GB is better "
              "for lots of tabs or games. {full_list}"),
+            ("Can I help build Raye?",
+             "Yes, the team is recruiting: developers, moderators, support helpers, testers, "
+             "translators, designers and video creators. Join the Discord server and apply in "
+             "the #join-the-team channel: a few questions, then the team replies to you."),
             ("What about 1.0?",
              "It comes after the beta, in one to two weeks. Leave your email if you want "
              "me to write you the day it's out."),

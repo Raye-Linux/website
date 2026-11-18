@@ -38,6 +38,13 @@
   {
    "id": "faq:fr:5",
    "lang": "fr",
+   "text": "Oui, l'équipe recrute : développeurs, modérateurs, aide aux utilisateurs, testeurs, traducteurs, designers et créateurs de vidéos. Rejoignez le serveur Discord et postulez dans le salon #join-the-team : quelques questions, puis l'équipe vous répond.",
+   "title": "Je peux aider à faire Raye ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:6",
+   "lang": "fr",
    "text": "Elle arrive après la bêta, d'ici une à deux semaines. Laissez votre courriel si vous voulez que je vous écrive le jour de sa sortie.",
    "title": "Et la version 1.0 ?",
    "url": "/fr/#questions"
@@ -128,6 +135,13 @@
   },
   {
    "id": "faq:en:5",
+   "lang": "en",
+   "text": "Yes, the team is recruiting: developers, moderators, support helpers, testers, translators, designers and video creators. Join the Discord server and apply in the #join-the-team channel: a few questions, then the team replies to you.",
+   "title": "Can I help build Raye?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:6",
    "lang": "en",
    "text": "It comes after the beta, in one to two weeks. Leave your email if you want me to write you the day it's out.",
    "title": "What about 1.0?",
@@ -1068,7 +1082,7 @@
   "en/08-not-in-raye.md": "1225d088730e8bea",
   "en/09-windows-alongside.md": "3036d6b4bac8c2fc",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
-  "en/index.html": "023c8ab35c387bdb",
+  "en/index.html": "9da2e114cc9962f6",
   "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
@@ -1079,7 +1093,7 @@
   "fr/08-not-in-raye.md": "7d7869d5dc502398",
   "fr/09-windows-a-cote.md": "7eb36202d9916723",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
-  "fr/index.html": "e7189a12e75d5f9a",
+  "fr/index.html": "08a283302171b555",
   "telecharger/index.html": "b09e5bddce01e095"
  }
 }
