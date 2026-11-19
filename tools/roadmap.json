@@ -90,6 +90,10 @@
         [
           "done",
           "Switch to Raye from another system and keep your files"
+        ],
+        [
+          "done",
+          "The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)"
         ]
       ]
     },
@@ -140,10 +144,6 @@
         [
           "doing",
           "Lower RAM use at idle: 600–700 MB"
-        ],
-        [
-          "doing",
-          "Ready-made virtual machine images"
         ],
         [
           "doing",

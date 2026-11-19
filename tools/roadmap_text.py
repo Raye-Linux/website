@@ -191,4 +191,6 @@ FR = {
         "Mises à jour de sécurité du noyau automatiques",
     "Fix the Merge folders window in File Explorer":
         "Correctif de la fenêtre « Fusionner les dossiers » de l'Explorateur",
+    "The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)":
+        "L'ISO fonctionne dans les machines virtuelles (outils invités VirtualBox, VMware et QEMU inclus)",
 }
