@@ -13,16 +13,20 @@ them there from the release-files output of the iso repo first."""
 
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import legal_text  # noqa: E402
+import roadmap_text  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site")
 URL = "https://rayelinux.com"
 # the community server; a permanent invite to #welcome
 DISCORD = "https://discord.gg/TrxhUkabyB"
 RELEASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "release.json")
+# the same list as #roadmap on the Discord, copied here by roadmap/update.sh
+ROADMAP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "roadmap.json")
 
 # The download pages are built and tested, but they go online with the image:
 # their mirrors do not answer yet. Until then deploy/not-yet-public keeps them
@@ -42,10 +46,11 @@ GITHUB_MIRROR = False
 PATHS = {
     "fr": {"home": "/fr/", "privacy": "/fr/confidentialite/", "download": "/fr/telecharger/",
            "terms": "/fr/conditions/", "notice": "/fr/mentions-legales/",
-           "licenses": "/fr/licences/", "source": "/fr/code-source/"},
+           "licenses": "/fr/licences/", "source": "/fr/code-source/",
+           "roadmap": "/fr/feuille-de-route/"},
     "en": {"home": "/en/", "privacy": "/en/privacy/", "download": "/en/download/",
            "terms": "/en/terms/", "notice": "/en/legal/", "licenses": "/en/licenses/",
-           "source": "/en/source/"},
+           "source": "/en/source/", "roadmap": "/en/roadmap/"},
 }
 
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
@@ -492,6 +497,9 @@ def topbar(lang, page):
     base = "" if page == "home" else PATHS[lang]["home"]
     links = "\n".join(f'<li><a href="{base}#{key}">{label}</a></li>'
                       for key, label in h["nav"])
+    current = ' aria-current="page"' if page == "roadmap" else ""
+    links += (f'\n<li><a href="{PATHS[lang]["roadmap"]}"{current}>'
+              f'{roadmap_text.PAGE[lang]["nav"]}</a></li>')
     if DOWNLOAD_LIVE:
         cta = f'<a class="btn btn-accent btn-small" href="{PATHS[lang]["download"]}">{t["download"]}</a>'
     else:
@@ -543,6 +551,7 @@ def footer(lang, note=""):
 {download}<li><a href="{p['home']}#captures">{f['shots']}</a></li>
 <li><a href="{p['home']}#nouveautes">{f['inside']}</a></li>
 <li><a href="{p['home']}#questions">{f['questions']}</a></li>
+<li><a href="{p['roadmap']}">{roadmap_text.PAGE[lang]['nav']}</a></li>
 </ul>
 </div>
 <div>
@@ -678,8 +687,9 @@ HOME = {
              "dans le salon #join-the-team : quelques questions, puis l'équipe vous répond."),
             ("Et la version 1.0 ?",
              "La 1.0 Bêta est sortie : c'est elle que vous téléchargez. D'autres bêtas suivent "
-             "avant la 1.0 finale. Laissez votre courriel si vous voulez que je vous écrive "
-             "le jour de sa sortie."),
+             "avant la 1.0 finale. Ce qui reste à faire est dans la "
+             "<a href=\"/fr/feuille-de-route/\">feuille de route</a>. Laissez votre courriel si "
+             "vous voulez que je vous écrive le jour de sa sortie."),
         ],
         "join_title": "La suite, si vous vous inscrivez",
         "join_steps": [
@@ -699,6 +709,7 @@ HOME = {
         ],
         "log_title": "Derniers changements",
         "log_lede": "Les versions publiées, de la plus récente à la plus ancienne.",
+        "log_next": "Et ensuite ? La feuille de route",
     },
     "en": {
         "title": "Raye Linux · Public beta",
@@ -798,7 +809,8 @@ HOME = {
              "the #join-the-team channel: a few questions, then the team replies to you."),
             ("What about 1.0?",
              "1.0 Beta is out: it's the one you download. More betas come before the final "
-             "1.0. Leave your email if you want me to write you the day it's out."),
+             "1.0. What's left is on the <a href=\"/en/roadmap/\">roadmap</a>. Leave your "
+             "email if you want me to write you the day it's out."),
         ],
         "join_title": "What happens if you sign up",
         "join_steps": [
@@ -818,6 +830,7 @@ HOME = {
         ],
         "log_title": "Latest changes",
         "log_lede": "The versions we shipped, newest first.",
+        "log_next": "What's next? See the roadmap",
     },
 }
 
@@ -965,6 +978,7 @@ def home(lang):
 <ol class="changelog" aria-labelledby="log-title">
 {log}
 </ol>
+<p class="changes-next"><a href="{PATHS[lang]['roadmap']}">{h['log_next']}</a></p>
 </div>
 </section>
 
@@ -1125,6 +1139,114 @@ def source(lang):
 """
 
 
+# The roadmap page. Its list is tools/roadmap.json, the one #roadmap shows
+# on the Discord; the French comes from tools/roadmap_text.py.
+EMOJI = re.compile("[\U0001F000-\U0001FAFF☀-➿️]")
+ROADMAP_STATES = ("done", "doing", "planned")
+# the Discord colour of a section, as one of the page's tones
+ROADMAP_TONES = {"3ddc97": "done", "9b6bff": "doing", "f5b942": "next", "8a8f98": "later"}
+STATE_ICON = {
+    "done": CHECK,
+    "doing": ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
+              'aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/>'
+              '<path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg>'),
+    "planned": ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
+                'aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" '
+                'stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg>'),
+}
+
+
+def roadmap_clean(text):
+    """The Discord text without its emoji: the key of the French table."""
+    return re.sub(r"\s+", " ", EMOJI.sub("", text)).strip()
+
+
+def roadmap_load():
+    with open(ROADMAP, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def roadmap_word(text, lang):
+    if text in roadmap_text.RENAMED:
+        return roadmap_text.RENAMED[text][0 if lang == "en" else 1]
+    return text if lang == "en" else roadmap_text.FR[text]
+
+
+def roadmap_sections(data, lang):
+    """[(title, tone, state, [(state, text)])] in the order of the JSON.
+
+    Stops the build, naming every line, if one has no French or an unknown
+    state: the French page must never fall back to English."""
+    missing, bad = [], []
+    for section in data["sections"]:
+        lines = [roadmap_clean(section["title"])] + [roadmap_clean(t) for _, t in section["items"]]
+        missing += [t for t in lines if t not in roadmap_text.FR and t not in roadmap_text.RENAMED]
+        bad += [k for k, _ in section["items"] if k not in ROADMAP_STATES]
+    if missing:
+        sys.exit("tools/roadmap_text.py has no French for:\n  " + "\n  ".join(missing))
+    if bad:
+        sys.exit("tools/roadmap.json: unknown state %s (want done, doing or planned)"
+                 % ", ".join(sorted(set(bad))))
+    out = []
+    for section in data["sections"]:
+        items = [(k, roadmap_word(roadmap_clean(t), lang)) for k, t in section["items"]]
+        states = {k for k, _ in items}
+        state = ("done" if states == {"done"} else "doing" if "doing" in states
+                 else "planned")
+        tone = ROADMAP_TONES.get(section.get("color", "").lower(), state)
+        out.append((roadmap_word(roadmap_clean(section["title"]), lang), tone, state, items))
+    return out
+
+
+def roadmap(lang):
+    import html as _html
+    t, r, labels = T[lang], roadmap_text.PAGE[lang], roadmap_text.STATES[lang]
+    esc = lambda x: _html.escape(x, quote=False)
+    colon = " :" if lang == "fr" else ":"
+    legend = "\n".join(f'<li class="rm-{k}">{STATE_ICON[k]}<span>{labels[k]}</span></li>'
+                       for k in ROADMAP_STATES)
+    blocks = []
+    for n, (title, tone, state, items) in enumerate(roadmap_sections(roadmap_load(), lang), 1):
+        rows = "\n".join(
+            f'<li class="rm-item rm-{k}">{STATE_ICON[k]}'
+            f'<span class="visually-hidden">{labels[k]}{colon} </span><span>{esc(text)}</span></li>'
+            for k, text in items)
+        blocks.append(f"""<li class="rm-section card rm-tone-{tone}">
+<div class="rm-section-head">
+<h2 id="rm-{n}">{esc(title)}</h2>
+<span class="rm-badge rm-{state}">{labels[state]}</span>
+</div>
+<ul class="rm-items" aria-labelledby="rm-{n}">
+{rows}
+</ul>
+</li>""")
+    blocks = "\n".join(blocks)
+    return f"""{head(lang, 'roadmap', r['title'] + ' · Raye Linux', r['description'])}
+<body>
+<a class="skip-link" href="#main">{'Aller au contenu' if lang == 'fr' else 'Skip to content'}</a>
+{topbar(lang, 'roadmap')}
+<main id="main" class="roadmap wrap">
+<div class="rm-head">
+<h1>{r['title']}</h1>
+<p class="lede">{r['lede']}</p>
+<div class="rm-actions">
+<a class="btn btn-accent" href="{DISCORD}" rel="noopener">{r['idea']}</a>
+<span class="rm-same">{r['same']}</span>
+</div>
+<ul class="rm-legend" aria-label="{r['legend']}">
+{legend}
+</ul>
+</div>
+<ol class="rm-list">
+{blocks}
+</ol>
+</main>
+{footer(lang)}
+</body>
+</html>
+"""
+
+
 def not_found():
     """One page for both languages: nginx cannot know which one was meant."""
     return f"""{head('fr', 'home', 'Page introuvable · Page not found', T['fr']['description'])}
@@ -1236,6 +1358,8 @@ def main():
                       french(text) if lang == "fr" else text)
         write("fr/code-source/index.html", french(source("fr")))
         write("en/source/index.html", source("en"))
+        write("fr/feuille-de-route/index.html", french(roadmap("fr")))
+        write("en/roadmap/index.html", roadmap("en"))
         write("fr/telecharger/index.html", french(download("fr")))
         write("en/download/index.html", download("en"))
         write("404.html", french(strip_links(not_found())))

@@ -1,0 +1,229 @@
+{
+  "intro": "What's coming to Raye Linux, in order. Community ideas always come first: share yours in #ideas. ✅ done · 🔨 in progress · 🕒 planned",
+  "sections": [
+    {
+      "title": "✅ Recently done",
+      "color": "3ddc97",
+      "items": [
+        [
+          "done",
+          "New download (Nov 18) with all the latest fixes built in"
+        ],
+        [
+          "done",
+          "Join the team: apply in #join-the-team"
+        ],
+        [
+          "done",
+          "Automatic graphics fallback for older cards (more fixes for some AMD cards still coming)"
+        ],
+        [
+          "done",
+          "Simpler updates: no extra \"Install now\" step, apps reopen by themselves"
+        ],
+        [
+          "done",
+          "USB drives in This PC, opened in one click"
+        ],
+        [
+          "done",
+          "Apps open at their own size, minimize animation into the taskbar"
+        ],
+        [
+          "done",
+          "No more freeze when plugging in a second screen"
+        ]
+      ]
+    },
+    {
+      "title": "✅ V1 Beta 1 · out November 19",
+      "color": "3ddc97",
+      "items": [
+        [
+          "done",
+          "A much faster boot"
+        ],
+        [
+          "done",
+          "NVIDIA and AMD control panels (fans, power, profiles)"
+        ],
+        [
+          "done",
+          "Better File Explorer and smoother mouse scrolling everywhere"
+        ],
+        [
+          "done",
+          "Many more settings like Windows 11, with a transparency switch"
+        ],
+        [
+          "done",
+          "New Clock app: alarms, timer, stopwatch, world clocks"
+        ],
+        [
+          "done",
+          "Windows apps work out of the box, plus better support for Windows apps and games"
+        ],
+        [
+          "done",
+          "Bigger Store, with Steam and Heroic built in"
+        ],
+        [
+          "done",
+          "Pinned web apps keep their real icon"
+        ],
+        [
+          "done",
+          "New installer: dual boot next to Windows or another Linux, resize partitions, better Wi-Fi page"
+        ],
+        [
+          "done",
+          "Cleaner, more reliable Raye Update"
+        ],
+        [
+          "done",
+          "\"Try Raye\" mode: use Raye from the USB stick without installing"
+        ],
+        [
+          "done",
+          "Store reviews and ratings"
+        ],
+        [
+          "done",
+          "Switch to Raye from another system and keep your files"
+        ]
+      ]
+    },
+    {
+      "title": "🔨 V1 Beta 2 (next big update)",
+      "color": "9b6bff",
+      "items": [
+        [
+          "doing",
+          "Choose KDE or Hyprland during installation"
+        ],
+        [
+          "doing",
+          "Windows 10 look option"
+        ],
+        [
+          "doing",
+          "A real Windows 10 Start menu"
+        ],
+        [
+          "doing",
+          "Windows-style window animations and snap previews"
+        ],
+        [
+          "doing",
+          "FL Studio, TikTok LIVE Studio and Affinity, \"Optimized for Raye\" once tested"
+        ],
+        [
+          "doing",
+          "Import your files from Windows"
+        ],
+        [
+          "doing",
+          "Install guide and keyboard support for Intel/AMD Chromebooks"
+        ],
+        [
+          "doing",
+          "Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution"
+        ],
+        [
+          "doing",
+          "Game performance: higher FPS and an advanced game mode"
+        ],
+        [
+          "doing",
+          "New Raye kernel tuned for gaming and smoothness"
+        ],
+        [
+          "doing",
+          "Lower RAM use at idle: 600–700 MB"
+        ],
+        [
+          "doing",
+          "Ready-made virtual machine images"
+        ],
+        [
+          "doing",
+          "Community Store requests: Quadra, rekordbox and Mixxx"
+        ],
+        [
+          "doing",
+          "40+ popular Windows apps in the Store, each one tested"
+        ],
+        [
+          "doing",
+          "Windows apps install silently with a real progress bar, start to finish"
+        ],
+        [
+          "doing",
+          "Complete Windows bridge: share drivers, files and settings with Windows"
+        ]
+      ]
+    },
+    {
+      "title": "🕒 V1 final",
+      "color": "f5b942",
+      "items": [
+        [
+          "planned",
+          "Final polish and fixes from both betas"
+        ],
+        [
+          "planned",
+          "New website, with fresh screenshots of the real system"
+        ],
+        [
+          "planned",
+          "More languages"
+        ],
+        [
+          "planned",
+          "New ISO for everyone"
+        ]
+      ]
+    },
+    {
+      "title": "🕒 V2",
+      "color": "8a8f98",
+      "items": [
+        [
+          "planned",
+          "Arch edition, kept in sync with the Ubuntu edition"
+        ],
+        [
+          "planned",
+          "Raye account: your settings follow you to every PC"
+        ],
+        [
+          "planned",
+          "ARM PCs"
+        ],
+        [
+          "planned",
+          "Spanish, German, Portuguese and Italian"
+        ]
+      ]
+    },
+    {
+      "title": "🕒 V3",
+      "color": "8a8f98",
+      "items": [
+        [
+          "planned",
+          "Android apps"
+        ],
+        [
+          "planned",
+          "Local assistant and developer options"
+        ],
+        [
+          "planned",
+          "Every other language"
+        ]
+      ]
+    }
+  ]
+}

@@ -131,7 +131,10 @@ PAGES = ["index.html", "fr/index.html", "en/index.html", "fr/confidentialite/ind
          "en/privacy/index.html", "fr/telecharger/index.html", "en/download/index.html",
          "404.html", "fr/conditions/index.html", "en/terms/index.html",
          "fr/mentions-legales/index.html", "en/legal/index.html",
-         "fr/licences/index.html", "en/licenses/index.html"]
+         "fr/licences/index.html", "en/licenses/index.html",
+         "fr/feuille-de-route/index.html", "en/roadmap/index.html"]
+# Windows may be named on the roadmap; test_roadmap checks its words
+ROADMAP_PAGES = ("fr/feuille-de-route/index.html", "en/roadmap/index.html")
 # the bare rayelinux.com: no language, only the way on to /fr/ or /en/
 CHOOSER = "index.html"
 LICENSE_PAGES = {"fr/licences/index.html": "fr", "en/licenses/index.html": "en"}
@@ -273,6 +276,8 @@ class SiteTests(unittest.TestCase):
         # system may be named, once, in the words the law asks for
         texts = {}
         for rel in PAGES:
+            if rel in ROADMAP_PAGES:
+                continue
             c = parse(read(rel))
             alts = [a.get("alt", "") for t, a in c.tags if t == "img"]
             text = " ".join(c.text + alts)
@@ -344,7 +349,7 @@ class SiteTests(unittest.TestCase):
                        ("fr/conditions/index.html", "en/terms/index.html"),
                        ("fr/mentions-legales/index.html", "en/legal/index.html"),
                        ("fr/licences/index.html", "en/licenses/index.html"),
-                       DOWNLOAD_PAGES):
+                       ROADMAP_PAGES, DOWNLOAD_PAGES):
             a, b = parse(read(fr)), parse(read(en))
             self.assertEqual([t for t, _ in a.tags], [t for t, _ in b.tags], fr)
         fr, en = read("fr/index.html"), read("en/index.html")

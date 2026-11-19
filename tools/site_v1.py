@@ -435,6 +435,9 @@ class Site:
             for page in ("terms", "notice", "licenses"):
                 self.write(self.b.PATHS[lang][page].lstrip("/") + "index.html",
                            self.b.strip_links(self.b.legal(lang, page)), lang)
+            # so is the roadmap: its footer link must lead somewhere here too
+            self.write(self.b.PATHS[lang]["roadmap"].lstrip("/") + "index.html",
+                       self.b.strip_links(self.b.roadmap(lang)), lang)
         self.write("404.html", self.b.strip_links(self.not_found()), "fr")
 
 
