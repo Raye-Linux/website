@@ -1,19 +1,19 @@
 {
-  "release": "0.5-beta",
-  "title": "Raye Linux 0.5 Beta Alpenglow",
-  "date": "2026-11-18",
-  "iso": "raye-0.5-beta-amd64.iso",
-  "size": 2867494912,
-  "sha256": "dcf0df4fb3b1484493dceb9b257e4a42320c675a4b3812b1c93bec75f839b740",
+  "release": "1.0-beta",
+  "title": "Raye Linux 1.0 Beta Brocken",
+  "date": "2026-11-19",
+  "iso": "raye-1.0-beta-amd64.iso",
+  "size": 2881132544,
+  "sha256": "d7ffe63c47049424f825667c037c72ddcdfe7cd532fa830a13cb4e79dafd3b99",
   "urls": {
-    "r2": "https://dl.rayelinux.com/iso/0.5-beta/raye-0.5-beta-amd64.iso",
-    "r2_folder": "https://dl.rayelinux.com/iso/0.5-beta/",
-    "github": "https://github.com/Raye-Linux/releases/releases/tag/v0.5-beta",
-    "github_download": "https://github.com/Raye-Linux/releases/releases/download/v0.5-beta/",
+    "r2": "https://dl.rayelinux.com/iso/1.0-beta/raye-1.0-beta-amd64.iso",
+    "r2_folder": "https://dl.rayelinux.com/iso/1.0-beta/",
+    "github": "https://github.com/Raye-Linux/releases/releases/tag/v1.0-beta",
+    "github_download": "https://github.com/Raye-Linux/releases/releases/download/v1.0-beta/",
     "issues": "https://github.com/Raye-Linux/releases/issues"
   },
   "parts": [
-    "raye-0.5-beta-amd64.iso.part1",
-    "raye-0.5-beta-amd64.iso.part2"
+    "raye-1.0-beta-amd64.iso.part1",
+    "raye-1.0-beta-amd64.iso.part2"
   ]
 }

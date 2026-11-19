@@ -49,15 +49,15 @@
 <main id="main" class="download wrap">
 <header class="dl-head">
 <p class="status"><span class="dot" aria-hidden="true"></span>Bêta publique</p>
-<h1>Télécharger Raye Linux 0.5 Bêta Alpenglow</h1>
+<h1>Télécharger Raye Linux 1.0 Bêta Brocken</h1>
 <p class="lede">L'image de Raye Linux, à écrire sur une clé USB pour l'installer. Si quelque chose ne marche pas, écrivez-moi.</p>
 </header>
 
 <section class="dl-file card" aria-labelledby="file-title">
 <div class="dl-file-top">
 <div>
-<h2 id="file-title">raye-0.5-beta-amd64.iso</h2>
-<p class="dl-meta">2,9 Go · ISO 64 bits, démarrage UEFI · 18 novembre 2026</p>
+<h2 id="file-title">raye-1.0-beta-amd64.iso</h2>
+<p class="dl-meta">2,9 Go · ISO 64 bits, démarrage UEFI · 19 novembre 2026</p>
 </div>
 <div class="dl-actions">
 <a class="btn btn-accent" href="#accept" data-accept>Télécharger l'ISO</a>
@@ -66,29 +66,29 @@
 </div>
 
 <dl class="dl-facts">
-<div><dt>SHA-256</dt><dd><code class="hash">dcf0df4fb3b1484493dceb9b257e4a42320c675a4b3812b1c93bec75f839b740</code></dd></div>
+<div><dt>SHA-256</dt><dd><code class="hash">d7ffe63c47049424f825667c037c72ddcdfe7cd532fa830a13cb4e79dafd3b99</code></dd></div>
 <div><dt>Empreinte de la clé</dt><dd><code>EA73 69D4 C3A3 10B2 DF3D  FC16 D3AA 2E62 5DDE 161E</code></dd></div>
 </dl>
 <ul class="dl-links">
-<li><a href="https://dl.rayelinux.com/iso/0.5-beta/SHA256SUMS">SHA256SUMS</a></li>
-<li><a href="https://dl.rayelinux.com/iso/0.5-beta/SHA256SUMS.asc">Signature</a></li>
-<li><a href="https://dl.rayelinux.com/iso/0.5-beta/raye-archive.asc">Clé publique</a></li>
-<li><a href="https://dl.rayelinux.com/iso/0.5-beta/release-notes-0.5-beta.fr.md">Notes de version</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0-beta/SHA256SUMS">SHA256SUMS</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0-beta/SHA256SUMS.asc">Signature</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0-beta/raye-archive.asc">Clé publique</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0-beta/release-notes-1.0-beta.fr.md">Notes de version</a></li>
 </ul>
 </section>
 
 <section id="accept" class="card dl-card dl-accept" aria-labelledby="accept-title">
 <h2 id="accept-title">Avant de télécharger : c'est une bêta publique</h2>
 <ul class="plain">
-<li>Raye Linux 0.5 est une version bêta. Elle peut contenir beaucoup de bugs, planter et, dans de rares cas, faire perdre des données.</li>
+<li>Raye Linux 1.0 Bêta est une version bêta. Elle peut contenir beaucoup de bugs, planter et, dans de rares cas, faire perdre des données.</li>
 <li>L'installation peut effacer tout le disque choisi. Sauvegardez vos fichiers importants avant d'installer, et préférez un PC de test ou une machine virtuelle.</li>
 <li>Le logiciel est fourni « tel quel », sans aucune garantie, comme le prévoient ses licences libres. Dans toute la mesure permise par la loi, Raye Linux et ses contributeurs ne sont pas responsables des dommages, pertes de données ou autres problèmes liés à son téléchargement, son installation ou son utilisation.</li>
 <li>Vous l'installez et l'utilisez à vos propres risques, et vous êtes responsable de l'ordinateur sur lequel vous le faites.</li>
-<li>La bêta publique dure environ une à deux semaines, avant la version 1.0.</li>
+<li>D'autres bêtas suivront avant la version 1.0 finale.</li>
 <li>En téléchargeant, vous acceptez les <a href="/fr/conditions/">conditions d'utilisation</a>.</li>
 </ul>
 <label class="dl-check"><input type="checkbox" id="accept-check"> <span>Je confirme avoir lu ces avertissements, avoir sauvegardé mes données et accepter d'utiliser cette bêta à mes propres risques.</span></label>
-<p class="dl-accept-actions"><a class="btn btn-accent dl-go" href="https://dl.rayelinux.com/iso/0.5-beta/raye-0.5-beta-amd64.iso">J'accepte, télécharger l'ISO</a>
+<p class="dl-accept-actions"><a class="btn btn-accent dl-go" href="https://dl.rayelinux.com/iso/1.0-beta/raye-1.0-beta-amd64.iso">J'accepte, télécharger l'ISO</a>
 <button type="button" class="btn btn-quiet dl-cancel" hidden>Annuler</button></p>
 </section>
 
@@ -111,7 +111,7 @@ gpg --verify SHA256SUMS.asc SHA256SUMS</code></pre></li>
 <li><strong>balenaEtcher</strong> : choisissez l'ISO, puis la clé, puis Flash.</li>
 <li><strong>dd</strong> : remplacez <code>sdX</code> par votre clé et vérifiez deux fois avec <code>lsblk</code> : tout ce qu'elle contient sera effacé.</li>
 </ul>
-<pre class="code"><code>sudo dd if=raye-0.5-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress</code></pre>
+<pre class="code"><code>sudo dd if=raye-1.0-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress</code></pre>
 <p>Démarrez ensuite l'ordinateur sur la clé, souvent avec F12, F11, F8 ou Échap à l'allumage.</p>
 </section>
 

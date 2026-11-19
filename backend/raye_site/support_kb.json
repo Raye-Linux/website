@@ -45,21 +45,21 @@
   {
    "id": "faq:fr:6",
    "lang": "fr",
-   "text": "Elle arrive après la bêta, d'ici une à deux semaines. Laissez votre courriel si vous voulez que je vous écrive le jour de sa sortie.",
+   "text": "La 1.0 Bêta est sortie : c'est elle que vous téléchargez. D'autres bêtas suivent avant la 1.0 finale. Laissez votre courriel si vous voulez que je vous écrive le jour de sa sortie.",
    "title": "Et la version 1.0 ?",
    "url": "/fr/#questions"
   },
   {
    "id": "download:fr:0.0",
    "lang": "fr",
-   "text": "2,9 Go · ISO 64 bits, démarrage UEFI · 18 novembre 2026\n\nTélécharger l'ISO\n\nSHA-256\n\ndcf0df4fb3b1484493dceb9b257e4a42320c675a4b3812b1c93bec75f839b740\n\nEmpreinte de la clé\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nClé publique\n\nNotes de version",
-   "title": "raye-0.5-beta-amd64.iso",
+   "text": "2,9 Go · ISO 64 bits, démarrage UEFI · 19 novembre 2026\n\nTélécharger l'ISO\n\nSHA-256\n\nd7ffe63c47049424f825667c037c72ddcdfe7cd532fa830a13cb4e79dafd3b99\n\nEmpreinte de la clé\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nClé publique\n\nNotes de version",
+   "title": "raye-1.0-beta-amd64.iso",
    "url": "/fr/telecharger/"
   },
   {
    "id": "download:fr:1.0",
    "lang": "fr",
-   "text": "Raye Linux 0.5 est une version bêta. Elle peut contenir beaucoup de bugs, planter et, dans de rares cas, faire perdre des données.\n\nL'installation peut effacer tout le disque choisi. Sauvegardez vos fichiers importants avant d'installer, et préférez un PC de test ou une machine virtuelle.\n\nLe logiciel est fourni « tel quel », sans aucune garantie, comme le prévoient ses licences libres. Dans toute la mesure permise par la loi, Raye Linux et ses contributeurs ne sont pas responsables des dommages, pertes de données ou autres problèmes liés à son téléchargement, son installation ou son utilisation.\n\nVous l'installez et l'utilisez à vos propres risques, et vous êtes responsable de l'ordinateur sur lequel vous le faites.\n\nLa bêta publique dure environ une à deux semaines, avant la version 1.0.\n\nEn téléchargeant, vous acceptez les conditions d'utilisation.\n\n Je confirme avoir lu ces avertissements, avoir sauvegardé mes données et accepter d'utiliser cette bêta à mes propres risques.\n\nJ'accepte, télécharger l'ISO\nAnnuler",
+   "text": "Raye Linux 1.0 Bêta est une version bêta. Elle peut contenir beaucoup de bugs, planter et, dans de rares cas, faire perdre des données.\n\nL'installation peut effacer tout le disque choisi. Sauvegardez vos fichiers importants avant d'installer, et préférez un PC de test ou une machine virtuelle.\n\nLe logiciel est fourni « tel quel », sans aucune garantie, comme le prévoient ses licences libres. Dans toute la mesure permise par la loi, Raye Linux et ses contributeurs ne sont pas responsables des dommages, pertes de données ou autres problèmes liés à son téléchargement, son installation ou son utilisation.\n\nVous l'installez et l'utilisez à vos propres risques, et vous êtes responsable de l'ordinateur sur lequel vous le faites.\n\nD'autres bêtas suivront avant la version 1.0 finale.\n\nEn téléchargeant, vous acceptez les conditions d'utilisation.\n\n Je confirme avoir lu ces avertissements, avoir sauvegardé mes données et accepter d'utiliser cette bêta à mes propres risques.\n\nJ'accepte, télécharger l'ISO\nAnnuler",
    "title": "Avant de télécharger : c'est une bêta publique",
    "url": "/fr/telecharger/"
   },
@@ -73,7 +73,7 @@
   {
    "id": "download:fr:3.0",
    "lang": "fr",
-   "text": "Rufus : choisissez l'ISO et, quand il le demande, écrivez-la en mode image DD. Le mode ISO donne une clé qui ne démarre pas.\n\nbalenaEtcher : choisissez l'ISO, puis la clé, puis Flash.\n\ndd : remplacez sdX par votre clé et vérifiez deux fois avec lsblk : tout ce qu'elle contient sera effacé.\n\nsudo dd if=raye-0.5-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nDémarrez ensuite l'ordinateur sur la clé, souvent avec F12, F11, F8 ou Échap à l'allumage.",
+   "text": "Rufus : choisissez l'ISO et, quand il le demande, écrivez-la en mode image DD. Le mode ISO donne une clé qui ne démarre pas.\n\nbalenaEtcher : choisissez l'ISO, puis la clé, puis Flash.\n\ndd : remplacez sdX par votre clé et vérifiez deux fois avec lsblk : tout ce qu'elle contient sera effacé.\n\nsudo dd if=raye-1.0-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nDémarrez ensuite l'ordinateur sur la clé, souvent avec F12, F11, F8 ou Échap à l'allumage.",
    "title": "Créer une clé USB",
    "url": "/fr/telecharger/"
   },
@@ -143,21 +143,21 @@
   {
    "id": "faq:en:6",
    "lang": "en",
-   "text": "It comes after the beta, in one to two weeks. Leave your email if you want me to write you the day it's out.",
+   "text": "1.0 Beta is out: it's the one you download. More betas come before the final 1.0. Leave your email if you want me to write you the day it's out.",
    "title": "What about 1.0?",
    "url": "/en/#questions"
   },
   {
    "id": "download:en:0.0",
    "lang": "en",
-   "text": "2.9 GB · 64-bit ISO, UEFI start · November 18, 2026\n\nDownload the ISO\n\nSHA-256\n\ndcf0df4fb3b1484493dceb9b257e4a42320c675a4b3812b1c93bec75f839b740\n\nKey fingerprint\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nPublic key\n\nRelease notes",
-   "title": "raye-0.5-beta-amd64.iso",
+   "text": "2.9 GB · 64-bit ISO, UEFI start · November 19, 2026\n\nDownload the ISO\n\nSHA-256\n\nd7ffe63c47049424f825667c037c72ddcdfe7cd532fa830a13cb4e79dafd3b99\n\nKey fingerprint\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nPublic key\n\nRelease notes",
+   "title": "raye-1.0-beta-amd64.iso",
    "url": "/en/download/"
   },
   {
    "id": "download:en:1.0",
    "lang": "en",
-   "text": "Raye Linux 0.5 is a beta. It can have many bugs, crash and, in rare cases, lose data.\n\nInstalling can erase the whole disk you pick. Back up your important files before you install, and prefer a test PC or a virtual machine.\n\nThe software is provided “as is”, without any warranty, as its free licenses say. To the fullest extent the law allows, Raye Linux and its contributors are not liable for any damage, data loss or other problem that comes from downloading, installing or using it.\n\nYou install and use it at your own risk, and you are responsible for the computer you do it on.\n\nThe public beta runs for about one to two weeks, before version 1.0.\n\nBy downloading, you accept the terms of use.\n\n I have read these warnings, backed up my data and agree to use this beta at my own risk.\n\nI agree, download the ISO\nCancel",
+   "text": "Raye Linux 1.0 Beta is a beta. It can have many bugs, crash and, in rare cases, lose data.\n\nInstalling can erase the whole disk you pick. Back up your important files before you install, and prefer a test PC or a virtual machine.\n\nThe software is provided “as is”, without any warranty, as its free licenses say. To the fullest extent the law allows, Raye Linux and its contributors are not liable for any damage, data loss or other problem that comes from downloading, installing or using it.\n\nYou install and use it at your own risk, and you are responsible for the computer you do it on.\n\nMore betas follow before the final 1.0.\n\nBy downloading, you accept the terms of use.\n\n I have read these warnings, backed up my data and agree to use this beta at my own risk.\n\nI agree, download the ISO\nCancel",
    "title": "Before you download: this is a public beta",
    "url": "/en/download/"
   },
@@ -171,7 +171,7 @@
   {
    "id": "download:en:3.0",
    "lang": "en",
-   "text": "Rufus: choose the ISO and, when asked, write it in DD image mode. ISO mode gives a stick that doesn't start.\n\nbalenaEtcher: choose the ISO, then the stick, then Flash.\n\ndd: replace sdX with your stick and check twice with lsblk: everything on it will be erased.\n\nsudo dd if=raye-0.5-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nThen start the computer from the stick, often with F12, F11, F8 or Esc at power on.",
+   "text": "Rufus: choose the ISO and, when asked, write it in DD image mode. ISO mode gives a stick that doesn't start.\n\nbalenaEtcher: choose the ISO, then the stick, then Flash.\n\ndd: replace sdX with your stick and check twice with lsblk: everything on it will be erased.\n\nsudo dd if=raye-1.0-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nThen start the computer from the stick, often with F12, F11, F8 or Esc at power on.",
    "title": "Make a USB stick",
    "url": "/en/download/"
   },
@@ -381,29 +381,8 @@
   {
    "id": "handbook:fr:07-cette-beta:0",
    "lang": "fr",
-   "text": "La liste ci-dessous est la liste complète, dans l'ordre où les notes de\nversion la donnent. Elle est ici parce que c'est la page qu'on ouvre quand\nquelque chose ne marche pas, et trouver son problème déjà écrit est plus\nrapide que de le signaler.\n\n<a id=\"known-1\"></a>\n**L'écran devient noir un instant avant l'écran de connexion.** Pendant 3\nà 5 secondes, entre l'image de Raye et l'écran de connexion. Rien n'est\ncassé : attendez, l'écran de connexion arrive.\n\n<a id=\"known-2\"></a>\n**Quelques applis n'ont pas l'allure de Raye.** Le terminal, l'outil de\ncapture et certaines boîtes de dialogue portent les couleurs de Raye mais\nne sont pas encore redessinés.\n\n<a id=\"known-3\"></a>\n**Le menu Démarrer et la barre des tâches sont proches de Windows 11, pas\nidentiques.** Le champ de recherche et la section Recommandé sont les\nparties qui manquent encore.\n\n<a id=\"known-4\"></a>\n**Les écrans de connexion et de verrouillage ne s'accordent pas sur votre\nimage.** L'image de compte par défaut n'est pas la même des deux côtés. Un\nbouton **OK** isolé s'affiche aussi sous « Mot de passe incorrect ».\n\n<a id=\"known-5\"></a>\n**Tous les programmes Windows ne fonctionnent pas.** Le premier que vous\nouvrez après l'installation prend du temps, certains installateurs\nmontrent une fenêtre grise à l'ancienne, et certains programmes ne\ndémarrent pas du tout. Quand un programme existe aussi pour Raye - \nDiscord, Steam - installez-le plutôt depuis le Raye Store ; voir\nLes programmes Windows.",
+   "text": "La liste ci-dessous est la liste complète, dans l'ordre où les notes de\nversion la donnent. Elle est ici parce que c'est la page qu'on ouvre quand\nquelque chose ne marche pas, et trouver son problème déjà écrit est plus\nrapide que de le signaler.\n\n<a id=\"known-1\"></a>\n**Les anciennes cartes AMD peuvent démarrer en basse résolution.** Certaines\ncartes des séries RX 400 et 500 affichent une basse résolution avec peu\nd'images par seconde sur certains PC. Quand le bureau ne s'affiche pas deux\nfois de suite, Raye passe tout seul à un mode d'affichage plus simple, ce qui\naide certaines cartes mais pas toutes. Si cela vous arrive, dites-le dans\n#bugs sur Discord : l'équipe y travaille encore.\n\n<a id=\"known-2\"></a>\n**Pas de noyau Raye avec le pilote NVIDIA.** Les modules précompilés de\nNVIDIA ne se chargent qu'avec le noyau standard : Paramètres ne propose donc\npas le noyau Raye sur un PC qui les utilise, et dit pourquoi.\n\n<a id=\"known-3\"></a>\n**L'appli Carte graphique est nouvelle.** Sa courbe de ventilateur et sa\nlimite de puissance ont été vérifiées sur des données de test, pas encore\nsur chaque génération de carte AMD. Rétablir les valeurs par défaut remet\nla carte comme elle était.\n\n<a id=\"known-4\"></a>\n**Tous les programmes Windows ne fonctionnent pas.** Les applis faites\nuniquement pour le Microsoft Store ne peuvent pas fonctionner du tout. Les\nprogrammes qui existent aussi pour Raye (Discord, Steam) s'installent mieux\ndepuis le Raye Store.\n\n<a id=\"known-5\"></a>\n**Les alarmes ne sonnent que lorsque le PC est allumé.** Horloge ne peut pas\nencore sortir le PC de la veille : une alarme manquée pendant la veille\ns'affiche comme manquée au réveil.",
    "title": "Ce que cette bêta fait encore mal",
-   "url": null
-  },
-  {
-   "id": "handbook:fr:07-cette-beta:1",
-   "lang": "fr",
-   "text": "<a id=\"known-6\"></a>\n**Les polices de Microsoft arrivent plus tard.** Arial, Times New Roman\net Verdana sont à Microsoft, donc l'image ne les emporte pas : Raye les\ntélécharge en arrière-plan la première fois que le PC est en ligne\naprès l'installation, avec les bibliothèques Visual C++, et les met dans\nchaque espace Windows. Un programme ouvert avant utilise les polices du\nsystème, et son texte peut sortir dans une autre fonte, ou à une taille\nqui déborde de son cadre.\n\n<a id=\"known-7\"></a>\n**Les jeux en 3D n'ont presque pas été essayés.** Les programmes\nWindows dessinent maintenant par Vulkan, mais le seul jeu joué jusqu'ici\nest un vieux jeu Direct3D 9, Chocolate Doom. Aucun jeu Direct3D 11 ou 12\nn'a été essayé sur une vraie carte graphique : on ne sait pas encore\ns'ils tournent bien.\n\n<a id=\"known-8\"></a>\n**Les programmes faits en .NET n'ont presque pas été essayés.** Raye\napporte maintenant .NET et le moteur web que certains programmes\nembarquent, mais un seul de ces programmes a été testé. L'installateur\nde Paint.NET passe maintenant sa vérification de la carte graphique,\npuis s'arrête sur une erreur de sortie des couleurs. Rien n'a encore été\nessayé sur une vraie carte graphique.\n\n<a id=\"known-9\"></a>\n**Roblox Studio ne permet pas encore de se connecter depuis sa propre\nfenêtre.** Ce qu'on tape n'arrive pas à sa page de connexion. Passez par\nLogin via Browser, qui ouvre la page dans votre navigateur.\n\n<a id=\"known-10\"></a>\n**Les mises à jour ont besoin d'Internet avant de pouvoir dire quoi que ce\nsoit.** Raye cherche ses propres paquets sur rayelinux.com et sur GitHub.\nTant que vous n'êtes pas connecté, les Paramètres indiquent que la\nrecherche n'a pas pu se faire : c'est exact, ce n'est pas une panne.",
-   "title": "Ce que cette bêta fait encore mal (2)",
-   "url": null
-  },
-  {
-   "id": "handbook:fr:07-cette-beta:2",
-   "lang": "fr",
-   "text": "<a id=\"known-11\"></a>\n**Rien n'a été mesuré face à Windows sur un vrai ordinateur.** Si vous\nlisez quelque part que Raye est plus rapide ou plus lent, personne ne l'a\nencore pesé.\n\n<a id=\"known-12\"></a>\n**`add-apt-repository -c` et `-p` peuvent casser la source des paquets de\nRaye.** Ils risquent de la choisir et de la réécrire ; `apt` répond alors\n404 pour les paquets Raye, et comme le fichier appartient à un paquet, il\nest remplacé à la mise à jour suivante. Ajoutez un PPA avec\n`add-apt-repository ppa:...` tout court, qui écrit son propre fichier. Si\nc'est déjà arrivé : `sudo apt install --reinstall raye-archive-keyring`.\n\n<a id=\"known-13\"></a>\n**Les paquets source sont déclarés mais éteints**, pour qu'`apt update` ne\ntélécharge pas 18 Mo d'index de sources sur chaque ordinateur. Pour\ncompiler un paquet depuis ses sources, allumez-les d'abord :\n`sudo sed -i 's/^Enabled: no$/Enabled: yes/' /etc/apt/sources.list.d/ubuntu.sources && sudo apt update`.\n\n<a id=\"known-14\"></a>\n**Le liseré autour de l'élément actif est peu visible**, sur quelques\nsurfaces sombres et davantage avec une couleur d'accent très claire ou\ntrès foncée. Le texte et les commandes gardent leur contraste ; c'est le\nfin anneau de focus qui n'atteint pas toujours le 3:1 qu'attend quelqu'un\nqui navigue au clavier.",
-   "title": "Ce que cette bêta fait encore mal (3)",
-   "url": null
-  },
-  {
-   "id": "handbook:fr:07-cette-beta:3",
-   "lang": "fr",
-   "text": "Tous les écrans de l'installation sont traduits, sauf celui où vous\nchoisissez le disque. Cette page vient de l'installateur sur lequel Raye\ns'appuie, et cette image n'en porte aucune traduction française : elle\ns'affiche en anglais même si vous avez choisi le français. C'est aussi la\npage où un mauvais clic coûte le plus cher, donc\nInstaller à côté de Windows nomme ses boutons.",
-   "title": "Ce que cette bêta fait encore mal › Et une page de l'installation n'existe qu'en anglais",
    "url": null
   },
   {
@@ -472,14 +451,14 @@
   {
    "id": "handbook:fr:09-windows-a-cote:3",
    "lang": "fr",
-   "text": "Cette page de l'installation est en anglais même si vous avez choisi le\nfrançais - voir Ce que cette bêta fait encore mal.\nTrois choix :\n\n- **Erase disk** (effacer le disque) - Raye tout seul. Déjà sélectionné :\n ne le laissez pas par distraction.\n- **Install alongside** (installer à côté) - celui que vous voulez. Raye\n rétrécit une partition pour faire de la place. Choisissez la partition\n de Windows, puis tirez la barre du bas pour décider ce que Windows garde\n et ce que Raye reçoit.\n- **Replace a partition** (remplacer une partition) - met Raye à la place\n d'une partition et efface ce qu'elle contenait.\n\nVous ne pouvez pas découper les partitions à la main ici : cet\ninstallateur ne le propose pas. Si la disposition dont vous avez besoin\nn'est pas l'un de ces trois choix, Raye ne sait pas encore la faire.\n\nRaye utilise la partition EFI que Windows a déjà créée au lieu d'en\najouter une. Le rétrécissement, lui, réécrit bien la taille de la\npartition Windows - c'est toute la raison pour laquelle Windows doit\navoir été arrêté correctement d'abord.",
+   "text": "Les choix proposés :\n\n- **Erase disk** (effacer le disque) - Raye tout seul. Déjà sélectionné :\n ne le laissez pas par distraction.\n- **Install alongside** (installer à côté) - celui que vous voulez. Raye\n rétrécit une partition pour faire de la place. Choisissez la partition\n de Windows, puis tirez la barre du bas pour décider ce que Windows garde\n et ce que Raye reçoit.\n- **Replace a partition** (remplacer une partition) - met Raye à la place\n d'une partition et efface ce qu'elle contenait.\n- **Remplacer et garder mes fichiers** - met Raye à la place de l'autre\n système et apporte son Bureau, ses Documents, Téléchargements, Musique,\n Images et Vidéos dans votre nouveau compte. Chaque fichier est d'abord\n copié et vérifié : s'il en manque un seul, l'autre système n'est pas\n effacé.\n\nVous ne pouvez pas découper les partitions à la main ici : cet\ninstallateur ne le propose pas. Si la disposition dont vous avez besoin\nn'est pas l'un de ces choix, Raye ne sait pas encore la faire.\n\nRaye utilise la partition EFI que Windows a déjà créée au lieu d'en\najouter une. Le rétrécissement, lui, réécrit bien la taille de la\npartition Windows - c'est toute la raison pour laquelle Windows doit\navoir été arrêté correctement d'abord.",
    "title": "Installer à côté de Windows › La page du disque",
    "url": null
   },
   {
    "id": "handbook:fr:09-windows-a-cote:4",
    "lang": "fr",
-   "text": "Avec deux systèmes sur l'ordinateur, un menu s'affiche **dix secondes** à\nchaque démarrage, avec Raye et Windows. Choisissez, ou attendez et Raye\ndémarre. Avec Raye seul, ce menu reste caché : c'est pourquoi vous ne\nl'avez peut-être jamais vu.\n\nDepuis Raye, **Redémarrer sur Windows** dans le menu Démarrer redémarre\ndirectement sur Windows, cette fois-là seulement, sans le menu.\n\nPour le mot de passe du disque et la clé de récupération, voir\nSécurité.",
+   "text": "Avec deux systèmes sur l'ordinateur, un menu s'affiche **trois secondes** à\nchaque démarrage, avec Raye et Windows. Choisissez, ou attendez et Raye\ndémarre. Avec Raye seul, ce menu reste caché : c'est pourquoi vous ne\nl'avez peut-être jamais vu.\n\nDepuis Raye, **Redémarrer sur Windows** dans le menu Démarrer redémarre\ndirectement sur Windows, cette fois-là seulement, sans le menu.\n\nPour le mot de passe du disque et la clé de récupération, voir\nSécurité.",
    "title": "Installer à côté de Windows › Ensuite",
    "url": null
   },
@@ -495,6 +474,111 @@
    "lang": "fr",
    "text": "1. Activez le **Mode développeur**, puis le **Portail d'appareil**.\n2. Les Paramètres affichent l'**Adresse**, par exemple\n `https://192.168.1.20:50443`, et l'**Empreinte du certificat**.\n3. Ouvrez cette adresse dans un navigateur, sur un autre appareil du même\n réseau. Le navigateur met en garde la première fois : continuez\n seulement s'il affiche la même empreinte.\n4. Connectez-vous avec le nom d'utilisateur et le mot de passe choisis\n avec **Définir** dans les Paramètres, ou choisissez\n **Appairer un appareil** : les Paramètres affichent un code qui ne sert\n qu'une fois, pendant 10 minutes, et ce navigateur reste ensuite appairé\n 30 jours.\n\nLe portail montre le PC d'un coup d'œil : performances, processus,\napplications, journaux, réseau, et les fichiers de votre dossier\npersonnel, que vous pouvez télécharger et compléter. Il ne répond qu'aux\nappareils des réseaux où ce PC est branché, et après cinq essais ratés,\nun appareil doit attendre 15 minutes. Les Paramètres gardent un\n**Journal des connexions** de qui est venu.",
    "title": "Pour les développeurs › Le portail d'appareil",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:0",
+   "lang": "fr",
+   "text": "Beaucoup de Chromebooks à processeur **Intel ou AMD** peuvent faire tourner\nRaye. C'est plus long que sur un PC ordinaire, et une étape ne dépend pas\nde Raye : le Chromebook a besoin d'un nouveau micrologiciel (le programme\nqui démarre l'ordinateur), fait par un projet communautaire appelé\n**MrChromebox**. Raye ne l'écrit pas et ne peut pas en assurer le suivi ;\ncette page explique comment s'en servir et à quoi s'attendre.\n\nLes Chromebooks à processeur **ARM** (MediaTek, Qualcomm Snapdragon,\nRockchip) ne peuvent pas faire tourner Raye, et le micrologiciel décrit\nici n'existe pas pour eux.\n\nCette page suit le guide de MrChromebox (docs.mrchromebox.tech) et les notes\nde la communauté sur docs.chrultrabook.com. Si les deux disent autre chose\nque cette page, ce sont eux qui ont raison : ils sont mis à jour plus\nsouvent. Raye n'a pas été essayé sur tous les Chromebooks, et certains ne\nl'ont jamais été.\n\nAvant tout : **si le Chromebook appartient à une école ou à une entreprise,\narrêtez-vous ici.** Un Chromebook géré ne peut pas être modifié ainsi, et il\nvous faut de toute façon l'accord écrit de son propriétaire.",
+   "title": "Installer sur un Chromebook",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:1",
+   "lang": "fr",
+   "text": "Tout dépend du **nom de carte** (board name), pas de la marque ni du modèle\nacheté : un même nom de carte est vendu sous plusieurs noms de modèle.\n\n1. Dans ChromeOS, ouvrez le navigateur, allez à `chrome://system` et\n cherchez **HWID**. Le nom de carte en est le premier mot, avant le\n premier espace ou tiret.\n2. Ouvrez la liste des appareils pris en charge par MrChromebox,\n docs.mrchromebox.tech/docs/supported-devices.html, et cherchez ce nom de\n carte. La liste est classée par génération de processeur et ne contient\n que des machines Intel et AMD. **Si votre nom de carte n'y est pas, il\n n'est pas pris en charge.** N'essayez pas avec un modèle « proche ».\n3. Notez les deux colonnes utiles pour la suite : **RW_LEGACY** et **UEFI\n Firmware (Full ROM)**, ainsi que **WP Method**.\n\nRaye a aussi besoin de **25 Go** d'espace libre et de 4 Go de mémoire\n(8 Go conseillés). Un Chromebook de 32 Go de stockage suffit tout juste,\nun de 16 Go non.",
+   "title": "Installer sur un Chromebook › 1. Vérifier que votre Chromebook est pris en charge",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:2",
+   "lang": "fr",
+   "text": "L'étape suivante efface tout ce qui est stocké sur le Chromebook lui-même.\nLes fichiers de Google Drive restent dans Google Drive ; le dossier\n**Téléchargements** et tout ce qui n'est pas synchronisé est perdu. Copiez\nce que vous voulez garder sur une clé USB ou dans le cloud.\n\nIl vous faut aussi :\n\n- la **clé USB de Raye**, préparée sur un autre ordinateur comme dans\n Installer Raye Linux, étapes 1 et 2 ;\n- une deuxième clé USB pour la sauvegarde du micrologiciel du Chromebook\n (étape 5) ;\n- le chargeur, branché tout du long. MrChromebox y tient : certaines étapes\n refusent de se lancer, ou tournent mal, sur batterie.",
+   "title": "Installer sur un Chromebook › 2. Sauvegarder, et préparer deux clés USB",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:3",
+   "lang": "fr",
+   "text": "1. Éteignez le Chromebook. Maintenez **Échap** et **Actualiser** (la\n flèche en rond de la rangée du haut), puis appuyez sur **Marche**.\n Relâchez quand l'écran de récupération s'affiche. Il faut le clavier\n intégré.\n Sur une tablette : maintenez **Volume haut, Volume bas et Marche**\n pendant 10 secondes.\n2. Sur cet écran, appuyez sur **Ctrl + D** et confirmez.\n3. Le Chromebook s'efface et redémarre. Cela prend quelques minutes.\n\nDésormais, chaque démarrage affiche un écran disant que la validation de\nl'OS est désactivée. C'est normal : c'est le signe que le mode développeur\nest actif.\n\nPour taper les commandes des étapes suivantes, il vous faut le terminal de\nChromeOS. À l'écran de connexion de ChromeOS, appuyez sur **Ctrl + Alt** et\nla deuxième touche de la rangée du haut (ChromeOS l'appelle F2 ; sur la\nplupart des modèles elle montre →), puis connectez-vous en tant que\n`chronos`, sans mot de passe. Sur un ChromeOS antérieur à la version 117,\nouvrez plutôt le navigateur, appuyez sur **Ctrl + Alt + T** et tapez\n`shell`.",
+   "title": "Installer sur un Chromebook › 3. Activer le mode développeur",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:4",
+   "lang": "fr",
+   "text": "MrChromebox en propose deux sortes. Choisissez avant l'étape suivante.\n\n**UEFI Full ROM** - conseillé, quand la liste l'indique pour votre carte.\nLe Chromebook démarre alors comme un PC ordinaire : plus d'écran\nd'avertissement, Raye démarre tout seul, l'ordre de démarrage est\nmémorisé, et le Secure Boot existe. Ce que ça coûte :\n\n- ChromeOS est supprimé. On peut le remettre, avec la sauvegarde de\n l'étape 5.\n- Il faut d'abord couper la **protection en écriture** du micrologiciel\n (étape 5).\n- Si l'écriture est interrompue (coupure de courant, plantage), le\n Chromebook peut ne plus démarrer, et le ramener demande un câble ou un\n programmateur spécial. MrChromebox parle d'un petit risque. Il n'est pas\n nul.\n\n**RW_LEGACY** - garde le micrologiciel installé par Google et ajoute\nseulement un moyen de démarrer autre chose. Il ne peut pas abîmer le\nChromebook et ne touche pas à la protection en écriture. Ce que ça coûte :",
+   "title": "Installer sur un Chromebook › 4. Choisir le micrologiciel",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:5",
+   "lang": "fr",
+   "text": "- Chaque démarrage affiche l'écran du mode développeur, et vous appuyez sur\n **Ctrl + L** pour démarrer Raye (le script peut en faire le choix par\n défaut, voir l'étape 6).\n- Le Chromebook ne mémorise aucun ordre de démarrage et n'a pas de Secure\n Boot. Raye démarre quand même : il garde une copie de son chargeur de\n démarrage à l'endroit où un micrologiciel regarde quand il ne se souvient\n de rien.\n- L'installation de Raye ne sait pas partager le disque interne avec\n ChromeOS. Installer Raye dessus avec **Effacer ce disque** supprime\n ChromeOS, même avec RW_LEGACY. N'utilisez pas **Installer à côté de\n Windows** sur un Chromebook : c'est fait pour Windows et n'a pas été\n essayé avec ChromeOS.\n- Sur les générations anciennes (la liste indique **EOL** dans la colonne\n RW_LEGACY), RW_LEGACY ne s'installe plus : seul Full ROM est proposé.\n- MrChromebox signale deux générations où RW_LEGACY marche mal : **Gemini\n Lake** (le menu de démarrage n'affiche pas la liste des disques, on ne\n peut donc pas choisir la clé USB) et **AMD Stoney Ridge** (il ne démarre\n pas sur la plupart des modèles). Prenez Full ROM dans ces cas-là.",
+   "title": "Installer sur un Chromebook › 4. Choisir le micrologiciel (2)",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:6",
+   "lang": "fr",
+   "text": "La méthode dépend de votre carte : la colonne **WP Method** de la liste\ndit laquelle. Suivez exactement la page de MrChromebox,\ndocs.mrchromebox.tech/docs/firmware/wp/disabling.html. En bref :\n\n- **screw, jumper ou switch** (modèles de 2016 et avant) : on ouvre le\n Chromebook et on retire une vis ou on déplace un cavalier.\n- **CR50** (environ 2017 à 2022) : débrancher la batterie à l'intérieur, ou\n utiliser un câble USB-C spécial (SuzyQ).\n- **Ti50** (la plupart des modèles vendus depuis 2023) : **ne l'ouvrez\n pas.** Cela se fait par une commande dans le terminal de ChromeOS, et le\n guide vous fait aussi autoriser le micrologiciel à démarrer sans sa\n vérification habituelle, avant tout le reste. Sautez cette partie et le\n Chromebook risque de ne plus démarrer.\n\nN'utilisez que les commandes de cette page. Les commandes trouvées ailleurs\npour couper la protection à la main sont, selon MrChromebox, inutiles, et\nle script s'occupe du reste lui-même.",
+   "title": "Installer sur un Chromebook › 5. Full ROM seulement : couper la protection en écriture",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:7",
+   "lang": "fr",
+   "text": "Dans le terminal de ChromeOS (étape 3), tapez, sur une seule ligne :\n\n cd; curl -LOf https://mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh\n\nUn menu s'affiche, en anglais. Les options marquées **[WP]** demandent que\nla protection en écriture soit coupée.\n\n- **Full ROM :** choisissez **Install/Update UEFI (Full ROM) Firmware**.\n Quand le script propose de **sauvegarder le micrologiciel d'origine sur\n une clé USB**, acceptez et prenez la deuxième clé. Gardez ce fichier :\n c'est la seule copie exacte de ce qui était livré avec votre Chromebook,\n et il vous le faut pour revenir à ChromeOS. Copiez-le aussi sur un autre\n ordinateur. Quand le script a fini, passez par son menu pour **éteindre**\n (power off) ; ne redémarrez pas tout de suite.\n- **RW_LEGACY :** choisissez **Install/Update the RW_LEGACY Firmware**.\n Pour ne plus appuyer sur Ctrl + L à chaque démarrage, choisissez ensuite\n **Set Boot Options (GBB Flags)** et prenez un délai court avec Legacy\n Boot par défaut.\n\nLe premier démarrage après une écriture Full ROM peut rester noir une\nminute environ : le micrologiciel teste la mémoire. Attendez 90 secondes\navant de croire que quelque chose ne va pas.",
+   "title": "Installer sur un Chromebook › 6. Lancer le script du micrologiciel",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:8",
+   "lang": "fr",
+   "text": "Branchez la clé de Raye.\n\n- **Full ROM :** allumez le Chromebook et appuyez sur **Échap** quand le\n logo (un lièvre) s'affiche. Choisissez **Boot Menu**, puis la clé USB.\n- **RW_LEGACY :** sur l'écran du mode développeur, appuyez sur **Ctrl + L**,\n puis **Échap** quand le logo s'affiche, **Boot Menu**, et la clé USB.\n\nSi la clé n'est pas dans la liste, revenez en arrière, débranchez-la,\nrebranchez-la, attendez trois secondes et rouvrez le Boot Menu. Essayez un\nautre port si elle n'apparaît toujours pas. Si vous tombez sur une invite\nde texte (le shell EFI), tapez `exit` et appuyez sur Entrée.\n\nLa clé de Raye affiche son menu : choisissez **Installer Raye Linux**, ou\n**Safe graphics** si l'écran reste noir. Raye démarre avec ou sans Secure\nBoot ; il n'y a rien à changer.",
+   "title": "Installer sur un Chromebook › 7. Démarrer sur la clé de Raye",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:9",
+   "lang": "fr",
+   "text": "L'installation se passe comme dans Installer Raye Linux,\nétape 4. Sur la page du disque, prenez le disque **interne** (souvent\nappelé eMMC, ou un disque NVMe), pas la clé USB, et choisissez **Effacer ce\ndisque**.\n\nÀ propos de **Chiffrer Raye avec un mot de passe** : la puce de sécurité\nd'un Chromebook ne fait que ce dont ChromeOS a besoin, et MrChromebox\nindique qu'elle ne peut pas garder une clé de disque pour d'autres\nsystèmes. Le chiffrement marche quand même ; attendez-vous à ce que Raye\ndemande le mot de passe du disque à chaque démarrage.\n\nQuand l'installation est finie, redémarrez et retirez la clé.\n\n<a id=\"keyboard\"></a>",
+   "title": "Installer sur un Chromebook › 8. Installer",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:10",
+   "lang": "fr",
+   "text": "Raye voit qu'il tourne sur un Chromebook et règle la rangée du haut pour\nqu'elle fasse ce que montrent ses icônes :\n\n| Touche | Ce qu'elle fait |\n|---|---|\n| Précédent, Suivant | page précédente et suivante dans le navigateur et l'Explorateur de fichiers |\n| Actualiser | recharge la page |\n| Plein écran | plein écran (comme F11) |\n| Vue d'ensemble | affiche toutes les fenêtres (⊞ + Tab) |\n| Luminosité, volume | comme indiqué sur la touche |\n| Verrouillage (en haut à droite, sur la plupart des modèles) | verrouille l'écran |\n| **Rechercher** seule | ouvre le menu Démarrer, comme la touche ⊞ |\n| **Rechercher** + une touche du haut | F1, F2, F3... dans l'ordre depuis la gauche |\n| **Alt + Retour arrière** | Suppr |\n| **Ctrl + Alt + Retour arrière** | Ctrl + Alt + Suppr |\n| **Alt + luminosité** | rétroéclairage du clavier, s'il y en a un |\n\nLes Chromebooks récents n'ont pas tous la même rangée du haut. Raye lit son\nordre dans le micrologiciel, donc Rechercher + la première touche donne\ntoujours F1. Si vous avez déjà réglé vos touches vous-même avec keyd, Raye\nne touche pas à vos réglages.\n\n<a id=\"sound\"></a>",
+   "title": "Installer sur un Chromebook › 9. Le clavier",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:11",
+   "lang": "fr",
+   "text": "Sur beaucoup de Chromebooks, les haut-parleurs ou le micro ne marchent pas\njuste après l'installation. Ce n'est pas un défaut de Raye : les puces son\ndes Chromebooks ont besoin de réglages que seul ChromeOS contient. Raye\naffiche une notification la première fois qu'il ne trouve aucune sortie\nson.\n\nUn script de la communauté, **chromebook-linux-audio**, répare la plupart\ndes modèles. Il écrit dans les réglages son du système : utilisez-le en le\nsachant, et seulement sur votre Raye installé (pas depuis la clé). Il n'a\npas été essayé sur Raye. Ouvrez un terminal (Konsole) et tapez, une ligne\naprès l'autre :\n\n sudo apt install git\n git clone --depth 1 https://github.com/WeirdTreeThing/chromebook-linux-audio\n cd chromebook-linux-audio\n ./setup-audio\n\nPuis redémarrez. Les mises à jour du paquet son du système peuvent défaire\nla réparation ; si le son disparaît après une mise à jour, relancez\n`./setup-audio`.\n\n**Protégez vos haut-parleurs.** Sur certains Chromebooks **Skylake**, **Kaby\nLake** et **Apollo Lake**, l'amplificateur des haut-parleurs (max98357a)\nn'a pas de limite de volume avec le pilote que choisit le script. Le script\nvous prévient et demande d'abord. Monter le volume trop haut peut abîmer\nles haut-parleurs pour de bon : gardez-le bas, ou répondez non.\n\nCe que les notes de la communauté signalent pour chaque génération, au\nmoment où ces lignes sont écrites :",
+   "title": "Installer sur un Chromebook › 10. Le son",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:12",
+   "lang": "fr",
+   "text": "| Génération | Problèmes connus |\n|---|---|\n| Apollo Lake | les cartes microSD peuvent ne pas être détectées ; pas de prise casque avec l'un des deux pilotes son |\n| Kaby Lake | la caméra ne marche pas sur certains modèles |\n| Comet Lake | le lecteur d'empreintes ne marche pas ; certains se réveillent écran rabattu |\n| Tiger Lake, Alder Lake | l'USB-C peut ne pas marcher (réparation plus bas) ; pas de lecteur d'empreintes |\n| Alder Lake-N | le son peut ne pas marcher |\n| AMD Stoney Ridge | le son demande un noyau récent ; celui de Raye l'est assez |\n| AMD Picasso | il faut ajouter `iommu=pt` à la ligne de démarrage du noyau (plus bas) |\n| AMD Cezanne | les haut-parleurs ne marchent pas encore |\n| tous | les lecteurs d'empreintes ne marchent pas |\n\n**USB-C sur Tiger Lake et Alder Lake.** Dans un terminal :\n\n echo cros-ec-typec | sudo tee -a /etc/initramfs-tools/modules\n echo intel-pmc-mux | sudo tee -a /etc/initramfs-tools/modules\n sudo update-initramfs -u -k all\n\n**AMD Picasso.** Dans un terminal, puis redémarrez :\n\n echo 'GRUB_CMDLINE_LINUX=\"$GRUB_CMDLINE_LINUX iommu=pt\"' | sudo tee /etc/default/grub.d/60-chromebook.cfg\n sudo update-grub",
+   "title": "Installer sur un Chromebook › 10. Le son (2)",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:13",
+   "lang": "fr",
+   "text": "- **Avec RW_LEGACY :** votre micrologiciel est toujours celui de Google.\n Préparez une clé de récupération ChromeOS sur un autre ordinateur\n (l'**Utilitaire de récupération Chromebook** de Google, dans Chrome), puis\n démarrez le Chromebook avec **Échap + Actualiser + Marche** et branchez la\n clé quand l'écran le demande.\n- **Avec Full ROM :** remettez d'abord le micrologiciel d'origine. Démarrez\n Raye, ouvrez un terminal et lancez le même script qu'à l'étape 6.\n Choisissez **Restore Stock Firmware**, puis la sauvegarde USB faite à\n l'étape 5. Préparez ensuite la clé de récupération comme ci-dessus.\n\nDeux avertissements de MrChromebox : quand Google a cessé de mettre à jour\nun modèle (fin de vie), il ne peut plus du tout revenir à ChromeOS ; et sur\nles modèles **Ti50**, revenir en arrière comporte plus de risque, alors\ngardez la sauvegarde et lisez leur page avant de commencer.",
+   "title": "Installer sur un Chromebook › Revenir à ChromeOS",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:11-chromebooks:14",
+   "lang": "fr",
+   "text": "- **Écran noir après l'écriture :** attendez 90 secondes. Puis maintenez\n Marche 10 secondes et rallumez.\n- **Un menu en texte ou un écran noir au lieu du menu de Raye** juste après\n une écriture Full ROM : l'ancien chargeur de ChromeOS est encore sur le\n disque. Éteignez et rallumez le Chromebook, et appuyez sur **Échap** au\n logo.\n- **Le micrologiciel lui-même est cassé :** le guide de MrChromebox explique\n comment le récupérer avec un câble SuzyQ ou un programmateur. Raye ne peut\n pas aider pour cette partie.\n- Demandez sur le Discord de Raye Linux, dans #help. Donnez le **nom de\n carte** (étape 1), le micrologiciel choisi et une photo de l'écran.",
+   "title": "Installer sur un Chromebook › En cas de problème",
    "url": null
   },
   {
@@ -682,29 +766,8 @@
   {
    "id": "handbook:en:07-this-beta:0",
    "lang": "en",
-   "text": "The list below is the whole list, in the order the release notes give it.\nIt is here because this is the page you open when something does not work,\nand finding your problem already written down is faster than reporting it.\n\n<a id=\"known-1\"></a>\n**The screen goes black for a moment before the sign-in screen.** For 3\nto 5 seconds, between the Raye picture and the sign-in screen. Nothing is\nwrong: wait, and the sign-in screen comes.\n\n<a id=\"known-2\"></a>\n**A few apps do not look like Raye.** The terminal, the screenshot tool\nand some dialogs wear Raye's colors but have not been redrawn yet.\n\n<a id=\"known-3\"></a>\n**The Start menu and the taskbar are close to Windows 11, not identical.**\nThe search field and the recommended section are the parts still missing.\n\n<a id=\"known-4\"></a>\n**The sign-in and lock screens disagree about your picture.** The default\naccount picture is not the same on both. A lone **OK** button also shows\nunder \"Wrong password\".\n\n<a id=\"known-5\"></a>\n**Not every Windows program runs.** The first one you open after setup\ntakes a while, some installers show a gray old-style window, and some\nprograms do not start at all. When a program also exists for Raye - \nDiscord, Steam - install it from the Raye Store instead; see\nWindows programs.\n\n<a id=\"known-6\"></a>\n**Microsoft's fonts come later.** Arial, Times New Roman and Verdana\nare Microsoft's, so the image does not carry them: Raye fetches them in\nthe background the first time the PC is online after setup, with the\nVisual C++ runtimes, and puts them in every Windows space. A program\nopened before that uses the system's fonts, and its text can come out in\ndifferent type, or the wrong size for its box.",
+   "text": "The list below is the whole list, in the order the release notes give it.\nIt is here because this is the page you open when something does not work,\nand finding your problem already written down is faster than reporting it.\n\n<a id=\"known-1\"></a>\n**Older AMD cards can start at a low resolution.** Some RX 400 and 500\nseries cards show a low resolution with low frame rates on some PCs. When\nthe desktop fails to show twice in a row, Raye switches to a simpler display\nmode by itself, which helps some cards but not all. If it happens to you,\nsay so in #bugs on Discord: the team is still working on it.\n\n<a id=\"known-2\"></a>\n**No Raye kernel with NVIDIA's driver.** NVIDIA's prebuilt modules only\nload on the standard kernel, so Settings does not offer the Raye kernel on\na PC that uses them, and says why.\n\n<a id=\"known-3\"></a>\n**The Graphics Card panel is new.** Its fan curve and power limit have been\nchecked on test data, not yet on every generation of AMD card. Restore\ndefaults puts the card back the way it came.\n\n<a id=\"known-4\"></a>\n**Not every Windows program runs.** Apps built only for the Microsoft Store\ncannot run at all. Programs that also exist for Raye (Discord, Steam) are\nbetter installed from the Raye Store.\n\n<a id=\"known-5\"></a>\n**Alarms ring only while the PC is on.** Clock cannot wake the PC from\nsleep yet: an alarm missed while it slept shows as missed when it wakes.",
    "title": "What this beta still gets wrong",
-   "url": null
-  },
-  {
-   "id": "handbook:en:07-this-beta:1",
-   "lang": "en",
-   "text": "<a id=\"known-7\"></a>\n**3D games have hardly been tried.** Windows programs now draw through\nVulkan, but the only game played so far is an old Direct3D 9 one,\nChocolate Doom. No Direct3D 11 or 12 game has been tried on a real\ngraphics card, so how well they run is not known yet.\n\n<a id=\"known-8\"></a>\n**Programs built on .NET have hardly been tried.** Raye now brings .NET\nand the web engine some programs embed, but only one such program has\nbeen tested. Paint.NET's installer gets past its graphics check now,\nthen stops on an error about its color output. Nothing has been tried\non a real graphics card yet.\n\n<a id=\"known-9\"></a>\n**Roblox Studio cannot be signed in to from its own window.** Typing\ndoes not reach its sign-in page yet. Use Login via Browser instead,\nwhich opens the page in your web browser.\n\n<a id=\"known-10\"></a>\n**Updates need the internet before they can say anything.** Raye looks for\nits own packages on rayelinux.com and on GitHub. Until you are online,\nSettings says it could not check, which is true and not a fault.\n\n<a id=\"known-11\"></a>\n**Nothing has been measured against Windows on a real computer.** If you\nread anywhere that Raye is faster or slower, nobody has weighed it yet.\n\n<a id=\"known-12\"></a>\n**`add-apt-repository -c` and `-p` can break Raye's own package source.**\nThey may pick it and rewrite it; `apt` then answers 404 for Raye's\npackages, and because the file belongs to a package it is replaced again\nat the next update. Add a PPA with plain `add-apt-repository ppa:...`,\nwhich writes its own file. If it already happened:\n`sudo apt install --reinstall raye-archive-keyring`.",
-   "title": "What this beta still gets wrong (2)",
-   "url": null
-  },
-  {
-   "id": "handbook:en:07-this-beta:2",
-   "lang": "en",
-   "text": "<a id=\"known-13\"></a>\n**Source packages are declared but switched off**, so `apt update` does\nnot fetch 18 MB of source indexes on every computer. To build a package\nfrom source, turn them on first:\n`sudo sed -i 's/^Enabled: no$/Enabled: yes/' /etc/apt/sources.list.d/ubuntu.sources && sudo apt update`.\n\n<a id=\"known-14\"></a>\n**The ring around the focused control is faint**, on a few dark surfaces\nand more so with a very light or very dark accent color. Text and\ncontrols keep their contrast; it is the thin focus ring that does not\nalways reach the 3:1 a keyboard user needs.",
-   "title": "What this beta still gets wrong (3)",
-   "url": null
-  },
-  {
-   "id": "handbook:en:07-this-beta:3",
-   "lang": "en",
-   "text": "Every screen of setup is translated except the one where you choose the\ndisk. That page comes from the installer Raye builds on, and this image\ncarries no French for it: it shows in English even when you picked\nFrench. It is also the page where a wrong click costs the most, so\nInstalling next to Windows names its buttons.",
-   "title": "What this beta still gets wrong › And setup has one page in English only",
    "url": null
   },
   {
@@ -773,14 +836,14 @@
   {
    "id": "handbook:en:09-windows-alongside:3",
    "lang": "en",
-   "text": "This page of setup is in English even if you chose French - see\nWhat this beta still gets wrong. Three choices:\n\n- **Erase disk** - Raye alone. Already selected, so do not leave it by\n accident.\n- **Install alongside** - the one you want. Raye shrinks a partition to\n make room. Pick the Windows partition, then drag the bar at the bottom\n to decide how much Windows keeps and how much Raye gets.\n- **Replace a partition** - puts Raye in place of one partition and\n deletes what was on it.\n\nYou cannot carve partitions by hand here: this installer does not offer\nit. If the layout you need is not one of those three, it is not a Raye\nthing to do yet.\n\nRaye uses the EFI partition Windows already made rather than adding one.\nShrinking, though, does rewrite the size of the Windows partition - which\nis the whole reason Windows has to have been shut down properly first.",
+   "text": "The choices it offers:\n\n- **Erase disk** - Raye alone. Already selected, so do not leave it by\n accident.\n- **Install alongside** - the one you want. Raye shrinks a partition to\n make room. Pick the Windows partition, then drag the bar at the bottom\n to decide how much Windows keeps and how much Raye gets.\n- **Replace a partition** - puts Raye in place of one partition and\n deletes what was on it.\n- **Replace and keep my files** - puts Raye in place of the other\n system and brings its Desktop, Documents, Downloads, Music, Pictures and\n Videos into your new account. Every file is copied and checked first: if\n a single one fails, the other system is not deleted.\n\nYou cannot carve partitions by hand here: this installer does not offer\nit. If the layout you need is not one of those, it is not a Raye\nthing to do yet.\n\nRaye uses the EFI partition Windows already made rather than adding one.\nShrinking, though, does rewrite the size of the Windows partition - which\nis the whole reason Windows has to have been shut down properly first.",
    "title": "Installing next to Windows › The disk page",
    "url": null
   },
   {
    "id": "handbook:en:09-windows-alongside:4",
    "lang": "en",
-   "text": "With two systems on the computer, a menu shows for **ten seconds** at\nevery start, with Raye and Windows in it. Pick one, or wait and Raye\nstarts. With Raye alone that menu stays hidden, which is why you may\nnever have seen it.\n\nFrom inside Raye, **Restart to Windows** in the Start menu restarts\nstraight into Windows, that once, without the menu.\n\nFor the disk password and the recovery key, see\nSecurity.",
+   "text": "With two systems on the computer, a menu shows for **three seconds** at\nevery start, with Raye and Windows in it. Pick one, or wait and Raye\nstarts. With Raye alone that menu stays hidden, which is why you may\nnever have seen it.\n\nFrom inside Raye, **Restart to Windows** in the Start menu restarts\nstraight into Windows, that once, without the menu.\n\nFor the disk password and the recovery key, see\nSecurity.",
    "title": "Installing next to Windows › Afterwards",
    "url": null
   },
@@ -799,129 +862,178 @@
    "url": null
   },
   {
+   "id": "handbook:en:11-chromebooks:0",
+   "lang": "en",
+   "text": "Many Chromebooks with an **Intel or AMD** processor can run Raye. It takes\nmore work than a regular PC, and one step is not Raye's: the Chromebook\nneeds a new firmware (the program that starts the computer), made by a\ncommunity project called **MrChromebox**. Raye does not write it and\ncannot support it; this page tells you how to use it and what to expect.\n\nChromebooks with an **ARM** processor (MediaTek, Qualcomm Snapdragon,\nRockchip) cannot run Raye, and the firmware below does not exist for them.\n\nThis page follows MrChromebox's own guide (docs.mrchromebox.tech) and the\ncommunity notes at docs.chrultrabook.com. When the two disagree with this\npage, they are right: they are updated more often. Raye has not been tried\non every Chromebook, and some have never been tried at all.\n\nBefore anything: **if the Chromebook belongs to a school or a company, stop\nhere.** A managed Chromebook cannot be changed this way, and you need the\nowner's written permission anyway.",
+   "title": "Installing on a Chromebook",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:1",
+   "lang": "en",
+   "text": "Support depends on the **board name**, not on the brand or the model you\nbought: the same board name is sold under several model names.\n\n1. In ChromeOS, open the browser and go to `chrome://system`, then search\n for **HWID**. The board name is the first word of it, before the first\n space or dash.\n2. Open MrChromebox's list of supported devices,\n docs.mrchromebox.tech/docs/supported-devices.html, and look for that\n board name. The list is grouped by processor generation and only has\n Intel and AMD machines. **If your board name is not in the list, it is\n not supported.** Do not try with a \"close\" model.\n3. Note the two columns that matter for the next steps: **RW_LEGACY** and\n **UEFI Firmware (Full ROM)**, and the **WP Method**.\n\nRaye also needs **25 GB** of free space and 4 GB of memory (8 GB\nrecommended). A Chromebook with 32 GB of storage is just enough, one with\n16 GB is not.",
+   "title": "Installing on a Chromebook › 1. Check that your Chromebook is supported",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:2",
+   "lang": "en",
+   "text": "The next step erases everything stored on the Chromebook itself. Files in\nGoogle Drive stay in Google Drive; the **Downloads** folder and anything not\nsynced is lost. Copy what you want to keep to a USB stick or to the cloud.\n\nYou also need:\n\n- the **Raye USB stick**, made on another computer as in\n Installing Raye Linux, steps 1 and 2;\n- a second USB stick for the backup of the Chromebook's firmware (step 5);\n- the charger, plugged in for the whole time. MrChromebox insists on it:\n some steps refuse to run, or go wrong, on battery.",
+   "title": "Installing on a Chromebook › 2. Back up, and get two USB sticks ready",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:3",
+   "lang": "en",
+   "text": "1. Turn the Chromebook off. Hold **Esc** and **Refresh** (the round arrow\n in the top row), then press **Power**. Release when the\n recovery screen shows. It has to be the built-in keyboard.\n On a tablet: hold **Volume up + Volume down + Power** for 10 seconds.\n2. On that screen press **Ctrl + D**, and confirm.\n3. The Chromebook erases itself and restarts. This takes a few minutes.\n\nFrom now on, every start shows a screen saying that OS verification is\noff. That is expected: it is how you know Developer Mode is on.\n\nTo type the commands of the next steps you need ChromeOS's shell. At the\nChromeOS sign-in screen, press **Ctrl + Alt** and the second key of the top\nrow (ChromeOS calls it F2; on most models it shows →), then sign in as\n`chronos`, no password. On a ChromeOS older\nthan version 117, open the browser instead, press **Ctrl + Alt + T** and\ntype `shell`.",
+   "title": "Installing on a Chromebook › 3. Turn on Developer Mode",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:4",
+   "lang": "en",
+   "text": "MrChromebox offers two kinds. Choose before you start the next step.\n\n**UEFI Full ROM** - recommended, when the list shows it for your board.\nThe Chromebook then starts like a regular PC: no warning screen, Raye\nstarts by itself, the boot order is remembered, and Secure Boot exists.\nWhat it costs:\n\n- ChromeOS is removed. It can be put back, with the backup of step 5.\n- You must first turn off the firmware's **write protection** (step 5).\n- If the flash is interrupted (power cut, crash), the Chromebook may no\n longer start, and bringing it back needs a special cable or programmer.\n MrChromebox calls this a small risk. It is not zero.\n\n**RW_LEGACY** - keeps the firmware Google installed and only adds a way to\nstart something else. It cannot break the Chromebook and needs no change\nto the write protection. What it costs:",
+   "title": "Installing on a Chromebook › 4. Choose the firmware",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:5",
+   "lang": "en",
+   "text": "- Every start shows the Developer Mode screen, and you press **Ctrl + L**\n to start Raye (the firmware script can make that the default, see step 6).\n- The Chromebook remembers no boot order and has no Secure Boot. Raye\n still starts: it keeps a copy of its boot loader in the place a firmware\n looks at when it remembers nothing.\n- Raye's installer cannot share the internal disk with ChromeOS. Installing\n Raye on it with **Erase this disk** removes ChromeOS, even with RW_LEGACY.\n Do not use **Install next to Windows** on a Chromebook: it was made for\n Windows and has not been tried with ChromeOS.\n- On older generations (the list says **EOL** in the RW_LEGACY column),\n RW_LEGACY can no longer be installed: only Full ROM is offered.\n- MrChromebox lists two generations where RW_LEGACY works badly: **Gemini\n Lake** (the start menu shows no list of disks, so you cannot pick the\n USB stick) and **AMD Stoney Ridge** (it does not start on most models).\n Use Full ROM there.",
+   "title": "Installing on a Chromebook › 4. Choose the firmware (2)",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:6",
+   "lang": "en",
+   "text": "How you do it depends on your board: the **WP Method** column of the list\nsays which. Follow MrChromebox's page for it exactly,\ndocs.mrchromebox.tech/docs/firmware/wp/disabling.html. In short:\n\n- **screw, jumper or switch** (models from 2016 and earlier): you open the\n Chromebook and remove a screw or change a jumper.\n- **CR50** (about 2017 to 2022): unplug the battery inside, or use a\n special USB-C cable (SuzyQ).\n- **Ti50** (most models sold from 2023): **do not open it.** It is done\n with a command in ChromeOS's shell, and the guide also has you allow the\n firmware to start without its usual check, before anything else. Skip\n that part and the Chromebook may not start again.\n\nOnly use commands from that page. Commands found elsewhere for turning off\nwrite protection by hand are, in MrChromebox's words, not needed, and the\nfirmware script handles the rest itself.",
+   "title": "Installing on a Chromebook › 5. Full ROM only: turn off write protection",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:7",
+   "lang": "en",
+   "text": "In ChromeOS's shell (step 3), type, all on one line:\n\n cd; curl -LOf https://mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh\n\nA menu shows. Options marked **[WP]** need write protection off.\n\n- **Full ROM:** choose **Install/Update UEFI (Full ROM) Firmware**. When the\n script offers to **back up the stock firmware to USB**, say yes and use\n the second stick. Keep that file: it is the only exact copy of what came\n with your Chromebook, and you need it to go back to ChromeOS. Copy it to\n another computer too. When the script is done, use its menu to **power\n off**; do not restart right away.\n- **RW_LEGACY:** choose **Install/Update the RW_LEGACY Firmware**. To skip\n pressing Ctrl + L at every start, choose **Set Boot Options (GBB Flags)**\n afterwards and pick a short delay with Legacy Boot as the default.\n\nThe first start after a Full ROM flash can stay black for up to a minute\nor so: the firmware is testing the memory. Wait 90 seconds before you\nthink something is wrong.",
+   "title": "Installing on a Chromebook › 6. Run the firmware script",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:8",
+   "lang": "en",
+   "text": "Plug in the Raye stick.\n\n- **Full ROM:** turn the Chromebook on and press **Esc** when the logo\n (a hare) shows. Choose **Boot Menu**, then the USB stick.\n- **RW_LEGACY:** on the Developer Mode screen press **Ctrl + L**, then\n **Esc** when the logo shows, **Boot Menu**, and the USB stick.\n\nIf the stick is not in the list, go back, unplug it, plug it in again,\nwait three seconds and open the Boot Menu again. Try another port if it\nstill does not show. If you end up at a text prompt (the EFI shell), type\n`exit` and press Enter.\n\nThe Raye stick shows its menu: choose **Install Raye Linux**, or **Safe\ngraphics** if the screen stays black. Raye starts with Secure Boot on or\noff; there is nothing to change.",
+   "title": "Installing on a Chromebook › 7. Start the Raye stick",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:9",
+   "lang": "en",
+   "text": "The installer works as in Installing Raye Linux, step 4.\nOn the disk page, pick the **internal** disk (often called eMMC, or an\nNVMe drive), not the USB stick, and choose **Erase this disk**.\n\nAbout **Encrypt Raye with a password**: the security chip of a Chromebook\nonly does what ChromeOS needs, and MrChromebox says it cannot hold a disk\nkey for other systems. Encryption still works; expect Raye to ask for the\ndisk password at every start.\n\nWhen the installer is done, restart and take the stick out.\n\n<a id=\"keyboard\"></a>",
+   "title": "Installing on a Chromebook › 8. Install",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:10",
+   "lang": "en",
+   "text": "Raye sees that it runs on a Chromebook and sets the top row of keys to do\nwhat the icons on them say:\n\n| Key | What it does |\n|---|---|\n| Back, Forward | back and forward in the browser and in File Explorer |\n| Refresh | reloads the page |\n| Full screen | full screen (the same as F11) |\n| Overview | shows all windows (⊞ + Tab) |\n| Brightness, volume | as printed on the key |\n| Lock (top right, on most models) | locks the screen |\n| **Search** alone | opens the Start menu, like the ⊞ key |\n| **Search** + a top-row key | F1, F2, F3... in order from the left |\n| **Alt + Backspace** | Delete |\n| **Ctrl + Alt + Backspace** | Ctrl + Alt + Delete |\n| **Alt + brightness** | keyboard backlight, when there is one |\n\nNewer Chromebooks do not all have the same top row. Raye reads its order\nfrom the firmware, so Search + the first key is always F1. If you already\nset up your keys yourself with keyd, Raye leaves your settings alone.\n\n<a id=\"sound\"></a>",
+   "title": "Installing on a Chromebook › 9. The keyboard",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:11",
+   "lang": "en",
+   "text": "On many Chromebooks the speakers or the microphone do not work right after\ninstalling. This is not a Raye fault: the sound chips of Chromebooks need\nsettings that only ChromeOS carries. Raye shows a notice the first time it\nfinds no sound output.\n\nA community script, **chromebook-linux-audio**, fixes most models. It\nwrites into the system's sound settings, so use it knowing that, and only\non your own installed Raye (not from the stick). It has not been tried on\nRaye. Open a terminal (Konsole) and type, one line at a time:\n\n sudo apt install git\n git clone --depth 1 https://github.com/WeirdTreeThing/chromebook-linux-audio\n cd chromebook-linux-audio\n ./setup-audio\n\nThen restart. Updates of the system's sound package can undo the fix; if\nthe sound goes away after an update, run `./setup-audio` again.\n\n**Protect your speakers.** On some **Skylake**, **Kaby Lake** and **Apollo\nLake** Chromebooks, the speaker amplifier (max98357a) has no volume limit\nwith the driver the script picks. The script warns you and asks first.\nTurning the volume up too far can damage the speakers for good: keep it\nlow, or say no.\n\nWhat the community notes list for each generation, as of this writing:",
+   "title": "Installing on a Chromebook › 10. Sound",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:12",
+   "lang": "en",
+   "text": "| Generation | Known problems |\n|---|---|\n| Apollo Lake | microSD cards may not be detected; no headphone jack with one of the two sound drivers |\n| Kaby Lake | the camera does not work on some models |\n| Comet Lake | the fingerprint reader does not work; some wake up with the lid closed |\n| Tiger Lake, Alder Lake | USB-C may not work (fix below); no fingerprint reader |\n| Alder Lake-N | sound may not work |\n| AMD Stoney Ridge | sound needs a recent kernel; Raye's is recent enough |\n| AMD Picasso | needs `iommu=pt` added to the kernel's start line (below) |\n| AMD Cezanne | the speakers do not work yet |\n| any | fingerprint readers do not work |\n\n**USB-C on Tiger Lake and Alder Lake.** In a terminal:\n\n echo cros-ec-typec | sudo tee -a /etc/initramfs-tools/modules\n echo intel-pmc-mux | sudo tee -a /etc/initramfs-tools/modules\n sudo update-initramfs -u -k all\n\n**AMD Picasso.** In a terminal, then restart:\n\n echo 'GRUB_CMDLINE_LINUX=\"$GRUB_CMDLINE_LINUX iommu=pt\"' | sudo tee /etc/default/grub.d/60-chromebook.cfg\n sudo update-grub",
+   "title": "Installing on a Chromebook › 10. Sound (2)",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:13",
+   "lang": "en",
+   "text": "- **With RW_LEGACY:** your firmware is still Google's. Make a ChromeOS\n recovery stick on another computer (Google's **Chromebook Recovery\n Utility**, in Chrome), then start the Chromebook with **Esc + Refresh +\n Power** and plug the stick in when the screen asks.\n- **With Full ROM:** first put the original firmware back. Start Raye, open\n a terminal and run the same firmware script as in step 6. Choose\n **Restore Stock Firmware**, then the USB backup made in step 5. Then make\n the recovery stick as above.\n\nTwo warnings from MrChromebox: once Google has stopped updating a model\n(end of life), it cannot go back to ChromeOS at all; and on **Ti50** models\ngoing back carries more risk, so keep the backup and read their page\nbefore you start.",
+   "title": "Installing on a Chromebook › Going back to ChromeOS",
+   "url": null
+  },
+  {
+   "id": "handbook:en:11-chromebooks:14",
+   "lang": "en",
+   "text": "- **Black screen after flashing:** wait 90 seconds. Then hold Power for 10\n seconds and start again.\n- **A text menu or a black screen instead of Raye's menu** right after a\n Full ROM flash: the old ChromeOS loader is still on the disk. Turn the\n Chromebook off and on and press **Esc** at the logo.\n- **The firmware itself is broken:** MrChromebox's guide explains how to\n recover with a SuzyQ cable or a programmer. Raye cannot help with that\n part.\n- Ask on the Raye Linux Discord, in #help. Give the **board name** (step 1),\n which firmware you chose, and a photo of the screen.",
+   "title": "Installing on a Chromebook › If something goes wrong",
+   "url": null
+  },
+  {
    "id": "notes:en:0",
    "lang": "en",
-   "text": "An update to the 0.3 Beta of Raye Linux: a desktop laid out like Windows 11,\ndrawn in Raye's own colors, with updates that install themselves. It is a\nbeta. Install it on a spare computer or next to your current system, not\non the only machine you depend on. A 0.3 Beta already installed gets all\nof this through Raye Update.\n\nFrançais : https://dl.rayelinux.com/iso/0.5-beta/release-notes-0.5-beta.fr.md",
-   "title": "Raye Linux 0.5 Beta Alpenglow",
+   "text": "The first beta of Raye Linux 1.0: a desktop laid out like Windows 11, drawn\nin Raye's own colors, with updates that install themselves. It is a beta.\nInstall it on a spare computer or next to your current system, not on the\nonly machine you depend on. A 0.5 Beta already installed gets all of this\nthrough Raye Update; the new installer only matters for new installs.\n\nFrançais : https://dl.rayelinux.com/iso/1.0-beta/release-notes-1.0-beta.fr.md",
+   "title": "Raye Linux 1.0 Beta Brocken",
    "url": "/en/download/"
   },
   {
    "id": "notes:en:1",
    "lang": "en",
-   "text": "- **Archives in File Explorer**, with Raye's own archive engine: ZIP, 7z,\n RAR, tar and more open like folders, even with no extension. Extract\n all, Extract here, Compress to ZIP, 7z or tar.zst, and an Add to archive\n window with levels, split parts and passwords. RAR archives open but are\n not made.\n- **Windows programs** run on Raye's own layer, which brings .NET, the web\n engine some programs embed, and DirectX through Vulkan. Microsoft's\n Visual C++ runtimes and core fonts arrive in the background once the PC\n is online. A program no longer opens the screen share picker by itself,\n screen capture works through the picker, OBS Studio for Windows starts\n and records, and FL Studio can run its sound at 44.1 kHz. Typing notepad\n or regedit in a terminal opens the Raye app.\n- **Raye Store** offers popular Windows programs and says how each runs\n here: Optimized for Raye, Works on Raye, or Doesn't work on Raye, with\n the reason.\n- **Device security**, in Settings: turn disk encryption on or off while\n the PC runs, with a recovery key shown once, and the steps to turn\n Secure Boot on.\n- **Control Panel** is filled with the classic items and their tasks.\n- **Settings**: Sounds and Controllers pages, Virus & threat protection,\n and a switch for the short sound played when you change the volume.\n- **For developers**, in Settings > System > Advanced: Developer Mode,\n Device Portal (a web page to manage this PC from another one on your\n network) and OpenSSH with keys only.\n- **Updates**: Ctrl+Alt+Del and the lock screen offer Update and restart\n when updates are ready, Install now says when it waits for the charger,\n and a restart is asked for again when newer versions of the same\n packages arrive.\n- **Root access** is what password prompts ask for, and accounts are Sudo\n user or Standard user. Registry Editor asks for the root password for\n every system change and leaves alone the files packages own.\n- **Network**: no Wi-Fi pages or Wi-Fi list on a PC without a Wi-Fi card,\n and Quick settings say Ethernet when a cable is plugged in.\n- **Start and boot**: a smaller start-up image and no wait for the\n network make the start quicker, the boot screen sits in the middle of\n every screen, the boot menu has a \"Raye Linux, earlier states\" entry to\n start from a restore point, and an install without encryption keeps the\n boot menu hidden.\n- **Desktop**: the notification center and the calendar always fit on the\n screen, Start slides up smoothly, search answers sooner, and a short\n sound plays when you change the volume.\n- **Setup** looks calmer: flat pictures, named password boxes and a way to\n show the disk password.\n- **Game mode** switches to a scheduler made for games while a game runs.\n- Task Manager's Performance page no longer blinks, menus and flyouts are\n solid again, and the texts use American spelling.",
-   "title": "Raye Linux 0.5 Beta Alpenglow › New in 0.5",
+   "text": "- **Clock**, a new app: alarms that ring even with the window closed (days,\n sound, Snooze), timers, a stopwatch with laps and world clocks.\n- **Graphics Card**, a new app: live readings of your graphics card. On AMD\n Radeon cards it sets the performance mode, the workload profile, the\n power limit and a fan curve, kept across restarts. NVIDIA cards get the\n NVIDIA Control Panel, installed with the driver and named so in Start.\n- **Settings > System > Performance options**: one choice turns animations,\n transparency and shadows off on a slow PC, or set each effect on its own.\n- **Raye Store** is much bigger: search a Windows program (Photoshop, Office,\n Battle.net...) and it finds the apps that do the same job. Steam and\n Heroic are up front, and Steam Play is on for every game once the Store\n installs Steam. TeamViewer, Mullvad VPN and balenaEtcher were added.\n- **Reviews in the Raye Store**: each app's page shows its stars and what\n people say about it, and once an app is installed you can rate it and\n write your own review. Reviews are shared with other Linux app stores.\n- **.deb files** install with a double-click, in a small window that fetches\n what they need and explains any problem in plain words.\n- **Windows programs** get the fonts they ask for, start in their own\n folder, and 32-bit games can use 4 GB of memory. Microsoft Store packages\n (.msix, .appx) open with Raye, or say plainly why they can't.\n- **File Explorer**: the mouse wheel scrolls three lines per notch like\n Windows, copies to a USB drive show what is really written and finish only\n when the drive is safe to remove, and Properties and Folder options are\n clearer.\n- **Raye Update** is quieter and more reliable: Plasma updates arrive in one\n set, a file that fails to download is simply tried again later, checking\n for updates no longer hangs for minutes when a server goes quiet, and\n Settings shows the download speed, the time left and each update's status.\n- **Faster start**: no boot menu wait while starts go well, smaller start-up\n files, and helpers for older programs start only when one needs them.\n- **Older graphics cards**: if the desktop fails to show twice in a row,\n Raye switches to a simpler display mode by itself.\n- **The installer** can install next to another Linux (it can make ext4 and\n btrfs partitions smaller), works on PCs started in BIOS mode, and asks\n before it erases a disk, deletes a partition or makes one smaller. The USB\n menu has \"Check the USB stick for errors\", and a stick written badly says\n so instead of a cryptic error.\n- **Try Raye Linux without installing**: the USB menu has a new choice that\n opens the desktop straight from the stick, without Setup popping up.\n Nothing on the PC changes.\n- **Replace and keep your files**: when Raye replaces Windows or another\n system, Setup can bring your Desktop, Documents, Downloads, Music,\n Pictures and Videos along. It checks there is room first and asks before\n it deletes anything.\n- **Virtual machines**: Raye now comes with the VirtualBox and VMware guest\n tools, and the PC stays awake while Setup installs.\n- **The web apps** you install from your browser and pin to the taskbar keep\n their own icon and name.\n- Ctrl+Win+Enter turns the screen reader on or off.",
+   "title": "Raye Linux 1.0 Beta Brocken › New in 1.0 Beta",
    "url": "/en/download/"
   },
   {
    "id": "notes:en:2",
    "lang": "en",
-   "text": "- **Task Manager** with Processes, Performance, Startup apps, Users,\n Details and Services. It replaces System Monitor.\n- **File Explorer** redrawn: tabs in the title row, address row and\n command bar, Home, This PC, Gallery, the eight Windows views and a new\n Properties dialog.\n- **Calendar**, **Control Panel** and **Registry Editor**, Raye's own.\n The clock shows the day's events.\n- **Updates without a restart**: only the kernel, drivers, firmware and\n the desktop itself wait for a restart, and each one says so. The rest\n installs while you work.\n- **Start and shutdown** stay on the Raye picture from the boot menu to\n the sign-in screen, with no text.\n- **Quick settings** pages for the network, Bluetooth and sound, calmer\n colors, new wallpapers (two of them animated) and new pointers.\n- **Restore points** are taken every day and around each update, and\n Restore Points lets you go back.",
-   "title": "Raye Linux 0.5 Beta Alpenglow › New in 0.3",
+   "text": "Download the image from https://rayelinux.com, check it, and write it to a\nUSB stick of 8 GB or more with Rufus (DD Image mode) or balenaEtcher.\nStart the computer from the stick (often F12, F11, F8 or Esc at power on).",
+   "title": "Raye Linux 1.0 Beta Brocken › Install",
    "url": "/en/download/"
   },
   {
    "id": "notes:en:3",
    "lang": "en",
-   "text": "- **Desktop**: centered taskbar with Start, pinned apps and the clock on\n every screen, a right-click menu with Task Manager and Taskbar settings,\n Win+R to run a program, folder or web address. Raye Night colors,\n the Inter font, Raye wallpapers and icons.\n- **Installer**: a guided setup in English and French. It follows the\n network live, can keep Windows next to Raye, and can encrypt the disk\n with the TPM so you only type a password when something changed.\n- **Raye Settings**: one app for the system, with Display (choose the main\n screen), Taskbar, Wi-Fi, Bluetooth, sound, accounts, updates, drivers\n and the Raye kernel.\n- **Raye Store**: apps from Flathub and Raye's own, with progress and\n Cancel while installing, Open and Uninstall once installed. Links from\n the Start menu search open the app's page in the Store.\n- **Raye Update**: system, security and app updates are downloaded in the\n background. Most install right away; the ones that need a restart are\n installed on the next restart, with the progress on the boot screen. It waits when you are on battery, on a metered connection\n or playing.\n- **Windows programs**: many .exe installers open with a double-click and\n get a Start menu entry.\n- **Secure Boot** stays on. The Raye kernel 7.0 is included and can be\n turned on from Settings, offline.\n- **Lock and sign-in screens** in the Raye style, with the password field\n on the screen where the mouse is, and working Shut down and Restart.",
-   "title": "Raye Linux 0.5 Beta Alpenglow › What's in it",
+   "text": "- Older AMD cards (RX 400 and 500 series) can start at a low resolution with\n low frame rates on some PCs. The automatic simpler display mode helps some\n cards, not all; we are still working on it.\n- The Raye kernel is not offered on PCs that use NVIDIA's driver: NVIDIA's\n prebuilt modules only load on the standard kernel.\n- The Graphics Card panel's fan curve and power limit have been checked on\n test data, not yet on every generation of AMD card.\n- Not every Windows program runs, and apps built only for the Microsoft\n Store cannot run at all. Programs that also exist for Raye (Discord,\n Steam) are better installed from the Raye Store.\n- Alarms ring only while the PC is on: Clock cannot wake it from sleep yet.",
+   "title": "Raye Linux 1.0 Beta Brocken › Known issues",
    "url": "/en/download/"
   },
   {
    "id": "notes:en:4",
    "lang": "en",
-   "text": "- A 64-bit Intel or AMD computer that starts in UEFI mode (most computers\n from 2012 on). Older BIOS-only machines cannot start this image.\n- 4 GB of memory (8 GB recommended) and 25 GB of free disk space, which\n is the figure the installer itself requires.\n- A USB stick of 8 GB or more. Everything on it will be erased.\n- An internet connection during setup is useful but not required.\n- Raye uses about 680 MiB of memory at the sign-in screen, before anyone\n signs in (the median of eight boots in a 4 GB virtual machine), and about\n 1200 MiB once you have signed in, with nothing open. So 4 GB is the\n minimum that works and 8 GB is the comfortable figure.",
-   "title": "Raye Linux 0.5 Beta Alpenglow › Before you start",
-   "url": "/en/download/"
-  },
-  {
-   "id": "notes:en:5",
-   "lang": "en",
-   "text": "| File | |\n|---|---|\n| `raye-0.5-beta-amd64.iso` | the image, from https://dl.rayelinux.com/iso/0.5-beta/ |\n| `raye-0.5-beta-amd64.iso.part1`, `.part2` | the same image in two parts, on GitHub (2 GB limit per file) |\n| `SHA256SUMS`, `SHA256SUMS.asc` | checksums and their signature |\n| `raye-archive.asc` | the Raye Linux archive key |\n\nFrom GitHub, put the parts back together first:\n\n cat raye-0.5-beta-amd64.iso.part1 raye-0.5-beta-amd64.iso.part2 > raye-0.5-beta-amd64.iso\n\nIn a Command Prompt instead: `copy /b raye-0.5-beta-amd64.iso.part1 + raye-0.5-beta-amd64.iso.part2 raye-0.5-beta-amd64.iso`\n\nThen check the download:\n\n gpg --show-keys raye-archive.asc # fingerprint EA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n gpg --import raye-archive.asc\n gpg --verify SHA256SUMS.asc SHA256SUMS\n sha256sum --check --ignore-missing SHA256SUMS\n\n`gpg --verify` must say \"Good signature from Raye Linux Archive Signing\nKey\", and `sha256sum` must print `raye-0.5-beta-amd64.iso: OK`.",
-   "title": "Raye Linux 0.5 Beta Alpenglow › Download and check",
-   "url": "/en/download/"
-  },
-  {
-   "id": "notes:en:6",
-   "lang": "en",
-   "text": "- **Rufus**: choose the ISO and, when asked, write it in **DD image mode**.\n The ISO mode of Rufus gives a stick that does not start.\n- **balenaEtcher**: choose the ISO, the stick, then Flash.\n- **dd** on Linux (replace `sdX` with your stick, check twice with `lsblk`):\n `sudo dd if=raye-0.5-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress`\n\nStart the computer from the stick (often F12, F11, F8 or Esc at power on).",
-   "title": "Raye Linux 0.5 Beta Alpenglow › Write it to a USB stick",
-   "url": "/en/download/"
-  },
-  {
-   "id": "notes:en:7",
-   "lang": "en",
-   "text": "- The screen goes black for 3 to 5 seconds just before the sign-in screen\n appears.\n- Some apps still show their own look: the terminal, the screenshot tool\n and a few dialogs are themed but not yet redrawn as Raye apps.\n- The Start menu and the taskbar are close to Windows 11 but not identical\n yet (search field, recommended section).\n- The default account picture is not the same on the sign-in screen and\n on the lock screen. A lone \"OK\" button shows under \"Wrong password\".\n- Windows programs: the first program opened after setup takes a while,\n some installers show a grey old-style window, and not every program\n runs. Programs that also exist for Raye (Discord, Steam) are better\n installed from the Raye Store.\n- Microsoft's core fonts arrive only once the PC has been online after\n setup. A Windows program opened before that is given one of the\n system's fonts instead, so a few dialogs are laid out wrongly.\n- Windows games have hardly been tried. Programs draw through Vulkan, but\n the only game played so far is an old Direct3D 9 one, and no Direct3D 11\n or 12 game has been tried on a real graphics card.\n- Programs built on .NET have hardly been tried. Raye brings .NET and the\n web engine some programs embed, but Paint.NET's installer still stops\n on an error.\n- Roblox Studio cannot be signed in to from its own window yet: use\n Login via Browser.\n- Raye Update checks rayelinux.com and GitHub for Raye's own packages.\n Until you are online, Settings shows that updates could not be checked.\n- Benchmarks against Windows on real hardware are not done yet.\n- `add-apt-repository -c` and `-p` (adding a component or a pocket) can pick\n Raye's own package source and rewrite it. apt then reports 404 for Raye's\n packages, and the file belongs to a package, so it is replaced on the next\n update. Add a PPA with plain `add-apt-repository ppa:...`, which writes its\n own file. If it already happened:\n `sudo apt install --reinstall raye-archive-keyring`.\n- Source packages are listed but switched off, so `apt update` does not\n download 18 MB of source indexes on every machine. To build a package from\n source, turn them on first:\n `sudo sed -i 's/^Enabled: no$/Enabled: yes/' /etc/apt/sources.list.d/ubuntu.sources && sudo apt update`.\n- The outline that marks the focused control is faint on a few dark\n surfaces, and fainter still if you pick a very light or very dark accent\n color. Text and controls themselves keep their contrast; it is the thin\n focus ring that does not always reach the 3:1 that a keyboard user wants.",
-   "title": "Raye Linux 0.5 Beta Alpenglow › Known issues",
-   "url": "/en/download/"
-  },
-  {
-   "id": "notes:en:8",
-   "lang": "en",
    "text": "Open an issue at https://github.com/Raye-Linux/releases/issues, or write\nto bonjour@rayelinux.com. Say what computer you have, what you did, what\nyou expected and what happened. A photo of the screen helps.\n\nRaye Linux is based on Ubuntu. It is not affiliated with or endorsed by\nCanonical Ltd.",
-   "title": "Raye Linux 0.5 Beta Alpenglow › Report a problem",
+   "title": "Raye Linux 1.0 Beta Brocken › Report a problem",
    "url": "/en/download/"
   },
   {
    "id": "notes:fr:0",
    "lang": "fr",
-   "text": "Une mise à jour de la 0.3 Bêta de Raye Linux : un bureau disposé comme\nWindows 11, dessiné aux couleurs de Raye, avec des mises à jour qui\ns'installent toutes seules. C'est une bêta : installez-la sur un\nordinateur de rechange ou à côté de votre système actuel, pas sur la\nseule machine dont vous dépendez. Une 0.3 Bêta déjà installée reçoit\ntout ceci par Raye Update.\n\nEnglish: https://dl.rayelinux.com/iso/0.5-beta/release-notes-0.5-beta.md",
-   "title": "Raye Linux 0.5 Bêta Alpenglow",
+   "text": "La première bêta de Raye Linux 1.0 : un bureau disposé comme Windows 11,\ndessiné aux couleurs de Raye, avec des mises à jour qui s'installent toutes\nseules. C'est une bêta. Installez-la sur un ordinateur de rechange ou à côté\nde votre système actuel, pas sur la seule machine dont vous dépendez. Une\n0.5 Bêta déjà installée reçoit tout ceci par Raye Update ; le nouvel\ninstallateur ne compte que pour les nouvelles installations.\n\nEnglish: https://dl.rayelinux.com/iso/1.0-beta/release-notes-1.0-beta.md",
+   "title": "Raye Linux 1.0 Bêta Brocken",
    "url": "/fr/telecharger/"
   },
   {
    "id": "notes:fr:1",
    "lang": "fr",
-   "text": "- **Les archives dans l'Explorateur de fichiers**, avec le moteur\n d'archives de Raye : ZIP, 7z, RAR, tar et d'autres s'ouvrent comme des\n dossiers, même sans extension. Extraire tout, Extraire ici, Compresser\n en ZIP, 7z ou tar.zst, et une fenêtre Ajouter à l'archive avec les\n niveaux, le découpage en parties et les mots de passe. Les archives RAR\n s'ouvrent mais ne se créent pas.\n- **Les programmes Windows** tournent sur la couche propre à Raye, qui\n apporte .NET, le moteur web que certains programmes intègrent, et\n DirectX par Vulkan. Les bibliothèques Visual C++ et les polices de base\n de Microsoft arrivent en arrière-plan dès que le PC est en ligne. Un\n programme n'ouvre plus tout seul le sélecteur de partage d'écran, la\n capture d'écran passe par ce sélecteur, OBS Studio pour Windows démarre\n et enregistre, et FL Studio peut faire tourner le son à 44,1 kHz. Taper\n notepad ou regedit dans un terminal ouvre l'appli Raye.\n- **Le Raye Store** propose des programmes Windows connus et dit comment\n chacun fonctionne ici : Optimisé pour Raye, Fonctionne sur Raye ou Ne\n fonctionne pas sur Raye, avec la raison.\n- **Sécurité de l'appareil**, dans les Paramètres : activer ou désactiver\n le chiffrement du disque pendant que le PC tourne, avec une clé de\n récupération montrée une seule fois, et les étapes pour activer le\n Secure Boot.\n- **Le Panneau de configuration** est rempli avec les éléments classiques\n et leurs tâches.\n- **Paramètres** : les pages Sons et Manettes, Protection contre les virus\n et menaces, et un interrupteur pour le petit son joué quand on change\n le volume.\n- **Pour les développeurs**, dans Paramètres > Système > Avancé : le Mode\n développeur, le Portail d'appareil (une page web pour gérer ce PC\n depuis un autre sur votre réseau) et OpenSSH avec clés seulement.\n- **Mises à jour** : Ctrl+Alt+Suppr et l'écran de verrouillage proposent\n Mettre à jour et redémarrer quand des mises à jour sont prêtes, Installer\n maintenant dit quand il attend le chargeur, et un redémarrage est\n redemandé quand de nouvelles versions des mêmes paquets arrivent.\n- **L'accès root** est ce que demandent les invites de mot de passe, et\n les comptes sont Utilisateur sudo ou Utilisateur standard. L'Éditeur du\n Registre demande le mot de passe root pour chaque changement du système\n et ne touche pas aux fichiers qui appartiennent aux paquets.\n- **Réseau** : ni pages Wi-Fi ni liste Wi-Fi sur un PC sans carte Wi-Fi, et\n les Paramètres rapides disent Ethernet quand un câble est branché.\n- **Démarrage** : une image de démarrage plus petite et plus d'attente du\n réseau rendent le démarrage plus rapide, l'écran de démarrage est au\n milieu de chaque écran, le menu de démarrage a une entrée « Raye Linux,\n états précédents » pour démarrer sur un point de restauration, et une\n installation sans chiffrement garde le menu de démarrage caché.\n- **Bureau** : le centre de notifications et le calendrier tiennent\n toujours dans l'écran, le menu Démarrer glisse en douceur, la recherche\n répond plus vite, et un petit son se fait entendre quand on change le\n volume.\n- **L'installation** est plus sobre : des illustrations plates, des\n champs de mot de passe nommés et un moyen d'afficher le mot de passe du\n disque.\n- **Le mode jeu** passe à un ordonnanceur fait pour les jeux le temps\n d'une partie.\n- Les Performances du Gestionnaire des tâches ne clignotent plus, les\n menus et les volets sont de nouveau opaques, et les textes anglais\n suivent l'orthographe américaine.",
-   "title": "Raye Linux 0.5 Bêta Alpenglow › Nouveau dans la 0.5",
+   "text": "- **Horloge**, une nouvelle appli : des alarmes qui sonnent même fenêtre\n fermée (jours, son, Répéter), des minuteurs, un chronomètre avec tours et\n des horloges du monde.\n- **Carte graphique**, une nouvelle appli : l'état de votre carte graphique\n en direct. Sur les cartes AMD Radeon, elle règle le mode de performance,\n le profil de charge, la limite de puissance et une courbe de ventilateur,\n gardés au redémarrage. Les cartes NVIDIA ont le Panneau de configuration\n NVIDIA, installé avec le pilote et nommé ainsi dans Démarrer.\n- **Paramètres > Système > Options de performances** : un seul choix coupe\n les animations, la transparence et les ombres sur un PC lent, ou réglez\n chaque effet à part.\n- **Le Raye Store** est bien plus grand : cherchez un programme Windows\n (Photoshop, Office, Battle.net...) et il trouve les applis qui font le\n même travail. Steam et Heroic sont mis en avant, et Steam Play est activé\n pour tous les jeux dès que le Store installe Steam. TeamViewer, Mullvad VPN\n et balenaEtcher ont été ajoutés.\n- **Des avis dans le Raye Store** : la page de chaque appli montre ses\n étoiles et ce que les gens en disent, et une fois l'appli installée, vous\n pouvez la noter et écrire votre propre avis. Les avis sont partagés avec\n d'autres magasins d'applis Linux.\n- **Les fichiers .deb** s'installent d'un double-clic, dans une petite\n fenêtre qui va chercher ce qu'il leur faut et explique tout problème en\n mots simples.\n- **Les programmes Windows** ont les polices qu'ils demandent, démarrent dans\n leur propre dossier, et les jeux 32 bits peuvent utiliser 4 Go de mémoire.\n Les paquets du Microsoft Store (.msix, .appx) s'ouvrent avec Raye, ou\n disent clairement pourquoi ils ne peuvent pas.\n- **Explorateur** : la molette défile de trois lignes par cran comme sous\n Windows, une copie vers une clé USB montre ce qui est vraiment écrit et ne\n se termine que lorsque la clé peut être retirée, et Propriétés et Options\n des dossiers sont plus clairs.\n- **Raye Update** est plus discret et plus fiable : les mises à jour de\n Plasma arrivent d'un seul bloc, un fichier qui n'a pas pu être téléchargé\n est simplement réessayé plus tard, la recherche de mises à jour ne reste\n plus bloquée des minutes quand un serveur ne répond plus, et Paramètres\n montre la vitesse, le temps restant et l'état de chaque mise à jour.\n- **Démarrage plus rapide** : plus d'attente sur le menu de démarrage tant\n que tout va bien, des fichiers de démarrage plus petits, et les aides des\n vieux programmes ne démarrent que quand l'un d'eux en a besoin.\n- **Cartes graphiques plus anciennes** : si le bureau ne s'affiche pas deux\n fois de suite, Raye passe tout seul à un mode d'affichage plus simple.\n- **L'installateur** sait installer à côté d'un autre Linux (il peut\n réduire des partitions ext4 et btrfs), fonctionne sur les PC démarrés en\n mode BIOS, et demande avant d'effacer un disque, de supprimer une\n partition ou d'en réduire une. Le menu de la clé a « Check the USB stick\n for errors », et une clé mal écrite le dit au lieu d'une erreur obscure.\n- **Essayer Raye Linux sans l'installer** : le menu de la clé a un nouveau\n choix qui ouvre le bureau directement depuis la clé, sans que\n l'installation s'ouvre. Rien ne change sur le PC.\n- **Remplacer et garder vos fichiers** : quand Raye remplace Windows ou un\n autre système, l'installation peut emporter votre Bureau, vos Documents,\n Téléchargements, Musique, Images et Vidéos. Elle vérifie d'abord qu'il y a\n la place et demande avant d'effacer quoi que ce soit.\n- **Machines virtuelles** : Raye apporte maintenant les outils invités de\n VirtualBox et de VMware, et le PC reste éveillé pendant l'installation.\n- **Les applis web** installées depuis votre navigateur et épinglées à la\n barre des tâches gardent leur propre icône et leur nom.\n- Ctrl+Win+Entrée active ou coupe le lecteur d'écran.",
+   "title": "Raye Linux 1.0 Bêta Brocken › Nouveautés de la 1.0 Bêta",
    "url": "/fr/telecharger/"
   },
   {
    "id": "notes:fr:2",
    "lang": "fr",
-   "text": "- **Gestionnaire des tâches** avec Processus, Performances, Applications\n de démarrage, Utilisateurs, Détails et Services. Il remplace le\n Moniteur système.\n- **Explorateur de fichiers** redessiné : onglets dans la barre de titre,\n barre d'adresse et barre de commandes, Accueil, Ce PC, Galerie, les huit\n affichages de Windows et une nouvelle fenêtre Propriétés.\n- **Calendrier**, **Panneau de configuration** et **Éditeur du Registre**,\n ceux de Raye. L'horloge montre les événements du jour.\n- **Des mises à jour sans redémarrage** : seuls le noyau, les pilotes, les\n micrologiciels et le bureau lui-même attendent un redémarrage, et chacun\n le dit. Le reste s'installe pendant que vous travaillez.\n- **Démarrage et arrêt** restent sur l'image de Raye du menu de démarrage\n jusqu'à l'écran de connexion, sans texte.\n- **Paramètres rapides** avec des pages pour le réseau, le Bluetooth et le\n son, des couleurs plus calmes, de nouveaux fonds d'écran (dont deux\n animés) et de nouveaux pointeurs.\n- **Points de restauration** pris chaque jour et autour de chaque mise à\n jour, et Points de restauration pour revenir en arrière.",
-   "title": "Raye Linux 0.5 Bêta Alpenglow › Nouveau dans la 0.3",
+   "text": "Téléchargez l'image sur https://rayelinux.com, vérifiez-la, et écrivez-la\nsur une clé USB de 8 Go ou plus avec Rufus (mode DD Image) ou balenaEtcher.\nDémarrez l'ordinateur sur la clé (souvent F12, F11, F8 ou Échap à\nl'allumage).",
+   "title": "Raye Linux 1.0 Bêta Brocken › Installer",
    "url": "/fr/telecharger/"
   },
   {
    "id": "notes:fr:3",
    "lang": "fr",
-   "text": "- **Bureau** : barre des tâches centrée avec Démarrer, les applis\n épinglées et l'horloge sur chaque écran, un menu du clic droit avec le\n Gestionnaire des tâches et les paramètres de la barre, Win+R pour\n lancer un programme, un dossier ou une adresse web. Les couleurs Raye\n Nuit, la police Inter, les fonds d'écran et les icônes Raye.\n- **Installateur** : une installation guidée en français et en anglais.\n Il suit la connexion réseau en direct, peut garder Windows à côté de\n Raye et peut chiffrer le disque avec la puce TPM, pour ne taper un mot\n de passe que si quelque chose a changé.\n- **Paramètres Raye** : une seule appli pour le système, avec Affichage\n (choisir l'écran principal), Barre des tâches, Wi-Fi, Bluetooth, son,\n comptes, mises à jour, pilotes et noyau Raye.\n- **Raye Store** : les applis de Flathub et celles de Raye, avec la\n progression et Annuler pendant l'installation, Ouvrir et Désinstaller\n une fois installées. Les liens de la recherche du menu Démarrer ouvrent\n la fiche de l'appli dans le Store.\n- **Raye Update** : les mises à jour du système, de sécurité et des\n applis se téléchargent en arrière-plan. La plupart s'installent tout de\n suite ; celles qui demandent un redémarrage s'installent au redémarrage\n suivant, avec la progression sur l'écran de démarrage. Elles attendent\n quand vous êtes sur batterie, sur une connexion limitée ou en train de\n jouer.\n- **Programmes Windows** : beaucoup d'installateurs .exe s'ouvrent d'un\n double-clic et ajoutent leur entrée au menu Démarrer.\n- **Démarrage sécurisé (Secure Boot)** reste activé. Le noyau Raye 7.0 est\n inclus et s'active depuis les Paramètres, sans connexion.\n- **Écrans de verrouillage et de connexion** au style Raye, avec le champ\n du mot de passe sur l'écran où se trouve la souris, et Arrêter et\n Redémarrer qui fonctionnent.",
-   "title": "Raye Linux 0.5 Bêta Alpenglow › Ce qu'il contient",
+   "text": "- Les anciennes cartes AMD (séries RX 400 et 500) peuvent démarrer en basse\n résolution avec peu d'images par seconde sur certains PC. Le mode\n d'affichage plus simple automatique aide certaines cartes, pas toutes ;\n nous y travaillons encore.\n- Le noyau Raye n'est pas proposé sur les PC qui utilisent le pilote NVIDIA :\n les modules précompilés de NVIDIA ne se chargent qu'avec le noyau standard.\n- La courbe de ventilateur et la limite de puissance de l'appli Carte\n graphique ont été vérifiées sur des données de test, pas encore sur\n chaque génération de carte AMD.\n- Tous les programmes Windows ne fonctionnent pas, et les applis faites\n uniquement pour le Microsoft Store ne peuvent pas fonctionner du tout. Les\n programmes qui existent aussi pour Raye (Discord, Steam) s'installent\n mieux depuis le Raye Store.\n- Les alarmes ne sonnent que lorsque le PC est allumé : Horloge ne peut pas\n encore le sortir de la veille.",
+   "title": "Raye Linux 1.0 Bêta Brocken › Problèmes connus",
    "url": "/fr/telecharger/"
   },
   {
    "id": "notes:fr:4",
    "lang": "fr",
-   "text": "- Un ordinateur 64 bits Intel ou AMD qui démarre en mode UEFI (la plupart\n des ordinateurs depuis 2012). Les machines BIOS seulement ne peuvent pas\n démarrer cette image.\n- 4 Go de mémoire (8 Go conseillés) et 25 Go d'espace disque libre, le\n chiffre que l'installateur exige lui-même.\n- Une clé USB de 8 Go ou plus. Tout ce qu'elle contient sera effacé.\n- Une connexion Internet pendant l'installation est utile, mais pas\n obligatoire.\n- Raye occupe environ 680 Mio de mémoire à l'écran de connexion, avant toute\n ouverture de session (la médiane de huit démarrages dans une machine\n virtuelle de 4 Go), et environ 1200 Mio une fois la session ouverte, sans\n rien d'ouvert. 4 Go est donc le minimum qui fonctionne, et 8 Go le\n chiffre confortable.",
-   "title": "Raye Linux 0.5 Bêta Alpenglow › Avant de commencer",
-   "url": "/fr/telecharger/"
-  },
-  {
-   "id": "notes:fr:5",
-   "lang": "fr",
-   "text": "| Fichier | |\n|---|---|\n| `raye-0.5-beta-amd64.iso` | l'image, sur https://dl.rayelinux.com/iso/0.5-beta/ |\n| `raye-0.5-beta-amd64.iso.part1`, `.part2` | la même image en deux morceaux, sur GitHub (limite de 2 Go par fichier) |\n| `SHA256SUMS`, `SHA256SUMS.asc` | les sommes de contrôle et leur signature |\n| `raye-archive.asc` | la clé de l'archive Raye Linux |\n\nDepuis GitHub, recollez d'abord les morceaux :\n\n cat raye-0.5-beta-amd64.iso.part1 raye-0.5-beta-amd64.iso.part2 > raye-0.5-beta-amd64.iso\n\nDans une invite de commandes : `copy /b raye-0.5-beta-amd64.iso.part1 + raye-0.5-beta-amd64.iso.part2 raye-0.5-beta-amd64.iso`\n\nPuis vérifiez le téléchargement :\n\n gpg --show-keys raye-archive.asc # empreinte EA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n gpg --import raye-archive.asc\n gpg --verify SHA256SUMS.asc SHA256SUMS\n sha256sum --check --ignore-missing SHA256SUMS\n\n`gpg --verify` doit afficher « Good signature from Raye Linux Archive\nSigning Key », et `sha256sum` doit afficher `raye-0.5-beta-amd64.iso: OK`.",
-   "title": "Raye Linux 0.5 Bêta Alpenglow › Télécharger et vérifier",
-   "url": "/fr/telecharger/"
-  },
-  {
-   "id": "notes:fr:6",
-   "lang": "fr",
-   "text": "- **Rufus** : choisissez l'ISO et, quand il le demande, écrivez-la en\n **mode image DD**. Le mode ISO de Rufus donne une clé qui ne démarre pas.\n- **balenaEtcher** : choisissez l'ISO, la clé, puis Flash.\n- **dd** sous Linux (remplacez `sdX` par votre clé, vérifiez deux fois avec\n `lsblk`) :\n `sudo dd if=raye-0.5-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress`\n\nDémarrez l'ordinateur sur la clé (souvent F12, F11, F8 ou Échap à\nl'allumage).",
-   "title": "Raye Linux 0.5 Bêta Alpenglow › L'écrire sur une clé USB",
-   "url": "/fr/telecharger/"
-  },
-  {
-   "id": "notes:fr:7",
-   "lang": "fr",
-   "text": "- L'écran devient noir 3 à 5 secondes juste avant que l'écran de\n connexion apparaisse.\n- Certaines applis gardent encore leur propre allure : le terminal,\n l'outil de capture et quelques boîtes de dialogue sont aux couleurs de\n Raye, mais pas encore redessinés en applis Raye.\n- Le menu Démarrer et la barre des tâches sont proches de Windows 11, mais\n pas encore identiques (champ de recherche, section Recommandé).\n- L'image de compte par défaut n'est pas la même à l'écran de connexion et\n à l'écran de verrouillage. Un bouton « OK » isolé s'affiche sous « Mot\n de passe incorrect ».\n- Programmes Windows : le premier programme ouvert après l'installation\n prend du temps, certains installateurs montrent une fenêtre grise à\n l'ancienne, et tous les programmes ne fonctionnent pas. Les programmes\n qui existent aussi pour Raye (Discord, Steam) s'installent mieux depuis\n le Raye Store.\n- Les polices de base de Microsoft n'arrivent qu'une fois le PC passé en\n ligne après l'installation. Un programme Windows ouvert avant reçoit\n une police du système à la place, si bien que quelques fenêtres sont\n mal disposées.\n- Les jeux Windows ont à peine été essayés. Les programmes dessinent par\n Vulkan, mais le seul jeu joué jusqu'ici est un vieux jeu Direct3D 9, et\n aucun jeu Direct3D 11 ou 12 n'a été essayé sur une vraie carte\n graphique.\n- Les programmes faits avec .NET ont à peine été essayés. Raye apporte\n .NET et le moteur web que certains programmes intègrent, mais\n l'installateur de Paint.NET s'arrête encore sur une erreur.\n- Roblox Studio ne permet pas encore de se connecter depuis sa propre\n fenêtre : passez par Login via Browser.\n- Raye Update va chercher les paquets de Raye sur rayelinux.com\n et sur GitHub. Tant que vous n'êtes pas connecté, les Paramètres\n indiquent que la recherche de mises à jour n'a pas pu se faire.\n- Les mesures de performance face à Windows sur du vrai matériel ne sont\n pas encore faites.\n- `add-apt-repository -c` et `-p` (ajouter un composant ou une poche) peuvent\n choisir la source des paquets de Raye et la réécrire. apt répond alors 404\n pour les paquets Raye, et comme le fichier appartient à un paquet, il est\n remplacé à la mise à jour suivante. Ajoutez un PPA avec\n `add-apt-repository ppa:...` tout court, qui écrit son propre fichier. Si\n c'est déjà arrivé : `sudo apt install --reinstall raye-archive-keyring`.\n- Les paquets source sont déclarés mais éteints, pour qu'`apt update` ne\n télécharge pas 18 Mo d'index de sources sur chaque machine. Pour compiler\n un paquet depuis ses sources, allumez-les d'abord :\n `sudo sed -i 's/^Enabled: no$/Enabled: yes/' /etc/apt/sources.list.d/ubuntu.sources && sudo apt update`.\n- Le liseré qui marque l'élément actif est peu visible sur quelques surfaces\n sombres, et davantage encore si vous choisissez une couleur d'accent très\n claire ou très foncée. Le texte et les commandes gardent leur contraste ;\n c'est le fin anneau de focus qui n'atteint pas toujours le 3:1 qu'attend\n quelqu'un qui navigue au clavier.",
-   "title": "Raye Linux 0.5 Bêta Alpenglow › Problèmes connus",
-   "url": "/fr/telecharger/"
-  },
-  {
-   "id": "notes:fr:8",
-   "lang": "fr",
-   "text": "Ouvrez un ticket sur https://github.com/Raye-Linux/releases/issues ou\nécrivez à bonjour@rayelinux.com. Dites quel ordinateur vous avez, ce que\nvous avez fait, ce que vous attendiez et ce qui s'est passé. Une photo de\nl'écran aide beaucoup.\n\nRaye Linux est basé sur Ubuntu. Il n'est ni affilié à Canonical Ltd. ni\napprouvé par elle.",
-   "title": "Raye Linux 0.5 Bêta Alpenglow › Signaler un problème",
+   "text": "Ouvrez un ticket sur https://github.com/Raye-Linux/releases/issues, ou\nécrivez à bonjour@rayelinux.com. Dites quel ordinateur vous avez, ce que\nvous avez fait, ce que vous attendiez et ce qui s'est passé. Une photo de\nl'écran aide.\n\nRaye Linux est basé sur Ubuntu. Il n'est ni affilié à Canonical Ltd. ni\napprouvé par elle.",
+   "title": "Raye Linux 1.0 Bêta Brocken › Signaler un problème",
    "url": "/fr/telecharger/"
   },
   {
@@ -1065,35 +1177,37 @@
    "url": null
   }
  ],
- "release": "Raye Linux 0.5 Beta Alpenglow",
+ "release": "Raye Linux 1.0 Beta Brocken",
  "site": "https://rayelinux.com",
  "sources": {
-  "0.5-beta/release-notes-0.5-beta.fr.md": "b33e18072a1dcde4",
-  "0.5-beta/release-notes-0.5-beta.md": "af6872469ae5f833",
+  "1.0-beta/release-notes-1.0-beta.fr.md": "abb36e7636ed5398",
+  "1.0-beta/release-notes-1.0-beta.md": "5bafdafa9321a582",
   "discord/texts.py": "5bff52e13c468251",
-  "download/index.html": "d6d74969083f4f45",
+  "download/index.html": "05b4fe7b06b8396a",
   "en/01-installing.md": "395684ff312893d0",
   "en/02-first-steps.md": "327774439b2c0c38",
   "en/03-updates.md": "55e63fd65d21506a",
   "en/04-windows-programs.md": "566dc5bf7cd9c6aa",
   "en/05-security.md": "06b496b267dbd7eb",
   "en/06-report-a-bug.md": "0e3b630da0a09162",
-  "en/07-this-beta.md": "9e32faf8e05ac707",
+  "en/07-this-beta.md": "6e340d4396bd25ed",
   "en/08-not-in-raye.md": "1225d088730e8bea",
-  "en/09-windows-alongside.md": "3036d6b4bac8c2fc",
+  "en/09-windows-alongside.md": "4378c466bd1baa82",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
-  "en/index.html": "a490947d33e665c8",
+  "en/11-chromebooks.md": "0b0a8099e4fe5196",
+  "en/index.html": "53cb5b856e1dcc5a",
   "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
   "fr/04-programmes-windows.md": "8fea29e8a0806a07",
   "fr/05-securite.md": "5a85fc98373913bf",
   "fr/06-signaler-un-probleme.md": "5400dba1478cf2a8",
-  "fr/07-cette-beta.md": "916266b5f659e88c",
+  "fr/07-cette-beta.md": "ded0830be766c3b3",
   "fr/08-not-in-raye.md": "7d7869d5dc502398",
-  "fr/09-windows-a-cote.md": "7eb36202d9916723",
+  "fr/09-windows-a-cote.md": "ab889732288946c1",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
-  "fr/index.html": "900f5ab63f98fb30",
-  "telecharger/index.html": "6f9cb73f360e33c8"
+  "fr/11-chromebooks.md": "655c79fe7f20dfb5",
+  "fr/index.html": "9bff20c6414c5582",
+  "telecharger/index.html": "19f50e2afa50a10f"
  }
 }

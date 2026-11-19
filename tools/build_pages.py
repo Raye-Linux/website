@@ -118,7 +118,7 @@ DOWNLOAD = {
                        "comment la vérifier et l'écrire sur une clé USB.",
         "accept_title": "Avant de télécharger : c'est une bêta publique",
         "accept_items": [
-            "Raye Linux 0.5 est une version bêta. Elle peut contenir beaucoup de bugs, planter "
+            "Raye Linux 1.0 Bêta est une version bêta. Elle peut contenir beaucoup de bugs, planter "
             "et, dans de rares cas, faire perdre des données.",
             "L'installation peut effacer tout le disque choisi. Sauvegardez vos fichiers "
             "importants avant d'installer, et préférez un PC de test ou une machine virtuelle.",
@@ -128,7 +128,7 @@ DOWNLOAD = {
             "problèmes liés à son téléchargement, son installation ou son utilisation.",
             "Vous l'installez et l'utilisez à vos propres risques, et vous êtes responsable de "
             "l'ordinateur sur lequel vous le faites.",
-            "La bêta publique dure environ une à deux semaines, avant la version 1.0.",
+            "D'autres bêtas suivront avant la version 1.0 finale.",
             "En téléchargeant, vous acceptez les "
             "<a href=\"/fr/conditions/\">conditions d'utilisation</a>.",
         ],
@@ -202,7 +202,7 @@ DOWNLOAD = {
                        "check it and write it to a USB stick.",
         "accept_title": "Before you download: this is a public beta",
         "accept_items": [
-            "Raye Linux 0.5 is a beta. It can have many bugs, crash and, in rare cases, "
+            "Raye Linux 1.0 Beta is a beta. It can have many bugs, crash and, in rare cases, "
             "lose data.",
             "Installing can erase the whole disk you pick. Back up your important files "
             "before you install, and prefer a test PC or a virtual machine.",
@@ -212,7 +212,7 @@ DOWNLOAD = {
             "downloading, installing or using it.",
             "You install and use it at your own risk, and you are responsible for the "
             "computer you do it on.",
-            "The public beta runs for about one to two weeks, before version 1.0.",
+            "More betas follow before the final 1.0.",
             "By downloading, you accept the "
             "<a href=\"/en/terms/\">terms of use</a>.",
         ],
@@ -677,8 +677,9 @@ HOME = {
              "traducteurs, designers et créateurs de vidéos. Rejoignez le serveur Discord et postulez "
              "dans le salon #join-the-team : quelques questions, puis l'équipe vous répond."),
             ("Et la version 1.0 ?",
-             "Elle arrive après la bêta, d'ici une à deux semaines. Laissez votre courriel "
-             "si vous voulez que je vous écrive le jour de sa sortie."),
+             "La 1.0 Bêta est sortie : c'est elle que vous téléchargez. D'autres bêtas suivent "
+             "avant la 1.0 finale. Laissez votre courriel si vous voulez que je vous écrive "
+             "le jour de sa sortie."),
         ],
         "join_title": "La suite, si vous vous inscrivez",
         "join_steps": [
@@ -796,8 +797,8 @@ HOME = {
              "translators, designers and video creators. Join the Discord server and apply in "
              "the #join-the-team channel: a few questions, then the team replies to you."),
             ("What about 1.0?",
-             "It comes after the beta, in one to two weeks. Leave your email if you want "
-             "me to write you the day it's out."),
+             "1.0 Beta is out: it's the one you download. More betas come before the final "
+             "1.0. Leave your email if you want me to write you the day it's out."),
         ],
         "join_title": "What happens if you sign up",
         "join_steps": [
@@ -823,6 +824,13 @@ HOME = {
 # The "latest changes" list on the home page: one line per published version,
 # newest first; rewrite the old ones out rather than letting the list grow.
 CHANGES = [
+    ("2026-11-19", "1.0 Beta",
+     {"fr": "Raye Linux 1.0 Bêta Brocken : les applis Horloge et Carte graphique, des avis dans le Raye Store, "
+            "le mode Essayer Raye sans l'installer, et l'installation qui garde vos fichiers en remplaçant "
+            "un autre système. Nouveau téléchargement, et mise à jour par Raye Update.",
+      "en": "Raye Linux 1.0 Beta Brocken: the Clock and Graphics Card apps, reviews in the Raye Store, "
+            "Try Raye without installing, and Setup keeps your files when it replaces another system. "
+            "New download, and an update through Raye Update."}),
     ("2026-11-18", "Graphics",
      {"fr": "Cartes graphiques plus anciennes : si le bureau ne s'affiche pas deux fois de suite, Raye passe "
             "tout seul à un mode d'affichage plus simple. Nouveau téléchargement disponible.",
@@ -848,12 +856,6 @@ CHANGES = [
             "le redémarrage vers votre autre système n'est proposé que s'il est encore installé.",
       "en": "The boot menu is back to its usual layout with the Raye kernel by default, and restarting into "
             "your other system is only offered when it is still installed."}),
-    ("2026-11-15", "0.5.7",
-     {"fr": "Écran noir avec certaines cartes graphiques : le menu de démarrage s'affiche 3 secondes "
-            "avec une entrée « Raye Linux (safe graphics) », et une installation faite en Safe "
-            "graphics le reste ensuite.",
-      "en": "Black screen with some graphics cards: the boot menu now shows for 3 seconds with a "
-            "\"Raye Linux (safe graphics)\" entry, and an install made in Safe graphics stays that way."}),
 ]
 
 

@@ -49,15 +49,15 @@
 <main id="main" class="download wrap">
 <header class="dl-head">
 <p class="status"><span class="dot" aria-hidden="true"></span>Public beta</p>
-<h1>Download Raye Linux 0.5 Beta Alpenglow</h1>
+<h1>Download Raye Linux 1.0 Beta Brocken</h1>
 <p class="lede">The Raye Linux image, to write to a USB stick to install it. If something doesn't work, write to me.</p>
 </header>
 
 <section class="dl-file card" aria-labelledby="file-title">
 <div class="dl-file-top">
 <div>
-<h2 id="file-title">raye-0.5-beta-amd64.iso</h2>
-<p class="dl-meta">2.9 GB · 64-bit ISO, UEFI start · November 18, 2026</p>
+<h2 id="file-title">raye-1.0-beta-amd64.iso</h2>
+<p class="dl-meta">2.9 GB · 64-bit ISO, UEFI start · November 19, 2026</p>
 </div>
 <div class="dl-actions">
 <a class="btn btn-accent" href="#accept" data-accept>Download the ISO</a>
@@ -66,29 +66,29 @@
 </div>
 
 <dl class="dl-facts">
-<div><dt>SHA-256</dt><dd><code class="hash">dcf0df4fb3b1484493dceb9b257e4a42320c675a4b3812b1c93bec75f839b740</code></dd></div>
+<div><dt>SHA-256</dt><dd><code class="hash">d7ffe63c47049424f825667c037c72ddcdfe7cd532fa830a13cb4e79dafd3b99</code></dd></div>
 <div><dt>Key fingerprint</dt><dd><code>EA73 69D4 C3A3 10B2 DF3D  FC16 D3AA 2E62 5DDE 161E</code></dd></div>
 </dl>
 <ul class="dl-links">
-<li><a href="https://dl.rayelinux.com/iso/0.5-beta/SHA256SUMS">SHA256SUMS</a></li>
-<li><a href="https://dl.rayelinux.com/iso/0.5-beta/SHA256SUMS.asc">Signature</a></li>
-<li><a href="https://dl.rayelinux.com/iso/0.5-beta/raye-archive.asc">Public key</a></li>
-<li><a href="https://dl.rayelinux.com/iso/0.5-beta/release-notes-0.5-beta.md">Release notes</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0-beta/SHA256SUMS">SHA256SUMS</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0-beta/SHA256SUMS.asc">Signature</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0-beta/raye-archive.asc">Public key</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0-beta/release-notes-1.0-beta.md">Release notes</a></li>
 </ul>
 </section>
 
 <section id="accept" class="card dl-card dl-accept" aria-labelledby="accept-title">
 <h2 id="accept-title">Before you download: this is a public beta</h2>
 <ul class="plain">
-<li>Raye Linux 0.5 is a beta. It can have many bugs, crash and, in rare cases, lose data.</li>
+<li>Raye Linux 1.0 Beta is a beta. It can have many bugs, crash and, in rare cases, lose data.</li>
 <li>Installing can erase the whole disk you pick. Back up your important files before you install, and prefer a test PC or a virtual machine.</li>
 <li>The software is provided “as is”, without any warranty, as its free licenses say. To the fullest extent the law allows, Raye Linux and its contributors are not liable for any damage, data loss or other problem that comes from downloading, installing or using it.</li>
 <li>You install and use it at your own risk, and you are responsible for the computer you do it on.</li>
-<li>The public beta runs for about one to two weeks, before version 1.0.</li>
+<li>More betas follow before the final 1.0.</li>
 <li>By downloading, you accept the <a href="/en/terms/">terms of use</a>.</li>
 </ul>
 <label class="dl-check"><input type="checkbox" id="accept-check"> <span>I have read these warnings, backed up my data and agree to use this beta at my own risk.</span></label>
-<p class="dl-accept-actions"><a class="btn btn-accent dl-go" href="https://dl.rayelinux.com/iso/0.5-beta/raye-0.5-beta-amd64.iso">I agree, download the ISO</a>
+<p class="dl-accept-actions"><a class="btn btn-accent dl-go" href="https://dl.rayelinux.com/iso/1.0-beta/raye-1.0-beta-amd64.iso">I agree, download the ISO</a>
 <button type="button" class="btn btn-quiet dl-cancel" hidden>Cancel</button></p>
 </section>
 
@@ -111,7 +111,7 @@ gpg --verify SHA256SUMS.asc SHA256SUMS</code></pre></li>
 <li><strong>balenaEtcher</strong>: choose the ISO, then the stick, then Flash.</li>
 <li><strong>dd</strong>: replace <code>sdX</code> with your stick and check twice with <code>lsblk</code>: everything on it will be erased.</li>
 </ul>
-<pre class="code"><code>sudo dd if=raye-0.5-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress</code></pre>
+<pre class="code"><code>sudo dd if=raye-1.0-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress</code></pre>
 <p>Then start the computer from the stick, often with F12, F11, F8 or Esc at power on.</p>
 </section>
 

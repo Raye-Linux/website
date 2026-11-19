@@ -1289,14 +1289,17 @@ RELEASES = {
     "blocks": [
         ("timeline", [
             ("", L("{v}", "{v}"),
-             L("La première image que tout le monde peut télécharger.",
-               "The first image anyone can download.")),
-            ("", L("0.5 Bêta", "0.5 Beta"),
-             L("Les archives dans l'Explorateur, le chiffrement du disque depuis les Paramètres, "
+             L("Les applis Horloge et Carte graphique, des avis dans le Raye Store, le mode Essayer "
+               "Raye sans l'installer, une installation qui garde vos fichiers, et Raye Update plus "
+               "fiable.",
+               "The Clock and Graphics Card apps, reviews in the Raye Store, Try Raye without "
+               "installing, a Setup that keeps your files, and a more reliable Raye Update.")),
+            ("2026-11-14", L("0.5 Bêta", "0.5 Beta"),
+             L("La première image que tout le monde peut télécharger. Les archives dans l'Explorateur, le chiffrement du disque depuis les Paramètres, "
                "un Panneau de configuration rempli, et des correctifs : le clignotement de la "
                "page Performances, un menu transparent dans les Paramètres, l'écran de mise à "
                "jour décentré sur deux écrans, le Wi-Fi affiché sur un PC qui n'en a pas.",
-               "Archives in File Explorer, disk encryption from Settings, a filled Control "
+               "The first image anyone can download. Archives in File Explorer, disk encryption from Settings, a filled Control "
                "Panel, and fixes: the flicker of the Performance page, a see-through menu in "
                "Settings, the update screen off-center on two screens, Wi-Fi shown on a PC "
                "that has none.")),
