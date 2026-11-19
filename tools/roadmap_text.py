@@ -45,6 +45,13 @@ RENAMED = {
          "Une deuxième édition en mise à jour continue, synchronisée avec la principale"),
     "Android apps":
         ("Phone apps on your PC", "Les applis de téléphone sur votre PC"),
+    "Faster Ubuntu updates everywhere: your country's server first, others as backup":
+        ("Faster system updates everywhere: your country's server first, others as backup",
+         "Des mises à jour du système plus rapides partout : le serveur de votre pays "
+         "d'abord, les autres en secours"),
+    "Raye kernel only (Ubuntu's kernel removed)":
+        ("Raye kernel only (the stock kernel is removed)",
+         "Seulement le noyau Raye (le noyau d'origine est retiré)"),
 }
 
 FR = {
@@ -141,6 +148,12 @@ FR = {
     "New website, with fresh screenshots of the real system":
         "Nouveau site, avec de nouvelles captures du vrai système",
     "More languages": "Plus de langues",
+    "Raye Assistant updated, on Discord and the website":
+        "Assistant Raye mis à jour, sur Discord et sur le site",
+    "Works on older PCs too (legacy BIOS, older processors, 2–4 GB RAM)":
+        "Marche aussi sur les PC plus anciens (BIOS ancien, processeurs plus vieux, 2 à 4 Go de "
+        "mémoire)",
+    "Legal pages and FAQ": "Pages légales et foire aux questions",
     "New ISO for everyone": "Une nouvelle image ISO pour tout le monde",
 
     # V2
@@ -148,10 +161,18 @@ FR = {
         "Compte Raye : vos réglages vous suivent sur tous vos PC",
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
+    "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    "New account website and emails, with two-factor sign-in":
+        "Nouveau site et nouveaux courriels du compte, avec la connexion en deux étapes",
+    "Chromebooks with ARM chips": "Les Chromebook à puce ARM",
+    "Raye Proton: pick Raye's Windows layer for Steam games":
+        "Raye Proton : choisir la couche Windows de Raye pour les jeux Steam",
 
     # V3
-    "Local assistant and developer options":
-        "Assistant local et options pour les développeurs",
+    "Accounts: badges, community and admin panel":
+        "Comptes : badges, communauté et panneau d'administration",
+    "Local assistant, developer options and remote web page":
+        "Assistant local, options pour les développeurs et page web à distance",
     "Every other language": "Toutes les autres langues",
     "Performance options in Settings, with a transparency switch":
         "Options de performances dans les Paramètres, avec un interrupteur de transparence",
@@ -185,16 +206,20 @@ FR = {
         "Correctif du bug d'agrandissement et d'ancrage des fenêtres",
     "Taskbar buttons clickable up to the screen edge":
         "Boutons de la barre des tâches cliquables jusqu'au bord de l'écran",
-    "Laptops wake from sleep reliably":
-        "Les portables sortent de la veille sans problème",
+    "PCs whose sleep doesn't work get it turned off automatically, with a clear message "
+    "(turn it back on in Settings)":
+        "Sur les PC où la veille ne marche pas, elle est coupée automatiquement, avec un message "
+        "clair (on peut la réactiver dans les Paramètres)",
     "Automatic kernel security updates":
         "Mises à jour de sécurité du noyau automatiques",
     "Fix the Merge folders window in File Explorer":
         "Correctif de la fenêtre « Fusionner les dossiers » de l'Explorateur",
     "The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)":
         "L'ISO fonctionne dans les machines virtuelles (outils invités VirtualBox, VMware et QEMU inclus)",
-    "Locked-down by default: firewall on, encrypted DNS, private Wi-Fi address, without limiting anything":
-        "Verrouillé par défaut : pare-feu actif, DNS chiffré, adresse Wi-Fi privée, sans rien limiter",
+    "Safe by default: firewall on and a private Wi-Fi address, encrypted DNS one click away "
+    "in Settings, nothing slowed down":
+        "Sûr par défaut : pare-feu actif et adresse Wi-Fi privée, DNS chiffré à un clic dans "
+        "les Paramètres, rien de ralenti",
     "Webcam, a built-in MIDI synth and Print to PDF for Windows programs":
         "Webcam, synthé MIDI intégré et Imprimer en PDF pour les programmes Windows",
 }

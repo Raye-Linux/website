@@ -215,7 +215,7 @@
         ],
         [
           "doing",
-          "Laptops wake from sleep reliably"
+          "PCs whose sleep doesn't work get it turned off automatically, with a clear message (turn it back on in Settings)"
         ],
         [
           "doing",
@@ -227,11 +227,15 @@
         ],
         [
           "doing",
-          "Locked-down by default: firewall on, encrypted DNS, private Wi-Fi address, without limiting anything"
+          "Safe by default: firewall on and a private Wi-Fi address, encrypted DNS one click away in Settings, nothing slowed down"
         ],
         [
           "doing",
           "Webcam, a built-in MIDI synth and Print to PDF for Windows programs"
+        ],
+        [
+          "doing",
+          "Faster Ubuntu updates everywhere: your country's server first, others as backup"
         ]
       ]
     },
@@ -250,6 +254,22 @@
         [
           "planned",
           "More languages"
+        ],
+        [
+          "planned",
+          "Raye kernel only (Ubuntu's kernel removed)"
+        ],
+        [
+          "planned",
+          "Raye Assistant updated, on Discord and the website"
+        ],
+        [
+          "planned",
+          "Works on older PCs too (legacy BIOS, older processors, 2–4 GB RAM)"
+        ],
+        [
+          "planned",
+          "Legal pages and FAQ"
         ],
         [
           "planned",
@@ -276,6 +296,22 @@
         [
           "planned",
           "Spanish, German, Portuguese and Italian"
+        ],
+        [
+          "planned",
+          "Fingerprint readers"
+        ],
+        [
+          "planned",
+          "New account website and emails, with two-factor sign-in"
+        ],
+        [
+          "planned",
+          "Chromebooks with ARM chips"
+        ],
+        [
+          "planned",
+          "Raye Proton: pick Raye's Windows layer for Steam games"
         ]
       ]
     },
@@ -289,7 +325,11 @@
         ],
         [
           "planned",
-          "Local assistant and developer options"
+          "Accounts: badges, community and admin panel"
+        ],
+        [
+          "planned",
+          "Local assistant, developer options and remote web page"
         ],
         [
           "planned",
