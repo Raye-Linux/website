@@ -45,7 +45,7 @@
         ],
         [
           "done",
-          "NVIDIA and AMD control panels (fans, power, profiles)"
+          "AMD Graphics Card panel (fans, power, profiles) and the NVIDIA Control Panel"
         ],
         [
           "done",
@@ -53,7 +53,7 @@
         ],
         [
           "done",
-          "Many more settings like Windows 11, with a transparency switch"
+          "Performance options in Settings, with a transparency switch"
         ],
         [
           "done",
@@ -61,7 +61,7 @@
         ],
         [
           "done",
-          "Windows apps work out of the box, plus better support for Windows apps and games"
+          "Windows apps get their fonts, 32-bit games can use 4 GB, Store packages open"
         ],
         [
           "done",
@@ -160,6 +160,70 @@
         [
           "doing",
           "Complete Windows bridge: share drivers, files and settings with Windows"
+        ],
+        [
+          "doing",
+          "Fix for the flicker on NVIDIA cards at 144 Hz"
+        ],
+        [
+          "doing",
+          "NVIDIA Control Panel opened from Settings"
+        ],
+        [
+          "doing",
+          "Clock: opens from the taskbar clock, and alarms wake the PC from sleep"
+        ],
+        [
+          "doing",
+          "Many more settings like Windows 11"
+        ],
+        [
+          "doing",
+          "Windows layer fully hidden: Raye file dialogs, no technical names in Task Manager"
+        ],
+        [
+          "doing",
+          "Bring your wallpaper, Wi-Fi networks, apps and browser data from your old system"
+        ],
+        [
+          "doing",
+          "Import your files from Windows right in Setup"
+        ],
+        [
+          "doing",
+          "Check for very old processors before installing"
+        ],
+        [
+          "doing",
+          "Update screen at startup shows its real percentage"
+        ],
+        [
+          "doing",
+          "Try Raye never touches the PC's own swap"
+        ],
+        [
+          "doing",
+          "Store settings, and Synaptic removed"
+        ],
+        [
+          "doing",
+          "Fix the maximize and snap glitch"
+        ],
+        [
+          "doing",
+          "Taskbar buttons clickable up to the screen edge"
+        ],
+        [
+          "doing",
+          "Laptops wake from sleep reliably"
+        ],
+        [
+          "doing",
+          "Automatic kernel security updates"
+        ],
+        [
+          "doing",
+          "Fix the Merge folders window in File Explorer"
         ]
       ]
     },

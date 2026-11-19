@@ -153,4 +153,42 @@ FR = {
     "Local assistant and developer options":
         "Assistant local et options pour les développeurs",
     "Every other language": "Toutes les autres langues",
+    "Performance options in Settings, with a transparency switch":
+        "Options de performances dans les Paramètres, avec un interrupteur de transparence",
+    "Windows apps get their fonts, 32-bit games can use 4 GB, Store packages open":
+        "Les applis Windows ont leurs polices, les jeux 32 bits peuvent utiliser 4 Go, les paquets du Store s'ouvrent",
+    "AMD Graphics Card panel (fans, power, profiles) and the NVIDIA Control Panel":
+        "Panneau Carte graphique AMD (ventilateurs, puissance, profils) et Panneau de configuration NVIDIA",
+    "Fix for the flicker on NVIDIA cards at 144 Hz":
+        "Correctif du scintillement des cartes NVIDIA à 144 Hz",
+    "NVIDIA Control Panel opened from Settings":
+        "Panneau de configuration NVIDIA ouvert depuis les Paramètres",
+    "Clock: opens from the taskbar clock, and alarms wake the PC from sleep":
+        "Horloge : s'ouvre depuis l'horloge de la barre des tâches, et les alarmes sortent le PC de la veille",
+    "Many more settings like Windows 11":
+        "Beaucoup plus de réglages comme dans Windows 11",
+    "Windows layer fully hidden: Raye file dialogs, no technical names in Task Manager":
+        "Couche Windows entièrement cachée : fenêtres de fichiers Raye, aucun nom technique dans le Gestionnaire des tâches",
+    "Bring your wallpaper, Wi-Fi networks, apps and browser data from your old system":
+        "Ramener ton fond d'écran, tes réseaux Wi-Fi, tes applis et les données de ton navigateur de ton ancien système",
+    "Import your files from Windows right in Setup":
+        "Importer tes fichiers de Windows directement pendant l'installation",
+    "Check for very old processors before installing":
+        "Vérification des très vieux processeurs avant l'installation",
+    "Update screen at startup shows its real percentage":
+        "L'écran de mise à jour au démarrage montre son vrai pourcentage",
+    "Try Raye never touches the PC's own swap":
+        "Le mode Essayer Raye ne touche jamais à l'espace d'échange du PC",
+    "Store settings, and Synaptic removed":
+        "Paramètres du Store, et Synaptic retiré",
+    "Fix the maximize and snap glitch":
+        "Correctif du bug d'agrandissement et d'ancrage des fenêtres",
+    "Taskbar buttons clickable up to the screen edge":
+        "Boutons de la barre des tâches cliquables jusqu'au bord de l'écran",
+    "Laptops wake from sleep reliably":
+        "Les portables sortent de la veille sans problème",
+    "Automatic kernel security updates":
+        "Mises à jour de sécurité du noyau automatiques",
+    "Fix the Merge folders window in File Explorer":
+        "Correctif de la fenêtre « Fusionner les dossiers » de l'Explorateur",
 }
