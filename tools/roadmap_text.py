@@ -193,4 +193,8 @@ FR = {
         "Correctif de la fenêtre « Fusionner les dossiers » de l'Explorateur",
     "The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)":
         "L'ISO fonctionne dans les machines virtuelles (outils invités VirtualBox, VMware et QEMU inclus)",
+    "Locked-down by default: firewall on, encrypted DNS, private Wi-Fi address, without limiting anything":
+        "Verrouillé par défaut : pare-feu actif, DNS chiffré, adresse Wi-Fi privée, sans rien limiter",
+    "Webcam, a built-in MIDI synth and Print to PDF for Windows programs":
+        "Webcam, synthé MIDI intégré et Imprimer en PDF pour les programmes Windows",
 }
