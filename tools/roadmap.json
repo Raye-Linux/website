@@ -351,10 +351,6 @@
         ],
         [
           "planned",
-          "ARM PCs"
-        ],
-        [
-          "planned",
           "Spanish, German, Portuguese and Italian"
         ],
         [
@@ -364,10 +360,6 @@
         [
           "planned",
           "New account website and emails, with two-factor sign-in"
-        ],
-        [
-          "planned",
-          "Chromebooks with ARM chips"
         ],
         [
           "planned",
@@ -383,6 +375,14 @@
       "title": "🕒 V3",
       "color": "8a8f98",
       "items": [
+        [
+          "planned",
+          "Chromebooks with ARM chips"
+        ],
+        [
+          "planned",
+          "ARM PCs"
+        ],
         [
           "planned",
           "Android apps"
