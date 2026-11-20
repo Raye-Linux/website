@@ -183,24 +183,61 @@ class RoadmapTests(unittest.TestCase):
             other = "en" if lang == "fr" else "fr"
             self.assertIn('class="lang-switch" href="%s"' % b.PATHS[other]["roadmap"], read(rel))
 
-    def test_layout_is_plain_headings_and_lists(self):
-        # no cards, badges, legend or icons: a version heading, one status
-        # line, then a plain list
+    def test_each_version_is_a_card_with_its_discord_colour(self):
+        # like the Discord embeds: one card per version, its bar in the colour
+        # the section has in roadmap.json
         b = builder()
         for lang, rel in PAGES.items():
             text = read(rel)
             main = text[text.index("<main"):text.index("</main>")]
+            cards = re.findall(r'<section class="rm-section rm-tone-([a-z]+)"', main)
             with self.subTest(lang=lang):
-                for word in ('class="card', "rm-badge", "rm-legend", "<svg", "btn"):
-                    self.assertNotIn(word, main)
+                self.assertEqual(cards, [b.ROADMAP_TONES[s["color"].lower()]
+                                         for s in roadmap()["sections"]])
                 levels = re.findall(r"<h([1-6])", main)
                 self.assertEqual(levels[0], "1")
                 self.assertEqual(set(levels[1:]), {"2"})
                 self.assertEqual(levels.count("2"), len(roadmap()["sections"]))
-                sections = b.roadmap_sections(roadmap(), lang)
-                self.assertEqual(main.count('class="rm-status"'),
-                                 sum(1 for t, _, s, _ in sections
-                                     if b.roadmap_status(t, s, b.roadmap_text.STATES[lang])[1]))
+
+    def test_every_item_has_its_status_icon(self):
+        for lang, rel in PAGES.items():
+            text = read(rel)
+            items = re.findall(r'<li class="rm-item rm-(\w+)">(<svg class="rm-icon[^"]*")?', text)
+            with self.subTest(lang=lang):
+                self.assertEqual(len(items), sum(len(s["items"]) for s in roadmap()["sections"]))
+                for state, icon in items:
+                    self.assertTrue(icon, state)
+                    self.assertIn('rm-icon-%s"' % state, icon)
+                # icons are decoration: the state is read out in words
+                main = text[text.index("<main"):text.index("</main>")]
+                self.assertEqual(main.count('<span class="visually-hidden">'), len(items))
+
+    def test_every_version_shows_its_progress(self):
+        b = builder()
+        for lang, rel in PAGES.items():
+            text = read(rel)
+            bars = re.findall(r'<progress class="rm-progress" value="(\d+)" max="(\d+)" '
+                              r'aria-labelledby="(rm-\d+-count)"></progress>', text)
+            with self.subTest(lang=lang):
+                self.assertEqual(len(bars), len(roadmap()["sections"]))
+                for (value, top, label), section in zip(bars, roadmap()["sections"]):
+                    done = sum(1 for k, _ in section["items"] if k == "done")
+                    self.assertEqual((int(value), int(top)), (done, len(section["items"])))
+                    count = b.roadmap_text.PAGE[lang]["count"].format(done=done,
+                                                                     total=len(section["items"]))
+                    if lang == "fr":
+                        count = b.french(count)
+                    self.assertIn('id="%s">%s<' % (label, count), text)
+
+    def test_legend_row_sits_above_the_list(self):
+        b = builder()
+        for lang, rel in PAGES.items():
+            text = read(rel)
+            head = text[text.index("<main"):text.index('class="rm-list"')]
+            with self.subTest(lang=lang):
+                self.assertIn('class="rm-legend"', head)
+                for state, label in b.roadmap_text.STATES[lang].items():
+                    self.assertRegex(head, r'rm-icon-%s".*?<span>%s</span>' % (state, label))
 
     def test_headings_keep_the_version_and_the_status_line_the_rest(self):
         b = builder()
@@ -216,7 +253,7 @@ class RoadmapTests(unittest.TestCase):
         self.assertEqual(b.roadmap_status("Recently done", "done", labels),
                          ("Recently done", ""))
 
-    def test_an_item_unlike_its_version_says_its_state_in_words(self):
+    def test_an_item_unlike_its_version_shows_its_own_state(self):
         b = builder()
         data = copy.deepcopy(roadmap())
         section = next(s for s in data["sections"] if s["items"][0][0] == "planned")
@@ -227,15 +264,16 @@ class RoadmapTests(unittest.TestCase):
             page = b.roadmap("en")
         finally:
             b.roadmap_load = load
-        self.assertIn('class="rm-item rm-done"', page)
-        self.assertIn('<span class="rm-tag">(done)</span>', page)
+        # its own icon and words, and its version's progress counts it
+        self.assertRegex(page, r'<li class="rm-item rm-done"><svg class="rm-icon rm-icon-done"')
+        self.assertIn('<span class="rm-count" id="rm-%d-count">1 of %d done<'
+                      % (data["sections"].index(section) + 1, len(section["items"])), page)
 
-    def test_the_style_stays_plain(self):
+    def test_the_style_stays_flat(self):
         with open(os.path.join(ROOT, "assets", "site.css"), encoding="utf-8") as f:
             css = f.read()
         block = css[css.index("/* roadmap"):css.index(".changes-next")]
-        for word in ("box-shadow", "gradient", "line-through", "border-radius", "glow",
-                     "text-align: center"):
+        for word in ("box-shadow", "gradient", "line-through", "glow", "text-shadow"):
             with self.subTest(word=word):
                 self.assertNotIn(word, block)
 

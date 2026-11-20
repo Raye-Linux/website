@@ -1317,22 +1317,50 @@ def roadmap_status(title, state, labels):
     return name, " · ".join(parts + ([note] if note else []))
 
 
+# small flat status icons, in the place of the Discord emoji (the site
+# shows no emoji); the words are read out instead of the icon
+ROADMAP_ICONS = {
+    "done": '<path d="M7.6 12.4l3 3 5.8-6.2" fill="none" stroke-width="2.2" '
+            'stroke-linecap="round" stroke-linejoin="round"/>',
+    "doing": '<path d="M12 4a8 8 0 0 1 0 16z" stroke="none"/>',
+    "planned": '<path d="M12 7.6V12l2.9 1.9" fill="none" stroke-width="2" '
+               'stroke-linecap="round" stroke-linejoin="round"/>',
+}
+
+
+def roadmap_icon(state):
+    ring = ('<circle cx="12" cy="12" r="9.2" fill="none" stroke-width="1.9"/>'
+            if state != "done" else '<circle cx="12" cy="12" r="10" stroke="none"/>')
+    return (f'<svg class="rm-icon rm-icon-{state}" viewBox="0 0 24 24" fill="currentColor" '
+            f'stroke="currentColor" aria-hidden="true" focusable="false">{ring}'
+            f'{ROADMAP_ICONS[state]}</svg>')
+
+
 def roadmap(lang):
     import html as _html
     r, labels = roadmap_text.PAGE[lang], roadmap_text.STATES[lang]
     esc = lambda x: _html.escape(x, quote=False)
+    colon = " :" if lang == "fr" else ":"
+    legend = "\n".join(f'<li>{roadmap_icon(k)}<span>{labels[k]}</span></li>'
+                       for k in ROADMAP_STATES)
     blocks = []
-    for n, (title, _tone, state, items) in enumerate(roadmap_sections(roadmap_load(), lang), 1):
+    for n, (title, tone, state, items) in enumerate(roadmap_sections(roadmap_load(), lang), 1):
         name, status = roadmap_status(title, state, labels)
-        rows = []
-        for k, text in items:
-            # an item whose state differs from its version's says so, in words
-            tag = (f' <span class="rm-tag">({labels[k].lower()})</span>' if k != state else "")
-            rows.append(f'<li class="rm-item rm-{k}">{esc(text)}{tag}</li>')
-        rows = "\n".join(rows)
-        status = f'\n<p class="rm-status">{esc(status)}</p>' if status else ""
-        blocks.append(f"""<section class="rm-section rm-{state}" aria-labelledby="rm-{n}">
+        done = sum(1 for k, _ in items if k == "done")
+        count = r["count"].format(done=done, total=len(items))
+        rows = "\n".join(
+            f'<li class="rm-item rm-{k}">{roadmap_icon(k)}'
+            f'<span class="visually-hidden">{labels[k]}{colon} </span>'
+            f'<span>{esc(text)}</span></li>' for k, text in items)
+        status = f'\n<p class="rm-status rm-status-{state}">{esc(status)}</p>' if status else ""
+        blocks.append(f"""<section class="rm-section rm-tone-{tone}" aria-labelledby="rm-{n}">
+<div class="rm-section-head">
 <h2 id="rm-{n}">{esc(name)}</h2>{status}
+</div>
+<div class="rm-progress-row">
+<progress class="rm-progress" value="{done}" max="{len(items)}" aria-labelledby="rm-{n}-count"></progress>
+<span class="rm-count" id="rm-{n}-count">{count}</span>
+</div>
 <ul class="rm-items">
 {rows}
 </ul>
@@ -1347,6 +1375,9 @@ def roadmap(lang):
 <h1>{r['title']}</h1>
 <p class="lede">{r['lede'].format(discord=DISCORD)}</p>
 <p class="rm-same">{r['same']}</p>
+<ul class="rm-legend" aria-label="{r['legend']}">
+{legend}
+</ul>
 </header>
 <div class="rm-list">
 {blocks}

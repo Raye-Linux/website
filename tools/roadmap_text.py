@@ -14,6 +14,8 @@ PAGE = {
         "lede": "What's next for Raye Linux. Ideas from the community come first: share "
                 "yours in #ideas on <a href=\"{discord}\" rel=\"noopener\">our Discord</a>.",
         "same": "The #roadmap channel on the Discord has the same list.",
+        "legend": "Legend",
+        "count": "{done} of {total} done",
     },
     "fr": {
         "title": "Feuille de route",
@@ -24,6 +26,8 @@ PAGE = {
                 "proposez les vôtres dans #ideas sur <a href=\"{discord}\" "
                 "rel=\"noopener\">notre Discord</a>.",
         "same": "Le salon #roadmap du Discord a la même liste.",
+        "legend": "Légende",
+        "count": "Fait : {done} sur {total}",
     },
 }
 

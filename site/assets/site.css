@@ -1147,30 +1147,83 @@ body { background: #131217; background-attachment: scroll; }
   .toc ol { columns: 1; }
 }
 
-/* roadmap: a plain page, version headings and lists, no cards */
+/* roadmap: one card per version, like the embeds of #roadmap on the Discord */
 
-.roadmap { max-width: 44rem; padding-top: 3rem; padding-bottom: 4.5rem; }
-.rm-head { margin-bottom: 2.75rem; }
+.roadmap { max-width: 52rem; padding-top: 3rem; padding-bottom: 4.5rem; }
+.rm-head { margin-bottom: 2rem; }
 .rm-head h1 { margin-bottom: 1rem; font-size: clamp(2.2rem, 4.5vw, 3rem); }
-.rm-head .lede { max-width: 36rem; margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.6; }
+.rm-head .lede { max-width: 38rem; margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.6; }
 .rm-same { margin: 0; color: var(--text-tertiary); font-size: 0.9rem; }
+.rm-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.rm-legend li { display: inline-flex; align-items: center; gap: 0.45rem; }
 
-.rm-section { padding-top: 1.6rem; margin-top: 1.6rem; border-top: 1px solid var(--stroke-surface); }
-.rm-section:first-child { margin-top: 0; }
-.rm-section h2 { margin: 0; font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.01em; }
-.rm-status { margin: 0.2rem 0 0.9rem; color: var(--text-tertiary); font-size: 0.92rem; }
-.rm-doing .rm-status { color: var(--accent-text); }
-.rm-items { margin: 0; padding-left: 1.15rem; line-height: 1.55; }
-.rm-section h2 + .rm-items { margin-top: 0.8rem; }
-.rm-items li { margin: 0.32rem 0; padding-left: 0.2rem; }
-.rm-items li::marker { color: var(--text-tertiary); }
-.rm-item.rm-done { color: var(--text-tertiary); }
+/* the Discord colour of each section (tools/roadmap.json) */
+.rm-tone-done { --rm-tone: #3DDC97; }
+.rm-tone-doing { --rm-tone: #9B6BFF; }
+.rm-tone-next { --rm-tone: #F5B942; }
+.rm-tone-later { --rm-tone: #8A8F98; }
+
+.rm-icon { flex: none; width: 1.05rem; height: 1.05rem; }
+.rm-icon-done { color: #3DDC97; }
+.rm-icon-done path { stroke: var(--bg-base); }
+.rm-icon-doing { color: #A98BFF; }
+.rm-icon-planned { color: #8FB0E6; }
+
+.rm-list { display: grid; gap: 1rem; }
+.rm-section {
+  padding: 1.15rem 1.4rem 1.25rem 1.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--stroke-surface);
+  border-left: 4px solid var(--rm-tone);
+  border-radius: 8px;
+}
+.rm-section-head { margin-bottom: 0.75rem; }
+.rm-section h2 { margin: 0; font-size: 1.2rem; line-height: 1.3; letter-spacing: -0.005em; }
+.rm-status { margin: 0.2rem 0 0; color: var(--text-tertiary); font-size: 0.9rem; }
+.rm-status-doing { color: var(--accent-text); }
+
+.rm-progress-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.rm-progress {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1 1 auto;
+  max-width: 16rem;
+  height: 6px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--rm-tone);
+  overflow: hidden;
+}
+.rm-progress::-webkit-progress-bar { background: rgba(255, 255, 255, 0.1); border-radius: 999px; }
+.rm-progress::-webkit-progress-value { background: var(--rm-tone); border-radius: 999px; }
+.rm-progress::-moz-progress-bar { background: var(--rm-tone); border-radius: 999px; }
+.rm-count { flex: none; color: var(--text-tertiary); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+
+.rm-items { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.5rem; }
+.rm-item { display: flex; align-items: flex-start; gap: 0.65rem; line-height: 1.5; max-width: 44rem; }
+.rm-item .rm-icon { margin-top: 0.2rem; }
+.rm-item.rm-done { color: var(--text-secondary); }
 .rm-item.rm-doing { color: var(--text-primary); }
 .rm-item.rm-planned { color: var(--text-secondary); }
-.rm-tag { color: var(--text-tertiary); font-size: 0.9em; }
 
 .changes-next { margin: 1.1rem 0 0; font-size: 0.95rem; }
 
 @media (max-width: 36rem) {
   .roadmap { padding-top: 2rem; }
+  .rm-section { padding: 1rem 1rem 1.1rem 1.05rem; }
+}
+@media (forced-colors: active) {
+  .rm-section { border-left-color: CanvasText; }
+  .rm-icon-done path { stroke: Canvas; }
+  .rm-progress { border: 1px solid CanvasText; }
 }
