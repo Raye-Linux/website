@@ -151,7 +151,7 @@
         ],
         [
           "doing",
-          "Lower RAM use at idle: 600–700 MB"
+          "Lower RAM use at idle: about 850 MB, down from 1 GB"
         ],
         [
           "doing",
@@ -244,6 +244,14 @@
         [
           "doing",
           "Faster Ubuntu updates everywhere: your country's server first, others as backup"
+        ],
+        [
+          "doing",
+          "Switch between KDE and Hyprland from Settings in seconds, your apps reopen"
+        ],
+        [
+          "doing",
+          "Updates always end on the newest version, even mid-download"
         ]
       ]
     },
@@ -286,6 +294,30 @@
         [
           "planned",
           "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
+        ],
+        [
+          "planned",
+          "Store: choose Flatpak or AppImage for an app (Quadra first)"
+        ],
+        [
+          "planned",
+          "Taskbar settings: left or center, icon size, taskbar size, position, auto-hide"
+        ],
+        [
+          "planned",
+          "Join the team and a staff panel on the website"
+        ],
+        [
+          "planned",
+          "Public profiles and badges"
+        ],
+        [
+          "planned",
+          "Beta program: public beta, beta and dev updates"
+        ],
+        [
+          "planned",
+          "Raye Assistant knows every version since 0.5"
         ]
       ]
     },

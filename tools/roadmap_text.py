@@ -161,6 +161,24 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    'Lower RAM use at idle: about 850 MB, down from 1 GB':
+        'Moins de mémoire utilisée au repos : environ 850 Mo, contre 1 Go',
+    'Switch between KDE and Hyprland from Settings in seconds, your apps reopen':
+        'Passer de KDE à Hyprland depuis les Paramètres en quelques secondes, vos applis se rouvrent',
+    'Updates always end on the newest version, even mid-download':
+        'Les mises à jour finissent toujours sur la version la plus récente, même en plein téléchargement',
+    'Store: choose Flatpak or AppImage for an app (Quadra first)':
+        'Store : choisir Flatpak ou AppImage pour une appli (Quadra en premier)',
+    'Taskbar settings: left or center, icon size, taskbar size, position, auto-hide':
+        'Réglages de la barre des tâches : à gauche ou au centre, taille des icônes, taille de la barre, position, masquage automatique',
+    'Join the team and a staff panel on the website':
+        "Rejoindre l'équipe et un panneau du staff sur le site",
+    'Public profiles and badges':
+        'Profils publics et badges',
+    'Beta program: public beta, beta and dev updates':
+        'Programme bêta : mises à jour bêta publique, bêta et dev',
+    'Raye Assistant knows every version since 0.5':
+        'Raye Assistant connaît chaque version depuis la 0.5',
     "Urgent fix (Nov 20): full game speed on NVIDIA again, one recommended driver, Graphics Card app fixed":
         "Correctif urgent (20 nov.) : pleine vitesse des jeux sur NVIDIA, un seul pilote recommandé, appli Carte graphique corrigée",
     "Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept":
