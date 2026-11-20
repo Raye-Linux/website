@@ -19,6 +19,7 @@ import os
 import re
 import shutil
 
+import site_v1_people as people
 import site_v1_text as V
 
 TOOLS = os.path.dirname(os.path.abspath(__file__))
@@ -71,10 +72,11 @@ class Site:
 
     # ---------------------------------------------------------- shell
 
-    def head(self, lang, key, title, description):
+    def head(self, lang, key, title, description, scripts=()):
         other = "en" if lang == "fr" else "fr"
         here, there = self.path(key, lang), self.path(key, other)
         url = self.b.URL
+        extra = "".join(f'\n<script src="/assets/{name}" defer></script>' for name in scripts)
         og = ""
         if self.has_shot("desktop", lang):
             og = (f'\n<meta property="og:image" content="{url}/assets/shots/desktop-{lang}-1600.jpg">'
@@ -104,6 +106,7 @@ class Site:
 <meta property="og:locale" content="{'fr_CA' if lang == 'fr' else 'en_CA'}">{og}
 <script src="/assets/lang.js"></script>
 <script src="/assets/app.js" defer></script>
+<script src="/assets/support.js" defer></script>{extra}
 </head>"""
 
     def download_button(self, lang, small=False):
@@ -154,15 +157,16 @@ class Site:
 <div class="footer-brand">
 <img src="/assets/raye-mark.svg" alt="" width="36" height="16">
 <p>{ui['rights']}<br><a href="mailto:{ui['mail']}">{ui['mail']}</a></p>
+<p><a class="btn btn-quiet btn-small" href="{self.b.DISCORD}" rel="noopener">Discord</a></p>
 </div>
 {cols}
 </div>
 </div>
 </footer>"""
 
-    def page(self, lang, key, title, description, main, body_class=""):
+    def page(self, lang, key, title, description, main, body_class="", scripts=()):
         ui = V.UI[lang]
-        return f"""{self.head(lang, key, title, description)}
+        return f"""{self.head(lang, key, title, description, scripts)}
 <body class="v1 page-{key}{' ' + body_class if body_class else ''}">
 <a class="skip-link" href="#main">{ui['skip']}</a>
 {self.topbar(lang, key)}
@@ -330,7 +334,8 @@ class Site:
 </section>
 <div class="article">
 {self.blocks(h['blocks'], lang)}
-</div>"""
+</div>
+{people.people_band(self, lang)}"""
         return self.page(lang, "home", h["title"][lang], h["description"][lang], main, "home-v1")
 
     def content_page(self, lang, key):
@@ -347,18 +352,6 @@ class Site:
 </div>
 {self.next_link(c['next'], lang)}"""
         return self.page(lang, key, title, self.t(c["description"], lang), main)
-
-    def privacy(self, lang):
-        t = self.b.T[lang]
-        main = f"""<header class="page-head">
-<p class="eyebrow">{V.FOOTER[2][0][lang]}</p>
-<h1>{t['privacy_title']}</h1>
-</header>
-<div class="article prose-v1">
-{self.b.PRIVACY[lang].strip()}
-</div>"""
-        return self.page(lang, "privacy", t["privacy_title"] + " · Raye Linux",
-                         V.PRIVACY_DESCRIPTION[lang], main)
 
     def not_found(self):
         """One page for both languages, in the V1 shell: nginx cannot know
@@ -420,6 +413,7 @@ class Site:
                 shutil.copyfile(os.path.join(self.b.ROOT, "assets", name),
                                 os.path.join(dest, name))
         shutil.copyfile(os.path.join(TOOLS, "site_v1.css"), os.path.join(dest, "v1.css"))
+        shutil.copyfile(os.path.join(TOOLS, "site_v1.js"), os.path.join(dest, "v1.js"))
         with open(os.path.join(dest, "lang.js"), "w", encoding="utf-8") as f:
             f.write(lang_js())
 
@@ -429,17 +423,25 @@ class Site:
             self.write(self.rel("home", lang), self.home(lang), lang)
             for key in V.CONTENT:
                 self.write(self.rel(key, lang), self.content_page(lang, key), lang)
-            self.write(self.rel("privacy", lang), self.privacy(lang), lang)
             self.write(self.rel("download", lang), self.b.download(lang, shell=self), lang)
-            # the legal pages are shared with the coming-soon site for now
-            for page in ("terms", "notice", "licenses"):
-                self.write(self.b.PATHS[lang][page].lstrip("/") + "index.html",
-                           self.b.strip_links(self.b.legal(lang, page)), lang)
-            # so is the roadmap: its footer link must lead somewhere here too
-            self.write(self.b.PATHS[lang]["roadmap"].lstrip("/") + "index.html",
-                       self.b.strip_links(self.b.roadmap(lang)), lang)
+            for key in ("privacy", "terms", "betaterms", "notice", "licenses"):
+                self.write(self.rel(key, lang), people.legal(self, lang, key), lang)
+            self.write(self.rel("join", lang), people.join_index(self, lang), lang)
+            for role, r in people.J.ROLES.items():
+                self.write(self.rel(r["page"], lang), people.role_page(self, lang, role), lang)
+            self.write(self.rel("community", lang), people.community(self, lang), lang)
+            self.write(self.rel("rules", lang), people.rules(self, lang), lang)
+            # the roadmap and source lists are built once, by build_pages.py
+            rm = self.b.roadmap_text.PAGE[lang]
+            self.write(self.rel("roadmap", lang),
+                       people.borrowed(self, lang, "roadmap",
+                                       people.roadmap_words(self.b.roadmap(lang), lang),
+                                       rm["description"]), lang)
+            self.write(self.rel("source", lang),
+                       people.borrowed(self, lang, "source", self.b.source(lang),
+                                       self.b.SOURCE[lang]["lead"][:150].rsplit(" ", 1)[0] + "…"),
+                       lang)
         self.write("404.html", self.b.strip_links(self.not_found()), "fr")
-
 
 def lang_js():
     """The coming-soon lang.js, with every V1 page in its map."""

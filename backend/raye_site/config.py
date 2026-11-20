@@ -9,6 +9,9 @@ DEFAULT_TLS_NAME = "mail.example.org"
 DEFAULT_SENDER = "Raye Linux <bonjour@rayelinux.com>"
 DEFAULT_BUG_WEBHOOK = "/etc/raye-site/bug-webhook"
 DEFAULT_BUG_REVIEW_WEBHOOK = "/etc/raye-site/bug-review-webhook"
+# the Discord webhook of the private staff channel told about each application
+DEFAULT_JOIN_WEBHOOK = "/etc/raye-site/join-webhook"
+DEFAULT_DISCORD_INVITE = "TrxhUkabyB"
 
 
 @dataclass(frozen=True)
@@ -39,6 +42,13 @@ class Config:
     # the #bugs topics, read from the Discord bot's API
     bugs_api_url: str | None = None
     bugs_guild: str | None = None
+    # "Join the team": the staff channel webhook (a secret, never logged)
+    join_webhook_paths: tuple = ()
+    # the Raye account server, to sign an application with an account;
+    # unset while accounts are not online, and the form asks for an email
+    account_api_url: str | None = None
+    # the invite code whose public numbers the Community page shows
+    discord_invite: str | None = None
 
     @classmethod
     def from_env(cls, env=None) -> "Config":
@@ -66,6 +76,8 @@ class Config:
         bug_paths.append(env.get("RAYE_SITE_BUG_WEBHOOK", DEFAULT_BUG_WEBHOOK))
         review_paths = [os.path.join(creds, "smtp_bug-review-webhook")] if creds else []
         review_paths.append(env.get("RAYE_SITE_BUG_REVIEW_WEBHOOK", DEFAULT_BUG_REVIEW_WEBHOOK))
+        join_paths = [os.path.join(creds, "smtp_join-webhook")] if creds else []
+        join_paths.append(env.get("RAYE_SITE_JOIN_WEBHOOK", DEFAULT_JOIN_WEBHOOK))
 
         return cls(
             db_path=db,
@@ -81,6 +93,9 @@ class Config:
             bug_review_paths=tuple(review_paths),
             bugs_api_url=support_url(env.get("RAYE_BUGS_API_URL")),
             bugs_guild=env.get("RAYE_BUGS_GUILD") if (env.get("RAYE_BUGS_GUILD") or "").isdigit() else None,
+            join_webhook_paths=tuple(join_paths),
+            account_api_url=account_url(env.get("RAYE_ACCOUNT_API_URL")),
+            discord_invite=env.get("RAYE_DISCORD_INVITE", DEFAULT_DISCORD_INVITE) or None,
         )
 
 
@@ -96,4 +111,22 @@ def support_url(value):
     ip = ipaddress.ip_address(parts.hostname)
     if not (ip.is_private or ip.is_loopback):
         raise ValueError("RAYE_SUPPORT_OLLAMA_URL must be on the local network")
+    return value.rstrip("/")
+
+
+def account_url(value):
+    """The account server: https, or plain http on loopback (same machine)."""
+    if not value:
+        return None
+    from urllib.parse import urlsplit
+    parts = urlsplit(value)
+    if not parts.hostname:
+        raise ValueError("RAYE_ACCOUNT_API_URL must be https://<host>")
+    if parts.scheme != "https":
+        try:
+            loopback = ipaddress.ip_address(parts.hostname).is_loopback
+        except ValueError:
+            loopback = False
+        if parts.scheme != "http" or not loopback:
+            raise ValueError("RAYE_ACCOUNT_API_URL must be https (or http on loopback)")
     return value.rstrip("/")

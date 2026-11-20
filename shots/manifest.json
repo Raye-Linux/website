@@ -1,1 +1,14 @@
-{}
+{
+  "desktop-fr": {
+    "version": "1.0 Beta 2 (development build)",
+    "date": "2026-11-19",
+    "source": "/root/raye-final/beta1/win10-shots/windows11-fr-open-1920x1080.png",
+    "replace": "take again on the 1.0 image: real icons, a real user name"
+  },
+  "desktop-en": {
+    "version": "1.0 Beta 2 (development build)",
+    "date": "2026-11-19",
+    "source": "/root/raye-final/beta1/win10-shots/windows11-en-open-1920x1080.png",
+    "replace": "take again on the 1.0 image: real icons, a real user name"
+  }
+}

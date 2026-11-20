@@ -1269,27 +1269,38 @@ LINK_WORDS = {
 def body(page, lang, paths):
     """The page's HTML in one language. paths are the site's addresses in that
     language (build_pages.PATHS[lang])."""
+    return render(PAGES[page], SUMMARIES[page], lang, paths)
+
+
+def render(sections, summary, lang, paths, updated=None, version=None, words=None,
+           note=None):
+    """A legal page from its sections and summary. The V1 site calls it with
+    its own pages (tools/legal_v1_text.py), dates and link words."""
     i = 0 if lang == "fr" else 1
     ui = UI[lang]
-    words = {k: f'<a href="{paths[k]}">{w}</a>' for k, w in LINK_WORDS[lang].items()}
+    updated = (updated or UPDATED)[lang]
+    version = version or VERSION
+    names = dict(LINK_WORDS[lang], **((words or {}).get(lang, {})))
+    words = {k: f'<a href="{paths[k]}">{w}</a>' for k, w in names.items() if k in paths}
     words["contact"] = CONTACT
 
     def fill(text):
         return text.format(**words)
 
-    out = [f'<p class="updated">{ui["updated"]} : {UPDATED[lang]} · {ui["version"]} '
-           f'{VERSION}</p>' if lang == "fr" else
-           f'<p class="updated">{ui["updated"]}: {UPDATED[lang]} · {ui["version"]} '
-           f'{VERSION}</p>']
-    items = "\n".join(f"<li>{fill(pair[i])}</li>" for pair in SUMMARIES[page])
+    colon = " :" if lang == "fr" else ":"
+    out = [f'<p class="updated">{ui["updated"]}{colon} {updated} · {ui["version"]} '
+           f'{version}</p>']
+    if note:
+        out.append(f'<p class="legal-draft">{note[lang]}</p>')
+    items = "\n".join(f"<li>{fill(pair[i])}</li>" for pair in summary)
     out.append(f'<aside class="legal-summary" aria-labelledby="summary-title">\n'
                f'<p class="legal-summary-title" id="summary-title">{ui["summary"]}</p>\n'
                f'<ul>\n{items}\n</ul>\n</aside>')
     toc = "\n".join(f'<li><a href="#{s["id"]}">{s["title"][i]}</a></li>'
-                    for s in PAGES[page])
+                    for s in sections)
     out.append(f'<nav class="toc" aria-labelledby="toc-title">\n'
                f'<p class="toc-title" id="toc-title">{ui["toc"]}</p>\n<ol>\n{toc}\n</ol>\n</nav>')
-    for s in PAGES[page]:
+    for s in sections:
         part = [f'<section id="{s["id"]}" tabindex="-1">', f'<h2>{s["title"][i]}</h2>']
         for kind, data in s["blocks"]:
             if kind == "p":

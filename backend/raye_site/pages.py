@@ -92,6 +92,28 @@ MESSAGES = {
         "en": ("You're already unsubscribed",
                "This address no longer gets emails from Raye Linux."),
     },
+    "join_ok": {
+        "fr": ("Candidature envoyée",
+               "Merci ! La Raye Team lit chaque candidature et vous répond sur Discord ou par "
+               "courriel. Rien d'autre à faire pour l'instant."),
+        "en": ("Application sent",
+               "Thank you! The Raye Team reads every application and answers you on Discord "
+               "or by email. Nothing else to do for now."),
+    },
+    "join_error": {
+        "fr": ("Il manque quelque chose",
+               "Revenez au formulaire et vérifiez l'adresse courriel, le nom Discord, le texte "
+               "(30 caractères au moins) et la case d'accord."),
+        "en": ("Something is missing",
+               "Go back to the form and check the email address, the Discord name, the text "
+               "(30 characters at least) and the consent box."),
+    },
+    "join_rate": {
+        "fr": ("Un instant",
+               "Trop de candidatures en peu de temps. Réessayez dans une heure."),
+        "en": ("Hold on",
+               "Too many applications in a short time. Please try again in an hour."),
+    },
     "not_found": {
         "fr": ("Page introuvable", "Cette adresse n'existe pas sur le site."),
         "en": ("Page not found", "This address does not exist on the site."),

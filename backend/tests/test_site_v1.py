@@ -67,6 +67,13 @@ PAIRS = [(rel_of(p["path"]["fr"]), rel_of(p["path"]["en"])) for p in V.PAGES.val
 PAGES = [r for pair in PAIRS for r in pair] + ["404.html"]
 DOWNLOAD = {rel_of(V.PAGES["download"]["path"][l]) for l in ("fr", "en")}
 HELD = ("/telecharger/", "/en/download/")
+# the source page links to every copy of the code
+SOURCE = {rel_of(V.PAGES["source"]["path"][l]) for l in ("fr", "en")}
+SOURCE_HOSTS = ("https://github.com/Raye-Linux/", "https://codeberg.org/Raye-Linux/",
+                "https://gitlab.com/raye-linux/", "https://dl.rayelinux.com/git/")
+# the licenses must name the parts they license (and the trademark notice);
+# tests/test_site.py checks these pages with the live site's rule
+LICENSES = {rel_of(V.PAGES["licenses"]["path"][l]) for l in ("fr", "en")}
 
 
 def metadata(rel):
@@ -115,6 +122,8 @@ class V1Tests(unittest.TestCase):
                     allowed = ("/", "#", "mailto:bonjour@")
                     if rel in DOWNLOAD and tag == "a":
                         allowed += MIRRORS
+                    if rel in SOURCE and tag == "a":
+                        allowed += SOURCE_HOSTS
                     # the community server, where bugs are reported
                     if tag == "a" and value == B.DISCORD:
                         allowed += (B.DISCORD,)
@@ -159,6 +168,8 @@ class V1Tests(unittest.TestCase):
 
     def test_visible_text_names_nothing_it_should_not(self):
         for rel in PAGES:
+            if rel in LICENSES:
+                continue
             with self.subTest(page=rel):
                 self.assertEqual(forbidden(visible(rel)), [])
 
@@ -339,6 +350,115 @@ class V1Tests(unittest.TestCase):
         self.assertEqual(old, [], "figures not measured on %s" % V.VERSION)
         self.assertEqual(stale, [], "screenshots without a %s entry in shots/manifest.json"
                          % V.VERSION)
+
+
+class PeopleAndLegalTests(unittest.TestCase):
+    """The V1 pages about people (join, community, rules) and the V1 legal
+    pages: what the backend expects is what the pages send."""
+
+    def setUp(self):
+        sys.path.insert(0, os.path.join(REPO, "tools"))
+        sys.path.insert(0, os.path.join(REPO, "backend"))
+        import site_v1_join_text as J
+        from raye_site import applications
+        self.J, self.apps = J, applications
+
+    def role_pages(self):
+        for role, r in self.J.ROLES.items():
+            for lang in ("fr", "en"):
+                yield role, lang, rel_of(V.PAGES[r["page"]]["path"][lang])
+
+    def test_the_site_and_the_backend_have_the_same_roles(self):
+        self.assertEqual(set(self.J.ROLES), set(self.apps.DISCORD_ROLES))
+
+    def test_each_role_page_has_a_form_the_backend_accepts(self):
+        for role, lang, rel in self.role_pages():
+            text = read(rel)
+            tags = parse(text).tags
+            with self.subTest(page=rel):
+                forms = [a for t, a in tags if t == "form"]
+                self.assertEqual(len(forms), 1)
+                self.assertEqual((forms[0]["action"], forms[0]["method"]), ("/api/join", "post"))
+                hidden = {a["name"]: a["value"] for t, a in tags
+                          if t == "input" and a.get("type") == "hidden"}
+                self.assertEqual(hidden, {"role": role, "lang": lang})
+                names = {a.get("name") for t, a in tags if t in ("input", "textarea")}
+                self.assertTrue({"email", "discord", "languages", "skills", "why", "consent",
+                                 "website"} <= names, names)
+                # every visible control has its label
+                ids = {a.get("id") for t, a in tags if t in ("input", "textarea")
+                       and a.get("type") not in ("hidden", "checkbox")}
+                fors = {a.get("for") for t, a in tags if t == "label"}
+                self.assertTrue(ids <= fors, ids - fors)
+                # the consent box points at the part of the privacy page it is about
+                self.assertIn(V.PAGES["privacy"]["path"][lang] + "#applications", text)
+                self.assertIn('id="applications"', read(rel_of(V.PAGES["privacy"]["path"][lang])))
+                self.assertIn("/assets/v1.js", text)
+
+    def test_the_backend_accepts_what_a_filled_form_sends(self):
+        for role, lang, rel in self.role_pages():
+            tags = parse(read(rel)).tags
+            fields = {a["name"]: a["value"] for t, a in tags
+                      if t == "input" and a.get("type") == "hidden"}
+            fields.update(email="ana@example.org", discord="ana.tests", languages="fr, en",
+                          skills="", why="I would like to help with this part of Raye.",
+                          consent="on", website="")
+            with self.subTest(page=rel):
+                self.assertEqual(self.apps.validate(fields)["role"], role)
+
+    def test_the_join_page_links_every_role(self):
+        for lang in ("fr", "en"):
+            text = read(rel_of(V.PAGES["join"]["path"][lang]))
+            for r in self.J.ROLES.values():
+                with self.subTest(lang=lang, role=r["page"]):
+                    self.assertIn(f'href="{V.PAGES[r["page"]]["path"][lang]}"', text)
+
+    def test_every_page_leads_to_the_community_and_the_legal_pages(self):
+        for rel in PAGES:
+            text = read(rel)
+            lang = "en" if '<html lang="en">' in text else "fr"
+            for key in ("community", "join", "rules", "privacy", "terms", "betaterms"):
+                with self.subTest(page=rel, key=key):
+                    self.assertIn(f'href="{V.PAGES[key]["path"][lang]}"', text)
+
+    def test_the_community_page_reads_our_server_only(self):
+        for lang in ("fr", "en"):
+            text = read(rel_of(V.PAGES["community"]["path"][lang]))
+            with self.subTest(lang=lang):
+                self.assertIn("data-community", text)
+                self.assertIn(f'href="{B.DISCORD}"', text)
+                self.assertNotIn("<iframe", text)
+        js = read("assets/v1.js")
+        self.assertIn('"/api/community"', js)
+        self.assertEqual([u for u in re.findall(r"https?://[^\s\"')]+", js)], [])
+
+    def test_the_v1_legal_pages_are_marked_as_a_draft(self):
+        for key in ("privacy", "terms", "betaterms"):
+            for lang in ("fr", "en"):
+                text = read(rel_of(V.PAGES[key]["path"][lang]))
+                with self.subTest(page=key, lang=lang):
+                    self.assertIn('class="legal-draft"', text)
+                    self.assertRegex(text, r"(version|Version) 4\.0")
+
+    def test_the_privacy_page_covers_what_the_v1_keeps(self):
+        for lang, words in (("en", ("Law 25", "GDPR", "Discord username", "180 days",
+                                    "never sent to Discord")),
+                            ("fr", ("Loi 25", "RGPD", "nom d'utilisateur Discord", "180 jours",
+                                    "jamais envoyé sur Discord"))):
+            text = " ".join(parse(read(rel_of(V.PAGES["privacy"]["path"][lang]))).text)
+            text = text.replace("\u00a0", " ")
+            for w in words:
+                with self.subTest(lang=lang, word=w):
+                    self.assertIn(w, text)
+        # what the page says is what the code keeps
+        self.assertEqual(self.apps.KEEP_PENDING, 180 * 24 * 3600)
+        self.assertEqual(self.apps.KEEP_DECIDED, 30 * 24 * 3600)
+
+    def test_the_beta_terms_invent_no_nda(self):
+        for lang in ("fr", "en"):
+            text = " ".join(parse(read(rel_of(V.PAGES["betaterms"]["path"][lang]))).text)
+            with self.subTest(lang=lang):
+                self.assertNotRegex(text, r"(?i)\bNDA\b|non-disclosure")
 
 
 if __name__ == "__main__":

@@ -4,7 +4,12 @@
     raye-site-admin list             confirmed addresses, one per line
     raye-site-admin export           confirmed addresses as CSV on stdout
     raye-site-admin delete ADDRESS   erase an address (deletion request)
-    raye-site-admin purge            run the cleanup now
+    raye-site-admin purge            run the cleanup now (applications too)
+
+    raye-site-admin applications count | list [--status S] | show REF
+    raye-site-admin applications notify [--all]   tell the staff channel again
+    raye-site-admin applications delete REF       erase one (deletion request)
+    raye-site-admin applications forget --email A | --discord NAME
 
 There is deliberately no command that sends mail to the list.
 """
@@ -15,6 +20,8 @@ import os
 import sys
 from datetime import datetime, timezone
 
+from . import applications as apps
+from .config import Config
 from .store import Store
 
 DEFAULT_DB = os.path.join(os.environ.get("STATE_DIRECTORY", "/var/lib/raye-site").split(":")[0],
@@ -43,10 +50,29 @@ def main(argv=None) -> int:
     sub.add_parser("purge", help="remove expired entries now")
     lm = sub.add_parser("launch-mail", help="queue the one launch email (dry run unless --send)")
     lm.add_argument("--send", action="store_true", help="really queue it")
+    a = sub.add_parser("applications", help="applications to join the team")
+    asub = a.add_subparsers(dest="what", required=True)
+    asub.add_parser("count")
+    al = asub.add_parser("list")
+    al.add_argument("--status", choices=apps.STATUSES)
+    ash = asub.add_parser("show")
+    ash.add_argument("ref")
+    an = asub.add_parser("notify")
+    an.add_argument("--all", action="store_true", help="also the ones past their retries")
+    ad = asub.add_parser("delete")
+    ad.add_argument("ref")
+    af = asub.add_parser("forget")
+    af.add_argument("--email")
+    af.add_argument("--discord")
     args = parser.parse_args(argv)
 
     store = Store(args.db)
     store.init()
+    join = apps.Store(args.db)
+    join.init()
+
+    if args.command == "applications":
+        return applications_command(args, join)
 
     if args.command == "count":
         for key, value in store.counts().items():
@@ -69,9 +95,44 @@ def main(argv=None) -> int:
         print("deleted")
     elif args.command == "purge":
         print(store.purge())
+        print(join.purge())
     elif args.command == "launch-mail":
         n = store.queue_announcement("launch", dry_run=not args.send)
         print(f"{'queued' if args.send else 'would queue'}: {n}")
+    return 0
+
+
+def applications_command(args, join) -> int:
+    if args.what == "count":
+        for key, value in join.counts().items():
+            print(f"{key}: {value}")
+    elif args.what == "list":
+        for row in join.list(status=args.status):
+            print(f"{row['id']}\t{row['status']}\t{row['role']}\t{row['discord']}\t"
+                  f"{_when(row['created_at'])}")
+    elif args.what == "show":
+        row = join.get(args.ref)
+        if row is None:
+            print("not found", file=sys.stderr)
+            return 1
+        for key, value in row.items():
+            if key.endswith("_at") and value:
+                value = _when(value)
+            print(f"{key}: {value}")
+    elif args.what == "notify":
+        # the webhook path comes from the same place as the service's
+        config = Config.from_env()
+        sent, failed = apps.Applications(join, config.join_webhook_paths,
+                                         background=False).deliver_pending(every=args.all)
+        print(f"sent: {sent}, failed: {failed}")
+        return 1 if failed else 0
+    elif args.what == "delete":
+        if not join.delete(args.ref):
+            print("not found", file=sys.stderr)
+            return 1
+        print("deleted")
+    elif args.what == "forget":
+        print(f"deleted: {join.delete_person(email=args.email, discord=args.discord)}")
     return 0
 
 

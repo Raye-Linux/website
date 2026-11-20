@@ -15,7 +15,23 @@
     "/versions/": "/en/releases/",
     "/a-propos/": "/en/about/",
     "/confidentialite/": "/en/privacy/",
-    "/telecharger/": "/en/download/"
+    "/telecharger/": "/en/download/",
+    "/rejoindre/": "/en/join/",
+    "/rejoindre/beta-privee/": "/en/join/beta/",
+    "/rejoindre/beta-publique/": "/en/join/public-beta/",
+    "/rejoindre/beta-dev/": "/en/join/beta-dev/",
+    "/rejoindre/moderation/": "/en/join/moderator/",
+    "/rejoindre/traduction/": "/en/join/translator/",
+    "/rejoindre/developpement/": "/en/join/developer/",
+    "/rejoindre/design-et-autres/": "/en/join/design-and-more/",
+    "/communaute/": "/en/community/",
+    "/regles/": "/en/rules/",
+    "/conditions-beta/": "/en/beta-terms/",
+    "/conditions/": "/en/terms/",
+    "/mentions-legales/": "/en/legal/",
+    "/licences/": "/en/licenses/",
+    "/feuille-de-route/": "/en/roadmap/",
+    "/code-source/": "/en/source/"
   };
   var target = MAP[window.location.pathname];
   if (!target) return;

@@ -411,3 +411,233 @@ html { scroll-padding-top: 5rem; }
 .not-found { padding-top: 4rem; }
 .not-found .result-v1 + .result-v1 { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--stroke-divider); }
 .not-found h2 { margin-top: 0; }
+
+/* ------------------------------------------------------------------ V1 part 2
+   Join the team, Community, rules, legal and shared pages. Same tokens; the
+   only new surfaces are cards (bg-card + one hairline) and a stat row. */
+
+.v1 .card {
+  border: 1px solid var(--stroke-surface);
+  border-radius: var(--radius-window);
+  background: var(--bg-card);
+  box-shadow: none;
+}
+
+/* breadcrumb above a role page title */
+.crumbs ol { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.crumbs li { color: var(--text-tertiary); font-size: 0.92rem; }
+.crumbs li::after { content: " /"; color: var(--text-tertiary); }
+.crumbs a { color: var(--text-secondary); text-decoration: none; }
+.crumbs a:hover { color: var(--text-primary); text-decoration: underline; }
+
+/* a wider reading area for pages made of cards */
+.article.wide { max-width: 64rem; }
+.article.wide > h2:first-child { margin-top: 2.5rem; }
+
+/* the seven roles */
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.role-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.25rem 1.3rem 1.15rem;
+  border: 1px solid var(--stroke-surface);
+  border-radius: var(--radius-card);
+  background: var(--bg-card);
+  transition: background 120ms var(--ease), border-color 120ms var(--ease);
+}
+.role-card:hover { background: var(--bg-card-hover); border-color: var(--stroke-strong); }
+.role-card:focus-within { border-color: var(--accent-text); }
+.article .role-card h3 { margin: 0; font-size: 1.08rem; }
+.role-card h3 a { color: var(--text-primary); text-decoration: none; }
+/* the whole card follows the link, for a mouse; the link itself is what a
+   keyboard and a screen reader meet */
+.role-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.role-card p { margin: 0; color: var(--text-secondary); font-size: 0.97rem; flex: 1; }
+.role-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.role-more .arrow { width: 1rem; height: 1rem; transition: transform 120ms var(--ease); }
+.role-card:hover .arrow, .people-card:hover .arrow { transform: translateX(3px); }
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1rem 3.5rem;
+  margin-top: 1rem;
+}
+
+/* role page: the role at a glance */
+.glance {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2rem 0 1.5rem;
+  border: 1px solid var(--stroke-surface);
+  border-radius: var(--radius-card);
+  background: var(--bg-card);
+}
+.glance div { padding: 0.9rem 1.1rem; }
+.glance div + div { border-left: 1px solid var(--stroke-divider); }
+.glance dt { color: var(--text-tertiary); font-size: 0.82rem; font-weight: 600; }
+.glance dd { margin: 0.2rem 0 0; color: var(--text-primary); font-size: 0.97rem; }
+.approval {
+  margin: 2rem 0 0;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-control) var(--radius-control) 0;
+  background: rgba(123, 60, 255, 0.07);
+  color: var(--text-body);
+}
+
+/* the application form */
+.apply { margin-top: 2rem; padding: clamp(1.25rem, 4vw, 2rem); scroll-margin-top: 5rem; }
+.apply:focus { outline: none; }
+.article .apply h2 { margin: 0 0 0.3rem; font-size: 1.35rem; }
+.apply .hint { margin: 0 0 1.5rem; color: var(--text-secondary); font-size: 0.95rem; }
+.field { margin: 0 0 1.25rem; }
+.field .field-label { display: block; margin-bottom: 0.2rem; font-size: 0.95rem; }
+.field-hint { margin: 0 0 0.5rem; color: var(--text-tertiary); font-size: 0.88rem; line-height: 1.45; }
+.field .input { width: 100%; max-width: none; }
+.textarea { min-height: 6rem; padding-top: 0.6rem; resize: vertical; font: inherit; line-height: 1.5; }
+.req-mark { color: var(--accent-text); }
+.field-err { margin: 0.35rem 0 0; color: var(--critical); font-size: 0.9rem; }
+.field-err:empty { display: none; }
+.form-note {
+  margin: -0.5rem 0 1.25rem;
+  color: var(--text-tertiary);
+  font-size: 0.88rem;
+}
+.apply .checks { margin: 0.5rem 0 1.25rem; }
+.apply .check { font-size: 0.95rem; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.apply .done { padding: 0.5rem 0; }
+.apply .done:focus { outline: none; }
+
+/* community */
+.live { margin: 2.25rem 0 0.5rem; padding: 1.5rem clamp(1.25rem, 4vw, 2rem); }
+.live-head { display: flex; align-items: center; gap: 1rem; }
+.live-head img { width: 3rem; height: 3rem; }
+.live-label { margin: 0; color: var(--text-tertiary); font-size: 0.88rem; font-weight: 600; }
+.live-name { margin: 0; color: var(--text-primary); font-size: 1.35rem; font-weight: 650; }
+.live-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin: 1.25rem 0 1.25rem;
+  min-height: 2rem;
+  color: var(--text-secondary);
+}
+.live-count strong { color: var(--text-primary); font-size: 1.5rem; font-variant-numeric: tabular-nums; margin-right: 0.2rem; }
+.live-online { display: inline-flex; align-items: baseline; gap: 0.35rem; }
+.live-online .dot {
+  align-self: center;
+  width: 0.55rem; height: 0.55rem;
+  border-radius: 50%;
+  background: var(--success);
+}
+.live-wait { font-size: 0.95rem; }
+.live .small { margin-top: 1rem; }
+.feature-keys div { grid-template-columns: 14rem minmax(0, 1fr); }
+.feature-keys dt { white-space: normal; color: var(--text-primary); font-weight: 600; }
+.feature-keys dd { color: var(--text-body); }
+
+/* rules: numbered like steps, title in bold */
+.rules-list { margin-top: 2rem; }
+
+/* home: the community and the open roles, side by side */
+.people { padding-top: 1rem; padding-bottom: 5rem; }
+.people-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.people-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid var(--stroke-surface);
+  border-radius: var(--radius-window);
+  background: var(--bg-card);
+  color: var(--text-body);
+  text-decoration: none;
+  transition: background 120ms var(--ease), border-color 120ms var(--ease);
+}
+.people-card:hover { background: var(--bg-card-hover); border-color: var(--stroke-strong); color: var(--text-body); }
+.people-card .eyebrow { margin: 0; }
+.people-card strong { color: var(--text-primary); font-size: 1.45rem; line-height: 1.2; }
+.people-card > span:not(.eyebrow):not(.role-more) { flex: 1; }
+
+/* legal pages */
+.legal-draft {
+  margin: 0 0 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(255, 200, 87, 0.35);
+  border-radius: var(--radius-control);
+  background: rgba(255, 200, 87, 0.06);
+  color: var(--text-body);
+  font-size: 0.95rem;
+}
+.legal-v1 .legal-summary, .legal-v1 .toc {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--stroke-surface);
+  border-radius: var(--radius-card);
+  background: var(--bg-card);
+}
+.legal-v1 .legal-summary-title, .legal-v1 .toc-title { margin: 0 0 0.5rem; font-weight: 650; color: var(--text-primary); }
+.legal-v1 section { scroll-margin-top: 5rem; }
+.legal-v1 section:focus { outline: none; }
+.legal-v1 h3 { margin: 1.5rem 0 0.4rem; font-size: 1.05rem; }
+.legal-v1 table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+.legal-v1 th, .legal-v1 td { padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--stroke-divider); text-align: left; vertical-align: top; }
+.legal-v1 thead th { color: var(--text-tertiary); font-size: 0.82rem; border-bottom-color: var(--stroke-strong); }
+.legal-v1 .table-wrap { overflow-x: auto; margin: 1rem 0 1.25rem; }
+
+/* the roadmap and source lists, borrowed from the live pages */
+.borrowed-wrap { padding-bottom: 3rem; }
+.borrowed-wrap .roadmap { padding-top: 4.5rem; }
+.borrowed { max-width: 52rem; margin: 0 auto; padding: 4.5rem 1.5rem 0; }
+
+/* footer: brand and five columns */
+.v1-footer .footer-cols { grid-template-columns: minmax(12rem, 1.2fr) repeat(5, minmax(0, 1fr)); }
+
+@media (max-width: 64rem) {
+  .v1-footer .footer-cols { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .split { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+
+@media (max-width: 52rem) {
+  .people-grid { grid-template-columns: minmax(0, 1fr); }
+  .glance { grid-template-columns: minmax(0, 1fr); }
+  .glance div + div { border-left: 0; border-top: 1px solid var(--stroke-divider); }
+  .feature-keys div { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 36rem) {
+  .v1-footer .footer-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .role-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .role-card, .people-card, .role-more .arrow { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .role-card, .people-card, .glance, .legal-draft, .approval { border: 1px solid CanvasText; }
+}
+.page-head.wide { max-width: 64rem; }
+.page-head.wide .lede { max-width: 46rem; }
+.crumbs li[aria-current="page"] { color: var(--text-secondary); }
+.crumbs li:last-child::after { content: none; }
+.live [hidden] { display: none !important; }
+.live-head img { width: 3.5rem; height: auto; }

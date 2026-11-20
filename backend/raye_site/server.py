@@ -15,7 +15,7 @@ import urllib.parse
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from . import bugs, moderation, pages, support
+from . import applications, bugs, community, moderation, pages, support
 from .config import Config
 from .mailer import Worker
 from .ratelimit import RateLimiter
@@ -46,6 +46,41 @@ ANSWERS = {
     "rate": {"fr": "Trop de demandes en peu de temps. Réessayez un peu plus tard.",
              "en": "Too many requests in a short time. Please try again later."},
     "bad_request": {"fr": "Demande invalide.", "en": "Invalid request."},
+}
+
+# "Join the team": what the visitor reads for each answer of /api/join
+JOIN_ANSWERS = {
+    "ok": {"fr": "Merci ! Votre candidature est arrivée. La Raye Team la lit et vous répond sur "
+                 "Discord ou par courriel.",
+           "en": "Thank you! Your application arrived. The Raye Team reads it and answers you on "
+                 "Discord or by email."},
+    "bad_role": {"fr": "Ce rôle n'existe pas.", "en": "That role does not exist."},
+    "email": ANSWERS["email"],
+    "discord": {"fr": "Ce nom d'utilisateur Discord ne semble pas valide (2 à 32 caractères : "
+                      "lettres, chiffres, _ et .).",
+                "en": "That Discord username doesn't look right (2 to 32 characters: letters, "
+                      "digits, _ and .)."},
+    "why_short": {"fr": "Dites-nous en quelques phrases pourquoi vous voulez aider (30 caractères "
+                        "au moins).",
+                  "en": "Tell us in a few sentences why you want to help (30 characters at "
+                        "least)."},
+    "languages": {"fr": "Indiquez les langues que vous pouvez traduire.",
+                  "en": "Say which languages you can translate."},
+    "links": {"fr": "Trop de liens dans le texte : trois au plus.",
+              "en": "Too many links in the text: three at most."},
+    "too_long": {"fr": "Un des champs est trop long.", "en": "One of the fields is too long."},
+    "missing": {"fr": "Un champ obligatoire est vide.", "en": "A required field is empty."},
+    "consent": {"fr": "Cochez la case pour accepter que nous gardions votre candidature.",
+                "en": "Tick the box to agree that we keep your application."},
+    "account": {"fr": "La connexion au compte Raye a échoué. Réessayez, ou utilisez une adresse "
+                      "courriel.",
+                "en": "Signing in with the Raye account failed. Try again, or use an email "
+                      "address."},
+    "account_unavailable": {"fr": "Les comptes Raye ne sont pas encore ouverts : utilisez une "
+                                  "adresse courriel.",
+                            "en": "Raye accounts are not open yet: use an email address."},
+    "rate": ANSWERS["rate"],
+    "bad_request": ANSWERS["bad_request"],
 }
 
 
@@ -90,6 +125,12 @@ class App:
             review_url=bugs.load_webhook(config.bug_review_paths),
             classifier=moderation.Classifier(config.support_ollama_url, config.support_model))
         self.feed = bugs.Feed(config.bugs_api_url, config.bugs_guild, clock)
+        join_store = applications.Store(config.db_path, clock)
+        join_store.init()
+        self.join = applications.Applications(
+            join_store, config.join_webhook_paths, clock,
+            accounts=applications.Accounts(config.account_api_url))
+        self.community = community.Community(config.discord_invite, clock)
 
 
 class BadRequest(Exception):
@@ -223,11 +264,14 @@ class Handler(BaseHTTPRequestHandler):
             return self._link_page("confirm", query.get("t"))
         if path == "/api/unsubscribe":
             return self._link_page("unsubscribe", query.get("t"))
+        if path == "/api/community":
+            return self._json(*self.app.community.status(),
+                              extra={"Cache-Control": "public, max-age=300"})
         if path == "/api/bugs":
             return self._json(*self.app.feed.topics())
         if path.startswith("/api/bugs/"):
             return self._json(*self.app.feed.topic(path[len("/api/bugs/"):]))
-        if path in ("/api/subscribe", "/api/support/chat", "/api/support/bug"):
+        if path in ("/api/subscribe", "/api/support/chat", "/api/support/bug", "/api/join"):
             return self._text(405, "method not allowed\n")
         return self._page(404, "not_found", None)
 
@@ -241,6 +285,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._support()
             if path == "/api/support/bug":
                 return self._bug()
+            if path == "/api/join":
+                return self._join()
             if path not in ("/api/subscribe", "/api/confirm", "/api/unsubscribe"):
                 self.close_connection = True
                 return self._page(404, "not_found", None)
@@ -325,6 +371,51 @@ class Handler(BaseHTTPRequestHandler):
         if not b.handle(report):
             return answer(502, "not_sent")
         return answer(200)
+
+    # join the team
+
+    def _join(self):
+        j = self.app.join
+        lang = "fr"
+        as_json = True
+
+        def answer(status, key, extra=None, ref=None):
+            if key != "ok":
+                self.close_connection = True
+            if as_json:
+                payload = {"ok": key == "ok", "error": None if key == "ok" else key,
+                           "message": JOIN_ANSWERS[key][lang]}
+                if ref:
+                    payload["reference"] = ref
+                return self._json(status, payload, extra)
+            return self._page(status, "join_ok" if key == "ok" else "join_" + (
+                "rate" if key == "rate" else "error"), lang, extra=extra)
+
+        try:
+            kind, fields = self._read_body(applications.MAX_BODY)
+        except BadRequest as exc:
+            return answer(exc.status.value, "too_long" if exc.status ==
+                          HTTPStatus.REQUEST_ENTITY_TOO_LARGE else "bad_request")
+        lang = "en" if fields.get("lang") == "en" else "fr"
+        as_json = kind == "json" or "application/json" in self.headers.get("Accept", "")
+        if fields.get("website"):
+            return answer(200, "ok")  # a robot filled the hidden field
+        try:
+            app = applications.validate(fields)
+        except ValueError as exc:
+            return answer(400, str(exc))
+        # only well-formed applications count: a typo must not lock anyone out
+        ip = self._ip()
+        if not j.limiter.hit(ip):
+            return answer(429, "rate", {"Retry-After": str(j.limiter.retry_after(ip))})
+        if not j.everyone.hit("all"):
+            log.warning("global application cap reached")
+            return answer(429, "rate", {"Retry-After": "600"})
+        try:
+            ref = j.submit(app)
+        except ValueError as exc:
+            return answer(400, str(exc))
+        return answer(200, "ok", ref=ref)
 
     # help bubble
 
@@ -502,6 +593,17 @@ def main() -> int:
     signal.signal(signal.SIGTERM, stop)
     signal.signal(signal.SIGINT, stop)
     worker.start()
+
+    def retry_staff_channel():
+        # applications the staff channel has not heard of yet, every ten minutes
+        while True:
+            time.sleep(600)
+            try:
+                httpd.app.join.deliver_pending()
+            except Exception:   # never let this thread die
+                log.exception("staff channel retry failed")
+
+    threading.Thread(target=retry_staff_channel, daemon=True).start()
     log.info("listening on %s:%d", config.listen_host, config.listen_port)
     try:
         httpd.serve_forever()

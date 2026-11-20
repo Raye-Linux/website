@@ -9,6 +9,27 @@ the help bubble, and the files to deploy it.
 - `deploy/` nginx, systemd and firewall files, and `deploy.sh`
 - `tools/` page and text builders
 
+## The V1 site (not online yet)
+
+`site-v1/` is written by the same build (`tools/site_v1.py`, text in
+`tools/site_v1_text.py`, `tools/site_v1_join_text.py` and
+`tools/legal_v1_text.py`). It adds the "Join the team" pages, the Community
+page and the V1 legal pages (marked as a draft). Two backend endpoints serve it:
+
+- `POST /api/join`: an application (JSON or a plain form). Kept in the
+  backend's SQLite file (`applications` table, no IP address), then posted
+  to a private staff channel through a Discord webhook. The webhook address
+  is read from `/etc/raye-site/join-webhook` (one line, a
+  `https://discord.com/api/webhooks/<id>/<token>` address, root only, 0600);
+  systemd hands it over as the credential `smtp_join-webhook`. Without it,
+  applications are still kept and sent once it exists
+  (`raye-site-admin applications notify`).
+- `GET /api/community`: the Discord server name, member and online counts,
+  asked from Discord's public invite address by the server, kept 10 minutes.
+
+`raye-site-admin applications count|list|show|notify|delete|forget` reads
+and manages the applications until the staff panel exists.
+
 ## Build the pages
 
     python3 tools/build_pages.py

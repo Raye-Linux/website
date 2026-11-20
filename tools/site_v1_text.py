@@ -94,15 +94,24 @@ PAGES = {
     "releases": {"path": L("/versions/", "/en/releases/"), "name": L("Versions", "Releases")},
     "about": {"path": L("/a-propos/", "/en/about/"), "name": L("À propos", "About")},
     "privacy": {"path": L("/confidentialite/", "/en/privacy/"),
-                "name": L("Confidentialité du site", "Site privacy")},
+                "name": L("Confidentialité", "Privacy")},
     "download": {"path": L("/telecharger/", "/en/download/"), "name": L("Télécharger", "Download")},
 }
 
-NAV = ["desktop", "windows", "install", "questions"]
+# the pages about people, the legal pages and the shared ones (roadmap,
+# source) live in site_v1_join_text.py; they join this list here
+from site_v1_join_text import PAGES as _MORE  # noqa: E402
+
+PAGES.update(_MORE)
+
+NAV = ["desktop", "windows", "install", "questions", "community"]
 FOOTER = [
     (L("Découvrir", "Look around"), ["desktop", "windows", "updates", "security"]),
-    (L("Avant d'installer", "Before you install"), ["hardware", "install", "download"]),
-    (L("Le projet", "The project"), ["questions", "releases", "about", "privacy"]),
+    (L("Avant d'installer", "Before you install"), ["hardware", "install", "download",
+                                                    "releases"]),
+    (L("Le projet", "The project"), ["questions", "roadmap", "about", "source"]),
+    (L("Communauté", "Community"), ["community", "join", "rules"]),
+    (L("Légal", "Legal"), ["privacy", "terms", "betaterms", "notice", "licenses"]),
 ]
 
 UI = {

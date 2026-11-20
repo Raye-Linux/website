@@ -13,15 +13,19 @@
 <link rel="alternate" hreflang="x-default" href="https://rayelinux.com/">
 <link rel="icon" href="/assets/favicon.svg?v=f2f36e0fd3" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css?v=d9cdad5578">
-<link rel="stylesheet" href="/assets/v1.css?v=3347fdaf0c">
+<link rel="stylesheet" href="/assets/v1.css?v=b6cb9b7ff9">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raye Linux">
 <meta property="og:title" content="Raye Linux · The Windows 11 desktop, free, on another system">
 <meta property="og:description" content="Raye Linux is a free system for PCs that keeps the Windows 11 layout. Every figure on this site comes with its machine and its date.">
 <meta property="og:url" content="https://rayelinux.com/en/">
 <meta property="og:locale" content="en_CA">
-<script src="/assets/lang.js?v=2ab842208c"></script>
+<meta property="og:image" content="https://rayelinux.com/assets/shots/desktop-en-1600.jpg?v=2de32c602e">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<script src="/assets/lang.js?v=a92485c3cc"></script>
 <script src="/assets/app.js?v=61041bb972" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
 </head>
 <body class="v1 page-home home-v1">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -35,6 +39,7 @@
 <li><a href="/en/windows-programs/">Windows programs</a></li>
 <li><a href="/en/install/">Install</a></li>
 <li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/community/">Community</a></li>
 </ul>
 </nav>
 <div class="topbar-end">
@@ -56,11 +61,12 @@
 <p class="hero-meta">Version 1.0, in English and French.</p>
 </div>
 <figure class="shot shot-hero">
-<div class="shot-todo" data-shot="desktop">
-<p class="todo-label">Screenshot to take · <code>desktop</code></p>
-<p class="todo-what">The Raye desktop: the Start menu open on the pinned apps, above the centered taskbar.</p>
-<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
-</div>
+<a class="shot-frame" href="/assets/shots/desktop-en-1600.webp?v=54134909f0">
+<picture>
+<source type="image/webp" srcset="/assets/shots/desktop-en-800.webp?v=ebc25686df 800w, /assets/shots/desktop-en-1600.webp?v=54134909f0 1600w" sizes="(min-width: 76rem) 72rem, 94vw">
+<img src="/assets/shots/desktop-en-1600.jpg?v=2de32c602e" alt="The Raye desktop: the Start menu open on the pinned apps, above the centered taskbar." width="1600" height="900" loading="eager" fetchpriority="high" decoding="async">
+</picture>
+</a>
 </figure>
 </section>
 <div class="article">
@@ -148,6 +154,23 @@
 <p class="signature">techoraye</p>
 </div>
 </div>
+<section class="people wrap" aria-labelledby="people-title">
+<h2 id="people-title" class="visually-hidden">Community</h2>
+<div class="people-grid">
+<a class="people-card" href="/en/community/">
+<span class="eyebrow">Community</span>
+<strong>The people of Raye.</strong>
+<span>The community meets on Discord, in English and French. That's where you ask questions, report a bug and suggest what comes next.</span>
+<span class="role-more">Community<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a>
+<a class="people-card" href="/en/join/">
+<span class="eyebrow">Join the team</span>
+<strong>Help make Raye.</strong>
+<span>Raye is made by one person, with help from its community. If you want to test, translate, moderate, write code or draw, pick a role, read what it asks for, then send a short application.</span>
+<span class="role-more">Join the team<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a>
+</div>
+</section>
 </main>
 <footer class="footer v1-footer">
 <div class="wrap">
@@ -155,6 +178,7 @@
 <div class="footer-brand">
 <img src="/assets/raye-mark.svg?v=a16854605f" alt="" width="36" height="16">
 <p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
 </div>
 <div>
 <h2>Look around</h2>
@@ -171,15 +195,34 @@
 <li><a href="/en/hardware/">Hardware</a></li>
 <li><a href="/en/install/">Install</a></li>
 <li><a href="/en/download/">Download</a></li>
+<li><a href="/en/releases/">Releases</a></li>
 </ul>
 </div>
 <div>
 <h2>The project</h2>
 <ul>
 <li><a href="/en/questions/">Questions</a></li>
-<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/roadmap/">Roadmap</a></li>
 <li><a href="/en/about/">About</a></li>
-<li><a href="/en/privacy/">Site privacy</a></li>
+<li><a href="/en/source/">Source code</a></li>
+</ul>
+</div>
+<div>
+<h2>Community</h2>
+<ul>
+<li><a href="/en/community/">Community</a></li>
+<li><a href="/en/join/">Join the team</a></li>
+<li><a href="/en/rules/">Community rules</a></li>
+</ul>
+</div>
+<div>
+<h2>Legal</h2>
+<ul>
+<li><a href="/en/privacy/">Privacy</a></li>
+<li><a href="/en/terms/">Terms of use</a></li>
+<li><a href="/en/beta-terms/">Beta program terms</a></li>
+<li><a href="/en/legal/">Legal notice</a></li>
+<li><a href="/en/licenses/">Licenses</a></li>
 </ul>
 </div>
 </div>
