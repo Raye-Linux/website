@@ -177,7 +177,7 @@ DOWNLOAD = {
                     "Échap à l'allumage.",
         "needs": "Configuration minimale",
         "needs_items": [
-            "Un processeur Intel ou AMD 64 bits, démarrage en mode UEFI",
+            "Un processeur Intel ou AMD 64 bits, démarrage en mode UEFI ou BIOS",
             "4 Go de mémoire, 8 Go conseillés",
             "25 Go d'espace disque libre",
             "Une clé USB de 8 Go ou plus",
@@ -261,7 +261,7 @@ DOWNLOAD = {
                     "at power on.",
         "needs": "What you need",
         "needs_items": [
-            "A 64-bit Intel or AMD processor, starting in UEFI mode",
+            "A 64-bit Intel or AMD processor, starting in UEFI or BIOS mode",
             "4 GB of memory, 8 GB recommended",
             "25 GB of free disk space",
             "A USB stick of 8 GB or more",
@@ -671,23 +671,83 @@ HOME = {
              "Raye Linux est basé sur Ubuntu 26.04 LTS. Cela lui donne des années de "
              "correctifs de sécurité et des pilotes pour la plupart des PC. Le bureau, les "
              "applications et les réglages par-dessus sont les nôtres."),
+            ("Je peux l'essayer avant de l'installer ?",
+             "Oui. Écrivez l'image sur une clé USB, démarrez dessus et choisissez « Essayer "
+             "Raye Linux sans l'installer » : Raye tourne depuis la clé et rien ne change sur "
+             "votre PC. Pour l'installer ensuite, redémarrez et choisissez « Installer Raye "
+             "Linux »."),
+            ("Je peux garder mon système actuel et mes fichiers ?",
+             "Oui. L'installation peut mettre Raye à côté de votre système, en le réduisant "
+             "sans risque, et demande avant de toucher à quoi que ce soit. Si Raye le remplace, "
+             "le choix « Remplacer … et garder mes fichiers » garde le Bureau, les Documents, les "
+             "Téléchargements, la Musique, les Images et les Vidéos, avec le fond d'écran, les "
+             "réseaux Wi-Fi et le profil du navigateur. Installé à côté, Raye propose de "
+             "copier vos fichiers après la première connexion. Faites quand même une "
+             "sauvegarde avant."),
             ("Mes programmes vont-ils fonctionner ?",
-             "Beaucoup de programmes .exe s'installent et s'ouvrent d'un double-clic, et le "
-             "Store a une bonne partie des applications gratuites habituelles. Certains "
-             "programmes ne fonctionnent pas encore. S'il vous en manque un, écrivez-moi "
-             "son nom : c'est comme ça que je décide quoi régler en premier."),
+             "Beaucoup de programmes .exe s'installent et s'ouvrent d'un double-clic, et "
+             "reçoivent seuls ce qu'il leur faut au premier lancement. Le Store a les "
+             "applications gratuites habituelles et des programmes .exe essayés un par un. "
+             "Certains programmes ne fonctionnent pas encore. S'il vous en manque un, "
+             "écrivez-moi son nom : c'est comme ça que je décide quoi régler en premier."),
+            ("Et mes jeux ?",
+             "Steam et Heroic sont dans le Store, et le mode jeu s'active tout seul pendant "
+             "que vous jouez. Roblox passe par Sober, dans le Store aussi. Les jeux qui ont un "
+             "anti-triche dans le noyau, comme Valorant ou Fortnite, ne fonctionnent pas."),
             ("Quel PC faut-il ?",
-             "Un PC Intel ou AMD 64 bits qui démarre en mode UEFI, avec au moins 4 Go de "
-             "mémoire. Une fois démarré, sans rien d'ouvert, Raye en utilise environ "
-             "1,2 Go (mesuré avec deux écrans) : le reste est pour vos applis, et 8 Go "
-             "valent mieux pour beaucoup d'onglets ou les jeux. {full_list}"),
+             "Un PC Intel ou AMD 64 bits, qui démarre en mode UEFI ou dans l'ancien mode BIOS, "
+             "avec au moins 4 Go de mémoire. Une fois démarré, sans rien d'ouvert, Raye en "
+             "utilise environ 850 Mo (mesuré dans une machine virtuelle "
+             "de test) : le reste est pour vos applis, et 8 Go valent mieux pour beaucoup "
+             "d'onglets ou les jeux. {full_list}"),
+            ("Et sur un vieux PC ?",
+             "Raye démarre aussi dans l'ancien mode BIOS. Si le processeur est ancien, "
+             "l'installation le dit dès sa première page : Raye fonctionne, mais certaines "
+             "applis et certains jeux en demandent un plus récent. Les PC de 2 à 4 Go de "
+             "mémoire sont en cours d'essai."),
+            ("Et sur un Chromebook ?",
+             "Beaucoup de Chromebooks à processeur Intel ou AMD peuvent faire tourner Raye, "
+             "avec un micrologiciel communautaire appelé MrChromebox. Raye règle la rangée de "
+             "touches du haut. C'est plus de travail que sur un PC : les étapes sont dans le "
+             "manuel de Raye, sur la page <a href=\"/fr/code-source/\">code source</a>. Les "
+             "Chromebooks à processeur ARM ne peuvent pas encore."),
+            ("L'écran reste noir, que faire ?",
+             "Sur le menu de la clé USB, choisissez « Safe graphics ». Une fois Raye installé, "
+             "si le bureau ne s'affiche pas deux fois de suite, Raye passe tout seul à un "
+             "mode d'affichage plus simple. Certaines cartes AMD plus anciennes (RX 550…) "
+             "posent encore problème : dites-le sur le serveur Discord, dans #bugs, avec le "
+             "nom de votre carte."),
+            ("Mon portable ne sort pas de la veille.",
+             "Raye s'en rend compte : la première fois, il vous prévient, et la deuxième fois "
+             "de suite, il désactive la veille. Fermer le capot verrouille alors le PC et "
+             "éteint l'écran. Vous pouvez la réactiver dans Paramètres > Système > "
+             "Alimentation et batterie."),
+            ("C'est sûr ?",
+             "Le pare-feu est actif dès le départ, chaque réseau Wi-Fi voit une adresse "
+             "matérielle privée, Secure Boot peut rester activé, et si vous chiffrez le "
+             "disque, la puce TPM ne le déverrouille que sur votre PC. Le DNS chiffré est à "
+             "un clic dans les réglages du réseau. Les mises à jour arrivent toutes seules."),
+            ("Comment marchent les mises à jour ?",
+             "Raye Update les trouve et les installe tout seul ; celles qui touchent au "
+             "système attendent que vous choisissiez de redémarrer. Celles du système de base "
+             "viennent d'un serveur de votre pays quand il y en a un. La bêta n'expire pas : pas besoin "
+             "de réinstaller pour avoir la suivante."),
+            ("Je peux avoir la barre des tâches à gauche et des tuiles dans Démarrer ?",
+             "Oui. Dans Paramètres > Personnalisation > Style du bureau, le style classique "
+             "met la barre des tâches à gauche avec une zone de recherche, rend les coins "
+             "carrés et donne à Démarrer une liste d'applis avec des tuiles."),
+            ("Je peux avoir un autre bureau que KDE Plasma ?",
+             "L'installation vous laisse choisir KDE Plasma (conseillé) ou Hyprland, un "
+             "bureau en mosaïque. Les deux ont la barre des tâches et le menu Démarrer de "
+             "Raye. Hyprland est plus récent et moins essayé."),
             ("Je peux aider à faire Raye ?",
              "Oui, l'équipe recrute : développeurs, modérateurs, aide aux utilisateurs, testeurs, "
              "traducteurs, designers et créateurs de vidéos. Rejoignez le serveur Discord et postulez "
              "dans le salon #join-the-team : quelques questions, puis l'équipe vous répond."),
             ("Et la version 1.0 ?",
-             "La 1.0 Bêta est sortie : c'est elle que vous téléchargez. D'autres bêtas suivent "
-             "avant la 1.0 finale. Ce qui reste à faire est dans la "
+             "Les bêtas de la 1.0 sortent l'une après l'autre, et vous téléchargez toujours "
+             "la plus récente. Raye Update apporte chaque nouvelle bêta à un Raye déjà "
+             "installé. Ce qui reste avant la 1.0 finale est dans la "
              "<a href=\"/fr/feuille-de-route/\">feuille de route</a>. Laissez votre courriel si "
              "vous voulez que je vous écrive le jour de sa sortie."),
         ],
@@ -794,22 +854,75 @@ HOME = {
              "Raye Linux is based on Ubuntu 26.04 LTS. That gives it years of security "
              "fixes and drivers for most PCs. The desktop, the apps and the settings on "
              "top are ours."),
+            ("Can I try it before installing?",
+             "Yes. Write the image to a USB stick, start from it and pick \"Try Raye Linux "
+             "without installing\": Raye runs from the stick and nothing changes on your PC. "
+             "To install it later, restart and pick \"Install Raye Linux\"."),
+            ("Can I keep my current system and my files?",
+             "Yes. Setup can put Raye next to the system you have, shrinking it safely, and "
+             "asks before it changes anything. If Raye replaces it, the \"Replace … and keep "
+             "my files\" choice keeps your Desktop, Documents, Downloads, Music, Pictures and Videos, "
+             "with your wallpaper, Wi-Fi networks and browser profile. Installed next to it, "
+             "Raye offers to copy your files over after the first sign-in. Back up first "
+             "anyway."),
             ("Will my programs still work?",
-             "Many .exe programs install and open with a double-click, and the Store has "
-             "a good share of the usual free apps. Some programs don't run yet. If one you "
-             "need is missing, send me its name: that's how I decide what to fix first."),
+             "Many .exe programs install and open with a double-click, and get what they "
+             "need by themselves the first time they start. The Store has the usual free "
+             "apps and .exe programs tried one by one. Some programs don't run yet. If one "
+             "you need is missing, send me its name: that's how I decide what to fix first."),
+            ("What about my games?",
+             "Steam and Heroic are in the Store, and Game Mode turns on by itself while you "
+             "play. Roblox runs through Sober, also in the Store. Games with a kernel "
+             "anti-cheat, like Valorant or Fortnite, don't run."),
             ("What kind of PC do I need?",
-             "A 64-bit Intel or AMD PC that starts in UEFI mode, with at least 4 GB of "
-             "memory. Once started, with nothing open, Raye uses about 1.2 GB of it "
-             "(measured with two screens): the rest is for your apps, and 8 GB is better "
-             "for lots of tabs or games. {full_list}"),
+             "A 64-bit Intel or AMD PC that starts in UEFI mode or the older BIOS mode, with "
+             "at least 4 GB of memory. Once started, with nothing open, Raye uses about "
+             "850 MB of it (measured in a test virtual machine): the rest is "
+             "for your apps, and 8 GB is better for lots of tabs or games. {full_list}"),
+            ("What about an older PC?",
+             "Raye also starts in the older BIOS mode. If the processor is old, Setup says so "
+             "on its first page: Raye runs, but some apps and games need a newer one. PCs "
+             "with 2 to 4 GB of memory are being tested now."),
+            ("What about a Chromebook?",
+             "Many Chromebooks with an Intel or AMD processor can run Raye, with a community "
+             "firmware called MrChromebox. Raye sets up the top row of keys. It takes more "
+             "work than a PC: the steps are in the Raye handbook, on the "
+             "<a href=\"/en/source/\">source code</a> page. Chromebooks with an ARM "
+             "processor can't yet."),
+            ("The screen stays black. What do I do?",
+             "On the USB stick's menu, pick \"Safe graphics\". Once Raye is installed, if the "
+             "desktop fails to show twice in a row, Raye switches to a simpler display mode "
+             "by itself. Some older AMD cards (RX 550…) still have trouble: say so on the "
+             "Discord server, in #bugs, with the name of your card."),
+            ("My laptop doesn't wake up from sleep.",
+             "Raye notices: the first time it warns you, and the second time in a row it "
+             "turns sleep off. Closing the lid then locks the PC and turns the screen off. "
+             "You can turn sleep back on in Settings > System > Power & battery."),
+            ("Is it safe?",
+             "The firewall is on from the start, each Wi-Fi network sees a private hardware "
+             "address, Secure Boot can stay on, and if you encrypt the disk the TPM chip "
+             "unlocks it on your PC only. Encrypted DNS is one click away in the network's "
+             "settings. Updates come by themselves."),
+            ("How do updates work?",
+             "Raye Update finds and installs them by itself; the ones that touch the system "
+             "wait until you choose to restart. Those of the base system come from a server in "
+             "your country when there is one. The beta doesn't expire: you never need to reinstall to get the "
+             "next one."),
+            ("Can I have the taskbar on the left and tiles in Start?",
+             "Yes. In Settings > Personalization > Desktop style, the classic style puts the "
+             "taskbar on the left with a search box, makes the corners square and gives Start "
+             "a list of apps with tiles."),
+            ("Can I use another desktop than KDE Plasma?",
+             "Setup lets you pick KDE Plasma (recommended) or Hyprland, a tiling desktop. "
+             "Both get Raye's taskbar and Start menu. Hyprland is newer and less tested."),
             ("Can I help build Raye?",
              "Yes, the team is recruiting: developers, moderators, support helpers, testers, "
              "translators, designers and video creators. Join the Discord server and apply in "
              "the #join-the-team channel: a few questions, then the team replies to you."),
             ("What about 1.0?",
-             "1.0 Beta is out: it's the one you download. More betas come before the final "
-             "1.0. What's left is on the <a href=\"/en/roadmap/\">roadmap</a>. Leave your "
+             "The 1.0 betas come out one after the other, and you always download the "
+             "newest. Raye Update brings each new beta to Raye already installed. What's left "
+             "before the final 1.0 is on the <a href=\"/en/roadmap/\">roadmap</a>. Leave your "
              "email if you want me to write you the day it's out."),
         ],
         "join_title": "What happens if you sign up",

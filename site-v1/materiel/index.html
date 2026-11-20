@@ -63,36 +63,40 @@
 <div class="table-scroll">
 <table class="measures">
 <thead>
-<tr><th scope="col">Mesure</th><th scope="col">Valeur</th></tr>
+<tr><th scope="col">Mesure</th><th scope="col">Valeur</th><th scope="col">Machine et date</th></tr>
 </thead>
 <tbody>
 <tr>
-<th scope="row">Mémoire au repos<span class="how">3 min après l'ouverture de la session, deux écrans branchés</span></th>
-<td class="num">1,2 Go</td>
+<th scope="row">Mémoire au repos<span class="how">3 min après l'ouverture de la session, moyenne de 3 relevés</span></th>
+<td class="num">850 Mo</td>
+<td>Mesuré le 19 novembre 2026, version 1.0 Beta 2, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
 </tr>
 <tr>
 <th scope="row">Écran noir au démarrage<span class="how">entre le micrologiciel et l'image de Raye, une capture toutes les 250 ms ; 18,3 s en 0.2</span></th>
 <td class="num">2,75 à 3 s</td>
+<td>Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
 </tr>
 <tr>
 <th scope="row">Durée de l'installation<span class="how">du clic sur Installer à « Redémarrage », disque de 64 Go chiffré</span></th>
 <td class="num">5 min 50 s</td>
+<td>Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
 </tr>
 <tr>
 <th scope="row">Redémarrage pour une mise à jour<span class="how">de l'image de démarrage à l'écran de connexion, pour le thème du bureau</span></th>
 <td class="num">24 s</td>
+<td>Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
 </tr>
 <tr>
 <th scope="row">Recherche des mises à jour<span class="how">recherche et téléchargement de 42 mises à jour, 60 Mo en tout</span></th>
 <td class="num">22 s</td>
+<td>Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
 </tr>
 </tbody>
 </table>
-<p class="table-note">Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</p>
 </div>
-<p>Lisez chaque chiffre à côté de la machine d'où il vient. La machine de test n'a pas de carte graphique : tout le bureau y est dessiné par le processeur, ce qui gonfle sa mémoire. Environ 250 Mo des 1,2 Go sont une réserve du noyau qui grandit avec la mémoire de la machine. La mémoire du bureau grandit encore d'environ 200 Mo pendant le premier quart d'heure, donc le chiffre pris à trois minutes, avec <code>free -m</code>, est optimiste.</p>
+<p>Lisez chaque chiffre à côté de la machine d'où il vient. La machine de test n'a pas de carte graphique : tout le bureau y est dessiné par le processeur, ce qui gonfle sa mémoire. Environ 120 Mo des 850 Mo sont une réserve du noyau qui grandit avec la mémoire de la machine. Le chiffre est pris trois minutes après l'ouverture de la session, avec <code>free -m</code>.</p>
 <p>Le micrologiciel de la machine de test lit le disque à environ 7 Mo/s : ses temps de démarrage servent à comparer deux versions, pas à vous promettre une vitesse. Et après l'image de Raye, un second écran noir, de 3 à 5 s, reste avant l'écran de connexion à chaque démarrage.</p>
-<p>Mon but est 1 Go de mémoire au repos. Je n'y suis pas encore. Les Go et Mo de ce site se comptent comme Windows les compte, par 1 024.</p>
+<p>Mon but était 1 Go de mémoire au repos : la machine de test est passée dessous. Les Go et Mo de ce site se comptent comme Windows les compte, par 1 024.</p>
 <h2 id="machines">Les machines essayées</h2>
 <p><strong>La machine de test</strong> : une machine virtuelle à 8 cœurs et 16 Go de mémoire, sans carte graphique, avec deux écrans virtuels (1280×800 et 1920×1080), Secure Boot activé et une puce TPM 2.0. C'est sur elle que j'installe une version de zéro et que je la mets à jour depuis la précédente, avant de la publier. Je ne l'ai pas toujours fait : les deux séries de correctifs de la 0.2 Bêta 2 n'ont eu que l'essai de mise à jour.</p>
 <p><strong>Un Dell Latitude 5420</strong>, 16 Go, avec son écran de 1366×768 et un écran externe de 1920×1080 en HDMI, Wi-Fi et Ethernet Intel. Raye y tourne depuis le 1er novembre 2026 et y reçoit ses mises à jour.</p>

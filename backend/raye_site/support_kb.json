@@ -24,28 +24,105 @@
   {
    "id": "faq:fr:3",
    "lang": "fr",
-   "text": "Beaucoup de programmes .exe s'installent et s'ouvrent d'un double-clic, et le Store a une bonne partie des applications gratuites habituelles. Certains programmes ne fonctionnent pas encore. S'il vous en manque un, écrivez-moi son nom : c'est comme ça que je décide quoi régler en premier.",
-   "title": "Mes programmes vont-ils fonctionner ?",
+   "text": "Oui. Écrivez l'image sur une clé USB, démarrez dessus et choisissez « Essayer Raye Linux sans l'installer » : Raye tourne depuis la clé et rien ne change sur votre PC. Pour l'installer ensuite, redémarrez et choisissez « Installer Raye Linux ».",
+   "title": "Je peux l'essayer avant de l'installer ?",
    "url": "/fr/#questions"
   },
   {
    "id": "faq:fr:4",
    "lang": "fr",
-   "text": "Un PC Intel ou AMD 64 bits qui démarre en mode UEFI, avec au moins 4 Go de mémoire. Une fois démarré, sans rien d'ouvert, Raye en utilise environ 1,2 Go (mesuré avec deux écrans) : le reste est pour vos applis, et 8 Go valent mieux pour beaucoup d'onglets ou les jeux. La liste complète est sur la page de téléchargement.",
-   "title": "Quel PC faut-il ?",
+   "text": "Oui. L'installation peut mettre Raye à côté de votre système, en le réduisant sans risque, et demande avant de toucher à quoi que ce soit. Si Raye le remplace, le choix « Remplacer … et garder mes fichiers » garde le Bureau, les Documents, les Téléchargements, la Musique, les Images et les Vidéos, avec le fond d'écran, les réseaux Wi-Fi et le profil du navigateur. Installé à côté, Raye propose de copier vos fichiers après la première connexion. Faites quand même une sauvegarde avant.",
+   "title": "Je peux garder mon système actuel et mes fichiers ?",
    "url": "/fr/#questions"
   },
   {
    "id": "faq:fr:5",
+   "lang": "fr",
+   "text": "Beaucoup de programmes .exe s'installent et s'ouvrent d'un double-clic, et reçoivent seuls ce qu'il leur faut au premier lancement. Le Store a les applications gratuites habituelles et des programmes .exe essayés un par un. Certains programmes ne fonctionnent pas encore. S'il vous en manque un, écrivez-moi son nom : c'est comme ça que je décide quoi régler en premier.",
+   "title": "Mes programmes vont-ils fonctionner ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:6",
+   "lang": "fr",
+   "text": "Steam et Heroic sont dans le Store, et le mode jeu s'active tout seul pendant que vous jouez. Roblox passe par Sober, dans le Store aussi. Les jeux qui ont un anti-triche dans le noyau, comme Valorant ou Fortnite, ne fonctionnent pas.",
+   "title": "Et mes jeux ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:7",
+   "lang": "fr",
+   "text": "Un PC Intel ou AMD 64 bits, qui démarre en mode UEFI ou dans l'ancien mode BIOS, avec au moins 4 Go de mémoire. Une fois démarré, sans rien d'ouvert, Raye en utilise environ 850 Mo (mesuré dans une machine virtuelle de test) : le reste est pour vos applis, et 8 Go valent mieux pour beaucoup d'onglets ou les jeux. La liste complète est sur la page de téléchargement.",
+   "title": "Quel PC faut-il ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:8",
+   "lang": "fr",
+   "text": "Raye démarre aussi dans l'ancien mode BIOS. Si le processeur est ancien, l'installation le dit dès sa première page : Raye fonctionne, mais certaines applis et certains jeux en demandent un plus récent. Les PC de 2 à 4 Go de mémoire sont en cours d'essai.",
+   "title": "Et sur un vieux PC ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:9",
+   "lang": "fr",
+   "text": "Beaucoup de Chromebooks à processeur Intel ou AMD peuvent faire tourner Raye, avec un micrologiciel communautaire appelé MrChromebox. Raye règle la rangée de touches du haut. C'est plus de travail que sur un PC : les étapes sont dans le manuel de Raye, sur la page code source. Les Chromebooks à processeur ARM ne peuvent pas encore.",
+   "title": "Et sur un Chromebook ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:10",
+   "lang": "fr",
+   "text": "Sur le menu de la clé USB, choisissez « Safe graphics ». Une fois Raye installé, si le bureau ne s'affiche pas deux fois de suite, Raye passe tout seul à un mode d'affichage plus simple. Certaines cartes AMD plus anciennes (RX 550…) posent encore problème : dites-le sur le serveur Discord, dans #bugs, avec le nom de votre carte.",
+   "title": "L'écran reste noir, que faire ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:11",
+   "lang": "fr",
+   "text": "Raye s'en rend compte : la première fois, il vous prévient, et la deuxième fois de suite, il désactive la veille. Fermer le capot verrouille alors le PC et éteint l'écran. Vous pouvez la réactiver dans Paramètres > Système > Alimentation et batterie.",
+   "title": "Mon portable ne sort pas de la veille.",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:12",
+   "lang": "fr",
+   "text": "Le pare-feu est actif dès le départ, chaque réseau Wi-Fi voit une adresse matérielle privée, Secure Boot peut rester activé, et si vous chiffrez le disque, la puce TPM ne le déverrouille que sur votre PC. Le DNS chiffré est à un clic dans les réglages du réseau. Les mises à jour arrivent toutes seules.",
+   "title": "C'est sûr ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:13",
+   "lang": "fr",
+   "text": "Raye Update les trouve et les installe tout seul ; celles qui touchent au système attendent que vous choisissiez de redémarrer. Celles du système de base viennent d'un serveur de votre pays quand il y en a un. La bêta n'expire pas : pas besoin de réinstaller pour avoir la suivante.",
+   "title": "Comment marchent les mises à jour ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:14",
+   "lang": "fr",
+   "text": "Oui. Dans Paramètres > Personnalisation > Style du bureau, le style classique met la barre des tâches à gauche avec une zone de recherche, rend les coins carrés et donne à Démarrer une liste d'applis avec des tuiles.",
+   "title": "Je peux avoir la barre des tâches à gauche et des tuiles dans Démarrer ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:15",
+   "lang": "fr",
+   "text": "L'installation vous laisse choisir KDE Plasma (conseillé) ou Hyprland, un bureau en mosaïque. Les deux ont la barre des tâches et le menu Démarrer de Raye. Hyprland est plus récent et moins essayé.",
+   "title": "Je peux avoir un autre bureau que KDE Plasma ?",
+   "url": "/fr/#questions"
+  },
+  {
+   "id": "faq:fr:16",
    "lang": "fr",
    "text": "Oui, l'équipe recrute : développeurs, modérateurs, aide aux utilisateurs, testeurs, traducteurs, designers et créateurs de vidéos. Rejoignez le serveur Discord et postulez dans le salon #join-the-team : quelques questions, puis l'équipe vous répond.",
    "title": "Je peux aider à faire Raye ?",
    "url": "/fr/#questions"
   },
   {
-   "id": "faq:fr:6",
+   "id": "faq:fr:17",
    "lang": "fr",
-   "text": "La 1.0 Bêta est sortie : c'est elle que vous téléchargez. D'autres bêtas suivent avant la 1.0 finale. Ce qui reste à faire est dans la feuille de route. Laissez votre courriel si vous voulez que je vous écrive le jour de sa sortie.",
+   "text": "Les bêtas de la 1.0 sortent l'une après l'autre, et vous téléchargez toujours la plus récente. Raye Update apporte chaque nouvelle bêta à un Raye déjà installé. Ce qui reste avant la 1.0 finale est dans la feuille de route. Laissez votre courriel si vous voulez que je vous écrive le jour de sa sortie.",
    "title": "Et la version 1.0 ?",
    "url": "/fr/#questions"
   },
@@ -80,7 +157,7 @@
   {
    "id": "download:fr:4.0",
    "lang": "fr",
-   "text": "Un processeur Intel ou AMD 64 bits, démarrage en mode UEFI\n\n4 Go de mémoire, 8 Go conseillés\n\n25 Go d'espace disque libre\n\nUne clé USB de 8 Go ou plus\n\nDémarrage sécurisé (Secure Boot) et puce TPM pris en charge, sans être obligatoires",
+   "text": "Un processeur Intel ou AMD 64 bits, démarrage en mode UEFI ou BIOS\n\n4 Go de mémoire, 8 Go conseillés\n\n25 Go d'espace disque libre\n\nUne clé USB de 8 Go ou plus\n\nDémarrage sécurisé (Secure Boot) et puce TPM pris en charge, sans être obligatoires",
    "title": "Configuration minimale",
    "url": "/fr/telecharger/"
   },
@@ -122,28 +199,105 @@
   {
    "id": "faq:en:3",
    "lang": "en",
-   "text": "Many .exe programs install and open with a double-click, and the Store has a good share of the usual free apps. Some programs don't run yet. If one you need is missing, send me its name: that's how I decide what to fix first.",
-   "title": "Will my programs still work?",
+   "text": "Yes. Write the image to a USB stick, start from it and pick \"Try Raye Linux without installing\": Raye runs from the stick and nothing changes on your PC. To install it later, restart and pick \"Install Raye Linux\".",
+   "title": "Can I try it before installing?",
    "url": "/en/#questions"
   },
   {
    "id": "faq:en:4",
    "lang": "en",
-   "text": "A 64-bit Intel or AMD PC that starts in UEFI mode, with at least 4 GB of memory. Once started, with nothing open, Raye uses about 1.2 GB of it (measured with two screens): the rest is for your apps, and 8 GB is better for lots of tabs or games. The full list is on the download page.",
-   "title": "What kind of PC do I need?",
+   "text": "Yes. Setup can put Raye next to the system you have, shrinking it safely, and asks before it changes anything. If Raye replaces it, the \"Replace … and keep my files\" choice keeps your Desktop, Documents, Downloads, Music, Pictures and Videos, with your wallpaper, Wi-Fi networks and browser profile. Installed next to it, Raye offers to copy your files over after the first sign-in. Back up first anyway.",
+   "title": "Can I keep my current system and my files?",
    "url": "/en/#questions"
   },
   {
    "id": "faq:en:5",
+   "lang": "en",
+   "text": "Many .exe programs install and open with a double-click, and get what they need by themselves the first time they start. The Store has the usual free apps and .exe programs tried one by one. Some programs don't run yet. If one you need is missing, send me its name: that's how I decide what to fix first.",
+   "title": "Will my programs still work?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:6",
+   "lang": "en",
+   "text": "Steam and Heroic are in the Store, and Game Mode turns on by itself while you play. Roblox runs through Sober, also in the Store. Games with a kernel anti-cheat, like Valorant or Fortnite, don't run.",
+   "title": "What about my games?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:7",
+   "lang": "en",
+   "text": "A 64-bit Intel or AMD PC that starts in UEFI mode or the older BIOS mode, with at least 4 GB of memory. Once started, with nothing open, Raye uses about 850 MB of it (measured in a test virtual machine): the rest is for your apps, and 8 GB is better for lots of tabs or games. The full list is on the download page.",
+   "title": "What kind of PC do I need?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:8",
+   "lang": "en",
+   "text": "Raye also starts in the older BIOS mode. If the processor is old, Setup says so on its first page: Raye runs, but some apps and games need a newer one. PCs with 2 to 4 GB of memory are being tested now.",
+   "title": "What about an older PC?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:9",
+   "lang": "en",
+   "text": "Many Chromebooks with an Intel or AMD processor can run Raye, with a community firmware called MrChromebox. Raye sets up the top row of keys. It takes more work than a PC: the steps are in the Raye handbook, on the source code page. Chromebooks with an ARM processor can't yet.",
+   "title": "What about a Chromebook?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:10",
+   "lang": "en",
+   "text": "On the USB stick's menu, pick \"Safe graphics\". Once Raye is installed, if the desktop fails to show twice in a row, Raye switches to a simpler display mode by itself. Some older AMD cards (RX 550…) still have trouble: say so on the Discord server, in #bugs, with the name of your card.",
+   "title": "The screen stays black. What do I do?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:11",
+   "lang": "en",
+   "text": "Raye notices: the first time it warns you, and the second time in a row it turns sleep off. Closing the lid then locks the PC and turns the screen off. You can turn sleep back on in Settings > System > Power & battery.",
+   "title": "My laptop doesn't wake up from sleep.",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:12",
+   "lang": "en",
+   "text": "The firewall is on from the start, each Wi-Fi network sees a private hardware address, Secure Boot can stay on, and if you encrypt the disk the TPM chip unlocks it on your PC only. Encrypted DNS is one click away in the network's settings. Updates come by themselves.",
+   "title": "Is it safe?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:13",
+   "lang": "en",
+   "text": "Raye Update finds and installs them by itself; the ones that touch the system wait until you choose to restart. Those of the base system come from a server in your country when there is one. The beta doesn't expire: you never need to reinstall to get the next one.",
+   "title": "How do updates work?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:14",
+   "lang": "en",
+   "text": "Yes. In Settings > Personalization > Desktop style, the classic style puts the taskbar on the left with a search box, makes the corners square and gives Start a list of apps with tiles.",
+   "title": "Can I have the taskbar on the left and tiles in Start?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:15",
+   "lang": "en",
+   "text": "Setup lets you pick KDE Plasma (recommended) or Hyprland, a tiling desktop. Both get Raye's taskbar and Start menu. Hyprland is newer and less tested.",
+   "title": "Can I use another desktop than KDE Plasma?",
+   "url": "/en/#questions"
+  },
+  {
+   "id": "faq:en:16",
    "lang": "en",
    "text": "Yes, the team is recruiting: developers, moderators, support helpers, testers, translators, designers and video creators. Join the Discord server and apply in the #join-the-team channel: a few questions, then the team replies to you.",
    "title": "Can I help build Raye?",
    "url": "/en/#questions"
   },
   {
-   "id": "faq:en:6",
+   "id": "faq:en:17",
    "lang": "en",
-   "text": "1.0 Beta is out: it's the one you download. More betas come before the final 1.0. What's left is on the roadmap. Leave your email if you want me to write you the day it's out.",
+   "text": "The 1.0 betas come out one after the other, and you always download the newest. Raye Update brings each new beta to Raye already installed. What's left before the final 1.0 is on the roadmap. Leave your email if you want me to write you the day it's out.",
    "title": "What about 1.0?",
    "url": "/en/#questions"
   },
@@ -178,7 +332,7 @@
   {
    "id": "download:en:4.0",
    "lang": "en",
-   "text": "A 64-bit Intel or AMD processor, starting in UEFI mode\n\n4 GB of memory, 8 GB recommended\n\n25 GB of free disk space\n\nA USB stick of 8 GB or more\n\nSecure Boot and the TPM chip are supported, not required",
+   "text": "A 64-bit Intel or AMD processor, starting in UEFI or BIOS mode\n\n4 GB of memory, 8 GB recommended\n\n25 GB of free disk space\n\nA USB stick of 8 GB or more\n\nSecure Boot and the TPM chip are supported, not required",
    "title": "What you need",
    "url": "/en/download/"
   },
@@ -1183,7 +1337,7 @@
   "1.0-beta/release-notes-1.0-beta.fr.md": "abb36e7636ed5398",
   "1.0-beta/release-notes-1.0-beta.md": "5bafdafa9321a582",
   "discord/texts.py": "5bff52e13c468251",
-  "download/index.html": "3dadea331bb6167a",
+  "download/index.html": "91a2bacbe8423454",
   "en/01-installing.md": "395684ff312893d0",
   "en/02-first-steps.md": "327774439b2c0c38",
   "en/03-updates.md": "55e63fd65d21506a",
@@ -1195,7 +1349,7 @@
   "en/09-windows-alongside.md": "4378c466bd1baa82",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
   "en/11-chromebooks.md": "0b0a8099e4fe5196",
-  "en/index.html": "4c9b5de3ea0211ed",
+  "en/index.html": "8f726ecf83280615",
   "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
@@ -1207,7 +1361,7 @@
   "fr/09-windows-a-cote.md": "ab889732288946c1",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
   "fr/11-chromebooks.md": "655c79fe7f20dfb5",
-  "fr/index.html": "50424692721d7439",
-  "telecharger/index.html": "91b7d1aac2e4a54a"
+  "fr/index.html": "47db46ac4607b7b5",
+  "telecharger/index.html": "32925f0461bec576"
  }
 }

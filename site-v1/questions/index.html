@@ -65,44 +65,60 @@
 <p>Raye Linux est basé sur Ubuntu 26.04 LTS, qui fournit des années de correctifs de sécurité pour le système de base et des pilotes pour la plupart des PC. Le bureau, les applis, l'installateur et les mises à jour par-dessus sont ceux de Raye, et c'est Raye qui les tient à jour. Raye n'est ni affilié à Canonical ni approuvé par elle.</p>
 </div>
 <div class="qa-open">
-<h2 id="q4">Mes programmes vont-ils marcher ?</h2>
-<p>Un .exe se lance d'un double-clic ; ce qui se passe ensuite dépend du programme, et je n'ai pas encore de liste de programmes essayés à publier. Ceux qui ont besoin de .NET ou des polices de Windows ne marchent pas encore. Discord, Steam, VLC, GIMP ou LibreOffice existent en version pour Raye, dans le Store.</p>
+<h2 id="q4">Je peux l'essayer sans l'installer ?</h2>
+<p>Oui. Démarrez sur la clé USB et choisissez « Essayer Raye Linux sans l'installer » : Raye tourne depuis la clé et ne touche ni au disque ni à la mémoire d'échange de votre PC.</p>
 </div>
 <div class="qa-open">
-<h2 id="q5">Et mes jeux ?</h2>
-<p>Ceux qui ont un anti-triche dans le noyau, comme Valorant ou Fortnite, non, et Roblox non plus. Je n'ai lancé aucun autre jeu sur un PC qui a une vraie carte graphique, donc je ne sais pas encore lesquels marchent.</p>
+<h2 id="q5">Mes programmes vont-ils marcher ?</h2>
+<p>Un .exe se lance d'un double-clic. Au premier lancement, Raye lui donne seul ce qu'il demande souvent (.NET 6 à 9, Visual Basic 6, MFC, OpenAL, PhysX). Le Store a des programmes Windows installés et essayés un par un, et dit lesquels ne marchent qu'en partie, comme FL Studio et Affinity. Discord, Steam, VLC, GIMP ou LibreOffice existent en version pour Raye, dans le Store.</p>
 </div>
 <div class="qa-open">
-<h2 id="q6">Puis-je garder Windows ?</h2>
+<h2 id="q6">Et mes jeux ?</h2>
+<p>Steam et Heroic sont dans le Store, et le mode jeu s'active tout seul pendant une partie. Roblox passe par Sober. Les jeux qui ont un anti-triche dans le noyau, comme Valorant ou Fortnite, ne marchent pas.</p>
+</div>
+<div class="qa-open">
+<h2 id="q7">Puis-je garder Windows ?</h2>
 <p>Oui, Raye peut s'installer à côté. Si Windows est chiffré par BitLocker, il faut d'abord désactiver ce chiffrement dans Windows. Lisez la mise en garde de la page <a href="/installer/">Installer</a>, et sauvegardez vos fichiers.</p>
 </div>
 <div class="qa-open">
-<h2 id="q7">Est-ce que je verrai mes fichiers Windows ?</h2>
-<p>Si Windows est à côté, sa partition apparaît dans Ce PC sous le nom Windows. Je n'ai pas essayé avec une partition chiffrée par BitLocker.</p>
+<h2 id="q8">Et mes fichiers Windows ?</h2>
+<p>Si Windows est à côté, sa partition apparaît dans Ce PC sous le nom Windows, et après la première connexion, Raye propose Paramètres > Comptes > Fichiers de Windows pour copier vos dossiers, le fond d'écran et les favoris. Si Raye remplace Windows, « Remplacer Windows et garder mes fichiers » garde vos dossiers, le fond d'écran, les réseaux Wi-Fi et le profil du navigateur.</p>
 </div>
 <div class="qa-open">
-<h2 id="q8">Combien de mémoire Raye utilise-t-il ?</h2>
-<p>1,2 Go une fois la session ouverte, mesurés sur la machine de test, qui n'a pas de carte graphique. Sur un vrai PC, ce sera un autre chiffre, et il sera sur la page <a href="/materiel/">Matériel</a>. 8 Go sont conseillés ; je n'ai pas essayé de PC de 4 Go.</p>
+<h2 id="q9">Je peux avoir le look de Windows 10 ?</h2>
+<p>Oui : Paramètres > Personnalisation > Style du bureau > Style Windows 10. La barre des tâches passe à gauche avec une zone de recherche, les coins deviennent carrés et Démarrer a une liste d'applis avec des tuiles.</p>
 </div>
 <div class="qa-open">
-<h2 id="q9">Pourquoi n'y a-t-il pas de lecteur C: ?</h2>
+<h2 id="q10">Combien de mémoire Raye utilise-t-il ?</h2>
+<p>850 Mo une fois la session ouverte, mesurés sur la machine de test, qui n'a pas de carte graphique. Sur un vrai PC, ce sera un autre chiffre, et il sera sur la page <a href="/materiel/">Matériel</a>. 8 Go sont conseillés.</p>
+</div>
+<div class="qa-open">
+<h2 id="q11">Et sur un vieux PC ?</h2>
+<p>Raye démarre en UEFI et dans l'ancien mode BIOS. Si le processeur est ancien, l'installateur le dit dès sa première page, sans bloquer : certaines applis et certains jeux en demandent un plus récent. Les PC de 2 à 4 Go sont en cours d'essai.</p>
+</div>
+<div class="qa-open">
+<h2 id="q12">Mon portable ne sort pas de la veille.</h2>
+<p>Raye le voit : la première fois, il prévient, la deuxième fois de suite, il désactive la veille, et fermer le capot verrouille le PC et éteint l'écran. Paramètres > Système > Alimentation et batterie la réactive.</p>
+</div>
+<div class="qa-open">
+<h2 id="q13">Pourquoi n'y a-t-il pas de lecteur C: ?</h2>
 <p>Parce qu'une lettre ne dit rien de ce qu'il y a sur un disque. Le disque du système s'appelle Raye, une partition Windows s'appelle Windows.</p>
 </div>
 <div class="qa-open">
-<h2 id="q10">Une mise à jour va-t-elle redémarrer mon PC pendant que je travaille ?</h2>
+<h2 id="q14">Une mise à jour va-t-elle redémarrer mon PC pendant que je travaille ?</h2>
 <p>Non. Celles qui n'ont pas besoin d'un redémarrage s'installent pendant que vous travaillez ; les autres attendent que vous choisissiez « Mettre à jour et redémarrer ». Voir <a href="/mises-a-jour/">Mises à jour</a>.</p>
 </div>
 <div class="qa-open">
-<h2 id="q11">Qu'est-ce que Raye ne fait pas ?</h2>
+<h2 id="q15">Qu'est-ce que Raye ne fait pas ?</h2>
 <p>Pas de dictée vocale, pas d'éclairage RVB, pas de diffusion sans fil vers un écran, pas d'Assistance rapide, pas de sous-titres en direct, pas de localisation de l'appareil, pas de comptes familiaux ni de sauvegarde vers le nuage de Windows. Le manuel dit, pour chacun, ce qu'on peut faire à la place.</p>
 </div>
 <div class="qa-open">
-<h2 id="q12">Qui fait Raye ?</h2>
+<h2 id="q16">Qui fait Raye ?</h2>
 <p>Moi, techoraye, au Québec. Il y a plus de détails sur la page <a href="/a-propos/">À propos</a>.</p>
 </div>
 <div class="qa-open">
-<h2 id="q13">Comment signaler un problème ?</h2>
-<p>Écrivez à <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a> : quel PC vous avez, ce que vous avez fait, ce que vous attendiez et ce qui s'est passé. Une photo de l'écran aide beaucoup.</p>
+<h2 id="q17">Comment signaler un problème ?</h2>
+<p>Sur le serveur Discord, dans #bugs, ou à <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a> : quel PC vous avez, ce que vous avez fait, ce que vous attendiez et ce qui s'est passé. Une photo de l'écran aide beaucoup.</p>
 </div>
 </div>
 </div>

@@ -215,12 +215,56 @@
 <p>Raye Linux est basé sur Ubuntu 26.04 LTS. Cela lui donne des années de correctifs de sécurité et des pilotes pour la plupart des PC. Le bureau, les applications et les réglages par-dessus sont les nôtres.</p>
 </details>
 <details class="qa">
+<summary>Je peux l'essayer avant de l'installer ?</summary>
+<p>Oui. Écrivez l'image sur une clé USB, démarrez dessus et choisissez « Essayer Raye Linux sans l'installer » : Raye tourne depuis la clé et rien ne change sur votre PC. Pour l'installer ensuite, redémarrez et choisissez « Installer Raye Linux ».</p>
+</details>
+<details class="qa">
+<summary>Je peux garder mon système actuel et mes fichiers ?</summary>
+<p>Oui. L'installation peut mettre Raye à côté de votre système, en le réduisant sans risque, et demande avant de toucher à quoi que ce soit. Si Raye le remplace, le choix « Remplacer … et garder mes fichiers » garde le Bureau, les Documents, les Téléchargements, la Musique, les Images et les Vidéos, avec le fond d'écran, les réseaux Wi-Fi et le profil du navigateur. Installé à côté, Raye propose de copier vos fichiers après la première connexion. Faites quand même une sauvegarde avant.</p>
+</details>
+<details class="qa">
 <summary>Mes programmes vont-ils fonctionner ?</summary>
-<p>Beaucoup de programmes .exe s'installent et s'ouvrent d'un double-clic, et le Store a une bonne partie des applications gratuites habituelles. Certains programmes ne fonctionnent pas encore. S'il vous en manque un, écrivez-moi son nom : c'est comme ça que je décide quoi régler en premier.</p>
+<p>Beaucoup de programmes .exe s'installent et s'ouvrent d'un double-clic, et reçoivent seuls ce qu'il leur faut au premier lancement. Le Store a les applications gratuites habituelles et des programmes .exe essayés un par un. Certains programmes ne fonctionnent pas encore. S'il vous en manque un, écrivez-moi son nom : c'est comme ça que je décide quoi régler en premier.</p>
+</details>
+<details class="qa">
+<summary>Et mes jeux ?</summary>
+<p>Steam et Heroic sont dans le Store, et le mode jeu s'active tout seul pendant que vous jouez. Roblox passe par Sober, dans le Store aussi. Les jeux qui ont un anti-triche dans le noyau, comme Valorant ou Fortnite, ne fonctionnent pas.</p>
 </details>
 <details class="qa">
 <summary>Quel PC faut-il ?</summary>
-<p>Un PC Intel ou AMD 64 bits qui démarre en mode UEFI, avec au moins 4 Go de mémoire. Une fois démarré, sans rien d'ouvert, Raye en utilise environ 1,2 Go (mesuré avec deux écrans) : le reste est pour vos applis, et 8 Go valent mieux pour beaucoup d'onglets ou les jeux. La liste complète est sur la page de téléchargement.</p>
+<p>Un PC Intel ou AMD 64 bits, qui démarre en mode UEFI ou dans l'ancien mode BIOS, avec au moins 4 Go de mémoire. Une fois démarré, sans rien d'ouvert, Raye en utilise environ 850 Mo (mesuré dans une machine virtuelle de test) : le reste est pour vos applis, et 8 Go valent mieux pour beaucoup d'onglets ou les jeux. La liste complète est sur la page de téléchargement.</p>
+</details>
+<details class="qa">
+<summary>Et sur un vieux PC ?</summary>
+<p>Raye démarre aussi dans l'ancien mode BIOS. Si le processeur est ancien, l'installation le dit dès sa première page : Raye fonctionne, mais certaines applis et certains jeux en demandent un plus récent. Les PC de 2 à 4 Go de mémoire sont en cours d'essai.</p>
+</details>
+<details class="qa">
+<summary>Et sur un Chromebook ?</summary>
+<p>Beaucoup de Chromebooks à processeur Intel ou AMD peuvent faire tourner Raye, avec un micrologiciel communautaire appelé MrChromebox. Raye règle la rangée de touches du haut. C'est plus de travail que sur un PC : les étapes sont dans le manuel de Raye, sur la page <a href="/fr/code-source/">code source</a>. Les Chromebooks à processeur ARM ne peuvent pas encore.</p>
+</details>
+<details class="qa">
+<summary>L'écran reste noir, que faire ?</summary>
+<p>Sur le menu de la clé USB, choisissez « Safe graphics ». Une fois Raye installé, si le bureau ne s'affiche pas deux fois de suite, Raye passe tout seul à un mode d'affichage plus simple. Certaines cartes AMD plus anciennes (RX 550…) posent encore problème : dites-le sur le serveur Discord, dans #bugs, avec le nom de votre carte.</p>
+</details>
+<details class="qa">
+<summary>Mon portable ne sort pas de la veille.</summary>
+<p>Raye s'en rend compte : la première fois, il vous prévient, et la deuxième fois de suite, il désactive la veille. Fermer le capot verrouille alors le PC et éteint l'écran. Vous pouvez la réactiver dans Paramètres > Système > Alimentation et batterie.</p>
+</details>
+<details class="qa">
+<summary>C'est sûr ?</summary>
+<p>Le pare-feu est actif dès le départ, chaque réseau Wi-Fi voit une adresse matérielle privée, Secure Boot peut rester activé, et si vous chiffrez le disque, la puce TPM ne le déverrouille que sur votre PC. Le DNS chiffré est à un clic dans les réglages du réseau. Les mises à jour arrivent toutes seules.</p>
+</details>
+<details class="qa">
+<summary>Comment marchent les mises à jour ?</summary>
+<p>Raye Update les trouve et les installe tout seul ; celles qui touchent au système attendent que vous choisissiez de redémarrer. Celles du système de base viennent d'un serveur de votre pays quand il y en a un. La bêta n'expire pas : pas besoin de réinstaller pour avoir la suivante.</p>
+</details>
+<details class="qa">
+<summary>Je peux avoir la barre des tâches à gauche et des tuiles dans Démarrer ?</summary>
+<p>Oui. Dans Paramètres > Personnalisation > Style du bureau, le style classique met la barre des tâches à gauche avec une zone de recherche, rend les coins carrés et donne à Démarrer une liste d'applis avec des tuiles.</p>
+</details>
+<details class="qa">
+<summary>Je peux avoir un autre bureau que KDE Plasma ?</summary>
+<p>L'installation vous laisse choisir KDE Plasma (conseillé) ou Hyprland, un bureau en mosaïque. Les deux ont la barre des tâches et le menu Démarrer de Raye. Hyprland est plus récent et moins essayé.</p>
 </details>
 <details class="qa">
 <summary>Je peux aider à faire Raye ?</summary>
@@ -228,7 +272,7 @@
 </details>
 <details class="qa">
 <summary>Et la version 1.0 ?</summary>
-<p>La 1.0 Bêta est sortie : c'est elle que vous téléchargez. D'autres bêtas suivent avant la 1.0 finale. Ce qui reste à faire est dans la <a href="/fr/feuille-de-route/">feuille de route</a>. Laissez votre courriel si vous voulez que je vous écrive le jour de sa sortie.</p>
+<p>Les bêtas de la 1.0 sortent l'une après l'autre, et vous téléchargez toujours la plus récente. Raye Update apporte chaque nouvelle bêta à un Raye déjà installé. Ce qui reste avant la 1.0 finale est dans la <a href="/fr/feuille-de-route/">feuille de route</a>. Laissez votre courriel si vous voulez que je vous écrive le jour de sa sortie.</p>
 </details>
 </div>
 </section>

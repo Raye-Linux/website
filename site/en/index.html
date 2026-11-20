@@ -215,12 +215,56 @@
 <p>Raye Linux is based on Ubuntu 26.04 LTS. That gives it years of security fixes and drivers for most PCs. The desktop, the apps and the settings on top are ours.</p>
 </details>
 <details class="qa">
+<summary>Can I try it before installing?</summary>
+<p>Yes. Write the image to a USB stick, start from it and pick "Try Raye Linux without installing": Raye runs from the stick and nothing changes on your PC. To install it later, restart and pick "Install Raye Linux".</p>
+</details>
+<details class="qa">
+<summary>Can I keep my current system and my files?</summary>
+<p>Yes. Setup can put Raye next to the system you have, shrinking it safely, and asks before it changes anything. If Raye replaces it, the "Replace … and keep my files" choice keeps your Desktop, Documents, Downloads, Music, Pictures and Videos, with your wallpaper, Wi-Fi networks and browser profile. Installed next to it, Raye offers to copy your files over after the first sign-in. Back up first anyway.</p>
+</details>
+<details class="qa">
 <summary>Will my programs still work?</summary>
-<p>Many .exe programs install and open with a double-click, and the Store has a good share of the usual free apps. Some programs don't run yet. If one you need is missing, send me its name: that's how I decide what to fix first.</p>
+<p>Many .exe programs install and open with a double-click, and get what they need by themselves the first time they start. The Store has the usual free apps and .exe programs tried one by one. Some programs don't run yet. If one you need is missing, send me its name: that's how I decide what to fix first.</p>
+</details>
+<details class="qa">
+<summary>What about my games?</summary>
+<p>Steam and Heroic are in the Store, and Game Mode turns on by itself while you play. Roblox runs through Sober, also in the Store. Games with a kernel anti-cheat, like Valorant or Fortnite, don't run.</p>
 </details>
 <details class="qa">
 <summary>What kind of PC do I need?</summary>
-<p>A 64-bit Intel or AMD PC that starts in UEFI mode, with at least 4 GB of memory. Once started, with nothing open, Raye uses about 1.2 GB of it (measured with two screens): the rest is for your apps, and 8 GB is better for lots of tabs or games. The full list is on the download page.</p>
+<p>A 64-bit Intel or AMD PC that starts in UEFI mode or the older BIOS mode, with at least 4 GB of memory. Once started, with nothing open, Raye uses about 850 MB of it (measured in a test virtual machine): the rest is for your apps, and 8 GB is better for lots of tabs or games. The full list is on the download page.</p>
+</details>
+<details class="qa">
+<summary>What about an older PC?</summary>
+<p>Raye also starts in the older BIOS mode. If the processor is old, Setup says so on its first page: Raye runs, but some apps and games need a newer one. PCs with 2 to 4 GB of memory are being tested now.</p>
+</details>
+<details class="qa">
+<summary>What about a Chromebook?</summary>
+<p>Many Chromebooks with an Intel or AMD processor can run Raye, with a community firmware called MrChromebox. Raye sets up the top row of keys. It takes more work than a PC: the steps are in the Raye handbook, on the <a href="/en/source/">source code</a> page. Chromebooks with an ARM processor can't yet.</p>
+</details>
+<details class="qa">
+<summary>The screen stays black. What do I do?</summary>
+<p>On the USB stick's menu, pick "Safe graphics". Once Raye is installed, if the desktop fails to show twice in a row, Raye switches to a simpler display mode by itself. Some older AMD cards (RX 550…) still have trouble: say so on the Discord server, in #bugs, with the name of your card.</p>
+</details>
+<details class="qa">
+<summary>My laptop doesn't wake up from sleep.</summary>
+<p>Raye notices: the first time it warns you, and the second time in a row it turns sleep off. Closing the lid then locks the PC and turns the screen off. You can turn sleep back on in Settings > System > Power & battery.</p>
+</details>
+<details class="qa">
+<summary>Is it safe?</summary>
+<p>The firewall is on from the start, each Wi-Fi network sees a private hardware address, Secure Boot can stay on, and if you encrypt the disk the TPM chip unlocks it on your PC only. Encrypted DNS is one click away in the network's settings. Updates come by themselves.</p>
+</details>
+<details class="qa">
+<summary>How do updates work?</summary>
+<p>Raye Update finds and installs them by itself; the ones that touch the system wait until you choose to restart. Those of the base system come from a server in your country when there is one. The beta doesn't expire: you never need to reinstall to get the next one.</p>
+</details>
+<details class="qa">
+<summary>Can I have the taskbar on the left and tiles in Start?</summary>
+<p>Yes. In Settings > Personalization > Desktop style, the classic style puts the taskbar on the left with a search box, makes the corners square and gives Start a list of apps with tiles.</p>
+</details>
+<details class="qa">
+<summary>Can I use another desktop than KDE Plasma?</summary>
+<p>Setup lets you pick KDE Plasma (recommended) or Hyprland, a tiling desktop. Both get Raye's taskbar and Start menu. Hyprland is newer and less tested.</p>
 </details>
 <details class="qa">
 <summary>Can I help build Raye?</summary>
@@ -228,7 +272,7 @@
 </details>
 <details class="qa">
 <summary>What about 1.0?</summary>
-<p>1.0 Beta is out: it's the one you download. More betas come before the final 1.0. What's left is on the <a href="/en/roadmap/">roadmap</a>. Leave your email if you want me to write you the day it's out.</p>
+<p>The 1.0 betas come out one after the other, and you always download the newest. Raye Update brings each new beta to Raye already installed. What's left before the final 1.0 is on the <a href="/en/roadmap/">roadmap</a>. Leave your email if you want me to write you the day it's out.</p>
 </details>
 </div>
 </section>

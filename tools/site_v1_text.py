@@ -31,10 +31,10 @@ VERSION = "1.0"
 MEASURES = {
     "ram": {
         "name": L("Mémoire au repos", "Memory at idle"),
-        "value": L("1,2 Go", "1.2 GB"),
-        "version": "0.3", "date": "2026-11-11", "machine": "vm130",
-        "how": L("3 min après l'ouverture de la session, deux écrans branchés",
-                 "3 min after signing in, two screens plugged in"),
+        "value": L("850 Mo", "850 MB"),
+        "version": "1.0 Beta 2", "date": "2026-11-19", "machine": "vm130",
+        "how": L("3 min après l'ouverture de la session, moyenne de 3 relevés",
+                 "3 min after signing in, mean of 3 readings"),
     },
     "black": {
         "name": L("Écran noir au démarrage", "Black screen at startup"),
@@ -950,16 +950,14 @@ HARDWARE = {
         ("measures", ["ram", "black", "install", "restart", "fetch"]),
         P("Lisez chaque chiffre à côté de la machine d'où il vient. La machine de test n'a pas "
           "de carte graphique : tout le bureau y est dessiné par le processeur, ce qui gonfle "
-          "sa mémoire. Environ 250 Mo des {m:ram} sont une réserve du noyau qui grandit avec la "
-          "mémoire de la machine. La mémoire du bureau grandit encore d'environ 200 Mo pendant "
-          "le premier quart d'heure, donc le chiffre pris à trois minutes, avec "
-          "<code>free -m</code>, est optimiste.",
+          "sa mémoire. Environ 120 Mo des {m:ram} sont une réserve du noyau qui grandit avec la "
+          "mémoire de la machine. Le chiffre est pris trois minutes après l'ouverture de la "
+          "session, avec <code>free -m</code>.",
           "Read each figure next to the machine it came from. The test machine has no graphics "
           "card: the whole desktop is drawn by the processor there, which swells its memory. "
-          "About 250 MB of the {m:ram} are a kernel reserve that grows with the machine's "
-          "memory. The desktop's memory still grows by about 200 MB in the first quarter of an "
-          "hour, so the figure taken at three minutes, with <code>free -m</code>, is "
-          "optimistic."),
+          "About 120 MB of the {m:ram} are a kernel reserve that grows with the machine's "
+          "memory. The figure is taken three minutes after signing in, with "
+          "<code>free -m</code>."),
         P("Le micrologiciel de la machine de test lit le disque à environ 7 Mo/s : ses temps de "
           "démarrage servent à comparer deux versions, pas à vous promettre une vitesse. Et "
           "après l'image de Raye, un second écran noir, de 3 à 5 s, reste avant l'écran de "
@@ -968,9 +966,9 @@ HARDWARE = {
           "for comparing two versions, not for promising you a speed. And after the Raye "
           "picture, a second black screen of 3 to 5 s remains before the sign-in screen at "
           "every startup."),
-        P("Mon but est 1 Go de mémoire au repos. Je n'y suis pas encore. Les Go et Mo de ce site "
+        P("Mon but était 1 Go de mémoire au repos : la machine de test est passée dessous. Les Go et Mo de ce site "
           "se comptent comme Windows les compte, par 1 024.",
-          "My goal is 1 GB of memory at idle. I'm not there yet. The GB and MB on this site are "
+          "My goal was 1 GB of memory at idle: the test machine is now under it. The GB and MB on this site are "
           "counted the way Windows counts them, by 1,024."),
         H("machines", "Les machines essayées", "The machines tried"),
         P("<strong>La machine de test</strong> : une machine virtuelle à 8 cœurs et 16 Go de "
@@ -1200,22 +1198,30 @@ QUESTIONS = {
                "for the base system and drivers for most PCs. The desktop, the apps, the "
                "installer and the updates on top are Raye's, and Raye keeps them up to date. "
                "Raye is not affiliated with Canonical or endorsed by it.")),
+            (L("Je peux l'essayer sans l'installer ?", "Can I try it without installing?"),
+             L("Oui. Démarrez sur la clé USB et choisissez « Essayer Raye Linux sans "
+               "l'installer » : Raye tourne depuis la clé et ne touche ni au disque ni à la "
+               "mémoire d'échange de votre PC.",
+               "Yes. Start from the USB stick and pick “Try Raye Linux without installing”: "
+               "Raye runs from the stick and touches neither your PC's disk nor its swap.")),
             (L("Mes programmes vont-ils marcher ?", "Will my programs work?"),
-             L("Un .exe se lance d'un double-clic ; ce qui se passe ensuite dépend du programme, "
-               "et je n'ai pas encore de liste de programmes essayés à publier. Ceux qui ont "
-               "besoin de .NET ou des polices de Windows ne marchent pas encore. Discord, Steam, "
-               "VLC, GIMP ou LibreOffice existent en version pour Raye, dans le Store.",
-               "An .exe starts with a double-click; what happens next depends on the program, "
-               "and I don't have a list of programs tried to publish yet. The ones that need "
-               ".NET or the Windows fonts don't work yet. Discord, Steam, VLC, GIMP or "
-               "LibreOffice exist as Raye versions, in the Store.")),
+             L("Un .exe se lance d'un double-clic. Au premier lancement, Raye lui donne seul ce "
+               "qu'il demande souvent (.NET 6 à 9, Visual Basic 6, MFC, OpenAL, PhysX). Le Store "
+               "a des programmes Windows installés et essayés un par un, et dit lesquels ne "
+               "marchent qu'en partie, comme FL Studio et Affinity. Discord, Steam, VLC, GIMP ou "
+               "LibreOffice existent en version pour Raye, dans le Store.",
+               "An .exe starts with a double-click. On its first start, Raye gives it what "
+               "programs often ask for (.NET 6 to 9, Visual Basic 6, MFC, OpenAL, PhysX) by "
+               "itself. The Store has Windows programs installed and tried one by one, and says "
+               "which ones only partly work, such as FL Studio and Affinity. Discord, Steam, VLC, "
+               "GIMP or LibreOffice exist as Raye versions, in the Store.")),
             (L("Et mes jeux ?", "What about my games?"),
-             L("Ceux qui ont un anti-triche dans le noyau, comme Valorant ou Fortnite, non, et "
-               "Roblox non plus. Je n'ai lancé aucun autre jeu sur un PC qui a une vraie carte "
-               "graphique, donc je ne sais pas encore lesquels marchent.",
-               "The ones with a kernel anti-cheat, such as Valorant or Fortnite, no, and Roblox "
-               "doesn't either. I haven't started any other game on a PC with a real graphics "
-               "card, so I don't know yet which ones work.")),
+             L("Steam et Heroic sont dans le Store, et le mode jeu s'active tout seul pendant "
+               "une partie. Roblox passe par Sober. Les jeux qui ont un anti-triche dans le "
+               "noyau, comme Valorant ou Fortnite, ne marchent pas.",
+               "Steam and Heroic are in the Store, and Game Mode turns on by itself while you "
+               "play. Roblox runs through Sober. Games with a kernel anti-cheat, such as "
+               "Valorant or Fortnite, don't work.")),
             (L("Puis-je garder Windows ?", "Can I keep Windows?"),
              L("Oui, Raye peut s'installer à côté. Si Windows est chiffré par BitLocker, il faut "
                "d'abord désactiver ce chiffrement dans Windows. Lisez la mise en garde de la page "
@@ -1223,20 +1229,46 @@ QUESTIONS = {
                "Yes, Raye can go alongside it. If Windows is encrypted by BitLocker, you first "
                "have to turn that encryption off in Windows. Read the warning on the "
                "<a href=\"{p:install}\">Install</a> page, and back up your files.")),
-            (L("Est-ce que je verrai mes fichiers Windows ?", "Will I see my Windows files?"),
-             L("Si Windows est à côté, sa partition apparaît dans Ce PC sous le nom Windows. Je "
-               "n'ai pas essayé avec une partition chiffrée par BitLocker.",
-               "If Windows is alongside, its partition shows in This PC under the name Windows. "
-               "I haven't tried with a partition encrypted by BitLocker.")),
+            (L("Et mes fichiers Windows ?", "What about my Windows files?"),
+             L("Si Windows est à côté, sa partition apparaît dans Ce PC sous le nom Windows, et "
+               "après la première connexion, Raye propose Paramètres > Comptes > Fichiers de "
+               "Windows pour copier vos dossiers, le fond d'écran et les favoris. Si Raye "
+               "remplace Windows, « Remplacer Windows et garder mes fichiers » garde vos dossiers, "
+               "le fond d'écran, les réseaux Wi-Fi et le profil du navigateur.",
+               "If Windows is alongside, its partition shows in This PC under the name Windows, "
+               "and after the first sign-in Raye offers Settings > Accounts > Files from Windows "
+               "to copy your folders, wallpaper and favorites. If Raye replaces Windows, “Replace "
+               "Windows and keep my files” keeps your folders, wallpaper, Wi-Fi networks and "
+               "browser profile.")),
+            (L("Je peux avoir le look de Windows 10 ?", "Can I have the Windows 10 look?"),
+             L("Oui : Paramètres > Personnalisation > Style du bureau > Style Windows 10. La "
+               "barre des tâches passe à gauche avec une zone de recherche, les coins deviennent "
+               "carrés et Démarrer a une liste d'applis avec des tuiles.",
+               "Yes: Settings > Personalization > Desktop style > Windows 10 style. The taskbar "
+               "moves to the left with a search box, corners become square and Start gets an "
+               "app list with tiles.")),
             (L("Combien de mémoire Raye utilise-t-il ?", "How much memory does Raye use?"),
              L("{m:ram} une fois la session ouverte, mesurés sur la machine de test, qui n'a pas "
                "de carte graphique. Sur un vrai PC, ce sera un autre chiffre, et il sera sur la "
-               "page <a href=\"{p:hardware}\">Matériel</a>. 8 Go sont conseillés ; je n'ai pas "
-               "essayé de PC de 4 Go.",
+               "page <a href=\"{p:hardware}\">Matériel</a>. 8 Go sont conseillés.",
                "{m:ram} once you've signed in, measured on the test machine, which has no "
                "graphics card. On a real PC the figure will differ, and it will be on the "
-               "<a href=\"{p:hardware}\">Hardware</a> page. 8 GB is recommended; I haven't "
-               "tried a 4 GB PC.")),
+               "<a href=\"{p:hardware}\">Hardware</a> page. 8 GB is recommended.")),
+            (L("Et sur un vieux PC ?", "What about an older PC?"),
+             L("Raye démarre en UEFI et dans l'ancien mode BIOS. Si le processeur est ancien, "
+               "l'installateur le dit dès sa première page, sans bloquer : certaines applis et "
+               "certains jeux en demandent un plus récent. Les PC de 2 à 4 Go sont en cours "
+               "d'essai.",
+               "Raye starts in UEFI and in the older BIOS mode. If the processor is old, the "
+               "installer says so on its first page, without stopping: some apps and games need "
+               "a newer one. PCs with 2 to 4 GB are being tested.")),
+            (L("Mon portable ne sort pas de la veille.", "My laptop doesn't wake from sleep."),
+             L("Raye le voit : la première fois, il prévient, la deuxième fois de suite, il "
+               "désactive la veille, et fermer le capot verrouille le PC et éteint l'écran. "
+               "Paramètres > Système > Alimentation et batterie la réactive.",
+               "Raye notices: the first time it warns you, the second time in a row it turns "
+               "sleep off, and closing the lid locks the PC and turns the screen off. Settings > "
+               "System > Power & battery turns it back on.")),
             (L("Pourquoi n'y a-t-il pas de lecteur C: ?", "Why is there no C: drive?"),
              L("Parce qu'une lettre ne dit rien de ce qu'il y a sur un disque. Le disque du "
                "système s'appelle Raye, une partition Windows s'appelle Windows.",
@@ -1264,10 +1296,12 @@ QUESTIONS = {
                "Me, techoraye, in Quebec. There's more on the <a href=\"{p:about}\">About</a> "
                "page.")),
             (L("Comment signaler un problème ?", "How do I report a problem?"),
-             L("Écrivez à <a href=\"mailto:bonjour@rayelinux.com\">bonjour@rayelinux.com</a> : "
+             L("Sur le serveur Discord, dans #bugs, ou à "
+               "<a href=\"mailto:bonjour@rayelinux.com\">bonjour@rayelinux.com</a> : "
                "quel PC vous avez, ce que vous avez fait, ce que vous attendiez et ce qui s'est "
                "passé. Une photo de l'écran aide beaucoup.",
-               "Write to <a href=\"mailto:bonjour@rayelinux.com\">bonjour@rayelinux.com</a>: "
+               "On the Discord server, in #bugs, or at "
+               "<a href=\"mailto:bonjour@rayelinux.com\">bonjour@rayelinux.com</a>: "
                "which PC you have, what you did, what you expected and what happened. A photo of "
                "the screen helps a lot.")),
         ]),

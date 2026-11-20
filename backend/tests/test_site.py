@@ -1017,8 +1017,10 @@ class HomePageTests(unittest.TestCase):
             self.assertTrue(BASE_PHRASE.search(faq), lang)
 
     def test_faq_memory_matches_the_download_page(self):
-        # the idle figure is a measurement; the minimum is the download page's
-        idle = {"fr": "environ 1,2 Go", "en": "about 1.2 GB"}
+        # the idle figure is a measurement (1.0 Beta 2, test VM 130:
+        # /root/raye-final/beta1/idle-ram-3.md, 852 MiB); the minimum is the
+        # download page's. support_facts.md says the same figure.
+        idle = {"fr": "environ 850 Mo", "en": "about 850 MB"}
         minimum = {"fr": "4 Go de mémoire", "en": "4 GB of memory"}
         pages_ = builder().DOWNLOAD
         for lang in HOMES:

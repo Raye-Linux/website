@@ -63,36 +63,40 @@
 <div class="table-scroll">
 <table class="measures">
 <thead>
-<tr><th scope="col">Measure</th><th scope="col">Value</th></tr>
+<tr><th scope="col">Measure</th><th scope="col">Value</th><th scope="col">Machine and date</th></tr>
 </thead>
 <tbody>
 <tr>
-<th scope="row">Memory at idle<span class="how">3 min after signing in, two screens plugged in</span></th>
-<td class="num">1.2 GB</td>
+<th scope="row">Memory at idle<span class="how">3 min after signing in, mean of 3 readings</span></th>
+<td class="num">850 MB</td>
+<td>Measured on November 19, 2026, version 1.0 Beta 2, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
 </tr>
 <tr>
 <th scope="row">Black screen at startup<span class="how">between the firmware and the Raye picture, one capture every 250 ms; 18.3 s in 0.2</span></th>
 <td class="num">2.75 to 3 s</td>
+<td>Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
 </tr>
 <tr>
 <th scope="row">Install time<span class="how">from the click on Install to “Restart”, 64 GB disk, encrypted</span></th>
 <td class="num">5 min 50 s</td>
+<td>Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
 </tr>
 <tr>
 <th scope="row">Restart for an update<span class="how">from the startup picture to the sign-in screen, for the desktop theme</span></th>
 <td class="num">24 s</td>
+<td>Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
 </tr>
 <tr>
 <th scope="row">Checking for updates<span class="how">checking for and downloading 42 updates, 60 MB in all</span></th>
 <td class="num">22 s</td>
+<td>Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
 </tr>
 </tbody>
 </table>
-<p class="table-note">Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</p>
 </div>
-<p>Read each figure next to the machine it came from. The test machine has no graphics card: the whole desktop is drawn by the processor there, which swells its memory. About 250 MB of the 1.2 GB are a kernel reserve that grows with the machine's memory. The desktop's memory still grows by about 200 MB in the first quarter of an hour, so the figure taken at three minutes, with <code>free -m</code>, is optimistic.</p>
+<p>Read each figure next to the machine it came from. The test machine has no graphics card: the whole desktop is drawn by the processor there, which swells its memory. About 120 MB of the 850 MB are a kernel reserve that grows with the machine's memory. The figure is taken three minutes after signing in, with <code>free -m</code>.</p>
 <p>The test machine's firmware reads the disk at about 7 MB/s: its startup times are for comparing two versions, not for promising you a speed. And after the Raye picture, a second black screen of 3 to 5 s remains before the sign-in screen at every startup.</p>
-<p>My goal is 1 GB of memory at idle. I'm not there yet. The GB and MB on this site are counted the way Windows counts them, by 1,024.</p>
+<p>My goal was 1 GB of memory at idle: the test machine is now under it. The GB and MB on this site are counted the way Windows counts them, by 1,024.</p>
 <h2 id="machines">The machines tried</h2>
 <p><strong>The test machine</strong>: a virtual machine with 8 cores and 16 GB of memory, no graphics card, two virtual screens (1280×800 and 1920×1080), Secure Boot on and a TPM 2.0 chip. That's where I install a version from scratch and update it from the previous one, before it goes out. I haven't always done it: the two rounds of fixes of 0.2 Beta 2 only got the update test.</p>
 <p><strong>A Dell Latitude 5420</strong>, 16 GB, with its 1366×768 screen and an external 1920×1080 screen over HDMI, Intel Wi-Fi and Ethernet. Raye has run on it since November 1, 2026, and gets its updates there.</p>
