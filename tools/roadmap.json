@@ -103,6 +103,14 @@
       "items": [
         [
           "doing",
+          "Fix: an update can never stop halfway again (sign-in screen without mouse or keyboard)"
+        ],
+        [
+          "doing",
+          "Fix: the right NVIDIA driver installs automatically again (full FPS), and the NVIDIA app works"
+        ],
+        [
+          "doing",
           "Choose KDE or Hyprland during installation"
         ],
         [

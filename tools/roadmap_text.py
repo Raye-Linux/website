@@ -162,6 +162,10 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    "Fix: the right NVIDIA driver installs automatically again (full FPS), and the NVIDIA app works":
+        "Correctif : le bon pilote NVIDIA s'installe de nouveau tout seul (FPS au complet), et l'appli NVIDIA fonctionne",
+    "Fix: an update can never stop halfway again (sign-in screen without mouse or keyboard)":
+        "Correctif : une mise à jour ne peut plus s'arrêter à moitié (écran de connexion sans souris ni clavier)",
     "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends":
         "Raye Community en bêta : la discussion de Raye, sur le site et dans Raye Linux, avec ton compte Raye, des rôles, de la modération et des amis",
     "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server":
