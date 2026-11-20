@@ -326,6 +326,10 @@
         [
           "planned",
           "No more freezes when RAM runs out: the PC slows down a little instead"
+        ],
+        [
+          "planned",
+          "Everything checked in French, screen by screen (installer included)"
         ]
       ]
     },

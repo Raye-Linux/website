@@ -161,6 +161,8 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    'Everything checked in French, screen by screen (installer included)':
+        'Tout vérifié en français, écran par écran (installateur compris)',
     'Adobe apps: Photoshop first, then the others we can make work':
         "Applis Adobe : Photoshop d'abord, puis celles qu'on arrive à faire fonctionner",
     'Quadra in the Store (AppImage), with game mode on while Roblox runs':
