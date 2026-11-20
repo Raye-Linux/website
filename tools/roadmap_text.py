@@ -162,6 +162,10 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends":
+        "Raye Community en bêta : la discussion de Raye, sur le site et dans Raye Linux, avec ton compte Raye, des rôles, de la modération et des amis",
+    "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server":
+        "Raye Community complète : images et vidéos, messages privés, outils du staff, puis elle remplace le serveur Discord",
     "New account website and emails, with two-factor sign-in":
         "Nouveau site et nouveaux courriels du compte, avec la connexion en deux étapes",
     "Chromebooks with ARM chips": "Les Chromebook à puce ARM",

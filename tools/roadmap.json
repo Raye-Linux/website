@@ -274,6 +274,10 @@
         [
           "planned",
           "New ISO for everyone"
+        ],
+        [
+          "planned",
+          "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
         ]
       ]
     },
@@ -281,6 +285,10 @@
       "title": "🕒 V2",
       "color": "8a8f98",
       "items": [
+        [
+          "planned",
+          "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
+        ],
         [
           "planned",
           "Arch edition, kept in sync with the Ubuntu edition"
