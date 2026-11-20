@@ -161,6 +161,8 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    "Urgent fix (Nov 20): full game speed on NVIDIA again, one recommended driver, Graphics Card app fixed":
+        "Correctif urgent (20 nov.) : pleine vitesse des jeux sur NVIDIA, un seul pilote recommandé, appli Carte graphique corrigée",
     "Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept":
         "Correctif urgent (20 nov.) : les mises à jour ne s'arrêtent plus à moitié, les PC bloqués se réparent seuls, l'écran de démarrage reste",
     "Fix: the right NVIDIA driver installs automatically again (full FPS), and the NVIDIA app works":

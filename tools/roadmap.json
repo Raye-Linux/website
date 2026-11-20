@@ -7,6 +7,10 @@
       "items": [
         [
           "done",
+          "Urgent fix (Nov 20): full game speed on NVIDIA again, one recommended driver, Graphics Card app fixed"
+        ],
+        [
+          "done",
           "Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept"
         ],
         [
@@ -105,10 +109,6 @@
       "title": "🔨 V1 Beta 2 (next big update)",
       "color": "9b6bff",
       "items": [
-        [
-          "doing",
-          "Fix: the right NVIDIA driver installs automatically again (full FPS), and the NVIDIA app works"
-        ],
         [
           "doing",
           "Choose KDE or Hyprland during installation"
