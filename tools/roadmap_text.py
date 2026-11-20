@@ -61,6 +61,7 @@ FR = {
     "V1 final": "V1 finale",
     "V2": "V2",
     "V3": "V3",
+    "V4": "V4",
 
     # recently done
     "New download (Nov 18) with all the latest fixes built in":
