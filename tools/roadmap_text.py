@@ -162,6 +162,8 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    "Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept":
+        "Correctif urgent (20 nov.) : les mises à jour ne s'arrêtent plus à moitié, les PC bloqués se réparent seuls, l'écran de démarrage reste",
     "Fix: the right NVIDIA driver installs automatically again (full FPS), and the NVIDIA app works":
         "Correctif : le bon pilote NVIDIA s'installe de nouveau tout seul (FPS au complet), et l'appli NVIDIA fonctionne",
     "Fix: an update can never stop halfway again (sign-in screen without mouse or keyboard)":

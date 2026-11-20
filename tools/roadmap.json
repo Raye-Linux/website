@@ -7,6 +7,10 @@
       "items": [
         [
           "done",
+          "Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept"
+        ],
+        [
+          "done",
           "New download (Nov 18) with all the latest fixes built in"
         ],
         [
@@ -101,10 +105,6 @@
       "title": "🔨 V1 Beta 2 (next big update)",
       "color": "9b6bff",
       "items": [
-        [
-          "doing",
-          "Fix: an update can never stop halfway again (sign-in screen without mouse or keyboard)"
-        ],
         [
           "doing",
           "Fix: the right NVIDIA driver installs automatically again (full FPS), and the NVIDIA app works"
