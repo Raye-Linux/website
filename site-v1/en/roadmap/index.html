@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="fr" href="https://rayelinux.com/feuille-de-route/">
 <link rel="alternate" hreflang="x-default" href="https://rayelinux.com/feuille-de-route/">
 <link rel="icon" href="/assets/favicon.svg?v=f2f36e0fd3" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/site.css?v=d9cdad5578">
+<link rel="stylesheet" href="/assets/site.css?v=bbd66fa980">
 <link rel="stylesheet" href="/assets/v1.css?v=b6cb9b7ff9">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raye Linux">
@@ -51,146 +51,127 @@
 </header>
 <main id="main">
 <div class="borrowed-wrap"><div class="roadmap wrap">
-<div class="rm-head">
+<header class="rm-head">
 <h1>Roadmap</h1>
-<p class="lede">What's coming to Raye Linux, in order. Ideas from the community come first: a lot of what's below started as a message in #ideas on our Discord.</p>
-<div class="rm-actions">
-<a class="btn btn-accent" href="https://discord.gg/TrxhUkabyB" rel="noopener">Share an idea on Discord</a>
-<span class="rm-same">Same list as #roadmap on the Discord.</span>
-</div>
-<ul class="rm-legend" aria-label="Legend">
-<li class="rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span>Done</span></li>
-<li class="rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span>In progress</span></li>
-<li class="rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span>Planned</span></li>
-</ul>
-</div>
-<ol class="rm-list">
-<li class="rm-section card rm-tone-done">
-<div class="rm-section-head">
+<p class="lede">What's next for Raye Linux. Ideas from the community come first: share yours in #ideas on <a href="https://discord.gg/TrxhUkabyB" rel="noopener">our Discord</a>.</p>
+<p class="rm-same">The #roadmap channel on the Discord has the same list.</p>
+</header>
+<div class="rm-list">
+<section class="rm-section rm-done" aria-labelledby="rm-1">
 <h2 id="rm-1">Recently done</h2>
-<span class="rm-badge rm-done">Done</span>
-</div>
-<ul class="rm-items" aria-labelledby="rm-1">
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>New download (Nov 18) with all the latest fixes built in</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Join the team: apply in #join-the-team</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Automatic graphics fallback for older cards (more fixes for some AMD cards still coming)</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Simpler updates: no extra "Install now" step, apps reopen by themselves</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>USB drives in This PC, opened in one click</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Apps open at their own size, minimize animation into the taskbar</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>No more freeze when plugging in a second screen</span></li>
+<ul class="rm-items">
+<li class="rm-item rm-done">Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept</li>
+<li class="rm-item rm-done">New download (Nov 18) with all the latest fixes built in</li>
+<li class="rm-item rm-done">Join the team: apply in #join-the-team</li>
+<li class="rm-item rm-done">Automatic graphics fallback for older cards (more fixes for some AMD cards still coming)</li>
+<li class="rm-item rm-done">Simpler updates: no extra "Install now" step, apps reopen by themselves</li>
+<li class="rm-item rm-done">USB drives in This PC, opened in one click</li>
+<li class="rm-item rm-done">Apps open at their own size, minimize animation into the taskbar</li>
+<li class="rm-item rm-done">No more freeze when plugging in a second screen</li>
 </ul>
-</li>
-<li class="rm-section card rm-tone-done">
-<div class="rm-section-head">
-<h2 id="rm-2">V1 Beta 1 · out November 19</h2>
-<span class="rm-badge rm-done">Done</span>
-</div>
-<ul class="rm-items" aria-labelledby="rm-2">
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>A much faster boot</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>AMD Graphics Card panel (fans, power, profiles) and the NVIDIA Control Panel</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Better File Explorer and smoother mouse scrolling everywhere</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Performance options in Settings, with a transparency switch</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>New Clock app: alarms, timer, stopwatch, world clocks</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Windows apps get their fonts, 32-bit games can use 4 GB, Store packages open</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Bigger Store, with Steam and Heroic built in</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Pinned web apps keep their real icon</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>New installer: dual boot next to Windows or another Linux, resize partitions, better Wi-Fi page</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Cleaner, more reliable Raye Update</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>"Try Raye" mode: use Raye from the USB stick without installing</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Store reviews and ratings</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>Switch to Raye from another system and keep your files</span></li>
-<li class="rm-item rm-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg><span class="visually-hidden">Done: </span><span>The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)</span></li>
+</section>
+<section class="rm-section rm-done" aria-labelledby="rm-2">
+<h2 id="rm-2">V1 Beta 1</h2>
+<p class="rm-status">Done · out November 19</p>
+<ul class="rm-items">
+<li class="rm-item rm-done">A much faster boot</li>
+<li class="rm-item rm-done">AMD Graphics Card panel (fans, power, profiles) and the NVIDIA Control Panel</li>
+<li class="rm-item rm-done">Better File Explorer and smoother mouse scrolling everywhere</li>
+<li class="rm-item rm-done">Performance options in Settings, with a transparency switch</li>
+<li class="rm-item rm-done">New Clock app: alarms, timer, stopwatch, world clocks</li>
+<li class="rm-item rm-done">Windows apps get their fonts, 32-bit games can use 4 GB, Store packages open</li>
+<li class="rm-item rm-done">Bigger Store, with Steam and Heroic built in</li>
+<li class="rm-item rm-done">Pinned web apps keep their real icon</li>
+<li class="rm-item rm-done">New installer: dual boot next to Windows or another Linux, resize partitions, better Wi-Fi page</li>
+<li class="rm-item rm-done">Cleaner, more reliable Raye Update</li>
+<li class="rm-item rm-done">"Try Raye" mode: use Raye from the USB stick without installing</li>
+<li class="rm-item rm-done">Store reviews and ratings</li>
+<li class="rm-item rm-done">Switch to Raye from another system and keep your files</li>
+<li class="rm-item rm-done">The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)</li>
 </ul>
-</li>
-<li class="rm-section card rm-tone-doing">
-<div class="rm-section-head">
-<h2 id="rm-3">V1 Beta 2 (next big update)</h2>
-<span class="rm-badge rm-doing">In progress</span>
-</div>
-<ul class="rm-items" aria-labelledby="rm-3">
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Choose between two desktops during installation</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Windows 10 look option</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>A real Windows 10 Start menu</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Windows-style window animations and snap previews</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>FL Studio, TikTok LIVE Studio and Affinity, "Optimized for Raye" once tested</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Import your files from Windows</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Install guide and keyboard support for Intel/AMD Chromebooks</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Game performance: higher FPS and an advanced game mode</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>New Raye kernel tuned for gaming and smoothness</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Lower RAM use at idle: 600–700 MB</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Community Store requests: Quadra, rekordbox and Mixxx</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>40+ popular Windows apps in the Store, each one tested</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Windows apps install silently with a real progress bar, start to finish</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Complete Windows bridge: share drivers, files and settings with Windows</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Fix for the flicker on NVIDIA cards at 144 Hz</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>NVIDIA Control Panel opened from Settings</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Clock: opens from the taskbar clock, and alarms wake the PC from sleep</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Many more settings like Windows 11</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Windows layer fully hidden: Raye file dialogs, no technical names in Task Manager</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Bring your wallpaper, Wi-Fi networks, apps and browser data from your old system</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Import your files from Windows right in Setup</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Check for very old processors before installing</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Update screen at startup shows its real percentage</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Try Raye never touches the PC's own swap</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Store settings, and Synaptic removed</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Fix the maximize and snap glitch</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Taskbar buttons clickable up to the screen edge</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>PCs whose sleep doesn't work get it turned off automatically, with a clear message (turn it back on in Settings)</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Automatic kernel security updates</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Fix the Merge folders window in File Explorer</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Safe by default: firewall on and a private Wi-Fi address, encrypted DNS one click away in Settings, nothing slowed down</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Webcam, a built-in MIDI synth and Print to PDF for Windows programs</span></li>
-<li class="rm-item rm-doing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg><span class="visually-hidden">In progress: </span><span>Faster system updates everywhere: your country's server first, others as backup</span></li>
+</section>
+<section class="rm-section rm-doing" aria-labelledby="rm-3">
+<h2 id="rm-3">V1 Beta 2</h2>
+<p class="rm-status">In progress · next big update</p>
+<ul class="rm-items">
+<li class="rm-item rm-doing">Fix: the right NVIDIA driver installs automatically again (full FPS), and the NVIDIA app works</li>
+<li class="rm-item rm-doing">Choose between two desktops during installation</li>
+<li class="rm-item rm-doing">Windows 10 look option</li>
+<li class="rm-item rm-doing">A real Windows 10 Start menu</li>
+<li class="rm-item rm-doing">Windows-style window animations and snap previews</li>
+<li class="rm-item rm-doing">FL Studio, TikTok LIVE Studio and Affinity, "Optimized for Raye" once tested</li>
+<li class="rm-item rm-doing">Import your files from Windows</li>
+<li class="rm-item rm-doing">Install guide and keyboard support for Intel/AMD Chromebooks</li>
+<li class="rm-item rm-doing">Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution</li>
+<li class="rm-item rm-doing">Game performance: higher FPS and an advanced game mode</li>
+<li class="rm-item rm-doing">New Raye kernel tuned for gaming and smoothness</li>
+<li class="rm-item rm-doing">Lower RAM use at idle: 600–700 MB</li>
+<li class="rm-item rm-doing">Community Store requests: Quadra, rekordbox and Mixxx</li>
+<li class="rm-item rm-doing">40+ popular Windows apps in the Store, each one tested</li>
+<li class="rm-item rm-doing">Windows apps install silently with a real progress bar, start to finish</li>
+<li class="rm-item rm-doing">Complete Windows bridge: share drivers, files and settings with Windows</li>
+<li class="rm-item rm-doing">Fix for the flicker on NVIDIA cards at 144 Hz</li>
+<li class="rm-item rm-doing">NVIDIA Control Panel opened from Settings</li>
+<li class="rm-item rm-doing">Clock: opens from the taskbar clock, and alarms wake the PC from sleep</li>
+<li class="rm-item rm-doing">Many more settings like Windows 11</li>
+<li class="rm-item rm-doing">Windows layer fully hidden: Raye file dialogs, no technical names in Task Manager</li>
+<li class="rm-item rm-doing">Bring your wallpaper, Wi-Fi networks, apps and browser data from your old system</li>
+<li class="rm-item rm-doing">Import your files from Windows right in Setup</li>
+<li class="rm-item rm-doing">Check for very old processors before installing</li>
+<li class="rm-item rm-doing">Update screen at startup shows its real percentage</li>
+<li class="rm-item rm-doing">Try Raye never touches the PC's own swap</li>
+<li class="rm-item rm-doing">Store settings, and Synaptic removed</li>
+<li class="rm-item rm-doing">Fix the maximize and snap glitch</li>
+<li class="rm-item rm-doing">Taskbar buttons clickable up to the screen edge</li>
+<li class="rm-item rm-doing">PCs whose sleep doesn't work get it turned off automatically, with a clear message (turn it back on in Settings)</li>
+<li class="rm-item rm-doing">Automatic kernel security updates</li>
+<li class="rm-item rm-doing">Fix the Merge folders window in File Explorer</li>
+<li class="rm-item rm-doing">Safe by default: firewall on and a private Wi-Fi address, encrypted DNS one click away in Settings, nothing slowed down</li>
+<li class="rm-item rm-doing">Webcam, a built-in MIDI synth and Print to PDF for Windows programs</li>
+<li class="rm-item rm-doing">Faster system updates everywhere: your country's server first, others as backup</li>
 </ul>
-</li>
-<li class="rm-section card rm-tone-next">
-<div class="rm-section-head">
+</section>
+<section class="rm-section rm-planned" aria-labelledby="rm-4">
 <h2 id="rm-4">V1 final</h2>
-<span class="rm-badge rm-planned">Planned</span>
-</div>
-<ul class="rm-items" aria-labelledby="rm-4">
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Final polish and fixes from both betas</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>New website, with fresh screenshots of the real system</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>More languages</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Raye kernel only (the stock kernel is removed)</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Raye Assistant updated, on Discord and the website</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Works on older PCs too (legacy BIOS, older processors, 2–4 GB RAM)</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Legal pages and FAQ</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>New ISO for everyone</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends</span></li>
+<p class="rm-status">Planned</p>
+<ul class="rm-items">
+<li class="rm-item rm-planned">Final polish and fixes from both betas</li>
+<li class="rm-item rm-planned">New website, with fresh screenshots of the real system</li>
+<li class="rm-item rm-planned">More languages</li>
+<li class="rm-item rm-planned">Raye kernel only (the stock kernel is removed)</li>
+<li class="rm-item rm-planned">Raye Assistant updated, on Discord and the website</li>
+<li class="rm-item rm-planned">Works on older PCs too (legacy BIOS, older processors, 2–4 GB RAM)</li>
+<li class="rm-item rm-planned">Legal pages and FAQ</li>
+<li class="rm-item rm-planned">New ISO for everyone</li>
+<li class="rm-item rm-planned">Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends</li>
 </ul>
-</li>
-<li class="rm-section card rm-tone-later">
-<div class="rm-section-head">
+</section>
+<section class="rm-section rm-planned" aria-labelledby="rm-5">
 <h2 id="rm-5">V2</h2>
-<span class="rm-badge rm-planned">Planned</span>
-</div>
-<ul class="rm-items" aria-labelledby="rm-5">
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>A second edition with rolling updates, kept in sync with the main one</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Raye account: your settings follow you to every PC</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>ARM PCs</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Spanish, German, Portuguese and Italian</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Fingerprint readers</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>New account website and emails, with two-factor sign-in</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Chromebooks with ARM chips</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Raye Proton: pick Raye's Windows layer for Steam games</span></li>
+<p class="rm-status">Planned</p>
+<ul class="rm-items">
+<li class="rm-item rm-planned">Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server</li>
+<li class="rm-item rm-planned">A second edition with rolling updates, kept in sync with the main one</li>
+<li class="rm-item rm-planned">Raye account: your settings follow you to every PC</li>
+<li class="rm-item rm-planned">ARM PCs</li>
+<li class="rm-item rm-planned">Spanish, German, Portuguese and Italian</li>
+<li class="rm-item rm-planned">Fingerprint readers</li>
+<li class="rm-item rm-planned">New account website and emails, with two-factor sign-in</li>
+<li class="rm-item rm-planned">Chromebooks with ARM chips</li>
+<li class="rm-item rm-planned">Raye Proton: pick Raye's Windows layer for Steam games</li>
 </ul>
-</li>
-<li class="rm-section card rm-tone-later">
-<div class="rm-section-head">
+</section>
+<section class="rm-section rm-planned" aria-labelledby="rm-6">
 <h2 id="rm-6">V3</h2>
-<span class="rm-badge rm-planned">Planned</span>
-</div>
-<ul class="rm-items" aria-labelledby="rm-6">
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Phone apps on your PC</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Accounts: badges, community and admin panel</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Local assistant, developer options and remote web page</span></li>
-<li class="rm-item rm-planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg><span class="visually-hidden">Planned: </span><span>Every other language</span></li>
+<p class="rm-status">Planned</p>
+<ul class="rm-items">
+<li class="rm-item rm-planned">Phone apps on your PC</li>
+<li class="rm-item rm-planned">Accounts: badges, community and admin panel</li>
+<li class="rm-item rm-planned">Local assistant, developer options and remote web page</li>
+<li class="rm-item rm-planned">Every other language</li>
 </ul>
-</li>
-</ol>
+</section>
+</div>
 </div></div>
 </main>
 <footer class="footer v1-footer">

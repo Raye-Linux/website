@@ -64,8 +64,10 @@ class RoadmapTests(unittest.TestCase):
             sections = b.roadmap_sections(roadmap(), lang)
             self.assertEqual(len(sections), len(roadmap()["sections"]))
             for title, _, _, items in sections:
+                name, note = b.roadmap_heading(title)
                 with self.subTest(lang=lang, title=title):
-                    self.assertIn(norm(title), page)
+                    self.assertIn(norm(name), page)
+                    self.assertIn(norm(note), page)
                 for state, text in items:
                     with self.subTest(lang=lang, item=text):
                         self.assertIn(norm(text), page)
@@ -78,7 +80,7 @@ class RoadmapTests(unittest.TestCase):
             page = norm(visible(rel))
             at = -1
             for title, _, _, items in b.roadmap_sections(roadmap(), lang):
-                for text in [title] + [t for _, t in items]:
+                for text in [b.roadmap_heading(title)[0]] + [t for _, t in items]:
                     found = page.find(norm(text), at + 1)
                     with self.subTest(lang=lang, text=text):
                         self.assertGreater(found, at)
@@ -180,6 +182,62 @@ class RoadmapTests(unittest.TestCase):
         for lang, rel in PAGES.items():
             other = "en" if lang == "fr" else "fr"
             self.assertIn('class="lang-switch" href="%s"' % b.PATHS[other]["roadmap"], read(rel))
+
+    def test_layout_is_plain_headings_and_lists(self):
+        # no cards, badges, legend or icons: a version heading, one status
+        # line, then a plain list
+        b = builder()
+        for lang, rel in PAGES.items():
+            text = read(rel)
+            main = text[text.index("<main"):text.index("</main>")]
+            with self.subTest(lang=lang):
+                for word in ('class="card', "rm-badge", "rm-legend", "<svg", "btn"):
+                    self.assertNotIn(word, main)
+                levels = re.findall(r"<h([1-6])", main)
+                self.assertEqual(levels[0], "1")
+                self.assertEqual(set(levels[1:]), {"2"})
+                self.assertEqual(levels.count("2"), len(roadmap()["sections"]))
+                sections = b.roadmap_sections(roadmap(), lang)
+                self.assertEqual(main.count('class="rm-status"'),
+                                 sum(1 for t, _, s, _ in sections
+                                     if b.roadmap_status(t, s, b.roadmap_text.STATES[lang])[1]))
+
+    def test_headings_keep_the_version_and_the_status_line_the_rest(self):
+        b = builder()
+        labels = b.roadmap_text.STATES["en"]
+        self.assertEqual(b.roadmap_heading("V1 Beta 1 · out November 19"),
+                         ("V1 Beta 1", "out November 19"))
+        self.assertEqual(b.roadmap_heading("V1 Beta 2 (next big update)"),
+                         ("V1 Beta 2", "next big update"))
+        self.assertEqual(b.roadmap_status("V1 Beta 2 (next big update)", "doing", labels),
+                         ("V1 Beta 2", "In progress · next big update"))
+        self.assertEqual(b.roadmap_status("V2", "planned", labels), ("V2", "Planned"))
+        # a heading that already says its state does not repeat it
+        self.assertEqual(b.roadmap_status("Recently done", "done", labels),
+                         ("Recently done", ""))
+
+    def test_an_item_unlike_its_version_says_its_state_in_words(self):
+        b = builder()
+        data = copy.deepcopy(roadmap())
+        section = next(s for s in data["sections"] if s["items"][0][0] == "planned")
+        section["items"][0][0] = "done"
+        load = b.roadmap_load
+        b.roadmap_load = lambda: data
+        try:
+            page = b.roadmap("en")
+        finally:
+            b.roadmap_load = load
+        self.assertIn('class="rm-item rm-done"', page)
+        self.assertIn('<span class="rm-tag">(done)</span>', page)
+
+    def test_the_style_stays_plain(self):
+        with open(os.path.join(ROOT, "assets", "site.css"), encoding="utf-8") as f:
+            css = f.read()
+        block = css[css.index("/* roadmap"):css.index(".changes-next")]
+        for word in ("box-shadow", "gradient", "line-through", "border-radius", "glow",
+                     "text-align: center"):
+            with self.subTest(word=word):
+                self.assertNotIn(word, block)
 
     def test_the_short_addresses_redirect(self):
         with open(os.path.join(ROOT, "..", "deploy", "nginx", "raye-site.conf"),

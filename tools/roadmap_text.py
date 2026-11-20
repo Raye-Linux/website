@@ -11,24 +11,19 @@ PAGE = {
         "nav": "Roadmap",
         "description": "What's coming to Raye Linux, in order: what's done, what's being "
                        "built and what's planned.",
-        "lede": "What's coming to Raye Linux, in order. Ideas from the community come "
-                "first: a lot of what's below started as a message in #ideas on our "
-                "Discord.",
-        "idea": "Share an idea on Discord",
-        "same": "Same list as #roadmap on the Discord.",
-        "legend": "Legend",
+        "lede": "What's next for Raye Linux. Ideas from the community come first: share "
+                "yours in #ideas on <a href=\"{discord}\" rel=\"noopener\">our Discord</a>.",
+        "same": "The #roadmap channel on the Discord has the same list.",
     },
     "fr": {
         "title": "Feuille de route",
         "nav": "Feuille de route",
         "description": "Ce qui s'en vient pour Raye Linux, dans l'ordre : ce qui est fait, "
                        "ce qui est en cours et ce qui est prévu.",
-        "lede": "Ce qui s'en vient pour Raye Linux, dans l'ordre. Les idées de la "
-                "communauté passent en premier : bien des choses plus bas ont commencé par "
-                "un message dans #ideas, sur notre Discord.",
-        "idea": "Proposer une idée sur Discord",
-        "same": "La même liste que le salon #roadmap du Discord.",
-        "legend": "Légende",
+        "lede": "La suite pour Raye Linux. Les idées de la communauté passent en premier : "
+                "proposez les vôtres dans #ideas sur <a href=\"{discord}\" "
+                "rel=\"noopener\">notre Discord</a>.",
+        "same": "Le salon #roadmap du Discord a la même liste.",
     },
 }
 

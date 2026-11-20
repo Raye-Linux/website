@@ -57,10 +57,6 @@ GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
          'aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/>'
          '<path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg>')
 
-CHECK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
-         'aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/>'
-         '<path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg>')
-
 T = {
     "fr": {
         "description": "Raye Linux arrive : un bureau familier, élégant et sûr. "
@@ -1258,17 +1254,6 @@ EMOJI = re.compile("[\U0001F000-\U0001FAFF☀-➿️]")
 ROADMAP_STATES = ("done", "doing", "planned")
 # the Discord colour of a section, as one of the page's tones
 ROADMAP_TONES = {"3ddc97": "done", "9b6bff": "doing", "f5b942": "next", "8a8f98": "later"}
-STATE_ICON = {
-    "done": CHECK,
-    "doing": ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
-              'aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/>'
-              '<path d="M12 2.5a9.5 9.5 0 0 1 0 19z" fill="currentColor" stroke="none"/></svg>'),
-    "planned": ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
-                'aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" '
-                'stroke-dasharray="2.6 2.4"/><path d="M12 7.5V12l3 2"/></svg>'),
-}
-
-
 def roadmap_clean(text):
     """The Discord text without its emoji: the key of the French table."""
     return re.sub(r"\s+", " ", EMOJI.sub("", text)).strip()
@@ -1311,48 +1296,61 @@ def roadmap_sections(data, lang):
     return out
 
 
+def roadmap_heading(title):
+    """("V1 Beta 1", "out November 19") from "V1 Beta 1 · out November 19";
+    the same for a note in brackets. The heading stays short, the note goes
+    on the status line under it."""
+    if " · " in title:
+        name, note = title.split(" · ", 1)
+        return name.strip(), note.strip()
+    m = re.fullmatch(r"(.+?)\s*\((.+)\)", title)
+    if m:
+        return m.group(1).strip(), m.group(2).strip()
+    return title.strip(), ""
+
+
+def roadmap_status(title, state, labels):
+    """The line under a version heading: its state, then its note. A heading
+    that already says its state ("Recently done") gets only its note."""
+    name, note = roadmap_heading(title)
+    parts = [] if labels[state].casefold() in name.casefold() else [labels[state]]
+    return name, " · ".join(parts + ([note] if note else []))
+
+
 def roadmap(lang):
     import html as _html
-    t, r, labels = T[lang], roadmap_text.PAGE[lang], roadmap_text.STATES[lang]
+    r, labels = roadmap_text.PAGE[lang], roadmap_text.STATES[lang]
     esc = lambda x: _html.escape(x, quote=False)
-    colon = " :" if lang == "fr" else ":"
-    legend = "\n".join(f'<li class="rm-{k}">{STATE_ICON[k]}<span>{labels[k]}</span></li>'
-                       for k in ROADMAP_STATES)
     blocks = []
-    for n, (title, tone, state, items) in enumerate(roadmap_sections(roadmap_load(), lang), 1):
-        rows = "\n".join(
-            f'<li class="rm-item rm-{k}">{STATE_ICON[k]}'
-            f'<span class="visually-hidden">{labels[k]}{colon} </span><span>{esc(text)}</span></li>'
-            for k, text in items)
-        blocks.append(f"""<li class="rm-section card rm-tone-{tone}">
-<div class="rm-section-head">
-<h2 id="rm-{n}">{esc(title)}</h2>
-<span class="rm-badge rm-{state}">{labels[state]}</span>
-</div>
-<ul class="rm-items" aria-labelledby="rm-{n}">
+    for n, (title, _tone, state, items) in enumerate(roadmap_sections(roadmap_load(), lang), 1):
+        name, status = roadmap_status(title, state, labels)
+        rows = []
+        for k, text in items:
+            # an item whose state differs from its version's says so, in words
+            tag = (f' <span class="rm-tag">({labels[k].lower()})</span>' if k != state else "")
+            rows.append(f'<li class="rm-item rm-{k}">{esc(text)}{tag}</li>')
+        rows = "\n".join(rows)
+        status = f'\n<p class="rm-status">{esc(status)}</p>' if status else ""
+        blocks.append(f"""<section class="rm-section rm-{state}" aria-labelledby="rm-{n}">
+<h2 id="rm-{n}">{esc(name)}</h2>{status}
+<ul class="rm-items">
 {rows}
 </ul>
-</li>""")
+</section>""")
     blocks = "\n".join(blocks)
     return f"""{head(lang, 'roadmap', r['title'] + ' · Raye Linux', r['description'])}
 <body>
 <a class="skip-link" href="#main">{'Aller au contenu' if lang == 'fr' else 'Skip to content'}</a>
 {topbar(lang, 'roadmap')}
 <main id="main" class="roadmap wrap">
-<div class="rm-head">
+<header class="rm-head">
 <h1>{r['title']}</h1>
-<p class="lede">{r['lede']}</p>
-<div class="rm-actions">
-<a class="btn btn-accent" href="{DISCORD}" rel="noopener">{r['idea']}</a>
-<span class="rm-same">{r['same']}</span>
-</div>
-<ul class="rm-legend" aria-label="{r['legend']}">
-{legend}
-</ul>
-</div>
-<ol class="rm-list">
+<p class="lede">{r['lede'].format(discord=DISCORD)}</p>
+<p class="rm-same">{r['same']}</p>
+</header>
+<div class="rm-list">
 {blocks}
-</ol>
+</div>
 </main>
 {footer(lang)}
 </body>
