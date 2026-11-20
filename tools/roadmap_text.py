@@ -161,6 +161,8 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    'Adobe apps: Photoshop first, then the others we can make work':
+        "Applis Adobe : Photoshop d'abord, puis celles qu'on arrive à faire fonctionner",
     'Quadra in the Store (AppImage), with game mode on while Roblox runs':
         'Quadra dans le Store (AppImage), avec le mode jeu actif pendant Roblox',
     'No more freezes when RAM runs out: the PC slows down a little instead':
