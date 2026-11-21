@@ -185,6 +185,8 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    'Customize Hyprland your way: your own settings file, simple instructions, never overwritten':
+        'Personnaliser Hyprland à votre façon : votre propre fichier de réglages, des instructions simples, jamais écrasé',
     'Developer options and remote web page':
         'Options pour développeurs et page web à distance',
     'A real Raye screen to unlock an encrypted disk at startup':

@@ -342,6 +342,10 @@
         [
           "planned",
           "A real Raye screen to unlock an encrypted disk at startup"
+        ],
+        [
+          "planned",
+          "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
         ]
       ]
     },
