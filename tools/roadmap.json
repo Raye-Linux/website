@@ -28,22 +28,6 @@
     [
      "done",
      "Automatic graphics fallback for older cards (more fixes for some AMD cards still coming)"
-    ],
-    [
-     "done",
-     "Simpler updates: no extra \"Install now\" step, apps reopen by themselves"
-    ],
-    [
-     "done",
-     "USB drives in This PC, opened in one click"
-    ],
-    [
-     "done",
-     "Apps open at their own size, minimize animation into the taskbar"
-    ],
-    [
-     "done",
-     "No more freeze when plugging in a second screen"
     ]
    ]
   },
