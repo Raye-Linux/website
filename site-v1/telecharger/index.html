@@ -52,7 +52,7 @@
 <main id="main" class="download wrap">
 <header class="dl-head">
 <p class="status"><span class="dot" aria-hidden="true"></span>Bêta publique</p>
-<h1>Télécharger Raye Linux 1.0 Bêta Brocken</h1>
+<h1>Télécharger Raye Linux 1.0 Bêta Sundog</h1>
 <p class="lede">L'image de Raye Linux, à écrire sur une clé USB pour l'installer. Si quelque chose ne marche pas, écrivez-moi.</p>
 </header>
 
@@ -60,7 +60,7 @@
 <div class="dl-file-top">
 <div>
 <h2 id="file-title">raye-1.0-beta-amd64.iso</h2>
-<p class="dl-meta">2,9 Go · ISO 64 bits, démarrage UEFI · 19 novembre 2026</p>
+<p class="dl-meta">2,9 Go · ISO 64 bits, démarrage UEFI · 21 novembre 2026</p>
 </div>
 <div class="dl-actions">
 <a class="btn btn-accent" href="#accept" data-accept>Télécharger l'ISO</a>
@@ -69,7 +69,7 @@
 </div>
 
 <dl class="dl-facts">
-<div><dt>SHA-256</dt><dd><code class="hash">d7ffe63c47049424f825667c037c72ddcdfe7cd532fa830a13cb4e79dafd3b99</code></dd></div>
+<div><dt>SHA-256</dt><dd><code class="hash">baeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547</code></dd></div>
 <div><dt>Empreinte de la clé</dt><dd><code>EA73 69D4 C3A3 10B2 DF3D  FC16 D3AA 2E62 5DDE 161E</code></dd></div>
 </dl>
 <ul class="dl-links">
@@ -132,7 +132,8 @@ gpg --verify SHA256SUMS.asc SHA256SUMS</code></pre></li>
 <section class="card dl-card" aria-labelledby="known-title">
 <h2 id="known-title">Problèmes connus de la bêta</h2>
 <ul class="plain">
-<li><strong>Écran noir</strong> avec certaines cartes graphiques AMD plus anciennes (RX 550…), un correctif arrive cette semaine. En attendant : sur la clé, choisissez « Safe graphics ». Après l'installation, au démarrage, appuyez sur Échap jusqu'au menu Raye, puis <code>e</code>, ajoutez <code>nomodeset</code> après <code>quiet splash</code> et appuyez sur F10.</li>
+<li><strong>Anciennes cartes AMD</strong> (RX 400 et 500, comme la RX 550) : sur certains PC, elles démarrent encore en basse résolution, avec peu d'images par seconde. Nous y travaillons. Si l'écran reste noir, choisissez « Safe graphics » sur la clé ; une fois installé, Raye passe tout seul à un mode d'affichage plus simple si le bureau ne s'affiche pas deux fois de suite.</li>
+<li><strong>Cartes NVIDIA</strong> : le correctif de vitesse des jeux n'a pas encore été essayé par nous sur une vraie carte NVIDIA. Si vos jeux restent lents, dites-le sur Discord.</li>
 <li>Le terminal, l'outil de capture et quelques boîtes de dialogue sont aux couleurs de Raye, mais pas encore redessinés en applis Raye.</li>
 <li>Les programmes .exe : le premier lancement prend quelques secondes et tous ne fonctionnent pas.</li>
 <li>Hors ligne, les Paramètres indiquent que les mises à jour n'ont pas pu être vérifiées.</li>

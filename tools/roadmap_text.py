@@ -58,6 +58,7 @@ FR = {
     "Recently done": "Fait récemment",
     "V1 Beta 1 · out November 19": "V1 Bêta 1 · sortie le 19 novembre",
     "V1 Beta 2 (next big update)": "V1 Bêta 2 (la prochaine grosse mise à jour)",
+    "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V2": "V2",
     "V3": "V3",
@@ -66,6 +67,8 @@ FR = {
     # recently done
     "New download (Nov 18) with all the latest fixes built in":
         "Nouveau téléchargement (18 novembre) avec tous les derniers correctifs inclus",
+    "New download (Nov 21): 1.0 Beta Sundog, with all the latest fixes built in":
+        "Nouveau téléchargement (21 novembre) : 1.0 Bêta Sundog, avec tous les derniers correctifs inclus",
     "Join the team: apply in #join-the-team":
         "Rejoindre l'équipe : postulez dans #join-the-team",
     "Automatic graphics fallback for older cards (more fixes for some AMD cards still coming)":
@@ -111,6 +114,26 @@ FR = {
         "Passez à Raye depuis un autre système en gardant vos fichiers",
 
     # V1 Beta 2
+    "Windows-style window animations, maximize and snap":
+        "Des animations de fenêtres comme dans Windows, pour l'agrandissement et l'ancrage aussi",
+    "TikTok LIVE Studio and Affinity in the Store, FL Studio settings checked":
+        "TikTok LIVE Studio et Affinity dans le Store, réglages de FL Studio vérifiés",
+    "Game mode that turns on by itself while you play":
+        "Un mode jeu qui s'active tout seul pendant que vous jouez",
+    "Community Store requests: rekordbox and Mixxx":
+        "Demandes de la communauté pour le Store : rekordbox et Mixxx",
+    "14 more Windows apps in the Store, each one tested":
+        "14 applis Windows de plus dans le Store, chacune essayée",
+    "Windows bridge: copy your files, wallpaper and favorites from Windows":
+        "Pont Windows : copiez vos fichiers, votre fond d'écran et vos favoris depuis Windows",
+    "Clock: opens from the taskbar clock, and alarms wake the PC from sleep when it can":
+        "Horloge : s'ouvre depuis l'horloge de la barre des tâches, et les alarmes sortent le PC de la veille quand il le permet",
+    "Your files from Windows offered right after Setup":
+        "Vos fichiers de Windows proposés juste après l'installation",
+    "40+ popular Windows apps in the Store, each one tested, and \"Optimized for Raye\" badges":
+        "Plus de 40 applis Windows populaires dans le Store, chacune essayée, avec le badge « Optimisé pour Raye »",
+    "Complete Windows bridge: share drivers and settings with Windows":
+        "Pont Windows complet : partager pilotes et réglages avec Windows",
     "Choose KDE or Hyprland during installation":
         "Choisir KDE ou Hyprland pendant l'installation",
     "Windows 10 look option": "Option pour l'apparence de Windows 10",

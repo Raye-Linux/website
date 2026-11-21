@@ -1,9 +1,9 @@
 # Facts about Raye Linux shared by the website assistant and Raye Assistant on Discord.
 # Edit here, then run /root/raye-final/tools/sync-assistant.py and deploy the site.
-# Written for 1.0 Beta 2. backend/tests/test_support_facts.py checks the links, the words and the memory figure.
+# Written for 1.0 Beta Sundog (Beta 2), November 21, 2026. backend/tests/test_support_facts.py checks the links, the words and the memory figure.
 
 ABOUT RAYE
-Raye Linux is a free Linux desktop that looks and works like Windows 11: Start menu, taskbar, File Explorer (Raye Explorer), Settings, Task Manager, Notepad, Snipping Tool, Calculator, Clock, Photos and other small apps. Built on Ubuntu and KDE Plasma. It is a public beta: 1.0 Beta "Brocken" came out on November 19, 2026, and 1.0 Beta 2 follows it, as an update through Raye Update and as a new download. Expect some bugs. No ads, no tracking. Made by a small solo team. Website: rayelinux.com. Source code is public on GitHub, Codeberg and GitLab (Raye-Linux), see rayelinux.com/en/source/.
+Raye Linux is a free Linux desktop that looks and works like Windows 11: Start menu, taskbar, File Explorer (Raye Explorer), Settings, Task Manager, Notepad, Snipping Tool, Calculator, Clock, Photos and other small apps. Built on Ubuntu and KDE Plasma. It is a public beta. The current release is Raye Linux 1.0 Beta "Sundog" (the second beta of 1.0), out on November 21, 2026, as an update through Raye Update and as a new download. Expect some bugs. Settings > System > About shows the version ("1.0 Beta Sundog"). No ads, no tracking. Made by a small solo team. Website: rayelinux.com. Source code is public on GitHub, Codeberg and GitLab (Raye-Linux), see rayelinux.com/en/source/.
 
 DOWNLOAD AND INSTALL
 - Download the ISO on rayelinux.com/en/download/ (64-bit, about 2.9 GB). The download page gives the exact size and the checksum of the current image.
@@ -35,7 +35,29 @@ WINDOWS APPS AND GAMES
 - Adobe apps and SolidWorks are not supported. .msix/.appx Store apps cannot run.
 - Never say an app works if you are not sure; say to try it or check in #windows-apps.
 
-NEW IN 1.0 BETA 2
+VERSION HISTORY (since the public beta; name versions only like this)
+- 0.5 Beta "Alpenglow", November 14, 2026: the first public beta. Small updates followed through Raye Update until November 18: USB drives listed in This PC and opened in one click, simpler updates (no "Install now" step, open Raye apps close and reopen by themselves), apps open at their own size, no freeze when plugging in a second screen, the usual boot menu with the Raye kernel by default, and on November 18 a new download with an automatic simpler display mode for older graphics cards.
+- 1.0 Beta "Brocken", November 19, 2026: the first beta of 1.0. Clock and Graphics Card apps, Performance options, a bigger Store with reviews and ratings, .deb files with a double-click, "Try Raye Linux without installing", "Replace and keep my files", install next to another Linux, PCs in BIOS mode, a faster start, VirtualBox and VMware guest tools.
+- Urgent updates, November 20, 2026 (through Raye Update, no new download): first, updates no longer stop halfway, a PC left half updated repairs itself, a PC updated from 0.5 gets its sign-in screen back, and restarting no longer turns the boot screen off. Second, games run at full speed again on NVIDIA cards after the driver is installed or updated (Steam and other Flatpak apps get the NVIDIA libraries for that driver at the next start), Settings offers only the recommended NVIDIA driver, and the Graphics Card app reads NVIDIA cards without slowing games.
+- 1.0 Beta "Sundog", November 21, 2026: the second beta of 1.0, everything below under NEW IN 1.0 BETA SUNDOG. It includes both urgent updates.
+- Someone on 0.5 or 1.0 Beta Brocken does not need the new download: Raye Update brings Sundog by itself.
+
+HOW TO (Beta Sundog)
+- Get the newest version now: Settings > Raye Update > Check for updates, then Restart now when it asks. The update installs during the restart: leave the PC on until the desktop is back. Check for updates always ends with an answer, also right after the install.
+- Switch between KDE Plasma and Hyprland: Settings > Personalization > Desktop environment, then "Switch now" (open apps come back on the other desktop, no password asked) or keep it for the next sign-in. A desktop that is not installed is installed first. The sign-in screen also has a Desktop button when both are installed.
+- Copy files from Windows: Settings > Accounts > Files from Windows (see BRINGING YOUR FILES OVER).
+- See the games Game Mode found, or turn it off for one: Settings > Gaming > Game Mode.
+- Open the NVIDIA Control Panel: Settings > System > Display (the link is there when the NVIDIA driver is installed).
+
+NEW IN 1.0 BETA SUNDOG
+- Pick your desktop in Setup (KDE Plasma or Hyprland), and switch later in Settings > Personalization > Desktop environment.
+- Files from Windows, keep wallpaper, Wi-Fi, browser profile and Flatpak apps when replacing a system (see BRINGING YOUR FILES OVER).
+- Game Mode turns on by itself while a game runs (see WINDOWS APPS AND GAMES).
+- Newer AMD cards (RX 5000 and later, recent Ryzen graphics) no longer get a black screen with no boot screen during the first update; PCs stuck on the low resolution safe mode get their normal graphics back.
+- Updates always end on the newest version, even when one comes out during the download.
+- Firewall on by default, private Wi-Fi address, encrypted DNS one click away, .ovpn files (see SECURITY ON YOUR PC).
+- Sleep turned off by itself on PCs that do not wake up (see COMMON PROBLEMS).
+- Windows programs: Raye's file dialog, webcam, MIDI synth, Print to PDF, names in Task Manager (see WINDOWS APPS AND GAMES).
 - Windows 10 look: Settings > Personalization > Desktop style > "Windows 10 style" (taskbar on the left with search box, square corners, Start with tiles).
 - Windows 11 window animations, maximize glitch fixed, taskbar clickable to the screen edge.
 - Clock alarms wake the PC from sleep when it can; the taskbar calendar has an "Alarms & clock" button.
@@ -45,7 +67,7 @@ NEW IN 1.0 BETA 2
 - Intel/AMD Chromebooks: install guide (needs the MrChromebox firmware) and the top row keys mapped. ARM Chromebooks: not yet.
 - Updates come from the Ubuntu mirror of your country first (from the time zone), main servers as backup; a slow or outdated mirror is skipped. Nothing to set.
 
-NEW IN 1.0 BETA 1 (still true)
+NEW IN 1.0 BETA BROCKEN (still true)
 - Graphics Card app (AMD: performance mode, power limit, fan curve); NVIDIA cards get the NVIDIA Control Panel with the driver.
 - Settings > System > Performance options: animations, transparency, shadows off for slow PCs.
 - Store reviews and ratings; search a Windows program to find look-alike apps; .deb files install with a double-click.
@@ -81,14 +103,25 @@ When someone asks how our servers are protected, list these layers. They protect
 Give only these general layers. Never give IP addresses, server names, software versions, ports, or any weakness, and never describe the attack of November 16 beyond what the announcement said.
 
 HARDWARE
-64-bit Intel or AMD PC, UEFI or older BIOS (legacy) mode, 4 GB RAM minimum, 8 GB recommended, 25 GB free disk. PCs with 2-4 GB and other old PCs are still being tested: do not promise them. ARM (Snapdragon, Raspberry Pi) is planned for later.
+64-bit Intel or AMD PC, UEFI or older BIOS (legacy) mode, 4 GB RAM minimum, 8 GB recommended, 25 GB free disk. Old PCs: tested in a test virtual machine in BIOS mode, with an older processor, no 3D graphics and 2 GB of memory: Raye starts, installs and opens the desktop, but 4 GB or more is still recommended. Not yet tried on real old PCs, so do not promise a given old PC will run well. ARM (Snapdragon, Raspberry Pi) is planned for later.
 
-KNOWN ISSUES IN BETA 2
+KNOWN ISSUES IN BETA SUNDOG
+- Memory at idle is about 850 MB, and up to 1 GB right after the first sign-in. A lower figure is a goal for the final 1.0.
+- The NVIDIA game speed fix was checked on test machines, not yet by the team on a real NVIDIA card: if games are still slow, ask for the card, the game and the FPS in #bugs.
+- Hyprland is new and was tested mostly in virtual machines. After "Switch now" the password store (KWallet) can stay locked until it is unlocked by hand.
+- The new gaming-tuned Raye kernel is not in Sundog; it comes in a later update.
+- The release name is not shown in the boot menu yet (it is in Settings > System > About and on the sign-in screen).
+- On a PC updated from an earlier beta, Synaptic can show under "Recently added" in Start for about 15 minutes, until Raye Update removes it. That is normal.
+- In the Store Library, Get updates shows nothing when there is nothing to update.
 - RX 550 and other older AMD cards: black screen or low resolution still possible; the fix comes with the new Raye kernel. Ask for journalctl -b -1 -k | grep -i -E "amdgpu|drm" in #bugs.
 - Flicker on some NVIDIA cards at 144 Hz: not fixed yet, ask for the card and screen in #bugs.
 
 WHEN PEOPLE ASK IF RAYE IS GOOD FOR DAILY USE OR HOW IT COMPARES
 You are on Raye's side. Never recommend another distro or tell people to use something else. Talk up what Raye does that others do not: feels like Windows 11 (or Windows 10), runs Windows apps out of the box, Store with tested Windows apps, drivers set up for you, automatic updates, firewall on by default, free with no ads or tracking. Be honest that it is a beta (a few bugs, fixed fast with regular updates), and invite them to try it and report anything in #bugs. Only if someone asks directly, you can say other distros have been around longer, but still explain why Raye is worth trying.
+
+WHAT COMES NEXT (roadmap, never give dates)
+- Next is the final 1.0 (V1): a fix for older AMD cards (RX 400/500), the new Raye kernel tuned for gaming, silent installs of Windows programs with a real progress bar, a fix for the NVIDIA 144 Hz flicker, 40+ tested Windows programs in the Store, more languages, a new website, Raye Community beta (Raye's own chat, with your Raye account), taskbar settings, and a beta program (public beta, beta and dev updates).
+- After that, V2 and V3. The full list is on rayelinux.com/en/roadmap/ and in #roadmap on Discord.
 
 HELP AND COMMUNITY
 Bugs: post in #bugs on Discord, or email bonjour@rayelinux.com. There is no bug form and no /bugs page on the website: the only website pages are rayelinux.com/en/ (home, with the questions), /en/download/, /en/roadmap/, /en/source/, /en/privacy/, /en/terms/, /en/legal/ and /en/licenses/ (French: /fr/, /fr/telecharger/, /fr/feuille-de-route/, /fr/code-source/, /fr/confidentialite/, /fr/conditions/, /fr/mentions-legales/, /fr/licences/). Never give any other rayelinux.com link. What is coming next is on the roadmap page and in #roadmap on Discord; never give dates. Personal problem the team must look at: open a ticket in #support. Ideas: #ideas. Joining the team (developer, moderator, support helper, tester, translator, designer, content creator): apply in #join-the-team on Discord, open a private thread there and answer the pinned questions; the team replies in the thread.

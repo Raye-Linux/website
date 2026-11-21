@@ -1,10 +1,10 @@
 {
   "release": "1.0-beta",
-  "title": "Raye Linux 1.0 Beta Brocken",
-  "date": "2026-11-19",
+  "title": "Raye Linux 1.0 Beta Sundog",
+  "date": "2026-11-21",
   "iso": "raye-1.0-beta-amd64.iso",
-  "size": 2881132544,
-  "sha256": "d7ffe63c47049424f825667c037c72ddcdfe7cd532fa830a13cb4e79dafd3b99",
+  "size": 2896527360,
+  "sha256": "baeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547",
   "urls": {
     "r2": "https://dl.rayelinux.com/iso/1.0-beta/raye-1.0-beta-amd64.iso",
     "r2_folder": "https://dl.rayelinux.com/iso/1.0-beta/",

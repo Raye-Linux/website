@@ -50,7 +50,7 @@
 <main id="main" class="download wrap">
 <header class="dl-head">
 <p class="status"><span class="dot" aria-hidden="true"></span>Public beta</p>
-<h1>Download Raye Linux 1.0 Beta Brocken</h1>
+<h1>Download Raye Linux 1.0 Beta Sundog</h1>
 <p class="lede">The Raye Linux image, to write to a USB stick to install it. If something doesn't work, write to me.</p>
 </header>
 
@@ -58,7 +58,7 @@
 <div class="dl-file-top">
 <div>
 <h2 id="file-title">raye-1.0-beta-amd64.iso</h2>
-<p class="dl-meta">2.9 GB · 64-bit ISO, UEFI start · November 19, 2026</p>
+<p class="dl-meta">2.9 GB · 64-bit ISO, UEFI start · November 21, 2026</p>
 </div>
 <div class="dl-actions">
 <a class="btn btn-accent" href="#accept" data-accept>Download the ISO</a>
@@ -67,7 +67,7 @@
 </div>
 
 <dl class="dl-facts">
-<div><dt>SHA-256</dt><dd><code class="hash">d7ffe63c47049424f825667c037c72ddcdfe7cd532fa830a13cb4e79dafd3b99</code></dd></div>
+<div><dt>SHA-256</dt><dd><code class="hash">baeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547</code></dd></div>
 <div><dt>Key fingerprint</dt><dd><code>EA73 69D4 C3A3 10B2 DF3D  FC16 D3AA 2E62 5DDE 161E</code></dd></div>
 </dl>
 <ul class="dl-links">
@@ -130,7 +130,8 @@ gpg --verify SHA256SUMS.asc SHA256SUMS</code></pre></li>
 <section class="card dl-card" aria-labelledby="known-title">
 <h2 id="known-title">Known issues in the beta</h2>
 <ul class="plain">
-<li><strong>Black screen</strong> with some older AMD graphics cards (RX 550…), a fix is coming this week. Until then: on the USB stick, pick "Safe graphics". After installing, at startup tap Esc until the Raye menu, press <code>e</code>, add <code>nomodeset</code> after <code>quiet splash</code> and press F10.</li>
+<li><strong>Older AMD cards</strong> (RX 400 and 500, like the RX 550): on some PCs they still start at a low resolution with low frame rates. We are working on it. If the screen stays black, pick "Safe graphics" on the USB stick; once installed, Raye switches to a simpler display mode by itself if the desktop fails to show twice in a row.</li>
+<li><strong>NVIDIA cards</strong>: the game speed fix has not been tried by us on a real NVIDIA card yet. If your games are still slow, say so on Discord.</li>
 <li>The terminal, the screenshot tool and a few dialogs wear Raye's colors but are not redrawn as Raye apps yet.</li>
 <li>.exe programs: the first start takes a few seconds, and not all of them run.</li>
 <li>Offline, Settings says updates could not be checked.</li>

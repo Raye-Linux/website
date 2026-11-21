@@ -181,11 +181,14 @@ DOWNLOAD = {
         ],
         "known": "Problèmes connus de la bêta",
         "known_items": [
-            "<strong>Écran noir</strong> avec certaines cartes graphiques AMD plus anciennes "
-            "(RX 550…), un correctif arrive cette semaine. En attendant : sur la clé, choisissez "
-            "« Safe graphics ». Après l'installation, au démarrage, appuyez sur Échap jusqu'au "
-            "menu Raye, puis <code>e</code>, ajoutez <code>nomodeset</code> après "
-            "<code>quiet splash</code> et appuyez sur F10.",
+            "<strong>Anciennes cartes AMD</strong> (RX 400 et 500, comme la RX 550) : sur "
+            "certains PC, elles démarrent encore en basse résolution, avec peu d'images par "
+            "seconde. Nous y travaillons. Si l'écran reste noir, choisissez « Safe graphics » "
+            "sur la clé ; une fois installé, Raye passe tout seul à un mode d'affichage plus "
+            "simple si le bureau ne s'affiche pas deux fois de suite.",
+            "<strong>Cartes NVIDIA</strong> : le correctif de vitesse des jeux n'a pas encore été "
+            "essayé par nous sur une vraie carte NVIDIA. Si vos jeux restent lents, dites-le sur "
+            "Discord.",
             "Le terminal, l'outil de capture et quelques boîtes de dialogue sont aux couleurs "
             "de Raye, mais pas encore redessinés en applis Raye.",
             "Les programmes .exe : le premier lancement prend quelques secondes et tous ne fonctionnent pas.",
@@ -265,10 +268,13 @@ DOWNLOAD = {
         ],
         "known": "Known issues in the beta",
         "known_items": [
-            "<strong>Black screen</strong> with some older AMD graphics cards (RX 550…), a fix "
-            "is coming this week. Until then: on the USB stick, pick \"Safe graphics\". After "
-            "installing, at startup tap Esc until the Raye menu, press <code>e</code>, add "
-            "<code>nomodeset</code> after <code>quiet splash</code> and press F10.",
+            "<strong>Older AMD cards</strong> (RX 400 and 500, like the RX 550): on some PCs they "
+            "still start at a low resolution with low frame rates. We are working on it. If the "
+            "screen stays black, pick \"Safe graphics\" on the USB stick; once installed, Raye "
+            "switches to a simpler display mode by itself if the desktop fails to show twice "
+            "in a row.",
+            "<strong>NVIDIA cards</strong>: the game speed fix has not been tried by us on a "
+            "real NVIDIA card yet. If your games are still slow, say so on Discord.",
             "The terminal, the screenshot tool and a few dialogs wear Raye's colors but are "
             "not redrawn as Raye apps yet.",
             ".exe programs: the first start takes a few seconds, and not all of them run.",
@@ -699,8 +705,10 @@ HOME = {
             ("Et sur un vieux PC ?",
              "Raye démarre aussi dans l'ancien mode BIOS. Si le processeur est ancien, "
              "l'installation le dit dès sa première page : Raye fonctionne, mais certaines "
-             "applis et certains jeux en demandent un plus récent. Les PC de 2 à 4 Go de "
-             "mémoire sont en cours d'essai."),
+             "applis et certains jeux en demandent un plus récent. Nous l'avons essayé dans une "
+             "machine virtuelle de test en mode BIOS, avec un processeur ancien, sans 3D et "
+             "2 Go de mémoire : Raye démarre, s'installe et ouvre le bureau. 4 Go ou plus "
+             "restent conseillés."),
             ("Et sur un Chromebook ?",
              "Beaucoup de Chromebooks à processeur Intel ou AMD peuvent faire tourner Raye, "
              "avec un micrologiciel communautaire appelé MrChromebox. Raye règle la rangée de "
@@ -877,8 +885,10 @@ HOME = {
              "for your apps, and 8 GB is better for lots of tabs or games. {full_list}"),
             ("What about an older PC?",
              "Raye also starts in the older BIOS mode. If the processor is old, Setup says so "
-             "on its first page: Raye runs, but some apps and games need a newer one. PCs "
-             "with 2 to 4 GB of memory are being tested now."),
+             "on its first page: Raye runs, but some apps and games need a newer one. We tried "
+             "it in a test virtual machine in BIOS mode, with an older processor, no 3D and "
+             "2 GB of memory: Raye starts, installs and opens the desktop. 4 GB or more is "
+             "still recommended."),
             ("What about a Chromebook?",
              "Many Chromebooks with an Intel or AMD processor can run Raye, with a community "
              "firmware called MrChromebox. Raye sets up the top row of keys. It takes more "
@@ -946,6 +956,19 @@ HOME = {
 # The "latest changes" list on the home page: one line per published version,
 # newest first; rewrite the old ones out rather than letting the list grow.
 CHANGES = [
+    ("2026-11-21", "1.0 Beta Sundog",
+     {"fr": "Raye Linux 1.0 Bêta Sundog : KDE Plasma ou Hyprland au choix, un style de bureau classique, vos "
+            "fichiers de votre ancien système dans Paramètres, un mode jeu automatique, moins de mémoire et des mises à "
+            "jour qui finissent toujours sur la dernière version. Nouveau téléchargement, et mise à jour par "
+            "Raye Update.",
+      "en": "Raye Linux 1.0 Beta Sundog: pick KDE Plasma or Hyprland, a classic desktop style, your files "
+            "from your old system in Settings, an automatic game mode, less memory, and updates that always end on the "
+            "newest version. New download, and an update through Raye Update."}),
+    ("2026-11-20", "Urgent fixes",
+     {"fr": "Deux mises à jour urgentes : les jeux retrouvent leur pleine vitesse sur les cartes NVIDIA, et "
+            "les mises à jour ne s'arrêtent plus à moitié (les PC bloqués se réparent seuls).",
+      "en": "Two urgent updates: games run at full speed again on NVIDIA cards, and updates no longer stop "
+            "halfway (stuck PCs repair themselves)."}),
     ("2026-11-19", "1.0 Beta",
      {"fr": "Raye Linux 1.0 Bêta Brocken : les applis Horloge et Carte graphique, des avis dans le Raye Store, "
             "le mode Essayer Raye sans l'installer, et l'installation qui garde vos fichiers en remplaçant "
@@ -968,16 +991,6 @@ CHANGES = [
             "glissées restent dans la barre, et brancher un 2e écran ne gèle plus le bureau.",
       "en": "Apps open at their own size, minimizing animates into the taskbar, dragged icons stay in the taskbar, "
             "and plugging in a second screen no longer freezes the desktop."}),
-    ("2026-11-16", "Explorer",
-     {"fr": "Clés USB et disques visibles dans Ce PC et ouverts en un clic, copie vers une clé qui ne bloque plus "
-            "avec une vraie progression, et tous les fichiers affichés.",
-      "en": "USB sticks and drives show in This PC and open in one click, copying to a stick no longer stalls and "
-            "shows real progress, and every file is shown."}),
-    ("2026-11-16", "Boot",
-     {"fr": "Le menu de démarrage retrouve sa présentation habituelle avec le noyau Raye par défaut, et "
-            "le redémarrage vers votre autre système n'est proposé que s'il est encore installé.",
-      "en": "The boot menu is back to its usual layout with the Raye kernel by default, and restarting into "
-            "your other system is only offered when it is still installed."}),
 ]
 
 
