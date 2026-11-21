@@ -7,7 +7,7 @@
    "items": [
     [
      "done",
-     "Quick fix (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar, full screen, no wallet popup)"
+     "Quick fixes (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar on every screen, full screen, no wallet popup)"
     ],
     [
      "done",
@@ -325,7 +325,7 @@
     ],
     [
      "planned",
-     "Beta program: public beta, beta and dev updates"
+     "Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime"
     ],
     [
      "done",

@@ -189,8 +189,8 @@ FR = {
         'Plus de matériel fonctionne tout de suite : les pilotes Wi-Fi, webcam et son de Realtek et d\'autres s\'installent tout seuls quand un appareil en a besoin',
     'More desktops to choose from: GNOME and niri, with a Windows look':
         'Plus de bureaux au choix : GNOME et niri, avec un look Windows',
-    'Quick fix (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar, full screen, no wallet popup)':
-        'Correctif rapide (21 nov.) : les .deb de Steam et Heroic s\'installent de nouveau, liste du mode jeu épurée, Hyprland corrigé (une seule barre des tâches, plein écran, plus de fenêtre du portefeuille)',
+    'Quick fixes (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar on every screen, full screen, no wallet popup)':
+        'Correctifs rapides (21 nov.) : les .deb de Steam et Heroic s\'installent de nouveau, liste du mode jeu épurée, Hyprland corrigé (une barre des tâches sur chaque écran, plein écran, plus de fenêtre du portefeuille)',
     'Customize Hyprland your way: your own settings file, simple instructions, never overwritten':
         'Personnaliser Hyprland à votre façon : votre propre fichier de réglages, des instructions simples, jamais écrasé',
     'Developer options and remote web page':
@@ -219,8 +219,8 @@ FR = {
         "Rejoindre l'équipe et un panneau du staff sur le site",
     'Public profiles and badges':
         'Profils publics et badges',
-    'Beta program: public beta, beta and dev updates':
-        'Programme bêta : mises à jour bêta publique, bêta et dev',
+    'Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime':
+        'Raye Insider dans les Paramètres : canaux de mises à jour Bêta publique (inscription sur le site), Bêta et Dev (candidature, accès lié à votre compte Raye), quittez quand vous voulez',
     'Raye Assistant knows every version since 0.5':
         'Raye Assistant connaît chaque version depuis la 0.5',
     "Urgent fix (Nov 20): full game speed on NVIDIA again, one recommended driver, Graphics Card app fixed":
