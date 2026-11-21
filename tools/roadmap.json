@@ -1,397 +1,397 @@
 {
-  "intro": "What's coming to Raye Linux, in order. Community ideas always come first: share yours in #ideas. ✅ done · 🔨 in progress · 🕒 planned",
-  "sections": [
-    {
-      "title": "✅ Recently done",
-      "color": "3ddc97",
-      "items": [
-        [
-          "done",
-          "Quick fixes (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar on every screen, full screen, no wallet popup)"
-        ],
-        [
-          "done",
-          "Urgent fix (Nov 20): full game speed on NVIDIA again, one recommended driver, Graphics Card app fixed"
-        ],
-        [
-          "done",
-          "Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept"
-        ],
-        [
-          "done",
-          "New download (Nov 21): 1.0 Beta Sundog, with all the latest fixes built in"
-        ],
-        [
-          "done",
-          "Join the team: apply in #join-the-team"
-        ]
-      ]
-    },
-    {
-      "title": "✅ V1 Beta 1 · out November 19",
-      "color": "3ddc97",
-      "items": [
-        [
-          "done",
-          "A much faster boot"
-        ],
-        [
-          "done",
-          "AMD Graphics Card panel (fans, power, profiles) and the NVIDIA Control Panel"
-        ],
-        [
-          "done",
-          "Better File Explorer and smoother mouse scrolling everywhere"
-        ],
-        [
-          "done",
-          "Performance options in Settings, with a transparency switch"
-        ],
-        [
-          "done",
-          "New Clock app: alarms, timer, stopwatch, world clocks"
-        ],
-        [
-          "done",
-          "Windows apps get their fonts, 32-bit games can use 4 GB, Store packages open"
-        ],
-        [
-          "done",
-          "Bigger Store, with Steam and Heroic built in"
-        ],
-        [
-          "done",
-          "Pinned web apps keep their real icon"
-        ],
-        [
-          "done",
-          "New installer: dual boot next to Windows or another Linux, resize partitions, better Wi-Fi page"
-        ],
-        [
-          "done",
-          "Cleaner, more reliable Raye Update"
-        ],
-        [
-          "done",
-          "\"Try Raye\" mode: use Raye from the USB stick without installing"
-        ],
-        [
-          "done",
-          "Store reviews and ratings"
-        ],
-        [
-          "done",
-          "Switch to Raye from another system and keep your files"
-        ],
-        [
-          "done",
-          "The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)"
-        ]
-      ]
-    },
-    {
-      "title": "✅ V1 Beta 2 · out November 21",
-      "color": "3ddc97",
-      "items": [
-        [
-          "done",
-          "Choose KDE or Hyprland during installation"
-        ],
-        [
-          "done",
-          "Windows 10 look option"
-        ],
-        [
-          "done",
-          "A real Windows 10 Start menu"
-        ],
-        [
-          "done",
-          "Windows-style window animations, maximize and snap"
-        ],
-        [
-          "done",
-          "TikTok LIVE Studio and Affinity in the Store, FL Studio settings checked"
-        ],
-        [
-          "done",
-          "Import your files from Windows"
-        ],
-        [
-          "done",
-          "Install guide and keyboard support for Intel/AMD Chromebooks"
-        ],
-        [
-          "done",
-          "Game mode that turns on by itself while you play"
-        ],
-        [
-          "done",
-          "Lower RAM use at idle: about 850 MB, down from 1 GB"
-        ],
-        [
-          "done",
-          "Community Store requests: rekordbox and Mixxx"
-        ],
-        [
-          "done",
-          "14 more Windows apps in the Store, each one tested"
-        ],
-        [
-          "done",
-          "Windows bridge: copy your files, wallpaper and favorites from Windows"
-        ],
-        [
-          "done",
-          "NVIDIA Control Panel opened from Settings"
-        ],
-        [
-          "done",
-          "Clock: opens from the taskbar clock, and alarms wake the PC from sleep when it can"
-        ],
-        [
-          "done",
-          "Many more settings like Windows 11"
-        ],
-        [
-          "done",
-          "Windows layer fully hidden: Raye file dialogs, no technical names in Task Manager"
-        ],
-        [
-          "done",
-          "Bring your wallpaper, Wi-Fi networks, apps and browser data from your old system"
-        ],
-        [
-          "done",
-          "Your files from Windows offered right after Setup"
-        ],
-        [
-          "done",
-          "Check for very old processors before installing"
-        ],
-        [
-          "done",
-          "Update screen at startup shows its real percentage"
-        ],
-        [
-          "done",
-          "Try Raye never touches the PC's own swap"
-        ],
-        [
-          "done",
-          "Store settings, and Synaptic removed"
-        ],
-        [
-          "done",
-          "Fix the maximize and snap glitch"
-        ],
-        [
-          "done",
-          "Taskbar buttons clickable up to the screen edge"
-        ],
-        [
-          "done",
-          "PCs whose sleep doesn't work get it turned off automatically, with a clear message (turn it back on in Settings)"
-        ],
-        [
-          "done",
-          "Automatic kernel security updates"
-        ],
-        [
-          "done",
-          "Fix the Merge folders window in File Explorer"
-        ],
-        [
-          "done",
-          "Safe by default: firewall on and a private Wi-Fi address, encrypted DNS one click away in Settings, nothing slowed down"
-        ],
-        [
-          "done",
-          "Webcam, a built-in MIDI synth and Print to PDF for Windows programs"
-        ],
-        [
-          "done",
-          "Faster Ubuntu updates everywhere: your country's server first, others as backup"
-        ],
-        [
-          "done",
-          "Switch between KDE and Hyprland from Settings in seconds, your apps reopen"
-        ],
-        [
-          "done",
-          "Updates always end on the newest version, even mid-download"
-        ]
-      ]
-    },
-    {
-      "title": "🔨 V1 final",
-      "color": "9b6bff",
-      "items": [
-        [
-          "doing",
-          "Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution"
-        ],
-        [
-          "doing",
-          "New Raye kernel tuned for gaming and smoothness"
-        ],
-        [
-          "doing",
-          "Windows apps install silently with a real progress bar, start to finish"
-        ],
-        [
-          "doing",
-          "Fix for the flicker on NVIDIA cards at 144 Hz"
-        ],
-        [
-          "doing",
-          "40+ popular Windows apps in the Store, each one tested, and \"Optimized for Raye\" badges"
-        ],
-        [
-          "doing",
-          "Complete Windows bridge: share drivers and settings with Windows"
-        ],
-        [
-          "doing",
-          "Final polish and fixes from both betas"
-        ],
-        [
-          "planned",
-          "New website, with fresh screenshots of the real system"
-        ],
-        [
-          "planned",
-          "More languages"
-        ],
-        [
-          "planned",
-          "Raye kernel only (Ubuntu's kernel removed)"
-        ],
-        [
-          "done",
-          "Raye Assistant updated, on Discord and the website"
-        ],
-        [
-          "planned",
-          "Works on older PCs too (legacy BIOS, older processors, 2–4 GB RAM)"
-        ],
-        [
-          "planned",
-          "Legal pages and FAQ"
-        ],
-        [
-          "planned",
-          "New ISO for everyone"
-        ],
-        [
-          "planned",
-          "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
-        ],
-        [
-          "planned",
-          "Store: choose Flatpak or AppImage for an app (Quadra first)"
-        ],
-        [
-          "planned",
-          "Taskbar settings: left or center, icon size, taskbar size, position, auto-hide"
-        ],
-        [
-          "planned",
-          "Join the team and a staff panel on the website"
-        ],
-        [
-          "planned",
-          "Public profiles and badges"
-        ],
-        [
-          "planned",
-          "Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime"
-        ],
-        [
-          "done",
-          "Raye Assistant knows every version since 0.5"
-        ],
-        [
-          "planned",
-          "Quadra in the Store (AppImage), with game mode on while Roblox runs"
-        ],
-        [
-          "planned",
-          "No more freezes when RAM runs out: the PC slows down a little instead"
-        ],
-        [
-          "planned",
-          "Everything checked in French, screen by screen (installer included)"
-        ],
-        [
-          "planned",
-          "A real Raye screen to unlock an encrypted disk at startup"
-        ],
-        [
-          "planned",
-          "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
-        ],
-        [
-          "planned",
-          "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
-        ]
-      ]
-    },
-    {
-      "title": "🕒 V2",
-      "color": "8a8f98",
-      "items": [
-        [
-          "planned",
-          "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
-        ],
-        [
-          "planned",
-          "Raye account: your settings follow you to every PC"
-        ],
-        [
-          "planned",
-          "Spanish, German, Portuguese and Italian"
-        ],
-        [
-          "planned",
-          "New account website and emails, with two-factor sign-in"
-        ],
-        [
-          "planned",
-          "Raye Proton: pick Raye's Windows layer for Steam games"
-        ],
-        [
-          "planned",
-          "Printers & scanners page and a Scan app, plus longer laptop battery life"
-        ]
-      ]
-    },
-    {
-      "title": "🕒 V3",
-      "color": "8a8f98",
-      "items": [
-        [
-          "planned",
-          "Accounts: badges, community and admin panel"
-        ],
-        [
-          "planned",
-          "Developer options and remote web page"
-        ],
-        [
-          "planned",
-          "Every other language"
-        ],
-        [
-          "planned",
-          "More desktops to choose from: GNOME and niri, with a Windows look"
-        ],
-        [
-          "planned",
-          "Arch edition, kept in sync with the Ubuntu edition"
-        ]
-      ]
-    }
-  ]
+ "intro": "What's coming to Raye Linux, in order. Community ideas always come first: share yours in #ideas. ✅ done · 🔨 in progress · 🕒 planned",
+ "sections": [
+  {
+   "title": "✅ Recently done",
+   "color": "3ddc97",
+   "items": [
+    [
+     "done",
+     "Quick fixes (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar on every screen, full screen, no wallet popup)"
+    ],
+    [
+     "done",
+     "Urgent fix (Nov 20): full game speed on NVIDIA again, one recommended driver, Graphics Card app fixed"
+    ],
+    [
+     "done",
+     "Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept"
+    ],
+    [
+     "done",
+     "New download (Nov 21): 1.0 Beta Sundog, with all the latest fixes built in"
+    ],
+    [
+     "done",
+     "Join the team: apply in #join-the-team"
+    ]
+   ]
+  },
+  {
+   "title": "✅ V1 Beta 1 · out November 19",
+   "color": "3ddc97",
+   "items": [
+    [
+     "done",
+     "A much faster boot"
+    ],
+    [
+     "done",
+     "AMD Graphics Card panel (fans, power, profiles) and the NVIDIA Control Panel"
+    ],
+    [
+     "done",
+     "Better File Explorer and smoother mouse scrolling everywhere"
+    ],
+    [
+     "done",
+     "Performance options in Settings, with a transparency switch"
+    ],
+    [
+     "done",
+     "New Clock app: alarms, timer, stopwatch, world clocks"
+    ],
+    [
+     "done",
+     "Windows apps get their fonts, 32-bit games can use 4 GB, Store packages open"
+    ],
+    [
+     "done",
+     "Bigger Store, with Steam and Heroic built in"
+    ],
+    [
+     "done",
+     "Pinned web apps keep their real icon"
+    ],
+    [
+     "done",
+     "New installer: dual boot next to Windows or another Linux, resize partitions, better Wi-Fi page"
+    ],
+    [
+     "done",
+     "Cleaner, more reliable Raye Update"
+    ],
+    [
+     "done",
+     "\"Try Raye\" mode: use Raye from the USB stick without installing"
+    ],
+    [
+     "done",
+     "Store reviews and ratings"
+    ],
+    [
+     "done",
+     "Switch to Raye from another system and keep your files"
+    ],
+    [
+     "done",
+     "The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)"
+    ]
+   ]
+  },
+  {
+   "title": "✅ V1 Beta 2 · out November 21",
+   "color": "3ddc97",
+   "items": [
+    [
+     "done",
+     "Choose KDE or Hyprland during installation"
+    ],
+    [
+     "done",
+     "Windows 10 look option"
+    ],
+    [
+     "done",
+     "A real Windows 10 Start menu"
+    ],
+    [
+     "done",
+     "Windows-style window animations, maximize and snap"
+    ],
+    [
+     "done",
+     "TikTok LIVE Studio and Affinity in the Store, FL Studio settings checked"
+    ],
+    [
+     "done",
+     "Import your files from Windows"
+    ],
+    [
+     "done",
+     "Install guide and keyboard support for Intel/AMD Chromebooks"
+    ],
+    [
+     "done",
+     "Game mode that turns on by itself while you play"
+    ],
+    [
+     "done",
+     "Lower RAM use at idle: about 850 MB, down from 1 GB"
+    ],
+    [
+     "done",
+     "Community Store requests: rekordbox and Mixxx"
+    ],
+    [
+     "done",
+     "14 more Windows apps in the Store, each one tested"
+    ],
+    [
+     "done",
+     "Windows bridge: copy your files, wallpaper and favorites from Windows"
+    ],
+    [
+     "done",
+     "NVIDIA Control Panel opened from Settings"
+    ],
+    [
+     "done",
+     "Clock: opens from the taskbar clock, and alarms wake the PC from sleep when it can"
+    ],
+    [
+     "done",
+     "Many more settings like Windows 11"
+    ],
+    [
+     "done",
+     "Windows layer fully hidden: Raye file dialogs, no technical names in Task Manager"
+    ],
+    [
+     "done",
+     "Bring your wallpaper, Wi-Fi networks, apps and browser data from your old system"
+    ],
+    [
+     "done",
+     "Your files from Windows offered right after Setup"
+    ],
+    [
+     "done",
+     "Check for very old processors before installing"
+    ],
+    [
+     "done",
+     "Update screen at startup shows its real percentage"
+    ],
+    [
+     "done",
+     "Try Raye never touches the PC's own swap"
+    ],
+    [
+     "done",
+     "Store settings, and Synaptic removed"
+    ],
+    [
+     "done",
+     "Fix the maximize and snap glitch"
+    ],
+    [
+     "done",
+     "Taskbar buttons clickable up to the screen edge"
+    ],
+    [
+     "done",
+     "PCs whose sleep doesn't work get it turned off automatically, with a clear message (turn it back on in Settings)"
+    ],
+    [
+     "done",
+     "Automatic kernel security updates"
+    ],
+    [
+     "done",
+     "Fix the Merge folders window in File Explorer"
+    ],
+    [
+     "done",
+     "Safe by default: firewall on and a private Wi-Fi address, encrypted DNS one click away in Settings, nothing slowed down"
+    ],
+    [
+     "done",
+     "Webcam, a built-in MIDI synth and Print to PDF for Windows programs"
+    ],
+    [
+     "done",
+     "Faster Ubuntu updates everywhere: your country's server first, others as backup"
+    ],
+    [
+     "done",
+     "Switch between KDE and Hyprland from Settings in seconds, your apps reopen"
+    ],
+    [
+     "done",
+     "Updates always end on the newest version, even mid-download"
+    ]
+   ]
+  },
+  {
+   "title": "🔨 V1 final",
+   "color": "9b6bff",
+   "items": [
+    [
+     "doing",
+     "Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution"
+    ],
+    [
+     "doing",
+     "New Raye kernel tuned for gaming and smoothness"
+    ],
+    [
+     "doing",
+     "Windows apps install silently with a real progress bar, start to finish"
+    ],
+    [
+     "doing",
+     "Fix for the flicker on NVIDIA cards at 144 Hz"
+    ],
+    [
+     "doing",
+     "40+ popular Windows apps in the Store, each one tested, and \"Optimized for Raye\" badges"
+    ],
+    [
+     "doing",
+     "Complete Windows bridge: share drivers and settings with Windows"
+    ],
+    [
+     "doing",
+     "Final polish and fixes from both betas"
+    ],
+    [
+     "planned",
+     "New website, with fresh screenshots of the real system"
+    ],
+    [
+     "planned",
+     "More languages"
+    ],
+    [
+     "planned",
+     "Raye kernel only (Ubuntu's kernel removed)"
+    ],
+    [
+     "done",
+     "Raye Assistant updated, on Discord and the website"
+    ],
+    [
+     "planned",
+     "Works on older PCs too (legacy BIOS, older processors, 2–4 GB RAM)"
+    ],
+    [
+     "planned",
+     "Legal pages and FAQ"
+    ],
+    [
+     "planned",
+     "New ISO for everyone"
+    ],
+    [
+     "planned",
+     "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
+    ],
+    [
+     "planned",
+     "Store: Flatpak, APT and AppImage apps, pick the format you want"
+    ],
+    [
+     "planned",
+     "Taskbar settings: left or center, icon size, taskbar size, position, auto-hide"
+    ],
+    [
+     "planned",
+     "Join the team and a staff panel on the website"
+    ],
+    [
+     "planned",
+     "Public profiles and badges"
+    ],
+    [
+     "planned",
+     "Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime"
+    ],
+    [
+     "done",
+     "Raye Assistant knows every version since 0.5"
+    ],
+    [
+     "planned",
+     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
+    ],
+    [
+     "planned",
+     "No more freezes when RAM runs out: the PC slows down a little instead"
+    ],
+    [
+     "planned",
+     "Everything checked in French, screen by screen (installer included)"
+    ],
+    [
+     "planned",
+     "A real Raye screen to unlock an encrypted disk at startup"
+    ],
+    [
+     "planned",
+     "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
+    ],
+    [
+     "planned",
+     "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
+    ]
+   ]
+  },
+  {
+   "title": "🕒 V2",
+   "color": "8a8f98",
+   "items": [
+    [
+     "planned",
+     "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
+    ],
+    [
+     "planned",
+     "Raye account: your settings follow you to every PC"
+    ],
+    [
+     "planned",
+     "Spanish, German, Portuguese and Italian"
+    ],
+    [
+     "planned",
+     "New account website and emails, with two-factor sign-in"
+    ],
+    [
+     "planned",
+     "Raye Proton: pick Raye's Windows layer for Steam games"
+    ],
+    [
+     "planned",
+     "Printers & scanners page and a Scan app, plus longer laptop battery life"
+    ]
+   ]
+  },
+  {
+   "title": "🕒 V3",
+   "color": "8a8f98",
+   "items": [
+    [
+     "planned",
+     "Accounts: badges, community and admin panel"
+    ],
+    [
+     "planned",
+     "Developer options and remote web page"
+    ],
+    [
+     "planned",
+     "Every other language"
+    ],
+    [
+     "planned",
+     "More desktops to choose from: GNOME and niri, with a Windows look"
+    ],
+    [
+     "planned",
+     "Arch edition, kept in sync with the Ubuntu edition"
+    ]
+   ]
+  }
+ ]
 }

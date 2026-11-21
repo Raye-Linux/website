@@ -213,8 +213,8 @@ FR = {
         'Passer de KDE à Hyprland depuis les Paramètres en quelques secondes, vos applis se rouvrent',
     'Updates always end on the newest version, even mid-download':
         'Les mises à jour finissent toujours sur la version la plus récente, même en plein téléchargement',
-    'Store: choose Flatpak or AppImage for an app (Quadra first)':
-        'Store : choisir Flatpak ou AppImage pour une appli (Quadra en premier)',
+    'Store: Flatpak, APT and AppImage apps, pick the format you want':
+        'Store : applis Flatpak, APT et AppImage, choisissez le format que vous voulez',
     'Taskbar settings: left or center, icon size, taskbar size, position, auto-hide':
         'Réglages de la barre des tâches : à gauche ou au centre, taille des icônes, taille de la barre, position, masquage automatique',
     'Join the team and a staff panel on the website':
