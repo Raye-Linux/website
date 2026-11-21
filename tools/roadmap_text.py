@@ -191,6 +191,8 @@ FR = {
         'Plus de bureaux au choix : GNOME et niri, avec un look Windows',
     'Quick fixes (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar on every screen, full screen, no wallet popup)':
         'Correctifs rapides (21 nov.) : les .deb de Steam et Heroic s\'installent de nouveau, liste du mode jeu épurée, Hyprland corrigé (une barre des tâches sur chaque écran, plein écran, plus de fenêtre du portefeuille)',
+    'Printers & scanners page and a Scan app, plus longer laptop battery life':
+        'Page Imprimantes et scanners et une appli de numérisation, plus d\'autonomie sur les portables',
     'Customize Hyprland your way: your own settings file, simple instructions, never overwritten':
         'Personnaliser Hyprland à votre façon : votre propre fichier de réglages, des instructions simples, jamais écrasé',
     'Developer options and remote web page':

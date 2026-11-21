@@ -24,10 +24,6 @@
     [
      "done",
      "Join the team: apply in #join-the-team"
-    ],
-    [
-     "done",
-     "Automatic graphics fallback for older cards (more fixes for some AMD cards still coming)"
     ]
    ]
   },
@@ -364,6 +360,10 @@
     [
      "planned",
      "Raye Proton: pick Raye's Windows layer for Steam games"
+    ],
+    [
+     "planned",
+     "Printers & scanners page and a Scan app, plus longer laptop battery life"
     ]
    ]
   },
