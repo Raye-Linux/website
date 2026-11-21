@@ -162,6 +162,8 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    'Developer options and remote web page':
+        'Options pour développeurs et page web à distance',
     'A real Raye screen to unlock an encrypted disk at startup':
         'Un vrai écran Raye pour déverrouiller un disque chiffré au démarrage',
     'Everything checked in French, screen by screen (installer included)':
