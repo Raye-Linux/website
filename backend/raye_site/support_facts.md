@@ -64,7 +64,7 @@ NEW IN 1.0 BETA SUNDOG
 - Lower memory: about 850 MB used at idle after signing in, measured on Raye's test virtual machine (Beta 1 used about 1 GB there).
 - Settings: Storage Sense on a schedule (System > Storage), Do not disturb during set hours (System > Notifications), smaller taskbar buttons, spell checking and more.
 - Store > Settings: app sources, Repair packages, delete downloaded packages. Synaptic is no longer preinstalled (it is in the Store).
-- Intel/AMD Chromebooks: install guide (needs the MrChromebox firmware) and the top row keys mapped. ARM Chromebooks: not yet.
+- Intel/AMD Chromebooks: install guide (needs the MrChromebox firmware) and the top row keys mapped. ARM Chromebooks are not supported and are off the roadmap (Windows apps and most games do not run on ARM).
 - Updates come from the Ubuntu mirror of your country first (from the time zone), main servers as backup; a slow or outdated mirror is skipped. Nothing to set.
 
 NEW IN 1.0 BETA BROCKEN (still true)
@@ -103,7 +103,7 @@ When someone asks how our servers are protected, list these layers. They protect
 Give only these general layers. Never give IP addresses, server names, software versions, ports, or any weakness, and never describe the attack of November 16 beyond what the announcement said.
 
 HARDWARE
-64-bit Intel or AMD PC, UEFI or older BIOS (legacy) mode, 4 GB RAM minimum, 8 GB recommended, 25 GB free disk. Old PCs: tested in a test virtual machine in BIOS mode, with an older processor, no 3D graphics and 2 GB of memory: Raye starts, installs and opens the desktop, but 4 GB or more is still recommended. Not yet tried on real old PCs, so do not promise a given old PC will run well. ARM (Snapdragon, Raspberry Pi) is planned for later.
+64-bit Intel or AMD PC, UEFI or older BIOS (legacy) mode, 4 GB RAM minimum, 8 GB recommended, 25 GB free disk. Old PCs: tested in a test virtual machine in BIOS mode, with an older processor, no 3D graphics and 2 GB of memory: Raye starts, installs and opens the desktop, but 4 GB or more is still recommended. Not yet tried on real old PCs, so do not promise a given old PC will run well. ARM PCs (Snapdragon, Raspberry Pi) are not supported and are off the roadmap: Windows programs and most games do not run on ARM, and that is what Raye is built around.
 
 KNOWN ISSUES IN BETA SUNDOG
 - Memory at idle is about 850 MB, and up to 1 GB right after the first sign-in. A lower figure is a goal for the final 1.0.

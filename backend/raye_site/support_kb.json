@@ -66,7 +66,7 @@
   {
    "id": "faq:fr:9",
    "lang": "fr",
-   "text": "Beaucoup de Chromebooks à processeur Intel ou AMD peuvent faire tourner Raye, avec un micrologiciel communautaire appelé MrChromebox. Raye règle la rangée de touches du haut. C'est plus de travail que sur un PC : les étapes sont dans le manuel de Raye, sur la page code source. Les Chromebooks à processeur ARM ne peuvent pas encore.",
+   "text": "Beaucoup de Chromebooks à processeur Intel ou AMD peuvent faire tourner Raye, avec un micrologiciel communautaire appelé MrChromebox. Raye règle la rangée de touches du haut. C'est plus de travail que sur un PC : les étapes sont dans le manuel de Raye, sur la page code source. Les Chromebooks à processeur ARM ne sont pas pris en charge.",
    "title": "Et sur un Chromebook ?",
    "url": "/fr/#questions"
   },
@@ -241,7 +241,7 @@
   {
    "id": "faq:en:9",
    "lang": "en",
-   "text": "Many Chromebooks with an Intel or AMD processor can run Raye, with a community firmware called MrChromebox. Raye sets up the top row of keys. It takes more work than a PC: the steps are in the Raye handbook, on the source code page. Chromebooks with an ARM processor can't yet.",
+   "text": "Many Chromebooks with an Intel or AMD processor can run Raye, with a community firmware called MrChromebox. Raye sets up the top row of keys. It takes more work than a PC: the steps are in the Raye handbook, on the source code page. Chromebooks with an ARM processor are not supported.",
    "title": "What about a Chromebook?",
    "url": "/en/#questions"
   },
@@ -1391,7 +1391,7 @@
   "en/09-windows-alongside.md": "4378c466bd1baa82",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
   "en/11-chromebooks.md": "0b0a8099e4fe5196",
-  "en/index.html": "25897cc785ef3b8d",
+  "en/index.html": "fb1510eeaa221237",
   "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
@@ -1403,7 +1403,7 @@
   "fr/09-windows-a-cote.md": "ab889732288946c1",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
   "fr/11-chromebooks.md": "655c79fe7f20dfb5",
-  "fr/index.html": "a4c9e984324ca171",
+  "fr/index.html": "b65808b55d627b14",
   "telecharger/index.html": "5630aa38617c9344"
  }
 }

@@ -787,7 +787,7 @@ HOME = {
              "avec un micrologiciel communautaire appelé MrChromebox. Raye règle la rangée de "
              "touches du haut. C'est plus de travail que sur un PC : les étapes sont dans le "
              "manuel de Raye, sur la page <a href=\"/fr/code-source/\">code source</a>. Les "
-             "Chromebooks à processeur ARM ne peuvent pas encore."),
+             "Chromebooks à processeur ARM ne sont pas pris en charge."),
             ("L'écran reste noir, que faire ?",
              "Sur le menu de la clé USB, choisissez « Safe graphics ». Une fois Raye installé, "
              "si le bureau ne s'affiche pas deux fois de suite, Raye passe tout seul à un "
@@ -967,7 +967,7 @@ HOME = {
              "firmware called MrChromebox. Raye sets up the top row of keys. It takes more "
              "work than a PC: the steps are in the Raye handbook, on the "
              "<a href=\"/en/source/\">source code</a> page. Chromebooks with an ARM "
-             "processor can't yet."),
+             "processor are not supported."),
             ("The screen stays black. What do I do?",
              "On the USB stick's menu, pick \"Safe graphics\". Once Raye is installed, if the "
              "desktop fails to show twice in a row, Raye switches to a simpler display mode "
