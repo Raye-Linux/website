@@ -1171,6 +1171,8 @@ body { background: #131217; background-attachment: scroll; }
 .rm-tone-doing { --rm-tone: #9B6BFF; }
 .rm-tone-next { --rm-tone: #F5B942; }
 .rm-tone-later { --rm-tone: #8A8F98; }
+/* a colour not listed above falls back to the section's state */
+.rm-tone-planned { --rm-tone: #8A8F98; }
 
 .rm-icon { flex: none; width: 1.05rem; height: 1.05rem; }
 .rm-icon-done { color: #3DDC97; }

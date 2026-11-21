@@ -111,11 +111,11 @@ class RoadmapTests(unittest.TestCase):
     def test_a_new_section_without_french_stops_the_build(self):
         b = builder()
         data = copy.deepcopy(roadmap())
-        data["sections"].append({"title": "🕒 V4", "color": "8a8f98",
+        data["sections"].append({"title": "🕒 V9", "color": "8a8f98",
                                  "items": [["planned", "More languages"]]})
         with self.assertRaises(SystemExit) as cm:
             b.roadmap_sections(data, "fr")
-        self.assertIn("V4", str(cm.exception))
+        self.assertIn("V9", str(cm.exception))
 
     def test_an_unknown_state_stops_the_build(self):
         b = builder()
@@ -198,6 +198,20 @@ class RoadmapTests(unittest.TestCase):
                 self.assertEqual(levels[0], "1")
                 self.assertEqual(set(levels[1:]), {"2"})
                 self.assertEqual(levels.count("2"), len(roadmap()["sections"]))
+
+    def test_every_possible_tone_has_a_colour(self):
+        # a colour the page does not know falls back to the section's state:
+        # that tone needs its own bar colour too (a new V4, V5... keeps one)
+        b = builder()
+        with open(os.path.join(ROOT, "assets", "site.css"), encoding="utf-8") as f:
+            css = f.read()
+        for tone in set(b.ROADMAP_TONES.values()) | set(b.ROADMAP_STATES):
+            with self.subTest(tone=tone):
+                self.assertRegex(css, r"\.rm-tone-%s \{ --rm-tone: #[0-9A-Fa-f]{6}; \}" % tone)
+        data = copy.deepcopy(roadmap())
+        data["sections"].append({"title": "🕒 V3", "color": "123456",
+                                 "items": [["planned", "More languages"]]})
+        self.assertEqual(b.roadmap_sections(data, "en")[-1][1], "planned")
 
     def test_every_item_has_its_status_icon(self):
         for lang, rel in PAGES.items():

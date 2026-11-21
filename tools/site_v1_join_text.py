@@ -528,7 +528,11 @@ RULES = {
 # the V1 roadmap page only. A line here that no longer appears stops the build.
 ROADMAP_V1_WORDS = {
     "en": [("Choose KDE or Hyprland during installation",
-            "Choose between two desktops during installation")],
+            "Choose between two desktops during installation"),
+           ("Switch between KDE and Hyprland from Settings",
+            "Switch between the two desktops from Settings")],
     "fr": [("Choisir KDE ou Hyprland pendant l'installation",
-            "Choisir entre deux bureaux pendant l'installation")],
+            "Choisir entre deux bureaux pendant l'installation"),
+           ("Passer de KDE à Hyprland depuis les Paramètres",
+            "Passer d'un bureau à l'autre depuis les Paramètres")],
 }
