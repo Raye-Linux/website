@@ -43,6 +43,10 @@ V1_LIVE = False
 # Until it is, the page offers dl.rayelinux.com only, and no step mentions parts.
 GITHUB_MIRROR = False
 
+# IndexNow (Bing, Yandex, Seznam, Naver): this key is public by design, the
+# site serves it at /<key>.txt and tools/indexnow.py sends it with the pages
+INDEXNOW_KEY = "761e54fd28c384f5fe38aec2ab1de2b7"
+
 PATHS = {
     "fr": {"home": "/fr/", "privacy": "/fr/confidentialite/", "download": "/fr/telecharger/",
            "terms": "/fr/conditions/", "notice": "/fr/mentions-legales/",
@@ -59,8 +63,9 @@ GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 
 T = {
     "fr": {
-        "description": "Raye Linux arrive : un bureau familier, élégant et sûr. "
-                       "Inscrivez-vous pour être prévenu du lancement.",
+        "description": "Raye Linux est un bureau Linux gratuit pour votre PC : la barre des tâches, "
+                       "le menu Démarrer et les Paramètres là où vous les cherchez. "
+                       "Téléchargez Raye Linux 1.0 Bêta Sundog.",
         "skip": "Aller à l'inscription",
         "brand_label": "Raye Linux, accueil",
         "switch": "English",
@@ -83,8 +88,8 @@ T = {
         "privacy_title": "Politique de confidentialité",
     },
     "en": {
-        "description": "Raye Linux is coming: a familiar, polished and secure desktop. "
-                       "Sign up to hear when it launches.",
+        "description": "Raye Linux is a free Linux desktop for your PC: the taskbar, Start menu "
+                       "and Settings where you expect them. Download Raye Linux 1.0 Beta Sundog.",
         "skip": "Skip to signup",
         "brand_label": "Raye Linux, home",
         "switch": "Français",
@@ -115,8 +120,8 @@ PRIVACY = {lang: legal_text.body("privacy", lang, PATHS[lang]) for lang in PATHS
 DOWNLOAD = {
     "fr": {
         "title": "Télécharger Raye Linux",
-        "description": "Téléchargez la bêta de Raye Linux : l'image ISO, sa somme de contrôle, "
-                       "comment la vérifier et l'écrire sur une clé USB.",
+        "description": "Téléchargez gratuitement Raye Linux 1.0 Bêta Sundog : l'image ISO, sa "
+                       "somme de contrôle, comment la vérifier et l'écrire sur une clé USB.",
         "accept_title": "Avant de télécharger : c'est une bêta publique",
         "accept_items": [
             "Raye Linux 1.0 Bêta est une version bêta. Elle peut contenir beaucoup de bugs, planter "
@@ -202,8 +207,8 @@ DOWNLOAD = {
     },
     "en": {
         "title": "Download Raye Linux",
-        "description": "Download the Raye Linux beta: the ISO image, its checksum, how to "
-                       "check it and write it to a USB stick.",
+        "description": "Download Raye Linux 1.0 Beta Sundog for free: the ISO image, its "
+                       "checksum, how to check it and write it to a USB stick.",
         "accept_title": "Before you download: this is a public beta",
         "accept_items": [
             "Raye Linux 1.0 Beta is a beta. It can have many bugs, crash and, in rare cases, "
@@ -460,7 +465,7 @@ def x_default(page):
     return "/" if page == "home" else PATHS["en"][page]
 
 
-def head(lang, page, title, description):
+def head(lang, page, title, description, extra=""):
     other = "en" if lang == "fr" else "fr"
     here, there = PATHS[lang][page], PATHS[other][page]
     return f"""<!DOCTYPE html>
@@ -487,9 +492,77 @@ def head(lang, page, title, description):
 <meta property="og:image" content="{URL}/assets/shots/start-{lang}-944.jpg">
 <meta property="og:image:width" content="944">
 <meta property="og:image:height" content="450">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{description}">
+<meta name="twitter:image" content="{URL}/assets/shots/start-{lang}-944.jpg">{extra}
 <script src="/assets/app.js" defer></script>
 <script src="/assets/support.js" defer></script>
 </head>"""
+
+
+def structured_data(lang):
+    """schema.org data for the home page: what Raye Linux is and who makes it,
+    so a search for the name finds this site. A data block, not a script:
+    the CSP does not apply to it and nothing runs."""
+    info = release_info()
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "SoftwareApplication",
+             "name": "Raye Linux",
+             "description": T[lang]["description"],
+             "applicationCategory": "OperatingSystem",
+             "operatingSystem": "Linux",
+             "softwareVersion": info["title"].replace("Raye Linux ", ""),
+             "datePublished": info["date"],
+             "isAccessibleForFree": True,
+             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"},
+             "downloadUrl": info["urls"]["r2"],
+             "url": URL + PATHS[lang]["home"],
+             "screenshot": f"{URL}/assets/shots/start-{lang}-944.jpg",
+             "inLanguage": ["fr", "en"],
+             "publisher": {"@id": URL + "/#organization"}},
+            {"@type": "Organization",
+             "@id": URL + "/#organization",
+             "name": "Raye Linux",
+             "url": URL + "/",
+             "logo": URL + "/assets/raye-eye.svg",
+             "email": "bonjour@rayelinux.com",
+             "sameAs": ["https://github.com/Raye-Linux", "https://codeberg.org/Raye-Linux",
+                        "https://gitlab.com/raye-linux", DISCORD]},
+        ],
+    }
+    text = json.dumps(data, ensure_ascii=False, indent=1).replace("</", "<\\/")
+    return f'\n<script type="application/ld+json">\n{text}\n</script>'
+
+
+def public_pages():
+    """(path, other-language path) of every page a search engine should see."""
+    return [(PATHS[lang][page], PATHS[other][page], page)
+            for lang, other in (("fr", "en"), ("en", "fr")) for page in PATHS[lang]]
+
+
+def sitemap():
+    day = release_info()["date"]
+    rows = []
+    for here, there, page in public_pages():
+        fr, en = (here, there) if here.startswith("/fr/") else (there, here)
+        rows.append(f"""<url>
+<loc>{URL}{here}</loc>
+<lastmod>{day}</lastmod>
+<xhtml:link rel="alternate" hreflang="fr" href="{URL}{fr}"/>
+<xhtml:link rel="alternate" hreflang="en" href="{URL}{en}"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="{URL}{x_default(page)}"/>
+</url>""")
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+            '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+            + "\n".join(rows) + "\n</urlset>\n")
+
+
+def robots():
+    return f"User-agent: *\nAllow: /\n\nSitemap: {URL}/sitemap.xml\n"
 
 
 def topbar(lang, page):
@@ -587,7 +660,7 @@ SHOT_DATE = {"fr": "8 novembre 2026", "en": "November 8, 2026"}
 
 HOME = {
     "fr": {
-        "title": "Raye Linux · Bêta publique",
+        "title": "Raye Linux — un bureau Linux gratuit que vous savez déjà utiliser",
         "nav_label": "Sur cette page",
         "nav": [("captures", "Captures"), ("nouveautes", "Dedans"),
                 ("questions", "Questions")],
@@ -776,7 +849,7 @@ HOME = {
         "log_next": "Et ensuite ? La feuille de route",
     },
     "en": {
-        "title": "Raye Linux · Public beta",
+        "title": "Raye Linux — a free Linux desktop you already know how to use",
         "nav_label": "On this page",
         "nav": [("captures", "Screenshots"), ("nouveautes", "What's in it"),
                 ("questions", "Questions")],
@@ -1040,7 +1113,7 @@ def home(lang):
 <time datetime="{day}">{date_text(lang, day)}</time>
 <p>{text[lang]}</p>
 </li>""" for day, _, text in CHANGES)
-    return f"""{head(lang, 'home', h['title'], t['description'])}
+    return f"""{head(lang, 'home', h['title'], t['description'], structured_data(lang))}
 <body class="home">
 <a class="skip-link" href="#signup">{t['skip']}</a>
 {topbar(lang, 'home')}
@@ -1154,10 +1227,30 @@ def privacy(lang):
     return legal(lang, "privacy")
 
 
+LEGAL_DESCRIPTION = {
+    "privacy": {"en": "How Raye Linux and rayelinux.com handle your personal information: "
+                      "what is kept, why, for how long, and your rights.",
+                "fr": "Comment Raye Linux et rayelinux.com traitent vos renseignements "
+                      "personnels : ce qui est gardé, pourquoi, combien de temps, et vos droits."},
+    "terms": {"en": "The terms of use of Raye Linux and of the rayelinux.com website, "
+                    "including the public beta.",
+              "fr": "Les conditions d'utilisation de Raye Linux et du site rayelinux.com, "
+                    "y compris la bêta publique."},
+    "notice": {"en": "Legal notice of rayelinux.com: who publishes the Raye Linux website "
+                     "and how to reach us.",
+               "fr": "Mentions légales de rayelinux.com : qui publie le site de Raye Linux "
+                     "et comment nous joindre."},
+    "licenses": {"en": "The free licenses of Raye Linux and of the software it includes, "
+                       "and the trademarks it names.",
+                 "fr": "Les licences libres de Raye Linux et des logiciels qu'il contient, "
+                       "et les marques qu'il cite."},
+}
+
+
 def legal(lang, page):
     t = T[lang]
     title = legal_text.TITLES[page][lang]
-    return f"""{head(lang, page, title + ' · Raye Linux', t['description'])}
+    return f"""{head(lang, page, title + ' · Raye Linux', LEGAL_DESCRIPTION[page][lang])}
 <body>
 <a class="skip-link" href="#main">{'Aller au contenu' if lang == 'fr' else 'Skip to content'}</a>
 {topbar(lang, page)}
@@ -1204,6 +1297,8 @@ REPOS = [
 GITLAB_NAME = {"files": "raye-files", "update": "raye-update"}
 SOURCE = {
     "en": {"title": "Source code",
+           "description": "All the source code of Raye Linux, free software: every repository, "
+                          "on GitHub, Codeberg, GitLab and our own server.",
            "lead": "Raye Linux is free software. All of its code is public, mostly under the GPL; "
                    "each repository says which licence applies. It lives on GitHub and is copied to "
                    "three other places, so it stays available if one of them goes down.",
@@ -1213,6 +1308,8 @@ SOURCE = {
                    "<a href=\"{discord}\" rel=\"noopener\">Discord</a> or at "
                    "<a href=\"mailto:bonjour@rayelinux.com\">bonjour@rayelinux.com</a>."},
     "fr": {"title": "Code source",
+           "description": "Tout le code source de Raye Linux, un logiciel libre : chaque dépôt, "
+                          "sur GitHub, Codeberg, GitLab et notre propre serveur.",
            "lead": "Raye Linux est un logiciel libre. Tout son code est public, surtout sous licence GPL ; "
                    "chaque dépôt indique la sienne. Il est sur GitHub et copié à trois autres endroits, "
                    "pour rester disponible si l'un d'eux tombe.",
@@ -1235,7 +1332,7 @@ def source(lang):
         buttons = " · ".join(f'<a href="{url}" rel="noopener">{label}</a>' for label, url in links)
         rows.append(f'<tr><th scope="row">{name}</th><td>{fr if lang == "fr" else en}</td>'
                     f'<td class="source-links">{buttons}</td></tr>')
-    return f"""{head(lang, 'source', s['title'] + ' · Raye Linux', s['lead'])}
+    return f"""{head(lang, 'source', s['title'] + ' · Raye Linux', s['description'])}
 <body>
 <a class="skip-link" href="#main">{'Aller au contenu' if lang == 'fr' else 'Skip to content'}</a>
 {topbar(lang, 'source')}
@@ -1518,6 +1615,9 @@ def main():
         write("fr/telecharger/index.html", french(download("fr")))
         write("en/download/index.html", download("en"))
         write("404.html", french(strip_links(not_found())))
+        write("sitemap.xml", sitemap())
+        write("robots.txt", robots())
+        write(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY + "\n")
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import site_v1
     site_v1.build(sys.modules[__name__])

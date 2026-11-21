@@ -212,7 +212,12 @@ class SiteTests(unittest.TestCase):
                 with self.subTest(page=rel, tag=tag):
                     self.assertNotIn("style", attrs)
                     self.assertFalse(any(k.startswith("on") for k in attrs))
-                    if tag == "script":
+                    if tag == "script" and attrs.get("type") == "application/ld+json":
+                        # a schema.org data block: nothing runs, so the CSP
+                        # has nothing to allow; only the home pages carry one
+                        self.assertNotIn("src", attrs)
+                        self.assertIn(rel, HOMES.values())
+                    elif tag == "script":
                         self.assertTrue(attrs.get("src", "").startswith("/assets/"))
                     self.assertNotEqual(tag, "style")
 
