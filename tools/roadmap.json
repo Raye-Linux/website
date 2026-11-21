@@ -289,7 +289,7 @@
     ],
     [
      "planned",
-     "Store: Flatpak, APT and AppImage apps, pick the format you want"
+     "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
     ],
     [
      "planned",
