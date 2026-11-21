@@ -189,6 +189,8 @@ FR = {
         'Plus de matériel fonctionne tout de suite : les pilotes Wi-Fi, webcam et son de Realtek et d\'autres s\'installent tout seuls quand un appareil en a besoin',
     'More desktops to choose from: GNOME and niri, with a Windows look':
         'Plus de bureaux au choix : GNOME et niri, avec un look Windows',
+    'Quick fix (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar, full screen, no wallet popup)':
+        'Correctif rapide (21 nov.) : les .deb de Steam et Heroic s\'installent de nouveau, liste du mode jeu épurée, Hyprland corrigé (une seule barre des tâches, plein écran, plus de fenêtre du portefeuille)',
     'Customize Hyprland your way: your own settings file, simple instructions, never overwritten':
         'Personnaliser Hyprland à votre façon : votre propre fichier de réglages, des instructions simples, jamais écrasé',
     'Developer options and remote web page':

@@ -7,6 +7,10 @@
    "items": [
     [
      "done",
+     "Quick fix (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar, full screen, no wallet popup)"
+    ],
+    [
+     "done",
      "Urgent fix (Nov 20): full game speed on NVIDIA again, one recommended driver, Graphics Card app fixed"
     ],
     [
