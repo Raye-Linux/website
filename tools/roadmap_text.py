@@ -185,6 +185,10 @@ FR = {
     "ARM PCs": "Les PC ARM",
     "Spanish, German, Portuguese and Italian": "Espagnol, allemand, portugais et italien",
     "Fingerprint readers": "Les lecteurs d'empreintes digitales",
+    'More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them':
+        'Plus de matériel fonctionne tout de suite : les pilotes Wi-Fi, webcam et son de Realtek et d\'autres s\'installent tout seuls quand un appareil en a besoin',
+    'More desktops to choose from: GNOME and niri, with a Windows look':
+        'Plus de bureaux au choix : GNOME et niri, avec un look Windows',
     'Customize Hyprland your way: your own settings file, simple instructions, never overwritten':
         'Personnaliser Hyprland à votre façon : votre propre fichier de réglages, des instructions simples, jamais écrasé',
     'Developer options and remote web page':
