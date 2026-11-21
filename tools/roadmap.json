@@ -11,15 +11,7 @@
     ],
     [
      "done",
-     "Urgent fix (Nov 20): full game speed on NVIDIA again, one recommended driver, Graphics Card app fixed"
-    ],
-    [
-     "done",
-     "Urgent fix (Nov 20): updates no longer stop halfway, stuck PCs repair themselves, boot screen kept"
-    ],
-    [
-     "done",
-     "New download (Nov 21): 1.0 Beta Sundog, with all the latest fixes built in"
+     "Urgent fixes (Nov 20): full NVIDIA game speed, updates never stop halfway"
     ],
     [
      "done",
@@ -334,6 +326,18 @@
     [
      "planned",
      "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
+    ],
+    [
+     "planned",
+     "New install: start in Try Raye with an Install icon, full-screen Setup, English boot menu, Setup fixes"
+    ],
+    [
+     "planned",
+     "Store apps you have move from Flatpak to APT once, nothing lost"
+    ],
+    [
+     "planned",
+     "USB copies show the real speed, with close and minimize buttons"
     ]
    ]
   },

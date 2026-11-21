@@ -193,6 +193,14 @@ FR = {
         'Correctifs rapides (21 nov.) : les .deb de Steam et Heroic s\'installent de nouveau, liste du mode jeu épurée, Hyprland corrigé (une barre des tâches sur chaque écran, plein écran, plus de fenêtre du portefeuille)',
     'Printers & scanners page and a Scan app, plus longer laptop battery life':
         'Page Imprimantes et scanners et une appli de numérisation, plus d\'autonomie sur les portables',
+    'Urgent fixes (Nov 20): full NVIDIA game speed, updates never stop halfway':
+        'Correctifs urgents (20 nov.) : pleine vitesse en jeu sur NVIDIA, les mises à jour ne s\'arrêtent plus à moitié',
+    'New install: start in Try Raye with an Install icon, full-screen Setup, English boot menu, Setup fixes':
+        'Nouvelle installation : on démarre dans Essayer Raye avec une icône Installer, installateur en plein écran, menu de la clé en anglais, correctifs de l\'installateur',
+    'Store apps you have move from Flatpak to APT once, nothing lost':
+        'Vos applis du Store passent de Flatpak à APT une seule fois, sans rien perdre',
+    'USB copies show the real speed, with close and minimize buttons':
+        'Les copies vers une clé USB montrent la vraie vitesse, avec boutons fermer et réduire',
     'Customize Hyprland your way: your own settings file, simple instructions, never overwritten':
         'Personnaliser Hyprland à votre façon : votre propre fichier de réglages, des instructions simples, jamais écrasé',
     'Developer options and remote web page':
