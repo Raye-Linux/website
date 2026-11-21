@@ -173,8 +173,8 @@ FR = {
     "More languages": "Plus de langues",
     "Raye Assistant updated, on Discord and the website":
         "Assistant Raye mis à jour, sur Discord et sur le site",
-    "Works on older PCs too (legacy BIOS, older processors, 2–4 GB RAM)":
-        "Marche aussi sur les PC plus anciens (BIOS ancien, processeurs plus vieux, 2 à 4 Go de "
+    "Works on older PCs too (legacy BIOS, older processors like Core 2 Duo, 2–4 GB RAM)":
+        "Marche aussi sur les PC plus anciens (BIOS ancien, processeurs plus vieux comme les Core 2 Duo, 2 à 4 Go de "
         "mémoire)",
     "Legal pages and FAQ": "Pages légales et foire aux questions",
     "New ISO for everyone": "Une nouvelle image ISO pour tout le monde",
