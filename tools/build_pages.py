@@ -1148,6 +1148,7 @@ def home(lang):
 <a class="more-link" href="#captures">{h['cta_more']}</a>
 </div>
 <p class="byline"><strong>{release_info()['title'].replace('Raye Linux ', '')}</strong> · {h['byline'].format(date=date_text(lang, release_info()['date']))}</p>
+{site_stats(lang)}
 </div>
 <figure class="hero-shot">
 <div class="screen">

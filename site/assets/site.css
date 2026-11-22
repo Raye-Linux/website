@@ -1229,3 +1229,9 @@ body { background: #131217; background-attachment: scroll; }
   .rm-icon-done path { stroke: Canvas; }
   .rm-progress { border: 1px solid CanvasText; }
 }
+
+/* downloads and active PCs: plain numbers, no cards */
+.site-stats { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; margin: 1rem 0 0; }
+.site-stats div { display: flex; flex-direction: column-reverse; }
+.site-stats dd { margin: 0; color: var(--text-primary); font-size: 1.25rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.site-stats dt { margin: 0; color: var(--text-tertiary); font-size: 0.85rem; font-weight: 400; }
