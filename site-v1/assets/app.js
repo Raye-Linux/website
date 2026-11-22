@@ -235,3 +235,29 @@
     });
   });
 })();
+
+// Downloads and active PCs: the page is built with the numbers of its last
+// deploy, then /stats.json (refreshed every hour by the lab) updates them.
+(function () {
+  "use strict";
+  var cells = document.querySelectorAll("[data-stat]");
+  if (!cells.length || !window.fetch) return;
+  var fr = document.documentElement.lang.indexOf("fr") === 0;
+  fetch("/stats.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (s) {
+      if (!s) return;
+      var num = new Intl.NumberFormat(fr ? "fr-CA" : "en-US");
+      cells.forEach(function (el) {
+        var k = el.getAttribute("data-stat");
+        if (k === "date") {
+          var d = new Date(s.date + "T12:00:00Z");
+          el.textContent = d.toLocaleDateString(fr ? "fr-CA" : "en-US",
+            { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+        } else if (typeof s[k] === "number") {
+          el.textContent = num.format(s[k]);
+        }
+      });
+    })
+    .catch(function () {});
+})();

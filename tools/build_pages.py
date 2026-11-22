@@ -348,12 +348,12 @@ def site_stats(lang):
               ("machines", "PC actifs cette semaine")) if lang == "fr" else (
               ("started", "downloads started"), ("complete", "downloads finished"),
               ("machines", "PCs active this week"))
-    items = "".join(f"<div><dt>{label}</dt><dd>{num(s[key])}</dd></div>" for key, label in labels)
+    items = "".join(f'<div><dt>{label}</dt><dd data-stat="{key}">{num(s[key])}</dd></div>' for key, label in labels)
     note = (f"Téléchargements comptés par Cloudflare depuis le 14 novembre. PC actifs : machines qui ont "
-            f"cherché des mises à jour Raye ces 7 derniers jours. Au {date_text(lang, s['date'])}."
+            f"cherché des mises à jour Raye ces 7 derniers jours. Au <span data-stat='date'>{date_text(lang, s['date'])}</span>."
             if lang == "fr" else
             f"Downloads counted by Cloudflare since November 14. Active PCs: machines that checked for "
-            f"Raye updates in the last 7 days. As of {date_text(lang, s['date'])}.")
+            f"Raye updates in the last 7 days. As of <span data-stat='date'>{date_text(lang, s['date'])}</span>.")
     return f'<dl class="site-stats">{items}</dl>\n<p class="site-stats-note">{note}</p>'
 
 
@@ -1643,6 +1643,10 @@ def main():
         write("sitemap.xml", sitemap())
         write("robots.txt", robots())
         write(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY + "\n")
+    stats = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stats.json")
+    if os.path.exists(stats):
+        with open(stats) as f:
+            write("stats.json", f.read())
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import site_v1
     site_v1.build(sys.modules[__name__])
