@@ -1235,3 +1235,4 @@ body { background: #131217; background-attachment: scroll; }
 .site-stats div { display: flex; flex-direction: column-reverse; }
 .site-stats dd { margin: 0; color: var(--text-primary); font-size: 1.25rem; font-weight: 500; font-variant-numeric: tabular-nums; }
 .site-stats dt { margin: 0; color: var(--text-tertiary); font-size: 0.85rem; font-weight: 400; }
+.site-stats-note { margin: 0.5rem 0 0; max-width: 42rem; color: var(--text-tertiary); font-size: 0.8rem; }

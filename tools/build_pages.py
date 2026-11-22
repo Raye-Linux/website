@@ -349,9 +349,12 @@ def site_stats(lang):
               ("started", "downloads started"), ("complete", "downloads finished"),
               ("machines", "PCs active this week"))
     items = "".join(f"<div><dt>{label}</dt><dd>{num(s[key])}</dd></div>" for key, label in labels)
-    note = ("PC actifs : machines qui ont cherché des mises à jour Raye ces 7 derniers jours. Au "
-            if lang == "fr" else "Active PCs: machines that checked for Raye updates in the last 7 days. As of ")
-    return (f'<dl class="site-stats" title="{note}{date_text(lang, s["date"])}">{items}</dl>')
+    note = (f"Téléchargements comptés par Cloudflare depuis le 14 novembre. PC actifs : machines qui ont "
+            f"cherché des mises à jour Raye ces 7 derniers jours. Au {date_text(lang, s['date'])}."
+            if lang == "fr" else
+            f"Downloads counted by Cloudflare since November 14. Active PCs: machines that checked for "
+            f"Raye updates in the last 7 days. As of {date_text(lang, s['date'])}.")
+    return f'<dl class="site-stats">{items}</dl>\n<p class="site-stats-note">{note}</p>'
 
 
 def download(lang, shell=None):
