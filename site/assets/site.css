@@ -195,9 +195,9 @@ main { flex: 1; width: 100%; }
   gap: 0.55rem;
   margin: 0 0 1.25rem;
   padding: 0.3rem 0.8rem 0.3rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(123, 60, 255, 0.16);
-  border: 1px solid rgba(180, 140, 255, 0.28);
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
   font-size: 0.875rem;
   font-weight: 600;
@@ -237,9 +237,7 @@ h1 {
   background: var(--bg-card);
   border: 1px solid var(--stroke-surface);
   border-radius: var(--radius-card);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 16px 40px rgba(0, 0, 0, 0.28);
-  -webkit-backdrop-filter: blur(24px) saturate(140%);
-  backdrop-filter: blur(24px) saturate(140%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 }
 
 /* signup */
@@ -418,9 +416,9 @@ h1 {
   position: relative;
   padding: 0.45rem;
   border-radius: 14px;
-  background: linear-gradient(180deg, #1C1B21, #0D0C10);
+  background: #17161B;
   border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset,
+  box-shadow:
               0 40px 90px -20px rgba(0, 0, 0, 0.65),
               0 0 0 1px rgba(0, 0, 0, 0.4);
 }
@@ -508,7 +506,7 @@ h1 {
 .shot-tab:hover { color: var(--text-primary); background: var(--fill-control-hover); }
 .shot-tab[aria-selected="true"] {
   color: var(--text-primary);
-  background: rgba(123, 60, 255, 0.28);
+  background: var(--fill-control-hover);
   box-shadow: inset 0 -2px 0 var(--accent-text);
 }
 
@@ -946,7 +944,7 @@ dialog.dl-dialog .dl-accept { margin: 0; max-height: 85vh; overflow: auto; }
 .help-avatar-head { width: 2.25rem; height: 2.25rem; }
 .help-avatar-msg { width: 1.75rem; height: 1.75rem; margin-top: 0.15rem; }
 .help-avatar-card { width: 2.25rem; height: 2.25rem; background: #1B1830; border-color: #4A3C7A; }
-.help-avatar-big { width: 3rem; height: 3rem; box-shadow: 0 0 0 4px rgba(123, 60, 255, 0.16); }
+.help-avatar-big { width: 3rem; height: 3rem; }
 
 .help-head {
   display: flex; align-items: center; gap: 0.7rem;
@@ -1007,9 +1005,9 @@ dialog.dl-dialog .dl-accept { margin: 0; max-height: 85vh; overflow: auto; }
 .help-chip {
   display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   padding: 0.25rem 0.65rem; font-size: 0.75rem; color: var(--accent-text); text-decoration: none;
-  background: #1C1A24; border: 1px solid #2F2B3C; border-radius: 999px;
+  background: #1C1B21; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.5rem;
 }
-.help-chip:hover { color: #FFFFFF; background: #262233; }
+.help-chip:hover { color: var(--text-primary); background: #24232A; }
 .help-chip-page { color: var(--text-tertiary); }
 .help-copy {
   display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem;
@@ -1183,7 +1181,7 @@ body { background: #131217; background-attachment: scroll; }
   padding: 1.15rem 1.4rem 1.25rem 1.4rem;
   background: var(--bg-card);
   border: 1px solid var(--stroke-surface);
-  border-left: 4px solid var(--rm-tone);
+  border-left: 1px solid var(--stroke-surface);
   border-radius: 8px;
 }
 .rm-section-head { margin-bottom: 0.75rem; }
