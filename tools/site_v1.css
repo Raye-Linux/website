@@ -641,3 +641,9 @@ html { scroll-padding-top: 5rem; }
 .crumbs li:last-child::after { content: none; }
 .live [hidden] { display: none !important; }
 .live-head img { width: 3.5rem; height: auto; }
+
+/* downloads and active PCs: plain numbers, no cards */
+.site-stats { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; margin: 1.25rem 0 0; }
+.site-stats div { display: flex; flex-direction: column-reverse; }
+.site-stats dd { margin: 0; color: var(--text-primary); font-size: 1.25rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.site-stats dt { color: var(--text-tertiary); font-size: 0.85rem; }

@@ -329,6 +329,7 @@ class Site:
 <a class="btn btn-quiet" href="#changes">{h['more'][lang]}</a>
 </div>
 <p class="hero-meta">{meta}</p>
+{self.b.site_stats(lang)}
 </div>
 {self.shot(h['hero_shot'], lang, hero=True)}
 </section>

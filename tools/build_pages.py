@@ -334,6 +334,26 @@ def pre(text):
     return f'<pre class="code"><code>{text}</code></pre>'
 
 
+def site_stats(lang):
+    """Downloads and active PCs, from tools/stats.json (written by the lab's
+    site-stats.py before a build). No file, no row: never a made-up number."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stats.json")
+    try:
+        with open(path) as f:
+            s = json.load(f)
+    except (OSError, ValueError):
+        return ""
+    num = (lambda n: f"{n:,}".replace(",", "\u202f")) if lang == "fr" else (lambda n: f"{n:,}")
+    labels = (("started", "téléchargements commencés"), ("complete", "téléchargements finis"),
+              ("machines", "PC actifs cette semaine")) if lang == "fr" else (
+              ("started", "downloads started"), ("complete", "downloads finished"),
+              ("machines", "PCs active this week"))
+    items = "".join(f"<div><dt>{label}</dt><dd>{num(s[key])}</dd></div>" for key, label in labels)
+    note = ("PC actifs : machines qui ont cherché des mises à jour Raye ces 7 derniers jours. Au "
+            if lang == "fr" else "Active PCs: machines that checked for Raye updates in the last 7 days. As of ")
+    return (f'<dl class="site-stats" title="{note}{date_text(lang, s["date"])}">{items}</dl>')
+
+
 def download(lang, shell=None):
     """The download page. `shell` is the V1 site, which brings its own
     head, top bar and footer; without it the page wears the coming-soon ones."""
@@ -385,6 +405,7 @@ def download(lang, shell=None):
 <div>
 <h2 id="file-title">{iso}</h2>
 <p class="dl-meta">{size_text(lang, info['size'])} · {d['kind']} · {date_text(lang, info['date'])}</p>
+{site_stats(lang)}
 </div>
 <div class="dl-actions">
 <a class="btn btn-accent" href="#accept" data-accept>{d['get']}</a>
