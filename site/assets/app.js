@@ -263,6 +263,8 @@
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
+    // the last value is written even if frames stop (hidden tab, slow PC)
+    setTimeout(function () { el.textContent = num.format(to); }, ms + 150);
   }
 
   function bump(el, n) {
