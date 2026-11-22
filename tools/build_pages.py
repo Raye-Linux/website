@@ -1314,8 +1314,9 @@ REPOS = [
     # the Windows layer repo is left off this page until it is renamed (its
     # current name must not appear in what users read); it is public all the same
     ("account", "Raye accounts: the server and the client.", "Les comptes Raye : le serveur et le client."),
-    ("kernel", "The kernel, with Raye's changes for PCs and laptops.",
-     "Le noyau, avec les changements de Raye pour les PC et portables."),
+    # kernel: private until Wednesday Nov 25, 2026 (owner); put this back then
+    # ("kernel", "The kernel, with Raye's changes for PCs and laptops.",
+    #  "Le noyau, avec les changements de Raye pour les PC et portables."),
     ("handbook", "The user guide.", "Le guide d'utilisation."),
     ("website", "This website.", "Ce site."),
 ]
