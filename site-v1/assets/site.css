@@ -697,7 +697,7 @@ h1 {
   margin: 0 0 1.75rem;
   padding: 1rem 1.25rem;
   border: 1px solid var(--stroke-surface);
-  border-left: 3px solid var(--accent);
+  border-left: 1px solid var(--stroke-surface);
   border-radius: var(--radius-card);
   background: var(--fill-control);
 }
