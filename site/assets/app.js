@@ -238,26 +238,69 @@
 
 // Downloads and active PCs: the page is built with the numbers of its last
 // deploy, then /stats.json (refreshed every hour by the lab) updates them.
+// On arrival the numbers count up; when one goes up later, a small "+N"
+// shows next to it. No motion for people who asked for less of it.
 (function () {
   "use strict";
   var cells = document.querySelectorAll("[data-stat]");
   if (!cells.length || !window.fetch) return;
   var fr = document.documentElement.lang.indexOf("fr") === 0;
-  fetch("/stats.json?t=" + Date.now(), { cache: "no-store" })
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (s) {
-      if (!s) return;
-      var num = new Intl.NumberFormat(fr ? "fr-CA" : "en-US");
-      cells.forEach(function (el) {
-        var k = el.getAttribute("data-stat");
-        if (k === "date") {
-          var d = new Date(s.date + "T12:00:00Z");
-          el.textContent = d.toLocaleDateString(fr ? "fr-CA" : "en-US",
-            { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
-        } else if (typeof s[k] === "number") {
-          el.textContent = num.format(s[k]);
-        }
-      });
-    })
-    .catch(function () {});
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var num = new Intl.NumberFormat(fr ? "fr-CA" : "en-US");
+  var shown = {};
+  cells.forEach(function (el) {
+    var k = el.getAttribute("data-stat");
+    if (k !== "date") shown[k] = parseInt(el.textContent.replace(/\D/g, ""), 10) || 0;
+  });
+
+  function count(el, from, to, ms) {
+    if (still || from === to) { el.textContent = num.format(to); return; }
+    var t0 = null;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min(1, (t - t0) / ms), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = num.format(Math.round(from + (to - from) * e));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function bump(el, n) {
+    if (still) return;
+    var b = document.createElement("span");
+    b.className = "stat-bump"; b.setAttribute("aria-hidden", "true");
+    b.textContent = "+" + num.format(n);
+    el.appendChild(b);
+    setTimeout(function () { b.remove(); }, 2400);
+  }
+
+  function apply(s, first) {
+    cells.forEach(function (el) {
+      var k = el.getAttribute("data-stat");
+      if (k === "date") {
+        el.textContent = new Date(s.date + "T12:00:00Z").toLocaleDateString(fr ? "fr-CA" : "en-US",
+          { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+        return;
+      }
+      if (typeof s[k] !== "number") return;
+      var old = shown[k];
+      if (first) {
+        count(el, 0, s[k], 900);
+        if (s[k] > old) setTimeout(function () { bump(el, s[k] - old); }, 950);
+      } else if (s[k] !== old) {
+        count(el, old, s[k], 600);
+        if (s[k] > old) bump(el, s[k] - old);
+      }
+      shown[k] = s[k];
+    });
+  }
+
+  function load(first) {
+    fetch("/stats.json?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (s) { if (s) apply(s, first); })
+      .catch(function () {});
+  }
+  load(true);
+  setInterval(function () { if (!document.hidden) load(false); }, 120000);
 })();
