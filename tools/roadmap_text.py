@@ -60,6 +60,12 @@ FR = {
     "V1 Beta 2 (next big update)": "V1 Bêta 2 (la prochaine grosse mise à jour)",
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
+    "V1 Beta 3 · next week": "V1 Bêta 3 · la semaine prochaine",
+    "Steam sees your other drives": "Steam voit vos autres disques",
+    "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM":
+        "La même faible RAM au repos sur tous les PC (environ 850 Mo), même avec beaucoup de RAM",
+    "V1 Beta 1 (Nov 19): faster boot, AMD and NVIDIA panels, Clock app, bigger Store, new installer, Try Raye":
+        "V1 Bêta 1 (19 novembre) : démarrage plus rapide, panneaux AMD et NVIDIA, appli Horloge, Store plus grand, nouvel installateur, Essayer Raye",
     "V2": "V2",
     "V3": "V3",
     "V4": "V4",

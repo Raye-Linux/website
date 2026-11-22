@@ -15,69 +15,11 @@
     ],
     [
      "done",
+     "V1 Beta 1 (Nov 19): faster boot, AMD and NVIDIA panels, Clock app, bigger Store, new installer, Try Raye"
+    ],
+    [
+     "done",
      "Join the team: apply in #join-the-team"
-    ]
-   ]
-  },
-  {
-   "title": "✅ V1 Beta 1 · out November 19",
-   "color": "3ddc97",
-   "items": [
-    [
-     "done",
-     "A much faster boot"
-    ],
-    [
-     "done",
-     "AMD Graphics Card panel (fans, power, profiles) and the NVIDIA Control Panel"
-    ],
-    [
-     "done",
-     "Better File Explorer and smoother mouse scrolling everywhere"
-    ],
-    [
-     "done",
-     "Performance options in Settings, with a transparency switch"
-    ],
-    [
-     "done",
-     "New Clock app: alarms, timer, stopwatch, world clocks"
-    ],
-    [
-     "done",
-     "Windows apps get their fonts, 32-bit games can use 4 GB, Store packages open"
-    ],
-    [
-     "done",
-     "Bigger Store, with Steam and Heroic built in"
-    ],
-    [
-     "done",
-     "Pinned web apps keep their real icon"
-    ],
-    [
-     "done",
-     "New installer: dual boot next to Windows or another Linux, resize partitions, better Wi-Fi page"
-    ],
-    [
-     "done",
-     "Cleaner, more reliable Raye Update"
-    ],
-    [
-     "done",
-     "\"Try Raye\" mode: use Raye from the USB stick without installing"
-    ],
-    [
-     "done",
-     "Store reviews and ratings"
-    ],
-    [
-     "done",
-     "Switch to Raye from another system and keep your files"
-    ],
-    [
-     "done",
-     "The ISO works in virtual machines (VirtualBox, VMware, QEMU guest tools included)"
     ]
    ]
   },
@@ -216,24 +158,54 @@
    ]
   },
   {
-   "title": "🔨 V1 final",
+   "title": "🔨 V1 Beta 3 · next week",
    "color": "9b6bff",
    "items": [
+    [
+     "planned",
+     "Steam sees your other drives"
+    ],
     [
      "doing",
      "Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution"
     ],
     [
      "doing",
-     "New Raye kernel tuned for gaming and smoothness"
+     "Fix for the flicker on NVIDIA cards at 144 Hz"
+    ],
+    [
+     "planned",
+     "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM"
     ],
     [
      "doing",
      "Windows apps install silently with a real progress bar, start to finish"
     ],
     [
+     "planned",
+     "Taskbar settings: left or center, icon size, taskbar size, position, auto-hide"
+    ],
+    [
+     "planned",
+     "No more freezes when RAM runs out: the PC slows down a little instead"
+    ],
+    [
+     "planned",
+     "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
+    ],
+    [
+     "planned",
+     "USB copies show the real speed, with close and minimize buttons"
+    ]
+   ]
+  },
+  {
+   "title": "🔨 V1 final",
+   "color": "8a8f98",
+   "items": [
+    [
      "doing",
-     "Fix for the flicker on NVIDIA cards at 144 Hz"
+     "New Raye kernel tuned for gaming and smoothness"
     ],
     [
      "doing",
@@ -285,10 +257,6 @@
     ],
     [
      "planned",
-     "Taskbar settings: left or center, icon size, taskbar size, position, auto-hide"
-    ],
-    [
-     "planned",
      "Join the team and a staff panel on the website"
     ],
     [
@@ -309,19 +277,11 @@
     ],
     [
      "planned",
-     "No more freezes when RAM runs out: the PC slows down a little instead"
-    ],
-    [
-     "planned",
      "Everything checked in French, screen by screen (installer included)"
     ],
     [
      "planned",
      "A real Raye screen to unlock an encrypted disk at startup"
-    ],
-    [
-     "planned",
-     "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
     ],
     [
      "planned",
@@ -334,10 +294,6 @@
     [
      "planned",
      "Store apps you have move from Flatpak to APT once, nothing lost"
-    ],
-    [
-     "planned",
-     "USB copies show the real speed, with close and minimize buttons"
     ]
    ]
   },
