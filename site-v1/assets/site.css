@@ -55,8 +55,7 @@ body {
   color: var(--text-primary);
   /* "mica": the graphite base with one faint violet light in a corner */
   background:
-    radial-gradient(60rem 40rem at 8% -8%, rgba(123, 60, 255, 0.12), transparent 70%),
-    linear-gradient(160deg, #100F13 0%, #141318 50%, #1A191F 100%);
+    #121116;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   display: flex;
@@ -222,8 +221,8 @@ h1 {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 3.6rem);
   line-height: 1.05;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 .lede {
@@ -303,7 +302,7 @@ h1 {
   background: var(--accent);
   border-color: rgba(255, 255, 255, 0.12) transparent rgba(0, 0, 0, 0.2);
 }
-.btn-accent:hover { background: var(--accent-hover); box-shadow: 0 0 22px var(--glow); }
+.btn-accent:hover { background: var(--accent-hover); }
 .btn-accent:active { background: var(--accent-pressed); transform: translateY(1px); }
 .btn[disabled] { opacity: 0.6; cursor: progress; }
 
@@ -385,7 +384,7 @@ h1 {
 .hero h1 {
   font-size: clamp(2.5rem, 4.4vw, 4rem);
   line-height: 1.04;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   max-width: 12ch;
   margin-bottom: 1.25rem;
   text-wrap: balance;
@@ -437,8 +436,7 @@ h1 {
   content: "";
   position: absolute;
   inset: 8% 4% -4% 10%;
-  background: radial-gradient(closest-side, rgba(123, 60, 255, 0.24), transparent);
-  filter: blur(40px);
+  background: none;
   z-index: -1;
 }
 /* the hero shows the top of the Start menu at actual size; the bottom fades
@@ -911,23 +909,23 @@ dialog.dl-dialog .dl-accept { margin: 0; max-height: 85vh; overflow: auto; }
   position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 50;
   display: inline-flex; align-items: center; gap: 0.5rem;
   min-height: 3rem; padding: 0 1.15rem 0 1rem;
-  font: inherit; font-weight: 600; color: #FFFFFF;
-  background: var(--accent); border: 0;
-  border-radius: 999px; cursor: pointer;
+  font: inherit; font-weight: 500; color: var(--text-primary);
+  background: #1C1B21; border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem; cursor: pointer;
   box-shadow: 0 10px 28px -10px rgba(0, 0, 0, 0.7);
 }
-.help-open:hover { background: var(--accent-hover); }
+.help-open:hover { background: #24232A; }
 .help-open:focus-visible, .help-panel button:focus-visible, .help-panel a:focus-visible {
   outline: 2px solid var(--focus-outer); outline-offset: 2px;
 }
 .help-open-mark {
   width: 0.95rem; height: 0.95rem; border-radius: 50%;
-  border: 2px solid #FFFFFF; position: relative;
+  border: 2px solid currentColor; position: relative;
 }
 .help-open-mark::after {
   content: ""; position: absolute; left: 50%; top: 50%;
   width: 0.28rem; height: 0.28rem; margin: -0.14rem 0 0 -0.14rem;
-  border-radius: 50%; background: #FFFFFF;
+  border-radius: 50%; background: currentColor;
 }
 .help-panel {
   position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 51;
