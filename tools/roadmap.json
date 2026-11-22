@@ -158,7 +158,7 @@
    ]
   },
   {
-   "title": "🔨 V1 Beta 3 · next week",
+   "title": "🔨 V1 Beta 3",
    "color": "9b6bff",
    "items": [
     [
@@ -196,56 +196,6 @@
     [
      "planned",
      "USB copies show the real speed, with close and minimize buttons"
-    ]
-   ]
-  },
-  {
-   "title": "🔨 V1 final",
-   "color": "8a8f98",
-   "items": [
-    [
-     "doing",
-     "New Raye kernel tuned for gaming and smoothness"
-    ],
-    [
-     "doing",
-     "40+ popular Windows apps in the Store, each one tested, and \"Optimized for Raye\" badges"
-    ],
-    [
-     "doing",
-     "Complete Windows bridge: share drivers and settings with Windows"
-    ],
-    [
-     "doing",
-     "Final polish and fixes from both betas"
-    ],
-    [
-     "planned",
-     "New website, with fresh screenshots of the real system"
-    ],
-    [
-     "planned",
-     "More languages"
-    ],
-    [
-     "planned",
-     "Raye kernel only (Ubuntu's kernel removed)"
-    ],
-    [
-     "done",
-     "Raye Assistant updated, on Discord and the website"
-    ],
-    [
-     "planned",
-     "Works on older PCs too (legacy BIOS, older processors like Core 2 Duo, 2–4 GB RAM)"
-    ],
-    [
-     "planned",
-     "Legal pages and FAQ"
-    ],
-    [
-     "planned",
-     "New ISO for everyone"
     ],
     [
      "planned",
@@ -253,7 +203,11 @@
     ],
     [
      "planned",
-     "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
+     "The V1 website, with fresh screenshots of the real system"
+    ],
+    [
+     "planned",
+     "Legal pages and FAQ"
     ],
     [
      "planned",
@@ -265,23 +219,7 @@
     ],
     [
      "planned",
-     "Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime"
-    ],
-    [
-     "done",
-     "Raye Assistant knows every version since 0.5"
-    ],
-    [
-     "planned",
-     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
-    ],
-    [
-     "planned",
-     "Everything checked in French, screen by screen (installer included)"
-    ],
-    [
-     "planned",
-     "A real Raye screen to unlock an encrypted disk at startup"
+     "Store apps you have move from Flatpak to APT once, nothing lost"
     ],
     [
      "planned",
@@ -289,29 +227,19 @@
     ],
     [
      "planned",
-     "New install: start in Try Raye with an Install icon, full-screen Setup, English boot menu, Setup fixes"
+     "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
     ],
     [
      "planned",
-     "Store apps you have move from Flatpak to APT once, nothing lost"
-    ]
-   ]
-  },
-  {
-   "title": "🕒 V2",
-   "color": "8a8f98",
-   "items": [
+     "Raye kernel only (Ubuntu's kernel removed)"
+    ],
     [
      "planned",
-     "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
+     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
     ],
     [
      "planned",
      "Raye account: your settings follow you to every PC"
-    ],
-    [
-     "planned",
-     "Spanish, German, Portuguese and Italian"
     ],
     [
      "planned",
@@ -324,13 +252,25 @@
     [
      "planned",
      "Printers & scanners page and a Scan app, plus longer laptop battery life"
+    ],
+    [
+     "planned",
+     "A real Raye screen to unlock an encrypted disk at startup"
+    ],
+    [
+     "doing",
+     "Complete Windows bridge: share drivers and settings with Windows"
     ]
    ]
   },
   {
-   "title": "🕒 V3",
+   "title": "🕒 V1 Beta 4",
    "color": "8a8f98",
    "items": [
+    [
+     "planned",
+     "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
+    ],
     [
      "planned",
      "Accounts: badges, community and admin panel"
@@ -341,7 +281,57 @@
     ],
     [
      "planned",
-     "Every other language"
+     "Every language: all of Raye translated"
+    ],
+    [
+     "planned",
+     "Arch edition, kept in sync with the Ubuntu edition"
+    ],
+    [
+     "planned",
+     "Works on older PCs too (legacy BIOS, older processors like Core 2 Duo, 2–4 GB RAM)"
+    ]
+   ]
+  },
+  {
+   "title": "🔨 V1 final",
+   "color": "8a8f98",
+   "items": [
+    [
+     "planned",
+     "Website refresh: a cleaner, more professional look and more pages"
+    ],
+    [
+     "doing",
+     "New Raye kernel tuned for gaming and smoothness"
+    ],
+    [
+     "doing",
+     "40+ popular Windows apps in the Store, each one tested, and \"Optimized for Raye\" badges"
+    ],
+    [
+     "doing",
+     "Final polish and fixes from both betas"
+    ],
+    [
+     "done",
+     "Raye Assistant updated, on Discord and the website"
+    ],
+    [
+     "planned",
+     "New ISO for everyone"
+    ],
+    [
+     "done",
+     "Raye Assistant knows every version since 0.5"
+    ],
+    [
+     "planned",
+     "Everything checked in French, screen by screen (installer included)"
+    ],
+    [
+     "planned",
+     "New install: start in Try Raye with an Install icon, full-screen Setup, English boot menu, Setup fixes"
     ],
     [
      "planned",
@@ -349,7 +339,7 @@
     ],
     [
      "planned",
-     "Arch edition, kept in sync with the Ubuntu edition"
+     "Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime"
     ]
    ]
   }

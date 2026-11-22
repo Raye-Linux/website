@@ -60,6 +60,15 @@ FR = {
     "V1 Beta 2 (next big update)": "V1 Bêta 2 (la prochaine grosse mise à jour)",
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
+    "V1 Beta 4": "V1 Bêta 4",
+    "V1 Beta 3": "V1 Bêta 3",
+    "Every language: all of Raye translated": "Toutes les langues : tout Raye traduit",
+    "Raye Community: Raye's own chat on the website and in Raye Linux, with your Raye account, friends, roles, moderation, images and videos, private messages and staff tools, then it replaces the Discord server":
+        "Raye Community : le chat de Raye, sur le site et dans Raye Linux, avec votre compte Raye, les amis, les rôles, la modération, les images et vidéos, les messages privés et les outils du staff, puis il remplace le serveur Discord",
+    "The V1 website, with fresh screenshots of the real system":
+        "Le site de la V1, avec de nouvelles captures du vrai système",
+    "Website refresh: a cleaner, more professional look and more pages":
+        "Site refait : un style plus soigné et plus professionnel, et plus de pages",
     "V1 Beta 3 · next week": "V1 Bêta 3 · la semaine prochaine",
     "Steam sees your other drives": "Steam voit vos autres disques",
     "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM":
