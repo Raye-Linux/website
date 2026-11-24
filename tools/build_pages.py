@@ -344,15 +344,13 @@ def site_stats(lang):
     except (OSError, ValueError):
         return ""
     num = (lambda n: f"{n:,}".replace(",", "\u202f")) if lang == "fr" else (lambda n: f"{n:,}")
-    labels = (("started", "téléchargements commencés"), ("complete", "téléchargements finis"),
-              ("machines", "PC actifs cette semaine")) if lang == "fr" else (
-              ("started", "downloads started"), ("complete", "downloads finished"),
-              ("machines", "PCs active this week"))
+    labels = (("complete", "téléchargements"), ("machines", "PC actifs")) if lang == "fr" else (
+              ("complete", "downloads"), ("machines", "active PCs"))
     items = "".join(f'<div><dt>{label}</dt><dd data-stat="{key}">{num(s[key])}</dd></div>' for key, label in labels)
-    note = (f"Téléchargements comptés par Cloudflare depuis le 14 novembre. PC actifs : machines qui ont "
+    note = (f"Téléchargements terminés, comptés par Cloudflare depuis le 14 novembre. PC actifs : machines qui ont "
             f"cherché des mises à jour Raye ces 7 derniers jours. Au <span data-stat='date'>{date_text(lang, s['date'])}</span>."
             if lang == "fr" else
-            f"Downloads counted by Cloudflare since November 14. Active PCs: machines that checked for "
+            f"Finished downloads, counted by Cloudflare since November 14. Active PCs: machines that checked for "
             f"Raye updates in the last 7 days. As of <span data-stat='date'>{date_text(lang, s['date'])}</span>.")
     return f'<dl class="site-stats">{items}</dl>\n<p class="site-stats-note">{note}</p>'
 
