@@ -254,8 +254,9 @@ FR = {
         'Les mises à jour finissent toujours sur la version la plus récente, même en plein téléchargement',
     'Store: APT apps first, Flatpak only when not on APT, plus AppImage':
         'Store : les applis APT d\'abord, Flatpak seulement si elles ne sont pas en APT, et AppImage',
-    'Taskbar settings: left or center, icon size, taskbar size, position, auto-hide':
-        'Réglages de la barre des tâches : à gauche ou au centre, taille des icônes, taille de la barre, position, masquage automatique',
+    'Taskbar settings: left or center, icon size, taskbar height, auto-hide':
+        'Réglages de la barre des tâches : à gauche ou au centre, taille des icônes, hauteur de la barre, masquage automatique',
+    'Taskbar on top or on the side of the screen': 'Barre des tâches en haut ou sur le côté de l’écran',
     'Join the team and a staff panel on the website':
         "Rejoindre l'équipe et un panneau du staff sur le site",
     'Public profiles and badges':

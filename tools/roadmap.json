@@ -210,8 +210,8 @@
      "Website refresh: a cleaner, more professional look and more pages"
     ],
     [
-     "planned",
-     "Taskbar settings: left or center, icon size, taskbar size, position, auto-hide"
+     "doing",
+     "Taskbar settings: left or center, icon size, taskbar height, auto-hide"
     ],
     [
      "doing",
@@ -278,6 +278,10 @@
     [
      "doing",
      "Windows apps install silently with a real progress bar, start to finish"
+    ],
+    [
+     "planned",
+     "Taskbar on top or on the side of the screen"
     ],
     [
      "planned",
