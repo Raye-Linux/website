@@ -29,131 +29,35 @@
    "items": [
     [
      "done",
-     "Choose KDE or Hyprland during installation"
+     "KDE or Hyprland: choose at install, switch from Settings in seconds"
     ],
     [
      "done",
-     "Windows 10 look option"
+     "Windows 10 look, real Windows 10 Start menu, Windows-style animations and snap"
     ],
     [
      "done",
-     "A real Windows 10 Start menu"
+     "Bring your files, wallpaper, Wi-Fi and apps from Windows or your old system"
     ],
     [
      "done",
-     "Windows-style window animations, maximize and snap"
+     "Bigger Store: TikTok LIVE Studio, Affinity, rekordbox, Mixxx and 14 more tested apps"
     ],
     [
      "done",
-     "TikTok LIVE Studio and Affinity in the Store, FL Studio settings checked"
+     "Game mode on by itself, NVIDIA Control Panel, RAM at idle about 850 MB"
     ],
     [
      "done",
-     "Import your files from Windows"
+     "Many more settings, Clock that wakes the PC, real update percentage at startup"
     ],
     [
      "done",
-     "Install guide and keyboard support for Intel/AMD Chromebooks"
+     "Safe by default: firewall, private Wi-Fi address, automatic kernel security updates"
     ],
     [
      "done",
-     "Game mode that turns on by itself while you play"
-    ],
-    [
-     "done",
-     "Lower RAM use at idle: about 850 MB, down from 1 GB"
-    ],
-    [
-     "done",
-     "Community Store requests: rekordbox and Mixxx"
-    ],
-    [
-     "done",
-     "14 more Windows apps in the Store, each one tested"
-    ],
-    [
-     "done",
-     "Windows bridge: copy your files, wallpaper and favorites from Windows"
-    ],
-    [
-     "done",
-     "NVIDIA Control Panel opened from Settings"
-    ],
-    [
-     "done",
-     "Clock: opens from the taskbar clock, and alarms wake the PC from sleep when it can"
-    ],
-    [
-     "done",
-     "Many more settings like Windows 11"
-    ],
-    [
-     "done",
-     "Windows layer fully hidden: Raye file dialogs, no technical names in Task Manager"
-    ],
-    [
-     "done",
-     "Bring your wallpaper, Wi-Fi networks, apps and browser data from your old system"
-    ],
-    [
-     "done",
-     "Your files from Windows offered right after Setup"
-    ],
-    [
-     "done",
-     "Check for very old processors before installing"
-    ],
-    [
-     "done",
-     "Update screen at startup shows its real percentage"
-    ],
-    [
-     "done",
-     "Try Raye never touches the PC's own swap"
-    ],
-    [
-     "done",
-     "Store settings, and Synaptic removed"
-    ],
-    [
-     "done",
-     "Fix the maximize and snap glitch"
-    ],
-    [
-     "done",
-     "Taskbar buttons clickable up to the screen edge"
-    ],
-    [
-     "done",
-     "PCs whose sleep doesn't work get it turned off automatically, with a clear message (turn it back on in Settings)"
-    ],
-    [
-     "done",
-     "Automatic kernel security updates"
-    ],
-    [
-     "done",
-     "Fix the Merge folders window in File Explorer"
-    ],
-    [
-     "done",
-     "Safe by default: firewall on and a private Wi-Fi address, encrypted DNS one click away in Settings, nothing slowed down"
-    ],
-    [
-     "done",
-     "Webcam, a built-in MIDI synth and Print to PDF for Windows programs"
-    ],
-    [
-     "done",
-     "Faster Ubuntu updates everywhere: your country's server first, others as backup"
-    ],
-    [
-     "done",
-     "Switch between KDE and Hyprland from Settings in seconds, your apps reopen"
-    ],
-    [
-     "done",
-     "Updates always end on the newest version, even mid-download"
+     "Many fixes: snap, taskbar edge, sleep on PCs that can't, faster updates from your country's server"
     ]
    ]
   },
@@ -240,6 +144,18 @@
     [
      "planned",
      "Wobbly windows: a switch in Settings"
+    ],
+    [
+     "doing",
+     "Settings and every Raye app work well on Hyprland"
+    ],
+    [
+     "doing",
+     "Complete Hyprland guide: change everything, Raye apps included, step by step"
+    ],
+    [
+     "doing",
+     "Install other Hyprland setups (dotfiles like Caelestia) in one step, and go back to Raye's anytime"
     ],
     [
      "doing",

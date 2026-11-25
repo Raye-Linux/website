@@ -256,6 +256,17 @@ FR = {
         'Store : les applis APT d\'abord, Flatpak seulement si elles ne sont pas en APT, et AppImage',
     'Taskbar settings: left or center, icon size, taskbar height, auto-hide':
         'Réglages de la barre des tâches : à gauche ou au centre, taille des icônes, hauteur de la barre, masquage automatique',
+    'Settings and every Raye app work well on Hyprland': 'Les Paramètres et toutes les applis Raye marchent bien sous Hyprland',
+    'Complete Hyprland guide: change everything, Raye apps included, step by step': 'Guide complet de Hyprland : tout modifier, applis Raye comprises, étape par étape',
+    'Install other Hyprland setups (dotfiles like Caelestia) in one step, and go back to Raye\'s anytime': 'Installer d’autres configurations Hyprland (dotfiles comme Caelestia) en une étape, et revenir à celle de Raye à tout moment',
+    'KDE or Hyprland: choose at install, switch from Settings in seconds': 'KDE ou Hyprland : au choix à l’installation, bascule depuis les Paramètres en quelques secondes',
+    'Windows 10 look, real Windows 10 Start menu, Windows-style animations and snap': 'Look Windows 10, vrai menu Démarrer de Windows 10, animations et dispositions à la Windows',
+    'Bring your files, wallpaper, Wi-Fi and apps from Windows or your old system': 'Vos fichiers, fond d’écran, Wi-Fi et applis repris de Windows ou de votre ancien système',
+    'Bigger Store: TikTok LIVE Studio, Affinity, rekordbox, Mixxx and 14 more tested apps': 'Store plus grand : TikTok LIVE Studio, Affinity, rekordbox, Mixxx et 14 autres applis testées',
+    'Game mode on by itself, NVIDIA Control Panel, RAM at idle about 850 MB': 'Mode jeu automatique, Panneau de configuration NVIDIA, RAM au repos d’environ 850 Mo',
+    'Many more settings, Clock that wakes the PC, real update percentage at startup': 'Beaucoup plus de réglages, Horloge qui réveille le PC, vrai pourcentage de mise à jour au démarrage',
+    'Safe by default: firewall, private Wi-Fi address, automatic kernel security updates': 'Sûr par défaut : pare-feu, adresse Wi-Fi privée, mises à jour de sécurité du noyau automatiques',
+    "Many fixes: snap, taskbar edge, sleep on PCs that can't, faster updates from your country's server": 'Beaucoup de correctifs : dispositions, bord de la barre des tâches, veille sur les PC incompatibles, mises à jour plus rapides depuis le serveur de votre pays',
     'Wobbly windows: a switch in Settings': 'Fenêtres gélatine : un interrupteur dans les Paramètres',
     'Taskbar on top or on the side of the screen': 'Barre des tâches en haut ou sur le côté de l’écran',
     'Join the team and a staff panel on the website':
