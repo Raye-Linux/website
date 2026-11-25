@@ -167,8 +167,8 @@ class DriverTests(unittest.TestCase):
 class TrialTests(unittest.TestCase):
     def run_trial(self, out):
         class Fake(T.VM):
-            def __init__(self, dry=False, host=None):
-                super().__init__(dry, host)
+            def __init__(self, dry=False, host=None, user=T.USER):
+                super().__init__(dry, host, user)
 
             def check_clean(self, version):
                 raise AssertionError("a trial checks no user and no version")
@@ -199,6 +199,24 @@ class TrialTests(unittest.TestCase):
                                     for w in ("1600.webp", "800.webp", "1600.jpg")))
         after = {n: os.path.getmtime(os.path.join(T.SHOTS_DIR, n)) for n in os.listdir(T.SHOTS_DIR)}
         self.assertEqual(before, after)
+
+    def test_a_trial_on_another_account_drives_that_account(self):
+        # the release candidate in the VM has its own account; a trial there
+        # must start programs and set the language for it, not for "sam"
+        vm = T.VM(dry=True, user="testr")
+        self.assertEqual(vm.launch_argv("true")[:4], ["systemd-run", "--user", "--machine", "testr@"])
+        seen = []
+        vm.root = lambda a, timeout=60: seen.append(a) or ""
+        vm.set_language("fr")
+        self.assertIn(["loginctl", "terminate-user", "testr"], seen)
+        self.assertEqual(seen[0][:3], ["runuser", "-u", "testr"])
+        self.assertEqual(T.VM().user, "sam")
+
+    def test_another_account_only_for_a_trial(self):
+        # the pictures of the site come from the neutral example user only
+        with self.assertRaises(SystemExit) as cm:
+            T.main(["--user", "testr", "--dry-run", "--stage", "desktop", "--only", "quick"])
+        self.assertIn("--trial", str(cm.exception.code))
 
     def test_a_trial_into_shots_is_refused(self):
         with self.assertRaises(SystemExit):

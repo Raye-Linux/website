@@ -36,8 +36,8 @@ the recipe asks the person to set it up and waits for Enter. The script prints
 each file it writes, so a wrong window is seen at once; --only redoes one.
 
 Try the recipes on any other install (a test account, a release candidate)
-with --trial DIR: the user and version checks are skipped, the pictures go to
-DIR and shots/ and its manifest are never touched."""
+with --trial DIR [--user ACCOUNT]: the user and version checks are skipped,
+the pictures go to DIR and shots/ and its manifest are never touched."""
 
 import argparse
 import datetime
@@ -230,9 +230,10 @@ class VM:
     install has no key of ours, and that is how it should stay."""
     VMID = 130
 
-    def __init__(self, dry=False, host=None):
+    def __init__(self, dry=False, host=None, user=USER):
         self.dry = dry
         self.host = host or os.environ.get("RAYE_PVE_HOST", "pve")
+        self.user = user        # another account only for a --trial
 
     def pvectl(self, *args):
         cmd = [sys.executable, PVECTL, *args]
@@ -264,12 +265,12 @@ class VM:
 
     def guest(self, command):
         """A shell command run as the example user (no screen)."""
-        return self.root(["runuser", "-u", USER, "--", "sh", "-c", command])
+        return self.root(["runuser", "-u", self.user, "--", "sh", "-c", command])
 
     def launch_argv(self, command):
         """A program started in the example user's graphical session: the user's
         systemd manager has the screen and the session bus, an SSH shell has not."""
-        return ["systemd-run", "--user", "--machine", f"{USER}@", "--collect", "--quiet",
+        return ["systemd-run", "--user", "--machine", f"{self.user}@", "--collect", "--quiet",
                 "--", "sh", "-c", command]
 
     def launch(self, command):
@@ -291,7 +292,7 @@ class VM:
     def signed_in(self):
         """True when the example user has a graphical session (seat0) open."""
         out = self.root(["loginctl", "list-sessions", "--no-legend"])
-        return any(USER in line.split() and "seat0" in line.split() for line in out.splitlines())
+        return any(self.user in line.split() and "seat0" in line.split() for line in out.splitlines())
 
     def set_language(self, lang):
         """The language of the whole session: Plasma's locale file, then a new
@@ -299,7 +300,7 @@ class VM:
         loc = "fr_CA.UTF-8" if lang == "fr" else "en_US.UTF-8"
         self.guest(f"mkdir -p ~/.config && printf '[Formats]\\nLANG={loc}\\n\\n"
                    f"[Translations]\\nLANGUAGE={lang}\\n' > ~/.config/plasma-localerc")
-        self.root(["loginctl", "terminate-user", USER])
+        self.root(["loginctl", "terminate-user", self.user])
         if self.dry:
             return
         for _ in range(30):
@@ -307,7 +308,7 @@ class VM:
             if self.signed_in():
                 time.sleep(15)          # let the desktop finish drawing
                 return
-        sys.exit(f"{USER} was not signed in again within 150 s: turn on automatic sign-in "
+        sys.exit(f"{self.user} was not signed in again within 150 s: turn on automatic sign-in "
                  "for that account (Settings > Accounts) and start again")
 
     def run(self, step):
@@ -370,7 +371,11 @@ def main(argv=None):
     ap.add_argument("--version", default="1.0")
     ap.add_argument("--trial", metavar="DIR",
                     help="any install: pictures go to DIR, shots/ and the manifest stay as they are")
+    ap.add_argument("--user", help="with --trial: the account signed in on that install")
     args = ap.parse_args(argv)
+    if args.user and not args.trial:
+        sys.exit("--user is only for a --trial: the site's pictures come from "
+                 f"'{FULL_NAME}' ({USER})")
     only = set(args.only.split(",")) if args.only else None
 
     missing = set(shot_ids()) - {s for st in STAGES.values() for s in st}
@@ -381,7 +386,7 @@ def main(argv=None):
         for stage, sid in todo:
             print(f"{stage:8} {sid}")
         return 0
-    vm = VM(dry=args.dry_run)
+    vm = VM(dry=args.dry_run, user=args.user or USER)
     out_dir = None
     if args.trial:
         out_dir = os.path.abspath(args.trial)
