@@ -6,7 +6,7 @@
    "color": "9b6bff",
    "items": [
     [
-     "doing",
+     "done",
      "Steam sees your other drives"
     ],
     [
@@ -18,7 +18,7 @@
      "Fix for the flicker on NVIDIA cards at 144 Hz"
     ],
     [
-     "doing",
+     "done",
      "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM"
     ],
     [
@@ -26,7 +26,7 @@
      "No more freezes when RAM runs out: the PC slows down a little instead"
     ],
     [
-     "doing",
+     "done",
      "Fix for apps that crash on start (Qoder and other Electron apps)"
     ],
     [
@@ -34,7 +34,7 @@
      "Wi-Fi password box keeps the cursor while networks refresh"
     ],
     [
-     "doing",
+     "done",
      "File Explorer opens right away, even when a network drive is out of reach"
     ],
     [
@@ -58,7 +58,7 @@
      "Taskbar settings: left or center, icon size, taskbar height, auto-hide"
     ],
     [
-     "doing",
+     "done",
      "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
     ],
     [
@@ -66,11 +66,11 @@
      "USB copies show the real speed, with close and minimize buttons"
     ],
     [
-     "doing",
+     "done",
      "Store apps you have move from Flatpak to APT once, nothing lost"
     ],
     [
-     "doing",
+     "done",
      "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
     ],
     [
@@ -78,7 +78,7 @@
      "WireGuard VPN in one click: import a file, turn it on from Quick Settings"
     ],
     [
-     "doing",
+     "done",
      "Info Center opens Raye's Task Manager and looks like Raye"
     ],
     [
@@ -94,7 +94,7 @@
      "Complete Hyprland guide: change everything, Raye apps included, step by step"
     ],
     [
-     "doing",
+     "done",
      "Install other Hyprland setups (dotfiles like Caelestia) in one step, and go back to Raye's anytime"
     ],
     [
@@ -102,7 +102,7 @@
      "New Raye logo everywhere: system, installer, website, Discord"
     ],
     [
-     "doing",
+     "done",
      "New boot animation with the new logo"
     ],
     [
