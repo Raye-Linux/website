@@ -38,6 +38,8 @@ PAGES = {
               "name": L("Règles de la communauté", "Community rules")},
     "betaterms": {"path": L("/conditions-beta/", "/en/beta-terms/"),
                   "name": L("Conditions du programme bêta", "Beta program terms")},
+    "cookies": {"path": L("/temoins/", "/en/cookies/"),
+                "name": L("Témoins (cookies)", "Cookies")},
     "terms": {"path": L("/conditions/", "/en/terms/"),
               "name": L("Conditions d'utilisation", "Terms of use")},
     "notice": {"path": L("/mentions-legales/", "/en/legal/"),

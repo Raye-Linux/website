@@ -32,6 +32,7 @@
     "/communaute/": "/en/community/",
     "/regles/": "/en/rules/",
     "/conditions-beta/": "/en/beta-terms/",
+    "/temoins/": "/en/cookies/",
     "/conditions/": "/en/terms/",
     "/mentions-legales/": "/en/legal/",
     "/licences/": "/en/licenses/",

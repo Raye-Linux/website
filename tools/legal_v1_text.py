@@ -9,24 +9,27 @@ applies until the V1 site goes online. A lawyer should read them before."""
 
 from legal_text import (H, L, P, PRIVACY, PRIVACY_SUMMARY, S, T, TERMS, TERMS_SUMMARY)
 
-UPDATED = {"fr": "20 novembre 2026", "en": "November 20, 2026"}
+UPDATED = {"fr": "25 novembre 2026", "en": "November 25, 2026"}
 VERSION = "4.0"
 DRAFT = {
     "fr": "Version préparée pour la V1 du site. Elle s'appliquera à sa mise en ligne ; "
-          "d'ici là, la version 3.0 publiée sur rayelinux.com reste celle qui vaut.",
+          "d'ici là, la version 3.0 publiée sur rayelinux.com reste celle qui vaut. Ce texte est à "
+          "faire relire par un juriste avant sa mise en ligne.",
     "en": "Version prepared for the V1 site. It will apply when that site goes online; until "
-          "then, version 3.0 published on rayelinux.com is the one in force.",
+          "then, version 3.0 published on rayelinux.com is the one in force. This text still has to "
+          "be read by a lawyer before it goes online.",
 }
 
 # how a V1 page names the new pages inside a sentence ({betaterms}, ...)
 WORDS = {
-    "fr": {"betaterms": "conditions du programme bêta", "rules": "règles de la communauté",
+    "fr": {"cookies": "page Témoins", "betaterms": "conditions du programme bêta", "rules": "règles de la communauté",
            "join": "Rejoindre l'équipe", "community": "Communauté"},
-    "en": {"betaterms": "beta program terms", "rules": "community rules",
+    "en": {"cookies": "Cookies page", "betaterms": "beta program terms", "rules": "community rules",
            "join": "Join the team", "community": "Community"},
 }
 
 TITLES = {
+    "cookies": {"fr": "Témoins (cookies) et stockage local", "en": "Cookies and local storage"},
     "betaterms": {"fr": "Conditions du programme bêta", "en": "Beta program terms"},
 }
 
@@ -93,6 +96,22 @@ APPLICATIONS = S(
       "which stays on my server. Discord is in the United States: see the section on "
       "transfers below. Only the people on the team who review applications can see it, and "
       "they commit to doing nothing else with it."),
+    H("Le panneau de l'équipe", "The team panel"),
+    P("Les personnes de la Raye Team qui étudient les candidatures les lisent dans un panneau "
+      "réservé, protégé par un jeton ou par un compte Raye ayant le rôle équipe ; il n'a "
+      "aucune adresse publique dans le site et n'est pas indexé. Elles y voient votre texte et "
+      "votre courriel, y marquent la candidature (nouvelle, en revue, acceptée, refusée) et "
+      "peuvent y écrire des <strong>notes internes</strong>, que vous ne voyez pas. Chaque "
+      "ouverture d'une candidature et chaque action y est inscrite dans un journal : qui, quoi, "
+      "quelle référence, quand. Ce journal ne contient ni courriel ni texte, et il est effacé "
+      "au bout d'un an. Les notes sont effacées avec la candidature.",
+      "The people of the Raye Team who review applications read them in a restricted panel, "
+      "protected by a token or by a Raye account with the team role; it has no public address "
+      "on the site and is not indexed. There they see your text and your email, mark the "
+      "application (new, in review, accepted, declined) and can write <strong>internal "
+      "notes</strong>, which you do not see. Every time an application is opened and every "
+      "action is written to a log: who, what, which reference, when. The log holds no email "
+      "and no text, and is deleted after one year. Notes are deleted with the application."),
     H("Combien de temps", "How long"),
     T([("Situation", "Situation"), ("Durée", "How long")],
       [("En attente de réponse", "Waiting for an answer"),
@@ -102,6 +121,10 @@ APPLICATIONS = S(
       [("Acceptée", "Accepted"),
        ("tant que vous avez le rôle ; effacée sous 30 jours quand vous le quittez",
         "as long as you hold the role; deleted within 30 days when you leave it")],
+      [("Notes internes de l'équipe", "Team's internal notes"),
+       ("effacées avec la candidature", "deleted with the application")],
+      [("Journal des actions de l'équipe", "Team action log"),
+       ("un an, sans courriel ni texte", "one year, no email and no text")],
       [("Message du salon privé", "Private channel message"),
        ("supprimé en même temps que la candidature", "deleted with the application")]),
     H("Vos choix", "Your choices"),
@@ -151,6 +174,29 @@ BETA_CHANNELS = S(
       "contacts from your PC\": a download, with no usage report."),
 )
 
+RAYE_COMMUNITY = S(
+    "raye-community", "Raye Community (bêta, pas encore ouverte)",
+    "Raye Community (beta, not open yet)",
+    P("Raye Community sera le clavardage de Raye, sur le site et dans le système, avec votre "
+      "compte Raye. Elle n'est <strong>pas encore ouverte</strong> : aucun serveur de "
+      "clavardage ne tourne pour le public. D'ici là, la communauté reste sur le serveur "
+      "Discord décrit plus haut, et rien de cette section ne s'applique encore.",
+      "Raye Community will be Raye's own chat, on the website and in the system, with your "
+      "Raye account. It is <strong>not open yet</strong>: no chat server is running for the "
+      "public. Until then the community stays on the Discord server described above, and "
+      "nothing in this section applies yet."),
+    L(("Ce que vous y écrivez sera vu par les membres du salon où vous l'écrivez, et par la "
+       "modération, qui peut le supprimer selon les {rules}.",
+       "What you write there will be seen by the members of the channel you write it in, and by "
+       "moderation, which can delete it under the {rules}."),
+      ("Avant l'ouverture, cette section dira exactement ce qui est gardé (messages, "
+       "pièces jointes, profil), combien de temps, où, et comment vous exportez ou supprimez "
+       "vos messages. Rien ne sera ouvert avant que ce soit écrit et daté dans l'historique.",
+       "Before it opens, this section will say exactly what is kept (messages, attachments, "
+       "profile), for how long, where, and how you export or delete your messages. Nothing "
+       "will open before that is written and dated in the history.")),
+)
+
 
 def _privacy():
     out = []
@@ -181,7 +227,8 @@ def _privacy():
                  ("savoir qui a quel accès", "know who has which access"),
                  ("intérêt légitime", "legitimate interest")])
         out.append(s)
-    return _insert(out, "discord", APPLICATIONS, COMMUNITY_PAGE, BETA_CHANNELS)
+    out = _insert(out, "discord", APPLICATIONS, COMMUNITY_PAGE, BETA_CHANNELS)
+    return _insert(out, "accounts", RAYE_COMMUNITY)
 
 
 PRIVACY_V1 = _privacy()
@@ -217,8 +264,21 @@ TEAM = S(
 )
 
 
+CHAT = S(
+    "raye-community", "Raye Community (quand elle ouvrira)", "Raye Community (once it opens)",
+    P("Raye Community, le clavardage de Raye, n'est pas encore ouverte. Quand elle le sera, "
+      "elle suivra les {rules} et ces conditions : vous êtes responsable de ce que vous y "
+      "écrivez, la modération peut supprimer un message ou suspendre un accès, et vous pouvez "
+      "quitter à tout moment. Ces conditions seront complétées et datées avant l'ouverture.",
+      "Raye Community, Raye's own chat, is not open yet. When it is, it will follow the "
+      "{rules} and these terms: you are responsible for what you write there, moderation can "
+      "delete a message or suspend access, and you can leave at any time. These terms will be "
+      "completed and dated before it opens."),
+)
+
+
 def _terms():
-    return _insert(list(TERMS), "community", TEAM)
+    return _insert(_insert(list(TERMS), "community", TEAM), "community", CHAT)
 
 
 TERMS_V1 = _terms()
@@ -321,7 +381,72 @@ BETA_TERMS_SUMMARY = [
     ("Vous partez quand vous voulez.", "You leave whenever you like."),
 ]
 
+# ------------------------------------------------------------- cookies
+
+COOKIES = [
+    S("none", "Ce que le site pose aujourd'hui", "What the site sets today",
+      P("rayelinux.com n'utilise <strong>aucun témoin (cookie)</strong>, aucun pixel, aucun "
+        "script, aucune police d'un tiers, et ne mesure pas son audience. Il n'y a donc rien à "
+        "accepter ni à refuser : aucune bannière de consentement n'est nécessaire.",
+        "rayelinux.com uses <strong>no cookies</strong>, no pixels, and no third-party scripts "
+        "or fonts, and does not measure its audience. There is nothing to accept or refuse: no "
+        "consent banner is needed.")),
+    S("storage", "Ce qui reste dans votre navigateur", "What stays in your browser",
+      T([("Quoi", "What"), ("Où", "Where"), ("Pourquoi", "Why"), ("Combien de temps", "How long")],
+        [("Votre langue (« raye-lang », « fr » ou « en »)",
+          "Your language (\"raye-lang\", \"fr\" or \"en\")"),
+         ("stockage local, votre appareil seulement",
+          "local storage, your device only"),
+         ("ouvrir la bonne langue ; jamais envoyé au serveur",
+          "open the right language; never sent to the server"),
+         ("jusqu'à ce que vous videz les données du site",
+          "until you clear the site's data")],
+        [("La bulle d'aide, la case de la page de téléchargement, le formulaire de candidature",
+          "The help bubble, the download page's tick box, the application form"),
+         ("la page ouverte seulement", "the open page only"),
+         ("fonctionner pendant que vous êtes sur la page",
+          "work while you are on the page"),
+         ("jusqu'à la fermeture de la page", "until you close the page")]),
+      P("Pour effacer votre langue, videz les données du site dans votre navigateur.",
+        "To clear your language, clear the site's data in your browser.")),
+    S("third", "Les autres services", "Other services",
+      P("Cloudflare sert les pages et le fichier ISO (voir la {privacy}). Il essaie d'ajouter un "
+        "script de mesure d'audience aux pages ; la politique de sécurité du site le bloque, "
+        "il ne s'exécute pas. Discord, GitHub, Codeberg et GitLab, où mènent certains liens, "
+        "ont leurs propres témoins et règles : ils ne s'appliquent qu'une fois que vous y êtes.",
+        "Cloudflare serves the pages and the ISO file (see the {privacy}). It tries to add an "
+        "audience measurement script to the pages; the site's security policy blocks it, so it "
+        "never runs. Discord, GitHub, Codeberg and GitLab, where some links lead, have their "
+        "own cookies and rules: they only apply once you are there.")),
+    S("accounts", "Le site des comptes (quand il ouvrira)", "The accounts site (once it opens)",
+      P("Le site des comptes Raye, pas encore ouvert, posera un témoin de session pour vous "
+        "garder connecté et, si vous choisissez une langue, un témoin qui la retient ; aucun "
+        "autre. Ils seront listés ici, avec leur durée, avant l'ouverture.",
+        "The Raye accounts site, not open yet, will set one session cookie to keep you signed "
+        "in and, if you pick a language, one cookie that remembers it; no other. They will be "
+        "listed here, with their lifetime, before it opens."),
+      P("Le panneau de l'équipe garde le jeton de la personne connectée dans le stockage de "
+        "l'onglet (sessionStorage), jamais dans un témoin ; il disparaît à la fermeture de "
+        "l'onglet.",
+        "The team panel keeps the signed-in person's token in the tab's storage "
+        "(sessionStorage), never in a cookie; it is gone when the tab closes.")),
+    S("software", "Raye Linux lui-même", "Raye Linux itself",
+      P("Le système n'envoie aucun rapport d'utilisation ni de plantage. Le navigateur "
+        "(Firefox) que vous y utilisez a ses propres témoins, comme sur n'importe quel système.",
+        "The system sends no usage or crash reports. The browser (Firefox) you use in it has "
+        "its own cookies, as on any system.")),
+]
+COOKIES_SUMMARY = [
+    ("Le site n'utilise aucun témoin et ne mesure pas l'audience.",
+     "The site uses no cookies and does not measure its audience."),
+    ("Seule votre langue peut rester sur votre appareil, si vous la choisissez.",
+     "Only your language can stay on your device, if you pick one."),
+    ("Les comptes, quand ils ouvriront, poseront un témoin de session et un témoin de langue.",
+     "Accounts, once they open, will set a session cookie and a language cookie."),
+]
+
 PAGES = {
+    "cookies": (COOKIES, COOKIES_SUMMARY),
     "privacy": (PRIVACY_V1, PRIVACY_V1_SUMMARY),
     "terms": (TERMS_V1, TERMS_V1_SUMMARY),
     "betaterms": (BETA_TERMS, BETA_TERMS_SUMMARY),

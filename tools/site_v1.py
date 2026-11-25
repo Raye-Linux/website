@@ -428,7 +428,7 @@ class Site:
             for key in V.CONTENT:
                 self.write(self.rel(key, lang), self.content_page(lang, key), lang)
             self.write(self.rel("download", lang), download.page(self, lang), lang)
-            for key in ("privacy", "terms", "betaterms", "notice", "licenses"):
+            for key in ("privacy", "terms", "cookies", "betaterms", "notice", "licenses"):
                 self.write(self.rel(key, lang), people.legal(self, lang, key), lang)
             self.write(self.rel("join", lang), people.join_index(self, lang), lang)
             for role, r in people.J.ROLES.items():

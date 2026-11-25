@@ -262,6 +262,10 @@ LEGAL_DESCRIPTION = {
                     "communauté et des rôles de l'équipe.",
               "en": "The terms of use of the site, the Raye Linux software, the community and "
                     "the team roles."},
+    "cookies": {"fr": "Les témoins (cookies) et le stockage local de rayelinux.com : aucun "
+                      "aujourd'hui, sauf votre langue si vous la choisissez.",
+                "en": "The cookies and local storage of rayelinux.com: none today, except "
+                      "your language if you pick one."},
     "betaterms": {"fr": "Les conditions pour tester les bêtas de Raye Linux : ce qu'une bêta "
                         "peut faire, ce que nous demandons, et comment partir.",
                   "en": "The terms for testing Raye Linux betas: what a beta can do, what we "
@@ -276,7 +280,7 @@ LEGAL_DESCRIPTION = {
 
 
 def legal_paths(site, lang):
-    keys = ("privacy", "terms", "notice", "licenses", "download", "betaterms", "rules", "join",
+    keys = ("privacy", "terms", "cookies", "notice", "licenses", "download", "betaterms", "rules", "join",
             "community")
     return {k: site.path(k, lang) for k in keys}
 

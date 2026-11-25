@@ -119,7 +119,7 @@ FOOTER = [
     (L("Le projet", "The project"), ["v1", "soon", "roadmap", "releases", "questions", "about",
                                       "source"]),
     (L("Communauté", "Community"), ["community", "join", "rules"]),
-    (L("Légal", "Legal"), ["privacy", "terms", "betaterms", "notice", "licenses"]),
+    (L("Légal", "Legal"), ["privacy", "terms", "cookies", "betaterms", "notice", "licenses"]),
 ]
 
 UI = {
@@ -1393,6 +1393,27 @@ QUESTIONS = {
                "No voice typing, no RGB lighting, no wireless casting to a screen, no Quick "
                "Assist, no live captions, no find-my-device, no family accounts or backup to the "
                "Windows cloud. The handbook says, for each, what you can do instead.")),
+            (L("Raye envoie-t-il des données sur moi ?", "Does Raye send data about me?"),
+             L("Non : aucun rapport d'utilisation ni de plantage, et pas de publicité. Comme "
+               "tout téléchargement, les serveurs de mises à jour voient l'adresse IP de votre "
+               "PC et ce qui est téléchargé (Raye Update, le Store, Firefox). Le détail, avec les "
+               "durées, est sur la page <a href=\"{p:privacy}\">Confidentialité</a>, et celle "
+               "des <a href=\"{p:cookies}\">témoins</a> dit ce que le site garde dans votre "
+               "navigateur.",
+               "No: no usage reports and no crash reports, and no ads. Like any download, the "
+               "update servers see your PC's IP address and what is downloaded (Raye Update, the "
+               "Store, Firefox). The detail, with the durations, is on the "
+               "<a href=\"{p:privacy}\">Privacy</a> page, and the "
+               "<a href=\"{p:cookies}\">cookies</a> page says what the site keeps in your "
+               "browser.")),
+            (L("Faut-il un compte Raye ?", "Do I need a Raye account?"),
+             L("Non, et les comptes ne sont pas encore ouverts. Raye marche pareil sans. Plus "
+               "tard, un compte servira à garder une liste de réglages, votre photo et votre "
+               "bibliothèque d'applications d'un PC à l'autre ; jamais vos mots de passe ni vos "
+               "fichiers.",
+               "No, and accounts are not open yet. Raye works the same without one. Later, an "
+               "account will keep a list of settings, your picture and your app library from one "
+               "PC to another; never your passwords or your files.")),
             (L("Qui fait Raye ?", "Who makes Raye?"),
              L("Moi, techoraye, au Québec. Il y a plus de détails sur la page "
                "<a href=\"{p:about}\">À propos</a>.",
