@@ -181,8 +181,10 @@ FR = {
         "ou en basse résolution",
     "Game performance: higher FPS and an advanced game mode":
         "Performances en jeu : plus d'images par seconde et un mode jeu avancé",
-    "New Raye kernel tuned for gaming and smoothness":
-        "Nouveau noyau Raye, réglé pour les jeux et un bureau plus réactif",
+    "New Raye kernel: CachyOS and XanMod patches plus Raye's own tuning":
+        "Nouveau noyau Raye : les correctifs de CachyOS et XanMod, plus les réglages de Raye",
+    "Ready for Easy Anti-Cheat v2 (Fortnite): Raye's kernel key sent to Epic":
+        "Prêt pour Easy Anti-Cheat v2 (Fortnite) : la clé du noyau Raye envoyée à Epic",
     "Lower RAM use at idle: 600–700 MB":
         "Moins de mémoire utilisée au repos : 600 à 700 Mo",
     "Ready-made virtual machine images": "Des images de machine virtuelle prêtes à l'emploi",

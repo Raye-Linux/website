@@ -106,8 +106,16 @@
      "New boot animation with the new logo"
     ],
     [
-     "planned",
-     "New Raye kernel tuned for gaming and smoothness"
+     "doing",
+     "New Raye kernel: CachyOS and XanMod patches plus Raye's own tuning"
+    ],
+    [
+     "doing",
+     "Raye kernel only (Ubuntu's kernel removed)"
+    ],
+    [
+     "doing",
+     "Ready for Easy Anti-Cheat v2 (Fortnite): Raye's kernel key sent to Epic"
     ],
     [
      "planned",
@@ -166,10 +174,6 @@
     [
      "planned",
      "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
-    ],
-    [
-     "planned",
-     "Raye kernel only (Ubuntu's kernel removed)"
     ],
     [
      "planned",
