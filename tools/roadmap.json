@@ -359,7 +359,7 @@
     ],
     [
      "planned",
-     "More desktops to choose from: GNOME and niri, with a Windows look"
+     "Arch edition, kept in sync with the Ubuntu edition"
     ]
    ]
   },
@@ -369,11 +369,11 @@
    "items": [
     [
      "planned",
-     "Arch edition, kept in sync with the Ubuntu edition"
+     "Budgie desktop as another choice"
     ],
     [
      "planned",
-     "Budgie desktop as another choice"
+     "More desktops to choose from: GNOME and niri, with a Windows look"
     ]
    ]
   }
