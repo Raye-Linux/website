@@ -181,7 +181,7 @@ def render(kind: str, lang: str | None, form_action: str | None = None,
 </head>
 <body class="page-result">
 <header class="topbar"><a class="brand" href="{home}" aria-label="{BRAND_ALT[main_lang]}">
-<img src="/assets/raye-mark.svg" alt="" width="36" height="20"><span>Raye Linux</span></a></header>
+<img src="/assets/raye-mark.svg" alt="" width="28" height="28"><span>Raye Linux</span></a></header>
 <main id="main" class="result card">
 {blocks}
 </main>

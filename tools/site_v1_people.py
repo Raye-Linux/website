@@ -180,7 +180,7 @@ def community(site, lang):
 <div class="article">
 <section class="live card" aria-labelledby="live-title" data-community>
 <div class="live-head">
-<img src="/assets/raye-mark.svg" alt="" width="56" height="25">
+<img src="/assets/raye-mark.svg" alt="" width="44" height="44">
 <div>
 <p class="live-label" id="live-title">{c['live_label'][lang]}</p>
 <p class="live-name">Raye Linux</p>

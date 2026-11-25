@@ -604,7 +604,7 @@ def topbar(lang, page):
     return f"""<header class="topbar">
 <div class="topbar-in">
 <a class="brand" href="{PATHS[lang]['home']}" aria-label="{t['brand_label']}">
-<img src="/assets/raye-mark.svg" alt="" width="36" height="16"><span>Raye Linux</span></a>
+<img src="/assets/raye-mark.svg" alt="" width="28" height="28"><span>Raye Linux</span></a>
 <nav class="nav" aria-label="{h['nav_label']}">
 <ul>
 {links}
@@ -639,7 +639,7 @@ def footer(lang, note=""):
 <div class="wrap">
 <div class="footer-cols">
 <div class="footer-brand">
-<img src="/assets/raye-mark.svg" alt="" width="36" height="16">
+<img src="/assets/raye-mark.svg" alt="" width="28" height="28">
 <p>{t['rights']}<br>{f['made']}</p>
 </div>
 <div>
@@ -1528,7 +1528,7 @@ def not_found():
     return f"""{head('fr', 'home', 'Page introuvable · Page not found', T['fr']['description'])}
 <body class="page-result">
 <header class="topbar"><a class="brand" href="/" aria-label="Raye Linux">
-<img src="/assets/raye-mark.svg" alt="" width="36" height="16"><span>Raye Linux</span></a></header>
+<img src="/assets/raye-mark.svg" alt="" width="28" height="28"><span>Raye Linux</span></a></header>
 <main id="main" class="result card">
 <section class="result-block" lang="fr"><h1>Page introuvable</h1>
 <p>Cette adresse n'existe pas sur le site.</p>
@@ -1569,7 +1569,7 @@ def chooser():
 </head>
 <body class="page-result">
 <header class="topbar"><a class="brand" href="/" aria-label="Raye Linux">
-<img src="/assets/raye-mark.svg" alt="" width="36" height="16"><span>Raye Linux</span></a></header>
+<img src="/assets/raye-mark.svg" alt="" width="28" height="28"><span>Raye Linux</span></a></header>
 <main id="main" class="result card">
 <noscript>
 <section class="result-block"><h1>Raye Linux</h1>
