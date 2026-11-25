@@ -114,6 +114,50 @@
      "Complete Windows bridge: share drivers and settings with Windows"
     ],
     [
+     "planned",
+     "Taskbar on top or on the side of the screen"
+    ],
+    [
+     "planned",
+     "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
+    ],
+    [
+     "doing",
+     "The V1 website, with fresh screenshots of the real system"
+    ],
+    [
+     "doing",
+     "Legal pages and FAQ"
+    ],
+    [
+     "doing",
+     "Join the team and a staff panel on the website"
+    ],
+    [
+     "planned",
+     "Public profiles and badges"
+    ],
+    [
+     "planned",
+     "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
+    ],
+    [
+     "planned",
+     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
+    ],
+    [
+     "planned",
+     "Raye account: your settings follow you to every PC"
+    ],
+    [
+     "planned",
+     "New account website and emails, with two-factor sign-in"
+    ],
+    [
+     "planned",
+     "Raye Proton: pick Raye's Windows layer for Steam games"
+    ],
+    [
      "doing",
      "New Raye logo everywhere: system, installer, website, Discord"
     ],
@@ -152,56 +196,6 @@
     [
      "planned",
      "New ISO for everyone"
-    ]
-   ]
-  },
-  {
-   "title": "🕒 V1.1 · early December",
-   "color": "8a8f98",
-   "items": [
-    [
-     "planned",
-     "Taskbar on top or on the side of the screen"
-    ],
-    [
-     "planned",
-     "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
-    ],
-    [
-     "planned",
-     "The V1 website, with fresh screenshots of the real system"
-    ],
-    [
-     "planned",
-     "Legal pages and FAQ"
-    ],
-    [
-     "planned",
-     "Join the team and a staff panel on the website"
-    ],
-    [
-     "planned",
-     "Public profiles and badges"
-    ],
-    [
-     "planned",
-     "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
-    ],
-    [
-     "planned",
-     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
-    ],
-    [
-     "planned",
-     "Raye account: your settings follow you to every PC"
-    ],
-    [
-     "planned",
-     "New account website and emails, with two-factor sign-in"
-    ],
-    [
-     "planned",
-     "Raye Proton: pick Raye's Windows layer for Steam games"
     ]
    ]
   },
