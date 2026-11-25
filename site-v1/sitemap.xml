@@ -240,6 +240,20 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/ensuite/"/>
 </url>
 <url>
+<loc>https://www.rayelinux.com/insider/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/insider/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/insider/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/insider/"/>
+</url>
+<url>
+<loc>https://www.rayelinux.com/en/insider/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/insider/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/insider/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/insider/"/>
+</url>
+<url>
 <loc>https://www.rayelinux.com/rejoindre/</loc>
 <lastmod>2026-11-21</lastmod>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/rejoindre/"/>

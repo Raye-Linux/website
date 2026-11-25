@@ -541,5 +541,86 @@ OLDPCS = {
     ],
 }
 
+
+# ---------------------------------------------------------------- Raye Insider
+
+INSIDER = {
+    "eyebrow": L("Mises à jour en avance", "Early updates"),
+    "h1": L("Raye Insider", "Raye Insider"),
+    "description": L("Raye Insider : les nouveautés de Raye en avance. Bêta publique est "
+                     "ouverte à tous ; Bêta et Dev se demandent avec votre compte Raye.",
+                     "Raye Insider: Raye's new features early. Public Beta is open to everyone; "
+                     "Beta and Dev are asked for with your Raye account."),
+    "lede": L("Raye Insider vous donne les nouveautés avant tout le monde, en échange de vos "
+              "retours. Le choix se fait dans Paramètres, et vous pouvez revenir à Stable quand "
+              "vous voulez.",
+              "Raye Insider gives you new features before everyone else, in exchange for your "
+              "feedback. You pick it in Settings, and you can go back to Stable whenever you "
+              "want."),
+    "next": "join",
+    "blocks": [
+        H("channels", "Les quatre canaux", "The four channels"),
+        ("keys", [
+            (L("Stable", "Stable"),
+             L("Le canal de tout le monde, choisi d'office : des mises à jour testées.",
+               "Everyone's channel, picked by default: tested updates.")),
+            (L("Bêta publique", "Public Beta"),
+             L("Les nouveautés quelques semaines en avance, une fois qu'elles marchent bien. "
+               "Ouvert à tous, sans compte.",
+               "New features a few weeks early, once they work well. Open to everyone, no "
+               "account needed.")),
+            (L("Bêta", "Beta"),
+             L("Les nouveautés pendant qu'on les termine : attendez-vous à de petits problèmes. "
+               "Réservé aux comptes Raye acceptés comme testeurs.",
+               "Features while we finish them: expect small problems. For Raye accounts "
+               "accepted as testers.")),
+            (L("Dev", "Dev"),
+             L("Chaque changement dès qu'il est fait, pour ceux qui construisent Raye. Des "
+               "choses peuvent casser. Réservé aux comptes Raye acceptés pour Dev.",
+               "Every change as soon as it's made, for people who build Raye. Things can "
+               "break. For Raye accounts accepted for Dev.")),
+        ]),
+        H("join", "Comment entrer", "How to join"),
+        ("steps", [
+            (L("Bêta publique", "Public Beta"),
+             L("Inscrivez-vous sur la page <a href=\"{p:jpublic}\">Testeur de la bêta "
+               "publique</a> si vous voulez le salon Discord, puis ouvrez Paramètres › Raye "
+               "Update › Raye Insider et choisissez Bêta publique. Le choix seul suffit pour "
+               "recevoir les mises à jour.",
+               "Sign up on the <a href=\"{p:jpublic}\">Public beta tester</a> page if you want "
+               "the Discord channel, then open Settings › Raye Update › Raye Insider and pick "
+               "Public Beta. Picking it is enough to get the updates.")),
+            (L("Bêta ou Dev", "Beta or Dev"),
+             L("Posez votre candidature avec votre compte Raye sur la page <a "
+               "href=\"{p:jbeta}\">Testeur de la bêta privée</a> ou <a href=\"{p:jdev}\">Testeur "
+               "Dev</a>. Une personne de l'équipe la lit. Une fois acceptée, connectez ce PC à "
+               "votre compte dans Paramètres › Comptes : le canal se débloque dans Raye "
+               "Insider.",
+               "Apply with your Raye account on the <a href=\"{p:jbeta}\">Beta tester</a> or <a "
+               "href=\"{p:jdev}\">Beta tester Dev</a> page. A person of the team reads it. "
+               "Once you're accepted, sign this PC in to your account in Settings › Accounts: "
+               "the channel unlocks in Raye Insider.")),
+        ]),
+        H("leave", "Quitter", "Leaving"),
+        P("Choisissez Stable dans Raye Insider. Rien n'est retiré de votre PC : les versions "
+          "plus récentes que vous avez reçues restent jusqu'à ce que Stable les rattrape, puis "
+          "elles se mettent à jour depuis Stable comme d'habitude. Revenir en arrière de force "
+          "pourrait casser le système, alors Raye ne le fait pas.",
+          "Pick Stable in Raye Insider. Nothing is taken off your PC: the newer versions you "
+          "got stay until Stable catches up, then they update from Stable as usual. Going "
+          "back by force could break the system, so Raye doesn't do it."),
+        limits(L("Les canaux Bêta et Dev se débloquent d'après les badges de votre compte : "
+                 "cette partie arrive avec la mise à jour du compte Raye, et jusque-là Bêta et "
+                 "Dev restent fermés dans Paramètres.",
+                 "The Beta and Dev channels unlock from your account's badges: that part comes "
+                 "with the Raye account update, and until then Beta and Dev stay closed in "
+                 "Settings."),
+               L("Les mises à jour des canaux sont publiées au même endroit que celles de "
+                 "Stable : le canal est un choix, pas un secret.",
+                 "The channels' updates are published in the same place as Stable's: the "
+                 "channel is a choice, not a secret.")),
+    ],
+}
+
 CONTENT = {"v1": WHATSNEW, "soon": SOON, "games": GAMES, "desktops": DESKTOPS,
-           "oldpcs": OLDPCS}
+           "oldpcs": OLDPCS, "insider": INSIDER}

@@ -21,6 +21,7 @@
     "/vieux-pc/": "/en/old-pcs/",
     "/nouveautes/": "/en/whats-new/",
     "/ensuite/": "/en/whats-next/",
+    "/insider/": "/en/insider/",
     "/rejoindre/": "/en/join/",
     "/rejoindre/beta-privee/": "/en/join/beta/",
     "/rejoindre/beta-publique/": "/en/join/public-beta/",
