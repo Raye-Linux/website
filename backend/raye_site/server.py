@@ -15,7 +15,7 @@ import urllib.parse
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from . import applications, bugs, community, moderation, pages, support
+from . import applications, bugs, community, moderation, pages, staff, staff_routes, support
 from .config import Config
 from .mailer import Worker
 from .ratelimit import RateLimiter
@@ -130,6 +130,7 @@ class App:
         self.join = applications.Applications(
             join_store, config.join_webhook_paths, clock,
             accounts=applications.Accounts(config.account_api_url))
+        self.staff = staff.Staff(join_store, config.staff_token_paths, self.join.accounts, clock)
         self.community = community.Community(config.discord_invite, clock)
 
 
@@ -168,7 +169,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Referrer-Policy", "no-referrer")
-        if ctype.startswith("text/html"):
+        if ctype.startswith("text/html") and "Content-Security-Policy" not in (extra or {}):
             self.send_header("Content-Security-Policy", PAGE_CSP)
             self.send_header("X-Frame-Options", "DENY")
         for key, value in (extra or {}).items():
@@ -260,6 +261,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._reject(exc)
         if path == "/api/health":
             return self._text(200, "ok\n")
+        if path.startswith("/api/staff/"):
+            return staff_routes.handle(self, "GET", path, query)
         if path == "/api/confirm":
             return self._link_page("confirm", query.get("t"))
         if path == "/api/unsubscribe":
@@ -287,6 +290,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._bug()
             if path == "/api/join":
                 return self._join()
+            if path.startswith("/api/staff/"):
+                return staff_routes.handle(self, "POST", path, query)
             if path not in ("/api/subscribe", "/api/confirm", "/api/unsubscribe"):
                 self.close_connection = True
                 return self._page(404, "not_found", None)

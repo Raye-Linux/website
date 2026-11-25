@@ -78,6 +78,7 @@ TIMEOUT = 10
 NOTIFY_TRIES = 12             # then it waits for a human (admin notify --all)
 KEEP_DECIDED = 30 * 24 * 3600     # declined or withdrawn: deleted 30 days after
 KEEP_PENDING = 180 * 24 * 3600    # never decided: deleted after 180 days
+KEEP_LOG = 365 * 24 * 3600        # the staff action log (no personal data): one year
 
 # Discord usernames since 2023: 2 to 32 of a-z 0-9 _ . with no ".."; the old
 # form name#1234 is still accepted, people paste it
@@ -112,11 +113,29 @@ CREATE TABLE IF NOT EXISTS applications (
 );
 CREATE INDEX IF NOT EXISTS applications_status ON applications(status, created_at);
 CREATE INDEX IF NOT EXISTS applications_notify ON applications(notified_at, next_notify_at);
+
+-- the staff panel (staff.py): internal notes and the log of what staff did
+CREATE TABLE IF NOT EXISTS staff_notes (
+    id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    app_id  TEXT NOT NULL,
+    at      REAL NOT NULL,
+    staff   TEXT NOT NULL,
+    text    TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS staff_notes_app ON staff_notes(app_id, at);
+CREATE TABLE IF NOT EXISTS staff_log (
+    id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    at      REAL NOT NULL,
+    staff   TEXT NOT NULL,
+    action  TEXT NOT NULL,
+    app_id  TEXT,
+    detail  TEXT NOT NULL DEFAULT ''
+);
 """
 
 FIELDS = ("id", "role", "lang", "email", "account_id", "discord", "languages", "skills", "why",
           "consent_version", "status", "created_at", "notified_at", "notify_attempts",
-          "decided_at", "decided_by", "decision_note", "role_given_at")
+          "decided_at", "decided_by", "decision_note", "role_given_at", "in_review_at")
 
 
 def discord_name(raw):
@@ -196,6 +215,11 @@ class Store:
         try:
             with closing(self._connect()) as conn:
                 conn.executescript(SCHEMA)
+                # "in review" is a mark on a pending application, added after
+                # the first release: an old database gets the column here
+                cols = [r[1] for r in conn.execute("PRAGMA table_info(applications)")]
+                if "in_review_at" not in cols:
+                    conn.execute("ALTER TABLE applications ADD COLUMN in_review_at REAL")
         finally:
             os.umask(old)
 
@@ -284,7 +308,9 @@ class Store:
     def delete(self, ref):
         """Erase one application at once (a deletion request)."""
         with closing(self._connect()) as conn, conn:
-            return conn.execute("DELETE FROM applications WHERE id = ?", (ref,)).rowcount > 0
+            n = conn.execute("DELETE FROM applications WHERE id = ?", (ref,)).rowcount
+            conn.execute("DELETE FROM staff_notes WHERE app_id NOT IN (SELECT id FROM applications)")
+            return n > 0
 
     def delete_person(self, email=None, discord=None):
         """Erase every application of one person; returns how many."""
@@ -293,8 +319,10 @@ class Store:
         if not email and not discord:
             return 0
         with closing(self._connect()) as conn, conn:
-            return conn.execute("DELETE FROM applications WHERE email = ? OR discord = ?",
-                                (email, discord)).rowcount
+            n = conn.execute("DELETE FROM applications WHERE email = ? OR discord = ?",
+                             (email, discord)).rowcount
+            conn.execute("DELETE FROM staff_notes WHERE app_id NOT IN (SELECT id FROM applications)")
+            return n
 
     def purge(self):
         now = self.clock()
@@ -305,6 +333,8 @@ class Store:
             stale = conn.execute(
                 "DELETE FROM applications WHERE status = 'pending' AND created_at < ?",
                 (now - KEEP_PENDING,)).rowcount
+            conn.execute("DELETE FROM staff_notes WHERE app_id NOT IN (SELECT id FROM applications)")
+            conn.execute("DELETE FROM staff_log WHERE at < ?", (now - KEEP_LOG,))
         return {"decided": decided, "stale_pending": stale}
 
     # the staff channel
@@ -392,6 +422,30 @@ class Accounts:
         if not isinstance(ident, str) or not re.fullmatch(r"[0-9a-fA-F-]{8,64}", ident) or not email:
             return None
         return ident, email
+
+
+def _staff_check(self, token):
+    """The account id of a token whose account has the "staff" role and a
+    verified address, or None. The role comes from the account server."""
+    req = urllib.request.Request(self.base + "/v1/me", headers={
+        "Authorization": "Bearer " + token, "Accept": "application/json",
+        "User-Agent": "rayelinux.com"})
+    try:
+        with self.opener.open(req, timeout=TIMEOUT) as r:
+            data = json.loads(r.read(65536))
+    except (urllib.error.HTTPError, OSError, ValueError):
+        return None
+    if not isinstance(data, dict) or not data.get("email_verified"):
+        return None
+    roles, ident = data.get("roles"), data.get("id")
+    if not isinstance(roles, list) or "staff" not in roles:
+        return None
+    if not isinstance(ident, str) or not re.fullmatch(r"[0-9a-fA-F-]{8,64}", ident):
+        return None
+    return ident
+
+
+Accounts.check_staff = _staff_check
 
 
 class Applications:

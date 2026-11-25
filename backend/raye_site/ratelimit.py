@@ -28,6 +28,11 @@ class RateLimiter:
             q.popleft()
         return q
 
+    def over(self, key: str) -> bool:
+        """True when the key is at its limit now. Counts nothing."""
+        with self._lock:
+            return len(self._fresh(key, self.clock())) >= self.limit
+
     def hit(self, key: str) -> bool:
         """Count one request; False when the key is over its limit."""
         with self._lock:

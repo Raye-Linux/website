@@ -11,6 +11,8 @@ DEFAULT_BUG_WEBHOOK = "/etc/raye-site/bug-webhook"
 DEFAULT_BUG_REVIEW_WEBHOOK = "/etc/raye-site/bug-review-webhook"
 # the Discord webhook of the private staff channel told about each application
 DEFAULT_JOIN_WEBHOOK = "/etc/raye-site/join-webhook"
+# the staff panel's admin token (a secret), used until staff accounts exist
+DEFAULT_STAFF_TOKEN = "/etc/raye-site/staff-token"
 DEFAULT_DISCORD_INVITE = "TrxhUkabyB"
 
 
@@ -44,6 +46,7 @@ class Config:
     bugs_guild: str | None = None
     # "Join the team": the staff channel webhook (a secret, never logged)
     join_webhook_paths: tuple = ()
+    staff_token_paths: tuple = ()
     # the Raye account server, to sign an application with an account;
     # unset while accounts are not online, and the form asks for an email
     account_api_url: str | None = None
@@ -78,6 +81,8 @@ class Config:
         review_paths.append(env.get("RAYE_SITE_BUG_REVIEW_WEBHOOK", DEFAULT_BUG_REVIEW_WEBHOOK))
         join_paths = [os.path.join(creds, "smtp_join-webhook")] if creds else []
         join_paths.append(env.get("RAYE_SITE_JOIN_WEBHOOK", DEFAULT_JOIN_WEBHOOK))
+        staff_paths = [os.path.join(creds, "smtp_staff-token")] if creds else []
+        staff_paths.append(env.get("RAYE_SITE_STAFF_TOKEN", DEFAULT_STAFF_TOKEN))
 
         return cls(
             db_path=db,
@@ -94,6 +99,7 @@ class Config:
             bugs_api_url=support_url(env.get("RAYE_BUGS_API_URL")),
             bugs_guild=env.get("RAYE_BUGS_GUILD") if (env.get("RAYE_BUGS_GUILD") or "").isdigit() else None,
             join_webhook_paths=tuple(join_paths),
+            staff_token_paths=tuple(staff_paths),
             account_api_url=account_url(env.get("RAYE_ACCOUNT_API_URL")),
             discord_invite=env.get("RAYE_DISCORD_INVITE", DEFAULT_DISCORD_INVITE) or None,
         )
