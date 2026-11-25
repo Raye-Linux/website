@@ -256,6 +256,7 @@ FR = {
         'Store : les applis APT d\'abord, Flatpak seulement si elles ne sont pas en APT, et AppImage',
     'Taskbar settings: left or center, icon size, taskbar height, auto-hide':
         'Réglages de la barre des tâches : à gauche ou au centre, taille des icônes, hauteur de la barre, masquage automatique',
+    'Wobbly windows: a switch in Settings': 'Fenêtres gélatine : un interrupteur dans les Paramètres',
     'Taskbar on top or on the side of the screen': 'Barre des tâches en haut ou sur le côté de l’écran',
     'Join the team and a staff panel on the website':
         "Rejoindre l'équipe et un panneau du staff sur le site",
