@@ -68,7 +68,7 @@ FR = {
     "Wi-Fi password box keeps the cursor while networks refresh": "La case du mot de passe Wi-Fi garde le curseur pendant le rafraîchissement des réseaux",
     "File Explorer opens right away, even when a network drive is out of reach": "L'Explorateur s'ouvre tout de suite, même si un disque réseau est injoignable",
     "Windows programs page lists the ones installed from the Store": "La page Programmes Windows liste aussi ceux installés depuis le Store",
-    "Smoother Hyprland": "Hyprland plus fluide",
+    "Smoother Hyprland": "Hyprland sans saccades",
     "Unneeded services removed and global optimizations, for a lighter and more stable Raye": "Services inutiles retirés et optimisations globales, pour un Raye plus léger et plus stable",
     "WireGuard VPN in one click: import a file, turn it on from Quick Settings": "VPN WireGuard en un clic : importer un fichier, l'activer depuis les Paramètres rapides",
     "Info Center opens Raye's Task Manager and looks like Raye": "Le Centre d'informations ouvre le Gestionnaire des tâches de Raye et prend le style Raye",
@@ -82,6 +82,9 @@ FR = {
         "Le site de la V1, avec de nouvelles captures du vrai système",
     "Website refresh: a cleaner, more professional look and more pages":
         "Site refait : un style plus soigné et plus professionnel, et plus de pages",
+    "New Raye logo everywhere: system, installer, website, Discord":
+        "Nouveau logo de Raye partout : système, installateur, site, Discord",
+    "New boot animation with the new logo": "Nouvelle animation de démarrage avec le nouveau logo",
     "V1 Beta 3 · next week": "V1 Bêta 3 · la semaine prochaine",
     "Steam sees your other drives": "Steam voit vos autres disques",
     "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM":
