@@ -527,8 +527,6 @@ RULES = {
 # with the Discord and the live site) does: these lines are worded again on
 # the V1 roadmap page only. A line here that no longer appears stops the build.
 ROADMAP_V1_WORDS = {
-    "en": [("KDE or Hyprland: choose at install, switch from Settings in seconds",
-            "Two desktops: choose at install, switch from Settings in seconds")],
-    "fr": [("KDE ou Hyprland : au choix à l’installation, bascule depuis les Paramètres en quelques secondes",
-            "Deux bureaux : au choix à l’installation, bascule depuis les Paramètres en quelques secondes")],
+    "en": [],
+    "fr": [],
 }

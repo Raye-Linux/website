@@ -2,66 +2,6 @@
  "intro": "What's coming to Raye Linux, in order. Community ideas always come first: share yours in #ideas. ✅ done · 🔨 in progress · 🕒 planned",
  "sections": [
   {
-   "title": "✅ Recently done",
-   "color": "3ddc97",
-   "items": [
-    [
-     "done",
-     "Quick fixes (Nov 21): Steam and Heroic .deb install again, cleaner Game Mode list, Hyprland fixed (one taskbar on every screen, full screen, no wallet popup)"
-    ],
-    [
-     "done",
-     "Urgent fixes (Nov 20): full NVIDIA game speed, updates never stop halfway"
-    ],
-    [
-     "done",
-     "V1 Beta 1 (Nov 19): faster boot, AMD and NVIDIA panels, Clock app, bigger Store, new installer, Try Raye"
-    ],
-    [
-     "done",
-     "Join the team: apply in #join-the-team"
-    ]
-   ]
-  },
-  {
-   "title": "✅ V1 Beta 2 · out November 21",
-   "color": "3ddc97",
-   "items": [
-    [
-     "done",
-     "KDE or Hyprland: choose at install, switch from Settings in seconds"
-    ],
-    [
-     "done",
-     "Windows 10 look, real Windows 10 Start menu, Windows-style animations and snap"
-    ],
-    [
-     "done",
-     "Bring your files, wallpaper, Wi-Fi and apps from Windows or your old system"
-    ],
-    [
-     "done",
-     "Bigger Store: TikTok LIVE Studio, Affinity, rekordbox, Mixxx and 14 more tested apps"
-    ],
-    [
-     "done",
-     "Game mode on by itself, NVIDIA Control Panel, RAM at idle about 850 MB"
-    ],
-    [
-     "done",
-     "Many more settings, Clock that wakes the PC, real update percentage at startup"
-    ],
-    [
-     "done",
-     "Safe by default: firewall, private Wi-Fi address, automatic kernel security updates"
-    ],
-    [
-     "done",
-     "Many fixes: snap, taskbar edge, sleep on PCs that can't, faster updates from your country's server"
-    ]
-   ]
-  },
-  {
    "title": "🔨 V1 · end of November",
    "color": "9b6bff",
    "items": [
