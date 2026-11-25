@@ -210,6 +210,34 @@
      "Website refresh: a cleaner, more professional look and more pages"
     ],
     [
+     "planned",
+     "Taskbar settings: left or center, icon size, taskbar size, position, auto-hide"
+    ],
+    [
+     "doing",
+     "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
+    ],
+    [
+     "doing",
+     "USB copies show the real speed, with close and minimize buttons"
+    ],
+    [
+     "planned",
+     "Store apps you have move from Flatpak to APT once, nothing lost"
+    ],
+    [
+     "planned",
+     "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
+    ],
+    [
+     "planned",
+     "WireGuard VPN in one click: import a file, turn it on from Quick Settings"
+    ],
+    [
+     "planned",
+     "Info Center opens Raye's Task Manager and looks like Raye"
+    ],
+    [
      "doing",
      "New Raye logo everywhere: system, installer, website, Discord"
     ],
@@ -253,18 +281,6 @@
     ],
     [
      "planned",
-     "Taskbar settings: left or center, icon size, taskbar size, position, auto-hide"
-    ],
-    [
-     "planned",
-     "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
-    ],
-    [
-     "planned",
-     "USB copies show the real speed, with close and minimize buttons"
-    ],
-    [
-     "planned",
      "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
     ],
     [
@@ -285,15 +301,7 @@
     ],
     [
      "planned",
-     "Store apps you have move from Flatpak to APT once, nothing lost"
-    ],
-    [
-     "planned",
      "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
-    ],
-    [
-     "planned",
-     "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
     ],
     [
      "planned",
@@ -326,14 +334,6 @@
     [
      "doing",
      "Complete Windows bridge: share drivers and settings with Windows"
-    ],
-    [
-     "planned",
-     "WireGuard VPN in one click: import a file, turn it on from Quick Settings"
-    ],
-    [
-     "planned",
-     "Info Center opens Raye's Task Manager and looks like Raye"
     ]
    ]
   },
