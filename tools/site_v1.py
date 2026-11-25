@@ -129,7 +129,7 @@ class Site:
         return f"""<header class="topbar">
 <div class="topbar-in">
 <a class="brand" href="{self.path('home', lang)}" aria-label="{ui['brand_label']}">
-<img src="/assets/raye-mark.svg" alt="" width="36" height="16"><span>Raye Linux</span></a>
+<img src="/assets/raye-mark.svg" alt="" width="28" height="28"><span>Raye Linux</span></a>
 <nav class="nav" aria-label="{ui['nav_label']}">
 <ul>
 {links}
@@ -155,7 +155,7 @@ class Site:
 <div class="wrap">
 <div class="footer-cols">
 <div class="footer-brand">
-<img src="/assets/raye-mark.svg" alt="" width="36" height="16">
+<img src="/assets/raye-mark.svg" alt="" width="28" height="28">
 <p>{ui['rights']}<br><a href="mailto:{ui['mail']}">{ui['mail']}</a></p>
 <p><a class="btn btn-quiet btn-small" href="{self.b.DISCORD}" rel="noopener">Discord</a></p>
 </div>

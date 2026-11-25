@@ -80,17 +80,38 @@ def svg(view, trails, p, title, extra=""):
             f'{body(p, trails)}\n</svg>\n')
 
 
+def logo_svg(view, size, extra="", at=0):
+    """The cut-triangle logo, embedded as a PNG (a raster inside an SVG)."""
+    import base64, io
+    from PIL import Image
+    src = Image.open(os.path.join(os.path.dirname(__file__), "raye-logo-source.png")).convert("RGBA")
+    src = src.crop(src.getchannel("A").point(lambda a: 255 if a > 8 else 0).getbbox())
+    k = size / max(src.size)
+    src = src.resize((round(src.width * k), round(src.height * k)), Image.LANCZOS)
+    box = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    box.alpha_composite(src, ((size - src.width) // 2, (size - src.height) // 2))
+    buf = io.BytesIO()
+    box.save(buf, "PNG", optimize=True)
+    data = base64.b64encode(buf.getvalue()).decode()
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
+            f'viewBox="{view}" role="img" aria-label="Raye">\n<title>Raye</title>\n{extra}'
+            f'<image x="{at}" y="{at}" width="{size}" '
+            f'height="{size}" href="data:image/png;base64,{data}"/>\n</svg>\n')
+
+
 def main():
-    out = os.path.join(os.path.dirname(__file__), "..", "site", "assets")
+    here = os.path.dirname(__file__)
     files = {
-        "raye-eye.svg": svg("40 60 252 80", True, "e", "Raye"),
-        "raye-mark.svg": svg("40 62 172 76", False, "m", "Raye"),
-        "favicon.svg": svg("38 16 168 168", False, "f", "Raye",
-                           '<rect x="38" y="16" width="168" height="168" rx="38" fill="#141318"/>\n'),
+        "raye-eye.svg": logo_svg("0 0 256 256", 256),
+        "raye-mark.svg": logo_svg("0 0 256 256", 256),
+        "favicon.svg": logo_svg("0 0 256 256", 208,
+                                '<rect width="256" height="256" rx="56" fill="#07080f"/>\n', at=24),
     }
-    for name, text in files.items():
-        with open(os.path.join(out, name), "w", encoding="utf-8") as f:
-            f.write(text)
+    for sub in ("site", "site-v1"):
+        out = os.path.join(here, "..", sub, "assets")
+        for name, text in files.items():
+            with open(os.path.join(out, name), "w", encoding="utf-8") as f:
+                f.write(text)
 
 
 if __name__ == "__main__":
