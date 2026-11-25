@@ -15,7 +15,7 @@ sys.dont_write_bytecode = True
 
 from test_site import FORBIDDEN, ROOT, TOOLS, builder, read  # noqa: E402
 
-URL = "https://rayelinux.com"
+URL = "https://www.rayelinux.com"
 SM = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
 XHTML = "{http://www.w3.org/1999/xhtml}"
 # every public page, both languages (not the chooser at / nor the 404)
@@ -175,7 +175,7 @@ class IndexNowTests(unittest.TestCase):
         import indexnow
         body = indexnow.payload(indexnow.sitemap_urls())
         key = builder().INDEXNOW_KEY
-        self.assertEqual(body["host"], "rayelinux.com")
+        self.assertEqual(body["host"], "www.rayelinux.com")
         self.assertEqual(body["key"], key)
         self.assertEqual(body["keyLocation"], f"{URL}/{key}.txt")
         self.assertEqual(len(body["urlList"]), sum(len(v) for v in PUBLIC.values()))

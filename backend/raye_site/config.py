@@ -26,7 +26,7 @@ class SmtpSettings:
 @dataclass(frozen=True)
 class Config:
     db_path: str
-    site_url: str = "https://rayelinux.com"
+    site_url: str = "https://www.rayelinux.com"
     listen_host: str = "127.0.0.1"
     listen_port: int = 8081
     smtp_env_paths: tuple = (DEFAULT_SMTP_ENV,)
@@ -56,7 +56,7 @@ class Config:
         state = env.get("STATE_DIRECTORY", "/var/lib/raye-site").split(":")[0]
         db = env.get("RAYE_SITE_DB") or os.path.join(state, "site.db")
 
-        url = env.get("RAYE_SITE_URL", "https://rayelinux.com").rstrip("/")
+        url = env.get("RAYE_SITE_URL", "https://www.rayelinux.com").rstrip("/")
         if not url.startswith("https://"):
             raise ValueError("RAYE_SITE_URL must be https")
 

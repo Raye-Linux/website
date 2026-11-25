@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ce que contient la version 1.0 · Raye Linux</title>
+<meta name="description" content="La liste de ce que la V1 de Raye Linux apporte : installation, jeux, mémoire, Hyprland, applis, et ce qui reste en cours.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://www.rayelinux.com/nouveautes/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/nouveautes/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/whats-new/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/nouveautes/">
+<link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
+<link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Ce que contient la version 1.0 · Raye Linux">
+<meta property="og:description" content="La liste de ce que la V1 de Raye Linux apporte : installation, jeux, mémoire, Hyprland, applis, et ce qui reste en cours.">
+<meta property="og:url" content="https://www.rayelinux.com/nouveautes/">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=0f8b415c77"></script>
+<script src="/assets/app.js?v=022bbeeae9" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Accueil",
+   "item": "https://www.rayelinux.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Dans la V1",
+   "item": "https://www.rayelinux.com/nouveautes/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="v1 page-v1">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/" aria-label="Raye Linux, accueil">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/communaute/">Communauté</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/en/whats-new/" hreflang="en" lang="en"
+   data-set-lang="en" aria-label="Read this page in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>English</span></a>
+<a class="btn btn-accent btn-small" href="/telecharger/">Télécharger</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Le projet</p>
+<h1>Ce que contient la version 1.0</h1>
+<p class="lede">Cette page suit la feuille de route : chaque ligne vient de sa section V1, que je tiens à jour. Une ligne est écrite ici quand le changement est fait ; ce que je n'ai pas pu essayer sur un vrai PC est dit à part, en bas.</p>
+</header>
+<div class="article">
+<h2 id="install">Installer et démarrer</h2>
+<ul class="text-list">
+<li>La clé USB démarre sur l'essai de Raye, avec une icône Installer sur le bureau. L'installateur s'ouvre en plein écran. Détails sur la page <a href="/installer/">Installer</a>.</li>
+<li>Le menu de démarrage est en anglais seulement, et plusieurs défauts de l'installateur sont corrigés : le bouton Accessibilité décalé, le champ du Wi-Fi, la fenêtre de copie qui restait sur « Finishing writing ».</li>
+<li>Un noyau Raye, qui remplace celui du système de base : des correctifs de la communauté pour la réactivité, la mémoire et la veille, plus les réglages de Raye. Le passage de l'un à l'autre demande d'inscrire une clé une seule fois, sur un écran bleu au redémarrage (page <a href="/installer/">Installer</a>).</li>
+</ul>
+<h2 id="games">Jeux et cartes graphiques</h2>
+<ul class="text-list">
+<li>Steam voit vos autres disques : ce qui est monté sous <code>/media</code>, <code>/run/media</code> et <code>/mnt</code>. Prouvé dans la machine de test, pour Steam installé par le Store.</li>
+<li>Un correctif pour les anciennes cartes AMD (RX 400 et 500), qui restaient en basse résolution ou sur un écran noir, et un pour le clignotement noir des cartes NVIDIA sur un écran à 144 Hz.</li>
+<li>Raye est prêt pour Easy Anti-Cheat v2 : la clé de son noyau a été demandée à Epic. Tout est sur la page <a href="/jeux/">Jeux</a>.</li>
+</ul>
+<h2 id="memory">Mémoire et stabilité</h2>
+<ul class="text-list">
+<li>La même mémoire au repos sur tous les PC, environ 850 Mo, même avec beaucoup de RAM. Avant, le noyau en réservait d'autant plus que la machine en avait.</li>
+<li>Plus de gel quand la mémoire manque : le PC ralentit un peu.</li>
+<li>Des services inutiles retirés et des réglages de fond, pour un Raye plus léger et plus stable.</li>
+<li>Les applis Electron qui plantaient au lancement (Qoder, entre autres) démarrent.</li>
+</ul>
+<h2 id="apps">Fichiers, réseau et applis</h2>
+<ul class="text-list">
+<li>L'Explorateur s'ouvre tout de suite, même quand un disque réseau ne répond pas.</li>
+<li>La fenêtre de copie vers une clé USB montre la vraie vitesse, avec ses boutons Réduire et Fermer.</li>
+<li>Le champ du mot de passe Wi-Fi des paramètres rapides garde le curseur pendant que la liste des réseaux se rafraîchit.</li>
+<li>Un VPN WireGuard en un clic : importez un fichier, allumez-le depuis les paramètres rapides.</li>
+<li>Le Centre d'information ouvre le Gestionnaire des tâches de Raye et en prend l'allure.</li>
+<li>La page Programmes Windows liste aussi ceux installés depuis le Store.</li>
+<li>Le Store prend les paquets APT d'abord, Flatpak seulement quand il n'y a pas d'APT, et accepte les AppImage. Les applis que vous avez en Flatpak passent en APT une seule fois, sans rien perdre.</li>
+</ul>
+<h2 id="look">Le bureau et son allure</h2>
+<ul class="text-list">
+<li>Le nouveau logo de Raye, dans le système, l'installateur, le site et Discord, avec une nouvelle animation de démarrage.</li>
+<li>Paramètres de la barre des tâches : à gauche ou au centre, taille des icônes, hauteur, masquage automatique.</li>
+<li>Des fenêtres qui ondulent quand on les déplace, avec un interrupteur dans les Paramètres.</li>
+</ul>
+<h2 id="hypr">Hyprland</h2>
+<ul class="text-list">
+<li>Une session Hyprland plus souple, des Paramètres et des applis de Raye qui marchent dessus, et un guide complet. Tout est sur la page <a href="/deux-bureaux/">Deux bureaux</a>.</li>
+</ul>
+<aside class="limits" aria-labelledby="limits-hypr hypr">
+<p class="limits-title" id="limits-hypr">Ce qui manque encore</p>
+<ul>
+<li>Les correctifs pour les anciennes cartes AMD et pour les cartes NVIDIA n'ont pas été essayés sur une vraie carte : la machine de test n'a pas de carte graphique.</li>
+<li>Les PC anciens (démarrage en mode BIOS, processeurs comme le Core 2 Duo, 2 à 4 Go de mémoire) sont encore en cours d'essai. Voir la page <a href="/vieux-pc/">Vieux PC</a>.</li>
+<li>Le noyau de Raye n'a pas encore été essayé sur un vrai PC avec Secure Boot, ni avec une vraie carte NVIDIA, et l'hibernation est bloquée quand Secure Boot est actif.</li>
+<li>Je repasse encore chaque écran en français, installateur compris.</li>
+<li>Le VPN WireGuard et les réglages de la barre ont été vus dans la machine de test ; je n'ai pas encore vu l'ondulation des fenêtres, que le rendu de la machine de test ne peut pas montrer.</li>
+</ul>
+</aside>
+</div>
+<nav class="next wrap" aria-label="La suite">
+<a href="/ensuite/"><span>La suite</span><strong>Ensuite</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
+</div>
+<div>
+<h2>Découvrir</h2>
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/deux-bureaux/">Deux bureaux</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
+<li><a href="/mises-a-jour/">Mises à jour</a></li>
+<li><a href="/securite/">Sécurité et vie privée</a></li>
+</ul>
+</div>
+<div>
+<h2>Avant d'installer</h2>
+<ul>
+<li><a href="/materiel/">Matériel</a></li>
+<li><a href="/vieux-pc/">Vieux PC</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/telecharger/">Télécharger</a></li>
+</ul>
+</div>
+<div>
+<h2>Le projet</h2>
+<ul>
+<li><a href="/nouveautes/">Dans la V1</a></li>
+<li><a href="/ensuite/">Ensuite</a></li>
+<li><a href="/feuille-de-route/">Feuille de route</a></li>
+<li><a href="/versions/">Versions</a></li>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/a-propos/">À propos</a></li>
+<li><a href="/code-source/">Code source</a></li>
+</ul>
+</div>
+<div>
+<h2>Communauté</h2>
+<ul>
+<li><a href="/communaute/">Communauté</a></li>
+<li><a href="/rejoindre/">Rejoindre l'équipe</a></li>
+<li><a href="/regles/">Règles de la communauté</a></li>
+</ul>
+</div>
+<div>
+<h2>Légal</h2>
+<ul>
+<li><a href="/confidentialite/">Confidentialité</a></li>
+<li><a href="/conditions/">Conditions d'utilisation</a></li>
+<li><a href="/conditions-beta/">Conditions du programme bêta</a></li>
+<li><a href="/mentions-legales/">Mentions légales</a></li>
+<li><a href="/licences/">Licences</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

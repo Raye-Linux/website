@@ -13,7 +13,7 @@ StateDirectoryMode=0700
 # smtp_<file>; a missing smtp.env is fine, mail waits in the queue, and a
 # missing bug-webhook only turns the "Report a bug" form off
 LoadCredential=smtp:/etc/raye-site
-Environment=RAYE_SITE_URL=https://rayelinux.com
+Environment=RAYE_SITE_URL=https://www.rayelinux.com
 Environment=SMTP_TLS_NAME=@MAIL_TLS_NAME@
 # the help bubble: the language model, on our own network
 Environment=RAYE_SUPPORT_OLLAMA_URL=http://@LLM_IP@:11434

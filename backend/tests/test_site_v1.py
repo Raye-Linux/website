@@ -108,7 +108,10 @@ class V1Tests(unittest.TestCase):
                     self.assertNotIn("style", attrs)
                     self.assertNotEqual(tag, "style")
                     self.assertFalse(any(k.startswith("on") for k in attrs))
-                    if tag == "script":
+                    if tag == "script" and attrs.get("type") == "application/ld+json":
+                        # a data block: nothing runs, so the CSP has nothing to allow
+                        self.assertNotIn("src", attrs)
+                    elif tag == "script":
                         self.assertTrue(attrs.get("src", "").startswith("/assets/"))
 
     def test_nothing_from_elsewhere(self):
@@ -350,6 +353,117 @@ class V1Tests(unittest.TestCase):
         self.assertEqual(old, [], "figures not measured on %s" % V.VERSION)
         self.assertEqual(stale, [], "screenshots without a %s entry in shots/manifest.json"
                          % V.VERSION)
+
+
+class LaunchTests(unittest.TestCase):
+    """The pages added for the launch, the move to www, what search engines
+    read, and the download page while its image is not published."""
+
+    def setUp(self):
+        sys.path.insert(0, os.path.join(REPO, "tools"))
+        import site_v1_download as download
+        import site_v1_seo as seo
+        self.download, self.seo = download, seo
+
+    def test_the_new_pages_exist_in_both_languages_and_are_linked(self):
+        for key in ("v1", "soon", "games", "desktops", "oldpcs"):
+            for lang in ("fr", "en"):
+                with self.subTest(page=key, lang=lang):
+                    self.assertTrue(os.path.isfile(os.path.join(ROOT, rel_of(
+                        V.PAGES[key]["path"][lang]))))
+                    home = read(rel_of(V.PAGES["home"]["path"][lang]))
+                    self.assertIn(f'href="{V.PAGES[key]["path"][lang]}"', home)
+
+    def test_every_page_is_on_www(self):
+        for rel in PAGES:
+            text = read(rel)
+            with self.subTest(page=rel):
+                self.assertNotRegex(text, r"https://rayelinux\.com")
+                if rel != "404.html":
+                    self.assertRegex(text, r'<link rel="canonical" href="https://www\.rayelinux\.com/')
+                    self.assertRegex(text, r'hreflang="x-default" href="https://www\.rayelinux\.com')
+        self.assertEqual(B.URL, "https://www.rayelinux.com")
+
+    def test_the_sitemap_lists_every_page_with_its_pair(self):
+        import xml.etree.ElementTree as ET
+        sm, xh = "{http://www.sitemaps.org/schemas/sitemap/0.9}", "{http://www.w3.org/1999/xhtml}"
+        root = ET.fromstring(read("sitemap.xml"))
+        locs = {u.find(sm + "loc").text for u in root}
+        want = {B.URL + p["path"][l] for p in V.PAGES.values() for l in ("fr", "en")}
+        self.assertEqual(locs, want)
+        for u in root:
+            alt = {a.get("hreflang"): a.get("href") for a in u.findall(xh + "link")}
+            self.assertEqual(set(alt), {"fr", "en", "x-default"})
+            self.assertIn(u.find(sm + "loc").text, (alt["fr"], alt["en"]))
+
+    def test_robots_and_indexnow(self):
+        self.assertIn(f"Sitemap: {B.URL}/sitemap.xml", read("robots.txt"))
+        self.assertEqual(read(f"{B.INDEXNOW_KEY}.txt").strip(), B.INDEXNOW_KEY)
+        import indexnow
+        payload = indexnow.payload([B.URL + "/"])
+        self.assertEqual(payload["keyLocation"], f"{B.URL}/{B.INDEXNOW_KEY}.txt")
+        self.assertEqual(payload["host"], "www.rayelinux.com")
+
+    def test_the_structured_data_is_valid_and_on_www(self):
+        import json
+        for rel in PAGES:
+            if rel == "404.html":
+                continue
+            blocks = re.findall(r'<script type="application/ld\+json">\n(.*?)\n</script>',
+                                read(rel), re.S)
+            with self.subTest(page=rel):
+                self.assertEqual(len(blocks), 1)
+                data = json.loads(blocks[0])
+                self.assertEqual(data["@context"], "https://schema.org")
+                self.assertNotIn("https://rayelinux.com", blocks[0])
+        home = json.loads(re.search(r'ld\+json">\n(.*?)\n</script>',
+                                    read("index.html"), re.S).group(1))
+        app = [x for x in home["@graph"] if x["@type"] == "SoftwareApplication"][0]
+        self.assertTrue(app["isAccessibleForFree"])
+        if self.download.is_pending():
+            self.assertNotIn("downloadUrl", app)
+
+    def test_the_download_page_holds_no_size_or_sum_while_pending(self):
+        if not self.download.is_pending():
+            self.skipTest("the image is published")
+        beta = B.release_info()
+        for lang in ("fr", "en"):
+            text = read(rel_of(V.PAGES["download"]["path"][lang]))
+            with self.subTest(lang=lang):
+                self.assertNotIn(beta["sha256"], text)
+                self.assertNotIn(beta["iso"], text)
+                self.assertNotIn('data-accept', text)
+                self.assertNotIn('class="dl-go"', text)
+                self.assertNotIn(beta["urls"]["r2"], text)
+                self.assertIn("btn-held", text)
+                self.assertIn("raye-1.0-amd64.iso", text)
+                self.assertRegex(text, r"(à renseigner|to be filled in)")
+
+    def test_taking_a_release_ends_the_pending_state(self):
+        import json
+        import tempfile
+        src = os.path.join(REPO, "tools", "build_pages.py")
+        text = open(src, encoding="utf-8").read()
+        self.assertIn('"release-v1.json"', text)
+        self.assertIn('{"pending": False}', text)
+        with open(self.download.PENDING_FILE, encoding="utf-8") as f:
+            self.assertIn("pending", json.load(f))
+
+    def test_the_pages_say_what_was_not_seen(self):
+        # a page about hardware or games that proves nothing says so
+        for key in ("v1", "games", "desktops", "oldpcs"):
+            for lang in ("fr", "en"):
+                text = read(rel_of(V.PAGES[key]["path"][lang]))
+                with self.subTest(page=key, lang=lang):
+                    self.assertIn('<aside class="limits"', text)
+
+    def test_the_games_page_does_not_promise_an_anti_cheat(self):
+        for lang, ask in (("fr", "n'est pas arrivée"), ("en", "hasn't come")):
+            text = " ".join(parse(read(rel_of(V.PAGES["games"]["path"][lang]))).text)
+            text = text.replace("\u00a0", " ").replace("\u2019", "'")
+            with self.subTest(lang=lang):
+                self.assertIn(ask, text)
+                self.assertNotRegex(text, r"(?i)fonctionne avec easy|works with easy anti-cheat")
 
 
 class PeopleAndLegalTests(unittest.TestCase):

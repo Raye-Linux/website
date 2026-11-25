@@ -7,10 +7,10 @@
 <meta name="description" content="Raye Linux is a free system for PCs that keeps the Windows 11 layout. Every figure on this site comes with its machine and its date.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#141318">
-<link rel="canonical" href="https://rayelinux.com/en/">
-<link rel="alternate" hreflang="en" href="https://rayelinux.com/en/">
-<link rel="alternate" hreflang="fr" href="https://rayelinux.com/">
-<link rel="alternate" hreflang="x-default" href="https://rayelinux.com/">
+<link rel="canonical" href="https://www.rayelinux.com/en/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/">
 <link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
 <link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
@@ -18,14 +18,70 @@
 <meta property="og:site_name" content="Raye Linux">
 <meta property="og:title" content="Raye Linux · The Windows 11 desktop, free, on another system">
 <meta property="og:description" content="Raye Linux is a free system for PCs that keeps the Windows 11 layout. Every figure on this site comes with its machine and its date.">
-<meta property="og:url" content="https://rayelinux.com/en/">
+<meta property="og:url" content="https://www.rayelinux.com/en/">
 <meta property="og:locale" content="en_CA">
-<meta property="og:image" content="https://rayelinux.com/assets/shots/desktop-en-1600.jpg?v=2de32c602e">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-en-1600.jpg?v=2de32c602e">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="900">
-<script src="/assets/lang.js?v=a92485c3cc"></script>
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=0f8b415c77"></script>
 <script src="/assets/app.js?v=022bbeeae9" defer></script>
 <script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://www.rayelinux.com/#website",
+   "name": "Raye Linux",
+   "url": "https://www.rayelinux.com/",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://www.rayelinux.com/#organization"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://www.rayelinux.com/#organization",
+   "name": "Raye Linux",
+   "url": "https://www.rayelinux.com/",
+   "logo": "https://www.rayelinux.com/assets/raye-mark.svg?v=cc0b1e9aa1",
+   "email": "bonjour@rayelinux.com",
+   "sameAs": [
+    "https://github.com/Raye-Linux",
+    "https://codeberg.org/Raye-Linux",
+    "https://gitlab.com/raye-linux",
+    "https://discord.gg/TrxhUkabyB"
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://www.rayelinux.com/#software",
+   "name": "Raye Linux",
+   "description": "Raye Linux is a free system for PCs that keeps the Windows 11 layout. Every figure on this site comes with its machine and its date.",
+   "applicationCategory": "OperatingSystem",
+   "operatingSystem": "Linux",
+   "softwareVersion": "1.0",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "CAD"
+   },
+   "inLanguage": [
+    "fr",
+    "en"
+   ],
+   "url": "https://www.rayelinux.com/en/",
+   "publisher": {
+    "@id": "https://www.rayelinux.com/#organization"
+   },
+   "screenshot": "https://www.rayelinux.com/assets/shots/desktop-en-1600.jpg?v=2de32c602e"
+  }
+ ]
+}
+</script>
 </head>
 <body class="v1 page-home home-v1">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -37,6 +93,7 @@
 <ul>
 <li><a href="/en/desktop/">The desktop</a></li>
 <li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
 <li><a href="/en/install/">Install</a></li>
 <li><a href="/en/questions/">Questions</a></li>
 <li><a href="/en/community/">Community</a></li>
@@ -90,7 +147,7 @@
 <li>There is no “C:” drive. The disk is called Raye; a Windows partition, if there is one, is called Windows.</li>
 <li>Updates that don't need a restart install while you work. The others wait until you choose “Update and restart”.</li>
 <li>Apps come from the Raye Store rather than an .exe found on the web, though the .exe still works.</li>
-<li>Some Windows programs don't run, and games protected by a kernel anti-cheat don't run at all.</li>
+<li>Some Windows programs don't run, and games protected by a Windows kernel anti-cheat don't run at all.</li>
 <li>When a program also exists for Raye, such as Discord or Steam, Raye offers you that version rather than the Windows one.</li>
 </ul>
 </div>
@@ -140,12 +197,20 @@
 <p>Will my Windows programs run? What I know, and what I don't know yet.</p>
 </li>
 <li>
+<a href="/en/games/">Games</a>
+<p>Steam, the Windows layer for games, and anti-cheat: what runs, what doesn't.</p>
+</li>
+<li>
 <a href="/en/hardware/">Hardware</a>
 <p>What kind of PC you need, and what Raye was tried on.</p>
 </li>
 <li>
 <a href="/en/install/">Install</a>
 <p>The USB stick, the installer step by step, and Windows alongside.</p>
+</li>
+<li>
+<a href="/en/whats-new/">What's in V1</a>
+<p>What version 1.0 contains, and what is still in progress.</p>
 </li>
 </ol>
 <div class="author-note v1-note">
@@ -186,7 +251,9 @@
 <h2>Look around</h2>
 <ul>
 <li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/two-desktops/">Two desktops</a></li>
 <li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
 <li><a href="/en/updates/">Updates</a></li>
 <li><a href="/en/security/">Security and privacy</a></li>
 </ul>
@@ -195,16 +262,19 @@
 <h2>Before you install</h2>
 <ul>
 <li><a href="/en/hardware/">Hardware</a></li>
+<li><a href="/en/old-pcs/">Older PCs</a></li>
 <li><a href="/en/install/">Install</a></li>
 <li><a href="/en/download/">Download</a></li>
-<li><a href="/en/releases/">Releases</a></li>
 </ul>
 </div>
 <div>
 <h2>The project</h2>
 <ul>
-<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/whats-new/">What's in V1</a></li>
+<li><a href="/en/whats-next/">What's next</a></li>
 <li><a href="/en/roadmap/">Roadmap</a></li>
+<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/questions/">Questions</a></li>
 <li><a href="/en/about/">About</a></li>
 <li><a href="/en/source/">Source code</a></li>
 </ul>

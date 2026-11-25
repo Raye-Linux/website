@@ -21,7 +21,7 @@ import legal_text  # noqa: E402
 import roadmap_text  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site")
-URL = "https://rayelinux.com"
+URL = "https://www.rayelinux.com"
 # the community server; a permanent invite to #welcome
 DISCORD = "https://discord.gg/TrxhUkabyB"
 RELEASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "release.json")
@@ -315,6 +315,11 @@ def take_release(path):
     keep["parts"] = [p["name"] for p in info["parts"]]
     with open(RELEASE, "w", encoding="utf-8") as f:
         json.dump(keep, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    # the V1 download page holds no size and no checksum until this moment
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "release-v1.json"), "w",
+              encoding="utf-8") as f:
+        json.dump({"pending": False}, f)
         f.write("\n")
 
 

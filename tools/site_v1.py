@@ -19,7 +19,9 @@ import os
 import re
 import shutil
 
+import site_v1_download as download
 import site_v1_people as people
+import site_v1_seo as seo
 import site_v1_text as V
 
 TOOLS = os.path.dirname(os.path.abspath(__file__))
@@ -104,9 +106,10 @@ class Site:
 <meta property="og:description" content="{html.escape(description)}">
 <meta property="og:url" content="{url}{here}">
 <meta property="og:locale" content="{'fr_CA' if lang == 'fr' else 'en_CA'}">{og}
+<meta name="twitter:card" content="{'summary_large_image' if og else 'summary'}">
 <script src="/assets/lang.js"></script>
 <script src="/assets/app.js" defer></script>
-<script src="/assets/support.js" defer></script>{extra}
+<script src="/assets/support.js" defer></script>{extra}{seo.ldjson(self, lang, key, title)}
 </head>"""
 
     def download_button(self, lang, small=False):
@@ -424,7 +427,7 @@ class Site:
             self.write(self.rel("home", lang), self.home(lang), lang)
             for key in V.CONTENT:
                 self.write(self.rel(key, lang), self.content_page(lang, key), lang)
-            self.write(self.rel("download", lang), self.b.download(lang, shell=self), lang)
+            self.write(self.rel("download", lang), download.page(self, lang), lang)
             for key in ("privacy", "terms", "betaterms", "notice", "licenses"):
                 self.write(self.rel(key, lang), people.legal(self, lang, key), lang)
             self.write(self.rel("join", lang), people.join_index(self, lang), lang)
@@ -443,6 +446,10 @@ class Site:
                                        self.b.SOURCE[lang]["lead"][:150].rsplit(" ", 1)[0] + "…"),
                        lang)
         self.write("404.html", self.b.strip_links(self.not_found()), "fr")
+        for name, text in (("sitemap.xml", seo.sitemap(self)), ("robots.txt", seo.robots(self)),
+                           (f"{self.b.INDEXNOW_KEY}.txt", self.b.INDEXNOW_KEY + "\n")):
+            with open(os.path.join(self.root, name), "w", encoding="utf-8") as f:
+                f.write(text)
 
 def lang_js():
     """The coming-soon lang.js, with every V1 page in its map."""

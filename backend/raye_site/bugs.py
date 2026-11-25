@@ -34,7 +34,7 @@ REPORTS_PER_HOUR = 3          # per visitor
 REPORTS_PER_HOUR_ALL = 30     # everyone together
 SENDING_MAX = 2               # webhook calls at the same time
 TIMEOUT = 15
-AGENT = "DiscordBot (https://rayelinux.com, 1)"  # Cloudflare refuses Python-urllib
+AGENT = "DiscordBot (https://www.rayelinux.com, 1)"  # Cloudflare refuses Python-urllib
 
 WEBHOOK_RE = re.compile(r"^https://(?:discord\.com|discordapp\.com|ptb\.discord\.com|canary\.discord\.com)"
                         r"/api/webhooks/\d{5,30}/[A-Za-z0-9_\-]{20,100}$")
@@ -225,7 +225,7 @@ def review_message(report, reason):
     if report["contact"]:
         embed["fields"].append({"name": "Contact (private)", "value": report["contact"][:1024]})
     if report["page"]:
-        embed["fields"].append({"name": "Page", "value": "https://rayelinux.com" + report["page"]})
+        embed["fields"].append({"name": "Page", "value": "https://www.rayelinux.com" + report["page"]})
     if report["image"]:
         embed["image"] = {"url": "attachment://screenshot." + report["image"][1]}
     return {

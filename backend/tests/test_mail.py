@@ -9,8 +9,8 @@ from raye_site.store import Store
 
 from helpers import Clock, FakeSMTP, TempDir, make_certs, make_config, write_smtp_env
 
-CONFIRM = "https://rayelinux.com/api/confirm?t=AAA"
-UNSUB = "https://rayelinux.com/api/unsubscribe?t=BBB"
+CONFIRM = "https://www.rayelinux.com/api/confirm?t=AAA"
+UNSUB = "https://www.rayelinux.com/api/unsubscribe?t=BBB"
 SENDER = "Raye Linux <bonjour@rayelinux.com>"
 
 
@@ -33,7 +33,7 @@ class EmailTests(unittest.TestCase):
         self.assertIn("48 heures", text)
         self.assertIn("En confirmant, vous acceptez de recevoir un seul courriel", text)
         self.assertIn("nouvelles", text)
-        self.assertIn('href="https://rayelinux.com/api/confirm?t=AAA"', html)
+        self.assertIn('href="https://www.rayelinux.com/api/confirm?t=AAA"', html)
         self.assertIn('lang="fr"', html)
         self.assertNotIn("<img", html)
         self.assertNotIn("http://", html)
@@ -232,7 +232,7 @@ class LaunchMailTests(WorkerTests):
         launch = [m for m in smtp.messages if "bêta publique" in str(m["msg"]["Subject"])]
         self.assertEqual([m["rcpts"] for m in launch], [["<a@x.ca>"]])
         text = launch[0]["msg"].get_body(("plain",)).get_content()
-        self.assertIn("https://rayelinux.com/fr/telecharger/", text)
+        self.assertIn("https://www.rayelinux.com/fr/telecharger/", text)
         self.assertNotIn("/api/confirm?t=", text)
         self.assertIn("List-Unsubscribe", launch[0]["msg"])
         token = text.split("/api/unsubscribe?t=")[1].split()[0]

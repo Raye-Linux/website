@@ -7,10 +7,10 @@
 <meta name="description" content="Raye Linux est un système gratuit pour PC qui reprend la disposition de Windows 11. Chaque chiffre de ce site porte sa machine et sa date.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#141318">
-<link rel="canonical" href="https://rayelinux.com/">
-<link rel="alternate" hreflang="fr" href="https://rayelinux.com/">
-<link rel="alternate" hreflang="en" href="https://rayelinux.com/en/">
-<link rel="alternate" hreflang="x-default" href="https://rayelinux.com/">
+<link rel="canonical" href="https://www.rayelinux.com/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/">
 <link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
 <link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
@@ -18,14 +18,70 @@
 <meta property="og:site_name" content="Raye Linux">
 <meta property="og:title" content="Raye Linux · Le bureau de Windows 11, gratuit, sur un autre système">
 <meta property="og:description" content="Raye Linux est un système gratuit pour PC qui reprend la disposition de Windows 11. Chaque chiffre de ce site porte sa machine et sa date.">
-<meta property="og:url" content="https://rayelinux.com/">
+<meta property="og:url" content="https://www.rayelinux.com/">
 <meta property="og:locale" content="fr_CA">
-<meta property="og:image" content="https://rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="900">
-<script src="/assets/lang.js?v=a92485c3cc"></script>
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=0f8b415c77"></script>
 <script src="/assets/app.js?v=022bbeeae9" defer></script>
 <script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://www.rayelinux.com/#website",
+   "name": "Raye Linux",
+   "url": "https://www.rayelinux.com/",
+   "inLanguage": "fr",
+   "publisher": {
+    "@id": "https://www.rayelinux.com/#organization"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://www.rayelinux.com/#organization",
+   "name": "Raye Linux",
+   "url": "https://www.rayelinux.com/",
+   "logo": "https://www.rayelinux.com/assets/raye-mark.svg?v=cc0b1e9aa1",
+   "email": "bonjour@rayelinux.com",
+   "sameAs": [
+    "https://github.com/Raye-Linux",
+    "https://codeberg.org/Raye-Linux",
+    "https://gitlab.com/raye-linux",
+    "https://discord.gg/TrxhUkabyB"
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://www.rayelinux.com/#software",
+   "name": "Raye Linux",
+   "description": "Raye Linux est un système gratuit pour PC qui reprend la disposition de Windows 11. Chaque chiffre de ce site porte sa machine et sa date.",
+   "applicationCategory": "OperatingSystem",
+   "operatingSystem": "Linux",
+   "softwareVersion": "1.0",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "CAD"
+   },
+   "inLanguage": [
+    "fr",
+    "en"
+   ],
+   "url": "https://www.rayelinux.com/",
+   "publisher": {
+    "@id": "https://www.rayelinux.com/#organization"
+   },
+   "screenshot": "https://www.rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12"
+  }
+ ]
+}
+</script>
 </head>
 <body class="v1 page-home home-v1">
 <a class="skip-link" href="#main">Aller au contenu</a>
@@ -37,6 +93,7 @@
 <ul>
 <li><a href="/bureau/">Le bureau</a></li>
 <li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
 <li><a href="/installer/">Installer</a></li>
 <li><a href="/questions/">Questions</a></li>
 <li><a href="/communaute/">Communauté</a></li>
@@ -90,7 +147,7 @@
 <li>Il n'y a pas de lecteur « C: ». Le disque s'appelle Raye ; s'il y a une partition Windows, elle s'appelle Windows.</li>
 <li>Les mises à jour qui n'ont pas besoin d'un redémarrage s'installent pendant que vous travaillez. Les autres attendent que vous choisissiez « Mettre à jour et redémarrer ».</li>
 <li>Les applis viennent du Raye Store plutôt que d'un .exe trouvé sur le web, même si le .exe reste possible.</li>
-<li>Certains programmes Windows ne marchent pas, et les jeux protégés par un anti-triche du noyau ne marchent pas du tout.</li>
+<li>Certains programmes Windows ne marchent pas, et les jeux protégés par un anti-triche du noyau de Windows ne marchent pas du tout.</li>
 <li>Quand un programme existe aussi pour Raye, comme Discord ou Steam, Raye vous propose cette version-là plutôt que celle de Windows.</li>
 </ul>
 </div>
@@ -140,12 +197,20 @@
 <p>Est-ce que mes programmes Windows vont marcher ? Ce que je sais, et ce que je ne sais pas encore.</p>
 </li>
 <li>
+<a href="/jeux/">Jeux</a>
+<p>Steam, la couche Windows des jeux, et les anti-triche : ce qui marche, ce qui ne marche pas.</p>
+</li>
+<li>
 <a href="/materiel/">Matériel</a>
 <p>Ce qu'il faut comme PC, et sur quoi Raye a été essayé.</p>
 </li>
 <li>
 <a href="/installer/">Installer</a>
 <p>La clé USB, l'installateur étape par étape, et Windows à côté.</p>
+</li>
+<li>
+<a href="/nouveautes/">Dans la V1</a>
+<p>Ce que contient la version 1.0, et ce qui est encore en cours.</p>
 </li>
 </ol>
 <div class="author-note v1-note">
@@ -186,7 +251,9 @@
 <h2>Découvrir</h2>
 <ul>
 <li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/deux-bureaux/">Deux bureaux</a></li>
 <li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
 <li><a href="/mises-a-jour/">Mises à jour</a></li>
 <li><a href="/securite/">Sécurité et vie privée</a></li>
 </ul>
@@ -195,16 +262,19 @@
 <h2>Avant d'installer</h2>
 <ul>
 <li><a href="/materiel/">Matériel</a></li>
+<li><a href="/vieux-pc/">Vieux PC</a></li>
 <li><a href="/installer/">Installer</a></li>
 <li><a href="/telecharger/">Télécharger</a></li>
-<li><a href="/versions/">Versions</a></li>
 </ul>
 </div>
 <div>
 <h2>Le projet</h2>
 <ul>
-<li><a href="/questions/">Questions</a></li>
+<li><a href="/nouveautes/">Dans la V1</a></li>
+<li><a href="/ensuite/">Ensuite</a></li>
 <li><a href="/feuille-de-route/">Feuille de route</a></li>
+<li><a href="/versions/">Versions</a></li>
+<li><a href="/questions/">Questions</a></li>
 <li><a href="/a-propos/">À propos</a></li>
 <li><a href="/code-source/">Code source</a></li>
 </ul>

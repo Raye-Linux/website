@@ -20,7 +20,7 @@ REAL = ("Files freezes when I open a USB stick",
         "Le bureau gèle quand j'ouvre Fichiers sur une clé USB",
         "The installer stops at 80% on the disk page",
         "Wifi drops after sleep on my Dell laptop, see config.json in raye-update.py",
-        "Download link at https://rayelinux.com/en/download/ gives a 404 page")
+        "Download link at https://www.rayelinux.com/en/download/ gives a 404 page")
 
 
 class HardFilters(unittest.TestCase):

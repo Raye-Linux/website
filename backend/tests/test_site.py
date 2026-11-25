@@ -294,8 +294,8 @@ class SiteTests(unittest.TestCase):
         for kind in pages.MESSAGES:
             texts["page:" + kind] = " ".join(parse(pages.render(kind, None)).text)
         for lang in ("fr", "en"):
-            msg = emails.build_confirmation("a@x.ca", lang, "https://rayelinux.com/c",
-                                            "https://rayelinux.com/u",
+            msg = emails.build_confirmation("a@x.ca", lang, "https://www.rayelinux.com/c",
+                                            "https://www.rayelinux.com/u",
                                             "Raye Linux <bonjour@rayelinux.com>")
             texts["mail:" + lang] = (msg["Subject"] + msg.get_body(("plain",)).get_content())
         texts["app.js"] = " ".join(re.findall(r'"([^"]*)"', read("assets/app.js")))

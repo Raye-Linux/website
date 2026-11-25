@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rayelinux.com/sitemap.xml
+Sitemap: https://www.rayelinux.com/sitemap.xml

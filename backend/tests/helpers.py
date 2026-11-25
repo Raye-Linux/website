@@ -28,7 +28,7 @@ class Clock:
 def make_config(tmp, **over):
     base = dict(
         db_path=os.path.join(tmp, "site.db"),
-        site_url="https://rayelinux.com",
+        site_url="https://www.rayelinux.com",
         listen_host="127.0.0.1",
         listen_port=0,
         smtp_env_paths=(os.path.join(tmp, "smtp.env"),),

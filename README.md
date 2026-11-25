@@ -49,5 +49,5 @@ GPL-3.0-or-later (`LICENSE`).
 
 ## Links
 
-- Website: https://rayelinux.com
+- Website: https://www.rayelinux.com
 - Discord: https://discord.gg/TrxhUkabyB (questions, bug reports, news)

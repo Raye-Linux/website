@@ -7,10 +7,10 @@
 <meta name="description" content="Préparer la clé USB, l&#x27;installateur étape par étape, garder Windows à côté, et ce que l&#x27;installateur ne fait pas.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#141318">
-<link rel="canonical" href="https://rayelinux.com/installer/">
-<link rel="alternate" hreflang="fr" href="https://rayelinux.com/installer/">
-<link rel="alternate" hreflang="en" href="https://rayelinux.com/en/install/">
-<link rel="alternate" hreflang="x-default" href="https://rayelinux.com/installer/">
+<link rel="canonical" href="https://www.rayelinux.com/installer/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/installer/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/install/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/installer/">
 <link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
 <link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
@@ -18,14 +18,35 @@
 <meta property="og:site_name" content="Raye Linux">
 <meta property="og:title" content="Installer Raye, étape par étape · Raye Linux">
 <meta property="og:description" content="Préparer la clé USB, l&#x27;installateur étape par étape, garder Windows à côté, et ce que l&#x27;installateur ne fait pas.">
-<meta property="og:url" content="https://rayelinux.com/installer/">
+<meta property="og:url" content="https://www.rayelinux.com/installer/">
 <meta property="og:locale" content="fr_CA">
-<meta property="og:image" content="https://rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="900">
-<script src="/assets/lang.js?v=a92485c3cc"></script>
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=0f8b415c77"></script>
 <script src="/assets/app.js?v=022bbeeae9" defer></script>
 <script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Accueil",
+   "item": "https://www.rayelinux.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Installer",
+   "item": "https://www.rayelinux.com/installer/"
+  }
+ ]
+}
+</script>
 </head>
 <body class="v1 page-install">
 <a class="skip-link" href="#main">Aller au contenu</a>
@@ -37,6 +58,7 @@
 <ul>
 <li><a href="/bureau/">Le bureau</a></li>
 <li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
 <li><a href="/installer/" aria-current="page">Installer</a></li>
 <li><a href="/questions/">Questions</a></li>
 <li><a href="/communaute/">Communauté</a></li>
@@ -71,9 +93,16 @@
 </li>
 <li>
 <h3>Démarrez sur la clé</h3>
-<p>À l'allumage, souvent avec F12, F11, F8 ou Échap. Raye démarre une session d'essai, d'où vous lancez l'installateur.</p>
+<p>À l'allumage, souvent avec F12, F11, F8 ou Échap. Le menu de la clé, en anglais seulement, démarre par défaut sur « Try Raye Linux without installing » : une session d'essai qui ne touche pas au disque. L'icône « Install Raye Linux » est sur le bureau et en tête de Démarrer, et ouvre l'installateur en plein écran. Sur la ligne d'en dessous du menu, « Install Raye Linux » l'ouvre directement ; « Safe graphics » aide quand l'écran reste noir.</p>
 </li>
 </ol>
+<figure class="shot">
+<div class="shot-todo" data-shot="try-raye">
+<p class="todo-label">Capture à prendre · <code>try-raye</code></p>
+<p class="todo-what">La session d'essai de Raye, lancée depuis la clé USB : le bureau avec l'icône Installer Raye Linux posée dessus.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
 <h2 id="pages">L'installateur, étape par étape</h2>
 <ol class="step-list">
 <li>
@@ -130,6 +159,7 @@
 <ul>
 <li>Je l'ai prouvé sur une partition Windows de test, dans la machine de test : 50 Go réduits à 23 Go, et chaque fichier de Windows identique avant et après. Pas encore sur un vrai Windows réduit puis redémarré. Sauvegardez avant.</li>
 <li>Le menu de démarrage affiche encore « Raye Linux GNU/Linux » au lieu de « Raye Linux ».</li>
+<li>Sur un PC en mode BIOS d'autrefois, j'ai vu la clé démarrer jusqu'à l'installateur, pas l'installation complète : voir la page <a href="/vieux-pc/">Vieux PC</a>.</li>
 </ul>
 </aside>
 <h2 id="not">Ce que l'installateur ne fait pas</h2>
@@ -137,8 +167,39 @@
 <li>Pas de partitionnement à la main.</li>
 <li>Seule une partition Windows (NTFS) non chiffrée peut être réduite.</li>
 <li>Un disque qui porte déjà un autre Linux n'a que le choix « Effacer » : pas de troisième système.</li>
-<li>Pas de PC qui ne démarre qu'en mode BIOS.</li>
+<li>Pas de PC 32 bits.</li>
 </ul>
+<h2 id="key">La clé de Raye et l'écran bleu</h2>
+<p>Le noyau de Raye est signé avec une clé de Raye. Pour que Secure Boot l'accepte, il faut inscrire cette clé une seule fois, et c'est le micrologiciel de votre PC qui le demande, sur un écran bleu au redémarrage, pas Raye. Avant de redémarrer, Raye vous montre un code à six chiffres à retenir.</p>
+<ol class="step-list">
+<li>
+<h3>Appuyez sur une touche</h3>
+<p>Vous avez environ 10 secondes à l'écran bleu pour appuyer sur une touche.</p>
+</li>
+<li>
+<h3>Choisissez Enroll MOK</h3>
+<p>Puis Continue, puis Yes.</p>
+</li>
+<li>
+<h3>Tapez le code</h3>
+<p>Le code à six chiffres que Raye vous a montré, puis Reboot.</p>
+</li>
+</ol>
+<figure class="shot">
+<div class="shot-todo" data-shot="enroll-key">
+<p class="todo-label">Capture à prendre · <code>enroll-key</code></p>
+<p class="todo-what">L'écran bleu du démarrage où l'on inscrit la clé de Raye : la liste « Enroll MOK » et le champ du code à six chiffres.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<p>Si vous manquez l'écran bleu, rien de grave : le PC démarre comme avant, avec le noyau du système de base, et Raye vous le redemandera. Sans Secure Boot, il n'y a pas d'écran bleu.</p>
+<aside class="limits" aria-labelledby="limits-key key">
+<p class="limits-title" id="limits-key">Ce qui manque encore</p>
+<ul>
+<li>Je l'ai vu marcher dans la machine de test, avec Secure Boot et une puce TPM virtuelle : écran bleu manqué, puis écran bleu réussi, puis démarrage sur le noyau de Raye. Pas encore sur un vrai PC.</li>
+<li>La clé USB d'essai garde le noyau signé d'origine : on n'inscrit rien pour essayer Raye.</li>
+</ul>
+</aside>
 <h2 id="after">Après</h2>
 <p>Au premier démarrage, si vous avez chiffré le disque, la puce TPM l'ouvre (sans puce, Raye demande le mot de passe du disque), puis vous tapez le mot de passe de votre compte. La clé de récupération s'affiche à la première connexion (voir <a href="/securite/">Sécurité</a>). Deux minutes plus tard, Raye prépare l'espace des programmes Windows en arrière-plan.</p>
 <aside class="limits" aria-labelledby="limits-after after">
@@ -166,7 +227,9 @@
 <h2>Découvrir</h2>
 <ul>
 <li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/deux-bureaux/">Deux bureaux</a></li>
 <li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
 <li><a href="/mises-a-jour/">Mises à jour</a></li>
 <li><a href="/securite/">Sécurité et vie privée</a></li>
 </ul>
@@ -175,16 +238,19 @@
 <h2>Avant d'installer</h2>
 <ul>
 <li><a href="/materiel/">Matériel</a></li>
+<li><a href="/vieux-pc/">Vieux PC</a></li>
 <li><a href="/installer/">Installer</a></li>
 <li><a href="/telecharger/">Télécharger</a></li>
-<li><a href="/versions/">Versions</a></li>
 </ul>
 </div>
 <div>
 <h2>Le projet</h2>
 <ul>
-<li><a href="/questions/">Questions</a></li>
+<li><a href="/nouveautes/">Dans la V1</a></li>
+<li><a href="/ensuite/">Ensuite</a></li>
 <li><a href="/feuille-de-route/">Feuille de route</a></li>
+<li><a href="/versions/">Versions</a></li>
+<li><a href="/questions/">Questions</a></li>
 <li><a href="/a-propos/">À propos</a></li>
 <li><a href="/code-source/">Code source</a></li>
 </ul>

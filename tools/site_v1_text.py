@@ -96,6 +96,12 @@ PAGES = {
     "privacy": {"path": L("/confidentialite/", "/en/privacy/"),
                 "name": L("Confidentialité", "Privacy")},
     "download": {"path": L("/telecharger/", "/en/download/"), "name": L("Télécharger", "Download")},
+    "games": {"path": L("/jeux/", "/en/games/"), "name": L("Jeux", "Games")},
+    "desktops": {"path": L("/deux-bureaux/", "/en/two-desktops/"),
+                 "name": L("Deux bureaux", "Two desktops")},
+    "oldpcs": {"path": L("/vieux-pc/", "/en/old-pcs/"), "name": L("Vieux PC", "Older PCs")},
+    "v1": {"path": L("/nouveautes/", "/en/whats-new/"), "name": L("Dans la V1", "What's in V1")},
+    "soon": {"path": L("/ensuite/", "/en/whats-next/"), "name": L("Ensuite", "What's next")},
 }
 
 # the pages about people, the legal pages and the shared ones (roadmap,
@@ -104,12 +110,14 @@ from site_v1_join_text import PAGES as _MORE  # noqa: E402
 
 PAGES.update(_MORE)
 
-NAV = ["desktop", "windows", "install", "questions", "community"]
+NAV = ["desktop", "windows", "games", "install", "questions", "community"]
 FOOTER = [
-    (L("Découvrir", "Look around"), ["desktop", "windows", "updates", "security"]),
-    (L("Avant d'installer", "Before you install"), ["hardware", "install", "download",
-                                                    "releases"]),
-    (L("Le projet", "The project"), ["questions", "roadmap", "about", "source"]),
+    (L("Découvrir", "Look around"), ["desktop", "desktops", "windows", "games", "updates",
+                                      "security"]),
+    (L("Avant d'installer", "Before you install"), ["hardware", "oldpcs", "install",
+                                                    "download"]),
+    (L("Le projet", "The project"), ["v1", "soon", "roadmap", "releases", "questions", "about",
+                                      "source"]),
     (L("Communauté", "Community"), ["community", "join", "rules"]),
     (L("Légal", "Legal"), ["privacy", "terms", "betaterms", "notice", "licenses"]),
 ]
@@ -326,9 +334,9 @@ HOME = {
             "Apps come from the Raye Store rather than an .exe found on the web, though the .exe "
             "still works."),
           L("Certains programmes Windows ne marchent pas, et les jeux protégés par un "
-            "anti-triche du noyau ne marchent pas du tout.",
-            "Some Windows programs don't run, and games protected by a kernel anti-cheat don't "
-            "run at all."),
+            "anti-triche du noyau de Windows ne marchent pas du tout.",
+            "Some Windows programs don't run, and games protected by a Windows kernel "
+            "anti-cheat don't run at all."),
           L("Quand un programme existe aussi pour Raye, comme Discord ou Steam, Raye vous "
             "propose cette version-là plutôt que celle de Windows.",
             "When a program also exists for Raye, such as Discord or Steam, Raye offers you "
@@ -356,10 +364,16 @@ HOME = {
                           "que je ne sais pas encore.",
                           "Will my Windows programs run? What I know, and what I don't know "
                           "yet.")),
+            ("games", L("Steam, la couche Windows des jeux, et les anti-triche : ce qui marche, "
+                        "ce qui ne marche pas.",
+                        "Steam, the Windows layer for games, and anti-cheat: what runs, what "
+                        "doesn't.")),
             ("hardware", L("Ce qu'il faut comme PC, et sur quoi Raye a été essayé.",
                            "What kind of PC you need, and what Raye was tried on.")),
             ("install", L("La clé USB, l'installateur étape par étape, et Windows à côté.",
                           "The USB stick, the installer step by step, and Windows alongside.")),
+            ("v1", L("Ce que contient la version {v}, et ce qui est encore en cours.",
+                     "What version {v} contains, and what is still in progress.")),
         ]),
         ("note",
          L("Pourquoi je fais Raye", "Why I make Raye"),
@@ -940,10 +954,11 @@ HARDWARE = {
         H("needs", "Ce qu'il faut", "What you need"),
         ("list", [
             L("Un processeur Intel ou AMD 64 bits, et un PC qui démarre en mode UEFI (la plupart "
-              "des PC depuis 2012). Un PC qui ne démarre qu'en mode BIOS ne peut pas démarrer "
-              "Raye.",
+              "des PC depuis 2012). Le mode BIOS d'autrefois est en cours d'essai pour la V1 : "
+              "voir <a href=\"{p:oldpcs}\">Vieux PC</a>.",
               "A 64-bit Intel or AMD processor, and a PC that starts in UEFI mode (most PCs since "
-              "2012). A PC that only starts in BIOS mode can't start Raye."),
+              "2012). The old BIOS mode is being tried for V1: see "
+              "<a href=\"{p:oldpcs}\">Older PCs</a>."),
             L("8 Go de mémoire conseillés. L'installateur accepte moins, mais je n'ai pas essayé "
               "Raye sur un PC de 4 Go.",
               "8 GB of memory recommended. The installer accepts less, but I haven't tried Raye "
@@ -1072,11 +1087,20 @@ INSTALL = {
                "stick that doesn't start. balenaEtcher works too. Everything on the stick will "
                "be erased.")),
             (L("Démarrez sur la clé", "Start from the stick"),
-             L("À l'allumage, souvent avec F12, F11, F8 ou Échap. Raye démarre une session "
-               "d'essai, d'où vous lancez l'installateur.",
-               "At power on, often with F12, F11, F8 or Esc. Raye starts a trial session, and "
-               "you start the installer from there.")),
+             L("À l'allumage, souvent avec F12, F11, F8 ou Échap. Le menu de la clé, en anglais "
+               "seulement, démarre par défaut sur « Try Raye Linux without installing » : une "
+               "session d'essai qui ne touche pas au disque. L'icône « Install Raye Linux » est "
+               "sur le bureau et en tête de Démarrer, et ouvre l'installateur en plein écran. "
+               "Sur la ligne d'en dessous du menu, « Install Raye Linux » l'ouvre directement ; "
+               "« Safe graphics » aide quand l'écran reste noir.",
+               "At power on, often with F12, F11, F8 or Esc. The stick's menu, in English only, "
+               "starts by default on “Try Raye Linux without installing”: a trial session that "
+               "doesn't touch the disk. The “Install Raye Linux” icon is on the desktop and at "
+               "the top of Start, and opens the installer full screen. On the line below in the "
+               "menu, “Install Raye Linux” opens it directly; “Safe graphics” helps when the "
+               "screen stays black.")),
         ]),
+        ("shot", "try-raye"),
         H("pages", "L'installateur, étape par étape", "The installer, step by step"),
         ("steps", [
             (L("Région", "Region"),
@@ -1137,7 +1161,12 @@ INSTALL = {
                L("Le menu de démarrage affiche encore « Raye Linux GNU/Linux » au lieu de « Raye "
                  "Linux ».",
                  "The startup menu still shows “Raye Linux GNU/Linux” instead of “Raye "
-                 "Linux”.")),
+                 "Linux”."),
+               L("Sur un PC en mode BIOS d'autrefois, j'ai vu la clé démarrer jusqu'à "
+                 "l'installateur, pas l'installation complète : voir la page "
+                 "<a href=\"{p:oldpcs}\">Vieux PC</a>.",
+                 "On a PC in the old BIOS mode, I saw the stick start up to the installer, not a "
+                 "full install: see the <a href=\"{p:oldpcs}\">Older PCs</a> page.")),
         H("not", "Ce que l'installateur ne fait pas", "What the installer doesn't do"),
         ("list", [
             L("Pas de partitionnement à la main.", "No manual partitioning."),
@@ -1146,9 +1175,44 @@ INSTALL = {
             L("Un disque qui porte déjà un autre Linux n'a que le choix « Effacer » : pas de "
               "troisième système.",
               "A disk that already holds another Linux only gets “Erase”: no third system."),
-            L("Pas de PC qui ne démarre qu'en mode BIOS.",
-              "No PC that only starts in BIOS mode."),
+            L("Pas de PC 32 bits.", "No 32-bit PC."),
         ]),
+        H("key", "La clé de Raye et l'écran bleu", "Raye's key and the blue screen"),
+        P("Le noyau de Raye est signé avec une clé de Raye. Pour que Secure Boot l'accepte, "
+          "il faut inscrire cette clé une seule fois, et c'est le micrologiciel de votre PC qui "
+          "le demande, sur un écran bleu au redémarrage, pas Raye. Avant de redémarrer, Raye vous "
+          "montre un code à six chiffres à retenir.",
+          "Raye's kernel is signed with a Raye key. For Secure Boot to accept it, that key has "
+          "to be enrolled once, and it's your PC's firmware that asks, on a blue screen at "
+          "restart, not Raye. Before restarting, Raye shows you a six-digit code to remember."),
+        ("steps", [
+            (L("Appuyez sur une touche", "Press a key"),
+             L("Vous avez environ 10 secondes à l'écran bleu pour appuyer sur une touche.",
+               "You have about 10 seconds at the blue screen to press a key.")),
+            (L("Choisissez Enroll MOK", "Choose Enroll MOK"),
+             L("Puis Continue, puis Yes.",
+               "Then Continue, then Yes.")),
+            (L("Tapez le code", "Type the code"),
+             L("Le code à six chiffres que Raye vous a montré, puis Reboot.",
+               "The six-digit code Raye showed you, then Reboot.")),
+        ]),
+        ("shot", "enroll-key"),
+        P("Si vous manquez l'écran bleu, rien de grave : le PC démarre comme avant, avec le noyau "
+          "du système de base, et Raye vous le redemandera. Sans Secure Boot, il n'y a pas "
+          "d'écran bleu.",
+          "If you miss the blue screen, no harm done: the PC starts as before, with the base "
+          "system's kernel, and Raye will ask again. Without Secure Boot, there is no blue "
+          "screen."),
+        limits(L("Je l'ai vu marcher dans la machine de test, avec Secure Boot et une puce TPM "
+                 "virtuelle : écran bleu manqué, puis écran bleu réussi, puis démarrage sur le "
+                 "noyau de Raye. Pas encore sur un vrai PC.",
+                 "I saw it work in the test machine, with Secure Boot and a virtual TPM chip: "
+                 "blue screen missed, then blue screen done, then start on Raye's kernel. Not "
+                 "yet on a real PC."),
+               L("La clé USB d'essai garde le noyau signé d'origine : on n'inscrit rien pour "
+                 "essayer Raye.",
+                 "The trial USB stick keeps the original signed kernel: nothing is enrolled just "
+                 "to try Raye.")),
         H("after", "Après", "Afterwards"),
         P("Au premier démarrage, si vous avez chiffré le disque, la puce TPM l'ouvre (sans puce, "
           "Raye demande le mot de passe du disque), puis vous tapez le mot de passe de votre "
@@ -1208,11 +1272,14 @@ QUESTIONS = {
                "installer and the updates on top are Raye's, and Raye keeps them up to date. "
                "Raye is not affiliated with Canonical or endorsed by it.")),
             (L("Je peux l'essayer sans l'installer ?", "Can I try it without installing?"),
-             L("Oui. Démarrez sur la clé USB et choisissez « Essayer Raye Linux sans "
-               "l'installer » : Raye tourne depuis la clé et ne touche ni au disque ni à la "
-               "mémoire d'échange de votre PC.",
-               "Yes. Start from the USB stick and pick “Try Raye Linux without installing”: "
-               "Raye runs from the stick and touches neither your PC's disk nor its swap.")),
+             L("Oui, et c'est ce que fait la clé USB d'office : elle démarre sur « Try Raye "
+               "Linux without installing ». Raye tourne depuis la clé et ne touche ni au disque "
+               "ni à la mémoire d'échange de votre PC. L'icône Installer est sur le bureau quand "
+               "vous voulez passer à l'installation.",
+               "Yes, and that's what the USB stick does by default: it starts on “Try Raye Linux "
+               "without installing”. Raye runs from the stick and touches neither your PC's disk "
+               "nor its swap. The Install icon is on the desktop when you want to go on to the "
+               "install.")),
             (L("Mes programmes vont-ils marcher ?", "Will my programs work?"),
              L("Un .exe se lance d'un double-clic. Au premier lancement, Raye lui donne seul ce "
                "qu'il demande souvent (.NET 6 à 9, Visual Basic 6, MFC, OpenAL, PhysX). Le Store "
@@ -1227,10 +1294,34 @@ QUESTIONS = {
             (L("Et mes jeux ?", "What about my games?"),
              L("Steam et Heroic sont dans le Store, et le mode jeu s'active tout seul pendant "
                "une partie. Roblox passe par Sober. Les jeux qui ont un anti-triche dans le "
-               "noyau, comme Valorant ou Fortnite, ne marchent pas.",
+               "noyau de Windows, comme Valorant, ne marchent pas. Easy Anti-Cheat v2 attend "
+               "que la clé de Raye soit acceptée par Epic : tout est sur la page "
+               "<a href=\"{p:games}\">Jeux</a>.",
                "Steam and Heroic are in the Store, and Game Mode turns on by itself while you "
-               "play. Roblox runs through Sober. Games with a kernel anti-cheat, such as "
-               "Valorant or Fortnite, don't work.")),
+               "play. Roblox runs through Sober. Games with an anti-cheat in the Windows kernel, "
+               "such as Valorant, don't work. Easy Anti-Cheat v2 waits for Raye's key to be "
+               "accepted by Epic: it's all on the <a href=\"{p:games}\">Games</a> page.")),
+            (L("Qu'est-ce que c'est, cet écran bleu au redémarrage ?",
+               "What is that blue screen at restart?"),
+             L("Si Secure Boot est actif et que vous passez au noyau de Raye, le micrologiciel "
+               "de votre PC demande une fois d'inscrire la clé de Raye. Raye vous montre "
+               "avant un code à six chiffres : appuyez sur une touche dans les 10 secondes, "
+               "choisissez Enroll MOK, Continue, Yes, tapez le code, puis Reboot. Si vous "
+               "manquez l'écran, rien de grave. Voir la page "
+               "<a href=\"{p:install}\">Installer</a>.",
+               "If Secure Boot is on and you move to Raye's kernel, your PC's firmware asks once "
+               "to enroll Raye's key. Raye shows you a six-digit code beforehand: press a key "
+               "within 10 seconds, choose Enroll MOK, Continue, Yes, type the code, then Reboot. "
+               "If you miss the screen, no harm done. See the <a href=\"{p:install}\">Install</a> "
+               "page.")),
+            (L("Y a-t-il un autre bureau que celui qui ressemble à Windows ?",
+               "Is there another desktop besides the one that looks like Windows?"),
+             L("Oui : Hyprland, où les fenêtres se rangent côte à côte et où l'on fait presque "
+               "tout au clavier. Les deux sont dans la même installation. Voir "
+               "<a href=\"{p:desktops}\">Deux bureaux</a>.",
+               "Yes: Hyprland, where windows line up side by side and you do almost everything "
+               "with the keyboard. Both are in the same install. See "
+               "<a href=\"{p:desktops}\">Two desktops</a>.")),
             (L("Puis-je garder Windows ?", "Can I keep Windows?"),
              L("Oui, Raye peut s'installer à côté. Si Windows est chiffré par BitLocker, il faut "
                "d'abord désactiver ce chiffrement dans Windows. Lisez la mise en garde de la page "
@@ -1264,13 +1355,16 @@ QUESTIONS = {
                "graphics card. On a real PC the figure will differ, and it will be on the "
                "<a href=\"{p:hardware}\">Hardware</a> page. 8 GB is recommended.")),
             (L("Et sur un vieux PC ?", "What about an older PC?"),
-             L("Raye démarre en UEFI et dans l'ancien mode BIOS. Si le processeur est ancien, "
+             L("Raye démarre en UEFI, et la clé démarre aussi dans l'ancien mode BIOS : je l'ai "
+               "vu dans une machine virtuelle de 2 Go. Si le processeur est ancien, "
                "l'installateur le dit dès sa première page, sans bloquer : certaines applis et "
-               "certains jeux en demandent un plus récent. Les PC de 2 à 4 Go sont en cours "
-               "d'essai.",
-               "Raye starts in UEFI and in the older BIOS mode. If the processor is old, the "
-               "installer says so on its first page, without stopping: some apps and games need "
-               "a newer one. PCs with 2 to 4 GB are being tested.")),
+               "certains jeux en demandent un plus récent. Aucun vrai vieux PC n'a encore été "
+               "essayé : tout est sur la page <a href=\"{p:oldpcs}\">Vieux PC</a>.",
+               "Raye starts in UEFI, and the stick also starts in the older BIOS mode: I saw it "
+               "in a 2 GB virtual machine. If the processor is old, the installer says so on its "
+               "first page, without stopping: some apps and games need a newer one. No real old "
+               "PC has been tried yet: it's all on the <a href=\"{p:oldpcs}\">Older PCs</a> "
+               "page.")),
             (L("Mon portable ne sort pas de la veille.", "My laptop doesn't wake from sleep."),
              L("Raye le voit : la première fois, il prévient, la deuxième fois de suite, il "
                "désactive la veille, et fermer le capot verrouille le PC et éteint l'écran. "
@@ -1477,3 +1571,9 @@ CONTENT = {
     "hardware": HARDWARE, "install": INSTALL, "questions": QUESTIONS,
     "releases": RELEASES, "about": ABOUT,
 }
+
+# the pages added for the launch (what is in V1, what comes next, games, the two
+# desktops, older PCs) live in site_v1_more_text.py
+from site_v1_more_text import CONTENT as _NEW  # noqa: E402
+
+CONTENT.update(_NEW)

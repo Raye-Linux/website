@@ -139,7 +139,7 @@ LAUNCH = {
         "discord": "Le serveur Discord",
         "sign": "L'équipe Raye Linux",
         "unsub": "Ne plus recevoir de courriels de Raye Linux",
-        "url": "https://rayelinux.com/fr/telecharger/",
+        "url": "https://www.rayelinux.com/fr/telecharger/",
     },
     "en": {
         "subject": "Raye Linux is out in public beta",
@@ -152,7 +152,7 @@ LAUNCH = {
         "discord": "The Discord server",
         "sign": "The Raye Linux team",
         "unsub": "Stop getting emails from Raye Linux",
-        "url": "https://rayelinux.com/en/download/",
+        "url": "https://www.rayelinux.com/en/download/",
     },
 }
 DISCORD = "https://discord.gg/TrxhUkabyB"
