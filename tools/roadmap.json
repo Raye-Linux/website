@@ -6,7 +6,7 @@
    "color": "9b6bff",
    "items": [
     [
-     "doing",
+     "done",
      "Steam sees your other drives"
     ],
     [
@@ -18,7 +18,7 @@
      "Fix for the flicker on NVIDIA cards at 144 Hz"
     ],
     [
-     "doing",
+     "done",
      "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM"
     ],
     [
@@ -26,7 +26,7 @@
      "No more freezes when RAM runs out: the PC slows down a little instead"
     ],
     [
-     "doing",
+     "done",
      "Fix for apps that crash on start (Qoder and other Electron apps)"
     ],
     [
@@ -34,7 +34,7 @@
      "Wi-Fi password box keeps the cursor while networks refresh"
     ],
     [
-     "doing",
+     "done",
      "File Explorer opens right away, even when a network drive is out of reach"
     ],
     [
@@ -50,7 +50,7 @@
      "Unneeded services removed and global optimizations, for a lighter and more stable Raye"
     ],
     [
-     "planned",
+     "doing",
      "Website refresh: a cleaner, more professional look and more pages"
     ],
     [
@@ -58,7 +58,7 @@
      "Taskbar settings: left or center, icon size, taskbar height, auto-hide"
     ],
     [
-     "doing",
+     "done",
      "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
     ],
     [
@@ -66,11 +66,11 @@
      "USB copies show the real speed, with close and minimize buttons"
     ],
     [
-     "doing",
+     "done",
      "Store apps you have move from Flatpak to APT once, nothing lost"
     ],
     [
-     "doing",
+     "done",
      "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
     ],
     [
@@ -78,7 +78,7 @@
      "WireGuard VPN in one click: import a file, turn it on from Quick Settings"
     ],
     [
-     "doing",
+     "done",
      "Info Center opens Raye's Task Manager and looks like Raye"
     ],
     [
@@ -94,15 +94,75 @@
      "Complete Hyprland guide: change everything, Raye apps included, step by step"
     ],
     [
-     "doing",
+     "done",
      "Install other Hyprland setups (dotfiles like Caelestia) in one step, and go back to Raye's anytime"
+    ],
+    [
+     "doing",
+     "Windows apps install silently with a real progress bar, start to finish"
+    ],
+    [
+     "doing",
+     "Printers & scanners page and a Scan app, plus longer laptop battery life"
+    ],
+    [
+     "doing",
+     "A real Raye screen to unlock an encrypted disk at startup"
+    ],
+    [
+     "doing",
+     "Complete Windows bridge: share drivers and settings with Windows"
+    ],
+    [
+     "planned",
+     "Taskbar on top or on the side of the screen"
+    ],
+    [
+     "planned",
+     "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
+    ],
+    [
+     "doing",
+     "The V1 website, with fresh screenshots of the real system"
+    ],
+    [
+     "doing",
+     "Legal pages and FAQ"
+    ],
+    [
+     "doing",
+     "Join the team and a staff panel on the website"
+    ],
+    [
+     "planned",
+     "Public profiles and badges"
+    ],
+    [
+     "planned",
+     "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
+    ],
+    [
+     "planned",
+     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
+    ],
+    [
+     "planned",
+     "Raye account: your settings follow you to every PC"
+    ],
+    [
+     "planned",
+     "New account website and emails, with two-factor sign-in"
+    ],
+    [
+     "planned",
+     "Raye Proton: pick Raye's Windows layer for Steam games"
     ],
     [
      "doing",
      "New Raye logo everywhere: system, installer, website, Discord"
     ],
     [
-     "doing",
+     "done",
      "New boot animation with the new logo"
     ],
     [
@@ -110,7 +170,7 @@
      "New Raye kernel: CachyOS and XanMod patches plus Raye's own tuning"
     ],
     [
-     "doing",
+     "done",
      "Raye kernel only (Ubuntu's kernel removed)"
     ],
     [
@@ -141,72 +201,6 @@
   },
   {
    "title": "🕒 V1.1 · early December",
-   "color": "8a8f98",
-   "items": [
-    [
-     "doing",
-     "Windows apps install silently with a real progress bar, start to finish"
-    ],
-    [
-     "planned",
-     "Taskbar on top or on the side of the screen"
-    ],
-    [
-     "planned",
-     "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
-    ],
-    [
-     "planned",
-     "The V1 website, with fresh screenshots of the real system"
-    ],
-    [
-     "planned",
-     "Legal pages and FAQ"
-    ],
-    [
-     "planned",
-     "Join the team and a staff panel on the website"
-    ],
-    [
-     "planned",
-     "Public profiles and badges"
-    ],
-    [
-     "planned",
-     "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
-    ],
-    [
-     "planned",
-     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
-    ],
-    [
-     "planned",
-     "Raye account: your settings follow you to every PC"
-    ],
-    [
-     "planned",
-     "New account website and emails, with two-factor sign-in"
-    ],
-    [
-     "planned",
-     "Raye Proton: pick Raye's Windows layer for Steam games"
-    ],
-    [
-     "planned",
-     "Printers & scanners page and a Scan app, plus longer laptop battery life"
-    ],
-    [
-     "planned",
-     "A real Raye screen to unlock an encrypted disk at startup"
-    ],
-    [
-     "doing",
-     "Complete Windows bridge: share drivers and settings with Windows"
-    ]
-   ]
-  },
-  {
-   "title": "🕒 V1.2 · December 11–12",
    "color": "8a8f98",
    "items": [
     [

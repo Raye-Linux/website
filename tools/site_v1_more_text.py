@@ -155,7 +155,18 @@ WHATSNEW = {
               "A smoother Hyprland session, Settings and Raye apps that work on it, and a "
               "complete guide. It's all on the <a href=\"{p:desktops}\">Two desktops</a> page."),
         ]),
-        limits(L("Les correctifs pour les anciennes cartes AMD et pour les cartes NVIDIA n'ont "
+        limits(L("Une partie de la V1 est encore en cours et n'est pas listée plus haut : le compte "
+                 "Raye et Raye Community en bêta, Raye Proton, plus de matériel qui marche "
+                 "d'emblée, la page Imprimantes et scanners, l'écran de déverrouillage du disque "
+                 "chiffré, le pont complet avec Windows, la barre des tâches en haut ou sur le "
+                 "côté. Chaque ligne passe ici quand elle est faite ; la feuille de route dit "
+                 "où elles en sont.",
+                 "Part of V1 is still in progress and isn't listed above: the Raye account and "
+                 "the Raye Community beta, Raye Proton, more hardware that works out of the box, "
+                 "the Printers & scanners page, the encrypted-disk unlock screen, the complete "
+                 "Windows bridge, the taskbar on top or on the side. Each line moves here when "
+                 "it is done; the roadmap says where they stand."),
+               L("Les correctifs pour les anciennes cartes AMD et pour les cartes NVIDIA n'ont "
                  "pas été essayés sur une vraie carte : la machine de test n'a pas de carte "
                  "graphique.",
                  "The fixes for older AMD cards and for NVIDIA cards were not tried on a real "
@@ -187,9 +198,9 @@ WHATSNEW = {
 SOON = {
     "eyebrow": L("Le projet", "The project"),
     "h1": L("Ce qui vient après la V1", "What comes after V1"),
-    "description": L("Les versions 1.1 et 1.2 de Raye Linux : ce qui est prévu, dans quel ordre, "
+    "description": L("La version 1.1 de Raye Linux et la suite : ce qui est prévu, dans quel ordre, "
                      "et ce que je ne promets pas encore.",
-                     "Versions 1.1 and 1.2 of Raye Linux: what is planned, in what order, and "
+                     "Version 1.1 of Raye Linux and what follows: what is planned, in what order, and "
                      "what I'm not promising yet."),
     "lede": L("Une version tous les quinze jours environ. Les dates sont des cibles, pas des "
               "promesses : quand quelque chose prend plus de temps que prévu, ça passe à la "
@@ -201,46 +212,6 @@ SOON = {
     "next": "roadmap",
     "blocks": [
         H("v11", "La 1.1, début décembre", "1.1, early December"),
-        ("list", [
-            L("L'installation d'un programme Windows se fait sans fenêtre, avec une vraie barre "
-              "de progression du début à la fin.",
-              "Installing a Windows program happens without a window, with a real progress bar "
-              "from start to finish."),
-            L("Raye Proton : choisir la couche Windows de Raye pour les jeux de Steam.",
-              "Raye Proton: pick Raye's Windows layer for Steam games."),
-            L("Le pont complet avec Windows : partager pilotes et réglages avec la partition "
-              "Windows.",
-              "The complete bridge with Windows: share drivers and settings with the Windows "
-              "partition."),
-            L("Plus de matériel qui marche d'emblée : Wi-Fi Realtek et autres, caméra et son, "
-              "dont les pilotes s'installent seuls quand un appareil en a besoin.",
-              "More hardware that works out of the box: Realtek and other Wi-Fi, webcam and "
-              "sound, whose drivers install on their own when a device needs them."),
-            L("Une page Imprimantes et scanners et une appli Scan, et une meilleure autonomie "
-              "sur portable.",
-              "A Printers & scanners page and a Scan app, and longer battery life on laptops."),
-            L("Un vrai écran de Raye pour déverrouiller un disque chiffré au démarrage.",
-              "A real Raye screen to unlock an encrypted disk at startup."),
-            L("La barre des tâches en haut ou sur le côté de l'écran.",
-              "The taskbar on top or on the side of the screen."),
-            L("Quadra dans le Store, avec le mode jeu allumé pendant que Roblox tourne.",
-              "Quadra in the Store, with game mode on while Roblox runs."),
-            L("Le compte Raye, pour que vos réglages vous suivent d'un PC à l'autre, avec un "
-              "nouveau site de compte, des courriels et une connexion en deux étapes.",
-              "The Raye account, so your settings follow you from PC to PC, with a new account "
-              "website, emails and two-step sign-in."),
-            L("Une première version de Raye Community, le clavardage de Raye, sur le site et dans "
-              "le système.",
-              "A first version of Raye Community, Raye's own chat, on the website and in the "
-              "system."),
-            L("Les pages « Rejoindre l'équipe » avec un panneau pour l'équipe, les profils "
-              "publics et les badges.",
-              "The Join the team pages with a panel for the team, public profiles and badges."),
-            L("Ce site avec de vraies captures du système, les pages légales et la FAQ revues.",
-              "This site with real screenshots of the system, and the legal pages and FAQ "
-              "reviewed."),
-        ]),
-        H("v12", "La 1.2, les 11 et 12 décembre", "1.2, December 11 and 12"),
         ("list", [
             L("Raye Community complète : images et vidéos, messages privés, outils pour "
               "l'équipe, puis elle remplace le serveur Discord.",
@@ -264,6 +235,13 @@ SOON = {
               "Accounts: badges, community and an admin panel."),
             L("Une seconde édition de Raye, tenue au même niveau que celle-ci.",
               "A second edition of Raye, kept in step with this one."),
+        ]),
+        H("later", "Plus tard", "Later"),
+        ("list", [
+            L("Le bureau Budgie comme autre choix.",
+              "The Budgie desktop as another choice."),
+            L("D'autres bureaux au choix, GNOME et niri, avec l'allure de Windows.",
+              "More desktops to choose from, GNOME and niri, with a Windows look."),
         ]),
         limits(L("Rien de cette page n'est fait : tout est prévu, certaines lignes sont "
                  "commencées. Je les retire ou je les déplace plutôt que de les laisser "
