@@ -6,7 +6,7 @@
    "color": "9b6bff",
    "items": [
     [
-     "planned",
+     "doing",
      "Steam sees your other drives"
     ],
     [
@@ -18,35 +18,35 @@
      "Fix for the flicker on NVIDIA cards at 144 Hz"
     ],
     [
-     "planned",
+     "doing",
      "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM"
     ],
     [
-     "planned",
+     "doing",
      "No more freezes when RAM runs out: the PC slows down a little instead"
     ],
     [
-     "planned",
+     "doing",
      "Fix for apps that crash on start (Qoder and other Electron apps)"
     ],
     [
-     "planned",
+     "doing",
      "Wi-Fi password box keeps the cursor while networks refresh"
     ],
     [
-     "planned",
+     "doing",
      "File Explorer opens right away, even when a network drive is out of reach"
     ],
     [
-     "planned",
+     "doing",
      "Windows programs page lists the ones installed from the Store"
     ],
     [
-     "planned",
+     "doing",
      "Smoother Hyprland"
     ],
     [
-     "planned",
+     "doing",
      "Unneeded services removed and global optimizations, for a lighter and more stable Raye"
     ],
     [
@@ -66,23 +66,23 @@
      "USB copies show the real speed, with close and minimize buttons"
     ],
     [
-     "planned",
+     "doing",
      "Store apps you have move from Flatpak to APT once, nothing lost"
     ],
     [
-     "planned",
+     "doing",
      "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
     ],
     [
-     "planned",
+     "doing",
      "WireGuard VPN in one click: import a file, turn it on from Quick Settings"
     ],
     [
-     "planned",
+     "doing",
      "Info Center opens Raye's Task Manager and looks like Raye"
     ],
     [
-     "planned",
+     "doing",
      "Wobbly windows: a switch in Settings"
     ],
     [
@@ -106,7 +106,7 @@
      "New boot animation with the new logo"
     ],
     [
-     "doing",
+     "planned",
      "New Raye kernel tuned for gaming and smoothness"
     ],
     [
@@ -114,7 +114,7 @@
      "Works on older PCs too (legacy BIOS, older processors like Core 2 Duo, 2–4 GB RAM)"
     ],
     [
-     "planned",
+     "doing",
      "New install: start in Try Raye with an Install icon, full-screen Setup, English boot menu, Setup fixes"
     ],
     [
