@@ -269,6 +269,7 @@ FR = {
     'Many more settings, Clock that wakes the PC, real update percentage at startup': 'Beaucoup plus de réglages, Horloge qui réveille le PC, vrai pourcentage de mise à jour au démarrage',
     'Safe by default: firewall, private Wi-Fi address, automatic kernel security updates': 'Sûr par défaut : pare-feu, adresse Wi-Fi privée, mises à jour de sécurité du noyau automatiques',
     "Many fixes: snap, taskbar edge, sleep on PCs that can't, faster updates from your country's server": 'Beaucoup de correctifs : dispositions, bord de la barre des tâches, veille sur les PC incompatibles, mises à jour plus rapides depuis le serveur de votre pays',
+    'Upgraded Windows layer: newest version, faster, more Windows apps tested and working': 'Couche Windows améliorée : dernière version, plus rapide, plus d’applis Windows testées et qui marchent',
     'Wobbly windows: a switch in Settings': 'Fenêtres gélatine : un interrupteur dans les Paramètres',
     'Taskbar on top or on the side of the screen': 'Barre des tâches en haut ou sur le côté de l’écran',
     'Join the team and a staff panel on the website':
