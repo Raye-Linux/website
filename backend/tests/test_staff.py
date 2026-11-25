@@ -188,6 +188,21 @@ class PanelTests(unittest.TestCase):
         counts = self.call("GET", "/api/staff/me")[1]["counts"]
         self.assertEqual((counts["accepted"], counts["new"]), (1, 0))
 
+    def test_a_note_sent_with_a_move_to_review_is_kept(self):
+        # the route takes a note with every action; a move that is not a
+        # decision has no decision note, so it has to become an internal note
+        url = "/api/staff/applications/%s/" % self.ref
+        r, j = self.call("POST", url + "state", {"action": "in_review", "note": "ask the models"})
+        self.assertEqual(j["state"], "in_review")
+        notes = self.call("GET", "/api/staff/applications/" + self.ref)[1]["application"]["notes"]
+        self.assertEqual([(n["staff"], n["text"]) for n in notes], [(NAME, "ask the models")])
+        # a move that does not happen keeps nothing
+        self.call("POST", url + "state", {"action": "declined"})
+        r, j = self.call("POST", url + "state", {"action": "new", "note": "lost?"})
+        self.assertEqual(r.status, 409)
+        notes = self.call("GET", "/api/staff/applications/" + self.ref)[1]["application"]["notes"]
+        self.assertEqual(len(notes), 1)
+
     def test_declined_and_unknown_action(self):
         url = "/api/staff/applications/%s/state" % self.ref
         self.assertEqual(self.call("POST", url, {"action": "declined"})[1]["state"], "declined")

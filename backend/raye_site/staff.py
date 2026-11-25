@@ -191,6 +191,10 @@ class Staff:
         if not ok:
             return None
         self.record(staff, action, ref)
+        # a move that is not a decision has no decision note: what came with
+        # it is an internal note, not something to drop on the floor
+        if action in ("in_review", "new", "role_given") and isinstance(note, str) and note.strip():
+            self.add_note(ref, staff, note[:NOTE_MAX])
         return state_of(self.store.get(ref))
 
     def add_note(self, ref, staff, text):
