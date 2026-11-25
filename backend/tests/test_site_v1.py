@@ -577,3 +577,27 @@ class PeopleAndLegalTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class V1AccountPrivacyTests(unittest.TestCase):
+    """The V1 privacy policy against the account server it describes."""
+
+    ACCOUNT_DOC = os.path.join(REPO, "..", "account", "docs", "privacy.md")
+
+    def page(self, lang):
+        rel = "confidentialite" if lang == "fr" else os.path.join("en", "privacy")
+        with open(os.path.join(ROOT, rel, "index.html"), encoding="utf-8") as f:
+            return f.read()
+
+    def test_the_number_of_synced_settings_is_the_account_servers(self):
+        if not os.path.exists(self.ACCOUNT_DOC):
+            self.skipTest("the account repository is not next to this one")
+        with open(self.ACCOUNT_DOC, encoding="utf-8") as f:
+            n = re.search(r"^## The (\d+) settings that sync", f.read(), re.M).group(1)
+        self.assertIn("a closed list of %s Raye settings" % n, self.page("en"))
+        self.assertIn("une liste fermée de %s réglages" % n, self.page("fr"))
+
+    def test_public_profiles_are_described_as_private_by_default(self):
+        self.assertIn("Public profiles and badges", self.page("en"))
+        self.assertIn("private by default", self.page("en"))
+        self.assertIn("privé par défaut", self.page("fr"))
