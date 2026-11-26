@@ -159,6 +159,10 @@
     ],
     [
      "doing",
+     "Raye Proton built on GE-Proton, with per-game fixes from Raye Update"
+    ],
+    [
+     "doing",
      "Upgraded Windows layer: newest version, faster, more Windows apps tested and working"
     ],
     [
@@ -223,10 +227,6 @@
    "title": "🕒 V1.1 · early December",
    "color": "8a8f98",
    "items": [
-    [
-     "planned",
-     "Raye Proton built on GE-Proton, with per-game fixes from Raye Update"
-    ],
     [
      "planned",
      "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
