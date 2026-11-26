@@ -591,12 +591,12 @@ INSIDER = {
                "the Discord channel, then open Settings › Raye Update › Raye Insider and pick "
                "Public Beta. Picking it is enough to get the updates.")),
             (L("Bêta ou Dev", "Beta or Dev"),
-             L("Posez votre candidature avec votre compte Raye sur la page <a "
+             L("Posez votre candidature sur la page <a "
                "href=\"{p:jbeta}\">Testeur de la bêta privée</a> ou <a href=\"{p:jdev}\">Testeur "
                "Dev</a>. Une personne de l'équipe la lit. Une fois acceptée, connectez ce PC à "
                "votre compte dans Paramètres › Comptes : le canal se débloque dans Raye "
                "Insider.",
-               "Apply with your Raye account on the <a href=\"{p:jbeta}\">Beta tester</a> or <a "
+               "Apply on the <a href=\"{p:jbeta}\">Beta tester</a> or <a "
                "href=\"{p:jdev}\">Beta tester Dev</a> page. A person of the team reads it. "
                "Once you're accepted, sign this PC in to your account in Settings › Accounts: "
                "the channel unlocks in Raye Insider.")),
@@ -609,11 +609,11 @@ INSIDER = {
           "Pick Stable in Raye Insider. Nothing is taken off your PC: the newer versions you "
           "got stay until Stable catches up, then they update from Stable as usual. Going "
           "back by force could break the system, so Raye doesn't do it."),
-        limits(L("Les canaux Bêta et Dev se débloquent d'après les badges de votre compte : "
-                 "cette partie arrive avec la mise à jour du compte Raye, et jusque-là Bêta et "
-                 "Dev restent fermés dans Paramètres.",
-                 "The Beta and Dev channels unlock from your account's badges: that part comes "
-                 "with the Raye account update, and until then Beta and Dev stay closed in "
+        limits(L("Les canaux Bêta et Dev se débloquent d'après les badges de votre compte Raye : "
+                 "sans compte connecté sur ce PC, ou sans le badge, ils restent fermés dans "
+                 "Paramètres.",
+                 "The Beta and Dev channels unlock from your Raye account's badges: without an "
+                 "account signed in on this PC, or without the badge, they stay closed in "
                  "Settings."),
                L("Les mises à jour des canaux sont publiées au même endroit que celles de "
                  "Stable : le canal est un choix, pas un secret.",

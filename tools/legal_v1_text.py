@@ -10,7 +10,7 @@ words and not reviewed by a lawyer (the project's choice)."""
 
 from legal_text import (H, L, P, PRIVACY, PRIVACY_SUMMARY, S, T, TERMS, TERMS_SUMMARY)
 
-UPDATED = {"fr": "25 novembre 2026", "en": "November 25, 2026"}
+UPDATED = {"fr": "26 novembre 2026", "en": "November 26, 2026"}
 VERSION = "4.0"
 DRAFT = {
     "fr": "Version préparée pour la V1 du site. Elle s'appliquera à sa mise en ligne ; "
@@ -66,10 +66,8 @@ APPLICATIONS = S(
       "The \"Join the team\" pages have a form. When you send it, I keep, on my server in "
       "Québec:"),
     L(("le rôle demandé et la langue de la page ;", "the role asked for and the page language;"),
-      ("votre <strong>adresse courriel</strong>, pour vous répondre (ou, quand les comptes Raye "
-       "ouvriront, l'identifiant de votre compte à la place) ;",
-       "your <strong>email address</strong>, to answer you (or, once Raye accounts open, your "
-       "account id instead);"),
+      ("votre <strong>adresse courriel</strong>, pour vous répondre ;",
+       "your <strong>email address</strong>, to answer you;"),
       ("votre <strong>nom d'utilisateur Discord</strong>, pour vous donner le rôle ;",
        "your <strong>Discord username</strong>, to give you the role;"),
       ("ce que vous écrivez : langues, ce que vous savez faire, pourquoi vous voulez aider ;",
@@ -156,18 +154,21 @@ COMMUNITY_PAGE = S(
 BETA_CHANNELS = S(
     "beta-channels", "Le programme bêta et les canaux de mises à jour",
     "The beta program and update channels",
-    P("Le programme bêta passe par les candidatures décrites plus haut. Aujourd'hui, être "
-      "accepté donne un rôle et un salon sur Discord. Raye Update aura plus tard des canaux "
-      "(stable, bêta publique, bêta, dev) ; l'accès aux canaux non publics sera réservé aux "
-      "personnes acceptées. Ce mécanisme n'est <strong>pas encore construit</strong> : avant "
-      "qu'il ouvre, cette section dira exactement ce que Raye Update envoie pour prouver "
-      "l'accès, et rien ne sera envoyé avant.",
-      "The beta program goes through the applications described above. Today, being accepted "
-      "gives a role and a channel on Discord. Raye Update will later have channels (stable, "
-      "public beta, beta, dev); access to the non-public ones will be kept for accepted "
-      "people. That mechanism is <strong>not built yet</strong>: before it opens, this "
-      "section will say exactly what Raye Update sends to prove access, and nothing will be "
-      "sent before then."),
+    P("Le programme bêta passe par les candidatures décrites plus haut. Être accepté donne un "
+      "rôle et un salon sur Discord, et l'équipe ajoute le badge correspondant (testeur bêta, "
+      "développeur) à votre compte Raye. Raye Update a quatre canaux, dans Paramètres › Raye "
+      "Update › Raye Insider : Stable, Bêta publique, Bêta et Dev. Bêta publique est ouverte à "
+      "tous. Bêta et Dev se débloquent d'après les badges du compte Raye connecté à ce PC, que "
+      "Paramètres lit auprès du serveur des comptes ; rien d'autre n'est envoyé pour prouver "
+      "l'accès. Les mises à jour de chaque canal sont publiées aux mêmes adresses publiques "
+      "que celles de Stable.",
+      "The beta program goes through the applications described above. Being accepted gives "
+      "a role and a channel on Discord, and the team adds the matching badge (beta tester, "
+      "developer) to your Raye account. Raye Update has four channels, in Settings › Raye "
+      "Update › Raye Insider: Stable, Public Beta, Beta and Dev. Public Beta is open to "
+      "everyone. Beta and Dev unlock from the badges of the Raye account signed in on this PC, "
+      "which Settings reads from the account server; nothing else is sent to prove access. "
+      "Each channel's updates are published at the same public addresses as Stable's."),
     P("Quel que soit le canal, les vérifications de mises à jour restent celles de la section "
       "« Ce que Raye Linux contacte depuis votre PC » : un téléchargement, sans rapport "
       "d'utilisation.",
@@ -176,26 +177,42 @@ BETA_CHANNELS = S(
 )
 
 RAYE_COMMUNITY = S(
-    "raye-community", "Raye Community (bêta, pas encore ouverte)",
-    "Raye Community (beta, not open yet)",
-    P("Raye Community sera le clavardage de Raye, sur le site et dans le système, avec votre "
-      "compte Raye. Elle n'est <strong>pas encore ouverte</strong> : aucun serveur de "
-      "clavardage ne tourne pour le public. D'ici là, la communauté reste sur le serveur "
-      "Discord décrit plus haut, et rien de cette section ne s'applique encore.",
-      "Raye Community will be Raye's own chat, on the website and in the system, with your "
-      "Raye account. It is <strong>not open yet</strong>: no chat server is running for the "
-      "public. Until then the community stays on the Discord server described above, and "
-      "nothing in this section applies yet."),
-    L(("Ce que vous y écrivez sera vu par les membres du salon où vous l'écrivez, et par la "
-       "modération, qui peut le supprimer selon les {rules}.",
-       "What you write there will be seen by the members of the channel you write it in, and by "
-       "moderation, which can delete it under the {rules}."),
-      ("Avant l'ouverture, cette section dira exactement ce qui est gardé (messages, "
-       "pièces jointes, profil), combien de temps, où, et comment vous exportez ou supprimez "
-       "vos messages. Rien ne sera ouvert avant que ce soit écrit et daté dans l'historique.",
-       "Before it opens, this section will say exactly what is kept (messages, attachments, "
-       "profile), for how long, where, and how you export or delete your messages. Nothing "
-       "will open before that is written and dated in the history.")),
+    "raye-community", "Raye Community (bêta)", "Raye Community (beta)",
+    P("Raye Community est le clavardage de Raye, sur community.rayelinux.com et dans Raye "
+      "Linux. Elle est ouverte en bêta depuis Raye Linux 1.0. Vous y entrez avec votre compte "
+      "Raye, qui ne lui transmet jamais votre mot de passe. Elle tourne sur mon serveur, au "
+      "Québec, et garde :",
+      "Raye Community is Raye's own chat, on community.rayelinux.com and in Raye Linux. It "
+      "has been open as a beta since Raye Linux 1.0. You enter it with your Raye account, "
+      "which never passes it your password. It runs on my server, in Québec, and keeps:"),
+    L(("votre profil : l'identifiant de votre compte, votre nom, votre rôle et vos badges, "
+       "repris de votre compte Raye à chaque connexion, et les dates de votre arrivée et de "
+       "votre dernière visite ;",
+       "your profile: your account id, your name, your role and your badges, taken from your "
+       "Raye account at each sign-in, and when you joined and last came by;"),
+      ("vos messages, du texte seulement (pas d'images ni de pièces jointes dans cette bêta), "
+       "vus par les membres du salon et par la modération. Un message que vous supprimez est "
+       "effacé tout de suite ; un message supprimé par la modération garde son texte dans le "
+       "journal de modération, pour les contestations et les abus répétés ;",
+       "your messages, text only (no images or attachments in this beta), seen by the members "
+       "of the channel and by moderation. A message you delete is erased at once; a message "
+       "moderation deletes keeps its text in the moderation log, for appeals and repeated "
+       "abuse;"),
+      ("vos amis et vos demandes d'amis, les signalements que vous faites, et les mesures de "
+       "modération qui vous visent (mise en sourdine, bannissement, avec leur raison), "
+       "inscrites au journal de modération ;",
+       "your friends and friend requests, the reports you make, and the moderation actions "
+       "about you (mute, ban, with their reason), written in the moderation log;"),
+      ("deux témoins : un témoin de session, 30 jours au plus, et, le temps de vous connecter, "
+       "un témoin de vérification de 10 minutes.",
+       "two cookies: a session cookie, 30 days at most, and, while you sign in, a check "
+       "cookie that lasts 10 minutes.")),
+    P("Ce qui est gardé reste jusqu'à sa suppression. Il n'y a pas encore de bouton pour tout "
+      "exporter ou tout supprimer dans Raye Community : pour consulter, recevoir ou effacer "
+      "ce qu'elle garde sur vous, écrivez à {contact}, comme pour vos autres droits.",
+      "What is kept stays until it is deleted. Raye Community has no button yet to export or "
+      "delete everything: to see, get or erase what it keeps about you, write to {contact}, "
+      "as for your other rights."),
 )
 
 
@@ -211,6 +228,52 @@ def _deep(o, old, new):
         return {k: _deep(v, old, new) for k, v in o.items()}
     return o
 
+
+# Raye accounts, open since 1.0 (account.rayelinux.com); written from the
+# account server's code and its docs/privacy.md, like the coming-soon text.
+ACCOUNTS = S(
+    "accounts", "Les comptes Raye", "Raye accounts",
+    P("Les comptes Raye sont ouverts depuis Raye Linux 1.0, sur account.rayelinux.com et dans "
+      "Paramètres › Comptes. Un compte est facultatif : Raye fonctionne pareil sans, et rien "
+      "dans le système n'en exige un. Ce qui suit décrit ce que le compte garde, d'après le "
+      "code du serveur des comptes, qui tourne sur mon serveur, au Québec.",
+      "Raye accounts have been open since Raye Linux 1.0, on account.rayelinux.com and in "
+      "Settings › Accounts. An account is optional: Raye works the same without one, and "
+      "nothing in the system needs one. What follows describes what an account keeps, from "
+      "the code of the account server, which runs on my server, in Québec."),
+    L(("Gardé : votre courriel, votre nom, votre photo (refaite en image de 256 pixels, ce "
+       "qui retire sa position GPS et ses autres données), une liste fermée de {settings} réglages "
+       "de Raye (apparence, barre des tâches, langue et région, accessibilité et quelques "
+       "autres), votre bibliothèque d'applications du Store et une ligne par PC.",
+       "Kept: your email, your name, your picture (redrawn as a 256-pixel image, which "
+       "removes its GPS location and other data), a closed list of {settings} Raye settings "
+       "(appearance, taskbar, language and region, accessibility and a few more), your Store "
+       "app library and one row per PC."),
+      ("Jamais lisibles : votre mot de passe, vos jetons et vos codes de secours ne sont "
+       "gardés que sous forme d'empreinte ; votre secret de validation en deux étapes est "
+       "scellé par une clé qui n'est pas dans la base.",
+       "Never readable: your password, tokens and recovery codes are only kept as hashes; "
+       "your two-step secret is sealed with a key that is not in the database."),
+      ("Pas gardé : votre adresse IP, ce que vous naviguez, vos fichiers, ce que vous "
+       "lancez, quand vous utilisez votre PC. Le serveur ne tient aucun journal des "
+       "demandes. Mots de passe Wi-Fi et autres mots de passe : pas synchronisés.",
+       "Not kept: your IP address, what you browse, your files, what you run, when you use "
+       "your PC. The server keeps no request log. Wi-Fi and other passwords: not synced."),
+      ("Le site des comptes pose un témoin de session, 14 jours au plus, et, si vous "
+       "choisissez une langue, un témoin qui la retient un an ; aucun autre.",
+       "The accounts site sets one session cookie, 14 days at most, and, if you pick a "
+       "language, one cookie that remembers it for a year; no other."),
+      ("Vous pouvez tout exporter en un fichier et supprimer le compte en une fois, avec votre "
+       "mot de passe, sur account.rayelinux.com. La base est l'exécution du service que vous "
+       "demandez.",
+       "You can export everything as one file and delete the account in one go, with your "
+       "password, on account.rayelinux.com. The basis is performing the service you ask "
+       "for.")),
+    P("Combien de temps les sauvegardes du serveur gardent un compte supprimé sera ajouté à "
+      "cette section et daté dans l'historique plus bas.",
+      "How long the server's backups keep a deleted account will be added to this section "
+      "and dated in the history below."),
+)
 
 # Raye accounts: what the V1 adds. The number of settings follows the sync
 # table of the account server (docs/privacy.md, "The 161 settings that sync").
@@ -242,7 +305,7 @@ def _privacy():
     out = []
     for s in PRIVACY:
         if s["id"] == "accounts":
-            s = _deep(s, "153", str(ACCOUNT_SETTINGS))
+            s = _deep(ACCOUNTS, "{settings}", str(ACCOUNT_SETTINGS))
         if s["id"] == "overview":
             s = _with_rows(
                 s,
@@ -257,7 +320,15 @@ def _privacy():
                   "waiting: 180 days; declined: 30 days; accepted: while you hold the role")],
                 [("Nombres de la page Communauté", "Community page numbers"),
                  ("mémoire de mon serveur", "my server's memory"),
-                 ("10 minutes ; rien sur vous", "10 minutes; nothing about you")])
+                 ("10 minutes ; rien sur vous", "10 minutes; nothing about you")],
+                [("Compte Raye (courriel, nom, photo, réglages, bibliothèque, PC)",
+                  "Raye account (email, name, picture, settings, library, PCs)"),
+                 ("mon serveur, au Québec", "my server, in Québec"),
+                 ("jusqu'à la suppression du compte", "until you delete the account")],
+                [("Raye Community (profil, messages, amis, signalements, modération)",
+                  "Raye Community (profile, messages, friends, reports, moderation)"),
+                 ("mon serveur, au Québec", "my server, in Québec"),
+                 ("jusqu'à leur suppression", "until they are deleted")])
         elif s["id"] == "bases":
             s = _with_rows(
                 s,
@@ -308,15 +379,18 @@ TEAM = S(
 
 
 CHAT = S(
-    "raye-community", "Raye Community (quand elle ouvrira)", "Raye Community (once it opens)",
-    P("Raye Community, le clavardage de Raye, n'est pas encore ouverte. Quand elle le sera, "
-      "elle suivra les {rules} et ces conditions : vous êtes responsable de ce que vous y "
-      "écrivez, la modération peut supprimer un message ou suspendre un accès, et vous pouvez "
-      "quitter à tout moment. Ces conditions seront complétées et datées avant l'ouverture.",
-      "Raye Community, Raye's own chat, is not open yet. When it is, it will follow the "
-      "{rules} and these terms: you are responsible for what you write there, moderation can "
-      "delete a message or suspend access, and you can leave at any time. These terms will be "
-      "completed and dated before it opens."),
+    "raye-community", "Raye Community (bêta)", "Raye Community (beta)",
+    P("Raye Community, le clavardage de Raye, est ouverte en bêta, avec votre compte Raye. "
+      "Elle suit les {rules} et ces conditions : vous êtes responsable de ce que vous y "
+      "écrivez, la modération peut supprimer un message ou suspendre un accès (mise en "
+      "sourdine, bannissement), et vous pouvez partir à tout moment. C'est une bêta : les "
+      "salons du serveur Discord, les images, les messages privés et les tickets arrivent "
+      "avec la 1.1.",
+      "Raye Community, Raye's own chat, is open as a beta, with your Raye account. It "
+      "follows the {rules} and these terms: you are responsible for what you write there, "
+      "moderation can delete a message or suspend access (mute, ban), and you can leave at "
+      "any time. It is a beta: the Discord server's channels, images, private messages and "
+      "tickets come with 1.1."),
 )
 
 
@@ -341,11 +415,12 @@ BETA_TERMS = [
         "The beta program lets you try Raye before its final versions. It has three levels: "
         "the public beta, open to whoever asks; the private beta, and the Dev beta, kept for "
         "people the Raye Team accepts after an application on {join}."),
-      P("Aujourd'hui, être accepté donne un rôle et un salon sur notre serveur Discord. Les "
-        "canaux de mises à jour correspondants dans Raye Update sont prévus et ne sont pas "
-        "encore ouverts.",
-        "Today, being accepted gives a role and a channel on our Discord server. The matching "
-        "update channels in Raye Update are planned and not open yet.")),
+      P("Être accepté donne un rôle et un salon sur notre serveur Discord, et le badge "
+        "correspondant sur votre compte Raye. Ce badge débloque le canal Bêta ou Dev dans "
+        "Paramètres › Raye Update › Raye Insider ; Bêta publique y est ouverte à tous.",
+        "Being accepted gives a role and a channel on our Discord server, and the matching "
+        "badge on your Raye account. That badge unlocks the Beta or Dev channel in Settings › "
+        "Raye Update › Raye Insider; Public Beta is open to everyone there.")),
     S("software", "Un logiciel en essai", "Software under test",
       P("Une bêta n'est pas finie. Elle peut planter, mal se comporter avec votre matériel, "
         "ou demander de réinstaller Raye. La bêta Dev casse plus souvent que les autres.",
@@ -461,13 +536,19 @@ COOKIES = [
         "audience measurement script to the pages; the site's security policy blocks it, so it "
         "never runs. Discord, GitHub, Codeberg and GitLab, where some links lead, have their "
         "own cookies and rules: they only apply once you are there.")),
-    S("accounts", "Le site des comptes (quand il ouvrira)", "The accounts site (once it opens)",
-      P("Le site des comptes Raye, pas encore ouvert, posera un témoin de session pour vous "
-        "garder connecté et, si vous choisissez une langue, un témoin qui la retient ; aucun "
-        "autre. Ils seront listés ici, avec leur durée, avant l'ouverture.",
-        "The Raye accounts site, not open yet, will set one session cookie to keep you signed "
-        "in and, if you pick a language, one cookie that remembers it; no other. They will be "
-        "listed here, with their lifetime, before it opens."),
+    S("accounts", "Le site des comptes et Raye Community", "The accounts site and Raye Community",
+      P("Le site des comptes Raye (account.rayelinux.com) pose un témoin de session, qui vous "
+        "garde connecté 14 jours au plus, et, si vous choisissez une langue, un témoin qui la "
+        "retient un an ; aucun autre.",
+        "The Raye accounts site (account.rayelinux.com) sets one session cookie, which keeps "
+        "you signed in for 14 days at most, and, if you pick a language, one cookie that "
+        "remembers it for a year; no other."),
+      P("Raye Community (community.rayelinux.com) pose un témoin de session, 30 jours au plus, "
+        "et, le temps de vous connecter avec votre compte Raye, un témoin de vérification de "
+        "10 minutes ; aucun autre.",
+        "Raye Community (community.rayelinux.com) sets one session cookie, 30 days at most, "
+        "and, while you sign in with your Raye account, one check cookie that lasts 10 "
+        "minutes; no other."),
       P("Le panneau de l'équipe garde le jeton de la personne connectée dans le stockage de "
         "l'onglet (sessionStorage), jamais dans un témoin ; il disparaît à la fermeture de "
         "l'onglet.",
@@ -484,8 +565,10 @@ COOKIES_SUMMARY = [
      "The site uses no cookies and does not measure its audience."),
     ("Seule votre langue peut rester sur votre appareil, si vous la choisissez.",
      "Only your language can stay on your device, if you pick one."),
-    ("Les comptes, quand ils ouvriront, poseront un témoin de session et un témoin de langue.",
-     "Accounts, once they open, will set a session cookie and a language cookie."),
+    ("Le site des comptes et Raye Community posent chacun un témoin de session ; le site des "
+     "comptes, aussi un témoin de langue si vous en choisissez une.",
+     "The accounts site and Raye Community each set a session cookie; the accounts site also "
+     "a language cookie if you pick one."),
 ]
 
 PAGES = {

@@ -960,10 +960,10 @@ HARDWARE = {
         H("needs", "Ce qu'il faut", "What you need"),
         ("list", [
             L("Un processeur Intel ou AMD 64 bits, et un PC qui démarre en mode UEFI (la plupart "
-              "des PC depuis 2012). Le mode BIOS d'autrefois est en cours d'essai pour la V1 : "
-              "voir <a href=\"{p:oldpcs}\">Vieux PC</a>.",
+              "des PC depuis 2012) ou dans l'ancien mode BIOS, disques MBR compris : voir "
+              "<a href=\"{p:oldpcs}\">Vieux PC</a>.",
               "A 64-bit Intel or AMD processor, and a PC that starts in UEFI mode (most PCs since "
-              "2012). The old BIOS mode is being tried for V1: see "
+              "2012) or the older BIOS mode, MBR disks too: see "
               "<a href=\"{p:oldpcs}\">Older PCs</a>."),
             L("8 Go de mémoire conseillés. L'installateur accepte moins, mais je n'ai pas essayé "
               "Raye sur un PC de 4 Go.",
@@ -1413,13 +1413,16 @@ QUESTIONS = {
                "<a href=\"{p:cookies}\">cookies</a> page says what the site keeps in your "
                "browser.")),
             (L("Faut-il un compte Raye ?", "Do I need a Raye account?"),
-             L("Non, et les comptes ne sont pas encore ouverts. Raye marche pareil sans. Plus "
-               "tard, un compte servira à garder une liste de réglages, votre photo et votre "
-               "bibliothèque d'applications d'un PC à l'autre ; jamais vos mots de passe ni vos "
-               "fichiers.",
-               "No, and accounts are not open yet. Raye works the same without one. Later, an "
-               "account will keep a list of settings, your picture and your app library from one "
-               "PC to another; never your passwords or your files.")),
+             L("Non, il est facultatif : Raye marche pareil sans. Un compte Raye, ouvert depuis "
+               "la 1.0 sur account.rayelinux.com, garde une liste de réglages, votre photo et "
+               "votre bibliothèque d'applications d'un PC à l'autre ; jamais vos mots de passe ni "
+               "vos fichiers. Il sert aussi à entrer dans Raye Community et à débloquer les "
+               "canaux Bêta et Dev de <a href=\"{p:insider}\">Raye Insider</a>.",
+               "No, it's optional: Raye works the same without one. A Raye account, open since "
+               "1.0 on account.rayelinux.com, keeps a list of settings, your picture and your app "
+               "library from one PC to another; never your passwords or your files. It is also "
+               "how you enter Raye Community and unlock the Beta and Dev channels of "
+               "<a href=\"{p:insider}\">Raye Insider</a>.")),
             (L("Qui fait Raye ?", "Who makes Raye?"),
              L("Moi, techoraye, au Québec. Il y a plus de détails sur la page "
                "<a href=\"{p:about}\">À propos</a>.",

@@ -26,6 +26,8 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site")
 URL = "https://www.rayelinux.com"
 # the community server; a permanent invite to #welcome
 DISCORD = "https://discord.gg/TrxhUkabyB"
+# Raye Community, Raye's own chat (open as a beta since 1.0)
+COMMUNITY_CHAT = "https://community.rayelinux.com/"
 RELEASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "release.json")
 # the same list as #roadmap on the Discord, copied here by roadmap/update.sh
 ROADMAP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "roadmap.json")

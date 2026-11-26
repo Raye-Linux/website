@@ -176,6 +176,7 @@ def community(site, lang):
                       for k, v in c["there"])
     words = {"rules": f'<a href="{site.path("rules", lang)}">{c["rules_word"][lang]}</a>',
              "join": f'<a href="{site.path("join", lang)}">{c["join_word"][lang]}</a>'}
+    privacy = f'<a href="{site.path("privacy", lang)}#raye-community">{c["privacy_word"][lang]}</a>'
     main = f"""{head_block(site, c['eyebrow'][lang], c['h1'][lang], t(site, c['lede'], lang), lang)}
 <div class="article">
 <section class="live card" aria-labelledby="live-title" data-community>
@@ -198,6 +199,9 @@ def community(site, lang):
 <dl class="keys feature-keys">
 {there}
 </dl>
+<h2 id="chat">{c['chat_title'][lang]}</h2>
+<p>{c['chat'][lang].format(privacy=privacy)}</p>
+<p><a class="btn btn-quiet" href="{site.b.COMMUNITY_CHAT}" rel="noopener">{c['chat_go'][lang]}</a></p>
 <h2 id="further">{c['help_title'][lang]}</h2>
 <p>{c['help'][lang].format(**words)}</p>
 </div>"""

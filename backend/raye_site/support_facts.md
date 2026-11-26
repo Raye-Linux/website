@@ -58,7 +58,9 @@ NEW IN RAYE LINUX 1.0
 - Older PCs: Raye starts in legacy BIOS mode (MBR disks too), on older processors like the Core 2 Duo, and with 2 to 4 GB of memory, where a light mode turns itself on. The PC slows down a little instead of freezing when memory runs out.
 - More hardware: more Wi-Fi drivers (Broadcom and others) install by themselves when a device needs them, a Printers & scanners page, a Scan app, longer battery life on laptops.
 - Desktop: the taskbar goes on any edge of the screen, its icons on the left or in the center, at the size you want. Wobbly windows are one switch in Settings. Hyprland is smoother and has a complete guide. WireGuard VPN is one click. An encrypted disk has a Raye unlock screen at startup.
-- Raye Insider: Settings > Raye Update has the Public Beta, Beta and Dev update channels. Leave any time: nothing is downgraded. See rayelinux.com/en/insider/ (French: /insider/).
+- Raye Insider: Settings > Raye Update > Raye Insider has the Stable, Public Beta, Beta and Dev update channels. Public Beta is open to everyone (signing up on rayelinux.com/en/join/public-beta/ also gives its Discord channel). Beta and Dev unlock from the badges on the Raye account signed in on the PC (beta tester, developer), given by the team after an application on /en/join/beta/ or /en/join/beta-dev/. Leave any time by picking Stable: nothing is downgraded. See rayelinux.com/en/insider/ (French: /insider/).
+- Raye account: settings follow you to every PC, with public profiles, badges and two-step sign-in on account.rayelinux.com (see ACCOUNTS).
+- Raye Community, beta: Raye's own chat on community.rayelinux.com and in Raye Linux, with your Raye account; the Discord server's channels, images, private messages and tickets come in 1.1.
 - Spanish, German, Brazilian Portuguese and Italian join English and French.
 - For developers: Settings > System > Advanced has developer options and a local device portal.
 - A new Raye logo everywhere and a new boot animation.
@@ -103,19 +105,19 @@ CUSTOMIZING
 KDE Plasma underneath: light and dark themes, accent color, wallpaper, taskbar, widgets, Windows 11 or Windows 10 style, all in Settings.
 
 ACCOUNTS
-A Raye account is optional. Raye works fully without it. Raye accounts are not open yet: say so if someone asks how to create one.
+A Raye account is optional. Raye works fully without it. Raye accounts are open since Raye Linux 1.0: create one on account.rayelinux.com, then sign the PC in under Settings > Accounts > Raye account.
 - What it does: your Raye settings follow you to every PC signed in to the same account (theme, colors, accent color, wallpaper, taskbar pins, size and alignment, language and keyboard, accessibility and other Raye settings), plus your name, your picture and the list of your Store apps.
 - Where: Settings > Accounts > Raye account > Raye backup. "Sync my settings" turns it all on or off, and each category (Personalization, Taskbar, Language preferences, Accessibility, Other settings, Remember my apps) has its own switch.
 - Passwords and Wi-Fi networks are never synced: they never leave the PC.
 - Sign-in on the accounts site is in two steps (address, then password), with optional two-step verification by an authenticator app, one-time recovery codes and passkeys.
 - Public profile: off by default. You can pick a public name and make your profile public; it shows that name, your picture and your badges (OG Tester, Beta tester, Translator, Developer...), never your name or your address. Badges are given by the Raye Team only.
-- When they open, an account keeps the email, name, picture, a closed list of Raye settings (appearance, taskbar, language and region, accessibility), the Store app library and one row per PC; never passwords (Wi-Fi or other), files, IP address or what you run.
+- An account keeps the email, name, picture, a closed list of Raye settings (appearance, taskbar, language and region, accessibility), the Store app library and one row per PC; never passwords (Wi-Fi or other), files, IP address or what you run. Export everything or delete the account in one go on account.rayelinux.com, with the password.
 
 DATA AND PRIVACY
 - Raye sends no usage reports and no crash reports, and has no ads. What you do on your PC stays on your PC.
 - Like any download, the servers Raye contacts see the PC's IP address and what is downloaded: Raye Update (rayelinux.com downloads on Cloudflare and GitHub, the base system's official servers), firmware updates (LVFS, only if you accept them), the Store (Flathub, and odrs.gnome.org for reviews) and Firefox (Mozilla's repository).
 - The website uses no cookies and does not measure its audience; only the language you pick can stay on your device. Applications to join the team keep an email, a Discord username and the text for a limited time (180 days waiting, 30 days after a refusal). The legal pages on the V1 website are written by the Raye team in plain words and were not reviewed by a lawyer: give the privacy page, never legal advice.
-- Raye Community (Raye's own chat) is not open yet; Discord is where the community is today.
+- Raye Community (Raye's own chat) is open as an early beta since 1.0, on community.rayelinux.com and in Raye Linux, with your Raye account. It keeps your profile (name, role and badges from your account), your text messages, friends, reports and moderation actions; a message you delete is erased at once. To get or erase what it keeps, write to bonjour@rayelinux.com.
 
 SECURITY OF OUR SERVERS (rayelinux.com, downloads, updates, accounts)
 When someone asks how our servers are protected, list these layers. They protect Raye's servers (the website, downloads, updates and Raye accounts): always say "Raye's servers" or "our servers", never "the bot", "I" or "Raye Assistant", and do not mix it up with the security of Raye on a PC:
@@ -137,6 +139,7 @@ KNOWN ISSUES IN RAYE LINUX 1.0
 - The flicker some NVIDIA cards show at 144 Hz is not fixed yet: ask for the card and screen, and the logs (Settings > System > Advanced), in #bugs.
 - A Steamworks game with Raye Proton was not yet tried with a real Steam account: if one fails, pick GE-Proton or Proton for that game in its Steam properties, and tell the team.
 - With the taskbar on the left or right side and its icons set to Center, the icons stay at the top. Desktop icons can sit under a taskbar on the left. A second screen does not get the side taskbar yet.
+- Raye Community is an early beta: expect missing features (channels, images, private messages and tickets come in 1.1).
 - Hyprland was tested mostly in virtual machines. After "Switch now" the password store (KWallet) can stay locked until it is unlocked by hand.
 - Not every Windows program runs, and apps built only for the Microsoft Store cannot run at all.
 

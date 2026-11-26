@@ -6,8 +6,9 @@ PAGES below into its own.
 The role keys ("beta", "public-beta", ...) are the ones the backend
 accepts (backend/raye_site/applications.py, DISCORD_ROLES); a test checks
 that both lists agree. Nothing here promises what is not built: the beta
-update channels are planned, the account sign-in is not open, and every
-application is read by a person of the Raye Team."""
+application forms ask for an email address (not a Raye account), the testing
+roles' update channels unlock from the badge the team adds to the Raye
+account, and every application is read by a person of the Raye Team."""
 
 
 def L(fr, en):
@@ -82,11 +83,11 @@ JOIN = {
            "We try to answer within two weeks.")),
         (L("Vous recevez votre rôle", "You get your role"),
          L("Si c'est oui, vous recevez le rôle sur notre serveur Discord, avec son salon privé. "
-           "Pour les rôles de test, l'accès au canal de mises à jour correspondant suivra quand "
-           "ces canaux ouvriront.",
+           "Pour la bêta privée et la bêta Dev, l'équipe ajoute aussi le badge à votre compte "
+           "Raye : il débloque le canal dans Paramètres › Raye Update › Raye Insider.",
            "If it's a yes, you get the role on our Discord server, with its private channel. "
-           "For the testing roles, access to the matching update channel will follow when "
-           "those channels open.")),
+           "For the private beta and the Dev beta, the team also adds the badge to your Raye "
+           "account: it unlocks the channel in Settings › Raye Update › Raye Insider.")),
         (L("Vous partez quand vous voulez", "You leave whenever you like"),
          L("Dites-le sur Discord ou par courriel : le rôle est retiré et votre candidature est "
            "effacée.",
@@ -363,10 +364,12 @@ FORM = {
     "email": L("Adresse courriel", "Email address"),
     "email_hint": L("Pour vous répondre. Elle n'est jamais publiée, ni envoyée sur Discord.",
                     "To answer you. It is never published, nor sent to Discord."),
-    "accounts": L("Les comptes Raye ne sont pas encore ouverts. Quand ils le seront, vous "
-                  "pourrez postuler avec votre compte au lieu d'une adresse.",
-                  "Raye accounts are not open yet. Once they are, you'll be able to apply "
-                  "with your account instead of an address."),
+    "accounts": L("Le formulaire demande une adresse courriel, pas votre compte Raye. Pour "
+                  "les rôles de test, c'est ensuite votre compte Raye qui débloque le canal "
+                  "dans Raye Insider.",
+                  "The form asks for an email address, not your Raye account. For the testing "
+                  "roles, your Raye account is then what unlocks the channel in Raye "
+                  "Insider."),
     "discord": L("Nom d'utilisateur Discord", "Discord username"),
     "discord_hint": L("Le rôle est donné à ce compte. Vous le trouvez dans Discord, sur votre "
                       "profil, sous votre nom.",
@@ -407,9 +410,10 @@ COMMUNITY = {
     "h1": L("Les gens de Raye.", "The people of Raye."),
     "lede": L("La communauté se retrouve sur Discord, en anglais et en français. C'est là "
               "qu'on pose ses questions, qu'on signale un bogue et qu'on propose ce qui viendra "
-              "ensuite.",
+              "ensuite. Raye Community, le clavardage de Raye, est ouverte en bêta à côté.",
               "The community meets on Discord, in English and French. That's where you ask "
-              "questions, report a bug and suggest what comes next."),
+              "questions, report a bug and suggest what comes next. Raye Community, Raye's own "
+              "chat, is open as a beta next to it."),
     "description": L("Le serveur Discord de Raye Linux : aide en anglais et en français, bogues, "
                      "idées et nouvelles. Le nombre de membres en direct, et comment y entrer.",
                      "The Raye Linux Discord server: help in English and French, bugs, ideas "
@@ -446,6 +450,19 @@ COMMUNITY = {
          L("Ce qui fonctionne, ce qui ne fonctionne pas, et comment.",
            "What runs, what doesn't, and how.")),
     ],
+    "chat_title": L("Raye Community, en bêta", "Raye Community, in beta"),
+    "chat": L("Raye Community est le clavardage de Raye, sur le site et dans Raye Linux. Vous y "
+              "entrez avec votre compte Raye, et vos rôles et badges vous suivent. C'est un "
+              "début : les salons du serveur Discord, les images, les messages privés et les "
+              "tickets arrivent avec la 1.1. D'ici là, l'aide et les bogues restent sur "
+              "Discord. Ce qu'elle garde est sur la page {privacy}.",
+              "Raye Community is Raye's own chat, on the website and in Raye Linux. You enter "
+              "it with your Raye account, and your roles and badges follow you. It's a start: "
+              "the Discord server's channels, images, private messages and tickets come with "
+              "1.1. Until then, help and bugs stay on Discord. What it keeps is on the "
+              "{privacy} page."),
+    "chat_go": L("Ouvrir Raye Community", "Open Raye Community"),
+    "privacy_word": L("Confidentialité", "Privacy"),
     "help_title": L("Aller plus loin", "Going further"),
     "help": L("Le serveur a ses {rules}. Et si vous voulez donner un coup de main pour tester, "
               "traduire ou modérer, voyez {join}.",

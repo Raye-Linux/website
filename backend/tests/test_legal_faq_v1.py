@@ -9,13 +9,22 @@ import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WEBSITE = os.path.normpath(os.path.join(HERE, "..", ".."))
+
+
+def v1_root():
+    """Where the V1 site is: site/ since the launch (build_pages.V1_LIVE),
+    site-v1/ before. Reading site-v1/ after the launch would check a stale copy."""
+    import sys
+    sys.path.insert(0, os.path.join(WEBSITE, "tools"))
+    import build_pages
+    return os.path.join(WEBSITE, "site" if build_pages.V1_LIVE else "site-v1")
 sys.path.insert(0, os.path.join(WEBSITE, "tools"))
 
 from raye_site import applications as apps  # noqa: E402
 
 
 def page(rel):
-    with open(os.path.join(WEBSITE, "site-v1", rel, "index.html"), encoding="utf-8") as f:
+    with open(os.path.join(v1_root(), rel, "index.html"), encoding="utf-8") as f:
         text = re.sub(r"<[^>]+>", " ", f.read())
     return re.sub(r"\s+", " ", text.replace(" ", " "))
 
@@ -51,10 +60,28 @@ class LegalFaqTests(unittest.TestCase):
         self.assertIn("effacé au bout d'un an", fr)
         self.assertEqual(apps.KEEP_LOG, 365 * 24 * 3600)
 
-    def test_privacy_and_terms_say_raye_community_is_not_open(self):
-        self.assertIn("not open yet", page("en/privacy"))
-        self.assertIn("is not open yet", page("en/terms"))
-        self.assertIn("pas encore ouverte", page("confidentialite"))
+    def test_privacy_and_terms_say_raye_community_is_open_as_a_beta(self):
+        # open since 1.0: the pages say what it keeps now, not what it will
+        for rel in ("en/privacy", "en/terms", "confidentialite", "conditions",
+                    "en/community", "communaute"):
+            text = page(rel)
+            with self.subTest(page=rel):
+                self.assertRegex(text, r"(open as a beta|ouverte en bêta)")
+                self.assertNotRegex(text, r"(not open yet|pas encore ouvert|once it opens|"
+                                          r"quand elle ouvrira)")
+        self.assertIn("moderation log", page("en/privacy"))
+        self.assertIn("journal de modération", page("confidentialite"))
+
+    def test_accounts_and_insider_are_described_as_open(self):
+        for rel in ("en/privacy", "confidentialite", "en/cookies", "temoins", "en/questions",
+                    "questions", "en/beta-terms", "conditions-beta", "en/insider", "insider"):
+            text = page(rel)
+            with self.subTest(page=rel):
+                self.assertNotRegex(text, r"(not open yet|pas encore ouverts?|once they open|"
+                                          r"quand ils ouvriront|planned and not open|"
+                                          r"sont prévus|not built yet|pas encore construit)")
+        self.assertIn("Settings › Raye Update › Raye Insider", page("en/beta-terms"))
+        self.assertIn("account.rayelinux.com", page("en/privacy"))
 
     def test_the_faq_answers_data_and_accounts(self):
         en, fr = page("en/questions"), page("questions")
@@ -69,7 +96,9 @@ class LegalFaqTests(unittest.TestCase):
             facts = f.read()
         self.assertIn("DATA AND PRIVACY", facts)
         self.assertIn("no usage reports and no crash reports", facts)
-        self.assertIn("accounts are not open yet", facts.lower().replace("raye ", ""))
+        self.assertNotIn("not open yet", facts)
+        self.assertIn("account.rayelinux.com", facts)
+        self.assertIn("community.rayelinux.com", facts)
 
     def test_nothing_after_v1_is_called_1_2(self):
         for rel in ("en/whats-next", "ensuite"):
