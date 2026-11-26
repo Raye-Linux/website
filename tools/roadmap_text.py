@@ -76,6 +76,7 @@ FR = {
     "V1 Beta 4": "V1 Bêta 4",
     "V1 Beta 3": "V1 Bêta 3",
     "Every language: all of Raye translated": "Toutes les langues : tout Raye traduit",
+    "Raye Proton built on GE-Proton, with per-game fixes from Raye Update": "Raye Proton construit sur GE-Proton, avec des correctifs par jeu livrés par Raye Update",
     "Raye in Spanish, German, Brazilian Portuguese and Italian": "Raye en espagnol, allemand, portugais du Brésil et italien",
     "Raye Community: Raye's own chat on the website and in Raye Linux, with your Raye account, friends, roles, moderation, images and videos, private messages and staff tools, then it replaces the Discord server":
         "Raye Community : le chat de Raye, sur le site et dans Raye Linux, avec votre compte Raye, les amis, les rôles, la modération, les images et vidéos, les messages privés et les outils du staff, puis il remplace le serveur Discord",

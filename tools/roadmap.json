@@ -22,7 +22,7 @@
      "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM"
     ],
     [
-     "doing",
+     "done",
      "No more freezes when RAM runs out: the PC slows down a little instead"
     ],
     [
@@ -42,11 +42,11 @@
      "Windows programs page lists the ones installed from the Store"
     ],
     [
-     "doing",
+     "done",
      "Smoother Hyprland"
     ],
     [
-     "doing",
+     "done",
      "Unneeded services removed and global optimizations, for a lighter and more stable Raye"
     ],
     [
@@ -54,7 +54,7 @@
      "Website refresh: a cleaner, more professional look and more pages"
     ],
     [
-     "doing",
+     "done",
      "Taskbar settings: left or center, icon size, taskbar height, auto-hide"
     ],
     [
@@ -62,7 +62,7 @@
      "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
     ],
     [
-     "doing",
+     "done",
      "USB copies show the real speed, with close and minimize buttons"
     ],
     [
@@ -74,7 +74,7 @@
      "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
     ],
     [
-     "doing",
+     "done",
      "WireGuard VPN in one click: import a file, turn it on from Quick Settings"
     ],
     [
@@ -82,11 +82,11 @@
      "Info Center opens Raye's Task Manager and looks like Raye"
     ],
     [
-     "doing",
+     "done",
      "Wobbly windows: a switch in Settings"
     ],
     [
-     "doing",
+     "done",
      "Settings and every Raye app work well on Hyprland"
     ],
     [
@@ -114,7 +114,7 @@
      "Complete Windows bridge: share drivers and settings with Windows"
     ],
     [
-     "doing",
+     "done",
      "Taskbar on top or on the side of the screen"
     ],
     [
@@ -190,7 +190,7 @@
      "New install: start in Try Raye with an Install icon, full-screen Setup, English boot menu, Setup fixes"
     ],
     [
-     "planned",
+     "doing",
      "Everything checked in French, screen by screen (installer included)"
     ],
     [
@@ -223,6 +223,10 @@
    "title": "🕒 V1.1 · early December",
    "color": "8a8f98",
    "items": [
+    [
+     "planned",
+     "Raye Proton built on GE-Proton, with per-game fixes from Raye Update"
+    ],
     [
      "planned",
      "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
