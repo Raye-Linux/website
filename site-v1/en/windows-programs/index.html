@@ -105,11 +105,11 @@
 </div>
 </figure>
 <h2 id="missing">What's missing, and why some programs don't start</h2>
-<p>Three pieces that Windows provides are not in Raye today. Most of the time, they are why a program doesn't start or looks wrong.</p>
+<p>Here is what Raye's Windows layer brings by itself, and what it still lacks. What's missing is, most of the time, why a program doesn't start.</p>
 <ul class="text-list">
-<li><strong>The Windows fonts</strong> (Tahoma, Segoe UI, Arial…). A program that asks for them gets another font, and a few windows end up badly laid out.</li>
-<li><strong>Direct3D to Vulkan translation</strong>, which gives games their speed. I haven't started a single game on this version, so I won't say yet what its absence costs.</li>
-<li><strong>.NET and the built-in web engine</strong> some programs expect. Those don't start.</li>
+<li><strong>Direct3D to Vulkan is included</strong> (DXVK and VKD3D-Proton): games and programs that use Direct3D 8 to 12 get it with no setting.</li>
+<li><strong>The Windows fonts</strong> (Arial, Times New Roman, Calibri, Cambria, Tahoma…) are replaced by fonts of the same size, so windows keep their layout. The original Windows fonts are not included: some text can look a little different.</li>
+<li><strong>What's still missing</strong>: the original .NET Framework of Windows (Raye ships a free version that most programs are happy with) and Edge's WebView2 web engine. Programs that require either one don't start yet.</li>
 </ul>
 <aside class="limits" aria-labelledby="limits-missing missing">
 <p class="limits-title" id="limits-missing">What is still missing</p>

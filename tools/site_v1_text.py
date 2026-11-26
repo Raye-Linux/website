@@ -652,25 +652,30 @@ WINDOWS = {
         ("shot", "exe-native"),
         H("missing", "Ce qui manque, et pourquoi certains programmes ne démarrent pas",
           "What's missing, and why some programs don't start"),
-        P("Trois pièces que Windows fournit ne sont pas dans Raye aujourd'hui. Ce sont elles, le "
-          "plus souvent, qui expliquent qu'un programme ne démarre pas ou s'affiche mal.",
-          "Three pieces that Windows provides are not in Raye today. Most of the time, they are "
-          "why a program doesn't start or looks wrong."),
+        P("Voici ce que la couche Windows de Raye apporte d'elle-même, et ce qui lui manque "
+          "encore. C'est ce qui manque, le plus souvent, qui explique qu'un programme ne démarre "
+          "pas.",
+          "Here is what Raye's Windows layer brings by itself, and what it still lacks. What's "
+          "missing is, most of the time, why a program doesn't start."),
         ("list", [
-            L("<strong>Les polices de Windows</strong> (Tahoma, Segoe UI, Arial…). Un programme "
-              "qui les demande en reçoit une autre, et quelques fenêtres sont mal disposées.",
-              "<strong>The Windows fonts</strong> (Tahoma, Segoe UI, Arial…). A program that asks "
-              "for them gets another font, and a few windows end up badly laid out."),
-            L("<strong>La traduction de Direct3D vers Vulkan</strong>, qui donne aux jeux leur "
-              "vitesse. Je n'ai lancé aucun jeu sur cette version, donc je ne dis pas encore ce "
-              "que son absence coûte.",
-              "<strong>Direct3D to Vulkan translation</strong>, which gives games their speed. "
-              "I haven't started a single game on this version, so I won't say yet what its "
-              "absence costs."),
-            L("<strong>.NET et le moteur web intégré</strong> que certains programmes attendent. "
-              "Ceux-là ne démarrent pas.",
-              "<strong>.NET and the built-in web engine</strong> some programs expect. Those "
-              "don't start."),
+            L("<strong>Direct3D vers Vulkan est inclus</strong> (DXVK et VKD3D-Proton) : les "
+              "jeux et programmes en Direct3D 8 à 12 l'utilisent sans réglage.",
+              "<strong>Direct3D to Vulkan is included</strong> (DXVK and VKD3D-Proton): games "
+              "and programs that use Direct3D 8 to 12 get it with no setting."),
+            L("<strong>Les polices de Windows</strong> (Arial, Times New Roman, Calibri, Cambria, "
+              "Tahoma…) sont remplacées par des polices de la même taille, donc les fenêtres "
+              "gardent leur disposition. Les polices d’origine de Windows ne sont pas incluses : "
+              "un texte peut avoir l'air un peu différent.",
+              "<strong>The Windows fonts</strong> (Arial, Times New Roman, Calibri, Cambria, "
+              "Tahoma…) are replaced by fonts of the same size, so windows keep their layout. "
+              "The original Windows fonts are not included: some text can look a little different."),
+            L("<strong>Ce qui manque encore</strong> : le .NET Framework d’origine de Windows "
+              "(Raye en fournit une version libre, qui suffit à la plupart des programmes) et le "
+              "moteur web WebView2 d'Edge. Les programmes qui exigent l'un ou l'autre ne "
+              "démarrent pas encore.",
+              "<strong>What's still missing</strong>: the original .NET Framework of Windows (Raye ships "
+              "a free version that most programs are happy with) and Edge's WebView2 web engine. "
+              "Programs that require either one don't start yet."),
         ]),
         limits(L("Le premier programme ouvert après l'installation prend du temps.",
                  "The first program you open after installing takes a while."),

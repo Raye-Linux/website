@@ -105,11 +105,11 @@
 </div>
 </figure>
 <h2 id="missing">Ce qui manque, et pourquoi certains programmes ne démarrent pas</h2>
-<p>Trois pièces que Windows fournit ne sont pas dans Raye aujourd'hui. Ce sont elles, le plus souvent, qui expliquent qu'un programme ne démarre pas ou s'affiche mal.</p>
+<p>Voici ce que la couche Windows de Raye apporte d'elle-même, et ce qui lui manque encore. C'est ce qui manque, le plus souvent, qui explique qu'un programme ne démarre pas.</p>
 <ul class="text-list">
-<li><strong>Les polices de Windows</strong> (Tahoma, Segoe UI, Arial…). Un programme qui les demande en reçoit une autre, et quelques fenêtres sont mal disposées.</li>
-<li><strong>La traduction de Direct3D vers Vulkan</strong>, qui donne aux jeux leur vitesse. Je n'ai lancé aucun jeu sur cette version, donc je ne dis pas encore ce que son absence coûte.</li>
-<li><strong>.NET et le moteur web intégré</strong> que certains programmes attendent. Ceux-là ne démarrent pas.</li>
+<li><strong>Direct3D vers Vulkan est inclus</strong> (DXVK et VKD3D-Proton) : les jeux et programmes en Direct3D 8 à 12 l'utilisent sans réglage.</li>
+<li><strong>Les polices de Windows</strong> (Arial, Times New Roman, Calibri, Cambria, Tahoma…) sont remplacées par des polices de la même taille, donc les fenêtres gardent leur disposition. Les polices d’origine de Windows ne sont pas incluses : un texte peut avoir l'air un peu différent.</li>
+<li><strong>Ce qui manque encore</strong> : le .NET Framework d’origine de Windows (Raye en fournit une version libre, qui suffit à la plupart des programmes) et le moteur web WebView2 d'Edge. Les programmes qui exigent l'un ou l'autre ne démarrent pas encore.</li>
 </ul>
 <aside class="limits" aria-labelledby="limits-missing missing">
 <p class="limits-title" id="limits-missing">Ce qui manque encore</p>
