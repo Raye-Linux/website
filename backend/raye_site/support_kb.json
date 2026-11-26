@@ -129,7 +129,7 @@
   {
    "id": "download:fr:0.0",
    "lang": "fr",
-   "text": "2,9 Go · ISO 64 bits, démarrage UEFI · 21 novembre 2026\n\ntéléchargements\n\n352\n\nPC actifs\n\n462\n\nTéléchargements terminés, comptés par Cloudflare depuis le 14 novembre. PC actifs : machines qui ont cherché des mises à jour Raye ces 14 derniers jours. Au 26 novembre 2026.\n\nTélécharger l'ISO\n\nSHA-256\n\nbaeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547\n\nEmpreinte de la clé\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nClé publique\n\nNotes de version",
+   "text": "2,9 Go · ISO 64 bits, démarrage UEFI · 21 novembre 2026\n\ntéléchargements\n\n353\n\nPC actifs\n\n463\n\nTéléchargements terminés, comptés par Cloudflare depuis le 14 novembre. PC actifs : machines qui ont cherché des mises à jour Raye ces 14 derniers jours. Au 26 novembre 2026.\n\nTélécharger l'ISO\n\nSHA-256\n\nbaeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547\n\nEmpreinte de la clé\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nClé publique\n\nNotes de version",
    "title": "raye-1.0-beta-amd64.iso",
    "url": "/fr/telecharger/"
   },
@@ -304,7 +304,7 @@
   {
    "id": "download:en:0.0",
    "lang": "en",
-   "text": "2.9 GB · 64-bit ISO, UEFI start · November 21, 2026\n\ndownloads\n\n352\n\nactive PCs\n\n462\n\nFinished downloads, counted by Cloudflare since November 14. Active PCs: machines that checked for Raye updates in the last 14 days. As of November 26, 2026.\n\nDownload the ISO\n\nSHA-256\n\nbaeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547\n\nKey fingerprint\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nPublic key\n\nRelease notes",
+   "text": "2.9 GB · 64-bit ISO, UEFI start · November 21, 2026\n\ndownloads\n\n353\n\nactive PCs\n\n463\n\nFinished downloads, counted by Cloudflare since November 14. Active PCs: machines that checked for Raye updates in the last 14 days. As of November 26, 2026.\n\nDownload the ISO\n\nSHA-256\n\nbaeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547\n\nKey fingerprint\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nPublic key\n\nRelease notes",
    "title": "raye-1.0-beta-amd64.iso",
    "url": "/en/download/"
   },
@@ -1379,7 +1379,7 @@
   "1.0-beta/release-notes-1.0-beta.fr.md": "2bf6d9d7b93d1bd3",
   "1.0-beta/release-notes-1.0-beta.md": "8e317bfec331ba3c",
   "discord/texts.py": "5bff52e13c468251",
-  "download/index.html": "061aed44fd489be0",
+  "download/index.html": "0434636bbd94a7ee",
   "en/01-installing.md": "395684ff312893d0",
   "en/02-first-steps.md": "327774439b2c0c38",
   "en/03-updates.md": "55e63fd65d21506a",
@@ -1391,7 +1391,7 @@
   "en/09-windows-alongside.md": "4378c466bd1baa82",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
   "en/11-chromebooks.md": "0b0a8099e4fe5196",
-  "en/index.html": "4ce578abbd214868",
+  "en/index.html": "98f90d77cfbfdb08",
   "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
@@ -1403,7 +1403,7 @@
   "fr/09-windows-a-cote.md": "ab889732288946c1",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
   "fr/11-chromebooks.md": "655c79fe7f20dfb5",
-  "fr/index.html": "d696dfa7a4eac849",
-  "telecharger/index.html": "f3f5a61bcdd1fc11"
+  "fr/index.html": "0bdb1fee62c78f19",
+  "telecharger/index.html": "dd83a2f39608283e"
  }
 }
