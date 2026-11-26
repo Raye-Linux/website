@@ -30,7 +30,7 @@
      "Fix for apps that crash on start (Qoder and other Electron apps)"
     ],
     [
-     "doing",
+     "done",
      "Wi-Fi password box keeps the cursor while networks refresh"
     ],
     [
@@ -38,7 +38,7 @@
      "File Explorer opens right away, even when a network drive is out of reach"
     ],
     [
-     "doing",
+     "done",
      "Windows programs page lists the ones installed from the Store"
     ],
     [
@@ -162,7 +162,7 @@
      "Raye Proton built on GE-Proton, with per-game fixes from Raye Update"
     ],
     [
-     "doing",
+     "done",
      "Upgraded Windows layer: newest version, faster, more Windows apps tested and working"
     ],
     [
@@ -202,7 +202,7 @@
      "Raye in Spanish, German, Brazilian Portuguese and Italian"
     ],
     [
-     "doing",
+     "done",
      "Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime"
     ],
     [
