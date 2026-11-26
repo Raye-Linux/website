@@ -199,21 +199,21 @@
   {
    "id": "install:fr:1.0",
    "lang": "fr",
-   "text": "Téléchargez l'image\n\nUne fois l'image publiée, la page Télécharger donne le fichier, sa somme de contrôle et la façon de la vérifier.\n\nÉcrivez-la sur la clé\n\nAvec Rufus, choisissez le mode image DD quand il le demande : le mode ISO donne une clé qui ne démarre pas. balenaEtcher marche aussi. Tout ce que la clé contient sera effacé.\n\nDémarrez sur la clé\n\nÀ l'allumage, souvent avec F12, F11, F8 ou Échap. Le menu de la clé, en anglais seulement, démarre par défaut sur « Try Raye Linux without installing » : une session d'essai qui ne touche pas au disque. L'icône « Install Raye Linux » est sur le bureau et en tête de Démarrer, et ouvre l'installateur en plein écran. Sur la ligne d'en dessous du menu, « Install Raye Linux » l'ouvre directement ; « Safe graphics » aide quand l'écran reste noir.\n\nCapture à prendre · try-raye\n\nLa session d'essai de Raye, lancée depuis la clé USB : le bureau avec l'icône Installer Raye Linux posée dessus.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Téléchargez l'image\n\nUne fois l'image publiée, la page Télécharger donne le fichier, sa somme de contrôle et la façon de la vérifier.\n\nÉcrivez-la sur la clé\n\nAvec Rufus, choisissez le mode image DD quand il le demande : le mode ISO donne une clé qui ne démarre pas. balenaEtcher marche aussi. Tout ce que la clé contient sera effacé.\n\nDémarrez sur la clé\n\nÀ l'allumage, souvent avec F12, F11, F8 ou Échap. Le menu de la clé, en anglais seulement, démarre par défaut sur « Try Raye Linux without installing » : une session d'essai qui ne touche pas au disque. L'icône « Install Raye Linux » est sur le bureau et en tête de Démarrer, et ouvre l'installateur en plein écran. Sur la ligne d'en dessous du menu, « Install Raye Linux » l'ouvre directement ; « Safe graphics » aide quand l'écran reste noir.",
    "title": "La clé USB",
    "url": "/installer/#usb"
   },
   {
    "id": "install:fr:2.0",
    "lang": "fr",
-   "text": "Région\n\nFrançais ou anglais, le fuseau horaire, puis la disposition du clavier.\n\nRéseau\n\nLa page suit votre connexion en direct : un câble branché apparaît tout de suite.\n\nDisque\n\nQuatre choix : effacer le disque, installer à côté de Windows en réduisant sa partition, utiliser l'espace libre, ou remplacer une partition. La case « Chiffrer le système Raye » est sur la même page : cochée, elle vous fait choisir un mot de passe du disque. Avec une puce TPM, vous n'aurez pas à le taper au démarrage.\n\nCompte\n\nLe nom du PC, puis votre nom et votre mot de passe. La page du compte Raye se passe avec « Utiliser plutôt un compte local ».\n\nConfidentialité\n\nLa position et les statistiques d'usage, que vous pourrez changer plus tard dans les Paramètres.\n\nInstallation\n\n« Prêt pour l'installation » dit tout ce qui va se passer, avec un bandeau rouge si quelque chose va être effacé.\n\nCapture à prendre · setup-disk\n\nLa page Disque de l'installateur, sur « Installer à côté de Windows », avec la réglette qui partage le disque.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nJuste avant d'écrire, l'installateur relit le disque. Si quoi que ce soit a changé depuis votre choix, il s'arrête au lieu de continuer.\n\nCapture à prendre · setup-summary\n\nLe résumé « Prêt pour l'installation » de l'installateur, avec le bandeau rouge qui dit ce qui sera effacé.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Région\n\nFrançais ou anglais, le fuseau horaire, puis la disposition du clavier.\n\nRéseau\n\nLa page suit votre connexion en direct : un câble branché apparaît tout de suite.\n\nDisque\n\nQuatre choix : effacer le disque, installer à côté de Windows en réduisant sa partition, utiliser l'espace libre, ou remplacer une partition. La case « Chiffrer le système Raye » est sur la même page : cochée, elle vous fait choisir un mot de passe du disque. Avec une puce TPM, vous n'aurez pas à le taper au démarrage.\n\nCompte\n\nLe nom du PC, puis votre nom et votre mot de passe. La page du compte Raye se passe avec « Utiliser plutôt un compte local ».\n\nConfidentialité\n\nLa position et les statistiques d'usage, que vous pourrez changer plus tard dans les Paramètres.\n\nInstallation\n\n« Prêt pour l'installation » dit tout ce qui va se passer, avec un bandeau rouge si quelque chose va être effacé.\n\nJuste avant d'écrire, l'installateur relit le disque. Si quoi que ce soit a changé depuis votre choix, il s'arrête au lieu de continuer.",
    "title": "L'installateur, étape par étape",
    "url": "/installer/#pages"
   },
   {
    "id": "install:fr:3.0",
    "lang": "fr",
-   "text": "« Installer à côté de Windows » réduit la partition Windows pour faire de la place, et les deux systèmes partagent la partition de démarrage. Au démarrage, un menu propose Raye Linux et Windows pendant 10 secondes. Depuis Raye, « Redémarrer sous Windows », dans Démarrer, redémarre directement dans Windows, une fois.\n\nCapture à prendre · boot-menu\n\nLe menu de démarrage avec deux choix, Raye Linux et Windows, et le compte à rebours.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nJe l'ai prouvé sur une partition Windows de test, dans la machine de test : 50 Go réduits à 23 Go, et chaque fichier de Windows identique avant et après. Pas encore sur un vrai Windows réduit puis redémarré. Sauvegardez avant.\n\nLe menu de démarrage affiche encore « Raye Linux GNU/Linux » au lieu de « Raye Linux ».\n\nSur un PC en mode BIOS d'autrefois, j'ai vu la clé démarrer jusqu'à l'installateur, pas l'installation complète : voir la page Vieux PC.",
+   "text": "« Installer à côté de Windows » réduit la partition Windows pour faire de la place, et les deux systèmes partagent la partition de démarrage. Au démarrage, un menu propose Raye Linux et Windows pendant 10 secondes. Depuis Raye, « Redémarrer sous Windows », dans Démarrer, redémarre directement dans Windows, une fois.\n\nCe qui manque encore\n\nJe l'ai prouvé sur une partition Windows de test, dans la machine de test : 50 Go réduits à 23 Go, et chaque fichier de Windows identique avant et après. Pas encore sur un vrai Windows réduit puis redémarré. Sauvegardez avant.\n\nLe menu de démarrage affiche encore « Raye Linux GNU/Linux » au lieu de « Raye Linux ».\n\nSur un PC en mode BIOS d'autrefois, j'ai vu la clé démarrer jusqu'à l'installateur, pas l'installation complète : voir la page Vieux PC.",
    "title": "Garder Windows à côté",
    "url": "/installer/#alongside"
   },
@@ -227,7 +227,7 @@
   {
    "id": "install:fr:5.0",
    "lang": "fr",
-   "text": "Le noyau de Raye est signé avec une clé de Raye. Pour que Secure Boot l'accepte, il faut inscrire cette clé une seule fois, et c'est le micrologiciel de votre PC qui le demande, sur un écran bleu au redémarrage, pas Raye. Avant de redémarrer, Raye vous montre un code à six chiffres à retenir.\n\nAppuyez sur une touche\n\nVous avez environ 10 secondes à l'écran bleu pour appuyer sur une touche.\n\nChoisissez Enroll MOK\n\nPuis Continue, puis Yes.\n\nTapez le code\n\nLe code à six chiffres que Raye vous a montré, puis Reboot.\n\nCapture à prendre · enroll-key\n\nL'écran bleu du démarrage où l'on inscrit la clé de Raye : la liste « Enroll MOK » et le champ du code à six chiffres.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nSi vous manquez l'écran bleu, rien de grave : le PC démarre comme avant, avec le noyau du système de base, et Raye vous le redemandera. Sans Secure Boot, il n'y a pas d'écran bleu.\n\nCe qui manque encore\n\nJe l'ai vu marcher dans la machine de test, avec Secure Boot et une puce TPM virtuelle : écran bleu manqué, puis écran bleu réussi, puis démarrage sur le noyau de Raye. Pas encore sur un vrai PC.\n\nLa clé USB d'essai garde le noyau signé d'origine : on n'inscrit rien pour essayer Raye.",
+   "text": "Le noyau de Raye est signé avec une clé de Raye. Pour que Secure Boot l'accepte, il faut inscrire cette clé une seule fois, et c'est le micrologiciel de votre PC qui le demande, sur un écran bleu au redémarrage, pas Raye. Avant de redémarrer, Raye vous montre un code à six chiffres à retenir.\n\nAppuyez sur une touche\n\nVous avez environ 10 secondes à l'écran bleu pour appuyer sur une touche.\n\nChoisissez Enroll MOK\n\nPuis Continue, puis Yes.\n\nTapez le code\n\nLe code à six chiffres que Raye vous a montré, puis Reboot.\n\nSi vous manquez l'écran bleu, rien de grave : le PC démarre comme avant, avec le noyau du système de base, et Raye vous le redemandera. Sans Secure Boot, il n'y a pas d'écran bleu.\n\nCe qui manque encore\n\nJe l'ai vu marcher dans la machine de test, avec Secure Boot et une puce TPM virtuelle : écran bleu manqué, puis écran bleu réussi, puis démarrage sur le noyau de Raye. Pas encore sur un vrai PC.\n\nLa clé USB d'essai garde le noyau signé d'origine : on n'inscrit rien pour essayer Raye.",
    "title": "La clé de Raye et l'écran bleu",
    "url": "/installer/#key"
   },
@@ -283,14 +283,14 @@
   {
    "id": "windows:fr:0.0",
    "lang": "fr",
-   "text": "Double-cliquez sur un fichier .exe ou .msi : il s'ouvre. Il n'y a rien à installer avant, et pas de question. L'installateur du programme fait son travail et ajoute son entrée au menu Démarrer, d'où le programme se lance ensuite comme une appli de Raye.\n\nCapture à prendre · exe-setup\n\nL'installateur d'un programme Windows ouvert d'un double-clic sur son fichier .exe, en cours d'installation.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nChaque programme a son propre espace, si bien qu'un programme qui se comporte mal ne casse pas les autres. Cet espace se prépare en arrière-plan environ deux minutes après votre première connexion, puis de nouveau après certaines mises à jour : 26 secondes de travail, et jusqu'à 3 Go de mémoire pendant ce temps, mesurés sur la machine de test.\n\nCapture à prendre · exe-start\n\nLe même programme Windows dans le menu Démarrer après son installation, puis ouvert sur le bureau.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Double-cliquez sur un fichier .exe ou .msi : il s'ouvre. Il n'y a rien à installer avant, et pas de question. L'installateur du programme fait son travail et ajoute son entrée au menu Démarrer, d'où le programme se lance ensuite comme une appli de Raye.\n\nChaque programme a son propre espace, si bien qu'un programme qui se comporte mal ne casse pas les autres. Cet espace se prépare en arrière-plan environ deux minutes après votre première connexion, puis de nouveau après certaines mises à jour : 26 secondes de travail, et jusqu'à 3 Go de mémoire pendant ce temps, mesurés sur la machine de test.",
    "title": "Un double-clic",
    "url": "/programmes-windows/#double-click"
   },
   {
    "id": "windows:fr:1.0",
    "lang": "fr",
-   "text": "Certains programmes existent aussi pour Raye, comme Discord ou Steam. Si vous double-cliquez sur leur installateur Windows, Raye vous propose plutôt cette version-là, faite pour Raye, qui n'a pas besoin de la couche Windows.\n\nCapture à prendre · exe-native\n\nRaye qui propose la version pour Raye d'un programme au double-clic sur son installateur Windows.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Certains programmes existent aussi pour Raye, comme Discord ou Steam. Si vous double-cliquez sur leur installateur Windows, Raye vous propose plutôt cette version-là, faite pour Raye, qui n'a pas besoin de la couche Windows.",
    "title": "Quand il existe une version pour Raye",
    "url": "/programmes-windows/#native"
   },
@@ -318,7 +318,7 @@
   {
    "id": "games:fr:0.0",
    "lang": "fr",
-   "text": "Steam est dans le Raye Store. Raye l'installe comme un paquet de Raye (APT) plutôt qu'en Flatpak ; si vous l'aviez déjà en Flatpak, Raye le déplace une fois, avec vos jeux et vos réglages, et vous prévient à la connexion. Steam voit vos autres disques : ce qui est monté sous /media, /run/media et /mnt est proposé quand vous ajoutez un dossier de bibliothèque.\n\nCapture à prendre · steam-store\n\nLa page de Steam dans le Raye Store, avec la rangée du format du paquet et le bouton Installer.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nLe mode jeu s'allume tout seul pendant une partie. Heroic, pour les boutiques d'autres éditeurs, est aussi dans le Store.\n\nCe qui manque encore\n\nSur une carte NVIDIA, Steam qui s'ouvre puis n'affiche rien a été signalé. J'ai corrigé ce que j'ai trouvé, sans pouvoir l'essayer sans carte NVIDIA : si ça vous arrive, dites-le moi.",
+   "text": "Steam est dans le Raye Store. Raye l'installe comme un paquet de Raye (APT) plutôt qu'en Flatpak ; si vous l'aviez déjà en Flatpak, Raye le déplace une fois, avec vos jeux et vos réglages, et vous prévient à la connexion. Steam voit vos autres disques : ce qui est monté sous /media, /run/media et /mnt est proposé quand vous ajoutez un dossier de bibliothèque.\n\nLe mode jeu s'allume tout seul pendant une partie. Heroic, pour les boutiques d'autres éditeurs, est aussi dans le Store.\n\nCe qui manque encore\n\nSur une carte NVIDIA, Steam qui s'ouvre puis n'affiche rien a été signalé. J'ai corrigé ce que j'ai trouvé, sans pouvoir l'essayer sans carte NVIDIA : si ça vous arrive, dites-le moi.",
    "title": "Steam",
    "url": "/jeux/#steam"
   },
@@ -353,14 +353,14 @@
   {
    "id": "updates:fr:0.0",
    "lang": "fr",
-   "text": "Attend le redémarrage ce que le système garde chargé tant qu'il tourne : le noyau, les pilotes, les micrologiciels, les pièces centrales du système et le bureau lui-même. Une mise à jour de ce genre porte l'étiquette « Redémarrage requis ». Le reste s'installe dès qu'il est téléchargé, sans que vous ayez rien à faire.\n\nLes correctifs de sécurité font exception : ils s'installent tout de suite, même pour ces pièces-là.\n\nCapture à prendre · update-live\n\nRaye Update dans les Paramètres : des mises à jour déjà installées et une seule marquée « Redémarrage requis ».\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Attend le redémarrage ce que le système garde chargé tant qu'il tourne : le noyau, les pilotes, les micrologiciels, les pièces centrales du système et le bureau lui-même. Une mise à jour de ce genre porte l'étiquette « Redémarrage requis ». Le reste s'installe dès qu'il est téléchargé, sans que vous ayez rien à faire.\n\nLes correctifs de sécurité font exception : ils s'installent tout de suite, même pour ces pièces-là.",
    "title": "Ce qui s'installe tout de suite, ce qui attend",
    "url": "/mises-a-jour/#live"
   },
   {
    "id": "updates:fr:1.0",
    "lang": "fr",
-   "text": "Ce qui attend s'installe quand vous choisissez « Mettre à jour et redémarrer », dans Démarrer, dans la notification ou dans les Paramètres. Un redémarrage ordinaire n'installe rien, et Raye ne redémarre pas de lui-même, sauf si vous lui avez demandé de le faire en dehors de vos heures d'activité. Pendant l'installation, l'image de Raye montre un anneau et « Installation des mises à jour » avec le pourcentage. Pour le thème du bureau, il s'est écoulé 24 s entre l'image de démarrage et l'écran de connexion sur la machine de test.\n\nCapture à prendre · update-boot\n\nL'écran du redémarrage : l'œil de Raye, l'anneau et « Installation des mises à jour » avec le pourcentage.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nQuand une deuxième mise à jour du même paquet attend, la notification « Redémarrage requis » ne revient pas.\n\nL'écran de verrouillage et Ctrl+Alt+Suppr ne proposent pas encore « Mettre à jour et redémarrer ».",
+   "text": "Ce qui attend s'installe quand vous choisissez « Mettre à jour et redémarrer », dans Démarrer, dans la notification ou dans les Paramètres. Un redémarrage ordinaire n'installe rien, et Raye ne redémarre pas de lui-même, sauf si vous lui avez demandé de le faire en dehors de vos heures d'activité. Pendant l'installation, l'image de Raye montre un anneau et « Installation des mises à jour » avec le pourcentage. Pour le thème du bureau, il s'est écoulé 24 s entre l'image de démarrage et l'écran de connexion sur la machine de test.\n\nCe qui manque encore\n\nQuand une deuxième mise à jour du même paquet attend, la notification « Redémarrage requis » ne revient pas.\n\nL'écran de verrouillage et Ctrl+Alt+Suppr ne proposent pas encore « Mettre à jour et redémarrer ».",
    "title": "Le redémarrage",
    "url": "/mises-a-jour/#restart"
   },
@@ -374,7 +374,7 @@
   {
    "id": "updates:fr:3.0",
    "lang": "fr",
-   "text": "Avant et après chaque installation de mises à jour, Raye prend un point de restauration du système, et les plus anciens partent seuls. Vous pouvez aussi en créer un dans Paramètres, Récupération.\n\nCapture à prendre · restore\n\nPoints de restauration avec la paire « Avant les mises à jour » et « Après les mises à jour ».\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nRevenir au point « Avant les mises à jour » réinstalle ces mêmes mises à jour au démarrage suivant : ne comptez pas encore dessus pour annuler une mise à jour.\n\nUn point créé à la main peut être effacé, sans avertissement, par ceux des mises à jour suivantes.\n\nUn point de restauration garde le système, pas vos fichiers personnels. Sauvegardez-les à part.\n\nOn ne peut pas encore démarrer sur un état précédent depuis le menu de démarrage.",
+   "text": "Avant et après chaque installation de mises à jour, Raye prend un point de restauration du système, et les plus anciens partent seuls. Vous pouvez aussi en créer un dans Paramètres, Récupération.\n\nCe qui manque encore\n\nRevenir au point « Avant les mises à jour » réinstalle ces mêmes mises à jour au démarrage suivant : ne comptez pas encore dessus pour annuler une mise à jour.\n\nUn point créé à la main peut être effacé, sans avertissement, par ceux des mises à jour suivantes.\n\nUn point de restauration garde le système, pas vos fichiers personnels. Sauvegardez-les à part.\n\nOn ne peut pas encore démarrer sur un état précédent depuis le menu de démarrage.",
    "title": "Les points de restauration",
    "url": "/mises-a-jour/#restore"
   },
@@ -395,21 +395,21 @@
   {
    "id": "security:fr:1.0",
    "lang": "fr",
-   "text": "Si vous cochez « Chiffrer le système Raye » sur la page Disque de l'installateur, vous choisissez un mot de passe du disque, et tout le système est chiffré. Retiré du PC et branché ailleurs, le disque ne se lit pas sans ce mot de passe ou la clé de récupération.\n\nCapture à prendre · setup-encrypt\n\nLa page Disque de l'installateur, case « Chiffrer le système Raye » cochée, avec les deux champs du mot de passe du disque.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nSur un PC qui a une puce TPM, c'est elle qui ouvre le disque au démarrage. Sur ce PC-là, c'est donc le mot de passe de votre compte qui protège vos fichiers, comme avec BitLocker. La puce ne surveille que les réglages de Secure Boot : s'ils changent, ou si le disque est mis dans un autre PC, Raye redemande le mot de passe du disque. D'autres changements dans le démarrage ne le redemandent pas. Sans puce TPM, le mot de passe du disque est demandé à chaque démarrage.\n\nJe l'ai essayé une fois sur la machine de test : une mise à jour du micrologiciel qui révoque d'anciennes clés de démarrage, et le disque s'est ouvert seul après. Si une mise à jour de ce genre s'installe avec d'autres au redémarrage, la clé de récupération peut vous être demandée une fois.",
+   "text": "Si vous cochez « Chiffrer le système Raye » sur la page Disque de l'installateur, vous choisissez un mot de passe du disque, et tout le système est chiffré. Retiré du PC et branché ailleurs, le disque ne se lit pas sans ce mot de passe ou la clé de récupération.\n\nSur un PC qui a une puce TPM, c'est elle qui ouvre le disque au démarrage. Sur ce PC-là, c'est donc le mot de passe de votre compte qui protège vos fichiers, comme avec BitLocker. La puce ne surveille que les réglages de Secure Boot : s'ils changent, ou si le disque est mis dans un autre PC, Raye redemande le mot de passe du disque. D'autres changements dans le démarrage ne le redemandent pas. Sans puce TPM, le mot de passe du disque est demandé à chaque démarrage.\n\nJe l'ai essayé une fois sur la machine de test : une mise à jour du micrologiciel qui révoque d'anciennes clés de démarrage, et le disque s'est ouvert seul après. Si une mise à jour de ce genre s'installe avec d'autres au redémarrage, la clé de récupération peut vous être demandée une fois.",
    "title": "Le disque chiffré",
    "url": "/securite/#encryption"
   },
   {
    "id": "security:fr:2.0",
    "lang": "fr",
-   "text": "À la première connexion, une fenêtre montre une clé de récupération : huit groupes de six chiffres. Elle ouvre le disque si vous oubliez son mot de passe. Copiez-la, notez-la sur papier ou dans un gestionnaire de mots de passe, gardez-la ailleurs que sur l'ordinateur, puis confirmez avec « J'ai enregistré ma clé ».\n\nCapture à prendre · recovery-key\n\nLa fenêtre de la clé de récupération à la première connexion, la clé elle-même floutée.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "À la première connexion, une fenêtre montre une clé de récupération : huit groupes de six chiffres. Elle ouvre le disque si vous oubliez son mot de passe. Copiez-la, notez-la sur papier ou dans un gestionnaire de mots de passe, gardez-la ailleurs que sur l'ordinateur, puis confirmez avec « J'ai enregistré ma clé ».",
    "title": "La clé de récupération",
    "url": "/securite/#recovery"
   },
   {
    "id": "security:fr:3.0",
    "lang": "fr",
-   "text": "Quand une appli veut modifier le système, l'écran s'assombrit et Raye demande votre mot de passe, avec le nom de l'éditeur, comme sous Windows 11. L'invite n'expire pas : sur un compte standard, vous avez le temps d'aller demander le mot de passe à l'administrateur du PC. Les mises à jour, elles, s'installent sans le demander.\n\nCapture à prendre · uac\n\nL'invite de mot de passe : l'écran assombri, « Éditeur vérifié : Raye Linux », Oui et Non.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nL'invite nomme parfois le programme technique plutôt que l'appli qui le demande.\n\nOn ne peut pas encore chiffrer ou déchiffrer le disque une fois Raye installé : c'est un choix à faire à l'installation.",
+   "text": "Quand une appli veut modifier le système, l'écran s'assombrit et Raye demande votre mot de passe, avec le nom de l'éditeur, comme sous Windows 11. L'invite n'expire pas : sur un compte standard, vous avez le temps d'aller demander le mot de passe à l'administrateur du PC. Les mises à jour, elles, s'installent sans le demander.\n\nCe qui manque encore\n\nL'invite nomme parfois le programme technique plutôt que l'appli qui le demande.\n\nOn ne peut pas encore chiffrer ou déchiffrer le disque une fois Raye installé : c'est un choix à faire à l'installation.",
    "title": "Le mot de passe avant qu'une appli change le système",
    "url": "/securite/#prompt"
   },
@@ -451,7 +451,7 @@
   {
    "id": "desktops:fr:0.0",
    "lang": "fr",
-   "text": "Le bureau de Raye reprend la disposition de Windows 11 : barre centrée, Démarrer, fenêtres qu'on glisse et qu'on accroche. C'est celui qu'on a après l'installation.\n\nHyprland est un bureau où les fenêtres se rangent côte à côte sans qu'on les place, et où l'on fait presque tout au clavier. Il est pour qui le connaît déjà, ou veut l'apprendre. Raye lui met sa barre, son thème et ses applis, et l'installation propose Hyprland si vous le voulez.\n\nCapture à prendre · desktop-choice\n\nParamètres, page Environnement de bureau : les deux cartes, le bureau de Raye et Hyprland, avec celle qui est utilisée.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nLe choix se fait dans Paramètres > Personnalisation > Environnement de bureau, ou sur l'écran de connexion, avec le bouton Bureau en bas à droite. Passer de l'un à l'autre rouvre l'Explorateur et les Paramètres sur le nouveau bureau.\n\nCapture à prendre · hypr-session\n\nLa session Hyprland de Raye : des fenêtres rangées côte à côte, et la barre de Raye en haut avec l'horloge.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Le bureau de Raye reprend la disposition de Windows 11 : barre centrée, Démarrer, fenêtres qu'on glisse et qu'on accroche. C'est celui qu'on a après l'installation.\n\nHyprland est un bureau où les fenêtres se rangent côte à côte sans qu'on les place, et où l'on fait presque tout au clavier. Il est pour qui le connaît déjà, ou veut l'apprendre. Raye lui met sa barre, son thème et ses applis, et l'installation propose Hyprland si vous le voulez.\n\nLe choix se fait dans Paramètres > Personnalisation > Environnement de bureau, ou sur l'écran de connexion, avec le bouton Bureau en bas à droite. Passer de l'un à l'autre rouvre l'Explorateur et les Paramètres sur le nouveau bureau.",
    "title": "Choisir",
    "url": "/deux-bureaux/#choose"
   },
@@ -479,77 +479,77 @@
   {
    "id": "desktop:fr:0.0",
    "lang": "fr",
-   "text": "La barre est centrée : Démarrer, la recherche, vos applis épinglées, puis l'horloge à droite. Avec deux écrans, chacun a sa barre et son horloge ; les icônes de notification restent sur l'écran principal, comme sous Windows 11. Une fenêtre réduite garde son bouton.\n\nDémarrer montre vos applis épinglées, puis « Toutes les applications » en catégories, en grille ou en liste. Les applis portent les noms de Windows : Calculatrice, Paint, Photos, Lecteur multimédia, Gestionnaire des tâches.\n\nCapture à prendre · start-all\n\nLe menu Démarrer sur Toutes les applications, rangées en catégories.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nLe champ de recherche et la section Recommandé ne sont pas encore ceux de Windows 11.\n\nDémarrer et certains menus s'ouvrent avec un temps de retard, et leurs animations ne sont pas encore celles de Windows 11.",
+   "text": "La barre est centrée : Démarrer, la recherche, vos applis épinglées, puis l'horloge à droite. Avec deux écrans, chacun a sa barre et son horloge ; les icônes de notification restent sur l'écran principal, comme sous Windows 11. Une fenêtre réduite garde son bouton.\n\nDémarrer montre vos applis épinglées, puis « Toutes les applications » en catégories, en grille ou en liste. Les applis portent les noms de Windows : Calculatrice, Paint, Photos, Lecteur multimédia, Gestionnaire des tâches.\n\nCe qui manque encore\n\nLe champ de recherche et la section Recommandé ne sont pas encore ceux de Windows 11.\n\nDémarrer et certains menus s'ouvrent avec un temps de retard, et leurs animations ne sont pas encore celles de Windows 11.",
    "title": "La barre des tâches et Démarrer",
    "url": "/bureau/#taskbar"
   },
   {
    "id": "desktop:fr:1.0",
    "lang": "fr",
-   "text": "Ceux-ci ont été essayés un par un. Le menu de Win+X s'ouvre aussi d'un clic droit sur Démarrer, sur l'écran où est la souris.\n\nCtrl+Maj+Échap\n\nGestionnaire des tâches\n\nWin+E\n\nExplorateur de fichiers\n\nWin+R\n\nExécuter : control, regedit, et notepad, qui ouvre l'éditeur de texte\n\nWin+X\n\nLiens rapides : applications installées, gestion des disques, terminal, arrêter…\n\nCapture à prendre · win-x\n\nLe menu des liens rapides ouvert par Win+X, au-dessus du bouton Démarrer.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Ceux-ci ont été essayés un par un. Le menu de Win+X s'ouvre aussi d'un clic droit sur Démarrer, sur l'écran où est la souris.\n\nCtrl+Maj+Échap\n\nGestionnaire des tâches\n\nWin+E\n\nExplorateur de fichiers\n\nWin+R\n\nExécuter : control, regedit, et notepad, qui ouvre l'éditeur de texte\n\nWin+X\n\nLiens rapides : applications installées, gestion des disques, terminal, arrêter…",
    "title": "Les raccourcis",
    "url": "/bureau/#keys"
   },
   {
    "id": "desktop:fr:2.0",
    "lang": "fr",
-   "text": "Glissez une fenêtre vers le haut de l'écran : la barre des dispositions apparaît, et une zone pâle montre où la fenêtre va se poser. Lâchez, elle s'y place. Sur un écran de 1920×1080, il y a six dispositions. Sur le bureau, Ctrl et la molette changent la taille des icônes.\n\nCapture à prendre · snap\n\nUne fenêtre glissée vers le haut de l'écran : la barre des dispositions et la zone où elle va se placer.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Glissez une fenêtre vers le haut de l'écran : la barre des dispositions apparaît, et une zone pâle montre où la fenêtre va se poser. Lâchez, elle s'y place. Sur un écran de 1920×1080, il y a six dispositions. Sur le bureau, Ctrl et la molette changent la taille des icônes.",
    "title": "Ranger les fenêtres",
    "url": "/bureau/#windows"
   },
   {
    "id": "desktop:fr:3.0",
    "lang": "fr",
-   "text": "Un clic à droite de la barre ouvre le réseau, le son et, sur un portable, la luminosité. Un clic au milieu d'une tuile l'allume ou l'éteint ; sa flèche ouvre une petite page dans le volet ; un clic droit mène aux Paramètres. Avec un câble branché, la tuile s'appelle Ethernet.\n\nCapture à prendre · quick\n\nLes paramètres rapides ouverts depuis la barre : le réseau et le son, avec la tuile Ethernet du réseau filaire.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Un clic à droite de la barre ouvre le réseau, le son et, sur un portable, la luminosité. Un clic au milieu d'une tuile l'allume ou l'éteint ; sa flèche ouvre une petite page dans le volet ; un clic droit mène aux Paramètres. Avec un câble branché, la tuile s'appelle Ethernet.",
    "title": "Les paramètres rapides",
    "url": "/bureau/#quick"
   },
   {
    "id": "desktop:fr:4.0",
    "lang": "fr",
-   "text": "Les dossiers s'ouvrent en onglets, dans la barre de titre, et la barre d'adresse sert aussi à chercher. Les Propriétés d'un lecteur donnent l'espace utilisé et libre à l'octet près, avec un bouton Nettoyer pour faire de la place.\n\nIl n'y a pas de lettres de lecteur. Dans Ce PC, le disque du système s'appelle Raye, et une partition Windows s'appelle Windows. C'est un choix : une lettre ne dit rien de ce qu'il y a dessus.\n\nCapture à prendre · thispc\n\nCe PC dans l'Explorateur, et la fenêtre Propriétés du lecteur Raye avec l'espace utilisé et libre.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Les dossiers s'ouvrent en onglets, dans la barre de titre, et la barre d'adresse sert aussi à chercher. Les Propriétés d'un lecteur donnent l'espace utilisé et libre à l'octet près, avec un bouton Nettoyer pour faire de la place.\n\nIl n'y a pas de lettres de lecteur. Dans Ce PC, le disque du système s'appelle Raye, et une partition Windows s'appelle Windows. C'est un choix : une lettre ne dit rien de ce qu'il y a dessus.",
    "title": "L'Explorateur de fichiers",
    "url": "/bureau/#explorer"
   },
   {
    "id": "desktop:fr:5.0",
    "lang": "fr",
-   "text": "Ctrl+Maj+Échap l'ouvre sur Processus. Il a aussi Performances, Applications de démarrage, Utilisateurs, Détails et Services, avec les services qui tournent sur votre PC.\n\nCapture à prendre · taskmgr\n\nLe Gestionnaire des tâches sur la page Processus, ouvert avec Ctrl+Maj+Échap.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nLe premier lancement prend plusieurs secondes.\n\nJe n'ai vu les pages autres que Processus que sur un écran virtuel, pas encore dans une session ouverte.\n\n« Exécuter en tant qu'administrateur » ne lance pas un programme qui a une fenêtre, et ne dit rien.\n\nQuatre messages de confirmation restent en anglais dans une session en français.\n\nLa page Utilisateurs n'a pas de bouton « Se déconnecter ».\n\nDémarrer ou arrêter un service depuis la page Services n'a pas encore été essayé jusqu'au bout.",
+   "text": "Ctrl+Maj+Échap l'ouvre sur Processus. Il a aussi Performances, Applications de démarrage, Utilisateurs, Détails et Services, avec les services qui tournent sur votre PC.\n\nCe qui manque encore\n\nLe premier lancement prend plusieurs secondes.\n\nJe n'ai vu les pages autres que Processus que sur un écran virtuel, pas encore dans une session ouverte.\n\n« Exécuter en tant qu'administrateur » ne lance pas un programme qui a une fenêtre, et ne dit rien.\n\nQuatre messages de confirmation restent en anglais dans une session en français.\n\nLa page Utilisateurs n'a pas de bouton « Se déconnecter ».\n\nDémarrer ou arrêter un service depuis la page Services n'a pas encore été essayé jusqu'au bout.",
    "title": "Le Gestionnaire des tâches",
    "url": "/bureau/#taskmgr"
   },
   {
    "id": "desktop:fr:6.0",
    "lang": "fr",
-   "text": "Une seule fenêtre, la liste des catégories à gauche. On y choisit l'écran principal, les mises à jour, les pilotes. Quand une page de Windows n'a pas d'équivalent dans Raye, elle le dit et renvoie au manuel plutôt que de rester vide.\n\nCapture à prendre · settings\n\nLa fenêtre Paramètres sur la page Système, avec la liste des catégories à gauche.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nDans Applications installées, le menu « … » s'affiche transparent.\n\nPlusieurs pages ne sont pas finies.",
+   "text": "Une seule fenêtre, la liste des catégories à gauche. On y choisit l'écran principal, les mises à jour, les pilotes. Quand une page de Windows n'a pas d'équivalent dans Raye, elle le dit et renvoie au manuel plutôt que de rester vide.\n\nCe qui manque encore\n\nDans Applications installées, le menu « … » s'affiche transparent.\n\nPlusieurs pages ne sont pas finies.",
    "title": "Les Paramètres",
    "url": "/bureau/#settings"
   },
   {
    "id": "desktop:fr:7.0",
    "lang": "fr",
-   "text": "Win+R, control : le Panneau de configuration, par catégories. « Changer l'arrière-plan » ouvre la bonne page des Paramètres.\n\nCapture à prendre · control\n\nLe Panneau de configuration ouvert par Win+R puis control, en vue par catégories.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nWin+R, regedit : l'Éditeur du Registre de Raye. Raye n'a pas de registre ; l'éditeur montre ses vrais fichiers de réglages sous la forme d'un arbre, HKEY_CURRENT_USER pour les vôtres, HKEY_LOCAL_MACHINE pour ceux du système. Écrire dans le système demande votre mot de passe, une copie est faite avant chaque écriture, et Édition, Annuler remet le fichier exactement comme il était.\n\nCapture à prendre · regedit\n\nL'Éditeur du Registre de Raye sur une clé, avec l'invite de mot de passe par-dessus avant une écriture système.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nCtrl+Z au clavier ne fait rien encore : passez par le menu Édition.\n\nUne fois votre mot de passe tapé, l'éditeur peut écrire dans le système pendant cinq minutes sans le redemander.\n\nUn fichier de réglages d'une appli de Raye modifié ici n'est plus remplacé par les mises à jour suivantes de cette appli.",
+   "text": "Win+R, control : le Panneau de configuration, par catégories. « Changer l'arrière-plan » ouvre la bonne page des Paramètres.\n\nWin+R, regedit : l'Éditeur du Registre de Raye. Raye n'a pas de registre ; l'éditeur montre ses vrais fichiers de réglages sous la forme d'un arbre, HKEY_CURRENT_USER pour les vôtres, HKEY_LOCAL_MACHINE pour ceux du système. Écrire dans le système demande votre mot de passe, une copie est faite avant chaque écriture, et Édition, Annuler remet le fichier exactement comme il était.\n\nCe qui manque encore\n\nCtrl+Z au clavier ne fait rien encore : passez par le menu Édition.\n\nUne fois votre mot de passe tapé, l'éditeur peut écrire dans le système pendant cinq minutes sans le redemander.\n\nUn fichier de réglages d'une appli de Raye modifié ici n'est plus remplacé par les mises à jour suivantes de cette appli.",
    "title": "Le Panneau de configuration et l'Éditeur du Registre",
    "url": "/bureau/#control"
   },
   {
    "id": "desktop:fr:8.0",
    "lang": "fr",
-   "text": "Créez un événement, fermez la fenêtre : entre deux rappels, aucun programme du Calendrier ne tourne. Le rappel arrive quand même à l'heure, avec « Plus tard » et « Ignorer ». L'horloge de la barre montre les événements du jour. Tout tient dans un seul fichier .ics sur votre PC, qu'on peut importer et exporter.\n\nCapture à prendre · calendar\n\nL'horloge de la barre ouverte sur le mois, et un rappel du Calendrier affiché en notification.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nOn ne peut pas encore glisser un événement, modifier une seule occurrence d'une série, ni afficher les numéros de semaine.\n\nEn anglais, les dates sont encore dans l'ordre français, et les heures des rappels sur 24 heures.",
+   "text": "Créez un événement, fermez la fenêtre : entre deux rappels, aucun programme du Calendrier ne tourne. Le rappel arrive quand même à l'heure, avec « Plus tard » et « Ignorer ». L'horloge de la barre montre les événements du jour. Tout tient dans un seul fichier .ics sur votre PC, qu'on peut importer et exporter.\n\nCe qui manque encore\n\nOn ne peut pas encore glisser un événement, modifier une seule occurrence d'une série, ni afficher les numéros de semaine.\n\nEn anglais, les dates sont encore dans l'ordre français, et les heures des rappels sur 24 heures.",
    "title": "Le Calendrier",
    "url": "/bureau/#calendar"
   },
   {
    "id": "desktop:fr:9.0",
    "lang": "fr",
-   "text": "Les applis de Flathub et celles de Raye, au même endroit. Pendant une installation, vous voyez la progression et pouvez annuler ; ensuite, Ouvrir et Désinstaller. Une appli proposée par deux sources n'apparaît qu'une fois.\n\nCapture à prendre · store\n\nLe Raye Store pendant l'installation d'une appli, avec la progression et le bouton Annuler.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "text": "Les applis de Flathub et celles de Raye, au même endroit. Pendant une installation, vous voyez la progression et pouvez annuler ; ensuite, Ouvrir et Désinstaller. Une appli proposée par deux sources n'apparaît qu'une fois.",
    "title": "Le Raye Store",
    "url": "/bureau/#store"
   },
   {
    "id": "desktop:fr:10.0",
    "lang": "fr",
-   "text": "Le champ du mot de passe s'affiche sur l'écran où est la souris. Arrêter et Redémarrer marchent depuis l'écran de connexion.\n\nCapture à prendre · lock\n\nL'écran de verrouillage de Raye, avec l'heure, la date et le champ du mot de passe.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nL'image de compte n'est pas la même à la connexion et au verrouillage.",
+   "text": "Le champ du mot de passe s'affiche sur l'écran où est la souris. Arrêter et Redémarrer marchent depuis l'écran de connexion.\n\nCe qui manque encore\n\nL'image de compte n'est pas la même à la connexion et au verrouillage.",
    "title": "Le verrouillage et la connexion",
    "url": "/bureau/#lock"
   },
@@ -801,21 +801,21 @@
   {
    "id": "install:en:1.0",
    "lang": "en",
-   "text": "Download the image\n\nOnce the image is out, the Download page gives the file, its checksum and how to check it.\n\nWrite it to the stick\n\nWith Rufus, choose DD image mode when it asks: ISO mode gives a stick that doesn't start. balenaEtcher works too. Everything on the stick will be erased.\n\nStart from the stick\n\nAt power on, often with F12, F11, F8 or Esc. The stick's menu, in English only, starts by default on “Try Raye Linux without installing”: a trial session that doesn't touch the disk. The “Install Raye Linux” icon is on the desktop and at the top of Start, and opens the installer full screen. On the line below in the menu, “Install Raye Linux” opens it directly; “Safe graphics” helps when the screen stays black.\n\nScreenshot to take · try-raye\n\nRaye's trial session, started from the USB stick: the desktop with the Install Raye Linux icon on it.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "Download the image\n\nOnce the image is out, the Download page gives the file, its checksum and how to check it.\n\nWrite it to the stick\n\nWith Rufus, choose DD image mode when it asks: ISO mode gives a stick that doesn't start. balenaEtcher works too. Everything on the stick will be erased.\n\nStart from the stick\n\nAt power on, often with F12, F11, F8 or Esc. The stick's menu, in English only, starts by default on “Try Raye Linux without installing”: a trial session that doesn't touch the disk. The “Install Raye Linux” icon is on the desktop and at the top of Start, and opens the installer full screen. On the line below in the menu, “Install Raye Linux” opens it directly; “Safe graphics” helps when the screen stays black.",
    "title": "The USB stick",
    "url": "/en/install/#usb"
   },
   {
    "id": "install:en:2.0",
    "lang": "en",
-   "text": "Region\n\nEnglish or French, the time zone, then the keyboard layout.\n\nNetwork\n\nThe page follows your connection live: a plugged-in cable shows up right away.\n\nDisk\n\nFour choices: erase the disk, install alongside Windows by shrinking its partition, use the free space, or replace a partition. The “Encrypt the Raye system” box is on the same page: ticked, it has you pick a disk password. With a TPM chip, you won't have to type it at startup.\n\nAccount\n\nThe PC's name, then your name and your password. The Raye account page can be skipped with “Use a local account instead”.\n\nPrivacy\n\nLocation and usage statistics, which you can change later in Settings.\n\nInstall\n\n“Ready to install” says everything that will happen, with a red banner if anything is going to be erased.\n\nScreenshot to take · setup-disk\n\nThe installer's Disk page on “Install alongside Windows”, with the slider that splits the disk.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nRight before writing, the installer reads the disk again. If anything changed since you chose, it stops instead of carrying on.\n\nScreenshot to take · setup-summary\n\nThe installer's “Ready to install” summary, with the red banner that says what will be erased.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "Region\n\nEnglish or French, the time zone, then the keyboard layout.\n\nNetwork\n\nThe page follows your connection live: a plugged-in cable shows up right away.\n\nDisk\n\nFour choices: erase the disk, install alongside Windows by shrinking its partition, use the free space, or replace a partition. The “Encrypt the Raye system” box is on the same page: ticked, it has you pick a disk password. With a TPM chip, you won't have to type it at startup.\n\nAccount\n\nThe PC's name, then your name and your password. The Raye account page can be skipped with “Use a local account instead”.\n\nPrivacy\n\nLocation and usage statistics, which you can change later in Settings.\n\nInstall\n\n“Ready to install” says everything that will happen, with a red banner if anything is going to be erased.\n\nRight before writing, the installer reads the disk again. If anything changed since you chose, it stops instead of carrying on.",
    "title": "The installer, step by step",
    "url": "/en/install/#pages"
   },
   {
    "id": "install:en:3.0",
    "lang": "en",
-   "text": "“Install alongside Windows” shrinks the Windows partition to make room, and both systems share the startup partition. At startup, a menu offers Raye Linux and Windows for 10 seconds. From Raye, “Restart to Windows” in Start restarts straight into Windows, once.\n\nScreenshot to take · boot-menu\n\nThe startup menu with two choices, Raye Linux and Windows, and the countdown.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nI proved it on a test Windows partition, in the test machine: 50 GB shrunk to 23 GB, and every Windows file identical before and after. Not yet on a real Windows shrunk and then restarted. Back up first.\n\nThe startup menu still shows “Raye Linux GNU/Linux” instead of “Raye Linux”.\n\nOn a PC in the old BIOS mode, I saw the stick start up to the installer, not a full install: see the Older PCs page.",
+   "text": "“Install alongside Windows” shrinks the Windows partition to make room, and both systems share the startup partition. At startup, a menu offers Raye Linux and Windows for 10 seconds. From Raye, “Restart to Windows” in Start restarts straight into Windows, once.\n\nWhat is still missing\n\nI proved it on a test Windows partition, in the test machine: 50 GB shrunk to 23 GB, and every Windows file identical before and after. Not yet on a real Windows shrunk and then restarted. Back up first.\n\nThe startup menu still shows “Raye Linux GNU/Linux” instead of “Raye Linux”.\n\nOn a PC in the old BIOS mode, I saw the stick start up to the installer, not a full install: see the Older PCs page.",
    "title": "Keeping Windows alongside",
    "url": "/en/install/#alongside"
   },
@@ -829,7 +829,7 @@
   {
    "id": "install:en:5.0",
    "lang": "en",
-   "text": "Raye's kernel is signed with a Raye key. For Secure Boot to accept it, that key has to be enrolled once, and it's your PC's firmware that asks, on a blue screen at restart, not Raye. Before restarting, Raye shows you a six-digit code to remember.\n\nPress a key\n\nYou have about 10 seconds at the blue screen to press a key.\n\nChoose Enroll MOK\n\nThen Continue, then Yes.\n\nType the code\n\nThe six-digit code Raye showed you, then Reboot.\n\nScreenshot to take · enroll-key\n\nThe blue startup screen where Raye's key is enrolled: the “Enroll MOK” list and the six-digit code field.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nIf you miss the blue screen, no harm done: the PC starts as before, with the base system's kernel, and Raye will ask again. Without Secure Boot, there is no blue screen.\n\nWhat is still missing\n\nI saw it work in the test machine, with Secure Boot and a virtual TPM chip: blue screen missed, then blue screen done, then start on Raye's kernel. Not yet on a real PC.\n\nThe trial USB stick keeps the original signed kernel: nothing is enrolled just to try Raye.",
+   "text": "Raye's kernel is signed with a Raye key. For Secure Boot to accept it, that key has to be enrolled once, and it's your PC's firmware that asks, on a blue screen at restart, not Raye. Before restarting, Raye shows you a six-digit code to remember.\n\nPress a key\n\nYou have about 10 seconds at the blue screen to press a key.\n\nChoose Enroll MOK\n\nThen Continue, then Yes.\n\nType the code\n\nThe six-digit code Raye showed you, then Reboot.\n\nIf you miss the blue screen, no harm done: the PC starts as before, with the base system's kernel, and Raye will ask again. Without Secure Boot, there is no blue screen.\n\nWhat is still missing\n\nI saw it work in the test machine, with Secure Boot and a virtual TPM chip: blue screen missed, then blue screen done, then start on Raye's kernel. Not yet on a real PC.\n\nThe trial USB stick keeps the original signed kernel: nothing is enrolled just to try Raye.",
    "title": "Raye's key and the blue screen",
    "url": "/en/install/#key"
   },
@@ -878,14 +878,14 @@
   {
    "id": "windows:en:0.0",
    "lang": "en",
-   "text": "Double-click an .exe or .msi file: it opens. There is nothing to install first, and no question. The program's installer does its job and adds an entry to the Start menu, and the program then starts from there like a Raye app.\n\nScreenshot to take · exe-setup\n\nThe installer of a Windows program opened by double-clicking its .exe file, halfway through.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nEvery program gets its own space, so one that misbehaves doesn't break the others. That space is prepared in the background about two minutes after your first sign-in, and again after some updates: 26 seconds of work, using up to 3 GB of memory meanwhile, measured on the test machine.\n\nScreenshot to take · exe-start\n\nThe same Windows program in the Start menu after it installed, then open on the desktop.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "Double-click an .exe or .msi file: it opens. There is nothing to install first, and no question. The program's installer does its job and adds an entry to the Start menu, and the program then starts from there like a Raye app.\n\nEvery program gets its own space, so one that misbehaves doesn't break the others. That space is prepared in the background about two minutes after your first sign-in, and again after some updates: 26 seconds of work, using up to 3 GB of memory meanwhile, measured on the test machine.",
    "title": "A double-click",
    "url": "/en/windows-programs/#double-click"
   },
   {
    "id": "windows:en:1.0",
    "lang": "en",
-   "text": "Some programs also exist for Raye, such as Discord or Steam. If you double-click their Windows installer, Raye offers you that version instead, made for Raye, which doesn't need the Windows layer.\n\nScreenshot to take · exe-native\n\nRaye offering the Raye version of a program when its Windows installer is double-clicked.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "Some programs also exist for Raye, such as Discord or Steam. If you double-click their Windows installer, Raye offers you that version instead, made for Raye, which doesn't need the Windows layer.",
    "title": "When there is a Raye version",
    "url": "/en/windows-programs/#native"
   },
@@ -913,7 +913,7 @@
   {
    "id": "games:en:0.0",
    "lang": "en",
-   "text": "Steam is in the Raye Store. Raye installs it as a Raye package (APT) rather than Flatpak; if you already had it as Flatpak, Raye moves it once, with your games and settings, and tells you at sign-in. Steam sees your other drives: whatever is mounted under /media, /run/media and /mnt is offered when you add a library folder.\n\nScreenshot to take · steam-store\n\nSteam's page in the Raye Store, with the package format row and the Install button.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nGame Mode turns on by itself while you play. Heroic, for other publishers' stores, is also in the Store.\n\nWhat is still missing\n\nOn an NVIDIA card, Steam that opens and then shows nothing was reported. I fixed what I found, without being able to try it without an NVIDIA card: if it happens to you, tell me.",
+   "text": "Steam is in the Raye Store. Raye installs it as a Raye package (APT) rather than Flatpak; if you already had it as Flatpak, Raye moves it once, with your games and settings, and tells you at sign-in. Steam sees your other drives: whatever is mounted under /media, /run/media and /mnt is offered when you add a library folder.\n\nGame Mode turns on by itself while you play. Heroic, for other publishers' stores, is also in the Store.\n\nWhat is still missing\n\nOn an NVIDIA card, Steam that opens and then shows nothing was reported. I fixed what I found, without being able to try it without an NVIDIA card: if it happens to you, tell me.",
    "title": "Steam",
    "url": "/en/games/#steam"
   },
@@ -948,14 +948,14 @@
   {
    "id": "updates:en:0.0",
    "lang": "en",
-   "text": "What waits for the restart is what the system keeps loaded while it runs: the kernel, drivers, firmware, the core pieces of the system and the desktop itself. An update of that kind carries the label “Restart required”. The rest installs as soon as it's downloaded, with nothing for you to do.\n\nSecurity fixes are the exception: they install right away, even for those pieces.\n\nScreenshot to take · update-live\n\nRaye Update in Settings: updates already installed and a single one marked “Restart required”.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "What waits for the restart is what the system keeps loaded while it runs: the kernel, drivers, firmware, the core pieces of the system and the desktop itself. An update of that kind carries the label “Restart required”. The rest installs as soon as it's downloaded, with nothing for you to do.\n\nSecurity fixes are the exception: they install right away, even for those pieces.",
    "title": "What installs right away, what waits",
    "url": "/en/updates/#live"
   },
   {
    "id": "updates:en:1.0",
    "lang": "en",
-   "text": "What waits installs when you choose “Update and restart”, in Start, in the notification or in Settings. An ordinary restart installs nothing, and Raye doesn't restart on its own unless you asked it to outside your active hours. While it installs, the Raye picture shows a ring and “Installing updates” with the percentage. For the desktop theme, 24 s passed between the startup picture and the sign-in screen on the test machine.\n\nScreenshot to take · update-boot\n\nThe restart screen: the Raye eye, the ring and “Installing updates” with the percentage.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nWhen a second update of the same package is waiting, the “Restart required” notification doesn't come back.\n\nThe lock screen and Ctrl+Alt+Del don't offer “Update and restart” yet.",
+   "text": "What waits installs when you choose “Update and restart”, in Start, in the notification or in Settings. An ordinary restart installs nothing, and Raye doesn't restart on its own unless you asked it to outside your active hours. While it installs, the Raye picture shows a ring and “Installing updates” with the percentage. For the desktop theme, 24 s passed between the startup picture and the sign-in screen on the test machine.\n\nWhat is still missing\n\nWhen a second update of the same package is waiting, the “Restart required” notification doesn't come back.\n\nThe lock screen and Ctrl+Alt+Del don't offer “Update and restart” yet.",
    "title": "The restart",
    "url": "/en/updates/#restart"
   },
@@ -969,7 +969,7 @@
   {
    "id": "updates:en:3.0",
    "lang": "en",
-   "text": "Before and after every update, Raye takes a restore point of the system, and the oldest go by themselves. You can also make one in Settings, Recovery.\n\nScreenshot to take · restore\n\nRestore points with the “Before updates” and “After updates” pair.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nGoing back to the “Before updates” point reinstalls the same updates at the next start: don't count on it yet to undo an update.\n\nA point made by hand can be deleted, with no warning, by those of the following updates.\n\nA restore point keeps the system, not your personal files. Back them up separately.\n\nYou can't yet start from an earlier state through the startup menu.",
+   "text": "Before and after every update, Raye takes a restore point of the system, and the oldest go by themselves. You can also make one in Settings, Recovery.\n\nWhat is still missing\n\nGoing back to the “Before updates” point reinstalls the same updates at the next start: don't count on it yet to undo an update.\n\nA point made by hand can be deleted, with no warning, by those of the following updates.\n\nA restore point keeps the system, not your personal files. Back them up separately.\n\nYou can't yet start from an earlier state through the startup menu.",
    "title": "Restore points",
    "url": "/en/updates/#restore"
   },
@@ -990,21 +990,21 @@
   {
    "id": "security:en:1.0",
    "lang": "en",
-   "text": "If you tick “Encrypt the Raye system” on the installer's Disk page, you pick a disk password, and the whole system is encrypted. Taken out of the PC and plugged in elsewhere, the disk can't be read without that password or the recovery key.\n\nScreenshot to take · setup-encrypt\n\nThe installer's Disk page, “Encrypt the Raye system” ticked, with the two disk password fields.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nOn a PC with a TPM chip, the chip opens the disk at startup. On that PC, your account password is therefore what protects your files, as with BitLocker. The chip only watches the Secure Boot settings: if they change, or the disk is put in another PC, Raye asks for the disk password again. Other changes in the startup don't ask for it. Without a TPM chip, the disk password is asked at every startup.\n\nI tried it once on the test machine: a firmware update that revokes old startup keys, and the disk opened by itself afterwards. If an update of that kind installs along with others at a restart, you may be asked for the recovery key once.",
+   "text": "If you tick “Encrypt the Raye system” on the installer's Disk page, you pick a disk password, and the whole system is encrypted. Taken out of the PC and plugged in elsewhere, the disk can't be read without that password or the recovery key.\n\nOn a PC with a TPM chip, the chip opens the disk at startup. On that PC, your account password is therefore what protects your files, as with BitLocker. The chip only watches the Secure Boot settings: if they change, or the disk is put in another PC, Raye asks for the disk password again. Other changes in the startup don't ask for it. Without a TPM chip, the disk password is asked at every startup.\n\nI tried it once on the test machine: a firmware update that revokes old startup keys, and the disk opened by itself afterwards. If an update of that kind installs along with others at a restart, you may be asked for the recovery key once.",
    "title": "The encrypted disk",
    "url": "/en/security/#encryption"
   },
   {
    "id": "security:en:2.0",
    "lang": "en",
-   "text": "At your first sign-in, a window shows a recovery key: eight groups of six digits. It opens the disk if you forget its password. Copy it, write it down on paper or in a password manager, keep it somewhere other than the computer, then confirm with “I saved my key”.\n\nScreenshot to take · recovery-key\n\nThe recovery key window at the first sign-in, the key itself blurred.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "At your first sign-in, a window shows a recovery key: eight groups of six digits. It opens the disk if you forget its password. Copy it, write it down on paper or in a password manager, keep it somewhere other than the computer, then confirm with “I saved my key”.",
    "title": "The recovery key",
    "url": "/en/security/#recovery"
   },
   {
    "id": "security:en:3.0",
    "lang": "en",
-   "text": "When an app wants to change the system, the screen dims and Raye asks for your password, with the publisher's name, as in Windows 11. The prompt doesn't time out: on a standard account, you have time to go and ask the PC's administrator for the password. Updates, on the other hand, install without asking for it.\n\nScreenshot to take · uac\n\nThe password prompt: the dimmed screen, “Verified publisher: Raye Linux”, Yes and No.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nThe prompt sometimes names the technical program rather than the app asking.\n\nYou can't encrypt or decrypt the disk once Raye is installed yet: it's a choice made when installing.",
+   "text": "When an app wants to change the system, the screen dims and Raye asks for your password, with the publisher's name, as in Windows 11. The prompt doesn't time out: on a standard account, you have time to go and ask the PC's administrator for the password. Updates, on the other hand, install without asking for it.\n\nWhat is still missing\n\nThe prompt sometimes names the technical program rather than the app asking.\n\nYou can't encrypt or decrypt the disk once Raye is installed yet: it's a choice made when installing.",
    "title": "The password before an app changes the system",
    "url": "/en/security/#prompt"
   },
@@ -1046,7 +1046,7 @@
   {
    "id": "desktops:en:0.0",
    "lang": "en",
-   "text": "Raye's desktop keeps the Windows 11 layout: centered taskbar, Start, windows you drag and snap. It's the one you get after installing.\n\nHyprland is a desktop where windows line up side by side without you placing them, and where you do almost everything with the keyboard. It's for people who already know it, or want to learn it. Raye gives it its bar, its theme and its apps, and the installer offers Hyprland if you want it.\n\nScreenshot to take · desktop-choice\n\nSettings, Desktop environment page: the two cards, Raye's desktop and Hyprland, with the one in use marked.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nYou choose in Settings > Personalization > Desktop environment, or on the sign-in screen, with the Desktop button at the bottom right. Switching reopens File Explorer and Settings on the new desktop.\n\nScreenshot to take · hypr-session\n\nRaye's Hyprland session: windows tiled side by side, and Raye's bar at the top with the clock.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "Raye's desktop keeps the Windows 11 layout: centered taskbar, Start, windows you drag and snap. It's the one you get after installing.\n\nHyprland is a desktop where windows line up side by side without you placing them, and where you do almost everything with the keyboard. It's for people who already know it, or want to learn it. Raye gives it its bar, its theme and its apps, and the installer offers Hyprland if you want it.\n\nYou choose in Settings > Personalization > Desktop environment, or on the sign-in screen, with the Desktop button at the bottom right. Switching reopens File Explorer and Settings on the new desktop.",
    "title": "Choosing",
    "url": "/en/two-desktops/#choose"
   },
@@ -1074,77 +1074,77 @@
   {
    "id": "desktop:en:0.0",
    "lang": "en",
-   "text": "The taskbar is centered: Start, search, your pinned apps, then the clock on the right. With two screens each one gets its own taskbar and clock; the notification icons stay on the main screen, as in Windows 11. A minimized window keeps its button.\n\nStart shows your pinned apps, then “All apps” as categories, a grid or a list. The apps carry their Windows names: Calculator, Paint, Photos, Media Player, Task Manager.\n\nScreenshot to take · start-all\n\nThe Start menu on All apps, sorted into categories.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nThe search field and the Recommended section are not yet the Windows 11 ones.\n\nStart and some menus open with a lag, and their animations are not yet the Windows 11 ones.",
+   "text": "The taskbar is centered: Start, search, your pinned apps, then the clock on the right. With two screens each one gets its own taskbar and clock; the notification icons stay on the main screen, as in Windows 11. A minimized window keeps its button.\n\nStart shows your pinned apps, then “All apps” as categories, a grid or a list. The apps carry their Windows names: Calculator, Paint, Photos, Media Player, Task Manager.\n\nWhat is still missing\n\nThe search field and the Recommended section are not yet the Windows 11 ones.\n\nStart and some menus open with a lag, and their animations are not yet the Windows 11 ones.",
    "title": "The taskbar and Start",
    "url": "/en/desktop/#taskbar"
   },
   {
    "id": "desktop:en:1.0",
    "lang": "en",
-   "text": "These were tried one by one. The Win+X menu also opens with a right-click on Start, on the screen where the mouse is.\n\nCtrl+Shift+Esc\n\nTask Manager\n\nWin+E\n\nFile Explorer\n\nWin+R\n\nRun: control, regedit, and notepad, which opens the text editor\n\nWin+X\n\nQuick links: installed apps, disk management, terminal, shut down…\n\nScreenshot to take · win-x\n\nThe quick links menu opened by Win+X, above the Start button.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "These were tried one by one. The Win+X menu also opens with a right-click on Start, on the screen where the mouse is.\n\nCtrl+Shift+Esc\n\nTask Manager\n\nWin+E\n\nFile Explorer\n\nWin+R\n\nRun: control, regedit, and notepad, which opens the text editor\n\nWin+X\n\nQuick links: installed apps, disk management, terminal, shut down…",
    "title": "The shortcuts",
    "url": "/en/desktop/#keys"
   },
   {
    "id": "desktop:en:2.0",
    "lang": "en",
-   "text": "Drag a window to the top of the screen: the layout bar shows up, and a pale area shows where the window will land. Let go and it snaps there. A 1920×1080 screen gets six layouts. On the desktop, Ctrl and the mouse wheel change the icon size.\n\nScreenshot to take · snap\n\nA window dragged to the top of the screen: the layout bar and the area where it will land.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "Drag a window to the top of the screen: the layout bar shows up, and a pale area shows where the window will land. Let go and it snaps there. A 1920×1080 screen gets six layouts. On the desktop, Ctrl and the mouse wheel change the icon size.",
    "title": "Arranging windows",
    "url": "/en/desktop/#windows"
   },
   {
    "id": "desktop:en:3.0",
    "lang": "en",
-   "text": "A click on the right of the taskbar opens network, sound and, on a laptop, brightness. A click in the middle of a tile turns it on or off; its arrow opens a small page in the panel; a right-click leads to Settings. With a cable plugged in, the tile is called Ethernet.\n\nScreenshot to take · quick\n\nQuick settings opened from the taskbar: network and sound, with the Ethernet tile of the wired network.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "A click on the right of the taskbar opens network, sound and, on a laptop, brightness. A click in the middle of a tile turns it on or off; its arrow opens a small page in the panel; a right-click leads to Settings. With a cable plugged in, the tile is called Ethernet.",
    "title": "Quick settings",
    "url": "/en/desktop/#quick"
   },
   {
    "id": "desktop:en:4.0",
    "lang": "en",
-   "text": "Folders open in tabs, in the title bar, and the address bar also searches. A drive's Properties give the used and free space to the byte, with a Clean up button to make room.\n\nThere are no drive letters. In This PC the system disk is called Raye, and a Windows partition is called Windows. It's a choice: a letter says nothing about what's on the drive.\n\nScreenshot to take · thispc\n\nThis PC in File Explorer, and the Properties window of the Raye drive with the used and free space.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "Folders open in tabs, in the title bar, and the address bar also searches. A drive's Properties give the used and free space to the byte, with a Clean up button to make room.\n\nThere are no drive letters. In This PC the system disk is called Raye, and a Windows partition is called Windows. It's a choice: a letter says nothing about what's on the drive.",
    "title": "File Explorer",
    "url": "/en/desktop/#explorer"
   },
   {
    "id": "desktop:en:5.0",
    "lang": "en",
-   "text": "Ctrl+Shift+Esc opens it on Processes. It also has Performance, Startup apps, Users, Details and Services, with the services running on your PC.\n\nScreenshot to take · taskmgr\n\nTask Manager on the Processes page, opened with Ctrl+Shift+Esc.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nThe first start takes several seconds.\n\nI have only seen the pages other than Processes on a virtual screen, not yet in a signed-in session.\n\n“Run as administrator” doesn't start a program that has a window, and says nothing.\n\nFour confirmation messages stay in English in a French session.\n\nThe Users page has no “Sign out” button.\n\nStarting or stopping a service from the Services page has not been tried all the way yet.",
+   "text": "Ctrl+Shift+Esc opens it on Processes. It also has Performance, Startup apps, Users, Details and Services, with the services running on your PC.\n\nWhat is still missing\n\nThe first start takes several seconds.\n\nI have only seen the pages other than Processes on a virtual screen, not yet in a signed-in session.\n\n“Run as administrator” doesn't start a program that has a window, and says nothing.\n\nFour confirmation messages stay in English in a French session.\n\nThe Users page has no “Sign out” button.\n\nStarting or stopping a service from the Services page has not been tried all the way yet.",
    "title": "Task Manager",
    "url": "/en/desktop/#taskmgr"
   },
   {
    "id": "desktop:en:6.0",
    "lang": "en",
-   "text": "One window, the list of categories on the left. That's where you pick the main screen, updates, drivers. When a Windows page has no counterpart in Raye, it says so and points to the handbook instead of staying empty.\n\nScreenshot to take · settings\n\nThe Settings window on the System page, with the list of categories on the left.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nIn Installed apps, the “…” menu shows up see-through.\n\nSeveral pages are not finished.",
+   "text": "One window, the list of categories on the left. That's where you pick the main screen, updates, drivers. When a Windows page has no counterpart in Raye, it says so and points to the handbook instead of staying empty.\n\nWhat is still missing\n\nIn Installed apps, the “…” menu shows up see-through.\n\nSeveral pages are not finished.",
    "title": "Settings",
    "url": "/en/desktop/#settings"
   },
   {
    "id": "desktop:en:7.0",
    "lang": "en",
-   "text": "Win+R, control: Control Panel, by category. “Change the background” opens the right page of Settings.\n\nScreenshot to take · control\n\nControl Panel opened with Win+R then control, in the category view.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWin+R, regedit: the Raye Registry Editor. Raye has no registry; the editor shows its real settings files as a tree, HKEY_CURRENT_USER for yours, HKEY_LOCAL_MACHINE for the system's. Writing to the system asks for your password, a copy is made before every write, and Edit, Undo puts the file back exactly as it was.\n\nScreenshot to take · regedit\n\nThe Raye Registry Editor on a key, with the password prompt on top before a system write.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nCtrl+Z does nothing yet: use the Edit menu.\n\nOnce you've typed your password, the editor can write to the system for five minutes without asking again.\n\nA settings file of a Raye app changed here is no longer replaced by that app's later updates.",
+   "text": "Win+R, control: Control Panel, by category. “Change the background” opens the right page of Settings.\n\nWin+R, regedit: the Raye Registry Editor. Raye has no registry; the editor shows its real settings files as a tree, HKEY_CURRENT_USER for yours, HKEY_LOCAL_MACHINE for the system's. Writing to the system asks for your password, a copy is made before every write, and Edit, Undo puts the file back exactly as it was.\n\nWhat is still missing\n\nCtrl+Z does nothing yet: use the Edit menu.\n\nOnce you've typed your password, the editor can write to the system for five minutes without asking again.\n\nA settings file of a Raye app changed here is no longer replaced by that app's later updates.",
    "title": "Control Panel and the Registry Editor",
    "url": "/en/desktop/#control"
   },
   {
    "id": "desktop:en:8.0",
    "lang": "en",
-   "text": "Create an event, close the window: between two reminders, no Calendar program is running. The reminder still arrives on time, with “Later” and “Dismiss”. The taskbar clock shows the day's events. Everything lives in one .ics file on your PC, which you can import and export.\n\nScreenshot to take · calendar\n\nThe taskbar clock opened on the month, and a Calendar reminder shown as a notification.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nYou can't drag an event yet, change a single occurrence of a series, or show week numbers.\n\nIn English, dates are still in the French order, and reminder times on a 24-hour clock.",
+   "text": "Create an event, close the window: between two reminders, no Calendar program is running. The reminder still arrives on time, with “Later” and “Dismiss”. The taskbar clock shows the day's events. Everything lives in one .ics file on your PC, which you can import and export.\n\nWhat is still missing\n\nYou can't drag an event yet, change a single occurrence of a series, or show week numbers.\n\nIn English, dates are still in the French order, and reminder times on a 24-hour clock.",
    "title": "Calendar",
    "url": "/en/desktop/#calendar"
   },
   {
    "id": "desktop:en:9.0",
    "lang": "en",
-   "text": "Apps from Flathub and Raye's own, in one place. While an app installs you see the progress and can cancel; afterwards, Open and Uninstall. An app offered by two sources shows up once.\n\nScreenshot to take · store\n\nThe Raye Store while an app installs, with the progress and the Cancel button.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "text": "Apps from Flathub and Raye's own, in one place. While an app installs you see the progress and can cancel; afterwards, Open and Uninstall. An app offered by two sources shows up once.",
    "title": "The Raye Store",
    "url": "/en/desktop/#store"
   },
   {
    "id": "desktop:en:10.0",
    "lang": "en",
-   "text": "The password field shows on the screen where the mouse is. Shut down and Restart work from the sign-in screen.\n\nScreenshot to take · lock\n\nThe Raye lock screen, with the time, the date and the password field.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nThe account picture is not the same at sign-in and on the lock screen.",
+   "text": "The password field shows on the screen where the mouse is. Shut down and Restart work from the sign-in screen.\n\nWhat is still missing\n\nThe account picture is not the same at sign-in and on the lock screen.",
    "title": "Lock and sign-in",
    "url": "/en/desktop/#lock"
   },
@@ -2365,8 +2365,8 @@
  "sources": {
   "1.0-beta/release-notes-1.0-beta.fr.md": "2bf6d9d7b93d1bd3",
   "1.0-beta/release-notes-1.0-beta.md": "8e317bfec331ba3c",
-  "bureau/index.html": "611fe2a63fa55d6e",
-  "deux-bureaux/index.html": "59c253b77387647e",
+  "bureau/index.html": "4e4a7f7790bce2d4",
+  "deux-bureaux/index.html": "438142e0df215099",
   "discord/texts.py": "5bff52e13c468251",
   "en/01-installing.md": "395684ff312893d0",
   "en/02-first-steps.md": "327774439b2c0c38",
@@ -2380,18 +2380,18 @@
   "en/10-for-developers.md": "53a32eb41ce34dbd",
   "en/11-chromebooks.md": "0b0a8099e4fe5196",
   "en/12-hyprland.md": "f62a6125c1c73390",
-  "en/desktop/index.html": "ff880fb0e516ce11",
+  "en/desktop/index.html": "9b3a5bdd9b9000a7",
   "en/download/index.html": "3e798e89726a58f2",
-  "en/games/index.html": "a04950210177ff3e",
+  "en/games/index.html": "5ae6623b0d412090",
   "en/hardware/index.html": "03aa1d919ba84c5e",
-  "en/install/index.html": "b9d569914e2bec55",
+  "en/install/index.html": "95cec68fd31f4b9a",
   "en/old-pcs/index.html": "42330469d9d7a5b9",
   "en/questions/index.html": "e101527c62f1e21b",
-  "en/security/index.html": "eadcdb7a9f0c1098",
-  "en/two-desktops/index.html": "5e60bb4138c0d3f4",
-  "en/updates/index.html": "1b427b1cc3456b28",
+  "en/security/index.html": "39dea7353a8e5194",
+  "en/two-desktops/index.html": "627128c4cf2debeb",
+  "en/updates/index.html": "5dc2e7a310f66b3e",
   "en/whats-new/index.html": "a95ab10d8c26c445",
-  "en/windows-programs/index.html": "70f8261f7bcef939",
+  "en/windows-programs/index.html": "7e2cbccfe3ac6c32",
   "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
@@ -2404,14 +2404,14 @@
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
   "fr/11-chromebooks.md": "655c79fe7f20dfb5",
   "fr/12-hyprland.md": "50124c843b13d09d",
-  "installer/index.html": "3a102ef8e666e04c",
-  "jeux/index.html": "28d0da016d6ce3d2",
+  "installer/index.html": "e6cf900a73974a6b",
+  "jeux/index.html": "4ec201c6a039d731",
   "materiel/index.html": "e495aeb668b52a4a",
-  "mises-a-jour/index.html": "2a425f5a27798c5e",
+  "mises-a-jour/index.html": "38e0bd9875344c56",
   "nouveautes/index.html": "0f6e7f1717e94a5a",
-  "programmes-windows/index.html": "eb9153738af5209f",
+  "programmes-windows/index.html": "c725fcb0c9e2246a",
   "questions/index.html": "08be06913df547da",
-  "securite/index.html": "3d658dc59a4ffb86",
+  "securite/index.html": "c23e54f6dcc97449",
   "telecharger/index.html": "e31f1ba3671971fc",
   "vieux-pc/index.html": "8ca390b8ec671d24"
  }

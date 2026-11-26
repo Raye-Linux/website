@@ -82,33 +82,15 @@
 <p>Raye démarre avec Secure Boot activé et les clés que la plupart des PC ont d'usine : sur la machine de test, je n'ai rien eu à changer dans le micrologiciel. Certains PC, souvent vendus comme « Secured-core », n'acceptent d'office que Windows ; il faut alors autoriser, dans les réglages du micrologiciel, les clés dites « tierces » (third-party). Si votre PC refuse quand même de démarrer Raye, écrivez-moi son modèle.</p>
 <h2 id="encryption">Le disque chiffré</h2>
 <p>Si vous cochez « Chiffrer le système Raye » sur la page Disque de l'installateur, vous choisissez un mot de passe du disque, et tout le système est chiffré. Retiré du PC et branché ailleurs, le disque ne se lit pas sans ce mot de passe ou la clé de récupération.</p>
-<figure class="shot">
-<div class="shot-todo" data-shot="setup-encrypt">
-<p class="todo-label">Capture à prendre · <code>setup-encrypt</code></p>
-<p class="todo-what">La page Disque de l'installateur, case « Chiffrer le système Raye » cochée, avec les deux champs du mot de passe du disque.</p>
-<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
-</div>
-</figure>
+
 <p>Sur un PC qui a une puce TPM, c'est elle qui ouvre le disque au démarrage. Sur ce PC-là, c'est donc le mot de passe de votre compte qui protège vos fichiers, comme avec BitLocker. La puce ne surveille que les réglages de Secure Boot : s'ils changent, ou si le disque est mis dans un autre PC, Raye redemande le mot de passe du disque. D'autres changements dans le démarrage ne le redemandent pas. Sans puce TPM, le mot de passe du disque est demandé à chaque démarrage.</p>
 <p>Je l'ai essayé une fois sur la machine de test : une mise à jour du micrologiciel qui révoque d'anciennes clés de démarrage, et le disque s'est ouvert seul après. Si une mise à jour de ce genre s'installe avec d'autres au redémarrage, la clé de récupération peut vous être demandée une fois.</p>
 <h2 id="recovery">La clé de récupération</h2>
 <p>À la première connexion, une fenêtre montre une clé de récupération : huit groupes de six chiffres. Elle ouvre le disque si vous oubliez son mot de passe. Copiez-la, notez-la sur papier ou dans un gestionnaire de mots de passe, gardez-la ailleurs que sur l'ordinateur, puis confirmez avec « J'ai enregistré ma clé ».</p>
-<figure class="shot">
-<div class="shot-todo" data-shot="recovery-key">
-<p class="todo-label">Capture à prendre · <code>recovery-key</code></p>
-<p class="todo-what">La fenêtre de la clé de récupération à la première connexion, la clé elle-même floutée.</p>
-<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
-</div>
-</figure>
+
 <h2 id="prompt">Le mot de passe avant qu'une appli change le système</h2>
 <p>Quand une appli veut modifier le système, l'écran s'assombrit et Raye demande votre mot de passe, avec le nom de l'éditeur, comme sous Windows 11. L'invite n'expire pas : sur un compte standard, vous avez le temps d'aller demander le mot de passe à l'administrateur du PC. Les mises à jour, elles, s'installent sans le demander.</p>
-<figure class="shot">
-<div class="shot-todo" data-shot="uac">
-<p class="todo-label">Capture à prendre · <code>uac</code></p>
-<p class="todo-what">L'invite de mot de passe : l'écran assombri, « Éditeur vérifié : Raye Linux », Oui et Non.</p>
-<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
-</div>
-</figure>
+
 <aside class="limits" aria-labelledby="limits-prompt prompt">
 <p class="limits-title" id="limits-prompt">Ce qui manque encore</p>
 <ul>

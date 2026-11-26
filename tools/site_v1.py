@@ -41,6 +41,7 @@ class Site:
         self.b = builder
         self.root = builder.ROOT if builder.V1_LIVE else os.path.join(REPO, "site-v1")
         self.download_live = builder.DOWNLOAD_LIVE
+        self.live = builder.V1_LIVE
 
     # ---------------------------------------------------------- text
 
@@ -201,6 +202,9 @@ class Site:
                     f'{base}-1600.webp 1600w" sizes="{sizes}">\n'
                     f'<img src="{base}-1600.jpg" alt="{alt}" width="1600" height="900" '
                     f'{load} decoding="async">\n</picture>\n</a>\n</figure>')
+        if self.live:
+            # online, a picture not taken yet is left out, never shown as a to-do box
+            return ""
         note = ui["shot_note"].format(v=V.VERSION)
         return (f'<figure class="{cls}">\n<div class="shot-todo" data-shot="{shot_id}">\n'
                 f'<p class="todo-label">{ui["shot_todo"]} · <code>{shot_id}</code></p>\n'

@@ -82,33 +82,15 @@
 <p>Raye starts with Secure Boot turned on and the keys most PCs ship with: on the test machine, I didn't have to change anything in the firmware. Some PCs, often sold as “Secured-core”, only accept Windows out of the box; you then have to allow the so-called “third-party” keys in the firmware settings. If your PC still refuses to start Raye, send me its model.</p>
 <h2 id="encryption">The encrypted disk</h2>
 <p>If you tick “Encrypt the Raye system” on the installer's Disk page, you pick a disk password, and the whole system is encrypted. Taken out of the PC and plugged in elsewhere, the disk can't be read without that password or the recovery key.</p>
-<figure class="shot">
-<div class="shot-todo" data-shot="setup-encrypt">
-<p class="todo-label">Screenshot to take · <code>setup-encrypt</code></p>
-<p class="todo-what">The installer's Disk page, “Encrypt the Raye system” ticked, with the two disk password fields.</p>
-<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
-</div>
-</figure>
+
 <p>On a PC with a TPM chip, the chip opens the disk at startup. On that PC, your account password is therefore what protects your files, as with BitLocker. The chip only watches the Secure Boot settings: if they change, or the disk is put in another PC, Raye asks for the disk password again. Other changes in the startup don't ask for it. Without a TPM chip, the disk password is asked at every startup.</p>
 <p>I tried it once on the test machine: a firmware update that revokes old startup keys, and the disk opened by itself afterwards. If an update of that kind installs along with others at a restart, you may be asked for the recovery key once.</p>
 <h2 id="recovery">The recovery key</h2>
 <p>At your first sign-in, a window shows a recovery key: eight groups of six digits. It opens the disk if you forget its password. Copy it, write it down on paper or in a password manager, keep it somewhere other than the computer, then confirm with “I saved my key”.</p>
-<figure class="shot">
-<div class="shot-todo" data-shot="recovery-key">
-<p class="todo-label">Screenshot to take · <code>recovery-key</code></p>
-<p class="todo-what">The recovery key window at the first sign-in, the key itself blurred.</p>
-<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
-</div>
-</figure>
+
 <h2 id="prompt">The password before an app changes the system</h2>
 <p>When an app wants to change the system, the screen dims and Raye asks for your password, with the publisher's name, as in Windows 11. The prompt doesn't time out: on a standard account, you have time to go and ask the PC's administrator for the password. Updates, on the other hand, install without asking for it.</p>
-<figure class="shot">
-<div class="shot-todo" data-shot="uac">
-<p class="todo-label">Screenshot to take · <code>uac</code></p>
-<p class="todo-what">The password prompt: the dimmed screen, “Verified publisher: Raye Linux”, Yes and No.</p>
-<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
-</div>
-</figure>
+
 <aside class="limits" aria-labelledby="limits-prompt prompt">
 <p class="limits-title" id="limits-prompt">What is still missing</p>
 <ul>
