@@ -76,6 +76,7 @@ FR = {
     "V1 Beta 4": "V1 Bêta 4",
     "V1 Beta 3": "V1 Bêta 3",
     "Every language: all of Raye translated": "Toutes les langues : tout Raye traduit",
+    "Welcome app after install: quick setup (drivers, updates, apps, Raye account, look) and where to get help": "Appli de bienvenue après l'installation : réglages rapides (pilotes, mises à jour, applis, compte Raye, apparence) et où trouver de l'aide",
     "Taskbar: a transparency slider and an apps-only taskbar": "Barre des tâches : un curseur de transparence et une barre avec seulement les applis",
     "Raye Community: the same channels as the Discord server, set up for you, and support tickets": "Raye Community : les mêmes salons que le serveur Discord, déjà en place, et des tickets d'aide",
     "Forgot your password? Reset it from the sign-in screen, with a recovery key made in Setup or with your Raye account": "Mot de passe oublié ? Réinitialisez-le depuis l'écran de connexion, avec une clé de récupération créée dans l'installation ou avec votre compte Raye",

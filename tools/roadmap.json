@@ -122,7 +122,7 @@
      "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
     ],
     [
-     "doing",
+     "done",
      "The V1 website, with fresh screenshots of the real system"
     ],
     [
@@ -254,11 +254,11 @@
      "Works on older PCs too (legacy BIOS, older processors like Core 2 Duo, 2–4 GB RAM)"
     ],
     [
-     "doing",
+     "done",
      "New install: start in Try Raye with an Install icon, full-screen Setup, English boot menu, Setup fixes"
     ],
     [
-     "doing",
+     "done",
      "Everything checked in French, screen by screen (installer included)"
     ],
     [
@@ -291,6 +291,10 @@
    "title": "🕒 V1.1 · early December",
    "color": "8a8f98",
    "items": [
+    [
+     "planned",
+     "Welcome app after install: quick setup (drivers, updates, apps, Raye account, look) and where to get help"
+    ],
     [
      "planned",
      "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
