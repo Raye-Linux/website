@@ -156,6 +156,62 @@ BASE_PHRASE = re.compile(r"\b(?:based on|basé sur) Ubuntu 26\.04 LTS\b", re.I)
 HOMES = {"fr": "fr/index.html", "en": "en/index.html"}
 TEXT_ASSETS = (".css", ".js", ".svg")
 
+# 🚨 Since the 1.0 launch (build_pages.V1_LIVE) site/ holds the V1 site of
+# tools/site_v1.py: French at the root, English under /en/, and none of the
+# coming-soon pages listed above. A check written for one of those pages
+# says nothing about the V1 site, so it is skipped and says so; the V1 pages
+# have their own checks in tests/test_site_v1.py. The checks that still
+# mean something for the V1 site -- the download page, the release.json
+# barriers, the twin of every page, the legal summaries, the old addresses
+# -- read the V1 pages instead.
+V1_LIVE = builder().V1_LIVE
+coming_soon_only = unittest.skipIf(
+    V1_LIVE, "a check of the coming-soon site, which site/ no longer holds since "
+             "the V1 site went live; tests/test_site_v1.py checks the V1 pages")
+sys.path.insert(0, TOOLS)
+import site_v1_download as V1_DOWNLOAD  # noqa: E402
+import site_v1_text as V1_TEXT  # noqa: E402
+
+
+def v1_rel(path):
+    return path.lstrip("/") + "index.html"
+
+
+def v1_pairs():
+    """(fr, en) file of every V1 page, from tools/site_v1_text.PAGES."""
+    return [(v1_rel(p["path"]["fr"]), v1_rel(p["path"]["en"]))
+            for p in V1_TEXT.PAGES.values()]
+
+
+def v1_path(key, lang):
+    return V1_TEXT.PAGES[key]["path"][lang]
+
+
+def v1_pending():
+    """True while tools/release-v1.json holds the pending mark: the V1
+    download page then shows no file, size, sum or address at all."""
+    return V1_LIVE and V1_DOWNLOAD.is_pending()
+
+
+def site_paths(lang):
+    """The page addresses of the site that is in site/, by builder key."""
+    if not V1_LIVE:
+        return builder().PATHS[lang]
+    return {key: p["path"][lang] for key, p in V1_TEXT.PAGES.items()}
+
+
+def site_pages():
+    """Every page file of the site that is in site/."""
+    if not V1_LIVE:
+        return PAGES
+    return [rel for pair in v1_pairs() for rel in pair] + ["404.html"]
+
+
+if V1_LIVE:
+    DOWNLOAD_LANG = {v1_rel(v1_path("download", lang)): lang for lang in ("fr", "en")}
+    DOWNLOAD_PAGES = tuple(DOWNLOAD_LANG)
+    LICENSE_PAGES = {v1_rel(v1_path("licenses", lang)): lang for lang in ("fr", "en")}
+
 
 def trademark():
     """The notice as the page prints it (French typography applied)."""
@@ -205,6 +261,7 @@ def parse(text):
 
 
 class SiteTests(unittest.TestCase):
+    @coming_soon_only
     def test_no_inline_script_or_style(self):
         for rel in PAGES:
             c = parse(read(rel))
@@ -221,6 +278,7 @@ class SiteTests(unittest.TestCase):
                         self.assertTrue(attrs.get("src", "").startswith("/assets/"))
                     self.assertNotEqual(tag, "style")
 
+    @coming_soon_only
     def test_nothing_from_elsewhere(self):
         for rel in PAGES:
             for tag, attrs in parse(read(rel)).tags:
@@ -242,6 +300,7 @@ class SiteTests(unittest.TestCase):
             urls = re.findall(r"https?://[^\s\"')]+", text)
             self.assertEqual([u for u in urls if "www.w3.org" not in u], [], name)
 
+    @coming_soon_only
     def test_local_links_exist(self):
         for rel in PAGES:
             for tag, attrs in parse(read(rel)).tags:
@@ -255,6 +314,7 @@ class SiteTests(unittest.TestCase):
                 with self.subTest(page=rel, link=value):
                     self.assertTrue(os.path.isfile(path), path)
 
+    @coming_soon_only
     def test_assets_are_versioned(self):
         # a changed script must get a new address, or a browser or Cloudflare
         # keeps serving the old one with the new page (it broke the signup once)
@@ -280,7 +340,8 @@ class SiteTests(unittest.TestCase):
         # what a reader sees includes the alt text of the pictures; the base
         # system may be named, once, in the words the law asks for
         texts = {}
-        for rel in PAGES:
+        # the V1 pages may name Windows; test_site_v1 checks them with its rule
+        for rel in ([] if V1_LIVE else PAGES):
             if rel in ROADMAP_PAGES:
                 continue
             c = parse(read(rel))
@@ -304,13 +365,14 @@ class SiteTests(unittest.TestCase):
                 self.assertIsNone(FORBIDDEN.search(text), FORBIDDEN.search(text))
 
     def test_the_trademark_notice_is_on_the_licenses_pages_only(self):
-        for rel in PAGES:
+        for rel in site_pages():
             text = " ".join(parse(read(rel)).text)
             for lang, notice in trademark().items():
                 with self.subTest(page=rel, lang=lang):
                     want = 1 if LICENSE_PAGES.get(rel) == lang else 0
                     self.assertEqual(text.count(notice), want)
 
+    @coming_soon_only
     def test_every_page_links_the_legal_pages(self):
         for rel in PAGES:
             if rel in ("404.html", CHOOSER):
@@ -323,10 +385,13 @@ class SiteTests(unittest.TestCase):
                     self.assertIn(paths[page], hrefs)
 
     def test_the_download_agreement_links_the_terms(self):
+        if v1_pending():
+            self.skipTest("tools/release-v1.json is pending: the V1 download page has "
+                          "no download yet, so no agreement box")
         for rel, lang in DOWNLOAD_LANG.items():
             text = read(rel)
             box = text[text.index('id="accept"'):text.index("</section>", text.index('id="accept"'))]
-            self.assertIn('href="%s"' % builder().PATHS[lang]["terms"], box)
+            self.assertIn('href="%s"' % site_paths(lang)["terms"], box)
 
     def test_the_help_bubble_names_nothing_but_says_what_answers(self):
         # the one exception to the forbidden words: the bubble has to say
@@ -344,10 +409,12 @@ class SiteTests(unittest.TestCase):
         for sentence in notice:
             text = text.replace(sentence, "")
         self.assertIsNone(FORBIDDEN.search(text), FORBIDDEN.search(text))
-        for rel in PAGES:
-            if rel != CHOOSER:
+        for rel in site_pages():
+            # the coming-soon chooser had no bubble; the V1 home page is a page
+            if rel != CHOOSER or V1_LIVE:
                 self.assertIn("/assets/support.js?v=", read(rel), rel)
 
+    @coming_soon_only
     def test_languages_match(self):
         for fr, en in (("fr/index.html", "en/index.html"),
                        ("fr/confidentialite/index.html", "en/privacy/index.html"),
@@ -377,6 +444,9 @@ class SiteTests(unittest.TestCase):
         agreeing with nothing in particular. The expected strings come from
         the builder's own size_text()/date_text(), never re-spelled here.
         """
+        if v1_pending():
+            self.skipTest("tools/release-v1.json is pending: the V1 download page shows "
+                          "no release (test_site_v1 checks it shows no size or sum)")
         info = release_json()
         bp = builder()
         for rel in DOWNLOAD_PAGES:
@@ -414,6 +484,10 @@ class SiteTests(unittest.TestCase):
         # against release-files' 1900 MiB), leaving about 1 GB before a
         # third appears and the sentence starts lying next to a command
         # that is right.
+        # The V1 page has no such sentence: its join step is shown only with
+        # the GitHub mirror, and release-files makes no parts for 1.0.
+        if V1_LIVE and not bp.GITHUB_MIRROR:
+            return
         self.assertEqual(
             len(info["parts"]), 2,
             "tools/release.json has %d parts, and both download pages say "
@@ -598,6 +672,8 @@ class SiteTests(unittest.TestCase):
             # suite green. Every other link on the page comes from
             # release.json; this one did not.
             made = set(os.listdir(out))
+            if v1_pending():
+                return   # the pending V1 page links to no file yet
             for rel in DOWNLOAD_PAGES:
                 links = [a.get("href") for t, a in parse(read(rel)).tags
                          if t == "a" and (a.get("href") or "").endswith(".md")]
@@ -667,8 +743,18 @@ class SiteTests(unittest.TestCase):
         if not os.path.isfile(PUBLISH_FILES):
             self.skipTest("the iso repository is not checked out next to "
                           "this one: %s" % PUBLISH_FILES)
+        if v1_pending():
+            # 1.0's release.conf is in the iso repository before its image is
+            # published; until --release takes it, the V1 page links to none
+            # of release.json's addresses, so there is nothing to disagree.
+            self.skipTest("tools/release-v1.json is pending: the V1 download page "
+                          "links to no address of tools/release.json yet")
         rf = load_by_path("raye_release_files", PUBLISH_FILES)
-        conf = rf.rp.settings(PUBLISH_CONF)
+        # read as release-files reads it: release.local.conf of the publishing
+        # machine and the environment override release.conf (raye_publish's
+        # settings() only finds the local file by itself for its own CONF path)
+        conf = rf.rp.settings(PUBLISH_CONF,
+                              local=os.path.join(PUBLISH, "release.local.conf"))
         info = release_json()
         self.assertEqual(
             info["urls"], rf.urls(conf),
@@ -678,6 +764,7 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(info["title"], conf["RELEASE_TITLE"], REMEDY)
         self.assertEqual(info["iso"], rf.iso_name(conf), REMEDY)
 
+    @coming_soon_only
     def test_the_bare_name_picks_a_language_and_only_there(self):
         js = read("assets/lang.js")
         self.assertIn('fr: "/fr/", en: "/en/"', js)
@@ -696,6 +783,21 @@ class SiteTests(unittest.TestCase):
 
     def test_every_page_says_where_its_twin_is(self):
         b = builder()
+        if V1_LIVE:
+            # French at the root, English under /en/; x-default is the French one
+            for key, page in V1_TEXT.PAGES.items():
+                for lang in ("fr", "en"):
+                    other = "en" if lang == "fr" else "fr"
+                    path = page["path"][lang]
+                    text = read(v1_rel(path))
+                    with self.subTest(lang=lang, page=key):
+                        self.assertTrue(path.startswith("/en/") == (lang == "en"), path)
+                        self.assertIn('<link rel="canonical" href="%s%s">' % (b.URL, path), text)
+                        self.assertIn('hreflang="%s" href="%s%s"'
+                                      % (other, b.URL, page["path"][other]), text)
+                        self.assertIn('hreflang="x-default" href="%s%s"'
+                                      % (b.URL, page["path"]["fr"]), text)
+            return
         for lang in ("fr", "en"):
             other = "en" if lang == "fr" else "fr"
             for page, path in b.PATHS[lang].items():
@@ -712,7 +814,7 @@ class SiteTests(unittest.TestCase):
         b = builder()
         for lang in ("fr", "en"):
             for page in ("privacy", "terms", "notice", "licenses"):
-                text = read(b.PATHS[lang][page].lstrip("/") + "index.html")
+                text = read(site_paths(lang)[page].lstrip("/") + "index.html")
                 with self.subTest(lang=lang, page=page):
                     self.assertIn('class="legal-summary"', text)
                     self.assertLess(text.index('class="legal-summary"'), text.index('class="toc"'))
@@ -722,6 +824,53 @@ class SiteTests(unittest.TestCase):
                     sections = re.findall(r'<section id="([a-z-]+)"', text)
                     self.assertEqual(targets, sections)
 
+    def test_old_addresses_lead_to_their_v1_page(self):
+        """Every address of the coming-soon site keeps working at launch.
+
+        Links to /fr/... are out there (the launch email, Discord, search
+        engines). The V1 site has French at the root, so nginx must send
+        each old address -- with or without index.html, with or without the
+        final slash -- to the page of the same name, and the old files must
+        be gone from site/ so nothing stale can be served. The old English
+        addresses kept their place. Each address is followed through the
+        rules of deploy/nginx/raye-site.conf, as nginx would, to a file.
+        """
+        if not V1_LIVE:
+            self.skipTest("the coming-soon site is what site/ holds")
+        conf = open(os.path.join(ROOT, "..", "deploy", "nginx", "raye-site.conf"),
+                    encoding="utf-8").read()
+        self.assertIn("absolute_redirect off;", conf)
+        old = {lang: builder().PATHS[lang] for lang in ("fr", "en")}
+        self.assertFalse(os.path.exists(os.path.join(ROOT, "fr")),
+                         "site/fr/ still holds coming-soon pages: rebuild with "
+                         "tools/build_pages.py")
+        for lang in ("fr", "en"):
+            for key, path in old[lang].items():
+                want = v1_path(key, lang)
+                for asked in (path, path + "index.html", path.rstrip("/")):
+                    with self.subTest(old=asked):
+                        got, hops = follow_nginx(conf, asked)
+                        self.assertEqual(got, want, "%s ends at %s after %s" % (asked, got, hops))
+                        if lang == "fr":
+                            self.assertEqual(hops[0][0], 301, hops)
+        # the short English addresses of the beta
+        for asked, key in (("/download/", "download"), ("/roadmap/", "roadmap")):
+            with self.subTest(old=asked):
+                self.assertEqual(follow_nginx(conf, asked)[0], v1_path(key, "en"))
+        # and the V1 French pages themselves are served, not sent away
+        for key in V1_TEXT.PAGES:
+            path = v1_path(key, "fr")
+            with self.subTest(page=path):
+                got, hops = follow_nginx(conf, path)
+                self.assertEqual((got, hops), (path, []))
+
+    def test_the_old_address_check_can_fail(self):
+        # without the /fr/ rules, /fr/telecharger/ is a 404, not a page
+        conf = "absolute_redirect off;\nlocation / { try_files $uri $uri/ =404; }\n"
+        got, hops = follow_nginx(conf, "/fr/telecharger/")
+        self.assertIsNone(got)
+
+    @coming_soon_only
     def test_old_french_addresses_move_to_their_fr_page(self):
         conf = open(os.path.join(ROOT, "..", "deploy", "nginx", "raye-site.conf"),
                     encoding="utf-8").read()
@@ -736,6 +885,7 @@ class SiteTests(unittest.TestCase):
         for name in moved:
             self.assertFalse(os.path.exists(os.path.join(ROOT, name)), name)
 
+    @coming_soon_only
     def test_form_fields(self):
         tags = parse(read("fr/index.html")).tags
         form = [a for t, a in tags if t == "form"][0]
@@ -754,6 +904,51 @@ class SiteTests(unittest.TestCase):
 WELCOMEQ = os.path.join(os.path.dirname(__file__), "..", "..", "..",
                         "installer", "etc", "calamares", "modules",
                         "welcomeq.conf")
+
+
+def follow_nginx(conf, uri, limit=4):
+    """Where nginx sends a visitor who asks for uri, with this config.
+
+    Only what raye-site.conf uses: `location = X { return 301 Y; }`, then
+    the `location ~ REGEX { return 301 Y; }` rules in file order, then the
+    files under site/ (try_files $uri $uri/). Returns (page path, hops):
+    the page as its directory address, or None for a 404."""
+    rules = re.findall(r"location\s+(=|~)\s+(\S+)\s*\{\s*return\s+(30[12])\s+([^;]+);", conf)
+    hops = []
+    for _ in range(limit):
+        target = None
+        for kind, pattern, code, dest in rules:
+            if kind == "=" and uri == pattern:
+                target = (int(code), dest)
+                break
+        if target is None:
+            for kind, pattern, code, dest in rules:
+                m = re.match(pattern, uri) if kind == "~" else None
+                if m:
+                    dest = re.sub(r"\$(\d)", lambda g: m.group(int(g.group(1))) or "", dest)
+                    target = (int(code), dest)
+                    break
+        if target is None:
+            break
+        code, dest = target
+        dest = dest.replace("$is_args$args", "")
+        hops.append((code, dest))
+        uri = dest
+    else:
+        return None, hops
+    local = os.path.join(ROOT, uri.lstrip("/"))
+    if uri.endswith("index.html") and os.path.isfile(local):
+        return uri[:-len("index.html")], hops
+    if os.path.isfile(os.path.join(local, "index.html")):
+        # nginx's index adds the slash itself (301) for a directory without one
+        return uri.rstrip("/") + "/", hops
+    return None, hops
+
+
+def download_parts(lang):
+    """The download page of a language, as path parts under site/."""
+    rel = {l: r for r, l in DOWNLOAD_LANG.items()}[lang]
+    return tuple(rel.split("/"))
 
 
 class FreeSpaceFigureTests(unittest.TestCase):
@@ -791,8 +986,7 @@ class FreeSpaceFigureTests(unittest.TestCase):
             return f.read()
 
     def test_both_download_pages_print_the_enforced_figure(self):
-        for parts, unit in ((("fr", "telecharger", "index.html"), "Go"),
-                            (("en", "download", "index.html"), "GB")):
+        for parts, unit in ((download_parts("fr"), "Go"), (download_parts("en"), "GB")):
             page = self._page(*parts)
             self.assertIn(
                 f"{self.gb} {unit}", page,
@@ -808,10 +1002,8 @@ class FreeSpaceFigureTests(unittest.TestCase):
         because the reader cannot tell which to trust. So every figure that
         is followed by the words for free disk space has to be THE figure.
         """
-        patterns = ((("fr", "telecharger", "index.html"),
-                     r"(\d+)\s*Go\s*d'espace disque libre"),
-                    (("en", "download", "index.html"),
-                     r"(\d+)\s*GB\s*of free disk space"))
+        patterns = ((download_parts("fr"), r"(\d+)\s*Go\s*d'espace disque libre"),
+                    (download_parts("en"), r"(\d+)\s*GB\s*of free disk space"))
         for parts, pattern in patterns:
             found = re.findall(pattern, self._page(*parts))
             # Not just "every match equals gb": an EMPTY list would make
@@ -833,6 +1025,7 @@ if __name__ == "__main__":
     unittest.main()
 
 
+@coming_soon_only
 class HomePageTests(unittest.TestCase):
     """The home page keeps its promises: the screenshots it shows are on
     disk, every one of them is described, the two languages carry the same
@@ -1080,11 +1273,11 @@ class NotYetPublicTests(unittest.TestCase):
             self.held = [l.strip() for l in f if l.strip().startswith("/")]
 
     def test_the_held_list_follows_the_flag(self):
-        want = [] if self.live else ["/fr/telecharger/", "/en/download/"]
+        want = [] if self.live else [site_paths("fr")["download"], site_paths("en")["download"]]
         self.assertEqual(self.held, want)
 
     def test_no_published_page_links_to_a_held_one(self):
-        for rel in PAGES:
+        for rel in site_pages():
             if rel in DOWNLOAD_PAGES:
                 continue
             for tag, attrs in parse(read(rel)).tags:

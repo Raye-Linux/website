@@ -3,352 +3,1199 @@
   {
    "id": "faq:fr:0",
    "lang": "fr",
-   "text": "Une seule personne, techoraye, au Québec. Raye a commencé en 2026 parce que je voulais un Linux qu'on prend en main sans tout réapprendre. La bêta publique est sortie le 14 novembre 2026. Pour me parler, le plus simple est le serveur Discord, ou bonjour@rayelinux.com.",
-   "title": "Qui fait Raye Linux ?",
-   "url": "/fr/#questions"
+   "text": "Oui. Raye ne coûte rien à télécharger ni à utiliser, et il n'y a pas de publicité dedans.",
+   "title": "C'est gratuit ?",
+   "url": "/questions/#q1"
   },
   {
    "id": "faq:fr:1",
    "lang": "fr",
-   "text": "Oui. Raye Linux ne coûte rien à télécharger ni à utiliser, et il n'y a aucune publicité dedans.",
-   "title": "C'est gratuit ?",
-   "url": "/fr/#questions"
+   "text": "Non. Raye reprend la disposition de Windows 11 pour que vos réflexes marchent, mais c'est un autre système. Les programmes Windows passent par une couche de compatibilité, avec les limites décrites sur la page Programmes Windows.",
+   "title": "Est-ce que c'est Windows ?",
+   "url": "/questions/#q2"
   },
   {
    "id": "faq:fr:2",
    "lang": "fr",
-   "text": "Raye Linux est basé sur Ubuntu 26.04 LTS. Cela lui donne des années de correctifs de sécurité et des pilotes pour la plupart des PC. Le bureau, les applications et les réglages par-dessus sont les nôtres.",
+   "text": "Raye Linux est basé sur Ubuntu 26.04 LTS, qui fournit des années de correctifs de sécurité pour le système de base et des pilotes pour la plupart des PC. Le bureau, les applis, l'installateur et les mises à jour par-dessus sont ceux de Raye, et c'est Raye qui les tient à jour. Raye n'est ni affilié à Canonical ni approuvé par elle.",
    "title": "Sur quoi c'est basé ?",
-   "url": "/fr/#questions"
+   "url": "/questions/#q3"
   },
   {
    "id": "faq:fr:3",
    "lang": "fr",
-   "text": "Oui. Écrivez l'image sur une clé USB, démarrez dessus et choisissez « Essayer Raye Linux sans l'installer » : Raye tourne depuis la clé et rien ne change sur votre PC. Pour l'installer ensuite, redémarrez et choisissez « Installer Raye Linux ».",
-   "title": "Je peux l'essayer avant de l'installer ?",
-   "url": "/fr/#questions"
+   "text": "Oui, et c'est ce que fait la clé USB d'office : elle démarre sur « Try Raye Linux without installing ». Raye tourne depuis la clé et ne touche ni au disque ni à la mémoire d'échange de votre PC. L'icône Installer est sur le bureau quand vous voulez passer à l'installation.",
+   "title": "Je peux l'essayer sans l'installer ?",
+   "url": "/questions/#q4"
   },
   {
    "id": "faq:fr:4",
    "lang": "fr",
-   "text": "Oui. L'installation peut mettre Raye à côté de votre système, en le réduisant sans risque, et demande avant de toucher à quoi que ce soit. Si Raye le remplace, le choix « Remplacer … et garder mes fichiers » garde le Bureau, les Documents, les Téléchargements, la Musique, les Images et les Vidéos, avec le fond d'écran, les réseaux Wi-Fi et le profil du navigateur. Installé à côté, Raye propose de copier vos fichiers après la première connexion. Faites quand même une sauvegarde avant.",
-   "title": "Je peux garder mon système actuel et mes fichiers ?",
-   "url": "/fr/#questions"
+   "text": "Un .exe se lance d'un double-clic. Au premier lancement, Raye lui donne seul ce qu'il demande souvent (.NET 6 à 9, Visual Basic 6, MFC, OpenAL, PhysX). Le Store a des programmes Windows installés et essayés un par un, et dit lesquels ne marchent qu'en partie, comme FL Studio et Affinity. Discord, Steam, VLC, GIMP ou LibreOffice existent en version pour Raye, dans le Store.",
+   "title": "Mes programmes vont-ils marcher ?",
+   "url": "/questions/#q5"
   },
   {
    "id": "faq:fr:5",
    "lang": "fr",
-   "text": "Beaucoup de programmes .exe s'installent et s'ouvrent d'un double-clic, et reçoivent seuls ce qu'il leur faut au premier lancement. Le Store a les applications gratuites habituelles et des programmes .exe essayés un par un. Certains programmes ne fonctionnent pas encore. S'il vous en manque un, écrivez-moi son nom : c'est comme ça que je décide quoi régler en premier.",
-   "title": "Mes programmes vont-ils fonctionner ?",
-   "url": "/fr/#questions"
+   "text": "Steam et Heroic sont dans le Store, et le mode jeu s'active tout seul pendant une partie. Roblox passe par Sober. Les jeux qui ont un anti-triche dans le noyau de Windows, comme Valorant, ne marchent pas. Easy Anti-Cheat v2 attend que la clé de Raye soit acceptée par Epic : tout est sur la page Jeux.",
+   "title": "Et mes jeux ?",
+   "url": "/questions/#q6"
   },
   {
    "id": "faq:fr:6",
    "lang": "fr",
-   "text": "Steam et Heroic sont dans le Store, et le mode jeu s'active tout seul pendant que vous jouez. Roblox passe par Sober, dans le Store aussi. Les jeux qui ont un anti-triche dans le noyau, comme Valorant ou Fortnite, ne fonctionnent pas.",
-   "title": "Et mes jeux ?",
-   "url": "/fr/#questions"
+   "text": "Si Secure Boot est actif et que vous passez au noyau de Raye, le micrologiciel de votre PC demande une fois d'inscrire la clé de Raye. Raye vous montre avant un code à six chiffres : appuyez sur une touche dans les 10 secondes, choisissez Enroll MOK, Continue, Yes, tapez le code, puis Reboot. Si vous manquez l'écran, rien de grave. Voir la page Installer.",
+   "title": "Qu'est-ce que c'est, cet écran bleu au redémarrage ?",
+   "url": "/questions/#q7"
   },
   {
    "id": "faq:fr:7",
    "lang": "fr",
-   "text": "Un PC Intel ou AMD 64 bits, qui démarre en mode UEFI ou dans l'ancien mode BIOS, avec au moins 4 Go de mémoire. Une fois démarré, sans rien d'ouvert, Raye en utilise environ 850 Mo (mesuré dans une machine virtuelle de test) : le reste est pour vos applis, et 8 Go valent mieux pour beaucoup d'onglets ou les jeux. La liste complète est sur la page de téléchargement.",
-   "title": "Quel PC faut-il ?",
-   "url": "/fr/#questions"
+   "text": "Oui : Hyprland, où les fenêtres se rangent côte à côte et où l'on fait presque tout au clavier. Les deux sont dans la même installation. Voir Deux bureaux.",
+   "title": "Y a-t-il un autre bureau que celui qui ressemble à Windows ?",
+   "url": "/questions/#q8"
   },
   {
    "id": "faq:fr:8",
    "lang": "fr",
-   "text": "Raye démarre aussi dans l'ancien mode BIOS. Si le processeur est ancien, l'installation le dit dès sa première page : Raye fonctionne, mais certaines applis et certains jeux en demandent un plus récent. Nous l'avons essayé dans une machine virtuelle de test en mode BIOS, avec un processeur ancien, sans 3D et 2 Go de mémoire : Raye démarre, s'installe et ouvre le bureau. 4 Go ou plus restent conseillés.",
-   "title": "Et sur un vieux PC ?",
-   "url": "/fr/#questions"
+   "text": "Oui, Raye peut s'installer à côté. Si Windows est chiffré par BitLocker, il faut d'abord désactiver ce chiffrement dans Windows. Lisez la mise en garde de la page Installer, et sauvegardez vos fichiers.",
+   "title": "Puis-je garder Windows ?",
+   "url": "/questions/#q9"
   },
   {
    "id": "faq:fr:9",
    "lang": "fr",
-   "text": "Beaucoup de Chromebooks à processeur Intel ou AMD peuvent faire tourner Raye, avec un micrologiciel communautaire appelé MrChromebox. Raye règle la rangée de touches du haut. C'est plus de travail que sur un PC : les étapes sont dans le manuel de Raye, sur la page code source. Les Chromebooks à processeur ARM ne sont pas pris en charge.",
-   "title": "Et sur un Chromebook ?",
-   "url": "/fr/#questions"
+   "text": "Si Windows est à côté, sa partition apparaît dans Ce PC sous le nom Windows, et après la première connexion, Raye propose Paramètres > Comptes > Fichiers de Windows pour copier vos dossiers, le fond d'écran et les favoris. Si Raye remplace Windows, « Remplacer Windows et garder mes fichiers » garde vos dossiers, le fond d'écran, les réseaux Wi-Fi et le profil du navigateur.",
+   "title": "Et mes fichiers Windows ?",
+   "url": "/questions/#q10"
   },
   {
    "id": "faq:fr:10",
    "lang": "fr",
-   "text": "Sur le menu de la clé USB, choisissez « Safe graphics ». Une fois Raye installé, si le bureau ne s'affiche pas deux fois de suite, Raye passe tout seul à un mode d'affichage plus simple. Certaines cartes AMD plus anciennes (RX 550…) posent encore problème : dites-le sur le serveur Discord, dans #bugs, avec le nom de votre carte.",
-   "title": "L'écran reste noir, que faire ?",
-   "url": "/fr/#questions"
+   "text": "Oui : Paramètres > Personnalisation > Style du bureau > Style Windows 10. La barre des tâches passe à gauche avec une zone de recherche, les coins deviennent carrés et Démarrer a une liste d'applis avec des tuiles.",
+   "title": "Je peux avoir le look de Windows 10 ?",
+   "url": "/questions/#q11"
   },
   {
    "id": "faq:fr:11",
    "lang": "fr",
-   "text": "Raye s'en rend compte : la première fois, il vous prévient, et la deuxième fois de suite, il désactive la veille. Fermer le capot verrouille alors le PC et éteint l'écran. Vous pouvez la réactiver dans Paramètres > Système > Alimentation et batterie.",
-   "title": "Mon portable ne sort pas de la veille.",
-   "url": "/fr/#questions"
+   "text": "850 Mo une fois la session ouverte, mesurés sur la machine de test, qui n'a pas de carte graphique. Sur un vrai PC, ce sera un autre chiffre, et il sera sur la page Matériel. 8 Go sont conseillés.",
+   "title": "Combien de mémoire Raye utilise-t-il ?",
+   "url": "/questions/#q12"
   },
   {
    "id": "faq:fr:12",
    "lang": "fr",
-   "text": "Le pare-feu est actif dès le départ, chaque réseau Wi-Fi voit une adresse matérielle privée, Secure Boot peut rester activé, et si vous chiffrez le disque, la puce TPM ne le déverrouille que sur votre PC. Le DNS chiffré est à un clic dans les réglages du réseau. Les mises à jour arrivent toutes seules.",
-   "title": "C'est sûr ?",
-   "url": "/fr/#questions"
+   "text": "Raye démarre en UEFI, et la clé démarre aussi dans l'ancien mode BIOS : je l'ai vu dans une machine virtuelle de 2 Go. Si le processeur est ancien, l'installateur le dit dès sa première page, sans bloquer : certaines applis et certains jeux en demandent un plus récent. Aucun vrai vieux PC n'a encore été essayé : tout est sur la page Vieux PC.",
+   "title": "Et sur un vieux PC ?",
+   "url": "/questions/#q13"
   },
   {
    "id": "faq:fr:13",
    "lang": "fr",
-   "text": "Raye Update les trouve et les installe tout seul ; celles qui touchent au système attendent que vous choisissiez de redémarrer. Celles du système de base viennent d'un serveur de votre pays quand il y en a un. La bêta n'expire pas : pas besoin de réinstaller pour avoir la suivante.",
-   "title": "Comment marchent les mises à jour ?",
-   "url": "/fr/#questions"
+   "text": "Raye le voit : la première fois, il prévient, la deuxième fois de suite, il désactive la veille, et fermer le capot verrouille le PC et éteint l'écran. Paramètres > Système > Alimentation et batterie la réactive.",
+   "title": "Mon portable ne sort pas de la veille.",
+   "url": "/questions/#q14"
   },
   {
    "id": "faq:fr:14",
    "lang": "fr",
-   "text": "Oui. Dans Paramètres > Personnalisation > Style du bureau, le style classique met la barre des tâches à gauche avec une zone de recherche, rend les coins carrés et donne à Démarrer une liste d'applis avec des tuiles.",
-   "title": "Je peux avoir la barre des tâches à gauche et des tuiles dans Démarrer ?",
-   "url": "/fr/#questions"
+   "text": "Parce qu'une lettre ne dit rien de ce qu'il y a sur un disque. Le disque du système s'appelle Raye, une partition Windows s'appelle Windows.",
+   "title": "Pourquoi n'y a-t-il pas de lecteur C: ?",
+   "url": "/questions/#q15"
   },
   {
    "id": "faq:fr:15",
    "lang": "fr",
-   "text": "L'installation vous laisse choisir KDE Plasma (conseillé) ou Hyprland, un bureau en mosaïque. Les deux ont la barre des tâches et le menu Démarrer de Raye. Hyprland est plus récent et moins essayé.",
-   "title": "Je peux avoir un autre bureau que KDE Plasma ?",
-   "url": "/fr/#questions"
+   "text": "Non. Celles qui n'ont pas besoin d'un redémarrage s'installent pendant que vous travaillez ; les autres attendent que vous choisissiez « Mettre à jour et redémarrer ». Voir Mises à jour.",
+   "title": "Une mise à jour va-t-elle redémarrer mon PC pendant que je travaille ?",
+   "url": "/questions/#q16"
   },
   {
    "id": "faq:fr:16",
    "lang": "fr",
-   "text": "Oui, l'équipe recrute : développeurs, modérateurs, aide aux utilisateurs, testeurs, traducteurs, designers et créateurs de vidéos. Rejoignez le serveur Discord et postulez dans le salon #join-the-team : quelques questions, puis l'équipe vous répond.",
-   "title": "Je peux aider à faire Raye ?",
-   "url": "/fr/#questions"
+   "text": "Pas de dictée vocale, pas d'éclairage RVB, pas de diffusion sans fil vers un écran, pas d'Assistance rapide, pas de sous-titres en direct, pas de localisation de l'appareil, pas de comptes familiaux ni de sauvegarde vers le nuage de Windows. Le manuel dit, pour chacun, ce qu'on peut faire à la place.",
+   "title": "Qu'est-ce que Raye ne fait pas ?",
+   "url": "/questions/#q17"
   },
   {
    "id": "faq:fr:17",
    "lang": "fr",
-   "text": "Les bêtas de la 1.0 sortent l'une après l'autre, et vous téléchargez toujours la plus récente. Raye Update apporte chaque nouvelle bêta à un Raye déjà installé. Ce qui reste avant la 1.0 finale est dans la feuille de route. Laissez votre courriel si vous voulez que je vous écrive le jour de sa sortie.",
-   "title": "Et la version 1.0 ?",
-   "url": "/fr/#questions"
+   "text": "Non : aucun rapport d'utilisation ni de plantage, et pas de publicité. Comme tout téléchargement, les serveurs de mises à jour voient l'adresse IP de votre PC et ce qui est téléchargé (Raye Update, le Store, Firefox). Le détail, avec les durées, est sur la page Confidentialité, et celle des témoins dit ce que le site garde dans votre navigateur.",
+   "title": "Raye envoie-t-il des données sur moi ?",
+   "url": "/questions/#q18"
+  },
+  {
+   "id": "faq:fr:18",
+   "lang": "fr",
+   "text": "Non, et les comptes ne sont pas encore ouverts. Raye marche pareil sans. Plus tard, un compte servira à garder une liste de réglages, votre photo et votre bibliothèque d'applications d'un PC à l'autre ; jamais vos mots de passe ni vos fichiers.",
+   "title": "Faut-il un compte Raye ?",
+   "url": "/questions/#q19"
+  },
+  {
+   "id": "faq:fr:19",
+   "lang": "fr",
+   "text": "Moi, techoraye, au Québec. Il y a plus de détails sur la page À propos.",
+   "title": "Qui fait Raye ?",
+   "url": "/questions/#q20"
+  },
+  {
+   "id": "faq:fr:20",
+   "lang": "fr",
+   "text": "Sur le serveur Discord, dans #bugs, ou à bonjour@rayelinux.com : quel PC vous avez, ce que vous avez fait, ce que vous attendiez et ce qui s'est passé. Une photo de l'écran aide beaucoup.",
+   "title": "Comment signaler un problème ?",
+   "url": "/questions/#q21"
   },
   {
    "id": "download:fr:0.0",
    "lang": "fr",
-   "text": "2,9 Go · ISO 64 bits, démarrage UEFI · 21 novembre 2026\n\ntéléchargements\n\n272\n\nPC actifs\n\n365\n\nTéléchargements terminés, comptés par Cloudflare depuis le 14 novembre. PC actifs : machines qui ont cherché des mises à jour Raye ces 14 derniers jours. Au 25 novembre 2026.\n\nTélécharger l'ISO\n\nSHA-256\n\nbaeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547\n\nEmpreinte de la clé\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nClé publique\n\nNotes de version",
-   "title": "raye-1.0-beta-amd64.iso",
-   "url": "/fr/telecharger/"
+   "text": "Taille : à renseigner à la publication\n\nTéléchargement à la sortie\n\nSHA-256\n\nÀ renseigner à la publication\n\nEmpreinte de la clé\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E",
+   "title": "raye-1.0-amd64.iso",
+   "url": "/telecharger/#file-title"
   },
   {
    "id": "download:fr:1.0",
    "lang": "fr",
-   "text": "Raye Linux 1.0 Bêta est une version bêta. Elle peut contenir beaucoup de bugs, planter et, dans de rares cas, faire perdre des données.\n\nL'installation peut effacer tout le disque choisi. Sauvegardez vos fichiers importants avant d'installer, et préférez un PC de test ou une machine virtuelle.\n\nLe logiciel est fourni « tel quel », sans aucune garantie, comme le prévoient ses licences libres. Dans toute la mesure permise par la loi, Raye Linux et ses contributeurs ne sont pas responsables des dommages, pertes de données ou autres problèmes liés à son téléchargement, son installation ou son utilisation.\n\nVous l'installez et l'utilisez à vos propres risques, et vous êtes responsable de l'ordinateur sur lequel vous le faites.\n\nD'autres bêtas suivront avant la version 1.0 finale.\n\nEn téléchargeant, vous acceptez les conditions d'utilisation.\n\n Je confirme avoir lu ces avertissements, avoir sauvegardé mes données et accepter d'utiliser cette bêta à mes propres risques.\n\nJ'accepte, télécharger l'ISO\nAnnuler",
-   "title": "Avant de télécharger : c'est une bêta publique",
-   "url": "/fr/telecharger/"
+   "text": "Vérifiez que la liste des sommes vient bien de Raye Linux. La commande doit afficher « Good signature » :\n\ngpg --import raye-archive.asc\ngpg --verify SHA256SUMS.asc SHA256SUMS\n\nVérifiez l'image. La commande doit afficher « OK » :\n\nsha256sum --check --ignore-missing SHA256SUMS",
+   "title": "Vérifier le téléchargement",
+   "url": "/telecharger/#verify-title"
   },
   {
    "id": "download:fr:2.0",
    "lang": "fr",
-   "text": "Vérifiez que la liste des sommes vient bien de Raye Linux. La commande doit afficher « Good signature » :\n\ngpg --import raye-archive.asc\ngpg --verify SHA256SUMS.asc SHA256SUMS\n\nVérifiez l'image. La commande doit afficher « OK » :\n\nsha256sum --check --ignore-missing SHA256SUMS",
-   "title": "Vérifier le téléchargement",
-   "url": "/fr/telecharger/"
+   "text": "Rufus : choisissez l'ISO et, quand il le demande, écrivez-la en mode image DD. Le mode ISO donne une clé qui ne démarre pas.\n\nbalenaEtcher : choisissez l'ISO, puis la clé, puis Flash.\n\ndd : remplacez sdX par votre clé et vérifiez deux fois avec lsblk : tout ce qu'elle contient sera effacé.\n\nsudo dd if=raye-1.0-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nDémarrez ensuite l'ordinateur sur la clé, souvent avec F12, F11, F8 ou Échap à l'allumage. Installer.",
+   "title": "Créer une clé USB",
+   "url": "/telecharger/#usb-title"
   },
   {
    "id": "download:fr:3.0",
    "lang": "fr",
-   "text": "Rufus : choisissez l'ISO et, quand il le demande, écrivez-la en mode image DD. Le mode ISO donne une clé qui ne démarre pas.\n\nbalenaEtcher : choisissez l'ISO, puis la clé, puis Flash.\n\ndd : remplacez sdX par votre clé et vérifiez deux fois avec lsblk : tout ce qu'elle contient sera effacé.\n\nsudo dd if=raye-1.0-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nDémarrez ensuite l'ordinateur sur la clé, souvent avec F12, F11, F8 ou Échap à l'allumage.",
-   "title": "Créer une clé USB",
-   "url": "/fr/telecharger/"
+   "text": "Un processeur Intel ou AMD 64 bits et un PC qui démarre en mode UEFI (le mode BIOS d'autrefois est en cours d'essai : page Vieux PC)\n\n8 Go de mémoire conseillés\n\n25 Go d'espace disque libre\n\nUne clé USB de 8 Go ou plus\n\nSecure Boot et puce TPM pris en charge, sans être obligatoires",
+   "title": "Configuration minimale",
+   "url": "/telecharger/#needs-title"
   },
   {
    "id": "download:fr:4.0",
    "lang": "fr",
-   "text": "Un processeur Intel ou AMD 64 bits, démarrage en mode UEFI ou BIOS\n\n4 Go de mémoire, 8 Go conseillés\n\n25 Go d'espace disque libre\n\nUne clé USB de 8 Go ou plus\n\nDémarrage sécurisé (Secure Boot) et puce TPM pris en charge, sans être obligatoires",
-   "title": "Configuration minimale",
-   "url": "/fr/telecharger/"
+   "text": "Au premier démarrage sous Secure Boot, passer au noyau de Raye demande d'inscrire une clé sur un écran bleu, une seule fois : page Installer.\n\nLes cartes AMD RX 400 et 500 et les cartes NVIDIA à 144 Hz ont des correctifs que je n'ai pas pu essayer sur une vraie carte. Si l'écran reste noir, choisissez « Safe graphics » sur la clé.\n\nLes programmes .exe : le premier lancement prend quelques secondes, et tous ne fonctionnent pas.\n\nHors ligne, les Paramètres indiquent que les mises à jour n'ont pas pu être vérifiées.",
+   "title": "Ce qu'il faut savoir",
+   "url": "/telecharger/#known-title"
   },
   {
    "id": "download:fr:5.0",
    "lang": "fr",
-   "text": "Anciennes cartes AMD (RX 400 et 500, comme la RX 550) : sur certains PC, elles démarrent encore en basse résolution, avec peu d'images par seconde. Nous y travaillons. Si l'écran reste noir, choisissez « Safe graphics » sur la clé ; une fois installé, Raye passe tout seul à un mode d'affichage plus simple si le bureau ne s'affiche pas deux fois de suite.\n\nCartes NVIDIA : le correctif de vitesse des jeux n'a pas encore été essayé par nous sur une vraie carte NVIDIA. Si vos jeux restent lents, dites-le sur Discord.\n\nLe terminal, l'outil de capture et quelques boîtes de dialogue sont aux couleurs de Raye, mais pas encore redessinés en applis Raye.\n\nLes programmes .exe : le premier lancement prend quelques secondes et tous ne fonctionnent pas.\n\nHors ligne, les Paramètres indiquent que les mises à jour n'ont pas pu être vérifiées.",
-   "title": "Problèmes connus de la bêta",
-   "url": "/fr/telecharger/"
-  },
-  {
-   "id": "download:fr:6.0",
-   "lang": "fr",
    "text": "Dites-moi quel ordinateur vous avez, ce que vous avez fait, ce que vous attendiez et ce qui s'est passé. Une photo de l'écran aide beaucoup.\n\nLe signaler sur Discord, dans #bugs · Ou écrivez à\nbonjour@rayelinux.com",
    "title": "Signaler un problème",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/#bug-title"
+  },
+  {
+   "id": "install:fr:0.0",
+   "lang": "fr",
+   "text": "Vérifiez que votre PC a ce qu'il faut (page Matériel). Une connexion Internet pendant l'installation est utile, pas obligatoire. Si vous gardez Windows, éteignez-le vraiment : désactivez le démarrage rapide et la veille prolongée. L'installateur vous prévient si Windows n'a pas été complètement arrêté.\n\nSi Windows est chiffré, par BitLocker ou par le « Chiffrement de l'appareil » que beaucoup de PC vendus avec Windows 11 ont d'office, Raye ne peut pas réduire sa partition. Désactivez ce chiffrement dans Windows et attendez la fin du déchiffrement, en gardant votre clé de récupération BitLocker. L'installateur dit encore de « suspendre la protection » : ça ne suffit pas, la partition reste chiffrée.",
+   "title": "Avant de commencer",
+   "url": "/installer/#before"
+  },
+  {
+   "id": "install:fr:1.0",
+   "lang": "fr",
+   "text": "Téléchargez l'image\n\nUne fois l'image publiée, la page Télécharger donne le fichier, sa somme de contrôle et la façon de la vérifier.\n\nÉcrivez-la sur la clé\n\nAvec Rufus, choisissez le mode image DD quand il le demande : le mode ISO donne une clé qui ne démarre pas. balenaEtcher marche aussi. Tout ce que la clé contient sera effacé.\n\nDémarrez sur la clé\n\nÀ l'allumage, souvent avec F12, F11, F8 ou Échap. Le menu de la clé, en anglais seulement, démarre par défaut sur « Try Raye Linux without installing » : une session d'essai qui ne touche pas au disque. L'icône « Install Raye Linux » est sur le bureau et en tête de Démarrer, et ouvre l'installateur en plein écran. Sur la ligne d'en dessous du menu, « Install Raye Linux » l'ouvre directement ; « Safe graphics » aide quand l'écran reste noir.\n\nCapture à prendre · try-raye\n\nLa session d'essai de Raye, lancée depuis la clé USB : le bureau avec l'icône Installer Raye Linux posée dessus.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "La clé USB",
+   "url": "/installer/#usb"
+  },
+  {
+   "id": "install:fr:2.0",
+   "lang": "fr",
+   "text": "Région\n\nFrançais ou anglais, le fuseau horaire, puis la disposition du clavier.\n\nRéseau\n\nLa page suit votre connexion en direct : un câble branché apparaît tout de suite.\n\nDisque\n\nQuatre choix : effacer le disque, installer à côté de Windows en réduisant sa partition, utiliser l'espace libre, ou remplacer une partition. La case « Chiffrer le système Raye » est sur la même page : cochée, elle vous fait choisir un mot de passe du disque. Avec une puce TPM, vous n'aurez pas à le taper au démarrage.\n\nCompte\n\nLe nom du PC, puis votre nom et votre mot de passe. La page du compte Raye se passe avec « Utiliser plutôt un compte local ».\n\nConfidentialité\n\nLa position et les statistiques d'usage, que vous pourrez changer plus tard dans les Paramètres.\n\nInstallation\n\n« Prêt pour l'installation » dit tout ce qui va se passer, avec un bandeau rouge si quelque chose va être effacé.\n\nCapture à prendre · setup-disk\n\nLa page Disque de l'installateur, sur « Installer à côté de Windows », avec la réglette qui partage le disque.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nJuste avant d'écrire, l'installateur relit le disque. Si quoi que ce soit a changé depuis votre choix, il s'arrête au lieu de continuer.\n\nCapture à prendre · setup-summary\n\nLe résumé « Prêt pour l'installation » de l'installateur, avec le bandeau rouge qui dit ce qui sera effacé.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "L'installateur, étape par étape",
+   "url": "/installer/#pages"
+  },
+  {
+   "id": "install:fr:3.0",
+   "lang": "fr",
+   "text": "« Installer à côté de Windows » réduit la partition Windows pour faire de la place, et les deux systèmes partagent la partition de démarrage. Au démarrage, un menu propose Raye Linux et Windows pendant 10 secondes. Depuis Raye, « Redémarrer sous Windows », dans Démarrer, redémarre directement dans Windows, une fois.\n\nCapture à prendre · boot-menu\n\nLe menu de démarrage avec deux choix, Raye Linux et Windows, et le compte à rebours.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nJe l'ai prouvé sur une partition Windows de test, dans la machine de test : 50 Go réduits à 23 Go, et chaque fichier de Windows identique avant et après. Pas encore sur un vrai Windows réduit puis redémarré. Sauvegardez avant.\n\nLe menu de démarrage affiche encore « Raye Linux GNU/Linux » au lieu de « Raye Linux ».\n\nSur un PC en mode BIOS d'autrefois, j'ai vu la clé démarrer jusqu'à l'installateur, pas l'installation complète : voir la page Vieux PC.",
+   "title": "Garder Windows à côté",
+   "url": "/installer/#alongside"
+  },
+  {
+   "id": "install:fr:4.0",
+   "lang": "fr",
+   "text": "Pas de partitionnement à la main.\n\nSeule une partition Windows (NTFS) non chiffrée peut être réduite.\n\nUn disque qui porte déjà un autre Linux n'a que le choix « Effacer » : pas de troisième système.\n\nPas de PC 32 bits.",
+   "title": "Ce que l'installateur ne fait pas",
+   "url": "/installer/#not"
+  },
+  {
+   "id": "install:fr:5.0",
+   "lang": "fr",
+   "text": "Le noyau de Raye est signé avec une clé de Raye. Pour que Secure Boot l'accepte, il faut inscrire cette clé une seule fois, et c'est le micrologiciel de votre PC qui le demande, sur un écran bleu au redémarrage, pas Raye. Avant de redémarrer, Raye vous montre un code à six chiffres à retenir.\n\nAppuyez sur une touche\n\nVous avez environ 10 secondes à l'écran bleu pour appuyer sur une touche.\n\nChoisissez Enroll MOK\n\nPuis Continue, puis Yes.\n\nTapez le code\n\nLe code à six chiffres que Raye vous a montré, puis Reboot.\n\nCapture à prendre · enroll-key\n\nL'écran bleu du démarrage où l'on inscrit la clé de Raye : la liste « Enroll MOK » et le champ du code à six chiffres.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nSi vous manquez l'écran bleu, rien de grave : le PC démarre comme avant, avec le noyau du système de base, et Raye vous le redemandera. Sans Secure Boot, il n'y a pas d'écran bleu.\n\nCe qui manque encore\n\nJe l'ai vu marcher dans la machine de test, avec Secure Boot et une puce TPM virtuelle : écran bleu manqué, puis écran bleu réussi, puis démarrage sur le noyau de Raye. Pas encore sur un vrai PC.\n\nLa clé USB d'essai garde le noyau signé d'origine : on n'inscrit rien pour essayer Raye.",
+   "title": "La clé de Raye et l'écran bleu",
+   "url": "/installer/#key"
+  },
+  {
+   "id": "install:fr:6.0",
+   "lang": "fr",
+   "text": "Au premier démarrage, si vous avez chiffré le disque, la puce TPM l'ouvre (sans puce, Raye demande le mot de passe du disque), puis vous tapez le mot de passe de votre compte. La clé de récupération s'affiche à la première connexion (voir Sécurité). Deux minutes plus tard, Raye prépare l'espace des programmes Windows en arrière-plan.\n\nCe qui manque encore\n\nSans chiffrement, le menu de démarrage reste affiché 5 secondes à chaque démarrage.",
+   "title": "Après",
+   "url": "/installer/#after"
+  },
+  {
+   "id": "install:fr:7.0",
+   "lang": "fr",
+   "text": "Si vous avez gardé Windows à côté, il reste là : choisissez-le dans le menu de démarrage, ou « Redémarrer sous Windows » dans Démarrer. Retirer Raye du disque pour rendre toute la place à Windows n'a pas encore d'outil, et je n'ai pas encore essayé de marche à suivre : je ne vous en donne donc pas une.",
+   "title": "Revenir à Windows",
+   "url": "/installer/#back"
+  },
+  {
+   "id": "hardware:fr:0.0",
+   "lang": "fr",
+   "text": "Un processeur Intel ou AMD 64 bits, et un PC qui démarre en mode UEFI (la plupart des PC depuis 2012). Le mode BIOS d'autrefois est en cours d'essai pour la V1 : voir Vieux PC.\n\n8 Go de mémoire conseillés. L'installateur accepte moins, mais je n'ai pas essayé Raye sur un PC de 4 Go.\n\n25 Go d'espace disque libre : c'est ce que l'installateur exige lui-même.\n\nUne clé USB de 8 Go ou plus pour l'installation.\n\nSecure Boot et une puce TPM sont pris en charge, sans être obligatoires.",
+   "title": "Ce qu'il faut",
+   "url": "/materiel/#needs"
+  },
+  {
+   "id": "hardware:fr:1.0",
+   "lang": "fr",
+   "text": "MesureValeurMachine et date\n\nMémoire au repos3 min après l'ouverture de la session, moyenne de 3 relevés\n850 Mo\nMesuré le 19 novembre 2026, version 1.0 Beta 2, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).\n\nÉcran noir au démarrageentre le micrologiciel et l'image de Raye, une capture toutes les 250 ms ; 18,3 s en 0.2\n2,75 à 3 s\nMesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).\n\nDurée de l'installationdu clic sur Installer à « Redémarrage », disque de 64 Go chiffré\n5 min 50 s\nMesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).\n\nRedémarrage pour une mise à jourde l'image de démarrage à l'écran de connexion, pour le thème du bureau\n24 s\nMesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).\n\nRecherche des mises à jourrecherche et téléchargement de 42 mises à jour, 60 Mo en tout\n22 s\nMesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).\n\nLisez chaque chiffre à côté de la machine d'où il vient. La machine de test n'a pas de carte graphique : tout le bureau y est dessiné par le processeur, ce qui gonfle sa mémoire. Environ 120 Mo des 850 Mo sont une réserve du noyau qui grandit avec la mémoire de la machine. Le chiffre est pris trois minutes après l'ouverture de la session, avec free -m.\n\nLe micrologiciel de la machine de test lit le disque à environ 7 Mo/s : ses temps de démarrage servent à comparer deux versions, pas à vous promettre une vitesse. Et après l'image de Raye, un second écran noir, de 3 à 5 s, reste avant l'écran de connexion à chaque démarrage.",
+   "title": "Les mesures",
+   "url": "/materiel/#measures"
+  },
+  {
+   "id": "hardware:fr:1.1",
+   "lang": "fr",
+   "text": "Mon but était 1 Go de mémoire au repos : la machine de test est passée dessous. Les Go et Mo de ce site se comptent comme Windows les compte, par 1 024.",
+   "title": "Les mesures (2)",
+   "url": "/materiel/#measures"
+  },
+  {
+   "id": "hardware:fr:2.0",
+   "lang": "fr",
+   "text": "La machine de test : une machine virtuelle à 8 cœurs et 16 Go de mémoire, sans carte graphique, avec deux écrans virtuels (1280×800 et 1920×1080), Secure Boot activé et une puce TPM 2.0. C'est sur elle que j'installe une version de zéro et que je la mets à jour depuis la précédente, avant de la publier. Je ne l'ai pas toujours fait : les deux séries de correctifs de la 0.2 Bêta 2 n'ont eu que l'essai de mise à jour.\n\nUn Dell Latitude 5420, 16 Go, avec son écran de 1366×768 et un écran externe de 1920×1080 en HDMI, Wi-Fi et Ethernet Intel. Raye y tourne depuis le 1er novembre 2026 et y reçoit ses mises à jour.\n\nCe qui manque encore\n\nSur le Latitude, la mise en veille échoue parfois, et le Wi-Fi comme l'Ethernet mettent du temps à revenir après la veille.\n\nLa mise à jour de son BIOS par Raye Update a échoué une fois, faute d'une pièce ajoutée depuis ; je ne l'ai pas encore vue réussir.",
+   "title": "Les machines essayées",
+   "url": "/materiel/#machines"
+  },
+  {
+   "id": "hardware:fr:3.0",
+   "lang": "fr",
+   "text": "Aucun PC de bureau, aucune carte graphique AMD ou NVIDIA, aucun portable d'une autre marque, aucun PC de 4 Go. Je n'ai pas mesuré Raye contre Windows sur le même PC, ni le démarrage sur un vrai disque NVMe, ni l'autonomie sur batterie, ni un jeu. Si votre PC n'est pas dans cette page, ce qui est le cas de presque tous, dites-moi comment ça s'est passé : bonjour@rayelinux.com.",
+   "title": "Ce que je n'ai pas essayé",
+   "url": "/materiel/#untried"
+  },
+  {
+   "id": "windows:fr:0.0",
+   "lang": "fr",
+   "text": "Double-cliquez sur un fichier .exe ou .msi : il s'ouvre. Il n'y a rien à installer avant, et pas de question. L'installateur du programme fait son travail et ajoute son entrée au menu Démarrer, d'où le programme se lance ensuite comme une appli de Raye.\n\nCapture à prendre · exe-setup\n\nL'installateur d'un programme Windows ouvert d'un double-clic sur son fichier .exe, en cours d'installation.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nChaque programme a son propre espace, si bien qu'un programme qui se comporte mal ne casse pas les autres. Cet espace se prépare en arrière-plan environ deux minutes après votre première connexion, puis de nouveau après certaines mises à jour : 26 secondes de travail, et jusqu'à 3 Go de mémoire pendant ce temps, mesurés sur la machine de test.\n\nCapture à prendre · exe-start\n\nLe même programme Windows dans le menu Démarrer après son installation, puis ouvert sur le bureau.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "Un double-clic",
+   "url": "/programmes-windows/#double-click"
+  },
+  {
+   "id": "windows:fr:1.0",
+   "lang": "fr",
+   "text": "Certains programmes existent aussi pour Raye, comme Discord ou Steam. Si vous double-cliquez sur leur installateur Windows, Raye vous propose plutôt cette version-là, faite pour Raye, qui n'a pas besoin de la couche Windows.\n\nCapture à prendre · exe-native\n\nRaye qui propose la version pour Raye d'un programme au double-clic sur son installateur Windows.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "Quand il existe une version pour Raye",
+   "url": "/programmes-windows/#native"
+  },
+  {
+   "id": "windows:fr:2.0",
+   "lang": "fr",
+   "text": "Voici ce que la couche Windows de Raye apporte d'elle-même, et ce qui lui manque encore. C'est ce qui manque, le plus souvent, qui explique qu'un programme ne démarre pas.\n\nDirect3D vers Vulkan est inclus (DXVK et VKD3D-Proton) : les jeux et programmes en Direct3D 8 à 12 l'utilisent sans réglage.\n\nLes polices de Windows (Arial, Times New Roman, Calibri, Cambria, Tahoma…) sont remplacées par des polices de la même taille, donc les fenêtres gardent leur disposition. Les polices d’origine de Windows ne sont pas incluses : un texte peut avoir l'air un peu différent.\n\nCe qui manque encore : le .NET Framework d’origine de Windows (Raye en fournit une version libre, qui suffit à la plupart des programmes) et le moteur web WebView2 d'Edge. Les programmes qui exigent l'un ou l'autre ne démarrent pas encore.\n\nCe qui manque encore\n\nLe premier programme ouvert après l'installation prend du temps.\n\nCertains installateurs montrent une fenêtre grise à l'ancienne.",
+   "title": "Ce qui manque, et pourquoi certains programmes ne démarrent pas",
+   "url": "/programmes-windows/#missing"
+  },
+  {
+   "id": "windows:fr:3.0",
+   "lang": "fr",
+   "text": "Les jeux protégés par un anti-triche qui s'installe dans le noyau de Windows, comme Valorant ou Fortnite, ne marchent pas. Ce n'est pas un réglage qui manque : il faut que leur éditeur autorise Linux, et ce n'est pas le cas aujourd'hui. Roblox ne démarre pas non plus : son anti-triche refuse la couche Windows.\n\nJe n'ai lancé aucun autre jeu sur un PC qui a une vraie carte graphique, donc je ne publie rien sur eux. Steam s'installe depuis le Raye Store, en version pour Raye.",
+   "title": "Les jeux",
+   "url": "/programmes-windows/#games"
+  },
+  {
+   "id": "windows:fr:4.0",
+   "lang": "fr",
+   "text": "Écrivez-moi son nom et sa version, ce que vous avez fait et ce qui s'est passé, à bonjour@rayelinux.com. La liste des programmes qu'on me signale, c'est ce qui décide de l'ordre dans lequel je règle les choses.",
+   "title": "Si un programme ne marche pas",
+   "url": "/programmes-windows/#report"
+  },
+  {
+   "id": "games:fr:0.0",
+   "lang": "fr",
+   "text": "Steam est dans le Raye Store. Raye l'installe comme un paquet de Raye (APT) plutôt qu'en Flatpak ; si vous l'aviez déjà en Flatpak, Raye le déplace une fois, avec vos jeux et vos réglages, et vous prévient à la connexion. Steam voit vos autres disques : ce qui est monté sous /media, /run/media et /mnt est proposé quand vous ajoutez un dossier de bibliothèque.\n\nCapture à prendre · steam-store\n\nLa page de Steam dans le Raye Store, avec la rangée du format du paquet et le bouton Installer.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nLe mode jeu s'allume tout seul pendant une partie. Heroic, pour les boutiques d'autres éditeurs, est aussi dans le Store.\n\nCe qui manque encore\n\nSur une carte NVIDIA, Steam qui s'ouvre puis n'affiche rien a été signalé. J'ai corrigé ce que j'ai trouvé, sans pouvoir l'essayer sans carte NVIDIA : si ça vous arrive, dites-le moi.",
+   "title": "Steam",
+   "url": "/jeux/#steam"
+  },
+  {
+   "id": "games:fr:1.0",
+   "lang": "fr",
+   "text": "Steam lance les jeux Windows avec Proton, sa couche de compatibilité : c'est elle qui fait tourner la plupart d'entre eux. Raye prévoit sa propre couche, Raye Proton, que vous choisirez pour un jeu dans Steam. Elle est prévue pour la 1.1, pas pour la V1.",
+   "title": "Proton, la couche Windows des jeux",
+   "url": "/jeux/#proton"
+  },
+  {
+   "id": "games:fr:2.0",
+   "lang": "fr",
+   "text": "Un anti-triche est un programme qui surveille le jeu et, parfois, le système. Ce qu'il faut savoir sur Raye tient en trois lignes :\n\nCeux qui vivent dans le noyau de Windows, comme Vanguard de Valorant : ils ne marchent pas sur Raye, et je ne vois pas comment cela changerait.\n\nEasy Anti-Cheat v2 : il existe pour Linux, mais il vérifie le noyau et l'état de Secure Boot, et son éditeur, Epic, tient une liste des clés qu'il accepte. Voir plus bas.\n\nTous les autres : cela dépend du jeu et de son studio. ProtonDB dit, jeu par jeu, ce que les joueurs ont constaté.",
+   "title": "Les anti-triche",
+   "url": "/jeux/#anticheat"
+  },
+  {
+   "id": "games:fr:3.0",
+   "lang": "fr",
+   "text": "Le noyau de Raye est signé avec une clé de Raye, que vous inscrivez une fois dans votre PC. Avec Secure Boot actif, Raye met en route ce qu'Easy Anti-Cheat v2 contrôle : le verrouillage du noyau, kexec coupé et l'IOMMU sans passthrough. Je les ai vérifiés dans la machine de test, avec Secure Boot et une puce TPM virtuelle, pas encore sur un vrai portable.\n\nReste la liste d'Epic. J'ai demandé qu'on y ajoute les clés de Raye ; la réponse n'est pas arrivée. Tant qu'Epic ne les connaît pas, Easy Anti-Cheat v2 refuse le noyau de Raye. Le jour où elles y sont, ce sera écrit ici, pas avant.\n\nCe qui manque encore\n\nMême avec la clé acceptée, un jeu n'est jouable que si son studio a activé Easy Anti-Cheat pour Linux. Fortnite est le but que je me suis donné ; je ne peux pas vous le promettre.\n\nLes PC qui ont déjà inscrit l'ancienne clé de Raye doivent la retirer : Easy Anti-Cheat veut que toutes les clés inscrites soient connues.",
+   "title": "Easy Anti-Cheat v2 et le noyau de Raye",
+   "url": "/jeux/#eac"
+  },
+  {
+   "id": "games:fr:4.0",
+   "lang": "fr",
+   "text": "Raye sait revenir à un affichage plus simple quand le bureau ne démarre pas deux fois de suite, et choisir « Safe graphics » sur la clé aide quand l'écran reste noir. Deux problèmes signalés par des joueurs sont corrigés dans la V1 : les anciennes cartes AMD (RX 400 et 500) qui restaient en basse résolution, et le clignotement noir de cartes NVIDIA sur un écran à 144 Hz. Je n'ai ni l'une ni l'autre de ces cartes : dites-moi si ça marche chez vous.\n\nCe qui manque encore\n\nDes images par seconde faibles dans Counter-Strike 2 ont été signalées sur une GTX 1650 ; je ne l'ai pas mesuré.",
+   "title": "Les cartes graphiques",
+   "url": "/jeux/#graphics"
+  },
+  {
+   "id": "updates:fr:0.0",
+   "lang": "fr",
+   "text": "Attend le redémarrage ce que le système garde chargé tant qu'il tourne : le noyau, les pilotes, les micrologiciels, les pièces centrales du système et le bureau lui-même. Une mise à jour de ce genre porte l'étiquette « Redémarrage requis ». Le reste s'installe dès qu'il est téléchargé, sans que vous ayez rien à faire.\n\nLes correctifs de sécurité font exception : ils s'installent tout de suite, même pour ces pièces-là.\n\nCapture à prendre · update-live\n\nRaye Update dans les Paramètres : des mises à jour déjà installées et une seule marquée « Redémarrage requis ».\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "Ce qui s'installe tout de suite, ce qui attend",
+   "url": "/mises-a-jour/#live"
+  },
+  {
+   "id": "updates:fr:1.0",
+   "lang": "fr",
+   "text": "Ce qui attend s'installe quand vous choisissez « Mettre à jour et redémarrer », dans Démarrer, dans la notification ou dans les Paramètres. Un redémarrage ordinaire n'installe rien, et Raye ne redémarre pas de lui-même, sauf si vous lui avez demandé de le faire en dehors de vos heures d'activité. Pendant l'installation, l'image de Raye montre un anneau et « Installation des mises à jour » avec le pourcentage. Pour le thème du bureau, il s'est écoulé 24 s entre l'image de démarrage et l'écran de connexion sur la machine de test.\n\nCapture à prendre · update-boot\n\nL'écran du redémarrage : l'œil de Raye, l'anneau et « Installation des mises à jour » avec le pourcentage.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nQuand une deuxième mise à jour du même paquet attend, la notification « Redémarrage requis » ne revient pas.\n\nL'écran de verrouillage et Ctrl+Alt+Suppr ne proposent pas encore « Mettre à jour et redémarrer ».",
+   "title": "Le redémarrage",
+   "url": "/mises-a-jour/#restart"
+  },
+  {
+   "id": "updates:fr:2.0",
+   "lang": "fr",
+   "text": "Les mises à jour se téléchargent en arrière-plan et attendent quand votre portable est sur batterie sous 40 %, sur une connexion limitée ou en train de jouer. Vous pouvez tout mettre en pause d'une à cinq semaines, sauf la sécurité. Chercher et télécharger 42 mises à jour, 60 Mo en tout, a pris 22 s sur la machine de test.\n\nCe qui manque encore\n\nSous 40 % de batterie, « Installer maintenant » ne fait rien, et n'affiche rien.",
+   "title": "Quand Raye télécharge, et quand il attend",
+   "url": "/mises-a-jour/#when"
+  },
+  {
+   "id": "updates:fr:3.0",
+   "lang": "fr",
+   "text": "Avant et après chaque installation de mises à jour, Raye prend un point de restauration du système, et les plus anciens partent seuls. Vous pouvez aussi en créer un dans Paramètres, Récupération.\n\nCapture à prendre · restore\n\nPoints de restauration avec la paire « Avant les mises à jour » et « Après les mises à jour ».\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nRevenir au point « Avant les mises à jour » réinstalle ces mêmes mises à jour au démarrage suivant : ne comptez pas encore dessus pour annuler une mise à jour.\n\nUn point créé à la main peut être effacé, sans avertissement, par ceux des mises à jour suivantes.\n\nUn point de restauration garde le système, pas vos fichiers personnels. Sauvegardez-les à part.\n\nOn ne peut pas encore démarrer sur un état précédent depuis le menu de démarrage.",
+   "title": "Les points de restauration",
+   "url": "/mises-a-jour/#restore"
+  },
+  {
+   "id": "updates:fr:4.0",
+   "lang": "fr",
+   "text": "Les paquets de Raye viennent de dl.rayelinux.com et de raye-linux.github.io/packages, deux copies identiques fichier par fichier, signées par la clé dont l'empreinte est EA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E. Firefox vient de Mozilla, et le reste du système des serveurs du système de base ; si le principal ne répond plus, Raye passe tout seul à deux autres.\n\nCe qui manque encore\n\nSans connexion, Raye Update dit qu'il n'a pas pu vérifier : il n'a pas joint les serveurs, rien n'est cassé.",
+   "title": "D'où viennent les mises à jour",
+   "url": "/mises-a-jour/#source"
+  },
+  {
+   "id": "security:fr:0.0",
+   "lang": "fr",
+   "text": "Raye démarre avec Secure Boot activé et les clés que la plupart des PC ont d'usine : sur la machine de test, je n'ai rien eu à changer dans le micrologiciel. Certains PC, souvent vendus comme « Secured-core », n'acceptent d'office que Windows ; il faut alors autoriser, dans les réglages du micrologiciel, les clés dites « tierces » (third-party). Si votre PC refuse quand même de démarrer Raye, écrivez-moi son modèle.",
+   "title": "Secure Boot",
+   "url": "/securite/#secureboot"
+  },
+  {
+   "id": "security:fr:1.0",
+   "lang": "fr",
+   "text": "Si vous cochez « Chiffrer le système Raye » sur la page Disque de l'installateur, vous choisissez un mot de passe du disque, et tout le système est chiffré. Retiré du PC et branché ailleurs, le disque ne se lit pas sans ce mot de passe ou la clé de récupération.\n\nCapture à prendre · setup-encrypt\n\nLa page Disque de l'installateur, case « Chiffrer le système Raye » cochée, avec les deux champs du mot de passe du disque.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nSur un PC qui a une puce TPM, c'est elle qui ouvre le disque au démarrage. Sur ce PC-là, c'est donc le mot de passe de votre compte qui protège vos fichiers, comme avec BitLocker. La puce ne surveille que les réglages de Secure Boot : s'ils changent, ou si le disque est mis dans un autre PC, Raye redemande le mot de passe du disque. D'autres changements dans le démarrage ne le redemandent pas. Sans puce TPM, le mot de passe du disque est demandé à chaque démarrage.\n\nJe l'ai essayé une fois sur la machine de test : une mise à jour du micrologiciel qui révoque d'anciennes clés de démarrage, et le disque s'est ouvert seul après. Si une mise à jour de ce genre s'installe avec d'autres au redémarrage, la clé de récupération peut vous être demandée une fois.",
+   "title": "Le disque chiffré",
+   "url": "/securite/#encryption"
+  },
+  {
+   "id": "security:fr:2.0",
+   "lang": "fr",
+   "text": "À la première connexion, une fenêtre montre une clé de récupération : huit groupes de six chiffres. Elle ouvre le disque si vous oubliez son mot de passe. Copiez-la, notez-la sur papier ou dans un gestionnaire de mots de passe, gardez-la ailleurs que sur l'ordinateur, puis confirmez avec « J'ai enregistré ma clé ».\n\nCapture à prendre · recovery-key\n\nLa fenêtre de la clé de récupération à la première connexion, la clé elle-même floutée.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "La clé de récupération",
+   "url": "/securite/#recovery"
+  },
+  {
+   "id": "security:fr:3.0",
+   "lang": "fr",
+   "text": "Quand une appli veut modifier le système, l'écran s'assombrit et Raye demande votre mot de passe, avec le nom de l'éditeur, comme sous Windows 11. L'invite n'expire pas : sur un compte standard, vous avez le temps d'aller demander le mot de passe à l'administrateur du PC. Les mises à jour, elles, s'installent sans le demander.\n\nCapture à prendre · uac\n\nL'invite de mot de passe : l'écran assombri, « Éditeur vérifié : Raye Linux », Oui et Non.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nL'invite nomme parfois le programme technique plutôt que l'appli qui le demande.\n\nOn ne peut pas encore chiffrer ou déchiffrer le disque une fois Raye installé : c'est un choix à faire à l'installation.",
+   "title": "Le mot de passe avant qu'une appli change le système",
+   "url": "/securite/#prompt"
+  },
+  {
+   "id": "security:fr:4.0",
+   "lang": "fr",
+   "text": "Le noyau Raye, qu'on active dans Paramètres, Pilotes, montre un écran violet avec l'œil de Raye si le système plante, puis redémarre seul après 30 secondes. Le noyau d'origine reste installé et reste celui par défaut.\n\nAvec Secure Boot, sa clé s'inscrit au redémarrage qui suit, en trois gestes : un écran bleu apparaît, appuyez sur une touche dans les 10 secondes, choisissez « Enroll MOK », puis tapez le code à six chiffres que les Paramètres vous ont montré. Si les 10 secondes passent, Raye démarre sur le noyau d'origine.",
+   "title": "Si le PC plante",
+   "url": "/securite/#crash"
+  },
+  {
+   "id": "security:fr:5.0",
+   "lang": "fr",
+   "text": "Raye Update interroge les deux copies des paquets de Raye, les serveurs du système de base, ceux de Mozilla pour Firefox, et le service des micrologiciels pour les mises à jour du BIOS et des appareils. Le Store interroge Flathub. Le système vérifie aussi qu'Internet répond, pour repérer un réseau d'hôtel qui demande de se connecter, et règle son heure sur un serveur de temps. Firefox ouvre rayelinux.com à son démarrage, sans publicité et sans bandeau « géré par votre organisation ».\n\nDeux choses ne partent que si vous les avez acceptées : votre position, quand une appli la demande et que vous dites oui, et des statistiques d'usage anonymes, une case décochée au départ sur la page Confidentialité de l'installateur.\n\nCette liste vient de ce que je sais du code. Je n'ai pas encore observé une installation neuve pendant une heure pour la vérifier adresse par adresse ; quand ce sera fait, le relevé sera sur cette page.\n\nCe site ne pose aucun témoin et ne charge rien d'un autre site ; sa politique de confidentialité dit ce qu'il garde.",
+   "title": "Ce que Raye envoie sur Internet",
+   "url": "/securite/#network"
+  },
+  {
+   "id": "oldpcs:fr:0.0",
+   "lang": "fr",
+   "text": "Dans une machine virtuelle en mode BIOS d'autrefois, avec 2 Go de mémoire, un processeur générique et une carte graphique simple, la clé démarre, et l'installateur s'ouvre en une vingtaine de secondes.\n\nL'installateur dit alors, dès sa première page, que le processeur est ancien : certains programmes et certains jeux en demandent un plus récent. Il ne bloque pas l'installation.",
+   "title": "Ce que j'ai vu",
+   "url": "/vieux-pc/#seen"
+  },
+  {
+   "id": "oldpcs:fr:1.0",
+   "lang": "fr",
+   "text": "Le démarrage en mode BIOS, jusqu'à l'installation complète.\n\nLes processeurs 64 bits anciens, comme le Core 2 Duo.\n\n2 à 4 Go de mémoire.\n\nUne carte graphique sans accélération 3D.\n\nCe qui manque encore\n\nL'installation complète en mode BIOS n'a pas été refaite avec la version actuelle : seul le démarrage jusqu'à l'installateur a été vu.\n\nAucune mesure sur un vrai PC de 2 ou 4 Go. Avec moins de 4 Go, je ne sais pas si le bureau reste agréable : 8 Go restent conseillés.\n\nRaye est 64 bits : un PC 32 bits, ou un processeur de 64 bits trop ancien pour le système de base, ne peut pas le démarrer.",
+   "title": "Ce que j'essaie pour la V1",
+   "url": "/vieux-pc/#tried"
+  },
+  {
+   "id": "oldpcs:fr:2.0",
+   "lang": "fr",
+   "text": "Si vous avez un PC ancien, essayez la session d'essai depuis la clé : elle ne touche pas au disque. Puis dites-moi, sur Discord ou à bonjour@rayelinux.com, le modèle du PC, ce qui s'est passé, et le fichier raye-gpu.txt si l'écran est resté noir ou en basse résolution. C'est comme ça que cette page s'allongera.",
+   "title": "Si vous essayez",
+   "url": "/vieux-pc/#yours"
+  },
+  {
+   "id": "desktops:fr:0.0",
+   "lang": "fr",
+   "text": "Le bureau de Raye reprend la disposition de Windows 11 : barre centrée, Démarrer, fenêtres qu'on glisse et qu'on accroche. C'est celui qu'on a après l'installation.\n\nHyprland est un bureau où les fenêtres se rangent côte à côte sans qu'on les place, et où l'on fait presque tout au clavier. Il est pour qui le connaît déjà, ou veut l'apprendre. Raye lui met sa barre, son thème et ses applis, et l'installation propose Hyprland si vous le voulez.\n\nCapture à prendre · desktop-choice\n\nParamètres, page Environnement de bureau : les deux cartes, le bureau de Raye et Hyprland, avec celle qui est utilisée.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nLe choix se fait dans Paramètres > Personnalisation > Environnement de bureau, ou sur l'écran de connexion, avec le bouton Bureau en bas à droite. Passer de l'un à l'autre rouvre l'Explorateur et les Paramètres sur le nouveau bureau.\n\nCapture à prendre · hypr-session\n\nLa session Hyprland de Raye : des fenêtres rangées côte à côte, et la barre de Raye en haut avec l'horloge.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "Choisir",
+   "url": "/deux-bureaux/#choose"
+  },
+  {
+   "id": "desktops:fr:1.0",
+   "lang": "fr",
+   "text": "Raye garde sa configuration d'Hyprland pour elle et vous laisse un fichier à vous : user.conf. Raye ne l'écrase jamais, même à une mise à jour. Sur la page Environnement de bureau, « Ouvrir mes réglages Hyprland » l'ouvre dans l'éditeur, et raye-hyprland-config recharge, ouvre ou revient aux réglages de Raye depuis le terminal. Pour y revenir d'un coup, il suffit de retirer vos lignes.",
+   "title": "Le régler à votre façon",
+   "url": "/deux-bureaux/#yours"
+  },
+  {
+   "id": "desktops:fr:2.0",
+   "lang": "fr",
+   "text": "Le manuel de Raye a un chapitre sur Hyprland, « Hyprland sur Raye », ouvert par le bouton « Guide Hyprland » de la même page. Il dit où sont les fichiers, ce qu'on peut changer et comment : écarts, bordures, coins, flou, animations, raccourcis, règles de fenêtres, écrans et échelle, clavier, démarrage, fond d'écran, barre, verrouillage et veille. Chaque exemple est à copier, et tous passent la vérification de configuration d'Hyprland. Il dit aussi comment régler les applis de Raye (thème, icônes, curseur, polices) et que faire quand l'une s'affiche mal.",
+   "title": "Le guide",
+   "url": "/deux-bureaux/#guide"
+  },
+  {
+   "id": "desktops:fr:3.0",
+   "lang": "fr",
+   "text": "Beaucoup de gens publient leur configuration d'Hyprland. Raye peut en installer une d'une commande, raye-hyprland-config dots install suivie de l'adresse du dépôt. Avant de lancer quoi que ce soit, la commande sauvegarde vos réglages, vous montre le script et ce qu'il touche (sudo, installation de paquets, suppressions) et vous demande de taper yes. Sans réponse, rien n'est modifié. dots restore remet l'état d'avant, et le bureau de Raye revient tout seul à la connexion suivante si la configuration installée plante au démarrage.\n\nCe qui manque encore\n\nBeaucoup de ces configurations sont écrites pour d'autres systèmes : leur script peut ne pas marcher sur Raye. Dans ce cas la sauvegarde vous protège, mais l'installation n'aboutit pas. Je n'ai pas encore essayé un dépôt public de bout en bout.\n\nSous Hyprland, les Paramètres chargent leurs 90 pages sans erreur, mais je ne les ai pas toutes regardées à l'écran. Éclairage nocturne et Multitâche sont marqués « Disponible sous le bureau de Raye », car ils ne commandent que ce bureau. La souris, l'écran de verrouillage et les effets de transparence se règlent dans le fichier d'Hyprland plutôt que dans les Paramètres.",
+   "title": "Les réglages des autres",
+   "url": "/deux-bureaux/#others"
+  },
+  {
+   "id": "desktop:fr:0.0",
+   "lang": "fr",
+   "text": "La barre est centrée : Démarrer, la recherche, vos applis épinglées, puis l'horloge à droite. Avec deux écrans, chacun a sa barre et son horloge ; les icônes de notification restent sur l'écran principal, comme sous Windows 11. Une fenêtre réduite garde son bouton.\n\nDémarrer montre vos applis épinglées, puis « Toutes les applications » en catégories, en grille ou en liste. Les applis portent les noms de Windows : Calculatrice, Paint, Photos, Lecteur multimédia, Gestionnaire des tâches.\n\nCapture à prendre · start-all\n\nLe menu Démarrer sur Toutes les applications, rangées en catégories.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nLe champ de recherche et la section Recommandé ne sont pas encore ceux de Windows 11.\n\nDémarrer et certains menus s'ouvrent avec un temps de retard, et leurs animations ne sont pas encore celles de Windows 11.",
+   "title": "La barre des tâches et Démarrer",
+   "url": "/bureau/#taskbar"
+  },
+  {
+   "id": "desktop:fr:1.0",
+   "lang": "fr",
+   "text": "Ceux-ci ont été essayés un par un. Le menu de Win+X s'ouvre aussi d'un clic droit sur Démarrer, sur l'écran où est la souris.\n\nCtrl+Maj+Échap\n\nGestionnaire des tâches\n\nWin+E\n\nExplorateur de fichiers\n\nWin+R\n\nExécuter : control, regedit, et notepad, qui ouvre l'éditeur de texte\n\nWin+X\n\nLiens rapides : applications installées, gestion des disques, terminal, arrêter…\n\nCapture à prendre · win-x\n\nLe menu des liens rapides ouvert par Win+X, au-dessus du bouton Démarrer.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "Les raccourcis",
+   "url": "/bureau/#keys"
+  },
+  {
+   "id": "desktop:fr:2.0",
+   "lang": "fr",
+   "text": "Glissez une fenêtre vers le haut de l'écran : la barre des dispositions apparaît, et une zone pâle montre où la fenêtre va se poser. Lâchez, elle s'y place. Sur un écran de 1920×1080, il y a six dispositions. Sur le bureau, Ctrl et la molette changent la taille des icônes.\n\nCapture à prendre · snap\n\nUne fenêtre glissée vers le haut de l'écran : la barre des dispositions et la zone où elle va se placer.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "Ranger les fenêtres",
+   "url": "/bureau/#windows"
+  },
+  {
+   "id": "desktop:fr:3.0",
+   "lang": "fr",
+   "text": "Un clic à droite de la barre ouvre le réseau, le son et, sur un portable, la luminosité. Un clic au milieu d'une tuile l'allume ou l'éteint ; sa flèche ouvre une petite page dans le volet ; un clic droit mène aux Paramètres. Avec un câble branché, la tuile s'appelle Ethernet.\n\nCapture à prendre · quick\n\nLes paramètres rapides ouverts depuis la barre : le réseau et le son, avec la tuile Ethernet du réseau filaire.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "Les paramètres rapides",
+   "url": "/bureau/#quick"
+  },
+  {
+   "id": "desktop:fr:4.0",
+   "lang": "fr",
+   "text": "Les dossiers s'ouvrent en onglets, dans la barre de titre, et la barre d'adresse sert aussi à chercher. Les Propriétés d'un lecteur donnent l'espace utilisé et libre à l'octet près, avec un bouton Nettoyer pour faire de la place.\n\nIl n'y a pas de lettres de lecteur. Dans Ce PC, le disque du système s'appelle Raye, et une partition Windows s'appelle Windows. C'est un choix : une lettre ne dit rien de ce qu'il y a dessus.\n\nCapture à prendre · thispc\n\nCe PC dans l'Explorateur, et la fenêtre Propriétés du lecteur Raye avec l'espace utilisé et libre.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "L'Explorateur de fichiers",
+   "url": "/bureau/#explorer"
+  },
+  {
+   "id": "desktop:fr:5.0",
+   "lang": "fr",
+   "text": "Ctrl+Maj+Échap l'ouvre sur Processus. Il a aussi Performances, Applications de démarrage, Utilisateurs, Détails et Services, avec les services qui tournent sur votre PC.\n\nCapture à prendre · taskmgr\n\nLe Gestionnaire des tâches sur la page Processus, ouvert avec Ctrl+Maj+Échap.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nLe premier lancement prend plusieurs secondes.\n\nJe n'ai vu les pages autres que Processus que sur un écran virtuel, pas encore dans une session ouverte.\n\n« Exécuter en tant qu'administrateur » ne lance pas un programme qui a une fenêtre, et ne dit rien.\n\nQuatre messages de confirmation restent en anglais dans une session en français.\n\nLa page Utilisateurs n'a pas de bouton « Se déconnecter ».\n\nDémarrer ou arrêter un service depuis la page Services n'a pas encore été essayé jusqu'au bout.",
+   "title": "Le Gestionnaire des tâches",
+   "url": "/bureau/#taskmgr"
+  },
+  {
+   "id": "desktop:fr:6.0",
+   "lang": "fr",
+   "text": "Une seule fenêtre, la liste des catégories à gauche. On y choisit l'écran principal, les mises à jour, les pilotes. Quand une page de Windows n'a pas d'équivalent dans Raye, elle le dit et renvoie au manuel plutôt que de rester vide.\n\nCapture à prendre · settings\n\nLa fenêtre Paramètres sur la page Système, avec la liste des catégories à gauche.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nDans Applications installées, le menu « … » s'affiche transparent.\n\nPlusieurs pages ne sont pas finies.",
+   "title": "Les Paramètres",
+   "url": "/bureau/#settings"
+  },
+  {
+   "id": "desktop:fr:7.0",
+   "lang": "fr",
+   "text": "Win+R, control : le Panneau de configuration, par catégories. « Changer l'arrière-plan » ouvre la bonne page des Paramètres.\n\nCapture à prendre · control\n\nLe Panneau de configuration ouvert par Win+R puis control, en vue par catégories.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nWin+R, regedit : l'Éditeur du Registre de Raye. Raye n'a pas de registre ; l'éditeur montre ses vrais fichiers de réglages sous la forme d'un arbre, HKEY_CURRENT_USER pour les vôtres, HKEY_LOCAL_MACHINE pour ceux du système. Écrire dans le système demande votre mot de passe, une copie est faite avant chaque écriture, et Édition, Annuler remet le fichier exactement comme il était.\n\nCapture à prendre · regedit\n\nL'Éditeur du Registre de Raye sur une clé, avec l'invite de mot de passe par-dessus avant une écriture système.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nCtrl+Z au clavier ne fait rien encore : passez par le menu Édition.\n\nUne fois votre mot de passe tapé, l'éditeur peut écrire dans le système pendant cinq minutes sans le redemander.\n\nUn fichier de réglages d'une appli de Raye modifié ici n'est plus remplacé par les mises à jour suivantes de cette appli.",
+   "title": "Le Panneau de configuration et l'Éditeur du Registre",
+   "url": "/bureau/#control"
+  },
+  {
+   "id": "desktop:fr:8.0",
+   "lang": "fr",
+   "text": "Créez un événement, fermez la fenêtre : entre deux rappels, aucun programme du Calendrier ne tourne. Le rappel arrive quand même à l'heure, avec « Plus tard » et « Ignorer ». L'horloge de la barre montre les événements du jour. Tout tient dans un seul fichier .ics sur votre PC, qu'on peut importer et exporter.\n\nCapture à prendre · calendar\n\nL'horloge de la barre ouverte sur le mois, et un rappel du Calendrier affiché en notification.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nOn ne peut pas encore glisser un événement, modifier une seule occurrence d'une série, ni afficher les numéros de semaine.\n\nEn anglais, les dates sont encore dans l'ordre français, et les heures des rappels sur 24 heures.",
+   "title": "Le Calendrier",
+   "url": "/bureau/#calendar"
+  },
+  {
+   "id": "desktop:fr:9.0",
+   "lang": "fr",
+   "text": "Les applis de Flathub et celles de Raye, au même endroit. Pendant une installation, vous voyez la progression et pouvez annuler ; ensuite, Ouvrir et Désinstaller. Une appli proposée par deux sources n'apparaît qu'une fois.\n\nCapture à prendre · store\n\nLe Raye Store pendant l'installation d'une appli, avec la progression et le bouton Annuler.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.",
+   "title": "Le Raye Store",
+   "url": "/bureau/#store"
+  },
+  {
+   "id": "desktop:fr:10.0",
+   "lang": "fr",
+   "text": "Le champ du mot de passe s'affiche sur l'écran où est la souris. Arrêter et Redémarrer marchent depuis l'écran de connexion.\n\nCapture à prendre · lock\n\nL'écran de verrouillage de Raye, avec l'heure, la date et le champ du mot de passe.\n\nEmplacement réservé : la capture sera prise sur la version 1.0.\n\nCe qui manque encore\n\nL'image de compte n'est pas la même à la connexion et au verrouillage.",
+   "title": "Le verrouillage et la connexion",
+   "url": "/bureau/#lock"
+  },
+  {
+   "id": "desktop:fr:11.0",
+   "lang": "fr",
+   "text": "Le terminal, l'outil de capture d'écran et quelques boîtes de dialogue ont les couleurs de Raye, mais pas encore sa forme. Il n'y a pas d'appli Bloc-notes : notepad ouvre l'éditeur de texte.",
+   "title": "Ce qui n'a pas encore la forme de Raye",
+   "url": "/bureau/#unfinished"
+  },
+  {
+   "id": "v1:fr:0.0",
+   "lang": "fr",
+   "text": "La clé USB démarre sur l'essai de Raye, avec une icône Installer sur le bureau. L'installateur s'ouvre en plein écran. Détails sur la page Installer.\n\nLe menu de démarrage est en anglais seulement, et plusieurs défauts de l'installateur sont corrigés : le bouton Accessibilité décalé, le champ du Wi-Fi, la fenêtre de copie qui restait sur « Finishing writing ».\n\nUn noyau Raye, qui remplace celui du système de base : des correctifs de la communauté pour la réactivité, la mémoire et la veille, plus les réglages de Raye. Le passage de l'un à l'autre demande d'inscrire une clé une seule fois, sur un écran bleu au redémarrage (page Installer).",
+   "title": "Installer et démarrer",
+   "url": "/nouveautes/#install"
+  },
+  {
+   "id": "v1:fr:1.0",
+   "lang": "fr",
+   "text": "Steam voit vos autres disques : ce qui est monté sous /media, /run/media et /mnt. Prouvé dans la machine de test, pour Steam installé par le Store.\n\nUn correctif pour les anciennes cartes AMD (RX 400 et 500), qui restaient en basse résolution ou sur un écran noir, et un pour le clignotement noir des cartes NVIDIA sur un écran à 144 Hz.\n\nRaye est prêt pour Easy Anti-Cheat v2 : la clé de son noyau a été demandée à Epic. Tout est sur la page Jeux.",
+   "title": "Jeux et cartes graphiques",
+   "url": "/nouveautes/#games"
+  },
+  {
+   "id": "v1:fr:2.0",
+   "lang": "fr",
+   "text": "La même mémoire au repos sur tous les PC, environ 850 Mo, même avec beaucoup de RAM. Avant, le noyau en réservait d'autant plus que la machine en avait.\n\nPlus de gel quand la mémoire manque : le PC ralentit un peu.\n\nDes services inutiles retirés et des réglages de fond, pour un Raye plus léger et plus stable.\n\nLes applis Electron qui plantaient au lancement (Qoder, entre autres) démarrent.",
+   "title": "Mémoire et stabilité",
+   "url": "/nouveautes/#memory"
+  },
+  {
+   "id": "v1:fr:3.0",
+   "lang": "fr",
+   "text": "L'Explorateur s'ouvre tout de suite, même quand un disque réseau ne répond pas.\n\nLa fenêtre de copie vers une clé USB montre la vraie vitesse, avec ses boutons Réduire et Fermer.\n\nLe champ du mot de passe Wi-Fi des paramètres rapides garde le curseur pendant que la liste des réseaux se rafraîchit.\n\nUn VPN WireGuard en un clic : importez un fichier, allumez-le depuis les paramètres rapides.\n\nLe Centre d'information ouvre le Gestionnaire des tâches de Raye et en prend l'allure.\n\nLa page Programmes Windows liste aussi ceux installés depuis le Store.\n\nLe Store prend les paquets APT d'abord, Flatpak seulement quand il n'y a pas d'APT, et accepte les AppImage. Les applis que vous avez en Flatpak passent en APT une seule fois, sans rien perdre.",
+   "title": "Fichiers, réseau et applis",
+   "url": "/nouveautes/#apps"
+  },
+  {
+   "id": "v1:fr:4.0",
+   "lang": "fr",
+   "text": "Le nouveau logo de Raye, dans le système, l'installateur, le site et Discord, avec une nouvelle animation de démarrage.\n\nParamètres de la barre des tâches : à gauche ou au centre, taille des icônes, hauteur, masquage automatique.\n\nDes fenêtres qui ondulent quand on les déplace, avec un interrupteur dans les Paramètres.",
+   "title": "Le bureau et son allure",
+   "url": "/nouveautes/#look"
+  },
+  {
+   "id": "v1:fr:5.0",
+   "lang": "fr",
+   "text": "Une session Hyprland plus souple, des Paramètres et des applis de Raye qui marchent dessus, et un guide complet. Tout est sur la page Deux bureaux.\n\nCe qui manque encore\n\nUne partie de la V1 est encore en cours et n'est pas listée plus haut : le compte Raye et Raye Community en bêta, Raye Proton, plus de matériel qui marche d'emblée, la page Imprimantes et scanners, l'écran de déverrouillage du disque chiffré, le pont complet avec Windows, la barre des tâches en haut ou sur le côté. Chaque ligne passe ici quand elle est faite ; la feuille de route dit où elles en sont.\n\nLes correctifs pour les anciennes cartes AMD et pour les cartes NVIDIA n'ont pas été essayés sur une vraie carte : la machine de test n'a pas de carte graphique.\n\nLes PC anciens (démarrage en mode BIOS, processeurs comme le Core 2 Duo, 2 à 4 Go de mémoire) sont encore en cours d'essai. Voir la page Vieux PC.\n\nLe noyau de Raye n'a pas encore été essayé sur un vrai PC avec Secure Boot, ni avec une vraie carte NVIDIA, et l'hibernation est bloquée quand Secure Boot est actif.\n\nJe repasse encore chaque écran en français, installateur compris.\n\nLe VPN WireGuard et les réglages de la barre ont été vus dans la machine de test ; je n'ai pas encore vu l'ondulation des fenêtres, que le rendu de la machine de test ne peut pas montrer.",
+   "title": "Hyprland",
+   "url": "/nouveautes/#hypr"
   },
   {
    "id": "faq:en:0",
    "lang": "en",
-   "text": "One person, techoraye, in Québec. I started Raye in 2026 because I wanted a Linux you can pick up without relearning everything. The public beta came out on November 14, 2026. The easiest way to reach me is the Discord server, or bonjour@rayelinux.com.",
-   "title": "Who makes Raye Linux?",
-   "url": "/en/#questions"
+   "text": "Yes. Raye costs nothing to download or use, and there are no ads in it.",
+   "title": "Is it free?",
+   "url": "/en/questions/#q1"
   },
   {
    "id": "faq:en:1",
    "lang": "en",
-   "text": "Yes. Raye Linux costs nothing to download or use, and there are no ads in it.",
-   "title": "Is it free?",
-   "url": "/en/#questions"
+   "text": "No. Raye keeps the Windows 11 layout so your habits work, but it's a different system. Windows programs go through a compatibility layer, with the limits described on the Windows programs page.",
+   "title": "Is it Windows?",
+   "url": "/en/questions/#q2"
   },
   {
    "id": "faq:en:2",
    "lang": "en",
-   "text": "Raye Linux is based on Ubuntu 26.04 LTS. That gives it years of security fixes and drivers for most PCs. The desktop, the apps and the settings on top are ours.",
+   "text": "Raye Linux is based on Ubuntu 26.04 LTS, which provides years of security fixes for the base system and drivers for most PCs. The desktop, the apps, the installer and the updates on top are Raye's, and Raye keeps them up to date. Raye is not affiliated with Canonical or endorsed by it.",
    "title": "What is it built on?",
-   "url": "/en/#questions"
+   "url": "/en/questions/#q3"
   },
   {
    "id": "faq:en:3",
    "lang": "en",
-   "text": "Yes. Write the image to a USB stick, start from it and pick \"Try Raye Linux without installing\": Raye runs from the stick and nothing changes on your PC. To install it later, restart and pick \"Install Raye Linux\".",
-   "title": "Can I try it before installing?",
-   "url": "/en/#questions"
+   "text": "Yes, and that's what the USB stick does by default: it starts on “Try Raye Linux without installing”. Raye runs from the stick and touches neither your PC's disk nor its swap. The Install icon is on the desktop when you want to go on to the install.",
+   "title": "Can I try it without installing?",
+   "url": "/en/questions/#q4"
   },
   {
    "id": "faq:en:4",
    "lang": "en",
-   "text": "Yes. Setup can put Raye next to the system you have, shrinking it safely, and asks before it changes anything. If Raye replaces it, the \"Replace … and keep my files\" choice keeps your Desktop, Documents, Downloads, Music, Pictures and Videos, with your wallpaper, Wi-Fi networks and browser profile. Installed next to it, Raye offers to copy your files over after the first sign-in. Back up first anyway.",
-   "title": "Can I keep my current system and my files?",
-   "url": "/en/#questions"
+   "text": "An .exe starts with a double-click. On its first start, Raye gives it what programs often ask for (.NET 6 to 9, Visual Basic 6, MFC, OpenAL, PhysX) by itself. The Store has Windows programs installed and tried one by one, and says which ones only partly work, such as FL Studio and Affinity. Discord, Steam, VLC, GIMP or LibreOffice exist as Raye versions, in the Store.",
+   "title": "Will my programs work?",
+   "url": "/en/questions/#q5"
   },
   {
    "id": "faq:en:5",
    "lang": "en",
-   "text": "Many .exe programs install and open with a double-click, and get what they need by themselves the first time they start. The Store has the usual free apps and .exe programs tried one by one. Some programs don't run yet. If one you need is missing, send me its name: that's how I decide what to fix first.",
-   "title": "Will my programs still work?",
-   "url": "/en/#questions"
+   "text": "Steam and Heroic are in the Store, and Game Mode turns on by itself while you play. Roblox runs through Sober. Games with an anti-cheat in the Windows kernel, such as Valorant, don't work. Easy Anti-Cheat v2 waits for Raye's key to be accepted by Epic: it's all on the Games page.",
+   "title": "What about my games?",
+   "url": "/en/questions/#q6"
   },
   {
    "id": "faq:en:6",
    "lang": "en",
-   "text": "Steam and Heroic are in the Store, and Game Mode turns on by itself while you play. Roblox runs through Sober, also in the Store. Games with a kernel anti-cheat, like Valorant or Fortnite, don't run.",
-   "title": "What about my games?",
-   "url": "/en/#questions"
+   "text": "If Secure Boot is on and you move to Raye's kernel, your PC's firmware asks once to enroll Raye's key. Raye shows you a six-digit code beforehand: press a key within 10 seconds, choose Enroll MOK, Continue, Yes, type the code, then Reboot. If you miss the screen, no harm done. See the Install page.",
+   "title": "What is that blue screen at restart?",
+   "url": "/en/questions/#q7"
   },
   {
    "id": "faq:en:7",
    "lang": "en",
-   "text": "A 64-bit Intel or AMD PC that starts in UEFI mode or the older BIOS mode, with at least 4 GB of memory. Once started, with nothing open, Raye uses about 850 MB of it (measured in a test virtual machine): the rest is for your apps, and 8 GB is better for lots of tabs or games. The full list is on the download page.",
-   "title": "What kind of PC do I need?",
-   "url": "/en/#questions"
+   "text": "Yes: Hyprland, where windows line up side by side and you do almost everything with the keyboard. Both are in the same install. See Two desktops.",
+   "title": "Is there another desktop besides the one that looks like Windows?",
+   "url": "/en/questions/#q8"
   },
   {
    "id": "faq:en:8",
    "lang": "en",
-   "text": "Raye also starts in the older BIOS mode. If the processor is old, Setup says so on its first page: Raye runs, but some apps and games need a newer one. We tried it in a test virtual machine in BIOS mode, with an older processor, no 3D and 2 GB of memory: Raye starts, installs and opens the desktop. 4 GB or more is still recommended.",
-   "title": "What about an older PC?",
-   "url": "/en/#questions"
+   "text": "Yes, Raye can go alongside it. If Windows is encrypted by BitLocker, you first have to turn that encryption off in Windows. Read the warning on the Install page, and back up your files.",
+   "title": "Can I keep Windows?",
+   "url": "/en/questions/#q9"
   },
   {
    "id": "faq:en:9",
    "lang": "en",
-   "text": "Many Chromebooks with an Intel or AMD processor can run Raye, with a community firmware called MrChromebox. Raye sets up the top row of keys. It takes more work than a PC: the steps are in the Raye handbook, on the source code page. Chromebooks with an ARM processor are not supported.",
-   "title": "What about a Chromebook?",
-   "url": "/en/#questions"
+   "text": "If Windows is alongside, its partition shows in This PC under the name Windows, and after the first sign-in Raye offers Settings > Accounts > Files from Windows to copy your folders, wallpaper and favorites. If Raye replaces Windows, “Replace Windows and keep my files” keeps your folders, wallpaper, Wi-Fi networks and browser profile.",
+   "title": "What about my Windows files?",
+   "url": "/en/questions/#q10"
   },
   {
    "id": "faq:en:10",
    "lang": "en",
-   "text": "On the USB stick's menu, pick \"Safe graphics\". Once Raye is installed, if the desktop fails to show twice in a row, Raye switches to a simpler display mode by itself. Some older AMD cards (RX 550…) still have trouble: say so on the Discord server, in #bugs, with the name of your card.",
-   "title": "The screen stays black. What do I do?",
-   "url": "/en/#questions"
+   "text": "Yes: Settings > Personalization > Desktop style > Windows 10 style. The taskbar moves to the left with a search box, corners become square and Start gets an app list with tiles.",
+   "title": "Can I have the Windows 10 look?",
+   "url": "/en/questions/#q11"
   },
   {
    "id": "faq:en:11",
    "lang": "en",
-   "text": "Raye notices: the first time it warns you, and the second time in a row it turns sleep off. Closing the lid then locks the PC and turns the screen off. You can turn sleep back on in Settings > System > Power & battery.",
-   "title": "My laptop doesn't wake up from sleep.",
-   "url": "/en/#questions"
+   "text": "850 MB once you've signed in, measured on the test machine, which has no graphics card. On a real PC the figure will differ, and it will be on the Hardware page. 8 GB is recommended.",
+   "title": "How much memory does Raye use?",
+   "url": "/en/questions/#q12"
   },
   {
    "id": "faq:en:12",
    "lang": "en",
-   "text": "The firewall is on from the start, each Wi-Fi network sees a private hardware address, Secure Boot can stay on, and if you encrypt the disk the TPM chip unlocks it on your PC only. Encrypted DNS is one click away in the network's settings. Updates come by themselves.",
-   "title": "Is it safe?",
-   "url": "/en/#questions"
+   "text": "Raye starts in UEFI, and the stick also starts in the older BIOS mode: I saw it in a 2 GB virtual machine. If the processor is old, the installer says so on its first page, without stopping: some apps and games need a newer one. No real old PC has been tried yet: it's all on the Older PCs page.",
+   "title": "What about an older PC?",
+   "url": "/en/questions/#q13"
   },
   {
    "id": "faq:en:13",
    "lang": "en",
-   "text": "Raye Update finds and installs them by itself; the ones that touch the system wait until you choose to restart. Those of the base system come from a server in your country when there is one. The beta doesn't expire: you never need to reinstall to get the next one.",
-   "title": "How do updates work?",
-   "url": "/en/#questions"
+   "text": "Raye notices: the first time it warns you, the second time in a row it turns sleep off, and closing the lid locks the PC and turns the screen off. Settings > System > Power & battery turns it back on.",
+   "title": "My laptop doesn't wake from sleep.",
+   "url": "/en/questions/#q14"
   },
   {
    "id": "faq:en:14",
    "lang": "en",
-   "text": "Yes. In Settings > Personalization > Desktop style, the classic style puts the taskbar on the left with a search box, makes the corners square and gives Start a list of apps with tiles.",
-   "title": "Can I have the taskbar on the left and tiles in Start?",
-   "url": "/en/#questions"
+   "text": "Because a letter says nothing about what's on a disk. The system disk is called Raye, a Windows partition is called Windows.",
+   "title": "Why is there no C: drive?",
+   "url": "/en/questions/#q15"
   },
   {
    "id": "faq:en:15",
    "lang": "en",
-   "text": "Setup lets you pick KDE Plasma (recommended) or Hyprland, a tiling desktop. Both get Raye's taskbar and Start menu. Hyprland is newer and less tested.",
-   "title": "Can I use another desktop than KDE Plasma?",
-   "url": "/en/#questions"
+   "text": "No. The ones that don't need a restart install while you work; the others wait until you choose “Update and restart”. See Updates.",
+   "title": "Will an update restart my PC while I work?",
+   "url": "/en/questions/#q16"
   },
   {
    "id": "faq:en:16",
    "lang": "en",
-   "text": "Yes, the team is recruiting: developers, moderators, support helpers, testers, translators, designers and video creators. Join the Discord server and apply in the #join-the-team channel: a few questions, then the team replies to you.",
-   "title": "Can I help build Raye?",
-   "url": "/en/#questions"
+   "text": "No voice typing, no RGB lighting, no wireless casting to a screen, no Quick Assist, no live captions, no find-my-device, no family accounts or backup to the Windows cloud. The handbook says, for each, what you can do instead.",
+   "title": "What doesn't Raye do?",
+   "url": "/en/questions/#q17"
   },
   {
    "id": "faq:en:17",
    "lang": "en",
-   "text": "The 1.0 betas come out one after the other, and you always download the newest. Raye Update brings each new beta to Raye already installed. What's left before the final 1.0 is on the roadmap. Leave your email if you want me to write you the day it's out.",
-   "title": "What about 1.0?",
-   "url": "/en/#questions"
+   "text": "No: no usage reports and no crash reports, and no ads. Like any download, the update servers see your PC's IP address and what is downloaded (Raye Update, the Store, Firefox). The detail, with the durations, is on the Privacy page, and the cookies page says what the site keeps in your browser.",
+   "title": "Does Raye send data about me?",
+   "url": "/en/questions/#q18"
+  },
+  {
+   "id": "faq:en:18",
+   "lang": "en",
+   "text": "No, and accounts are not open yet. Raye works the same without one. Later, an account will keep a list of settings, your picture and your app library from one PC to another; never your passwords or your files.",
+   "title": "Do I need a Raye account?",
+   "url": "/en/questions/#q19"
+  },
+  {
+   "id": "faq:en:19",
+   "lang": "en",
+   "text": "Me, techoraye, in Quebec. There's more on the About page.",
+   "title": "Who makes Raye?",
+   "url": "/en/questions/#q20"
+  },
+  {
+   "id": "faq:en:20",
+   "lang": "en",
+   "text": "On the Discord server, in #bugs, or at bonjour@rayelinux.com: which PC you have, what you did, what you expected and what happened. A photo of the screen helps a lot.",
+   "title": "How do I report a problem?",
+   "url": "/en/questions/#q21"
   },
   {
    "id": "download:en:0.0",
    "lang": "en",
-   "text": "2.9 GB · 64-bit ISO, UEFI start · November 21, 2026\n\ndownloads\n\n272\n\nactive PCs\n\n365\n\nFinished downloads, counted by Cloudflare since November 14. Active PCs: machines that checked for Raye updates in the last 14 days. As of November 25, 2026.\n\nDownload the ISO\n\nSHA-256\n\nbaeb79976d65b091db0f9741972e9fe3c4c52042a2b666b703cde9f13ebc5547\n\nKey fingerprint\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nPublic key\n\nRelease notes",
-   "title": "raye-1.0-beta-amd64.iso",
-   "url": "/en/download/"
+   "text": "Size: to be filled in at release\n\nDownload at release\n\nSHA-256\n\nTo be filled in at release\n\nKey fingerprint\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E",
+   "title": "raye-1.0-amd64.iso",
+   "url": "/en/download/#file-title"
   },
   {
    "id": "download:en:1.0",
    "lang": "en",
-   "text": "Raye Linux 1.0 Beta is a beta. It can have many bugs, crash and, in rare cases, lose data.\n\nInstalling can erase the whole disk you pick. Back up your important files before you install, and prefer a test PC or a virtual machine.\n\nThe software is provided “as is”, without any warranty, as its free licenses say. To the fullest extent the law allows, Raye Linux and its contributors are not liable for any damage, data loss or other problem that comes from downloading, installing or using it.\n\nYou install and use it at your own risk, and you are responsible for the computer you do it on.\n\nMore betas follow before the final 1.0.\n\nBy downloading, you accept the terms of use.\n\n I have read these warnings, backed up my data and agree to use this beta at my own risk.\n\nI agree, download the ISO\nCancel",
-   "title": "Before you download: this is a public beta",
-   "url": "/en/download/"
+   "text": "Check that the checksum list really comes from Raye Linux. It must say “Good signature”:\n\ngpg --import raye-archive.asc\ngpg --verify SHA256SUMS.asc SHA256SUMS\n\nCheck the image. It must say “OK”:\n\nsha256sum --check --ignore-missing SHA256SUMS",
+   "title": "Check the download",
+   "url": "/en/download/#verify-title"
   },
   {
    "id": "download:en:2.0",
    "lang": "en",
-   "text": "Check that the checksum list really comes from Raye Linux. It must say “Good signature”:\n\ngpg --import raye-archive.asc\ngpg --verify SHA256SUMS.asc SHA256SUMS\n\nCheck the image. It must say “OK”:\n\nsha256sum --check --ignore-missing SHA256SUMS",
-   "title": "Check the download",
-   "url": "/en/download/"
+   "text": "Rufus: choose the ISO and, when asked, write it in DD image mode. ISO mode gives a stick that doesn't start.\n\nbalenaEtcher: choose the ISO, then the stick, then Flash.\n\ndd: replace sdX with your stick and check twice with lsblk: everything on it will be erased.\n\nsudo dd if=raye-1.0-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nThen start the computer from the stick, often with F12, F11, F8 or Esc at power on. Install.",
+   "title": "Make a USB stick",
+   "url": "/en/download/#usb-title"
   },
   {
    "id": "download:en:3.0",
    "lang": "en",
-   "text": "Rufus: choose the ISO and, when asked, write it in DD image mode. ISO mode gives a stick that doesn't start.\n\nbalenaEtcher: choose the ISO, then the stick, then Flash.\n\ndd: replace sdX with your stick and check twice with lsblk: everything on it will be erased.\n\nsudo dd if=raye-1.0-beta-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nThen start the computer from the stick, often with F12, F11, F8 or Esc at power on.",
-   "title": "Make a USB stick",
-   "url": "/en/download/"
+   "text": "A 64-bit Intel or AMD processor and a PC that starts in UEFI mode (the old BIOS mode is being tried: Older PCs page)\n\n8 GB of memory recommended\n\n25 GB of free disk space\n\nA USB stick of 8 GB or more\n\nSecure Boot and a TPM chip are supported, not required",
+   "title": "What you need",
+   "url": "/en/download/#needs-title"
   },
   {
    "id": "download:en:4.0",
    "lang": "en",
-   "text": "A 64-bit Intel or AMD processor, starting in UEFI or BIOS mode\n\n4 GB of memory, 8 GB recommended\n\n25 GB of free disk space\n\nA USB stick of 8 GB or more\n\nSecure Boot and the TPM chip are supported, not required",
-   "title": "What you need",
-   "url": "/en/download/"
+   "text": "On the first start under Secure Boot, moving to Raye's kernel asks you to enroll a key on a blue screen, once: Install page.\n\nThe AMD RX 400 and 500 cards and NVIDIA cards at 144 Hz have fixes I couldn't try on a real card. If the screen stays black, pick “Safe graphics” on the stick.\n\n.exe programs: the first launch takes a few seconds, and not all of them work.\n\nOffline, Settings say that updates couldn't be checked.",
+   "title": "What to know",
+   "url": "/en/download/#known-title"
   },
   {
    "id": "download:en:5.0",
    "lang": "en",
-   "text": "Older AMD cards (RX 400 and 500, like the RX 550): on some PCs they still start at a low resolution with low frame rates. We are working on it. If the screen stays black, pick \"Safe graphics\" on the USB stick; once installed, Raye switches to a simpler display mode by itself if the desktop fails to show twice in a row.\n\nNVIDIA cards: the game speed fix has not been tried by us on a real NVIDIA card yet. If your games are still slow, say so on Discord.\n\nThe terminal, the screenshot tool and a few dialogs wear Raye's colors but are not redrawn as Raye apps yet.\n\n.exe programs: the first start takes a few seconds, and not all of them run.\n\nOffline, Settings says updates could not be checked.",
-   "title": "Known issues in the beta",
-   "url": "/en/download/"
-  },
-  {
-   "id": "download:en:6.0",
-   "lang": "en",
    "text": "Tell me what computer you have, what you did, what you expected and what happened. A photo of the screen helps a lot.\n\nReport it on Discord, in #bugs · Or write to\nbonjour@rayelinux.com",
    "title": "Report a problem",
-   "url": "/en/download/"
+   "url": "/en/download/#bug-title"
+  },
+  {
+   "id": "install:en:0.0",
+   "lang": "en",
+   "text": "Check that your PC has what it takes (the Hardware page). An Internet connection while installing helps, it isn't required. If you're keeping Windows, shut it down properly: turn off fast startup and hibernation. The installer warns you if Windows wasn't fully shut down.\n\nIf Windows is encrypted, by BitLocker or by the “Device encryption” many PCs sold with Windows 11 have turned on, Raye can't shrink its partition. Turn that encryption off in Windows and wait for the decryption to finish, keeping your BitLocker recovery key. The installer still says to “suspend protection”: that isn't enough, the partition stays encrypted.",
+   "title": "Before you start",
+   "url": "/en/install/#before"
+  },
+  {
+   "id": "install:en:1.0",
+   "lang": "en",
+   "text": "Download the image\n\nOnce the image is out, the Download page gives the file, its checksum and how to check it.\n\nWrite it to the stick\n\nWith Rufus, choose DD image mode when it asks: ISO mode gives a stick that doesn't start. balenaEtcher works too. Everything on the stick will be erased.\n\nStart from the stick\n\nAt power on, often with F12, F11, F8 or Esc. The stick's menu, in English only, starts by default on “Try Raye Linux without installing”: a trial session that doesn't touch the disk. The “Install Raye Linux” icon is on the desktop and at the top of Start, and opens the installer full screen. On the line below in the menu, “Install Raye Linux” opens it directly; “Safe graphics” helps when the screen stays black.\n\nScreenshot to take · try-raye\n\nRaye's trial session, started from the USB stick: the desktop with the Install Raye Linux icon on it.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "The USB stick",
+   "url": "/en/install/#usb"
+  },
+  {
+   "id": "install:en:2.0",
+   "lang": "en",
+   "text": "Region\n\nEnglish or French, the time zone, then the keyboard layout.\n\nNetwork\n\nThe page follows your connection live: a plugged-in cable shows up right away.\n\nDisk\n\nFour choices: erase the disk, install alongside Windows by shrinking its partition, use the free space, or replace a partition. The “Encrypt the Raye system” box is on the same page: ticked, it has you pick a disk password. With a TPM chip, you won't have to type it at startup.\n\nAccount\n\nThe PC's name, then your name and your password. The Raye account page can be skipped with “Use a local account instead”.\n\nPrivacy\n\nLocation and usage statistics, which you can change later in Settings.\n\nInstall\n\n“Ready to install” says everything that will happen, with a red banner if anything is going to be erased.\n\nScreenshot to take · setup-disk\n\nThe installer's Disk page on “Install alongside Windows”, with the slider that splits the disk.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nRight before writing, the installer reads the disk again. If anything changed since you chose, it stops instead of carrying on.\n\nScreenshot to take · setup-summary\n\nThe installer's “Ready to install” summary, with the red banner that says what will be erased.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "The installer, step by step",
+   "url": "/en/install/#pages"
+  },
+  {
+   "id": "install:en:3.0",
+   "lang": "en",
+   "text": "“Install alongside Windows” shrinks the Windows partition to make room, and both systems share the startup partition. At startup, a menu offers Raye Linux and Windows for 10 seconds. From Raye, “Restart to Windows” in Start restarts straight into Windows, once.\n\nScreenshot to take · boot-menu\n\nThe startup menu with two choices, Raye Linux and Windows, and the countdown.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nI proved it on a test Windows partition, in the test machine: 50 GB shrunk to 23 GB, and every Windows file identical before and after. Not yet on a real Windows shrunk and then restarted. Back up first.\n\nThe startup menu still shows “Raye Linux GNU/Linux” instead of “Raye Linux”.\n\nOn a PC in the old BIOS mode, I saw the stick start up to the installer, not a full install: see the Older PCs page.",
+   "title": "Keeping Windows alongside",
+   "url": "/en/install/#alongside"
+  },
+  {
+   "id": "install:en:4.0",
+   "lang": "en",
+   "text": "No manual partitioning.\n\nOnly an unencrypted Windows (NTFS) partition can be shrunk.\n\nA disk that already holds another Linux only gets “Erase”: no third system.\n\nNo 32-bit PC.",
+   "title": "What the installer doesn't do",
+   "url": "/en/install/#not"
+  },
+  {
+   "id": "install:en:5.0",
+   "lang": "en",
+   "text": "Raye's kernel is signed with a Raye key. For Secure Boot to accept it, that key has to be enrolled once, and it's your PC's firmware that asks, on a blue screen at restart, not Raye. Before restarting, Raye shows you a six-digit code to remember.\n\nPress a key\n\nYou have about 10 seconds at the blue screen to press a key.\n\nChoose Enroll MOK\n\nThen Continue, then Yes.\n\nType the code\n\nThe six-digit code Raye showed you, then Reboot.\n\nScreenshot to take · enroll-key\n\nThe blue startup screen where Raye's key is enrolled: the “Enroll MOK” list and the six-digit code field.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nIf you miss the blue screen, no harm done: the PC starts as before, with the base system's kernel, and Raye will ask again. Without Secure Boot, there is no blue screen.\n\nWhat is still missing\n\nI saw it work in the test machine, with Secure Boot and a virtual TPM chip: blue screen missed, then blue screen done, then start on Raye's kernel. Not yet on a real PC.\n\nThe trial USB stick keeps the original signed kernel: nothing is enrolled just to try Raye.",
+   "title": "Raye's key and the blue screen",
+   "url": "/en/install/#key"
+  },
+  {
+   "id": "install:en:6.0",
+   "lang": "en",
+   "text": "At first startup, if you encrypted the disk, the TPM chip opens it (without a chip, Raye asks for the disk password), then you type your account password. The recovery key shows at your first sign-in (see Security). Two minutes later, Raye prepares the space for Windows programs in the background.\n\nWhat is still missing\n\nWithout encryption, the startup menu stays on screen for 5 seconds at every startup.",
+   "title": "Afterwards",
+   "url": "/en/install/#after"
+  },
+  {
+   "id": "install:en:7.0",
+   "lang": "en",
+   "text": "If you kept Windows alongside, it's still there: pick it in the startup menu, or “Restart to Windows” in Start. Removing Raye from the disk to give all the room back to Windows has no tool yet, and I haven't tried a way to do it: so I'm not giving you one.",
+   "title": "Going back to Windows",
+   "url": "/en/install/#back"
+  },
+  {
+   "id": "hardware:en:0.0",
+   "lang": "en",
+   "text": "A 64-bit Intel or AMD processor, and a PC that starts in UEFI mode (most PCs since 2012). The old BIOS mode is being tried for V1: see Older PCs.\n\n8 GB of memory recommended. The installer accepts less, but I haven't tried Raye on a 4 GB PC.\n\n25 GB of free disk space: that's what the installer itself demands.\n\nA USB stick of 8 GB or more to install.\n\nSecure Boot and a TPM chip are supported, not required.",
+   "title": "What you need",
+   "url": "/en/hardware/#needs"
+  },
+  {
+   "id": "hardware:en:1.0",
+   "lang": "en",
+   "text": "MeasureValueMachine and date\n\nMemory at idle3 min after signing in, mean of 3 readings\n850 MB\nMeasured on November 19, 2026, version 1.0 Beta 2, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).\n\nBlack screen at startupbetween the firmware and the Raye picture, one capture every 250 ms; 18.3 s in 0.2\n2.75 to 3 s\nMeasured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).\n\nInstall timefrom the click on Install to “Restart”, 64 GB disk, encrypted\n5 min 50 s\nMeasured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).\n\nRestart for an updatefrom the startup picture to the sign-in screen, for the desktop theme\n24 s\nMeasured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).\n\nChecking for updateschecking for and downloading 42 updates, 60 MB in all\n22 s\nMeasured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).\n\nRead each figure next to the machine it came from. The test machine has no graphics card: the whole desktop is drawn by the processor there, which swells its memory. About 120 MB of the 850 MB are a kernel reserve that grows with the machine's memory. The figure is taken three minutes after signing in, with free -m.\n\nThe test machine's firmware reads the disk at about 7 MB/s: its startup times are for comparing two versions, not for promising you a speed. And after the Raye picture, a second black screen of 3 to 5 s remains before the sign-in screen at every startup.\n\nMy goal was 1 GB of memory at idle: the test machine is now under it. The GB and MB on this site are counted the way Windows counts them, by 1,024.",
+   "title": "The measurements",
+   "url": "/en/hardware/#measures"
+  },
+  {
+   "id": "hardware:en:2.0",
+   "lang": "en",
+   "text": "The test machine: a virtual machine with 8 cores and 16 GB of memory, no graphics card, two virtual screens (1280×800 and 1920×1080), Secure Boot on and a TPM 2.0 chip. That's where I install a version from scratch and update it from the previous one, before it goes out. I haven't always done it: the two rounds of fixes of 0.2 Beta 2 only got the update test.\n\nA Dell Latitude 5420, 16 GB, with its 1366×768 screen and an external 1920×1080 screen over HDMI, Intel Wi-Fi and Ethernet. Raye has run on it since November 1, 2026, and gets its updates there.\n\nWhat is still missing\n\nOn the Latitude, sleep sometimes fails, and Wi-Fi and Ethernet are slow to come back after sleep.\n\nUpdating its BIOS through Raye Update failed once, for want of a piece added since; I haven't seen it succeed yet.",
+   "title": "The machines tried",
+   "url": "/en/hardware/#machines"
+  },
+  {
+   "id": "hardware:en:3.0",
+   "lang": "en",
+   "text": "No desktop PC, no AMD or NVIDIA graphics card, no laptop of another brand, no 4 GB PC. I haven't measured Raye against Windows on the same PC, or startup on a real NVMe disk, or battery life, or a game. If your PC isn't on this page, which is true of almost all of them, tell me how it went: bonjour@rayelinux.com.",
+   "title": "What I haven't tried",
+   "url": "/en/hardware/#untried"
+  },
+  {
+   "id": "windows:en:0.0",
+   "lang": "en",
+   "text": "Double-click an .exe or .msi file: it opens. There is nothing to install first, and no question. The program's installer does its job and adds an entry to the Start menu, and the program then starts from there like a Raye app.\n\nScreenshot to take · exe-setup\n\nThe installer of a Windows program opened by double-clicking its .exe file, halfway through.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nEvery program gets its own space, so one that misbehaves doesn't break the others. That space is prepared in the background about two minutes after your first sign-in, and again after some updates: 26 seconds of work, using up to 3 GB of memory meanwhile, measured on the test machine.\n\nScreenshot to take · exe-start\n\nThe same Windows program in the Start menu after it installed, then open on the desktop.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "A double-click",
+   "url": "/en/windows-programs/#double-click"
+  },
+  {
+   "id": "windows:en:1.0",
+   "lang": "en",
+   "text": "Some programs also exist for Raye, such as Discord or Steam. If you double-click their Windows installer, Raye offers you that version instead, made for Raye, which doesn't need the Windows layer.\n\nScreenshot to take · exe-native\n\nRaye offering the Raye version of a program when its Windows installer is double-clicked.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "When there is a Raye version",
+   "url": "/en/windows-programs/#native"
+  },
+  {
+   "id": "windows:en:2.0",
+   "lang": "en",
+   "text": "Here is what Raye's Windows layer brings by itself, and what it still lacks. What's missing is, most of the time, why a program doesn't start.\n\nDirect3D to Vulkan is included (DXVK and VKD3D-Proton): games and programs that use Direct3D 8 to 12 get it with no setting.\n\nThe Windows fonts (Arial, Times New Roman, Calibri, Cambria, Tahoma…) are replaced by fonts of the same size, so windows keep their layout. The original Windows fonts are not included: some text can look a little different.\n\nWhat's still missing: the original .NET Framework of Windows (Raye ships a free version that most programs are happy with) and Edge's WebView2 web engine. Programs that require either one don't start yet.\n\nWhat is still missing\n\nThe first program you open after installing takes a while.\n\nSome installers show an old-style gray window.",
+   "title": "What's missing, and why some programs don't start",
+   "url": "/en/windows-programs/#missing"
+  },
+  {
+   "id": "windows:en:3.0",
+   "lang": "en",
+   "text": "Games protected by an anti-cheat that installs itself in the Windows kernel, such as Valorant or Fortnite, don't run. It isn't a missing setting: their publisher has to allow Linux, and today they don't. Roblox doesn't start either: its anti-cheat refuses the Windows layer.\n\nI haven't started any other game on a PC with a real graphics card, so I don't publish anything about them. Steam installs from the Raye Store, as a Raye version.",
+   "title": "Games",
+   "url": "/en/windows-programs/#games"
+  },
+  {
+   "id": "windows:en:4.0",
+   "lang": "en",
+   "text": "Send me its name and version, what you did and what happened, at bonjour@rayelinux.com. The list of programs people report is what sets the order I fix things in.",
+   "title": "If a program doesn't work",
+   "url": "/en/windows-programs/#report"
+  },
+  {
+   "id": "games:en:0.0",
+   "lang": "en",
+   "text": "Steam is in the Raye Store. Raye installs it as a Raye package (APT) rather than Flatpak; if you already had it as Flatpak, Raye moves it once, with your games and settings, and tells you at sign-in. Steam sees your other drives: whatever is mounted under /media, /run/media and /mnt is offered when you add a library folder.\n\nScreenshot to take · steam-store\n\nSteam's page in the Raye Store, with the package format row and the Install button.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nGame Mode turns on by itself while you play. Heroic, for other publishers' stores, is also in the Store.\n\nWhat is still missing\n\nOn an NVIDIA card, Steam that opens and then shows nothing was reported. I fixed what I found, without being able to try it without an NVIDIA card: if it happens to you, tell me.",
+   "title": "Steam",
+   "url": "/en/games/#steam"
+  },
+  {
+   "id": "games:en:1.0",
+   "lang": "en",
+   "text": "Steam launches Windows games with Proton, its compatibility layer: that's what runs most of them. Raye is planning its own layer, Raye Proton, which you'll pick for a game in Steam. It's planned for 1.1, not for V1.",
+   "title": "Proton, the Windows layer for games",
+   "url": "/en/games/#proton"
+  },
+  {
+   "id": "games:en:2.0",
+   "lang": "en",
+   "text": "An anti-cheat is a program that watches the game and, sometimes, the system. What you need to know about Raye fits in three lines:\n\nThe ones that live in the Windows kernel, such as Valorant's Vanguard: they don't run on Raye, and I don't see how that would change.\n\nEasy Anti-Cheat v2: it exists for Linux, but it checks the kernel and the state of Secure Boot, and its publisher, Epic, keeps a list of the keys it accepts. See below.\n\nAll the others: it depends on the game and its studio. ProtonDB says, game by game, what players have found.",
+   "title": "Anti-cheat",
+   "url": "/en/games/#anticheat"
+  },
+  {
+   "id": "games:en:3.0",
+   "lang": "en",
+   "text": "Raye's kernel is signed with a Raye key, which you enroll once in your PC. With Secure Boot on, Raye turns on what Easy Anti-Cheat v2 checks: kernel lockdown, kexec off and the IOMMU without passthrough. I checked those settings in the test machine, with Secure Boot and a virtual TPM chip, not yet on a real laptop.\n\nWhat's left is Epic's list. I asked for Raye's keys to be added; the answer hasn't come. As long as Epic doesn't know them, Easy Anti-Cheat v2 refuses Raye's kernel. The day they're on it, it will be written here, not before.\n\nWhat is still missing\n\nEven with the key accepted, a game is only playable if its studio turned on Easy Anti-Cheat for Linux. Fortnite is the goal I set myself; I can't promise it to you.\n\nPCs that already enrolled Raye's old key have to remove it: Easy Anti-Cheat wants every enrolled key to be known.",
+   "title": "Easy Anti-Cheat v2 and Raye's kernel",
+   "url": "/en/games/#eac"
+  },
+  {
+   "id": "games:en:4.0",
+   "lang": "en",
+   "text": "Raye can fall back to a simpler display when the desktop doesn't start twice in a row, and picking “Safe graphics” on the stick helps when the screen stays black. Two problems reported by players are fixed in V1: older AMD cards (RX 400 and 500) that stayed in low resolution, and the black flicker of NVIDIA cards on a 144 Hz screen. I have neither of those cards: tell me if it works for you.\n\nWhat is still missing\n\nLow frames per second in Counter-Strike 2 were reported on a GTX 1650; I haven't measured it.",
+   "title": "Graphics cards",
+   "url": "/en/games/#graphics"
+  },
+  {
+   "id": "updates:en:0.0",
+   "lang": "en",
+   "text": "What waits for the restart is what the system keeps loaded while it runs: the kernel, drivers, firmware, the core pieces of the system and the desktop itself. An update of that kind carries the label “Restart required”. The rest installs as soon as it's downloaded, with nothing for you to do.\n\nSecurity fixes are the exception: they install right away, even for those pieces.\n\nScreenshot to take · update-live\n\nRaye Update in Settings: updates already installed and a single one marked “Restart required”.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "What installs right away, what waits",
+   "url": "/en/updates/#live"
+  },
+  {
+   "id": "updates:en:1.0",
+   "lang": "en",
+   "text": "What waits installs when you choose “Update and restart”, in Start, in the notification or in Settings. An ordinary restart installs nothing, and Raye doesn't restart on its own unless you asked it to outside your active hours. While it installs, the Raye picture shows a ring and “Installing updates” with the percentage. For the desktop theme, 24 s passed between the startup picture and the sign-in screen on the test machine.\n\nScreenshot to take · update-boot\n\nThe restart screen: the Raye eye, the ring and “Installing updates” with the percentage.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nWhen a second update of the same package is waiting, the “Restart required” notification doesn't come back.\n\nThe lock screen and Ctrl+Alt+Del don't offer “Update and restart” yet.",
+   "title": "The restart",
+   "url": "/en/updates/#restart"
+  },
+  {
+   "id": "updates:en:2.0",
+   "lang": "en",
+   "text": "Updates download in the background and wait while your laptop is on battery below 40%, on a metered connection or playing a game. You can pause everything for one to five weeks, except security. Checking for and downloading 42 updates, 60 MB in all, took 22 s on the test machine.\n\nWhat is still missing\n\nBelow 40% battery, “Install now” does nothing, and shows nothing.",
+   "title": "When Raye downloads, and when it waits",
+   "url": "/en/updates/#when"
+  },
+  {
+   "id": "updates:en:3.0",
+   "lang": "en",
+   "text": "Before and after every update, Raye takes a restore point of the system, and the oldest go by themselves. You can also make one in Settings, Recovery.\n\nScreenshot to take · restore\n\nRestore points with the “Before updates” and “After updates” pair.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nGoing back to the “Before updates” point reinstalls the same updates at the next start: don't count on it yet to undo an update.\n\nA point made by hand can be deleted, with no warning, by those of the following updates.\n\nA restore point keeps the system, not your personal files. Back them up separately.\n\nYou can't yet start from an earlier state through the startup menu.",
+   "title": "Restore points",
+   "url": "/en/updates/#restore"
+  },
+  {
+   "id": "updates:en:4.0",
+   "lang": "en",
+   "text": "Raye's packages come from dl.rayelinux.com and raye-linux.github.io/packages, two copies identical file by file, signed by the key whose fingerprint is EA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E. Firefox comes from Mozilla, and the rest of the system from the base system's servers; if the main one stops answering, Raye moves to two others by itself.\n\nWhat is still missing\n\nWithout a connection, Raye Update says it could not check: it didn't reach the servers, nothing is broken.",
+   "title": "Where updates come from",
+   "url": "/en/updates/#source"
+  },
+  {
+   "id": "security:en:0.0",
+   "lang": "en",
+   "text": "Raye starts with Secure Boot turned on and the keys most PCs ship with: on the test machine, I didn't have to change anything in the firmware. Some PCs, often sold as “Secured-core”, only accept Windows out of the box; you then have to allow the so-called “third-party” keys in the firmware settings. If your PC still refuses to start Raye, send me its model.",
+   "title": "Secure Boot",
+   "url": "/en/security/#secureboot"
+  },
+  {
+   "id": "security:en:1.0",
+   "lang": "en",
+   "text": "If you tick “Encrypt the Raye system” on the installer's Disk page, you pick a disk password, and the whole system is encrypted. Taken out of the PC and plugged in elsewhere, the disk can't be read without that password or the recovery key.\n\nScreenshot to take · setup-encrypt\n\nThe installer's Disk page, “Encrypt the Raye system” ticked, with the two disk password fields.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nOn a PC with a TPM chip, the chip opens the disk at startup. On that PC, your account password is therefore what protects your files, as with BitLocker. The chip only watches the Secure Boot settings: if they change, or the disk is put in another PC, Raye asks for the disk password again. Other changes in the startup don't ask for it. Without a TPM chip, the disk password is asked at every startup.\n\nI tried it once on the test machine: a firmware update that revokes old startup keys, and the disk opened by itself afterwards. If an update of that kind installs along with others at a restart, you may be asked for the recovery key once.",
+   "title": "The encrypted disk",
+   "url": "/en/security/#encryption"
+  },
+  {
+   "id": "security:en:2.0",
+   "lang": "en",
+   "text": "At your first sign-in, a window shows a recovery key: eight groups of six digits. It opens the disk if you forget its password. Copy it, write it down on paper or in a password manager, keep it somewhere other than the computer, then confirm with “I saved my key”.\n\nScreenshot to take · recovery-key\n\nThe recovery key window at the first sign-in, the key itself blurred.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "The recovery key",
+   "url": "/en/security/#recovery"
+  },
+  {
+   "id": "security:en:3.0",
+   "lang": "en",
+   "text": "When an app wants to change the system, the screen dims and Raye asks for your password, with the publisher's name, as in Windows 11. The prompt doesn't time out: on a standard account, you have time to go and ask the PC's administrator for the password. Updates, on the other hand, install without asking for it.\n\nScreenshot to take · uac\n\nThe password prompt: the dimmed screen, “Verified publisher: Raye Linux”, Yes and No.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nThe prompt sometimes names the technical program rather than the app asking.\n\nYou can't encrypt or decrypt the disk once Raye is installed yet: it's a choice made when installing.",
+   "title": "The password before an app changes the system",
+   "url": "/en/security/#prompt"
+  },
+  {
+   "id": "security:en:4.0",
+   "lang": "en",
+   "text": "The Raye kernel, which you turn on in Settings, Drivers, shows a violet screen with the Raye eye if the system crashes, then restarts by itself after 30 seconds. The original kernel stays installed and stays the default.\n\nWith Secure Boot, its key is enrolled at the next restart, in three steps: a blue screen shows up, press a key within 10 seconds, choose “Enroll MOK”, then type the six-digit code Settings showed you. If the 10 seconds go by, Raye starts on the original kernel.",
+   "title": "If the PC crashes",
+   "url": "/en/security/#crash"
+  },
+  {
+   "id": "security:en:5.0",
+   "lang": "en",
+   "text": "Raye Update asks the two copies of Raye's packages, the base system's servers, Mozilla's for Firefox, and the firmware service for BIOS and device updates. The Store asks Flathub. The system also checks that the Internet answers, to spot a hotel network that wants you to sign in, and sets its clock from a time server. Firefox opens rayelinux.com when it starts, with no ads and no “managed by your organization” banner.\n\nTwo things only go out if you agreed to them: your location, when an app asks for it and you say yes, and anonymous usage statistics, a box left unticked on the installer's Privacy page.\n\nThis list comes from what I know of the code. I haven't yet watched a fresh install for an hour to check it address by address; once that's done, the record will be on this page.\n\nThis website sets no cookies and loads nothing from another site; its privacy policy says what it keeps.",
+   "title": "What Raye sends over the Internet",
+   "url": "/en/security/#network"
+  },
+  {
+   "id": "oldpcs:en:0.0",
+   "lang": "en",
+   "text": "In a virtual machine in the old BIOS mode, with 2 GB of memory, a generic processor and a plain graphics card, the stick starts, and the installer opens in about twenty seconds.\n\nThe installer then says, on its first page, that the processor is on the older side: some programs and some games need a newer one. It doesn't stop the install.",
+   "title": "What I saw",
+   "url": "/en/old-pcs/#seen"
+  },
+  {
+   "id": "oldpcs:en:1.0",
+   "lang": "en",
+   "text": "Starting in BIOS mode, all the way through a full install.\n\nOlder 64-bit processors, such as the Core 2 Duo.\n\n2 to 4 GB of memory.\n\nA graphics card without 3D acceleration.\n\nWhat is still missing\n\nA full install in BIOS mode wasn't redone with the current version: only the start up to the installer was seen.\n\nNo measurement on a real 2 or 4 GB PC. With under 4 GB, I don't know whether the desktop stays pleasant: 8 GB is still recommended.\n\nRaye is 64-bit: a 32-bit PC, or a 64-bit processor too old for the base system, can't start it.",
+   "title": "What I'm trying for V1",
+   "url": "/en/old-pcs/#tried"
+  },
+  {
+   "id": "oldpcs:en:2.0",
+   "lang": "en",
+   "text": "If you have an older PC, try the trial session from the stick: it doesn't touch the disk. Then tell me, on Discord or at bonjour@rayelinux.com, the PC's model, what happened, and the raye-gpu.txt file if the screen stayed black or in low resolution. That's how this page will grow.",
+   "title": "If you try it",
+   "url": "/en/old-pcs/#yours"
+  },
+  {
+   "id": "desktops:en:0.0",
+   "lang": "en",
+   "text": "Raye's desktop keeps the Windows 11 layout: centered taskbar, Start, windows you drag and snap. It's the one you get after installing.\n\nHyprland is a desktop where windows line up side by side without you placing them, and where you do almost everything with the keyboard. It's for people who already know it, or want to learn it. Raye gives it its bar, its theme and its apps, and the installer offers Hyprland if you want it.\n\nScreenshot to take · desktop-choice\n\nSettings, Desktop environment page: the two cards, Raye's desktop and Hyprland, with the one in use marked.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nYou choose in Settings > Personalization > Desktop environment, or on the sign-in screen, with the Desktop button at the bottom right. Switching reopens File Explorer and Settings on the new desktop.\n\nScreenshot to take · hypr-session\n\nRaye's Hyprland session: windows tiled side by side, and Raye's bar at the top with the clock.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "Choosing",
+   "url": "/en/two-desktops/#choose"
+  },
+  {
+   "id": "desktops:en:1.0",
+   "lang": "en",
+   "text": "Raye keeps its Hyprland configuration for itself and leaves you a file of your own: user.conf. Raye never overwrites it, even on an update. On the Desktop environment page, “Open my Hyprland settings” opens it in the editor, and raye-hyprland-config reloads, opens or goes back to Raye's settings from the terminal. To go back in one go, just remove your lines.",
+   "title": "Setting it up your way",
+   "url": "/en/two-desktops/#yours"
+  },
+  {
+   "id": "desktops:en:2.0",
+   "lang": "en",
+   "text": "Raye's handbook has a chapter on Hyprland, “Hyprland on Raye”, opened by the “Hyprland guide” button on that same page. It says where the files are, what you can change and how: gaps, borders, corners, blur, animations, shortcuts, window rules, screens and scale, keyboard, startup, wallpaper, bar, lock and sleep. Every example is ready to copy, and all of them pass Hyprland's configuration check. It also says how to set Raye's apps (theme, icons, cursor, fonts) and what to do when one displays badly.",
+   "title": "The guide",
+   "url": "/en/two-desktops/#guide"
+  },
+  {
+   "id": "desktops:en:3.0",
+   "lang": "en",
+   "text": "Many people publish their Hyprland setup. Raye can install one with a single command, raye-hyprland-config dots install followed by the repository address. Before running anything, the command saves your settings, shows you the script and what it touches (sudo, package installs, deletions) and asks you to type yes. With no answer, nothing is changed. dots restore puts the previous state back, and Raye's desktop comes back by itself at the next sign-in if the installed setup crashes at start.\n\nWhat is still missing\n\nMany of these setups are written for other systems: their script may not run on Raye. In that case the backup protects you, but the install doesn't go through. I haven't yet tried a public repository from end to end.\n\nUnder Hyprland, Settings loads its 90 pages without error, but I haven't looked at all of them on screen. Night light and Multitasking say “Available on Raye's desktop”, because they only control that desktop. The mouse, the lock screen and the transparency effects are set in Hyprland's file rather than in Settings.",
+   "title": "Other people's setups",
+   "url": "/en/two-desktops/#others"
+  },
+  {
+   "id": "desktop:en:0.0",
+   "lang": "en",
+   "text": "The taskbar is centered: Start, search, your pinned apps, then the clock on the right. With two screens each one gets its own taskbar and clock; the notification icons stay on the main screen, as in Windows 11. A minimized window keeps its button.\n\nStart shows your pinned apps, then “All apps” as categories, a grid or a list. The apps carry their Windows names: Calculator, Paint, Photos, Media Player, Task Manager.\n\nScreenshot to take · start-all\n\nThe Start menu on All apps, sorted into categories.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nThe search field and the Recommended section are not yet the Windows 11 ones.\n\nStart and some menus open with a lag, and their animations are not yet the Windows 11 ones.",
+   "title": "The taskbar and Start",
+   "url": "/en/desktop/#taskbar"
+  },
+  {
+   "id": "desktop:en:1.0",
+   "lang": "en",
+   "text": "These were tried one by one. The Win+X menu also opens with a right-click on Start, on the screen where the mouse is.\n\nCtrl+Shift+Esc\n\nTask Manager\n\nWin+E\n\nFile Explorer\n\nWin+R\n\nRun: control, regedit, and notepad, which opens the text editor\n\nWin+X\n\nQuick links: installed apps, disk management, terminal, shut down…\n\nScreenshot to take · win-x\n\nThe quick links menu opened by Win+X, above the Start button.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "The shortcuts",
+   "url": "/en/desktop/#keys"
+  },
+  {
+   "id": "desktop:en:2.0",
+   "lang": "en",
+   "text": "Drag a window to the top of the screen: the layout bar shows up, and a pale area shows where the window will land. Let go and it snaps there. A 1920×1080 screen gets six layouts. On the desktop, Ctrl and the mouse wheel change the icon size.\n\nScreenshot to take · snap\n\nA window dragged to the top of the screen: the layout bar and the area where it will land.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "Arranging windows",
+   "url": "/en/desktop/#windows"
+  },
+  {
+   "id": "desktop:en:3.0",
+   "lang": "en",
+   "text": "A click on the right of the taskbar opens network, sound and, on a laptop, brightness. A click in the middle of a tile turns it on or off; its arrow opens a small page in the panel; a right-click leads to Settings. With a cable plugged in, the tile is called Ethernet.\n\nScreenshot to take · quick\n\nQuick settings opened from the taskbar: network and sound, with the Ethernet tile of the wired network.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "Quick settings",
+   "url": "/en/desktop/#quick"
+  },
+  {
+   "id": "desktop:en:4.0",
+   "lang": "en",
+   "text": "Folders open in tabs, in the title bar, and the address bar also searches. A drive's Properties give the used and free space to the byte, with a Clean up button to make room.\n\nThere are no drive letters. In This PC the system disk is called Raye, and a Windows partition is called Windows. It's a choice: a letter says nothing about what's on the drive.\n\nScreenshot to take · thispc\n\nThis PC in File Explorer, and the Properties window of the Raye drive with the used and free space.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "File Explorer",
+   "url": "/en/desktop/#explorer"
+  },
+  {
+   "id": "desktop:en:5.0",
+   "lang": "en",
+   "text": "Ctrl+Shift+Esc opens it on Processes. It also has Performance, Startup apps, Users, Details and Services, with the services running on your PC.\n\nScreenshot to take · taskmgr\n\nTask Manager on the Processes page, opened with Ctrl+Shift+Esc.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nThe first start takes several seconds.\n\nI have only seen the pages other than Processes on a virtual screen, not yet in a signed-in session.\n\n“Run as administrator” doesn't start a program that has a window, and says nothing.\n\nFour confirmation messages stay in English in a French session.\n\nThe Users page has no “Sign out” button.\n\nStarting or stopping a service from the Services page has not been tried all the way yet.",
+   "title": "Task Manager",
+   "url": "/en/desktop/#taskmgr"
+  },
+  {
+   "id": "desktop:en:6.0",
+   "lang": "en",
+   "text": "One window, the list of categories on the left. That's where you pick the main screen, updates, drivers. When a Windows page has no counterpart in Raye, it says so and points to the handbook instead of staying empty.\n\nScreenshot to take · settings\n\nThe Settings window on the System page, with the list of categories on the left.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nIn Installed apps, the “…” menu shows up see-through.\n\nSeveral pages are not finished.",
+   "title": "Settings",
+   "url": "/en/desktop/#settings"
+  },
+  {
+   "id": "desktop:en:7.0",
+   "lang": "en",
+   "text": "Win+R, control: Control Panel, by category. “Change the background” opens the right page of Settings.\n\nScreenshot to take · control\n\nControl Panel opened with Win+R then control, in the category view.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWin+R, regedit: the Raye Registry Editor. Raye has no registry; the editor shows its real settings files as a tree, HKEY_CURRENT_USER for yours, HKEY_LOCAL_MACHINE for the system's. Writing to the system asks for your password, a copy is made before every write, and Edit, Undo puts the file back exactly as it was.\n\nScreenshot to take · regedit\n\nThe Raye Registry Editor on a key, with the password prompt on top before a system write.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nCtrl+Z does nothing yet: use the Edit menu.\n\nOnce you've typed your password, the editor can write to the system for five minutes without asking again.\n\nA settings file of a Raye app changed here is no longer replaced by that app's later updates.",
+   "title": "Control Panel and the Registry Editor",
+   "url": "/en/desktop/#control"
+  },
+  {
+   "id": "desktop:en:8.0",
+   "lang": "en",
+   "text": "Create an event, close the window: between two reminders, no Calendar program is running. The reminder still arrives on time, with “Later” and “Dismiss”. The taskbar clock shows the day's events. Everything lives in one .ics file on your PC, which you can import and export.\n\nScreenshot to take · calendar\n\nThe taskbar clock opened on the month, and a Calendar reminder shown as a notification.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nYou can't drag an event yet, change a single occurrence of a series, or show week numbers.\n\nIn English, dates are still in the French order, and reminder times on a 24-hour clock.",
+   "title": "Calendar",
+   "url": "/en/desktop/#calendar"
+  },
+  {
+   "id": "desktop:en:9.0",
+   "lang": "en",
+   "text": "Apps from Flathub and Raye's own, in one place. While an app installs you see the progress and can cancel; afterwards, Open and Uninstall. An app offered by two sources shows up once.\n\nScreenshot to take · store\n\nThe Raye Store while an app installs, with the progress and the Cancel button.\n\nPlaceholder: this screenshot will be taken on version 1.0.",
+   "title": "The Raye Store",
+   "url": "/en/desktop/#store"
+  },
+  {
+   "id": "desktop:en:10.0",
+   "lang": "en",
+   "text": "The password field shows on the screen where the mouse is. Shut down and Restart work from the sign-in screen.\n\nScreenshot to take · lock\n\nThe Raye lock screen, with the time, the date and the password field.\n\nPlaceholder: this screenshot will be taken on version 1.0.\n\nWhat is still missing\n\nThe account picture is not the same at sign-in and on the lock screen.",
+   "title": "Lock and sign-in",
+   "url": "/en/desktop/#lock"
+  },
+  {
+   "id": "desktop:en:11.0",
+   "lang": "en",
+   "text": "The terminal, the screenshot tool and a few dialogs wear Raye's colors, but not its shape yet. There is no Notepad app: notepad opens the text editor.",
+   "title": "What doesn't have Raye's shape yet",
+   "url": "/en/desktop/#unfinished"
+  },
+  {
+   "id": "v1:en:0.0",
+   "lang": "en",
+   "text": "The USB stick starts on the Raye trial, with an Install icon on the desktop. The installer opens full screen. Details are on the Install page.\n\nThe startup menu is in English only, and several installer flaws are fixed: the misplaced Accessibility button, the Wi-Fi field, the copy window that stayed on “Finishing writing”.\n\nA Raye kernel, which replaces the base system's: community patches for responsiveness, memory and sleep, plus Raye's own tuning. Switching from one to the other asks you to enroll a key once, on a blue screen at restart (Install page).",
+   "title": "Installing and starting",
+   "url": "/en/whats-new/#install"
+  },
+  {
+   "id": "v1:en:1.0",
+   "lang": "en",
+   "text": "Steam sees your other drives: whatever is mounted under /media, /run/media and /mnt. Proved in the test machine, for Steam installed from the Store.\n\nA fix for older AMD cards (RX 400 and 500), which stayed in low resolution or on a black screen, and one for the black flicker of NVIDIA cards on a 144 Hz screen.\n\nRaye is ready for Easy Anti-Cheat v2: its kernel's key was sent to Epic. It's all on the Games page.",
+   "title": "Games and graphics cards",
+   "url": "/en/whats-new/#games"
+  },
+  {
+   "id": "v1:en:2.0",
+   "lang": "en",
+   "text": "The same memory at idle on every PC, about 850 MB, even with a lot of RAM. Before, the kernel reserved more of it the more the machine had.\n\nNo more freezes when memory runs out: the PC slows down a little instead.\n\nUnneeded services removed and background tuning, for a lighter and more stable Raye.\n\nThe Electron apps that crashed on start (Qoder, among others) start.",
+   "title": "Memory and stability",
+   "url": "/en/whats-new/#memory"
+  },
+  {
+   "id": "v1:en:3.0",
+   "lang": "en",
+   "text": "File Explorer opens right away, even when a network drive doesn't answer.\n\nThe copy window to a USB stick shows the real speed, with its Minimize and Close buttons.\n\nThe Wi-Fi password field in quick settings keeps the cursor while the list of networks refreshes.\n\nA WireGuard VPN in one click: import a file, turn it on from quick settings.\n\nInfo Center opens Raye's Task Manager and takes its look.\n\nThe Windows programs page also lists the ones installed from the Store.\n\nThe Store takes APT packages first, Flatpak only when there is no APT one, and accepts AppImage. The apps you have as Flatpak move to APT once, with nothing lost.",
+   "title": "Files, network and apps",
+   "url": "/en/whats-new/#apps"
+  },
+  {
+   "id": "v1:en:4.0",
+   "lang": "en",
+   "text": "Raye's new logo, in the system, the installer, the website and Discord, with a new startup animation.\n\nTaskbar settings: left or center, icon size, height, auto-hide.\n\nWindows that wobble when you move them, with a switch in Settings.",
+   "title": "The desktop and its look",
+   "url": "/en/whats-new/#look"
+  },
+  {
+   "id": "v1:en:5.0",
+   "lang": "en",
+   "text": "A smoother Hyprland session, Settings and Raye apps that work on it, and a complete guide. It's all on the Two desktops page.\n\nWhat is still missing\n\nPart of V1 is still in progress and isn't listed above: the Raye account and the Raye Community beta, Raye Proton, more hardware that works out of the box, the Printers & scanners page, the encrypted-disk unlock screen, the complete Windows bridge, the taskbar on top or on the side. Each line moves here when it is done; the roadmap says where they stand.\n\nThe fixes for older AMD cards and for NVIDIA cards were not tried on a real card: the test machine has no graphics card.\n\nOlder PCs (BIOS-mode start, processors such as the Core 2 Duo, 2 to 4 GB of memory) are still being tried. See the Older PCs page.\n\nRaye's kernel hasn't yet been tried on a real PC with Secure Boot, or with a real NVIDIA card, and hibernation is blocked while Secure Boot is on.\n\nI'm still going through every screen in French, installer included.\n\nThe WireGuard VPN and the taskbar settings were seen in the test machine; I haven't seen the wobbling windows yet, which the test machine's rendering can't show.",
+   "title": "Hyprland",
+   "url": "/en/whats-new/#hypr"
   },
   {
    "id": "handbook:fr:01-installer:0",
@@ -1321,56 +2168,56 @@
    "lang": "fr",
    "text": "La deuxième bêta de Raye Linux 1.0, sortie le 21 novembre 2026. Elle\napporte un second bureau au choix, une apparence Windows 10, vos fichiers\nde Windows, un mode jeu automatique et beaucoup de corrections. C'est\ntoujours une bêta : installez-la sur un ordinateur de rechange ou à côté de\nvotre système actuel, pas sur la seule machine dont vous dépendez.\n\nEnglish: https://dl.rayelinux.com/iso/1.0-beta/release-notes-1.0-beta.md",
    "title": "Raye Linux 1.0 Bêta Sundog",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/"
   },
   {
    "id": "notes:fr:1",
    "lang": "fr",
    "text": "- **Déjà sous Raye (0.5 Bêta ou 1.0 Bêta Brocken) ?** Pas besoin du nouveau\n téléchargement. Raye Update apporte Sundog tout seul. Pour l'avoir tout de\n suite, ouvrez Paramètres > Raye Update et cliquez sur Rechercher des mises\n à jour, puis redémarrez quand il le demande. La mise à jour s'installe\n pendant le redémarrage ; laissez le PC allumé jusqu'au retour du bureau.\n- **Nouvelle installation :** téléchargez l'image sur\n https://rayelinux.com/fr/telecharger/, vérifiez-la, et écrivez-la sur une\n clé USB de 8 Go ou plus avec Rufus (mode DD Image) ou balenaEtcher.\n Démarrez l'ordinateur sur la clé (souvent F12, F11, F8 ou Échap à\n l'allumage).",
    "title": "Raye Linux 1.0 Bêta Sundog › Mettre à jour ou installer",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/"
   },
   {
    "id": "notes:fr:2",
    "lang": "fr",
    "text": "- **Choisissez votre bureau.** L'installation demande quel bureau vous\n voulez : KDE Plasma (le bureau Raye que vous connaissez) ou Hyprland, un\n bureau en mosaïque plus léger avec la même barre des tâches, le même menu\n Démarrer, les mêmes paramètres rapides et notifications. Paramètres >\n Personnalisation > Environnement de bureau passe de l'un à l'autre en\n quelques secondes, sans mot de passe, et vos applis ouvertes reviennent.\n L'écran de connexion montre quel bureau il va ouvrir.\n- **Une apparence Windows 10.** Paramètres > Personnalisation propose un\n style Windows 10 : barre des tâches à gauche avec une zone de recherche,\n coins carrés, et un menu Démarrer avec une liste d'applis et des groupes\n de vignettes redimensionnables.\n- **Des animations comme sous Windows.** Les fenêtres s'ouvrent et se\n ferment comme sous Windows 11, l'agrandissement et l'ancrage sont animés,\n et Démarrer, les volets et les menus apparaissent en fondu.\n- **Vos fichiers de Windows.** Une nouvelle page, Paramètres > Comptes >\n Fichiers de Windows, copie les Documents, Images, Musique, Vidéos,\n Téléchargements et le Bureau de chaque compte Windows, avec le fond\n d'écran et les favoris du navigateur. Windows est seulement lu, jamais\n modifié, et chaque fichier est vérifié après la copie. Si vous installez\n Raye à côté de Windows, c'est proposé après la première connexion. Quand\n Raye remplace un autre système, il garde maintenant aussi votre fond\n d'écran, vos réseaux Wi-Fi, votre profil Firefox ou Chrome et vos applis\n Flatpak.\n- **Le mode jeu s'active tout seul** pendant un jeu Steam, du Store ou\n Windows : processeur à pleine vitesse, un ordonnanceur pour les jeux,\n effets en pause et meilleur mode d'alimentation sur secteur. Tout revient\n à la fin du jeu. Paramètres > Jeux > Mode jeu liste les jeux trouvés.\n- **NVIDIA :** les jeux tournent de nouveau à pleine vitesse après\n l'installation ou la mise à jour du pilote (ce correctif est aussi parti\n en mise à jour urgente le 20 novembre). Paramètres ne propose que le\n pilote NVIDIA recommandé, et Écran et graphismes ouvre le Panneau de\n configuration NVIDIA.\n- **Les cartes AMD récentes** (RX 5000 et plus, graphismes Ryzen récents)\n n'ont plus d'écran noir sans écran de démarrage pendant la première mise\n à jour. Les PC restés bloqués dans le mode sans échec en basse résolution\n retrouvent leurs graphismes normaux.\n- **Des mises à jour fiables.** Une mise à jour finit toujours sur la\n version la plus récente, même si une nouvelle sort pendant le\n téléchargement. Les mises à jour ne s'arrêtent plus à moitié, et un PC\n resté à moitié mis à jour se répare tout seul (aussi parti en mise à jour\n urgente le 20 novembre). Rechercher des mises à jour donne toujours une\n réponse, même juste après l'installation. Les mises à jour d'Ubuntu\n viennent maintenant d'abord d'un serveur de votre pays, les autres en\n secours.\n- **Moins de mémoire.** Environ 850 Mo au repos, contre environ 1 Go avant.\n Le Store, Paramètres, Horloge, le Gestionnaire des tâches et l'Explorateur\n en utilisent nettement moins.\n- **Raye Store :** Affinity, TikTok LIVE Studio et rekordbox, et chercher\n une appli de DJ montre aussi Mixxx. 14 programmes Windows de plus, chacun\n installé et essayé d'abord (foobar2000, ShareX, WinMerge, SumatraPDF,\n iTunes, l'appli EA et d'autres). La Bibliothèque ne liste que les applis\n que vous avez installées, Obtenir les mises à jour installe tout de suite\n les mises à jour des applis, le Store a sa page de paramètres et des\n raccourcis clavier comme sous Windows (F1 les liste). Synaptic n'est plus\n là : le Store fait son travail.\n- **Les programmes Windows** ouvrent et enregistrent les fichiers avec la\n fenêtre de Raye, en partant de Documents. Ils voient votre webcam, ont un\n synthé MIDI intégré et une imprimante Imprimer en PDF, et reçoivent ce\n qu'il leur faut au premier démarrage (Visual Basic 6, .NET 6 à 9 et\n d'autres). Le Gestionnaire des tâches montre chacun sous son propre nom\n et son icône.\n- **Sûr par défaut :** le pare-feu est activé, chaque réseau Wi-Fi reçoit\n une adresse matérielle privée, et le DNS chiffré est à un clic dans les\n propriétés du réseau. Les fichiers OpenVPN (.ovpn) s'ajoutent dans\n Paramètres > VPN.\n- **Une veille qui ne casse rien.** Si un PC ne se réveille pas de la\n veille deux fois de suite, Raye coupe la veille et le dit ; fermer le\n capot verrouille alors le PC et éteint l'écran. Paramètres > Système >\n Alimentation la réactive.\n- **Les alarmes d'Horloge** sortent le PC de la veille quand le PC le\n permet, et le disent clairement sinon. Le calendrier de l'horloge de la\n barre des tâches a un bouton « Alarmes et horloge ».\n- **Plus de paramètres, comme Windows 11 :** Assistant de stockage\n programmé, Ne pas déranger à heures fixes, boutons de barre des tâches\n plus petits, trouver le pointeur avec Ctrl, une disposition de clavier\n par fenêtre, l'orthographe, et d'autres.\n- **L'installation** dit quand le processeur est trop ancien pour certaines\n applis et certains jeux (sans arrêter l'installation), Essayer Raye ne\n touche jamais au swap du PC, et le nouveau système utilise le serveur\n Ubuntu du pays choisi.\n- **Petites corrections :** les boutons de la barre des tâches, Démarrer et\n l'horloge répondent jusqu'au bord de l'écran et dans les coins,\n l'agrandissement n'a plus de défaut d'affichage, la fenêtre Fusionner les\n dossiers de l'Explorateur est corrigée, et les Chromebooks (Intel et AMD)\n ont leur rangée de touches du haut reconnue.",
    "title": "Raye Linux 1.0 Bêta Sundog › Nouveautés de la 1.0 Bêta Sundog",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/"
   },
   {
    "id": "notes:fr:3",
    "lang": "fr",
    "text": "- La mémoire au repos est d'environ 850 Mo (jusqu'à 1 Go juste après la\n première connexion), pas encore les 600 à 700 Mo visés pour la 1.0 finale.\n- Le correctif de vitesse des jeux NVIDIA est testé sur nos machines de\n test, pas encore par nous sur une vraie carte NVIDIA. Si vos jeux sont\n encore lents, dites-le-nous.\n- Hyprland est nouveau dans cette bêta et a surtout été testé dans des\n machines virtuelles. Après un changement de bureau avec connexion\n automatique, le trousseau de mots de passe (KWallet) peut rester\n verrouillé jusqu'à ce que vous le déverrouilliez.\n- Le nouveau noyau Raye n'est pas encore dans cette bêta ; il arrivera dans\n une prochaine mise à jour.\n- Le nom de la version n'apparaît pas encore dans le menu de démarrage,\n seulement dans Paramètres > À propos et sur l'écran de connexion.\n- Sur un PC mis à jour depuis une bêta précédente, Synaptic peut apparaître\n dans « Ajoutés récemment » du menu Démarrer pendant environ 15 minutes,\n jusqu'à ce que Raye Update le retire.\n- Dans la Bibliothèque du Store, Obtenir les mises à jour ne dit rien quand\n il n'y a rien à mettre à jour.\n- Certaines anciennes cartes AMD (séries RX 400 et 500) peuvent encore\n démarrer en basse résolution avec peu d'images par seconde sur certains\n PC. Nous y travaillons encore.\n- Tous les programmes Windows ne fonctionnent pas, et les applis faites\n uniquement pour le Microsoft Store ne peuvent pas fonctionner du tout. Les\n programmes qui existent aussi pour Raye (Discord, Steam) s'installent\n mieux depuis le Raye Store.",
    "title": "Raye Linux 1.0 Bêta Sundog › Problèmes connus",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/"
   },
   {
    "id": "notes:fr:4",
    "lang": "fr",
    "text": "Dites-le-nous sur Discord, https://discord.gg/TrxhUkabyB, ou écrivez à\nbonjour@rayelinux.com. Dites quel ordinateur vous avez, ce que vous avez\nfait, ce que vous attendiez et ce qui s'est passé. Une photo de l'écran\naide.",
    "title": "Raye Linux 1.0 Bêta Sundog › Signaler un problème",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/"
   },
   {
    "id": "notes:fr:5",
    "lang": "fr",
    "text": "La première bêta de Raye Linux 1.0 : un bureau disposé comme Windows 11,\ndessiné aux couleurs de Raye, avec des mises à jour qui s'installent toutes\nseules. C'est une bêta. Installez-la sur un ordinateur de rechange ou à côté\nde votre système actuel, pas sur la seule machine dont vous dépendez. Une\n0.5 Bêta déjà installée reçoit tout ceci par Raye Update ; le nouvel\ninstallateur ne compte que pour les nouvelles installations.",
    "title": "Raye Linux 1.0 Bêta Sundog › Avant : Raye Linux 1.0 Bêta Brocken (19 novembre 2026)",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/"
   },
   {
    "id": "notes:fr:6",
    "lang": "fr",
    "text": "- **Horloge**, une nouvelle appli : des alarmes qui sonnent même fenêtre\n fermée (jours, son, Répéter), des minuteurs, un chronomètre avec tours et\n des horloges du monde.\n- **Carte graphique**, une nouvelle appli : l'état de votre carte graphique\n en direct. Sur les cartes AMD Radeon, elle règle le mode de performance,\n le profil de charge, la limite de puissance et une courbe de ventilateur,\n gardés au redémarrage. Les cartes NVIDIA ont le Panneau de configuration\n NVIDIA, installé avec le pilote et nommé ainsi dans Démarrer.\n- **Paramètres > Système > Options de performances** : un seul choix coupe\n les animations, la transparence et les ombres sur un PC lent, ou réglez\n chaque effet à part.\n- **Le Raye Store** est bien plus grand : cherchez un programme Windows\n (Photoshop, Office, Battle.net...) et il trouve les applis qui font le\n même travail. Steam et Heroic sont mis en avant, et Steam Play est activé\n pour tous les jeux dès que le Store installe Steam. TeamViewer, Mullvad VPN\n et balenaEtcher ont été ajoutés.\n- **Des avis dans le Raye Store** : la page de chaque appli montre ses\n étoiles et ce que les gens en disent, et une fois l'appli installée, vous\n pouvez la noter et écrire votre propre avis. Les avis sont partagés avec\n d'autres magasins d'applis Linux.\n- **Les fichiers .deb** s'installent d'un double-clic, dans une petite\n fenêtre qui va chercher ce qu'il leur faut et explique tout problème en\n mots simples.\n- **Les programmes Windows** ont les polices qu'ils demandent, démarrent dans\n leur propre dossier, et les jeux 32 bits peuvent utiliser 4 Go de mémoire.\n Les paquets du Microsoft Store (.msix, .appx) s'ouvrent avec Raye, ou\n disent clairement pourquoi ils ne peuvent pas.\n- **Explorateur** : la molette défile de trois lignes par cran comme sous\n Windows, une copie vers une clé USB montre ce qui est vraiment écrit et ne\n se termine que lorsque la clé peut être retirée, et Propriétés et Options\n des dossiers sont plus clairs.\n- **Raye Update** est plus discret et plus fiable : les mises à jour de\n Plasma arrivent d'un seul bloc, un fichier qui n'a pas pu être téléchargé\n est simplement réessayé plus tard, la recherche de mises à jour ne reste\n plus bloquée des minutes quand un serveur ne répond plus, et Paramètres\n montre la vitesse, le temps restant et l'état de chaque mise à jour.\n- **Démarrage plus rapide** : plus d'attente sur le menu de démarrage tant\n que tout va bien, des fichiers de démarrage plus petits, et les aides des\n vieux programmes ne démarrent que quand l'un d'eux en a besoin.\n- **Cartes graphiques plus anciennes** : si le bureau ne s'affiche pas deux\n fois de suite, Raye passe tout seul à un mode d'affichage plus simple.\n- **L'installateur** sait installer à côté d'un autre Linux (il peut\n réduire des partitions ext4 et btrfs), fonctionne sur les PC démarrés en\n mode BIOS, et demande avant d'effacer un disque, de supprimer une\n partition ou d'en réduire une. Le menu de la clé a « Check the USB stick\n for errors », et une clé mal écrite le dit au lieu d'une erreur obscure.\n- **Essayer Raye Linux sans l'installer** : le menu de la clé a un nouveau\n choix qui ouvre le bureau directement depuis la clé, sans que\n l'installation s'ouvre. Rien ne change sur le PC.\n- **Remplacer et garder vos fichiers** : quand Raye remplace Windows ou un\n autre système, l'installation peut emporter votre Bureau, vos Documents,\n Téléchargements, Musique, Images et Vidéos. Elle vérifie d'abord qu'il y a\n la place et demande avant d'effacer quoi que ce soit.\n- **Machines virtuelles** : Raye apporte maintenant les outils invités de\n VirtualBox et de VMware, et le PC reste éveillé pendant l'installation.\n- **Les applis web** installées depuis votre navigateur et épinglées à la\n barre des tâches gardent leur propre icône et leur nom.\n- Ctrl+Win+Entrée active ou coupe le lecteur d'écran.",
    "title": "Raye Linux 1.0 Bêta Sundog › Nouveautés de la 1.0 Bêta Brocken",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/"
   },
   {
    "id": "notes:fr:7",
    "lang": "fr",
    "text": "Raye Linux est basé sur Ubuntu. Il n'est ni affilié à Canonical Ltd. ni\napprouvé par elle.",
    "title": "Raye Linux 1.0 Bêta Sundog › Nouveautés de la 1.0 Bêta Brocken (2)",
-   "url": "/fr/telecharger/"
+   "url": "/telecharger/"
   },
   {
    "id": "faq:discord:en:0",
@@ -1518,8 +2365,9 @@
  "sources": {
   "1.0-beta/release-notes-1.0-beta.fr.md": "2bf6d9d7b93d1bd3",
   "1.0-beta/release-notes-1.0-beta.md": "8e317bfec331ba3c",
+  "bureau/index.html": "611fe2a63fa55d6e",
+  "deux-bureaux/index.html": "59c253b77387647e",
   "discord/texts.py": "5bff52e13c468251",
-  "download/index.html": "6d3d24f2680a7bb9",
   "en/01-installing.md": "395684ff312893d0",
   "en/02-first-steps.md": "327774439b2c0c38",
   "en/03-updates.md": "55e63fd65d21506a",
@@ -1532,7 +2380,18 @@
   "en/10-for-developers.md": "53a32eb41ce34dbd",
   "en/11-chromebooks.md": "0b0a8099e4fe5196",
   "en/12-hyprland.md": "f62a6125c1c73390",
-  "en/index.html": "95384c76fbd6dc79",
+  "en/desktop/index.html": "ff880fb0e516ce11",
+  "en/download/index.html": "1ac5a6c052d065fd",
+  "en/games/index.html": "a04950210177ff3e",
+  "en/hardware/index.html": "c7122f233e913769",
+  "en/install/index.html": "b9d569914e2bec55",
+  "en/old-pcs/index.html": "42330469d9d7a5b9",
+  "en/questions/index.html": "d639c6e2517e9468",
+  "en/security/index.html": "eadcdb7a9f0c1098",
+  "en/two-desktops/index.html": "5e60bb4138c0d3f4",
+  "en/updates/index.html": "1b427b1cc3456b28",
+  "en/whats-new/index.html": "a95ab10d8c26c445",
+  "en/windows-programs/index.html": "70f8261f7bcef939",
   "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
   "fr/03-mises-a-jour.md": "3a87ba7037178d8a",
@@ -1545,7 +2404,15 @@
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
   "fr/11-chromebooks.md": "655c79fe7f20dfb5",
   "fr/12-hyprland.md": "50124c843b13d09d",
-  "fr/index.html": "8218383394013a45",
-  "telecharger/index.html": "730250c6ee8dfe12"
+  "installer/index.html": "3a102ef8e666e04c",
+  "jeux/index.html": "28d0da016d6ce3d2",
+  "materiel/index.html": "3d278729c74d2539",
+  "mises-a-jour/index.html": "2a425f5a27798c5e",
+  "nouveautes/index.html": "0f6e7f1717e94a5a",
+  "programmes-windows/index.html": "eb9153738af5209f",
+  "questions/index.html": "3f37264a60b7912d",
+  "securite/index.html": "3d658dc59a4ffb86",
+  "telecharger/index.html": "14c1753f309e2779",
+  "vieux-pc/index.html": "8ca390b8ec671d24"
  }
 }

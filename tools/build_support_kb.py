@@ -42,12 +42,33 @@ DISCORD_TEXTS = os.environ.get("RAYE_DISCORD_TEXTS", "discord-texts.py")
 # paragraph break
 CHUNK_MAX = 1800
 
+# the coming-soon site: the questions of the home page and the download page
 PAGES = {
     "fr": {"home": "/fr/", "download": "/fr/telecharger/", "file": "fr/index.html",
            "dl_file": "fr/telecharger/index.html"},
     "en": {"home": "/en/", "download": "/en/download/", "file": "en/index.html",
            "dl_file": "en/download/index.html"},
 }
+
+sys.path.insert(0, HERE)
+import build_pages  # noqa: E402
+import site_v1_text  # noqa: E402
+
+# The V1 site (build_pages.V1_LIVE): its answers are spread over pages, each
+# cut at its h2 headings, every piece linking to its own heading. The keys
+# are those of site_v1_text.PAGES; "questions" and "download" keep the ids
+# the coming-soon pages had ("faq:", "download:").
+V1_PAGES = ("questions", "download", "install", "hardware", "windows", "games",
+            "updates", "security", "oldpcs", "desktops", "desktop", "v1")
+V1_IDS = {"questions": "faq", "download": "download"}
+
+
+def v1_path(key, lang):
+    return site_v1_text.PAGES[key]["path"][lang]
+
+
+def v1_file(key, lang):
+    return v1_path(key, lang).lstrip("/") + "index.html"
 
 
 class Missing(Exception):
@@ -145,7 +166,38 @@ def page_sections(html_text):
     return out
 
 
+def v1_sections(html_text):
+    """(anchor, heading, text) for each h2 of the page's main, in order."""
+    main = html_text[html_text.index("<main"):html_text.index("</main>")]
+    starts = [(m.start(), m.group(1)) for m in re.finditer(r'<h2 id="([^"]+)"', main)]
+    out = []
+    for n, (at, anchor) in enumerate(starts):
+        end = starts[n + 1][0] if n + 1 < len(starts) else len(main)
+        for head, body in page_sections(main[at:end]):
+            out.append((anchor, head, body))
+    return out
+
+
+def v1_site_chunks():
+    chunks = []
+    for lang in ("fr", "en"):
+        for key in V1_PAGES:
+            name = V1_IDS.get(key, key)
+            path = v1_path(key, lang)
+            sections = v1_sections(read(os.path.join(SITE, v1_file(key, lang))))
+            for i, (anchor, head, body) in enumerate(sections):
+                pieces = split_long(head, body)
+                for j, (t, text) in enumerate(pieces):
+                    cid = (f"{name}:{lang}:{i}" if len(pieces) == 1 and key == "questions"
+                           else f"{name}:{lang}:{i}.{j}")
+                    chunks.append({"id": cid, "lang": lang, "title": t,
+                                   "url": f"{path}#{anchor}", "text": text})
+    return chunks
+
+
 def site_chunks():
+    if build_pages.V1_LIVE:
+        return v1_site_chunks()
     chunks = []
     for lang, p in PAGES.items():
         home = read(os.path.join(SITE, p["file"]))
@@ -192,7 +244,7 @@ def notes_chunks():
     for lang, path in notes_paths().items():
         for i, (t, body) in enumerate(markdown_chunks(read(path), "Notes")):
             chunks.append({"id": f"notes:{lang}:{i}", "lang": lang, "title": t,
-                           "url": PAGES[lang]["download"], "text": body})
+                           "url": download_path(lang), "text": body})
     return chunks
 
 
@@ -235,8 +287,15 @@ def discord_chunks():
     return chunks
 
 
+def download_path(lang):
+    return v1_path("download", lang) if build_pages.V1_LIVE else PAGES[lang]["download"]
+
+
 def source_files():
-    files = [os.path.join(SITE, p[k]) for p in PAGES.values() for k in ("file", "dl_file")]
+    if build_pages.V1_LIVE:
+        files = [os.path.join(SITE, v1_file(k, lang)) for lang in ("fr", "en") for k in V1_PAGES]
+    else:
+        files = [os.path.join(SITE, p[k]) for p in PAGES.values() for k in ("file", "dl_file")]
     for lang in ("fr", "en"):
         folder = os.path.join(HANDBOOK, lang)
         files += sorted(os.path.join(folder, n) for n in os.listdir(folder) if n.endswith(".md"))
@@ -249,7 +308,11 @@ def build():
     sources = {}
     for path in source_files():
         with open(path, "rb") as f:
-            sources[os.path.basename(os.path.dirname(path)) + "/" + os.path.basename(path)] = \
+            if build_pages.V1_LIVE and path.startswith(SITE + os.sep):
+                name = os.path.relpath(path, SITE)   # fr and en pages share names
+            else:
+                name = os.path.basename(os.path.dirname(path)) + "/" + os.path.basename(path)
+            sources[name] = \
                 hashlib.sha256(f.read()).hexdigest()[:16]
     with open(RELEASE, encoding="utf-8") as f:
         title = json.load(f)["title"]

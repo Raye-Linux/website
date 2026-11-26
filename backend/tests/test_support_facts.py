@@ -16,8 +16,11 @@ FACTS = os.path.join(WEBSITE, "backend", "raye_site", "support_facts.md")
 SITE = os.path.join(WEBSITE, "site")
 SETTINGS = os.path.normpath(os.path.join(WEBSITE, "..", "settings"))
 
-# A path such as /en/download/ or rayelinux.com/fr/feuille-de-route/
-PATH = re.compile(r"(?<![\w./-])(?:rayelinux\.com)?(/(?:en|fr)/[a-z0-9/-]*)")
+# A path such as /en/download/, rayelinux.com/fr/feuille-de-route/ or, on the
+# V1 site where French is at the root, /telecharger/ -- one or more lowercase
+# segments, each closed by a slash
+# (not a file path such as /root/tools/x.py: nothing may follow the slash)
+PATH = re.compile(r"(?<![\w./-])(?:rayelinux\.com)?(/(?:[a-z0-9-]+/)+)(?![\w-]|\.\w)")
 
 # Words the assistants must never write. "Wine" is the name the owner wants
 # hidden everywhere (say "Windows programs support").
@@ -57,9 +60,23 @@ def settings_text():
     return "\n".join(texts)
 
 
+def v1():
+    import sys
+    sys.path.insert(0, os.path.join(WEBSITE, "tools"))
+    import build_pages
+    import site_v1_text
+    return build_pages.V1_LIVE, site_v1_text
+
+
 def home_faq(lang):
-    with open(os.path.join(SITE, lang, "index.html"), encoding="utf-8") as f:
+    """The questions a visitor reads: the home page FAQ of the coming-soon
+    site, the Questions page of the V1 site."""
+    live, V = v1()
+    rel = (V.PAGES["questions"]["path"][lang].strip("/") if live else lang)
+    with open(os.path.join(SITE, rel, "index.html"), encoding="utf-8") as f:
         text = f.read()
+    if live:
+        return text[text.index("<main"):text.index("</main>")].replace("\u00a0", " ")
     return text[text.index('id="questions"'):]
 
 
@@ -92,6 +109,14 @@ class FactsTests(unittest.TestCase):
 
     def test_the_idle_memory_is_the_figure_the_site_prints(self):
         text = facts()
+        live, V = v1()
+        if live:
+            # the figure the V1 site prints, from its measures table
+            ram = V.MEASURES["ram"]["value"]
+            self.assertIn("about " + ram["en"], text)
+            self.assertIn(ram["en"], home_faq("en"))
+            self.assertIn(ram["fr"], home_faq("fr"))
+            return
         self.assertIn("about 850 MB", text)
         self.assertIn("about 850 MB", home_faq("en"))
         self.assertIn("environ 850 Mo", home_faq("fr"))

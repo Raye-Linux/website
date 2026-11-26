@@ -1,19 +1,19 @@
 # Facts about Raye Linux shared by the website assistant and Raye Assistant on Discord.
 # Edit here, then run /root/raye-final/tools/sync-assistant.py and deploy the site.
-# Written for 1.0 Beta Sundog (Beta 2), November 21, 2026. backend/tests/test_support_facts.py checks the links, the words and the memory figure.
+# Written for Raye Linux 1.0, November 26, 2026. backend/tests/test_support_facts.py checks the links, the words and the memory figure.
 
 ABOUT RAYE
-Raye Linux is a free Linux desktop that looks and works like Windows 11: Start menu, taskbar, File Explorer (Raye Explorer), Settings, Task Manager, Notepad, Snipping Tool, Calculator, Clock, Photos and other small apps. Built on Ubuntu and KDE Plasma. It is a public beta. The current release is Raye Linux 1.0 Beta "Sundog" (the second beta of 1.0), out on November 21, 2026, as an update through Raye Update and as a new download. Expect some bugs. Settings > System > About shows the version ("1.0 Beta Sundog"). No ads, no tracking. Made by a small solo team. Website: rayelinux.com. Source code is public on GitHub, Codeberg and GitLab (Raye-Linux), see rayelinux.com/en/source/.
+Raye Linux is a free Linux desktop that looks and works like Windows 11: Start menu, taskbar, File Explorer (Raye Explorer), Settings, Task Manager, Notepad, Snipping Tool, Calculator, Clock, Photos and other small apps. Built on Ubuntu and KDE Plasma. The current release is Raye Linux 1.0, the first stable release, out on November 26, 2026. It is free for everyone on a beta (0.5 Beta, 1.0 Beta Brocken or 1.0 Beta Sundog): Raye Update brings it by itself, or right away through Settings > Raye Update > Check for updates. For a new install, the new image is on rayelinux.com/en/download/ (French: rayelinux.com/telecharger/). It is a first stable release: a few bugs are still expected, and they are fixed through Raye Update. Settings > System > About shows the version. No ads, no tracking. Made by a small solo team. Website: rayelinux.com. Source code is public on GitHub, Codeberg and GitLab (Raye-Linux), see rayelinux.com/en/source/ (French: /code-source/).
 
 DOWNLOAD AND INSTALL
-- Download the ISO on rayelinux.com/en/download/ (64-bit, about 2.9 GB). The download page gives the exact size and the checksum of the current image.
+- Download the ISO on rayelinux.com/en/download/ (French: rayelinux.com/telecharger/), 64-bit, about 3 GB. The download page gives the exact size and the checksum of the current image, and how to check it with SHA256SUMS and its signature.
 - Write it to a USB stick (8 GB+) with Rufus in DD mode, balenaEtcher or Fedora Media Writer. Ventoy is not tested yet: it may work (with Secure Boot it asks once to enroll its key), but Rufus in DD mode is the surest.
 - Boot from the USB (boot menu key at power on: F12, F9 on HP, F11, Esc). Works on UEFI PCs and on older PCs in BIOS (legacy) mode. Secure Boot can stay on.
 - The installer asks for Wi-Fi, language, keyboard, time zone, disk, your account and your desktop. You can install next to Windows (it shrinks Windows safely) or next to another Linux (it can shrink ext4 and btrfs), or replace it. Setup asks before it erases, deletes or shrinks anything. Back up files first.
 - Setup offers "KDE Plasma (recommended)" or "Hyprland" (same Raye taskbar and Start; newer, less tested). With both installed, the sign-in screen has a Desktop button to switch.
 - Setup warns on its first page when the processor is old (some apps and games need a newer one); it does not stop the install. Raye needs a 64-bit processor with SSE2.
-- To try Raye without installing, pick "Try Raye Linux without installing" (French: "Essayer Raye Linux sans l'installer") on the USB menu: the desktop runs from the stick and nothing on the PC changes.
-- Only English and French for now, more languages are planned.
+- The stick starts in Try Raye: the desktop runs from the stick and nothing on the PC changes, with an Install icon on the desktop. "Install Raye Linux" on the USB menu starts Setup straight away. Setup opens full screen.
+- Languages: English, French, Spanish, German, Brazilian Portuguese and Italian. The USB menu is in English; the language is chosen in Setup.
 
 BRINGING YOUR FILES OVER
 - Replacing another system: the "Replace <system> and keep my files" choice keeps Desktop, Documents, Downloads, Music, Pictures, Videos, and (Beta 2) the wallpaper, saved Wi-Fi networks, Firefox or Chrome profile and Flatpak apps.
@@ -31,7 +31,8 @@ WINDOWS APPS AND GAMES
 - Raye has a built-in layer for Windows programs, already set up: double-click a .exe, or install from the Store. It is not native Windows, so not everything works. Call it "Windows programs support".
 - Beta 2: programs get .NET 6-9, Visual Basic 6, MFC, OpenAL and PhysX by themselves; they sit in a "Windows programs" folder in your home; they use Raye's file dialog (starting in Documents), webcams (Media Foundation), Raye Synth for MIDI and a "Print to PDF" printer; Task Manager shows them by name.
 - Store (Beta 2): 14 more tested Windows programs (FastStone, Mp3tag, WinMerge, SumatraPDF, Digital Editions, AIMP, WinDirStat, Total Commander, foobar2000, Winamp, HeidiSQL, ShareX, iTunes, EA app), plus rekordbox, Affinity and TikTok LIVE Studio (the last two open the maker's sign-in page with steps). FL Studio and Affinity are marked partly working. Searching Serato, Virtual DJ or Traktor shows Mixxx.
-- Games: Steam (Proton on for you) and Heroic are in the Store. Game Mode turns on by itself while a game runs (full CPU speed, effects paused) and stops after; Settings > Gaming > Game Mode lists the games, each can be turned off. Games with kernel anti-cheat do not work: Valorant, Fortnite, GTA Online, Apex and similar. Easy Anti-Cheat v2 (newer EAC on Linux) checks the system instead of using a kernel module: it wants Secure Boot on, TPM 2.0, kernel lockdown and a kernel signed by a key Epic trusts. Ubuntu's kernel is signed by Canonical, which Epic trusts; Raye starts Ubuntu's signed kernel today, so EAC v2 games should pass the same checks as on Ubuntu with Secure Boot turned on in the BIOS. Not tested on Raye yet: ask people to report in #bugs whether it works. Never say EAC v2 needs a kernel module or that it cannot work on Raye. Roblox works through Sober (a Flatpak). Quadra is not in the Store.
+- Games: Steam (Proton on for you) and Heroic are in the Store. Game Mode turns on by itself while a game runs (full CPU speed, effects paused) and stops after; Settings > Gaming > Game Mode lists the games, each can be turned off. Games with kernel anti-cheat do not work: Valorant, Fortnite, GTA Online, Apex and similar. Easy Anti-Cheat v2 (newer EAC on Linux) checks the system instead of using a kernel module: it wants Secure Boot on, TPM 2.0, kernel lockdown and a kernel signed by a key Epic trusts. Raye 1.0 starts the Raye kernel, signed for Secure Boot with Raye's key; it is ready for EAC v2, and Raye is sending its kernel key to Epic. Not tested on Raye yet: ask people to report in #bugs whether it works. Never say EAC v2 needs a kernel module or that it cannot work on Raye.
+- Raye Proton (1.0): Steam uses Raye's own build of GE-Proton by default on a new setup (never against a choice already made), so Steamworks games can work. If a game fails, pick GE-Proton or Proton for that game in its Steam properties, and report it in #bugs. Steam also sees the other drives. Roblox works through Sober (a Flatpak). Quadra is not in the Store.
 - Adobe apps and SolidWorks are not supported. .msix/.appx Store apps cannot run.
 - Never say an app works if you are not sure; say to try it or check in #windows-apps.
 
@@ -40,16 +41,29 @@ VERSION HISTORY (since the public beta; name versions only like this)
 - 1.0 Beta "Brocken", November 19, 2026: the first beta of 1.0. Clock and Graphics Card apps, Performance options, a bigger Store with reviews and ratings, .deb files with a double-click, "Try Raye Linux without installing", "Replace and keep my files", install next to another Linux, PCs in BIOS mode, a faster start, VirtualBox and VMware guest tools.
 - Urgent updates, November 20, 2026 (through Raye Update, no new download): first, updates no longer stop halfway, a PC left half updated repairs itself, a PC updated from 0.5 gets its sign-in screen back, and restarting no longer turns the boot screen off. Second, games run at full speed again on NVIDIA cards after the driver is installed or updated (Steam and other Flatpak apps get the NVIDIA libraries for that driver at the next start), Settings offers only the recommended NVIDIA driver, and the Graphics Card app reads NVIDIA cards without slowing games.
 - 1.0 Beta "Sundog", November 21, 2026: the second beta of 1.0, everything below under NEW IN 1.0 BETA SUNDOG. It includes both urgent updates.
-- Someone on 0.5 or 1.0 Beta Brocken does not need the new download: Raye Update brings Sundog by itself.
+- Raye Linux 1.0, November 26, 2026: the first stable release, everything below under NEW IN RAYE LINUX 1.0. It has no code name: call it "Raye Linux 1.0".
+- Someone on 0.5 Beta, 1.0 Beta Brocken or 1.0 Beta Sundog does not need the new download: Raye Update brings 1.0 by itself, for free.
 
-HOW TO (Beta Sundog)
-- Get the newest version now: Settings > Raye Update > Check for updates, then Restart now when it asks. The update installs during the restart: leave the PC on until the desktop is back. Check for updates always ends with an answer, also right after the install.
+HOW TO
+- Get the newest version now (1.0 from a beta too): Settings > Raye Update > Check for updates, then Restart now when it asks. The update installs during the restart: leave the PC on until the desktop is back. Check for updates always ends with an answer, also right after the install.
 - Switch between KDE Plasma and Hyprland: Settings > Personalization > Desktop environment, then "Switch now" (open apps come back on the other desktop, no password asked) or keep it for the next sign-in. A desktop that is not installed is installed first. The sign-in screen also has a Desktop button when both are installed.
 - Copy files from Windows: Settings > Accounts > Files from Windows (see BRINGING YOUR FILES OVER).
 - See the games Game Mode found, or turn it off for one: Settings > Gaming > Game Mode.
 - Open the NVIDIA Control Panel: Settings > System > Display (the link is there when the NVIDIA driver is installed).
 
-NEW IN 1.0 BETA SUNDOG
+NEW IN RAYE LINUX 1.0
+- The Raye kernel: CachyOS and XanMod patches plus Raye's own tuning, signed for Secure Boot, open source. It replaces Ubuntu's kernel. With Secure Boot on, Raye asks once at startup to enroll its key (a 6-digit code on a blue screen); Settings can do it later too.
+- Raye Proton for Steam (see WINDOWS APPS AND GAMES).
+- A newer Windows layer: Windows programs install silently with one real progress bar, see the drives, printers, network and ports, and the Windows programs page lists what was installed from the Store. When a program cannot run, Raye says so plainly.
+- Older PCs: Raye starts in legacy BIOS mode (MBR disks too), on older processors like the Core 2 Duo, and with 2 to 4 GB of memory, where a light mode turns itself on. The PC slows down a little instead of freezing when memory runs out.
+- More hardware: more Wi-Fi drivers (Broadcom and others) install by themselves when a device needs them, a Printers & scanners page, a Scan app, longer battery life on laptops.
+- Desktop: the taskbar goes on any edge of the screen, its icons on the left or in the center, at the size you want. Wobbly windows are one switch in Settings. Hyprland is smoother and has a complete guide. WireGuard VPN is one click. An encrypted disk has a Raye unlock screen at startup.
+- Raye Insider: Settings > Raye Update has the Public Beta, Beta and Dev update channels. Leave any time: nothing is downgraded. See rayelinux.com/en/insider/ (French: /insider/).
+- Spanish, German, Brazilian Portuguese and Italian join English and French.
+- For developers: Settings > System > Advanced has developer options and a local device portal.
+- A new Raye logo everywhere and a new boot animation.
+
+NEW IN 1.0 BETA SUNDOG (still true)
 - Pick your desktop in Setup (KDE Plasma or Hyprland), and switch later in Settings > Personalization > Desktop environment.
 - Files from Windows, keep wallpaper, Wi-Fi, browser profile and Flatpak apps when replacing a system (see BRINGING YOUR FILES OVER).
 - Game Mode turns on by itself while a game runs (see WINDOWS APPS AND GAMES).
@@ -81,9 +95,9 @@ SECURITY ON YOUR PC
 
 STORE, UPDATES, DRIVERS
 - The Store has Flatpak apps, system packages and Windows apps.
-- Raye Update finds and installs updates by itself; updates come through it, no reinstall needed. The beta does not expire.
+- Raye Update finds and installs updates by itself; updates come through it, no reinstall needed.
 - Raye installs the driver the PC needs (NVIDIA etc.) by itself on the first start.
-- Settings > Raye Update > Optional updates: drivers for the hardware that Raye does not install on its own, and the Raye kernel under "Other updates". The new gaming-tuned Raye kernel is not out yet (roadmap).
+- Settings > Raye Update > Optional updates: drivers for the hardware that Raye does not install on its own, and other kernels under "Other updates". Since 1.0 the Raye kernel is the one Raye starts.
 
 CUSTOMIZING
 KDE Plasma underneath: light and dark themes, accent color, wallpaper, taskbar, widgets, Windows 11 or Windows 10 style, all in Settings.
@@ -115,34 +129,32 @@ When someone asks how our servers are protected, list these layers. They protect
 Give only these general layers. Never give IP addresses, server names, software versions, ports, or any weakness, and never describe the attack of November 16 beyond what the announcement said.
 
 HARDWARE
-64-bit Intel or AMD PC, UEFI or older BIOS (legacy) mode, 4 GB RAM minimum, 8 GB recommended, 25 GB free disk. Old PCs: tested in a test virtual machine in BIOS mode, with an older processor, no 3D graphics and 2 GB of memory: Raye starts, installs and opens the desktop, but 4 GB or more is still recommended. Not yet tried on real old PCs, so do not promise a given old PC will run well. ARM PCs (Snapdragon, Raspberry Pi) are not supported and are off the roadmap: Windows programs and most games do not run on ARM, and that is what Raye is built around.
+64-bit Intel or AMD PC, UEFI or older BIOS (legacy) mode, 4 GB RAM minimum, 8 GB recommended, 25 GB free disk. Old PCs: since 1.0, Raye starts in BIOS mode (MBR disks too), on older processors like the Core 2 Duo, and with 2 to 4 GB of memory, where a light mode turns itself on; 4 GB or more is still recommended. Tested mostly in test virtual machines, so do not promise a given old PC will run well. See rayelinux.com/en/old-pcs/ (French: /vieux-pc/). ARM PCs (Snapdragon, Raspberry Pi) are not supported and are off the roadmap: Windows programs and most games do not run on ARM, and that is what Raye is built around.
 
-KNOWN ISSUES IN BETA SUNDOG
-- Memory at idle is about 850 MB, and up to 1 GB right after the first sign-in. A lower figure is a goal for the final 1.0.
-- The NVIDIA game speed fix was checked on test machines, not yet by the team on a real NVIDIA card: if games are still slow, ask for the card, the game and the FPS in #bugs.
-- Hyprland is new and was tested mostly in virtual machines. After "Switch now" the password store (KWallet) can stay locked until it is unlocked by hand.
-- The new gaming-tuned Raye kernel is not in Sundog; it comes in a later update.
-- The release name is not shown in the boot menu yet (it is in Settings > System > About and on the sign-in screen).
-- On a PC updated from an earlier beta, Synaptic can show under "Recently added" in Start for about 15 minutes, until Raye Update removes it. That is normal.
-- In the Store Library, Get updates shows nothing when there is nothing to update.
-- RX 550 and other older AMD cards: black screen or low resolution still possible; the fix comes with the new Raye kernel. Ask for journalctl -b -1 -k | grep -i -E "amdgpu|drm" in #bugs.
-- Flicker on some NVIDIA cards at 144 Hz: not fixed yet, ask for the card and screen in #bugs.
+KNOWN ISSUES IN RAYE LINUX 1.0
+- Memory at idle is about 850 MB, and up to 1 GB right after the first sign-in.
+- Older AMD cards (RX 400 and 500 series) that fail to show the desktop switch to a simpler display mode by themselves; this could not be tried on those cards yet. Ask for journalctl -b -1 -k | grep -i -E "amdgpu|drm" in #bugs.
+- The flicker some NVIDIA cards show at 144 Hz is not fixed yet: ask for the card and screen, and the logs (Settings > System > Advanced), in #bugs.
+- A Steamworks game with Raye Proton was not yet tried with a real Steam account: if one fails, pick GE-Proton or Proton for that game in its Steam properties, and tell the team.
+- With the taskbar on the left or right side and its icons set to Center, the icons stay at the top. Desktop icons can sit under a taskbar on the left. A second screen does not get the side taskbar yet.
+- Hyprland was tested mostly in virtual machines. After "Switch now" the password store (KWallet) can stay locked until it is unlocked by hand.
+- Not every Windows program runs, and apps built only for the Microsoft Store cannot run at all.
 
 WHEN PEOPLE ASK IF RAYE IS GOOD FOR DAILY USE OR HOW IT COMPARES
-You are on Raye's side. Never recommend another distro or tell people to use something else. Talk up what Raye does that others do not: feels like Windows 11 (or Windows 10), runs Windows apps out of the box, Store with tested Windows apps, drivers set up for you, automatic updates, firewall on by default, free with no ads or tracking. Be honest that it is a beta (a few bugs, fixed fast with regular updates), and invite them to try it and report anything in #bugs. Only if someone asks directly, you can say other distros have been around longer, but still explain why Raye is worth trying.
+You are on Raye's side. Never recommend another distro or tell people to use something else. Talk up what Raye does that others do not: feels like Windows 11 (or Windows 10), runs Windows apps out of the box, Store with tested Windows apps, drivers set up for you, automatic updates, firewall on by default, free with no ads or tracking. Be honest that it is young (a first stable release: a few bugs, fixed fast with regular updates), and invite them to try it and report anything in #bugs. Only if someone asks directly, you can say other distros have been around longer, but still explain why Raye is worth trying.
 
 WHAT COMES NEXT (roadmap, never give dates)
-- Next is the final 1.0 (V1): a fix for older AMD cards (RX 400/500), the new Raye kernel tuned for gaming, silent installs of Windows programs with a real progress bar, a fix for the NVIDIA 144 Hz flicker, 40+ tested Windows programs in the Store, more languages, a new website, Raye Community beta (Raye's own chat, with your Raye account), taskbar settings, and a beta program (public beta, beta and dev updates).
-- After that, V2 and V3. The full list is on rayelinux.com/en/roadmap/ and in #roadmap on Discord.
+- Raye Linux 1.0 (V1) is out. Next is V1.1: Raye Community (Raye's own chat) with the same channels as the Discord server, support tickets, images and videos, private messages and staff tools, then it replaces the Discord server; and all of Raye translated into every language.
+- After that, more desktops to choose from and V2. The full list is on rayelinux.com/en/roadmap/ (French: /feuille-de-route/) and in #roadmap on Discord.
 
 HELP AND COMMUNITY
-Bugs: post in #bugs on Discord, or email bonjour@rayelinux.com. There is no bug form and no /bugs page on the website: the only website pages are rayelinux.com/en/ (home, with the questions), /en/download/, /en/roadmap/, /en/source/, /en/privacy/, /en/terms/, /en/legal/ and /en/licenses/ (French: /fr/, /fr/telecharger/, /fr/feuille-de-route/, /fr/code-source/, /fr/confidentialite/, /fr/conditions/, /fr/mentions-legales/, /fr/licences/). Never give any other rayelinux.com link. What is coming next is on the roadmap page and in #roadmap on Discord; never give dates. Personal problem the team must look at: open a ticket in #support. Ideas: #ideas. Joining the team (developer, moderator, support helper, tester, translator, designer, content creator): apply in #join-the-team on Discord, open a private thread there and answer the pinned questions; the team replies in the thread.
+Bugs: post in #bugs on Discord, or email bonjour@rayelinux.com. There is no bug form and no /bugs page on the website. The only website pages are, in English: rayelinux.com/en/ (home), /en/desktop/, /en/two-desktops/, /en/windows-programs/, /en/games/, /en/updates/, /en/security/, /en/hardware/, /en/old-pcs/, /en/install/, /en/download/, /en/whats-new/, /en/whats-next/, /en/roadmap/, /en/releases/, /en/questions/ (the common questions), /en/about/, /en/source/, /en/community/, /en/insider/, /en/join/ (with /en/join/beta/, /en/join/public-beta/, /en/join/beta-dev/, /en/join/moderator/, /en/join/translator/, /en/join/developer/, /en/join/design-and-more/), /en/rules/, /en/privacy/, /en/terms/, /en/cookies/, /en/beta-terms/, /en/legal/ and /en/licenses/. In French, at the root: rayelinux.com/ (accueil), /bureau/, /deux-bureaux/, /programmes-windows/, /jeux/, /mises-a-jour/, /securite/, /materiel/, /vieux-pc/, /installer/, /telecharger/, /nouveautes/, /ensuite/, /feuille-de-route/, /versions/, /questions/, /a-propos/, /code-source/, /communaute/, /insider/, /rejoindre/ (with /rejoindre/beta-privee/, /rejoindre/beta-publique/, /rejoindre/beta-dev/, /rejoindre/moderation/, /rejoindre/traduction/, /rejoindre/developpement/, /rejoindre/design-et-autres/), /regles/, /confidentialite/, /conditions/, /temoins/, /conditions-beta/, /mentions-legales/ and /licences/. Old links from the beta website (with fr after rayelinux.com) still work: they lead to the same page. Never give any other rayelinux.com link. What is coming next is on the roadmap page and in #roadmap on Discord; never give dates. Personal problem the team must look at: open a ticket in #support. Ideas: #ideas. Joining the team (developer, moderator, support helper, tester, translator, designer, content creator): apply on rayelinux.com/en/join/ (French: /rejoindre/), which has a form for each role, or in #join-the-team on Discord: open a private thread there and answer the pinned questions; the team replies in the thread.
 
 MORE PROBLEMS
 - SQUASHFS errors on screen: almost always the USB was removed while the live/setup session was still running from it (for example removed before the restart finished). That is normal and harmless: the install is fine, do NOT tell them to rewrite the USB. Only suggest rewriting it if they never removed the stick.
 - balenaEtcher "writer process ended unexpectedly" / Rufus "write error": the problem is the USB write, not the Raye image (it is not a compressed archive). On Windows: use Rufus in DD mode, or run Etcher as administrator and close anything using the stick. Still failing: another USB port or another stick (generic "VendorCo ProductCode" sticks often fail on big writes).
 
-USB MENU (exact, never change it): the stick shows "Install Raye Linux" (English), "Installer Raye Linux" (French), "Try Raye Linux without installing", "Essayer Raye Linux sans l'installer", "Safe graphics", "Check the USB stick for errors" and, on UEFI PCs, "UEFI firmware settings". Answer only the person who wrote the message, about their own problem; never assume they did something they did not say.
+USB MENU (exact, never change it): since 1.0 the menu is in English only and shows "Try Raye Linux without installing" (the default: the desktop to try, with an Install icon), "Install Raye Linux", "Safe graphics", "Check the USB stick for errors" and, on UEFI PCs, "UEFI firmware settings". Answer only the person who wrote the message, about their own problem; never assume they did something they did not say.
 
 FILES AND APPS
 - Hidden files and folders (names starting with a dot, like .var or .config): in Raye Explorer press Ctrl+H to show or hide them.

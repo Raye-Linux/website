@@ -8,10 +8,15 @@ import os
 import re
 import unittest
 
-from test_site import BASE_PHRASE, DISCORD, ROOT, TOOLS, builder, parse, read
+from test_site import (BASE_PHRASE, DISCORD, ROOT, TOOLS, V1_LIVE, builder, parse, read,
+                       site_paths)
 
 PAGES = {"en": "en/roadmap/index.html", "fr": "fr/feuille-de-route/index.html"}
 HOMES = {"en": "en/index.html", "fr": "fr/index.html"}
+if V1_LIVE:
+    # the V1 site: French at the root
+    PAGES = {lang: site_paths(lang)["roadmap"].lstrip("/") + "index.html" for lang in ("en", "fr")}
+    HOMES = {lang: site_paths(lang)["home"].lstrip("/") + "index.html" for lang in ("en", "fr")}
 
 # The coming-soon rule, except that Windows may be named: the roadmap is
 # about what Raye does for people who come from it (the V1 site says the
@@ -39,9 +44,9 @@ def norm(text):
 
 class RoadmapTests(unittest.TestCase):
     def test_page_exists_in_both_languages(self):
-        b = builder()
-        self.assertEqual(b.PATHS["en"]["roadmap"], "/en/roadmap/")
-        self.assertEqual(b.PATHS["fr"]["roadmap"], "/fr/feuille-de-route/")
+        self.assertEqual(site_paths("en")["roadmap"], "/en/roadmap/")
+        self.assertEqual(site_paths("fr")["roadmap"],
+                         "/feuille-de-route/" if V1_LIVE else "/fr/feuille-de-route/")
         for lang, rel in PAGES.items():
             text = read(rel)
             self.assertIn('<html lang="%s">' % lang, text)
@@ -158,6 +163,18 @@ class RoadmapTests(unittest.TestCase):
 
     def test_nav_footer_and_home_link_the_roadmap(self):
         b = builder()
+        if V1_LIVE:
+            # the V1 top bar keeps six pages; the roadmap is in the footer of
+            # every page, so it is one click away from anywhere
+            for lang in HOMES:
+                path = site_paths(lang)["roadmap"]
+                for key, other in site_paths(lang).items():
+                    rel = other.lstrip("/") + "index.html"
+                    text = read(rel)
+                    foot = text[text.index('<footer class="footer'):]
+                    with self.subTest(page=rel):
+                        self.assertIn('href="%s"' % path, foot)
+            return
         for lang, home in HOMES.items():
             path = b.PATHS[lang]["roadmap"]
             for rel in (home, PAGES[lang], "%s" % b.PATHS[lang]["privacy"].lstrip("/") + "index.html"):
@@ -172,6 +189,9 @@ class RoadmapTests(unittest.TestCase):
             self.assertIn('href="%s"' % path, faq, lang)
 
     def test_the_roadmap_page_marks_itself_in_the_nav(self):
+        if V1_LIVE:
+            self.skipTest("the V1 top bar has no roadmap entry to mark; the footer "
+                          "links the roadmap from every page (test above)")
         for lang, rel in PAGES.items():
             text = read(rel)
             nav = text[text.index('<nav class="nav"'):text.index("</nav>")]
@@ -181,7 +201,7 @@ class RoadmapTests(unittest.TestCase):
         b = builder()
         for lang, rel in PAGES.items():
             other = "en" if lang == "fr" else "fr"
-            self.assertIn('class="lang-switch" href="%s"' % b.PATHS[other]["roadmap"], read(rel))
+            self.assertIn('class="lang-switch" href="%s"' % site_paths(other)["roadmap"], read(rel))
 
     def test_each_version_is_a_card_with_its_discord_colour(self):
         # like the Discord embeds: one card per version, its bar in the colour
