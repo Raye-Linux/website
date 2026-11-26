@@ -123,7 +123,7 @@ ROLES = {
                (L("Discord", "Discord"), L("rôle Beta Tester, salon #beta-testers",
                                            "Beta Tester role, #beta-testers channel")),
                (L("Canal de mises à jour", "Update channel"),
-                L("bêta (prévu)", "beta (planned)"))],
+                L("bêta", "beta"))],
         "means": [
             L("Vous installez chaque bêta privée sur un PC que vous utilisez vraiment, ou à "
               "côté de votre système actuel.",
@@ -165,7 +165,7 @@ ROLES = {
                (L("Discord", "Discord"), L("rôle Public Beta Tester, salon #public-beta",
                                            "Public Beta Tester role, #public-beta channel")),
                (L("Canal de mises à jour", "Update channel"),
-                L("bêta publique (prévu)", "public beta (planned)"))],
+                L("bêta publique", "public beta"))],
         "means": [
             L("Vous utilisez la bêta publique au quotidien et vous dites ce qui vous gêne.",
               "You use the public beta every day and say what gets in your way."),
@@ -193,7 +193,7 @@ ROLES = {
                                       "regular, ideally every week")),
                (L("Discord", "Discord"), L("rôle Beta Tester Dev, salon #beta-dev",
                                            "Beta Tester Dev role, #beta-dev channel")),
-               (L("Canal de mises à jour", "Update channel"), L("dev (prévu)", "dev (planned)"))],
+               (L("Canal de mises à jour", "Update channel"), L("dev", "dev"))],
         "means": [
             L("Vous installez les versions de développement dès qu'elles sortent.",
               "You install development builds as soon as they come out."),
