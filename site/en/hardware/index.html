@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hardware, and what I measured · Raye Linux</title>
+<meta name="description" content="Raye Linux&#x27;s minimum requirements, the measurements with their machine and date, and the PCs it was tried on.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://www.rayelinux.com/en/hardware/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/hardware/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/materiel/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/materiel/">
+<link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
+<link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Hardware, and what I measured · Raye Linux">
+<meta property="og:description" content="Raye Linux&#x27;s minimum requirements, the measurements with their machine and date, and the PCs it was tried on.">
+<meta property="og:url" content="https://www.rayelinux.com/en/hardware/">
+<meta property="og:locale" content="en_CA">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-en-1600.jpg?v=2de32c602e">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=02fd27ec47"></script>
+<script src="/assets/app.js?v=022bbeeae9" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.rayelinux.com/en/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Hardware",
+   "item": "https://www.rayelinux.com/en/hardware/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="v1 page-hardware">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/en/" aria-label="Raye Linux, home">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/community/">Community</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/materiel/" hreflang="fr" lang="fr"
+   data-set-lang="fr" aria-label="Lire cette page en français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>Français</span></a>
+<a class="btn btn-accent btn-small" href="/en/download/">Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Before you install</p>
+<h1>Hardware, and what I measured</h1>
+<p class="lede">Raye has been tried on one virtual machine and a single laptop. That's not much, and I'd rather say so before the first figure.</p>
+</header>
+<div class="article">
+<h2 id="needs">What you need</h2>
+<ul class="text-list">
+<li>A 64-bit Intel or AMD processor, and a PC that starts in UEFI mode (most PCs since 2012). The old BIOS mode is being tried for V1: see <a href="/en/old-pcs/">Older PCs</a>.</li>
+<li>8 GB of memory recommended. The installer accepts less, but I haven't tried Raye on a 4 GB PC.</li>
+<li>25 GB of free disk space: that's what the installer itself demands.</li>
+<li>A USB stick of 8 GB or more to install.</li>
+<li>Secure Boot and a TPM chip are supported, not required.</li>
+</ul>
+<h2 id="measures">The measurements</h2>
+<div class="table-scroll">
+<table class="measures">
+<thead>
+<tr><th scope="col">Measure</th><th scope="col">Value</th><th scope="col">Machine and date</th></tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Memory at idle<span class="how">3 min after signing in, mean of 3 readings</span></th>
+<td class="num">850 MB</td>
+<td>Measured on November 19, 2026, version 1.0 Beta 2, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
+</tr>
+<tr>
+<th scope="row">Black screen at startup<span class="how">between the firmware and the Raye picture, one capture every 250 ms; 18.3 s in 0.2</span></th>
+<td class="num">2.75 to 3 s</td>
+<td>Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
+</tr>
+<tr>
+<th scope="row">Install time<span class="how">from the click on Install to “Restart”, 64 GB disk, encrypted</span></th>
+<td class="num">5 min 50 s</td>
+<td>Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
+</tr>
+<tr>
+<th scope="row">Restart for an update<span class="how">from the startup picture to the sign-in screen, for the desktop theme</span></th>
+<td class="num">24 s</td>
+<td>Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
+</tr>
+<tr>
+<th scope="row">Checking for updates<span class="how">checking for and downloading 42 updates, 60 MB in all</span></th>
+<td class="num">22 s</td>
+<td>Measured on November 11, 2026, version 0.3, on the test machine (virtual machine, 8 cores, 16 GB, no graphics card).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Read each figure next to the machine it came from. The test machine has no graphics card: the whole desktop is drawn by the processor there, which swells its memory. About 120 MB of the 850 MB are a kernel reserve that grows with the machine's memory. The figure is taken three minutes after signing in, with <code>free -m</code>.</p>
+<p>The test machine's firmware reads the disk at about 7 MB/s: its startup times are for comparing two versions, not for promising you a speed. And after the Raye picture, a second black screen of 3 to 5 s remains before the sign-in screen at every startup.</p>
+<p>My goal was 1 GB of memory at idle: the test machine is now under it. The GB and MB on this site are counted the way Windows counts them, by 1,024.</p>
+<h2 id="machines">The machines tried</h2>
+<p><strong>The test machine</strong>: a virtual machine with 8 cores and 16 GB of memory, no graphics card, two virtual screens (1280×800 and 1920×1080), Secure Boot on and a TPM 2.0 chip. That's where I install a version from scratch and update it from the previous one, before it goes out. I haven't always done it: the two rounds of fixes of 0.2 Beta 2 only got the update test.</p>
+<p><strong>A Dell Latitude 5420</strong>, 16 GB, with its 1366×768 screen and an external 1920×1080 screen over HDMI, Intel Wi-Fi and Ethernet. Raye has run on it since November 1, 2026, and gets its updates there.</p>
+<aside class="limits" aria-labelledby="limits-machines machines">
+<p class="limits-title" id="limits-machines">What is still missing</p>
+<ul>
+<li>On the Latitude, sleep sometimes fails, and Wi-Fi and Ethernet are slow to come back after sleep.</li>
+<li>Updating its BIOS through Raye Update failed once, for want of a piece added since; I haven't seen it succeed yet.</li>
+</ul>
+</aside>
+<h2 id="untried">What I haven't tried</h2>
+<p>No desktop PC, no AMD or NVIDIA graphics card, no laptop of another brand, no 4 GB PC. I haven't measured Raye against Windows on the same PC, or startup on a real NVMe disk, or battery life, or a game. If your PC isn't on this page, which is true of almost all of them, tell me how it went: <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a>.</p>
+</div>
+<nav class="next wrap" aria-label="Next">
+<a href="/en/install/"><span>Next</span><strong>Install</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
+</div>
+<div>
+<h2>Look around</h2>
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/two-desktops/">Two desktops</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
+<li><a href="/en/updates/">Updates</a></li>
+<li><a href="/en/security/">Security and privacy</a></li>
+</ul>
+</div>
+<div>
+<h2>Before you install</h2>
+<ul>
+<li><a href="/en/hardware/">Hardware</a></li>
+<li><a href="/en/old-pcs/">Older PCs</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/download/">Download</a></li>
+</ul>
+</div>
+<div>
+<h2>The project</h2>
+<ul>
+<li><a href="/en/whats-new/">What's in V1</a></li>
+<li><a href="/en/whats-next/">What's next</a></li>
+<li><a href="/en/roadmap/">Roadmap</a></li>
+<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/about/">About</a></li>
+<li><a href="/en/source/">Source code</a></li>
+</ul>
+</div>
+<div>
+<h2>Community</h2>
+<ul>
+<li><a href="/en/community/">Community</a></li>
+<li><a href="/en/insider/">Raye Insider</a></li>
+<li><a href="/en/join/">Join the team</a></li>
+<li><a href="/en/rules/">Community rules</a></li>
+</ul>
+</div>
+<div>
+<h2>Legal</h2>
+<ul>
+<li><a href="/en/privacy/">Privacy</a></li>
+<li><a href="/en/terms/">Terms of use</a></li>
+<li><a href="/en/cookies/">Cookies</a></li>
+<li><a href="/en/beta-terms/">Beta program terms</a></li>
+<li><a href="/en/legal/">Legal notice</a></li>
+<li><a href="/en/licenses/">Licenses</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

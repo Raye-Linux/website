@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Games: Steam, Proton and anti-cheat · Raye Linux</title>
+<meta name="description" content="Playing on Raye Linux: Steam, the Windows layer for games, Easy Anti-Cheat v2 and the games that don&#x27;t run, said plainly.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://www.rayelinux.com/en/games/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/games/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/jeux/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/jeux/">
+<link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
+<link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Games: Steam, Proton and anti-cheat · Raye Linux">
+<meta property="og:description" content="Playing on Raye Linux: Steam, the Windows layer for games, Easy Anti-Cheat v2 and the games that don&#x27;t run, said plainly.">
+<meta property="og:url" content="https://www.rayelinux.com/en/games/">
+<meta property="og:locale" content="en_CA">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-en-1600.jpg?v=2de32c602e">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=02fd27ec47"></script>
+<script src="/assets/app.js?v=022bbeeae9" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.rayelinux.com/en/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Games",
+   "item": "https://www.rayelinux.com/en/games/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="v1 page-games">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/en/" aria-label="Raye Linux, home">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/" aria-current="page">Games</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/community/">Community</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/jeux/" hreflang="fr" lang="fr"
+   data-set-lang="fr" aria-label="Lire cette page en français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>Français</span></a>
+<a class="btn btn-accent btn-small" href="/en/download/">Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Look around</p>
+<h1>Games: Steam, Proton and anti-cheat</h1>
+<p class="lede">Many Windows games run on Raye, some don't, and the reason is often an anti-cheat program. This page says what I know, and what I haven't been able to try yet: I haven't measured a single game on a real PC.</p>
+</header>
+<div class="article">
+<h2 id="steam">Steam</h2>
+<p>Steam is in the Raye Store. Raye installs it as a Raye package (APT) rather than Flatpak; if you already had it as Flatpak, Raye moves it once, with your games and settings, and tells you at sign-in. Steam sees your other drives: whatever is mounted under <code>/media</code>, <code>/run/media</code> and <code>/mnt</code> is offered when you add a library folder.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="steam-store">
+<p class="todo-label">Screenshot to take · <code>steam-store</code></p>
+<p class="todo-what">Steam's page in the Raye Store, with the package format row and the Install button.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<p>Game Mode turns on by itself while you play. Heroic, for other publishers' stores, is also in the Store.</p>
+<aside class="limits" aria-labelledby="limits-steam steam">
+<p class="limits-title" id="limits-steam">What is still missing</p>
+<ul>
+<li>On an NVIDIA card, Steam that opens and then shows nothing was reported. I fixed what I found, without being able to try it without an NVIDIA card: if it happens to you, tell me.</li>
+</ul>
+</aside>
+<h2 id="proton">Proton, the Windows layer for games</h2>
+<p>Steam launches Windows games with Proton, its compatibility layer: that's what runs most of them. Raye is planning its own layer, Raye Proton, which you'll pick for a game in Steam. It's planned for 1.1, not for V1.</p>
+<h2 id="anticheat">Anti-cheat</h2>
+<p>An anti-cheat is a program that watches the game and, sometimes, the system. What you need to know about Raye fits in three lines:</p>
+<ul class="text-list">
+<li><strong>The ones that live in the Windows kernel</strong>, such as Valorant's Vanguard: they don't run on Raye, and I don't see how that would change.</li>
+<li><strong>Easy Anti-Cheat v2</strong>: it exists for Linux, but it checks the kernel and the state of Secure Boot, and its publisher, Epic, keeps a list of the keys it accepts. See below.</li>
+<li><strong>All the others</strong>: it depends on the game and its studio. ProtonDB says, game by game, what players have found.</li>
+</ul>
+<h2 id="eac">Easy Anti-Cheat v2 and Raye's kernel</h2>
+<p>Raye's kernel is signed with a Raye key, which you enroll once in your PC. With Secure Boot on, Raye turns on what Easy Anti-Cheat v2 checks: kernel lockdown, <code>kexec</code> off and the IOMMU without passthrough. I checked those settings in the test machine, with Secure Boot and a virtual TPM chip, not yet on a real laptop.</p>
+<p>What's left is Epic's list. I asked for Raye's keys to be added; the answer hasn't come. As long as Epic doesn't know them, Easy Anti-Cheat v2 refuses Raye's kernel. The day they're on it, it will be written here, not before.</p>
+<aside class="limits" aria-labelledby="limits-eac eac">
+<p class="limits-title" id="limits-eac">What is still missing</p>
+<ul>
+<li>Even with the key accepted, a game is only playable if its studio turned on Easy Anti-Cheat for Linux. Fortnite is the goal I set myself; I can't promise it to you.</li>
+<li>PCs that already enrolled Raye's old key have to remove it: Easy Anti-Cheat wants every enrolled key to be known.</li>
+</ul>
+</aside>
+<h2 id="graphics">Graphics cards</h2>
+<p>Raye can fall back to a simpler display when the desktop doesn't start twice in a row, and picking “Safe graphics” on the stick helps when the screen stays black. Two problems reported by players are fixed in V1: older AMD cards (RX 400 and 500) that stayed in low resolution, and the black flicker of NVIDIA cards on a 144 Hz screen. I have neither of those cards: tell me if it works for you.</p>
+<aside class="limits" aria-labelledby="limits-graphics graphics">
+<p class="limits-title" id="limits-graphics">What is still missing</p>
+<ul>
+<li>Low frames per second in Counter-Strike 2 were reported on a GTX 1650; I haven't measured it.</li>
+</ul>
+</aside>
+</div>
+<nav class="next wrap" aria-label="Next">
+<a href="/en/install/"><span>Next</span><strong>Install</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
+</div>
+<div>
+<h2>Look around</h2>
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/two-desktops/">Two desktops</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
+<li><a href="/en/updates/">Updates</a></li>
+<li><a href="/en/security/">Security and privacy</a></li>
+</ul>
+</div>
+<div>
+<h2>Before you install</h2>
+<ul>
+<li><a href="/en/hardware/">Hardware</a></li>
+<li><a href="/en/old-pcs/">Older PCs</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/download/">Download</a></li>
+</ul>
+</div>
+<div>
+<h2>The project</h2>
+<ul>
+<li><a href="/en/whats-new/">What's in V1</a></li>
+<li><a href="/en/whats-next/">What's next</a></li>
+<li><a href="/en/roadmap/">Roadmap</a></li>
+<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/about/">About</a></li>
+<li><a href="/en/source/">Source code</a></li>
+</ul>
+</div>
+<div>
+<h2>Community</h2>
+<ul>
+<li><a href="/en/community/">Community</a></li>
+<li><a href="/en/insider/">Raye Insider</a></li>
+<li><a href="/en/join/">Join the team</a></li>
+<li><a href="/en/rules/">Community rules</a></li>
+</ul>
+</div>
+<div>
+<h2>Legal</h2>
+<ul>
+<li><a href="/en/privacy/">Privacy</a></li>
+<li><a href="/en/terms/">Terms of use</a></li>
+<li><a href="/en/cookies/">Cookies</a></li>
+<li><a href="/en/beta-terms/">Beta program terms</a></li>
+<li><a href="/en/legal/">Legal notice</a></li>
+<li><a href="/en/licenses/">Licenses</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

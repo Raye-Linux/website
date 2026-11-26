@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installing Raye, step by step · Raye Linux</title>
+<meta name="description" content="Making the USB stick, the installer step by step, keeping Windows alongside, and what the installer doesn&#x27;t do.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://www.rayelinux.com/en/install/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/install/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/installer/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/installer/">
+<link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
+<link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Installing Raye, step by step · Raye Linux">
+<meta property="og:description" content="Making the USB stick, the installer step by step, keeping Windows alongside, and what the installer doesn&#x27;t do.">
+<meta property="og:url" content="https://www.rayelinux.com/en/install/">
+<meta property="og:locale" content="en_CA">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-en-1600.jpg?v=2de32c602e">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=02fd27ec47"></script>
+<script src="/assets/app.js?v=022bbeeae9" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.rayelinux.com/en/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Install",
+   "item": "https://www.rayelinux.com/en/install/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="v1 page-install">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/en/" aria-label="Raye Linux, home">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
+<li><a href="/en/install/" aria-current="page">Install</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/community/">Community</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/installer/" hreflang="fr" lang="fr"
+   data-set-lang="fr" aria-label="Lire cette page en français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>Français</span></a>
+<a class="btn btn-accent btn-small" href="/en/download/">Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Before you install</p>
+<h1>Installing Raye, step by step</h1>
+<p class="lede">The installer asks its questions in six steps, shown in its top bar, and the install itself took 5 min 50 s on the test machine. Before you start, back up your files. I'd say it for any system; I say it twice for one this young.</p>
+</header>
+<div class="article">
+<h2 id="before">Before you start</h2>
+<p>Check that your PC has what it takes (the <a href="/en/hardware/">Hardware</a> page). An Internet connection while installing helps, it isn't required. If you're keeping Windows, shut it down properly: turn off fast startup and hibernation. The installer warns you if Windows wasn't fully shut down.</p>
+<p>If Windows is encrypted, by BitLocker or by the “Device encryption” many PCs sold with Windows 11 have turned on, Raye can't shrink its partition. Turn that encryption off in Windows and wait for the decryption to finish, keeping your BitLocker recovery key. The installer still says to “suspend protection”: that isn't enough, the partition stays encrypted.</p>
+<h2 id="usb">The USB stick</h2>
+<ol class="step-list">
+<li>
+<h3>Download the image</h3>
+<p>Once the image is out, the Download page gives the file, its checksum and how to check it.</p>
+</li>
+<li>
+<h3>Write it to the stick</h3>
+<p>With Rufus, choose <strong>DD image mode</strong> when it asks: ISO mode gives a stick that doesn't start. balenaEtcher works too. Everything on the stick will be erased.</p>
+</li>
+<li>
+<h3>Start from the stick</h3>
+<p>At power on, often with F12, F11, F8 or Esc. The stick's menu, in English only, starts by default on “Try Raye Linux without installing”: a trial session that doesn't touch the disk. The “Install Raye Linux” icon is on the desktop and at the top of Start, and opens the installer full screen. On the line below in the menu, “Install Raye Linux” opens it directly; “Safe graphics” helps when the screen stays black.</p>
+</li>
+</ol>
+<figure class="shot">
+<div class="shot-todo" data-shot="try-raye">
+<p class="todo-label">Screenshot to take · <code>try-raye</code></p>
+<p class="todo-what">Raye's trial session, started from the USB stick: the desktop with the Install Raye Linux icon on it.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="pages">The installer, step by step</h2>
+<ol class="step-list">
+<li>
+<h3>Region</h3>
+<p>English or French, the time zone, then the keyboard layout.</p>
+</li>
+<li>
+<h3>Network</h3>
+<p>The page follows your connection live: a plugged-in cable shows up right away.</p>
+</li>
+<li>
+<h3>Disk</h3>
+<p>Four choices: erase the disk, install alongside Windows by shrinking its partition, use the free space, or replace a partition. The “Encrypt the Raye system” box is on the same page: ticked, it has you pick a disk password. With a TPM chip, you won't have to type it at startup.</p>
+</li>
+<li>
+<h3>Account</h3>
+<p>The PC's name, then your name and your password. The Raye account page can be skipped with “Use a local account instead”.</p>
+</li>
+<li>
+<h3>Privacy</h3>
+<p>Location and usage statistics, which you can change later in Settings.</p>
+</li>
+<li>
+<h3>Install</h3>
+<p>“Ready to install” says everything that will happen, with a red banner if anything is going to be erased.</p>
+</li>
+</ol>
+<figure class="shot">
+<div class="shot-todo" data-shot="setup-disk">
+<p class="todo-label">Screenshot to take · <code>setup-disk</code></p>
+<p class="todo-what">The installer's Disk page on “Install alongside Windows”, with the slider that splits the disk.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<p>Right before writing, the installer reads the disk again. If anything changed since you chose, it stops instead of carrying on.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="setup-summary">
+<p class="todo-label">Screenshot to take · <code>setup-summary</code></p>
+<p class="todo-what">The installer's “Ready to install” summary, with the red banner that says what will be erased.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="alongside">Keeping Windows alongside</h2>
+<p>“Install alongside Windows” shrinks the Windows partition to make room, and both systems share the startup partition. At startup, a menu offers Raye Linux and Windows for 10 seconds. From Raye, “Restart to Windows” in Start restarts straight into Windows, once.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="boot-menu">
+<p class="todo-label">Screenshot to take · <code>boot-menu</code></p>
+<p class="todo-what">The startup menu with two choices, Raye Linux and Windows, and the countdown.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-alongside alongside">
+<p class="limits-title" id="limits-alongside">What is still missing</p>
+<ul>
+<li>I proved it on a test Windows partition, in the test machine: 50 GB shrunk to 23 GB, and every Windows file identical before and after. Not yet on a real Windows shrunk and then restarted. Back up first.</li>
+<li>The startup menu still shows “Raye Linux GNU/Linux” instead of “Raye Linux”.</li>
+<li>On a PC in the old BIOS mode, I saw the stick start up to the installer, not a full install: see the <a href="/en/old-pcs/">Older PCs</a> page.</li>
+</ul>
+</aside>
+<h2 id="not">What the installer doesn't do</h2>
+<ul class="text-list">
+<li>No manual partitioning.</li>
+<li>Only an unencrypted Windows (NTFS) partition can be shrunk.</li>
+<li>A disk that already holds another Linux only gets “Erase”: no third system.</li>
+<li>No 32-bit PC.</li>
+</ul>
+<h2 id="key">Raye's key and the blue screen</h2>
+<p>Raye's kernel is signed with a Raye key. For Secure Boot to accept it, that key has to be enrolled once, and it's your PC's firmware that asks, on a blue screen at restart, not Raye. Before restarting, Raye shows you a six-digit code to remember.</p>
+<ol class="step-list">
+<li>
+<h3>Press a key</h3>
+<p>You have about 10 seconds at the blue screen to press a key.</p>
+</li>
+<li>
+<h3>Choose Enroll MOK</h3>
+<p>Then Continue, then Yes.</p>
+</li>
+<li>
+<h3>Type the code</h3>
+<p>The six-digit code Raye showed you, then Reboot.</p>
+</li>
+</ol>
+<figure class="shot">
+<div class="shot-todo" data-shot="enroll-key">
+<p class="todo-label">Screenshot to take · <code>enroll-key</code></p>
+<p class="todo-what">The blue startup screen where Raye's key is enrolled: the “Enroll MOK” list and the six-digit code field.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<p>If you miss the blue screen, no harm done: the PC starts as before, with the base system's kernel, and Raye will ask again. Without Secure Boot, there is no blue screen.</p>
+<aside class="limits" aria-labelledby="limits-key key">
+<p class="limits-title" id="limits-key">What is still missing</p>
+<ul>
+<li>I saw it work in the test machine, with Secure Boot and a virtual TPM chip: blue screen missed, then blue screen done, then start on Raye's kernel. Not yet on a real PC.</li>
+<li>The trial USB stick keeps the original signed kernel: nothing is enrolled just to try Raye.</li>
+</ul>
+</aside>
+<h2 id="after">Afterwards</h2>
+<p>At first startup, if you encrypted the disk, the TPM chip opens it (without a chip, Raye asks for the disk password), then you type your account password. The recovery key shows at your first sign-in (see <a href="/en/security/">Security</a>). Two minutes later, Raye prepares the space for Windows programs in the background.</p>
+<aside class="limits" aria-labelledby="limits-after after">
+<p class="limits-title" id="limits-after">What is still missing</p>
+<ul>
+<li>Without encryption, the startup menu stays on screen for 5 seconds at every startup.</li>
+</ul>
+</aside>
+<h2 id="back">Going back to Windows</h2>
+<p>If you kept Windows alongside, it's still there: pick it in the startup menu, or “Restart to Windows” in Start. Removing Raye from the disk to give all the room back to Windows has no tool yet, and I haven't tried a way to do it: so I'm not giving you one.</p>
+</div>
+<nav class="next wrap" aria-label="Next">
+<a href="/en/download/"><span>Next</span><strong>Download</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
+</div>
+<div>
+<h2>Look around</h2>
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/two-desktops/">Two desktops</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
+<li><a href="/en/updates/">Updates</a></li>
+<li><a href="/en/security/">Security and privacy</a></li>
+</ul>
+</div>
+<div>
+<h2>Before you install</h2>
+<ul>
+<li><a href="/en/hardware/">Hardware</a></li>
+<li><a href="/en/old-pcs/">Older PCs</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/download/">Download</a></li>
+</ul>
+</div>
+<div>
+<h2>The project</h2>
+<ul>
+<li><a href="/en/whats-new/">What's in V1</a></li>
+<li><a href="/en/whats-next/">What's next</a></li>
+<li><a href="/en/roadmap/">Roadmap</a></li>
+<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/about/">About</a></li>
+<li><a href="/en/source/">Source code</a></li>
+</ul>
+</div>
+<div>
+<h2>Community</h2>
+<ul>
+<li><a href="/en/community/">Community</a></li>
+<li><a href="/en/insider/">Raye Insider</a></li>
+<li><a href="/en/join/">Join the team</a></li>
+<li><a href="/en/rules/">Community rules</a></li>
+</ul>
+</div>
+<div>
+<h2>Legal</h2>
+<ul>
+<li><a href="/en/privacy/">Privacy</a></li>
+<li><a href="/en/terms/">Terms of use</a></li>
+<li><a href="/en/cookies/">Cookies</a></li>
+<li><a href="/en/beta-terms/">Beta program terms</a></li>
+<li><a href="/en/legal/">Legal notice</a></li>
+<li><a href="/en/licenses/">Licenses</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

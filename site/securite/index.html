@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sécurité et vie privée · Raye Linux</title>
+<meta name="description" content="Secure Boot, le disque chiffré ouvert par la puce TPM, la clé de récupération, l&#x27;invite de mot de passe, et ce que Raye Linux envoie sur Internet.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://www.rayelinux.com/securite/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/securite/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/security/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/securite/">
+<link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
+<link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Sécurité et vie privée · Raye Linux">
+<meta property="og:description" content="Secure Boot, le disque chiffré ouvert par la puce TPM, la clé de récupération, l&#x27;invite de mot de passe, et ce que Raye Linux envoie sur Internet.">
+<meta property="og:url" content="https://www.rayelinux.com/securite/">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=02fd27ec47"></script>
+<script src="/assets/app.js?v=022bbeeae9" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Accueil",
+   "item": "https://www.rayelinux.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Sécurité et vie privée",
+   "item": "https://www.rayelinux.com/securite/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="v1 page-security">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/" aria-label="Raye Linux, accueil">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/communaute/">Communauté</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/en/security/" hreflang="en" lang="en"
+   data-set-lang="en" aria-label="Read this page in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>English</span></a>
+<a class="btn btn-accent btn-small" href="/telecharger/">Télécharger</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Découvrir</p>
+<h1>Sécurité et vie privée</h1>
+<p class="lede">Sur un PC qui a une puce TPM, vous ne tapez qu'un mot de passe au démarrage, celui de votre compte, et pourtant le disque est chiffré. Voici ce que ça protège, et ce que ça ne protège pas.</p>
+</header>
+<div class="article">
+<h2 id="secureboot">Secure Boot</h2>
+<p>Raye démarre avec Secure Boot activé et les clés que la plupart des PC ont d'usine : sur la machine de test, je n'ai rien eu à changer dans le micrologiciel. Certains PC, souvent vendus comme « Secured-core », n'acceptent d'office que Windows ; il faut alors autoriser, dans les réglages du micrologiciel, les clés dites « tierces » (third-party). Si votre PC refuse quand même de démarrer Raye, écrivez-moi son modèle.</p>
+<h2 id="encryption">Le disque chiffré</h2>
+<p>Si vous cochez « Chiffrer le système Raye » sur la page Disque de l'installateur, vous choisissez un mot de passe du disque, et tout le système est chiffré. Retiré du PC et branché ailleurs, le disque ne se lit pas sans ce mot de passe ou la clé de récupération.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="setup-encrypt">
+<p class="todo-label">Capture à prendre · <code>setup-encrypt</code></p>
+<p class="todo-what">La page Disque de l'installateur, case « Chiffrer le système Raye » cochée, avec les deux champs du mot de passe du disque.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<p>Sur un PC qui a une puce TPM, c'est elle qui ouvre le disque au démarrage. Sur ce PC-là, c'est donc le mot de passe de votre compte qui protège vos fichiers, comme avec BitLocker. La puce ne surveille que les réglages de Secure Boot : s'ils changent, ou si le disque est mis dans un autre PC, Raye redemande le mot de passe du disque. D'autres changements dans le démarrage ne le redemandent pas. Sans puce TPM, le mot de passe du disque est demandé à chaque démarrage.</p>
+<p>Je l'ai essayé une fois sur la machine de test : une mise à jour du micrologiciel qui révoque d'anciennes clés de démarrage, et le disque s'est ouvert seul après. Si une mise à jour de ce genre s'installe avec d'autres au redémarrage, la clé de récupération peut vous être demandée une fois.</p>
+<h2 id="recovery">La clé de récupération</h2>
+<p>À la première connexion, une fenêtre montre une clé de récupération : huit groupes de six chiffres. Elle ouvre le disque si vous oubliez son mot de passe. Copiez-la, notez-la sur papier ou dans un gestionnaire de mots de passe, gardez-la ailleurs que sur l'ordinateur, puis confirmez avec « J'ai enregistré ma clé ».</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="recovery-key">
+<p class="todo-label">Capture à prendre · <code>recovery-key</code></p>
+<p class="todo-what">La fenêtre de la clé de récupération à la première connexion, la clé elle-même floutée.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<h2 id="prompt">Le mot de passe avant qu'une appli change le système</h2>
+<p>Quand une appli veut modifier le système, l'écran s'assombrit et Raye demande votre mot de passe, avec le nom de l'éditeur, comme sous Windows 11. L'invite n'expire pas : sur un compte standard, vous avez le temps d'aller demander le mot de passe à l'administrateur du PC. Les mises à jour, elles, s'installent sans le demander.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="uac">
+<p class="todo-label">Capture à prendre · <code>uac</code></p>
+<p class="todo-what">L'invite de mot de passe : l'écran assombri, « Éditeur vérifié : Raye Linux », Oui et Non.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<aside class="limits" aria-labelledby="limits-prompt prompt">
+<p class="limits-title" id="limits-prompt">Ce qui manque encore</p>
+<ul>
+<li>L'invite nomme parfois le programme technique plutôt que l'appli qui le demande.</li>
+<li>On ne peut pas encore chiffrer ou déchiffrer le disque une fois Raye installé : c'est un choix à faire à l'installation.</li>
+</ul>
+</aside>
+<h2 id="crash">Si le PC plante</h2>
+<p>Le noyau Raye, qu'on active dans Paramètres, Pilotes, montre un écran violet avec l'œil de Raye si le système plante, puis redémarre seul après 30 secondes. Le noyau d'origine reste installé et reste celui par défaut.</p>
+<p>Avec Secure Boot, sa clé s'inscrit au redémarrage qui suit, en trois gestes : un écran bleu apparaît, appuyez sur une touche dans les 10 secondes, choisissez « Enroll MOK », puis tapez le code à six chiffres que les Paramètres vous ont montré. Si les 10 secondes passent, Raye démarre sur le noyau d'origine.</p>
+<h2 id="network">Ce que Raye envoie sur Internet</h2>
+<p>Raye Update interroge les deux copies des paquets de Raye, les serveurs du système de base, ceux de Mozilla pour Firefox, et le service des micrologiciels pour les mises à jour du BIOS et des appareils. Le Store interroge Flathub. Le système vérifie aussi qu'Internet répond, pour repérer un réseau d'hôtel qui demande de se connecter, et règle son heure sur un serveur de temps. Firefox ouvre rayelinux.com à son démarrage, sans publicité et sans bandeau « géré par votre organisation ».</p>
+<p>Deux choses ne partent que si vous les avez acceptées : votre position, quand une appli la demande et que vous dites oui, et des statistiques d'usage anonymes, une case décochée au départ sur la page Confidentialité de l'installateur.</p>
+<p>Cette liste vient de ce que je sais du code. Je n'ai pas encore observé une installation neuve pendant une heure pour la vérifier adresse par adresse ; quand ce sera fait, le relevé sera sur cette page.</p>
+<p>Ce site ne pose aucun témoin et ne charge rien d'un autre site ; sa <a href="/confidentialite/">politique de confidentialité</a> dit ce qu'il garde.</p>
+</div>
+<nav class="next wrap" aria-label="La suite">
+<a href="/materiel/"><span>La suite</span><strong>Matériel</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
+</div>
+<div>
+<h2>Découvrir</h2>
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/deux-bureaux/">Deux bureaux</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
+<li><a href="/mises-a-jour/">Mises à jour</a></li>
+<li><a href="/securite/">Sécurité et vie privée</a></li>
+</ul>
+</div>
+<div>
+<h2>Avant d'installer</h2>
+<ul>
+<li><a href="/materiel/">Matériel</a></li>
+<li><a href="/vieux-pc/">Vieux PC</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/telecharger/">Télécharger</a></li>
+</ul>
+</div>
+<div>
+<h2>Le projet</h2>
+<ul>
+<li><a href="/nouveautes/">Dans la V1</a></li>
+<li><a href="/ensuite/">Ensuite</a></li>
+<li><a href="/feuille-de-route/">Feuille de route</a></li>
+<li><a href="/versions/">Versions</a></li>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/a-propos/">À propos</a></li>
+<li><a href="/code-source/">Code source</a></li>
+</ul>
+</div>
+<div>
+<h2>Communauté</h2>
+<ul>
+<li><a href="/communaute/">Communauté</a></li>
+<li><a href="/insider/">Raye Insider</a></li>
+<li><a href="/rejoindre/">Rejoindre l'équipe</a></li>
+<li><a href="/regles/">Règles de la communauté</a></li>
+</ul>
+</div>
+<div>
+<h2>Légal</h2>
+<ul>
+<li><a href="/confidentialite/">Confidentialité</a></li>
+<li><a href="/conditions/">Conditions d'utilisation</a></li>
+<li><a href="/temoins/">Témoins (cookies)</a></li>
+<li><a href="/conditions-beta/">Conditions du programme bêta</a></li>
+<li><a href="/mentions-legales/">Mentions légales</a></li>
+<li><a href="/licences/">Licences</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

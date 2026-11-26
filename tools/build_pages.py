@@ -6,8 +6,10 @@ template so the two languages never drift apart.
 
     python3 tools/build_pages.py --release /srv/publish/release/0.1-beta/release.json
 
-Output: site/fr/... and site/en/... (committed), plus site/index.html, the
-bare name, which has no language and sends the visitor to /fr/ or /en/. The download pages take the
+Output: site/ (committed). Since the 1.0 launch (V1_LIVE) that is the V1
+site of tools/site_v1.py: French at the root, English under /en/. Before
+it, the coming-soon site: site/fr/... and site/en/..., plus site/index.html,
+the bare name, which sent the visitor to /fr/ or /en/. The download pages take the
 file name, size and checksum from tools/release.json; --release copies
 them there from the release-files output of the iso repo first."""
 
@@ -37,7 +39,7 @@ DOWNLOAD_LIVE = True
 # next to the coming-soon page, in site-v1/, until the 1.0 image is out.
 # At launch it takes site/ over: flip this with DOWNLOAD_LIVE, after the
 # steps of the site plan (measures redone, screenshots taken).
-V1_LIVE = False
+V1_LIVE = True
 
 # The GitHub mirror needs the Raye-Linux/releases repository to be public.
 # Until it is, the page offers dl.rayelinux.com only, and no step mentions parts.
@@ -1319,9 +1321,10 @@ REPOS = [
     # the Windows layer repo is left off this page until it is renamed (its
     # current name must not appear in what users read); it is public all the same
     ("account", "Raye accounts: the server and the client.", "Les comptes Raye : le serveur et le client."),
-    # kernel: private until Wednesday Nov 25, 2026 (owner); put this back then
-    # ("kernel", "The kernel, with Raye's changes for PCs and laptops.",
-    #  "Le noyau, avec les changements de Raye pour les PC et portables."),
+    ("kernel", "The Raye kernel: CachyOS x XanMod patches plus Raye's own patches and tuning, signed for Secure Boot.",
+     "Le noyau Raye : les correctifs CachyOS x XanMod plus ceux et les réglages de Raye, signé pour le Secure Boot."),
+    ("community", "Raye Community, Raye's own chat: the server and the app.",
+     "Raye Community, le chat de Raye : le serveur et l'appli."),
     ("handbook", "The user guide.", "Le guide d'utilisation."),
     ("website", "This website.", "Ce site."),
 ]
@@ -1656,6 +1659,14 @@ def main():
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import site_v1
     site_v1.build(sys.modules[__name__])
+    if V1_LIVE:
+        # The coming-soon French pages lived under /fr/. The V1 site puts
+        # French at the root, and nginx sends every old /fr/ address there
+        # (deploy/nginx/raye-site.conf). The old files must not stay in
+        # site/: deploy copies site/ as it is, and they would be served to
+        # anyone who reached them some other way.
+        import shutil
+        shutil.rmtree(os.path.join(ROOT, "fr"), ignore_errors=True)
 
 
 if __name__ == "__main__":

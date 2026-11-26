@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vos programmes Windows · Raye Linux</title>
+<meta name="description" content="Ce qui se passe quand on ouvre un .exe sur Raye Linux, ce qui manque encore, et les jeux qui ne marcheront pas.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://www.rayelinux.com/programmes-windows/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/programmes-windows/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/windows-programs/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/programmes-windows/">
+<link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
+<link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Vos programmes Windows · Raye Linux">
+<meta property="og:description" content="Ce qui se passe quand on ouvre un .exe sur Raye Linux, ce qui manque encore, et les jeux qui ne marcheront pas.">
+<meta property="og:url" content="https://www.rayelinux.com/programmes-windows/">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=02fd27ec47"></script>
+<script src="/assets/app.js?v=022bbeeae9" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Accueil",
+   "item": "https://www.rayelinux.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Programmes Windows",
+   "item": "https://www.rayelinux.com/programmes-windows/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="v1 page-windows">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/" aria-label="Raye Linux, accueil">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/programmes-windows/" aria-current="page">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/communaute/">Communauté</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/en/windows-programs/" hreflang="en" lang="en"
+   data-set-lang="en" aria-label="Read this page in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>English</span></a>
+<a class="btn btn-accent btn-small" href="/telecharger/">Télécharger</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Découvrir</p>
+<h1>Vos programmes Windows</h1>
+<p class="lede">Un double-clic sur un fichier .exe lance son installateur, sans rien à préparer avant. Ce qui se passe ensuite dépend du programme, et je n'ai pas encore de liste de programmes essayés à publier : elle sera sur cette page.</p>
+</header>
+<div class="article">
+<h2 id="double-click">Un double-clic</h2>
+<p>Double-cliquez sur un fichier .exe ou .msi : il s'ouvre. Il n'y a rien à installer avant, et pas de question. L'installateur du programme fait son travail et ajoute son entrée au menu Démarrer, d'où le programme se lance ensuite comme une appli de Raye.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="exe-setup">
+<p class="todo-label">Capture à prendre · <code>exe-setup</code></p>
+<p class="todo-what">L'installateur d'un programme Windows ouvert d'un double-clic sur son fichier .exe, en cours d'installation.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<p>Chaque programme a son propre espace, si bien qu'un programme qui se comporte mal ne casse pas les autres. Cet espace se prépare en arrière-plan environ deux minutes après votre première connexion, puis de nouveau après certaines mises à jour : 26 secondes de travail, et jusqu'à 3 Go de mémoire pendant ce temps, mesurés sur la machine de test.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="exe-start">
+<p class="todo-label">Capture à prendre · <code>exe-start</code></p>
+<p class="todo-what">Le même programme Windows dans le menu Démarrer après son installation, puis ouvert sur le bureau.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<h2 id="native">Quand il existe une version pour Raye</h2>
+<p>Certains programmes existent aussi pour Raye, comme Discord ou Steam. Si vous double-cliquez sur leur installateur Windows, Raye vous propose plutôt cette version-là, faite pour Raye, qui n'a pas besoin de la couche Windows.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="exe-native">
+<p class="todo-label">Capture à prendre · <code>exe-native</code></p>
+<p class="todo-what">Raye qui propose la version pour Raye d'un programme au double-clic sur son installateur Windows.</p>
+<p class="todo-note">Emplacement réservé : la capture sera prise sur la version 1.0.</p>
+</div>
+</figure>
+<h2 id="missing">Ce qui manque, et pourquoi certains programmes ne démarrent pas</h2>
+<p>Voici ce que la couche Windows de Raye apporte d'elle-même, et ce qui lui manque encore. C'est ce qui manque, le plus souvent, qui explique qu'un programme ne démarre pas.</p>
+<ul class="text-list">
+<li><strong>Direct3D vers Vulkan est inclus</strong> (DXVK et VKD3D-Proton) : les jeux et programmes en Direct3D 8 à 12 l'utilisent sans réglage.</li>
+<li><strong>Les polices de Windows</strong> (Arial, Times New Roman, Calibri, Cambria, Tahoma…) sont remplacées par des polices de la même taille, donc les fenêtres gardent leur disposition. Les polices d’origine de Windows ne sont pas incluses : un texte peut avoir l'air un peu différent.</li>
+<li><strong>Ce qui manque encore</strong> : le .NET Framework d’origine de Windows (Raye en fournit une version libre, qui suffit à la plupart des programmes) et le moteur web WebView2 d'Edge. Les programmes qui exigent l'un ou l'autre ne démarrent pas encore.</li>
+</ul>
+<aside class="limits" aria-labelledby="limits-missing missing">
+<p class="limits-title" id="limits-missing">Ce qui manque encore</p>
+<ul>
+<li>Le premier programme ouvert après l'installation prend du temps.</li>
+<li>Certains installateurs montrent une fenêtre grise à l'ancienne.</li>
+</ul>
+</aside>
+<h2 id="games">Les jeux</h2>
+<p>Les jeux protégés par un anti-triche qui s'installe dans le noyau de Windows, comme Valorant ou Fortnite, ne marchent pas. Ce n'est pas un réglage qui manque : il faut que leur éditeur autorise Linux, et ce n'est pas le cas aujourd'hui. Roblox ne démarre pas non plus : son anti-triche refuse la couche Windows.</p>
+<p>Je n'ai lancé aucun autre jeu sur un PC qui a une vraie carte graphique, donc je ne publie rien sur eux. Steam s'installe depuis le Raye Store, en version pour Raye.</p>
+<h2 id="report">Si un programme ne marche pas</h2>
+<p>Écrivez-moi son nom et sa version, ce que vous avez fait et ce qui s'est passé, à <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a>. La liste des programmes qu'on me signale, c'est ce qui décide de l'ordre dans lequel je règle les choses.</p>
+</div>
+<nav class="next wrap" aria-label="La suite">
+<a href="/materiel/"><span>La suite</span><strong>Matériel</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
+</div>
+<div>
+<h2>Découvrir</h2>
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/deux-bureaux/">Deux bureaux</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
+<li><a href="/mises-a-jour/">Mises à jour</a></li>
+<li><a href="/securite/">Sécurité et vie privée</a></li>
+</ul>
+</div>
+<div>
+<h2>Avant d'installer</h2>
+<ul>
+<li><a href="/materiel/">Matériel</a></li>
+<li><a href="/vieux-pc/">Vieux PC</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/telecharger/">Télécharger</a></li>
+</ul>
+</div>
+<div>
+<h2>Le projet</h2>
+<ul>
+<li><a href="/nouveautes/">Dans la V1</a></li>
+<li><a href="/ensuite/">Ensuite</a></li>
+<li><a href="/feuille-de-route/">Feuille de route</a></li>
+<li><a href="/versions/">Versions</a></li>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/a-propos/">À propos</a></li>
+<li><a href="/code-source/">Code source</a></li>
+</ul>
+</div>
+<div>
+<h2>Communauté</h2>
+<ul>
+<li><a href="/communaute/">Communauté</a></li>
+<li><a href="/insider/">Raye Insider</a></li>
+<li><a href="/rejoindre/">Rejoindre l'équipe</a></li>
+<li><a href="/regles/">Règles de la communauté</a></li>
+</ul>
+</div>
+<div>
+<h2>Légal</h2>
+<ul>
+<li><a href="/confidentialite/">Confidentialité</a></li>
+<li><a href="/conditions/">Conditions d'utilisation</a></li>
+<li><a href="/temoins/">Témoins (cookies)</a></li>
+<li><a href="/conditions-beta/">Conditions du programme bêta</a></li>
+<li><a href="/mentions-legales/">Mentions légales</a></li>
+<li><a href="/licences/">Licences</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

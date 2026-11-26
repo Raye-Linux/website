@@ -130,7 +130,8 @@ NEWS = {
     "en": "Also send me a bit of project news now and then (optional).",
 }
 
-HOME = {"fr": ("/fr/", "Retour à l'accueil"), "en": ("/en/", "Back to the home page")}
+# the V1 site has its French home at the root
+HOME = {"fr": ("/", "Retour à l'accueil"), "en": ("/en/", "Back to the home page")}
 BRAND_ALT = {"fr": "Raye Linux, accueil", "en": "Raye Linux, home"}
 
 

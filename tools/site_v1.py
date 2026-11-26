@@ -373,6 +373,11 @@ class Site:
         text = self.page("fr", "home", nf["title"], nf["description"], main, "page-404")
         text = text.replace('<meta name="viewport"',
                             '<meta name="robots" content="noindex">\n<meta name="viewport"', 1)
+        # the head is the home page's: a missing page must not claim to be
+        # the home page (canonical, language pairs) nor carry its schema.org data
+        text = re.sub(r'<link rel="(?:canonical|alternate)"[^>]*>\n', "", text)
+        text = re.sub(r'\n<script type="application/ld\+json">\n.*?\n</script>', "", text,
+                      flags=re.S)
         return text.replace('<script src="/assets/lang.js"></script>\n', "")
 
     # ---------------------------------------------------------- output

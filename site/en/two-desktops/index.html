@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two desktops: Raye's and Hyprland · Raye Linux</title>
+<meta name="description" content="Raye Linux has two desktops: its own, which looks like Windows 11, and Hyprland, where windows tile themselves. How to choose, and the guide.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://www.rayelinux.com/en/two-desktops/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/two-desktops/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/deux-bureaux/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/deux-bureaux/">
+<link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
+<link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Two desktops: Raye's and Hyprland · Raye Linux">
+<meta property="og:description" content="Raye Linux has two desktops: its own, which looks like Windows 11, and Hyprland, where windows tile themselves. How to choose, and the guide.">
+<meta property="og:url" content="https://www.rayelinux.com/en/two-desktops/">
+<meta property="og:locale" content="en_CA">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-en-1600.jpg?v=2de32c602e">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=02fd27ec47"></script>
+<script src="/assets/app.js?v=022bbeeae9" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.rayelinux.com/en/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Two desktops",
+   "item": "https://www.rayelinux.com/en/two-desktops/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="v1 page-desktops">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/en/" aria-label="Raye Linux, home">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/community/">Community</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/deux-bureaux/" hreflang="fr" lang="fr"
+   data-set-lang="fr" aria-label="Lire cette page en français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>Français</span></a>
+<a class="btn btn-accent btn-small" href="/en/download/">Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Look around</p>
+<h1>Two desktops: Raye's and Hyprland</h1>
+<p class="lede">The desktop all of this site talks about is Raye's. Hyprland is a second desktop, for people who want windows tiled by default and the keyboard first. Both are in the same install, and you move from one to the other without reinstalling.</p>
+</header>
+<div class="article">
+<h2 id="choose">Choosing</h2>
+<p>Raye's desktop keeps the Windows 11 layout: centered taskbar, Start, windows you drag and snap. It's the one you get after installing.</p>
+<p>Hyprland is a desktop where windows line up side by side without you placing them, and where you do almost everything with the keyboard. It's for people who already know it, or want to learn it. Raye gives it its bar, its theme and its apps, and the installer offers Hyprland if you want it.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="desktop-choice">
+<p class="todo-label">Screenshot to take · <code>desktop-choice</code></p>
+<p class="todo-what">Settings, Desktop environment page: the two cards, Raye's desktop and Hyprland, with the one in use marked.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<p>You choose in Settings > Personalization > Desktop environment, or on the sign-in screen, with the Desktop button at the bottom right. Switching reopens File Explorer and Settings on the new desktop.</p>
+<figure class="shot">
+<div class="shot-todo" data-shot="hypr-session">
+<p class="todo-label">Screenshot to take · <code>hypr-session</code></p>
+<p class="todo-what">Raye's Hyprland session: windows tiled side by side, and Raye's bar at the top with the clock.</p>
+<p class="todo-note">Placeholder: this screenshot will be taken on version 1.0.</p>
+</div>
+</figure>
+<h2 id="yours">Setting it up your way</h2>
+<p>Raye keeps its Hyprland configuration for itself and leaves you a file of your own: <code>user.conf</code>. Raye never overwrites it, even on an update. On the Desktop environment page, “Open my Hyprland settings” opens it in the editor, and <code>raye-hyprland-config</code> reloads, opens or goes back to Raye's settings from the terminal. To go back in one go, just remove your lines.</p>
+<h2 id="guide">The guide</h2>
+<p>Raye's handbook has a chapter on Hyprland, “Hyprland on Raye”, opened by the “Hyprland guide” button on that same page. It says where the files are, what you can change and how: gaps, borders, corners, blur, animations, shortcuts, window rules, screens and scale, keyboard, startup, wallpaper, bar, lock and sleep. Every example is ready to copy, and all of them pass Hyprland's configuration check. It also says how to set Raye's apps (theme, icons, cursor, fonts) and what to do when one displays badly.</p>
+<h2 id="others">Other people's setups</h2>
+<p>Many people publish their Hyprland setup. Raye can install one with a single command, <code>raye-hyprland-config dots install</code> followed by the repository address. Before running anything, the command saves your settings, shows you the script and what it touches (<code>sudo</code>, package installs, deletions) and asks you to type <code>yes</code>. With no answer, nothing is changed. <code>dots restore</code> puts the previous state back, and Raye's desktop comes back by itself at the next sign-in if the installed setup crashes at start.</p>
+<aside class="limits" aria-labelledby="limits-others others">
+<p class="limits-title" id="limits-others">What is still missing</p>
+<ul>
+<li>Many of these setups are written for other systems: their script may not run on Raye. In that case the backup protects you, but the install doesn't go through. I haven't yet tried a public repository from end to end.</li>
+<li>Under Hyprland, Settings loads its 90 pages without error, but I haven't looked at all of them on screen. Night light and Multitasking say “Available on Raye's desktop”, because they only control that desktop. The mouse, the lock screen and the transparency effects are set in Hyprland's file rather than in Settings.</li>
+</ul>
+</aside>
+</div>
+<nav class="next wrap" aria-label="Next">
+<a href="/en/install/"><span>Next</span><strong>Install</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
+</div>
+<div>
+<h2>Look around</h2>
+<ul>
+<li><a href="/en/desktop/">The desktop</a></li>
+<li><a href="/en/two-desktops/">Two desktops</a></li>
+<li><a href="/en/windows-programs/">Windows programs</a></li>
+<li><a href="/en/games/">Games</a></li>
+<li><a href="/en/updates/">Updates</a></li>
+<li><a href="/en/security/">Security and privacy</a></li>
+</ul>
+</div>
+<div>
+<h2>Before you install</h2>
+<ul>
+<li><a href="/en/hardware/">Hardware</a></li>
+<li><a href="/en/old-pcs/">Older PCs</a></li>
+<li><a href="/en/install/">Install</a></li>
+<li><a href="/en/download/">Download</a></li>
+</ul>
+</div>
+<div>
+<h2>The project</h2>
+<ul>
+<li><a href="/en/whats-new/">What's in V1</a></li>
+<li><a href="/en/whats-next/">What's next</a></li>
+<li><a href="/en/roadmap/">Roadmap</a></li>
+<li><a href="/en/releases/">Releases</a></li>
+<li><a href="/en/questions/">Questions</a></li>
+<li><a href="/en/about/">About</a></li>
+<li><a href="/en/source/">Source code</a></li>
+</ul>
+</div>
+<div>
+<h2>Community</h2>
+<ul>
+<li><a href="/en/community/">Community</a></li>
+<li><a href="/en/insider/">Raye Insider</a></li>
+<li><a href="/en/join/">Join the team</a></li>
+<li><a href="/en/rules/">Community rules</a></li>
+</ul>
+</div>
+<div>
+<h2>Legal</h2>
+<ul>
+<li><a href="/en/privacy/">Privacy</a></li>
+<li><a href="/en/terms/">Terms of use</a></li>
+<li><a href="/en/cookies/">Cookies</a></li>
+<li><a href="/en/beta-terms/">Beta program terms</a></li>
+<li><a href="/en/legal/">Legal notice</a></li>
+<li><a href="/en/licenses/">Licenses</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

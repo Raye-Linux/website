@@ -215,8 +215,8 @@ ROLES = {
     },
     "moderator": {
         "page": "jmod",
-        "summary": L("Garder le serveur Discord accueillant et utile.",
-                     "Keep the Discord server welcoming and useful."),
+        "summary": L("Garder le serveur Discord de Raye Linux accueillant et utile, avec calme.",
+                     "Keep the Raye Linux Discord server welcoming and useful, calmly."),
         "lede": L("Les modérateurs gardent le serveur accueillant : ils répondent, orientent, et "
                   "retirent ce qui enfreint les règles, avec calme.",
                   "Moderators keep the server welcoming: they answer, point people to the right "

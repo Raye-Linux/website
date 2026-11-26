@@ -4,7 +4,7 @@ through IndexNow. Run it after a deploy.
 
   tools/indexnow.py                 # shows what would be sent, sends nothing
   tools/indexnow.py --send          # every page of site/sitemap.xml
-  tools/indexnow.py --send /en/download/ /fr/telecharger/   # only these
+  tools/indexnow.py --send /en/download/ /telecharger/   # only these
 
 The key is INDEXNOW_KEY in build_pages.py; the site serves it at /<key>.txt,
 which is how the engines know the request comes from the site's owner.

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le matériel, et ce que j'ai mesuré · Raye Linux</title>
+<meta name="description" content="La configuration minimale de Raye Linux, les mesures avec leur machine et leur date, et les PC sur lesquels il a été essayé.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141318">
+<link rel="canonical" href="https://www.rayelinux.com/materiel/">
+<link rel="alternate" hreflang="fr" href="https://www.rayelinux.com/materiel/">
+<link rel="alternate" hreflang="en" href="https://www.rayelinux.com/en/hardware/">
+<link rel="alternate" hreflang="x-default" href="https://www.rayelinux.com/materiel/">
+<link rel="icon" href="/assets/favicon.svg?v=de3ed8fdee" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css?v=99bbfa47c8">
+<link rel="stylesheet" href="/assets/v1.css?v=5d23802821">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raye Linux">
+<meta property="og:title" content="Le matériel, et ce que j'ai mesuré · Raye Linux">
+<meta property="og:description" content="La configuration minimale de Raye Linux, les mesures avec leur machine et leur date, et les PC sur lesquels il a été essayé.">
+<meta property="og:url" content="https://www.rayelinux.com/materiel/">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:image" content="https://www.rayelinux.com/assets/shots/desktop-fr-1600.jpg?v=3b80df1d12">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<script src="/assets/lang.js?v=02fd27ec47"></script>
+<script src="/assets/app.js?v=022bbeeae9" defer></script>
+<script src="/assets/support.js?v=4cc97a9ac9" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Accueil",
+   "item": "https://www.rayelinux.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Matériel",
+   "item": "https://www.rayelinux.com/materiel/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="v1 page-hardware">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="/" aria-label="Raye Linux, accueil">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28"><span>Raye Linux</span></a>
+<nav class="nav" aria-label="Pages">
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/communaute/">Communauté</a></li>
+</ul>
+</nav>
+<div class="topbar-end">
+<a class="lang-switch" href="/en/hardware/" hreflang="en" lang="en"
+   data-set-lang="en" aria-label="Read this page in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span>English</span></a>
+<a class="btn btn-accent btn-small" href="/telecharger/">Télécharger</a>
+</div>
+</div>
+</header>
+<main id="main">
+<header class="page-head">
+<p class="eyebrow">Avant d'installer</p>
+<h1>Le matériel, et ce que j'ai mesuré</h1>
+<p class="lede">Raye a été essayé sur une machine virtuelle et sur un seul portable. C'est peu, et je préfère le dire avant le premier chiffre.</p>
+</header>
+<div class="article">
+<h2 id="needs">Ce qu'il faut</h2>
+<ul class="text-list">
+<li>Un processeur Intel ou AMD 64 bits, et un PC qui démarre en mode UEFI (la plupart des PC depuis 2012). Le mode BIOS d'autrefois est en cours d'essai pour la V1 : voir <a href="/vieux-pc/">Vieux PC</a>.</li>
+<li>8 Go de mémoire conseillés. L'installateur accepte moins, mais je n'ai pas essayé Raye sur un PC de 4 Go.</li>
+<li>25 Go d'espace disque libre : c'est ce que l'installateur exige lui-même.</li>
+<li>Une clé USB de 8 Go ou plus pour l'installation.</li>
+<li>Secure Boot et une puce TPM sont pris en charge, sans être obligatoires.</li>
+</ul>
+<h2 id="measures">Les mesures</h2>
+<div class="table-scroll">
+<table class="measures">
+<thead>
+<tr><th scope="col">Mesure</th><th scope="col">Valeur</th><th scope="col">Machine et date</th></tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Mémoire au repos<span class="how">3 min après l'ouverture de la session, moyenne de 3 relevés</span></th>
+<td class="num">850 Mo</td>
+<td>Mesuré le 19 novembre 2026, version 1.0 Beta 2, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
+</tr>
+<tr>
+<th scope="row">Écran noir au démarrage<span class="how">entre le micrologiciel et l'image de Raye, une capture toutes les 250 ms ; 18,3 s en 0.2</span></th>
+<td class="num">2,75 à 3 s</td>
+<td>Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
+</tr>
+<tr>
+<th scope="row">Durée de l'installation<span class="how">du clic sur Installer à « Redémarrage », disque de 64 Go chiffré</span></th>
+<td class="num">5 min 50 s</td>
+<td>Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
+</tr>
+<tr>
+<th scope="row">Redémarrage pour une mise à jour<span class="how">de l'image de démarrage à l'écran de connexion, pour le thème du bureau</span></th>
+<td class="num">24 s</td>
+<td>Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
+</tr>
+<tr>
+<th scope="row">Recherche des mises à jour<span class="how">recherche et téléchargement de 42 mises à jour, 60 Mo en tout</span></th>
+<td class="num">22 s</td>
+<td>Mesuré le 11 novembre 2026, version 0.3, sur la machine de test (machine virtuelle, 8 cœurs, 16 Go, sans carte graphique).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Lisez chaque chiffre à côté de la machine d'où il vient. La machine de test n'a pas de carte graphique : tout le bureau y est dessiné par le processeur, ce qui gonfle sa mémoire. Environ 120 Mo des 850 Mo sont une réserve du noyau qui grandit avec la mémoire de la machine. Le chiffre est pris trois minutes après l'ouverture de la session, avec <code>free -m</code>.</p>
+<p>Le micrologiciel de la machine de test lit le disque à environ 7 Mo/s : ses temps de démarrage servent à comparer deux versions, pas à vous promettre une vitesse. Et après l'image de Raye, un second écran noir, de 3 à 5 s, reste avant l'écran de connexion à chaque démarrage.</p>
+<p>Mon but était 1 Go de mémoire au repos : la machine de test est passée dessous. Les Go et Mo de ce site se comptent comme Windows les compte, par 1 024.</p>
+<h2 id="machines">Les machines essayées</h2>
+<p><strong>La machine de test</strong> : une machine virtuelle à 8 cœurs et 16 Go de mémoire, sans carte graphique, avec deux écrans virtuels (1280×800 et 1920×1080), Secure Boot activé et une puce TPM 2.0. C'est sur elle que j'installe une version de zéro et que je la mets à jour depuis la précédente, avant de la publier. Je ne l'ai pas toujours fait : les deux séries de correctifs de la 0.2 Bêta 2 n'ont eu que l'essai de mise à jour.</p>
+<p><strong>Un Dell Latitude 5420</strong>, 16 Go, avec son écran de 1366×768 et un écran externe de 1920×1080 en HDMI, Wi-Fi et Ethernet Intel. Raye y tourne depuis le 1er novembre 2026 et y reçoit ses mises à jour.</p>
+<aside class="limits" aria-labelledby="limits-machines machines">
+<p class="limits-title" id="limits-machines">Ce qui manque encore</p>
+<ul>
+<li>Sur le Latitude, la mise en veille échoue parfois, et le Wi-Fi comme l'Ethernet mettent du temps à revenir après la veille.</li>
+<li>La mise à jour de son BIOS par Raye Update a échoué une fois, faute d'une pièce ajoutée depuis ; je ne l'ai pas encore vue réussir.</li>
+</ul>
+</aside>
+<h2 id="untried">Ce que je n'ai pas essayé</h2>
+<p>Aucun PC de bureau, aucune carte graphique AMD ou NVIDIA, aucun portable d'une autre marque, aucun PC de 4 Go. Je n'ai pas mesuré Raye contre Windows sur le même PC, ni le démarrage sur un vrai disque NVMe, ni l'autonomie sur batterie, ni un jeu. Si votre PC n'est pas dans cette page, ce qui est le cas de presque tous, dites-moi comment ça s'est passé : <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a>.</p>
+</div>
+<nav class="next wrap" aria-label="La suite">
+<a href="/installer/"><span>La suite</span><strong>Installer</strong></a>
+</nav>
+</main>
+<footer class="footer v1-footer">
+<div class="wrap">
+<div class="footer-cols">
+<div class="footer-brand">
+<img src="/assets/raye-mark.svg?v=cc0b1e9aa1" alt="" width="28" height="28">
+<p>© 2026 Raye Linux<br><a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a></p>
+<p><a class="btn btn-quiet btn-small" href="https://discord.gg/TrxhUkabyB" rel="noopener">Discord</a></p>
+</div>
+<div>
+<h2>Découvrir</h2>
+<ul>
+<li><a href="/bureau/">Le bureau</a></li>
+<li><a href="/deux-bureaux/">Deux bureaux</a></li>
+<li><a href="/programmes-windows/">Programmes Windows</a></li>
+<li><a href="/jeux/">Jeux</a></li>
+<li><a href="/mises-a-jour/">Mises à jour</a></li>
+<li><a href="/securite/">Sécurité et vie privée</a></li>
+</ul>
+</div>
+<div>
+<h2>Avant d'installer</h2>
+<ul>
+<li><a href="/materiel/">Matériel</a></li>
+<li><a href="/vieux-pc/">Vieux PC</a></li>
+<li><a href="/installer/">Installer</a></li>
+<li><a href="/telecharger/">Télécharger</a></li>
+</ul>
+</div>
+<div>
+<h2>Le projet</h2>
+<ul>
+<li><a href="/nouveautes/">Dans la V1</a></li>
+<li><a href="/ensuite/">Ensuite</a></li>
+<li><a href="/feuille-de-route/">Feuille de route</a></li>
+<li><a href="/versions/">Versions</a></li>
+<li><a href="/questions/">Questions</a></li>
+<li><a href="/a-propos/">À propos</a></li>
+<li><a href="/code-source/">Code source</a></li>
+</ul>
+</div>
+<div>
+<h2>Communauté</h2>
+<ul>
+<li><a href="/communaute/">Communauté</a></li>
+<li><a href="/insider/">Raye Insider</a></li>
+<li><a href="/rejoindre/">Rejoindre l'équipe</a></li>
+<li><a href="/regles/">Règles de la communauté</a></li>
+</ul>
+</div>
+<div>
+<h2>Légal</h2>
+<ul>
+<li><a href="/confidentialite/">Confidentialité</a></li>
+<li><a href="/conditions/">Conditions d'utilisation</a></li>
+<li><a href="/temoins/">Témoins (cookies)</a></li>
+<li><a href="/conditions-beta/">Conditions du programme bêta</a></li>
+<li><a href="/mentions-legales/">Mentions légales</a></li>
+<li><a href="/licences/">Licences</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
