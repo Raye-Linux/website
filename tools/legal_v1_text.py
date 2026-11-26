@@ -198,9 +198,50 @@ RAYE_COMMUNITY = S(
 )
 
 
+def _deep(o, old, new):
+    """The same structure with a word replaced in every string."""
+    if isinstance(o, str):
+        return o.replace(old, new)
+    if isinstance(o, tuple):
+        return tuple(_deep(x, old, new) for x in o)
+    if isinstance(o, list):
+        return [_deep(x, old, new) for x in o]
+    if isinstance(o, dict):
+        return {k: _deep(v, old, new) for k, v in o.items()}
+    return o
+
+
+# Raye accounts: what the V1 adds. The number of settings follows the sync
+# table of the account server (docs/privacy.md, "The 161 settings that sync").
+ACCOUNT_SETTINGS = 161
+PROFILES = S(
+    "profiles", "Les profils publics et les badges", "Public profiles and badges",
+    P("Votre profil est <strong>privé par défaut</strong>. Vous pouvez choisir un nom public "
+      "et rendre votre profil public : il montre alors ce nom, votre photo et vos badges, "
+      "jamais votre nom ni votre courriel. Un profil privé et un nom que personne n'a "
+      "répondent la même chose (« introuvable »), pour qu'on ne puisse pas savoir si un compte "
+      "existe. Les badges (testeur de la première heure, testeur bêta, traducteur, "
+      "développeur...) sont donnés par l'équipe Raye seulement. Supprimer le compte supprime "
+      "le nom public et les badges.",
+      "Your profile is <strong>private by default</strong>. You can pick a public name and "
+      "make your profile public: it then shows that name, your picture and your badges, never "
+      "your name or your email. A private profile and a name nobody has give the same answer "
+      "(\"not found\"), so nobody can tell whether an account exists. Badges (OG Tester, Beta "
+      "tester, Translator, Developer...) are given by the Raye Team only. Deleting the account "
+      "deletes the public name and the badges."),
+    P("Dans Paramètres, « Synchroniser mes réglages » arrête ou reprend toute la "
+      "synchronisation, et chaque catégorie a son interrupteur. Les mots de passe et les "
+      "réseaux Wi-Fi ne quittent jamais votre PC.",
+      "In Settings, \"Sync my settings\" stops or resumes all syncing, and each category has "
+      "its own switch. Passwords and Wi-Fi networks never leave your PC."),
+)
+
+
 def _privacy():
     out = []
     for s in PRIVACY:
+        if s["id"] == "accounts":
+            s = _deep(s, "153", str(ACCOUNT_SETTINGS))
         if s["id"] == "overview":
             s = _with_rows(
                 s,
@@ -228,7 +269,8 @@ def _privacy():
                  ("intérêt légitime", "legitimate interest")])
         out.append(s)
     out = _insert(out, "discord", APPLICATIONS, COMMUNITY_PAGE, BETA_CHANNELS)
-    return _insert(out, "accounts", RAYE_COMMUNITY)
+    out = _insert(out, "accounts", PROFILES)
+    return _insert(out, "profiles", RAYE_COMMUNITY)
 
 
 PRIVACY_V1 = _privacy()
