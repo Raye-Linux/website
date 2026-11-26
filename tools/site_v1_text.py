@@ -102,6 +102,7 @@ PAGES = {
     "oldpcs": {"path": L("/vieux-pc/", "/en/old-pcs/"), "name": L("Vieux PC", "Older PCs")},
     "v1": {"path": L("/nouveautes/", "/en/whats-new/"), "name": L("Dans la V1", "What's in V1")},
     "soon": {"path": L("/ensuite/", "/en/whats-next/"), "name": L("Ensuite", "What's next")},
+    "insider": {"path": L("/insider/", "/en/insider/"), "name": L("Raye Insider", "Raye Insider")},
 }
 
 # the pages about people, the legal pages and the shared ones (roadmap,
@@ -118,7 +119,7 @@ FOOTER = [
                                                     "download"]),
     (L("Le projet", "The project"), ["v1", "soon", "roadmap", "releases", "questions", "about",
                                       "source"]),
-    (L("Communauté", "Community"), ["community", "join", "rules"]),
+    (L("Communauté", "Community"), ["community", "insider", "join", "rules"]),
     (L("Légal", "Legal"), ["privacy", "terms", "cookies", "betaterms", "notice", "licenses"]),
 ]
 
