@@ -73,28 +73,45 @@
 </header>
 <main id="main" class="download wrap">
 <header class="dl-head">
-<p class="status"><span class="dot" aria-hidden="true"></span>In preparation</p>
+<p class="status"><span class="dot" aria-hidden="true"></span>Version 1.0</p>
 <h1>Download Raye Linux 1.0</h1>
-<p class="lede">The Raye Linux 1.0 image will be here at release. Its size and checksum will be filled in on the day it is published, not before: another image's checksum would verify nothing. Meanwhile, read what follows.</p>
+<p class="lede">The Raye Linux image, to write to a USB stick to install it. If something doesn't work, write to me.</p>
 </header>
 
 <section class="dl-file card" aria-labelledby="file-title">
 <div class="dl-file-top">
 <div>
 <h2 id="file-title">raye-1.0-amd64.iso</h2>
-<p class="dl-meta">Size: to be filled in at release</p>
+<p class="dl-meta">3.3 GB · 64-bit ISO, UEFI or BIOS start · November 26, 2026</p>
 </div>
 <div class="dl-actions">
-<span class="btn btn-held">Download at release</span>
+<a class="btn btn-accent" href="#accept" data-accept>Download the ISO</a>
 </div>
 </div>
 <dl class="dl-facts">
-<div><dt>SHA-256</dt><dd>To be filled in at release</dd></div>
+<div><dt>SHA-256</dt><dd><code class="hash">a2532801ee84985cbbcf43270b2e33a66a2f3cd004a648bddce271ad81a13687</code></dd></div>
 <div><dt>Key fingerprint</dt><dd><code>EA73 69D4 C3A3 10B2 DF3D  FC16 D3AA 2E62 5DDE 161E</code></dd></div>
 </dl>
-
+<ul class="dl-links">
+<li><a href="https://dl.rayelinux.com/iso/1.0/SHA256SUMS">SHA256SUMS</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0/SHA256SUMS.asc">Signature</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0/raye-archive.asc">Public key</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0/release-notes-1.0.md">Release notes</a></li>
+</ul>
 </section>
 
+<section id="accept" class="card dl-card dl-accept" aria-labelledby="accept-title">
+<h2 id="accept-title">Before you download</h2>
+<ul class="plain">
+<li>Back up your important files before you install: installing can erase the whole disk you pick.</li>
+<li>The software is provided “as is”, without warranty, as its free licenses say. To the fullest extent the law allows, Raye Linux and its contributors are not liable for any damage or data loss that comes from downloading, installing or using it.</li>
+<li>You are responsible for the computer you install it on.</li>
+<li>By downloading, you accept the <a href="/en/terms/">terms of use</a>.</li>
+</ul>
+<label class="dl-check"><input type="checkbox" id="accept-check"> <span>I have read these warnings and backed up my data.</span></label>
+<p class="dl-accept-actions"><a class="btn btn-accent dl-go" href="https://dl.rayelinux.com/iso/1.0/raye-1.0-amd64.iso">I agree, download the ISO</a>
+<button type="button" class="btn btn-quiet dl-cancel" hidden>Cancel</button></p>
+</section>
 <div class="dl-grid">
 <section class="card dl-card" aria-labelledby="verify-title">
 <h2 id="verify-title">Check the download</h2>

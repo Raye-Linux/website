@@ -150,40 +150,47 @@
   {
    "id": "download:fr:0.0",
    "lang": "fr",
-   "text": "Taille : à renseigner à la publication\n\nTéléchargement à la sortie\n\nSHA-256\n\nÀ renseigner à la publication\n\nEmpreinte de la clé\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E",
+   "text": "3,3 Go · ISO 64 bits, démarrage UEFI ou BIOS · 26 novembre 2026\n\nTélécharger l'ISO\n\nSHA-256\n\na2532801ee84985cbbcf43270b2e33a66a2f3cd004a648bddce271ad81a13687\n\nEmpreinte de la clé\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nClé publique\n\nNotes de version",
    "title": "raye-1.0-amd64.iso",
    "url": "/telecharger/#file-title"
   },
   {
    "id": "download:fr:1.0",
    "lang": "fr",
+   "text": "Sauvegardez vos fichiers importants avant d'installer : l'installation peut effacer tout le disque choisi.\n\nLe logiciel est fourni « tel quel », sans garantie, comme le prévoient ses licences libres. Dans toute la mesure permise par la loi, Raye Linux et ses contributeurs ne sont pas responsables des dommages ou pertes de données liés à son téléchargement, son installation ou son utilisation.\n\nVous êtes responsable de l'ordinateur sur lequel vous l'installez.\n\nEn téléchargeant, vous acceptez les conditions d'utilisation.\n\n Je confirme avoir lu ces avertissements et avoir sauvegardé mes données.\n\nJ'accepte, télécharger l'ISO\nAnnuler",
+   "title": "Avant de télécharger",
+   "url": "/telecharger/#accept-title"
+  },
+  {
+   "id": "download:fr:2.0",
+   "lang": "fr",
    "text": "Vérifiez que la liste des sommes vient bien de Raye Linux. La commande doit afficher « Good signature » :\n\ngpg --import raye-archive.asc\ngpg --verify SHA256SUMS.asc SHA256SUMS\n\nVérifiez l'image. La commande doit afficher « OK » :\n\nsha256sum --check --ignore-missing SHA256SUMS",
    "title": "Vérifier le téléchargement",
    "url": "/telecharger/#verify-title"
   },
   {
-   "id": "download:fr:2.0",
+   "id": "download:fr:3.0",
    "lang": "fr",
    "text": "Rufus : choisissez l'ISO et, quand il le demande, écrivez-la en mode image DD. Le mode ISO donne une clé qui ne démarre pas.\n\nbalenaEtcher : choisissez l'ISO, puis la clé, puis Flash.\n\ndd : remplacez sdX par votre clé et vérifiez deux fois avec lsblk : tout ce qu'elle contient sera effacé.\n\nsudo dd if=raye-1.0-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nDémarrez ensuite l'ordinateur sur la clé, souvent avec F12, F11, F8 ou Échap à l'allumage. Installer.",
    "title": "Créer une clé USB",
    "url": "/telecharger/#usb-title"
   },
   {
-   "id": "download:fr:3.0",
+   "id": "download:fr:4.0",
    "lang": "fr",
    "text": "Un processeur Intel ou AMD 64 bits et un PC qui démarre en mode UEFI ou dans l'ancien mode BIOS (disques MBR compris)\n\n8 Go de mémoire conseillés\n\n25 Go d'espace disque libre\n\nUne clé USB de 8 Go ou plus\n\nSecure Boot et puce TPM pris en charge, sans être obligatoires",
    "title": "Configuration minimale",
    "url": "/telecharger/#needs-title"
   },
   {
-   "id": "download:fr:4.0",
+   "id": "download:fr:5.0",
    "lang": "fr",
    "text": "Au premier démarrage sous Secure Boot, passer au noyau de Raye demande d'inscrire une clé sur un écran bleu, une seule fois : page Installer.\n\nLes cartes AMD RX 400 et 500 et les cartes NVIDIA à 144 Hz ont des correctifs que je n'ai pas pu essayer sur une vraie carte. Si l'écran reste noir, choisissez « Safe graphics » sur la clé.\n\nLes programmes .exe : le premier lancement prend quelques secondes, et tous ne fonctionnent pas.\n\nHors ligne, les Paramètres indiquent que les mises à jour n'ont pas pu être vérifiées.",
    "title": "Ce qu'il faut savoir",
    "url": "/telecharger/#known-title"
   },
   {
-   "id": "download:fr:5.0",
+   "id": "download:fr:6.0",
    "lang": "fr",
    "text": "Dites-moi quel ordinateur vous avez, ce que vous avez fait, ce que vous attendiez et ce qui s'est passé. Une photo de l'écran aide beaucoup.\n\nLe signaler sur Discord, dans #bugs · Ou écrivez à\nbonjour@rayelinux.com",
    "title": "Signaler un problème",
@@ -752,40 +759,47 @@
   {
    "id": "download:en:0.0",
    "lang": "en",
-   "text": "Size: to be filled in at release\n\nDownload at release\n\nSHA-256\n\nTo be filled in at release\n\nKey fingerprint\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E",
+   "text": "3.3 GB · 64-bit ISO, UEFI or BIOS start · November 26, 2026\n\nDownload the ISO\n\nSHA-256\n\na2532801ee84985cbbcf43270b2e33a66a2f3cd004a648bddce271ad81a13687\n\nKey fingerprint\n\nEA73 69D4 C3A3 10B2 DF3D FC16 D3AA 2E62 5DDE 161E\n\nSHA256SUMS\n\nSignature\n\nPublic key\n\nRelease notes",
    "title": "raye-1.0-amd64.iso",
    "url": "/en/download/#file-title"
   },
   {
    "id": "download:en:1.0",
    "lang": "en",
+   "text": "Back up your important files before you install: installing can erase the whole disk you pick.\n\nThe software is provided “as is”, without warranty, as its free licenses say. To the fullest extent the law allows, Raye Linux and its contributors are not liable for any damage or data loss that comes from downloading, installing or using it.\n\nYou are responsible for the computer you install it on.\n\nBy downloading, you accept the terms of use.\n\n I have read these warnings and backed up my data.\n\nI agree, download the ISO\nCancel",
+   "title": "Before you download",
+   "url": "/en/download/#accept-title"
+  },
+  {
+   "id": "download:en:2.0",
+   "lang": "en",
    "text": "Check that the checksum list really comes from Raye Linux. It must say “Good signature”:\n\ngpg --import raye-archive.asc\ngpg --verify SHA256SUMS.asc SHA256SUMS\n\nCheck the image. It must say “OK”:\n\nsha256sum --check --ignore-missing SHA256SUMS",
    "title": "Check the download",
    "url": "/en/download/#verify-title"
   },
   {
-   "id": "download:en:2.0",
+   "id": "download:en:3.0",
    "lang": "en",
    "text": "Rufus: choose the ISO and, when asked, write it in DD image mode. ISO mode gives a stick that doesn't start.\n\nbalenaEtcher: choose the ISO, then the stick, then Flash.\n\ndd: replace sdX with your stick and check twice with lsblk: everything on it will be erased.\n\nsudo dd if=raye-1.0-amd64.iso of=/dev/sdX bs=4M conv=fsync status=progress\n\nThen start the computer from the stick, often with F12, F11, F8 or Esc at power on. Install.",
    "title": "Make a USB stick",
    "url": "/en/download/#usb-title"
   },
   {
-   "id": "download:en:3.0",
+   "id": "download:en:4.0",
    "lang": "en",
    "text": "A 64-bit Intel or AMD processor and a PC that starts in UEFI mode or the older BIOS mode (MBR disks too)\n\n8 GB of memory recommended\n\n25 GB of free disk space\n\nA USB stick of 8 GB or more\n\nSecure Boot and a TPM chip are supported, not required",
    "title": "What you need",
    "url": "/en/download/#needs-title"
   },
   {
-   "id": "download:en:4.0",
+   "id": "download:en:5.0",
    "lang": "en",
    "text": "On the first start under Secure Boot, moving to Raye's kernel asks you to enroll a key on a blue screen, once: Install page.\n\nThe AMD RX 400 and 500 cards and NVIDIA cards at 144 Hz have fixes I couldn't try on a real card. If the screen stays black, pick “Safe graphics” on the stick.\n\n.exe programs: the first launch takes a few seconds, and not all of them work.\n\nOffline, Settings say that updates couldn't be checked.",
    "title": "What to know",
    "url": "/en/download/#known-title"
   },
   {
-   "id": "download:en:5.0",
+   "id": "download:en:6.0",
    "lang": "en",
    "text": "Tell me what computer you have, what you did, what you expected and what happened. A photo of the screen helps a lot.\n\nReport it on Discord, in #bugs · Or write to\nbonjour@rayelinux.com",
    "title": "Report a problem",
@@ -2110,113 +2124,71 @@
   {
    "id": "notes:en:0",
    "lang": "en",
-   "text": "The second beta of Raye Linux 1.0, out November 21, 2026. It brings a\nsecond desktop you can pick, a Windows 10 look, your files from Windows,\nan automatic game mode and many fixes. It is still a beta: install it on a\nspare computer or next to your current system, not on the only machine you\ndepend on.\n\nFrançais : https://dl.rayelinux.com/iso/1.0-beta/release-notes-1.0-beta.fr.md",
-   "title": "Raye Linux 1.0 Beta Sundog",
+   "text": "The first stable release of Raye Linux, out November 26, 2026. It brings\nthe Raye kernel, Raye Proton for games, a newer Windows layer, support for\nolder PCs, a Raye account that follows you, Raye Insider update channels,\nfour new languages and a new look.\n\nFrançais : https://dl.rayelinux.com/iso/1.0/release-notes-1.0.fr.md",
+   "title": "Raye Linux 1.0",
    "url": "/en/download/"
   },
   {
    "id": "notes:en:1",
    "lang": "en",
-   "text": "- **Already on Raye (0.5 Beta or 1.0 Beta Brocken)?** You don't need the new\n download. Raye Update brings Sundog by itself. To get it now, open\n Settings > Raye Update and click Check for updates, then restart when it\n asks. The update installs while the PC restarts; leave it on until the\n desktop is back.\n- **New install:** download the image from https://rayelinux.com/en/download/,\n check it, and write it to a USB stick of 8 GB or more with Rufus (DD Image\n mode) or balenaEtcher. Start the computer from the stick (often F12, F11,\n F8 or Esc at power on).",
-   "title": "Raye Linux 1.0 Beta Sundog › Update or install",
+   "text": "- **Already on Raye (0.5 Beta or a 1.0 Beta)?** You don't need the new\n download. Raye Update brings 1.0 by itself. To get it now, open\n Settings > Raye Update and click Check for updates, then restart when it\n asks. The update installs while the PC restarts; leave it on until the\n desktop is back.\n- **New install:** download the image from https://rayelinux.com/en/download/,\n check it, and write it to a USB stick of 8 GB or more with Rufus (DD Image\n mode) or balenaEtcher. Start the computer from the stick (often F12, F11,\n F8 or Esc at power on). The stick opens Try Raye, with an Install icon on\n the desktop.",
+   "title": "Raye Linux 1.0 › Update or install",
    "url": "/en/download/"
   },
   {
    "id": "notes:en:2",
    "lang": "en",
-   "text": "- **Pick your desktop.** Setup asks which desktop you want: KDE Plasma (the\n Raye desktop you know) or Hyprland, a lighter tiling desktop with the same\n taskbar, Start menu, quick settings and notifications. Settings >\n Personalization > Desktop environment switches between them in a few\n seconds, without a password, and your open apps come back. The sign-in\n screen shows which desktop it will open.\n- **A Windows 10 look.** Settings > Personalization offers a Windows 10\n style: taskbar on the left with a search box, square corners, and a Start\n menu with an app list and tile groups you can resize.\n- **Windows-style motion.** Windows open and close the Windows 11 way,\n maximize and snapping animate, and Start, flyouts and menus fade smoothly.\n- **Your files from Windows.** A new page, Settings > Accounts > Files from\n Windows, copies Documents, Pictures, Music, Videos, Downloads and the\n Desktop of each Windows account, with the wallpaper and browser favorites.\n Windows is only read, never changed, and every file is checked after the\n copy. When you install Raye next to Windows, you are offered this after\n the first sign-in. When Raye replaces another system, it now also keeps\n your wallpaper, saved Wi-Fi networks, your Firefox or Chrome profile and\n your Flatpak apps.\n- **Game Mode turns on by itself** while a Steam, Store or Windows game\n runs: full processor speed, a game scheduler, effects paused and the best\n power mode while plugged in. Everything comes back when the game ends.\n Settings > Gaming > Game Mode lists the games it found.\n- **NVIDIA:** games run at full speed again after the driver is installed\n or updated (this fix was also sent as an urgent update on November 20).\n Settings offers only the recommended NVIDIA driver, and Display and\n Graphics opens the NVIDIA Control Panel.\n- **Newer AMD cards** (RX 5000 and later, recent Ryzen graphics) no longer\n get a black screen with no boot screen during the first update. PCs that\n were stuck on the low resolution safe mode get their normal graphics\n back.\n- **Updates you can trust.** An update always ends on the newest version,\n even when a new one comes out during the download. Updates no longer stop\n halfway, and a PC that was left half updated repairs itself (also sent as\n an urgent update on November 20). Check for updates always gives an\n answer, also right after the install. Ubuntu updates now come from a\n server in your country first, with the others as backup.\n- **Less memory.** About 850 MB at idle, down from about 1 GB. The Store,\n Settings, Clock, Task Manager and File Explorer use clearly less.\n- **Raye Store:** Affinity, TikTok LIVE Studio and rekordbox, and searching\n for a DJ app also shows Mixxx. 14 more Windows programs, each one\n installed and tried first (foobar2000, ShareX, WinMerge, SumatraPDF,\n iTunes, the EA app and more). The Library lists only the apps you\n installed, Get updates installs app updates right away, the Store has its\n own settings page and Windows-style keyboard shortcuts (F1 lists them).\n Synaptic is gone: the Store does its job.\n- **Windows programs** open and save files with Raye's own window, starting\n in Documents. They see your webcam, get a built-in MIDI synth and a Print\n to PDF printer, and get what they need the first time they start (Visual\n Basic 6, .NET 6 to 9 and more). Task Manager shows each one under its own\n name and icon.\n- **Safe by default:** the firewall is on, each Wi-Fi network gets a private\n hardware address, and encrypted DNS is one click away in the network\n properties. OpenVPN files (.ovpn) can be added in Settings > VPN.\n- **Sleep that doesn't break things.** If a PC does not wake up from sleep\n twice in a row, Raye turns sleep off and says so; closing the lid then\n locks the PC and turns off the screen. Settings > System > Power turns it\n back on.\n- **Clock** alarms wake the PC from sleep when the PC allows it, and say so\n plainly when it doesn't. The calendar under the taskbar clock has an\n \"Alarms & clock\" button.\n- **More Settings, like Windows 11:** Storage Sense on a schedule, Do not\n disturb during set hours, smaller taskbar buttons, find the pointer with\n Ctrl, a keyboard layout per window, spelling, and more.\n- **Setup** says when the processor is too old for some apps and games\n (without stopping the install), Try Raye never touches the PC's own swap,\n and the new system uses the Ubuntu server of the country you pick.\n- **Smaller fixes:** taskbar buttons, Start and the clock take clicks right\n to the screen edge and corners, maximize no longer glitches, the Merge\n folders window in File Explorer is fixed, and Chromebooks (Intel and AMD)\n get their top row of keys mapped.",
-   "title": "Raye Linux 1.0 Beta Sundog › New in 1.0 Beta Sundog",
+   "text": "- **The Raye kernel.** CachyOS and XanMod patches plus Raye's own tuning,\n signed for Secure Boot, and open source. It replaces Ubuntu's kernel. On a\n PC with Secure Boot on, Raye asks once at startup to enroll its key (a\n 6-digit code on a blue screen); Settings can do it later too. It is ready\n for Easy Anti-Cheat v2: we are sending our kernel key to Epic.\n- **Raye Proton for Steam.** GE-Proton built by Raye from its sources, with\n Steam's own bridge, so Steamworks games can work. Steam uses it by default\n on a new setup, never against a choice you already made. Steam also sees\n your other drives.\n- **A newer Windows layer** (Wine 11.22). Windows programs install silently\n with one real progress bar, see your drives, printers, network and ports,\n and the Windows programs page lists what you installed from the Store.\n When a program cannot run, Raye says so plainly.\n- **Older PCs.** Raye starts in legacy BIOS mode (MBR disks too), on older\n processors like the Core 2 Duo, and with 2 to 4 GB of memory, where a\n light mode turns itself on. Memory at idle stays about the same on every\n PC, and the PC slows down a little instead of freezing when memory runs\n out.\n- **More hardware.** More Wi-Fi drivers (Broadcom and others) install by\n themselves when a device needs them. New Printers & scanners page, a Scan\n app, and longer battery life on laptops.\n- **Desktop.** The taskbar goes on any edge of the screen, its icons on the\n left or in the center, at the size you want. Wobbly windows are one switch\n in Settings. Hyprland is smoother, has a complete guide, and other\n Hyprland setups install in one step (and you can always go back to\n Raye's). WireGuard VPN is one click. An encrypted disk now has a real Raye\n unlock screen at startup.\n- **Raye account.** Your settings follow you to every PC, with public\n profiles, badges and two-step sign-in on the new account website.\n- **Raye Insider.** Settings > Raye Update has the Public Beta, Beta and Dev\n update channels. Leave any time: nothing is downgraded.\n- **Raye Community, beta.** Raye's own chat, on the website and in Raye\n Linux, with your Raye account, roles, moderation and friends. It is an\n early beta: channels, images, private messages and tickets come in 1.1.\n- **Languages.** Spanish, German, Brazilian Portuguese and Italian join\n English and French.\n- **For developers.** Settings > System > Advanced has developer options and\n a local device portal.\n- **New look.** A new Raye logo everywhere and a new boot animation.\n- **Setup.** The stick starts in Try Raye with an Install icon, the boot menu\n is in English, and Setup opens full screen.",
+   "title": "Raye Linux 1.0 › New in Raye Linux 1.0",
    "url": "/en/download/"
   },
   {
    "id": "notes:en:3",
    "lang": "en",
-   "text": "- Memory at idle is about 850 MB (up to 1 GB right after the first sign-in),\n not yet the 600 to 700 MB we aim for in the final 1.0.\n- The NVIDIA game speed fix is tested on our test machines, not yet by us on\n a real NVIDIA card. If games are still slow, tell us.\n- Hyprland is new in this beta and was tested mostly in virtual machines.\n After switching desktops with automatic sign-in, the password store\n (KWallet) may stay locked until you unlock it.\n- The new Raye kernel is not in this beta yet; it comes in a later update.\n- The release name does not show in the boot menu yet, only in Settings >\n About and on the sign-in screen.\n- On a PC updated from an earlier beta, Synaptic can show under \"Recently\n added\" in Start for about 15 minutes, until Raye Update removes it.\n- In the Store Library, Get updates says nothing when there is nothing to\n update.\n- Some older AMD cards (RX 400 and 500 series) can still start at a low\n resolution with low frame rates on some PCs. We are still working on it.\n- Not every Windows program runs, and apps built only for the Microsoft\n Store cannot run at all. Programs that also exist for Raye (Discord,\n Steam) are better installed from the Raye Store.",
-   "title": "Raye Linux 1.0 Beta Sundog › Known issues",
+   "text": "- Older AMD cards (RX 400 and 500 series) that fail to show the desktop\n switch to a simpler display mode by themselves; we could not try this on\n those cards yet. The flicker some NVIDIA cards show at 144 Hz is not fixed\n yet: if your PC has it, send us its logs (Settings > System > Advanced).\n- A Steamworks game with Raye Proton was not yet tried with a real Steam\n account. If one fails, pick GE-Proton or Proton for that game in its\n Steam properties, and tell us.\n- With the taskbar on the left or right side and its icons set to Center,\n the icons stay at the top. Desktop icons can sit under a taskbar on the\n left. A second screen does not get the side taskbar yet.\n- Raye Community is a beta: expect missing features.\n- Not every Windows program runs, and apps built only for the Microsoft\n Store cannot run at all.",
+   "title": "Raye Linux 1.0 › Known issues",
    "url": "/en/download/"
   },
   {
    "id": "notes:en:4",
    "lang": "en",
-   "text": "Tell us on Discord, https://discord.gg/TrxhUkabyB, or write to\nbonjour@rayelinux.com. Say what computer you have, what you did, what you\nexpected and what happened. A photo of the screen helps.",
-   "title": "Raye Linux 1.0 Beta Sundog › Report a problem",
-   "url": "/en/download/"
-  },
-  {
-   "id": "notes:en:5",
-   "lang": "en",
-   "text": "The first beta of Raye Linux 1.0: a desktop laid out like Windows 11, drawn\nin Raye's own colors, with updates that install themselves. It is a beta.\nInstall it on a spare computer or next to your current system, not on the\nonly machine you depend on. A 0.5 Beta already installed gets all of this\nthrough Raye Update; the new installer only matters for new installs.",
-   "title": "Raye Linux 1.0 Beta Sundog › Before: Raye Linux 1.0 Beta Brocken (November 19, 2026)",
-   "url": "/en/download/"
-  },
-  {
-   "id": "notes:en:6",
-   "lang": "en",
-   "text": "- **Clock**, a new app: alarms that ring even with the window closed (days,\n sound, Snooze), timers, a stopwatch with laps and world clocks.\n- **Graphics Card**, a new app: live readings of your graphics card. On AMD\n Radeon cards it sets the performance mode, the workload profile, the\n power limit and a fan curve, kept across restarts. NVIDIA cards get the\n NVIDIA Control Panel, installed with the driver and named so in Start.\n- **Settings > System > Performance options**: one choice turns animations,\n transparency and shadows off on a slow PC, or set each effect on its own.\n- **Raye Store** is much bigger: search a Windows program (Photoshop, Office,\n Battle.net...) and it finds the apps that do the same job. Steam and\n Heroic are up front, and Steam Play is on for every game once the Store\n installs Steam. TeamViewer, Mullvad VPN and balenaEtcher were added.\n- **Reviews in the Raye Store**: each app's page shows its stars and what\n people say about it, and once an app is installed you can rate it and\n write your own review. Reviews are shared with other Linux app stores.\n- **.deb files** install with a double-click, in a small window that fetches\n what they need and explains any problem in plain words.\n- **Windows programs** get the fonts they ask for, start in their own\n folder, and 32-bit games can use 4 GB of memory. Microsoft Store packages\n (.msix, .appx) open with Raye, or say plainly why they can't.\n- **File Explorer**: the mouse wheel scrolls three lines per notch like\n Windows, copies to a USB drive show what is really written and finish only\n when the drive is safe to remove, and Properties and Folder options are\n clearer.\n- **Raye Update** is quieter and more reliable: Plasma updates arrive in one\n set, a file that fails to download is simply tried again later, checking\n for updates no longer hangs for minutes when a server goes quiet, and\n Settings shows the download speed, the time left and each update's status.\n- **Faster start**: no boot menu wait while starts go well, smaller start-up\n files, and helpers for older programs start only when one needs them.\n- **Older graphics cards**: if the desktop fails to show twice in a row,\n Raye switches to a simpler display mode by itself.\n- **The installer** can install next to another Linux (it can make ext4 and\n btrfs partitions smaller), works on PCs started in BIOS mode, and asks\n before it erases a disk, deletes a partition or makes one smaller. The USB\n menu has \"Check the USB stick for errors\", and a stick written badly says\n so instead of a cryptic error.\n- **Try Raye Linux without installing**: the USB menu has a new choice that\n opens the desktop straight from the stick, without Setup popping up.\n Nothing on the PC changes.\n- **Replace and keep your files**: when Raye replaces Windows or another\n system, Setup can bring your Desktop, Documents, Downloads, Music,\n Pictures and Videos along. It checks there is room first and asks before\n it deletes anything.\n- **Virtual machines**: Raye now comes with the VirtualBox and VMware guest\n tools, and the PC stays awake while Setup installs.\n- **The web apps** you install from your browser and pin to the taskbar keep\n their own icon and name.\n- Ctrl+Win+Enter turns the screen reader on or off.",
-   "title": "Raye Linux 1.0 Beta Sundog › New in 1.0 Beta Brocken",
-   "url": "/en/download/"
-  },
-  {
-   "id": "notes:en:7",
-   "lang": "en",
-   "text": "Raye Linux is based on Ubuntu. It is not affiliated with or endorsed by\nCanonical Ltd.",
-   "title": "Raye Linux 1.0 Beta Sundog › New in 1.0 Beta Brocken (2)",
+   "text": "Tell us on Discord, https://discord.gg/TrxhUkabyB, or write to\nbonjour@rayelinux.com. Say what computer you have, what you did, what you\nexpected and what happened. A photo of the screen helps.\n\nRaye Linux is based on Ubuntu. It is not affiliated with or endorsed by\nCanonical Ltd.",
+   "title": "Raye Linux 1.0 › Report a problem",
    "url": "/en/download/"
   },
   {
    "id": "notes:fr:0",
    "lang": "fr",
-   "text": "La deuxième bêta de Raye Linux 1.0, sortie le 21 novembre 2026. Elle\napporte un second bureau au choix, une apparence Windows 10, vos fichiers\nde Windows, un mode jeu automatique et beaucoup de corrections. C'est\ntoujours une bêta : installez-la sur un ordinateur de rechange ou à côté de\nvotre système actuel, pas sur la seule machine dont vous dépendez.\n\nEnglish: https://dl.rayelinux.com/iso/1.0-beta/release-notes-1.0-beta.md",
-   "title": "Raye Linux 1.0 Bêta Sundog",
+   "text": "La première version stable de Raye Linux, sortie le 26 novembre 2026. Elle\napporte le noyau Raye, Raye Proton pour les jeux, une couche Windows plus\nrécente, la prise en charge des PC plus anciens, un compte Raye qui vous\nsuit, les canaux de mise à jour Raye Insider, quatre nouvelles langues et un\nnouveau look.\n\nEnglish: https://dl.rayelinux.com/iso/1.0/release-notes-1.0.md",
+   "title": "Raye Linux 1.0",
    "url": "/telecharger/"
   },
   {
    "id": "notes:fr:1",
    "lang": "fr",
-   "text": "- **Déjà sous Raye (0.5 Bêta ou 1.0 Bêta Brocken) ?** Pas besoin du nouveau\n téléchargement. Raye Update apporte Sundog tout seul. Pour l'avoir tout de\n suite, ouvrez Paramètres > Raye Update et cliquez sur Rechercher des mises\n à jour, puis redémarrez quand il le demande. La mise à jour s'installe\n pendant le redémarrage ; laissez le PC allumé jusqu'au retour du bureau.\n- **Nouvelle installation :** téléchargez l'image sur\n https://rayelinux.com/fr/telecharger/, vérifiez-la, et écrivez-la sur une\n clé USB de 8 Go ou plus avec Rufus (mode DD Image) ou balenaEtcher.\n Démarrez l'ordinateur sur la clé (souvent F12, F11, F8 ou Échap à\n l'allumage).",
-   "title": "Raye Linux 1.0 Bêta Sundog › Mettre à jour ou installer",
+   "text": "- **Déjà sur Raye (0.5 Bêta ou une 1.0 Bêta) ?** Pas besoin du nouveau\n téléchargement : Raye Update apporte la 1.0 tout seul. Pour l'avoir tout\n de suite, ouvrez Paramètres > Raye Update, cliquez sur Rechercher des\n mises à jour, puis redémarrez quand il le demande. La mise à jour\n s'installe pendant le redémarrage : laissez le PC allumé jusqu'au retour\n du bureau.\n- **Nouvelle installation :** téléchargez l'image sur\n https://rayelinux.com/fr/download/, vérifiez-la, puis écrivez-la sur une\n clé USB de 8 Go ou plus avec Rufus (mode Image DD) ou balenaEtcher.\n Démarrez l'ordinateur sur la clé (souvent F12, F11, F8 ou Échap à\n l'allumage). La clé ouvre Essayer Raye, avec une icône Installer sur le\n bureau.",
+   "title": "Raye Linux 1.0 › Mettre à jour ou installer",
    "url": "/telecharger/"
   },
   {
    "id": "notes:fr:2",
    "lang": "fr",
-   "text": "- **Choisissez votre bureau.** L'installation demande quel bureau vous\n voulez : KDE Plasma (le bureau Raye que vous connaissez) ou Hyprland, un\n bureau en mosaïque plus léger avec la même barre des tâches, le même menu\n Démarrer, les mêmes paramètres rapides et notifications. Paramètres >\n Personnalisation > Environnement de bureau passe de l'un à l'autre en\n quelques secondes, sans mot de passe, et vos applis ouvertes reviennent.\n L'écran de connexion montre quel bureau il va ouvrir.\n- **Une apparence Windows 10.** Paramètres > Personnalisation propose un\n style Windows 10 : barre des tâches à gauche avec une zone de recherche,\n coins carrés, et un menu Démarrer avec une liste d'applis et des groupes\n de vignettes redimensionnables.\n- **Des animations comme sous Windows.** Les fenêtres s'ouvrent et se\n ferment comme sous Windows 11, l'agrandissement et l'ancrage sont animés,\n et Démarrer, les volets et les menus apparaissent en fondu.\n- **Vos fichiers de Windows.** Une nouvelle page, Paramètres > Comptes >\n Fichiers de Windows, copie les Documents, Images, Musique, Vidéos,\n Téléchargements et le Bureau de chaque compte Windows, avec le fond\n d'écran et les favoris du navigateur. Windows est seulement lu, jamais\n modifié, et chaque fichier est vérifié après la copie. Si vous installez\n Raye à côté de Windows, c'est proposé après la première connexion. Quand\n Raye remplace un autre système, il garde maintenant aussi votre fond\n d'écran, vos réseaux Wi-Fi, votre profil Firefox ou Chrome et vos applis\n Flatpak.\n- **Le mode jeu s'active tout seul** pendant un jeu Steam, du Store ou\n Windows : processeur à pleine vitesse, un ordonnanceur pour les jeux,\n effets en pause et meilleur mode d'alimentation sur secteur. Tout revient\n à la fin du jeu. Paramètres > Jeux > Mode jeu liste les jeux trouvés.\n- **NVIDIA :** les jeux tournent de nouveau à pleine vitesse après\n l'installation ou la mise à jour du pilote (ce correctif est aussi parti\n en mise à jour urgente le 20 novembre). Paramètres ne propose que le\n pilote NVIDIA recommandé, et Écran et graphismes ouvre le Panneau de\n configuration NVIDIA.\n- **Les cartes AMD récentes** (RX 5000 et plus, graphismes Ryzen récents)\n n'ont plus d'écran noir sans écran de démarrage pendant la première mise\n à jour. Les PC restés bloqués dans le mode sans échec en basse résolution\n retrouvent leurs graphismes normaux.\n- **Des mises à jour fiables.** Une mise à jour finit toujours sur la\n version la plus récente, même si une nouvelle sort pendant le\n téléchargement. Les mises à jour ne s'arrêtent plus à moitié, et un PC\n resté à moitié mis à jour se répare tout seul (aussi parti en mise à jour\n urgente le 20 novembre). Rechercher des mises à jour donne toujours une\n réponse, même juste après l'installation. Les mises à jour d'Ubuntu\n viennent maintenant d'abord d'un serveur de votre pays, les autres en\n secours.\n- **Moins de mémoire.** Environ 850 Mo au repos, contre environ 1 Go avant.\n Le Store, Paramètres, Horloge, le Gestionnaire des tâches et l'Explorateur\n en utilisent nettement moins.\n- **Raye Store :** Affinity, TikTok LIVE Studio et rekordbox, et chercher\n une appli de DJ montre aussi Mixxx. 14 programmes Windows de plus, chacun\n installé et essayé d'abord (foobar2000, ShareX, WinMerge, SumatraPDF,\n iTunes, l'appli EA et d'autres). La Bibliothèque ne liste que les applis\n que vous avez installées, Obtenir les mises à jour installe tout de suite\n les mises à jour des applis, le Store a sa page de paramètres et des\n raccourcis clavier comme sous Windows (F1 les liste). Synaptic n'est plus\n là : le Store fait son travail.\n- **Les programmes Windows** ouvrent et enregistrent les fichiers avec la\n fenêtre de Raye, en partant de Documents. Ils voient votre webcam, ont un\n synthé MIDI intégré et une imprimante Imprimer en PDF, et reçoivent ce\n qu'il leur faut au premier démarrage (Visual Basic 6, .NET 6 à 9 et\n d'autres). Le Gestionnaire des tâches montre chacun sous son propre nom\n et son icône.\n- **Sûr par défaut :** le pare-feu est activé, chaque réseau Wi-Fi reçoit\n une adresse matérielle privée, et le DNS chiffré est à un clic dans les\n propriétés du réseau. Les fichiers OpenVPN (.ovpn) s'ajoutent dans\n Paramètres > VPN.\n- **Une veille qui ne casse rien.** Si un PC ne se réveille pas de la\n veille deux fois de suite, Raye coupe la veille et le dit ; fermer le\n capot verrouille alors le PC et éteint l'écran. Paramètres > Système >\n Alimentation la réactive.\n- **Les alarmes d'Horloge** sortent le PC de la veille quand le PC le\n permet, et le disent clairement sinon. Le calendrier de l'horloge de la\n barre des tâches a un bouton « Alarmes et horloge ».\n- **Plus de paramètres, comme Windows 11 :** Assistant de stockage\n programmé, Ne pas déranger à heures fixes, boutons de barre des tâches\n plus petits, trouver le pointeur avec Ctrl, une disposition de clavier\n par fenêtre, l'orthographe, et d'autres.\n- **L'installation** dit quand le processeur est trop ancien pour certaines\n applis et certains jeux (sans arrêter l'installation), Essayer Raye ne\n touche jamais au swap du PC, et le nouveau système utilise le serveur\n Ubuntu du pays choisi.\n- **Petites corrections :** les boutons de la barre des tâches, Démarrer et\n l'horloge répondent jusqu'au bord de l'écran et dans les coins,\n l'agrandissement n'a plus de défaut d'affichage, la fenêtre Fusionner les\n dossiers de l'Explorateur est corrigée, et les Chromebooks (Intel et AMD)\n ont leur rangée de touches du haut reconnue.",
-   "title": "Raye Linux 1.0 Bêta Sundog › Nouveautés de la 1.0 Bêta Sundog",
+   "text": "- **Le noyau Raye.** Les correctifs de CachyOS et XanMod plus les réglages\n de Raye, signé pour le Secure Boot, et open source. Il remplace le noyau\n d'Ubuntu. Sur un PC avec le Secure Boot, Raye demande une fois au\n démarrage d'inscrire sa clé (un code à 6 chiffres sur un écran bleu) ;\n Paramètres peut aussi le faire plus tard. Il est prêt pour Easy Anti-Cheat\n v2 : nous envoyons la clé de notre noyau à Epic.\n- **Raye Proton pour Steam.** GE-Proton construit par Raye depuis ses\n sources, avec le pont de Steam, pour que les jeux Steamworks puissent\n fonctionner. Steam l'utilise par défaut sur une nouvelle installation,\n jamais contre un choix que vous avez déjà fait. Steam voit aussi vos\n autres disques.\n- **Une couche Windows plus récente** (Wine 11.22). Les programmes Windows\n s'installent en silence avec une vraie barre de progression, voient vos\n disques, imprimantes, réseau et ports, et la page Programmes Windows liste\n ceux installés depuis le Store. Quand un programme ne peut pas\n fonctionner, Raye le dit clairement.\n- **PC plus anciens.** Raye démarre en mode BIOS (disques MBR compris), sur\n des processeurs plus anciens comme le Core 2 Duo, et avec 2 à 4 Go de\n mémoire, où un mode léger s'active tout seul. La mémoire au repos reste à\n peu près la même sur tous les PC, et le PC ralentit un peu au lieu de\n geler quand la mémoire manque.\n- **Plus de matériel.** Plus de pilotes Wi-Fi (Broadcom et autres)\n s'installent tout seuls quand un appareil en a besoin. Nouvelle page\n Imprimantes et scanners, une appli Scan, et plus d'autonomie sur les\n portables.\n- **Bureau.** La barre des tâches se place sur n'importe quel bord de\n l'écran, ses icônes à gauche ou au centre, à la taille voulue. Les\n fenêtres élastiques s'activent d'un interrupteur dans Paramètres.\n Hyprland est plus fluide, a un guide complet, et d'autres configurations\n Hyprland s'installent en une étape (avec retour à celle de Raye quand\n vous voulez). Le VPN WireGuard se met en place en un clic. Un disque\n chiffré a maintenant un vrai écran de déverrouillage Raye au démarrage.\n- **Compte Raye.** Vos réglages vous suivent sur chaque PC, avec profils\n publics, badges et connexion en deux étapes sur le nouveau site des\n comptes.\n- **Raye Insider.** Paramètres > Raye Update propose les canaux Bêta\n publique, Bêta et Dev. Vous pouvez les quitter à tout moment, sans\n retour en arrière des versions.\n- **Raye Community, bêta.** Le chat de Raye, sur le site et dans Raye\n Linux, avec votre compte Raye, des rôles, la modération et des amis. C'est\n une première bêta : salons, images, messages privés et tickets arrivent\n en 1.1.\n- **Langues.** L'espagnol, l'allemand, le portugais du Brésil et l'italien\n rejoignent l'anglais et le français.\n- **Pour les développeurs.** Paramètres > Système > Avancé propose les\n options pour les développeurs et un portail local de l'appareil.\n- **Nouveau look.** Le nouveau logo de Raye partout et une nouvelle\n animation de démarrage.\n- **Installation.** La clé démarre sur Essayer Raye avec une icône\n Installer, le menu de démarrage est en anglais, et l'installation s'ouvre\n en plein écran.",
+   "title": "Raye Linux 1.0 › Nouveautés de Raye Linux 1.0",
    "url": "/telecharger/"
   },
   {
    "id": "notes:fr:3",
    "lang": "fr",
-   "text": "- La mémoire au repos est d'environ 850 Mo (jusqu'à 1 Go juste après la\n première connexion), pas encore les 600 à 700 Mo visés pour la 1.0 finale.\n- Le correctif de vitesse des jeux NVIDIA est testé sur nos machines de\n test, pas encore par nous sur une vraie carte NVIDIA. Si vos jeux sont\n encore lents, dites-le-nous.\n- Hyprland est nouveau dans cette bêta et a surtout été testé dans des\n machines virtuelles. Après un changement de bureau avec connexion\n automatique, le trousseau de mots de passe (KWallet) peut rester\n verrouillé jusqu'à ce que vous le déverrouilliez.\n- Le nouveau noyau Raye n'est pas encore dans cette bêta ; il arrivera dans\n une prochaine mise à jour.\n- Le nom de la version n'apparaît pas encore dans le menu de démarrage,\n seulement dans Paramètres > À propos et sur l'écran de connexion.\n- Sur un PC mis à jour depuis une bêta précédente, Synaptic peut apparaître\n dans « Ajoutés récemment » du menu Démarrer pendant environ 15 minutes,\n jusqu'à ce que Raye Update le retire.\n- Dans la Bibliothèque du Store, Obtenir les mises à jour ne dit rien quand\n il n'y a rien à mettre à jour.\n- Certaines anciennes cartes AMD (séries RX 400 et 500) peuvent encore\n démarrer en basse résolution avec peu d'images par seconde sur certains\n PC. Nous y travaillons encore.\n- Tous les programmes Windows ne fonctionnent pas, et les applis faites\n uniquement pour le Microsoft Store ne peuvent pas fonctionner du tout. Les\n programmes qui existent aussi pour Raye (Discord, Steam) s'installent\n mieux depuis le Raye Store.",
-   "title": "Raye Linux 1.0 Bêta Sundog › Problèmes connus",
+   "text": "- Les anciennes cartes AMD (séries RX 400 et 500) qui n'affichent pas le\n bureau passent toutes seules à un mode d'affichage plus simple ; nous\n n'avons pas encore pu l'essayer sur ces cartes. Le scintillement de\n certaines cartes NVIDIA à 144 Hz n'est pas encore corrigé : si votre PC\n l'a, envoyez-nous ses journaux (Paramètres > Système > Avancé).\n- Un jeu Steamworks avec Raye Proton n'a pas encore été essayé avec un vrai\n compte Steam. Si l'un d'eux échoue, choisissez GE-Proton ou Proton pour ce\n jeu dans ses propriétés Steam, et dites-le-nous.\n- Avec la barre des tâches sur un côté et ses icônes au centre, les icônes\n restent en haut. Les icônes du bureau peuvent se trouver sous une barre à\n gauche. Un deuxième écran n'a pas encore la barre sur le côté.\n- Raye Community est une bêta : il manque des fonctions.\n- Tous les programmes Windows ne fonctionnent pas, et les applis faites\n uniquement pour le Microsoft Store ne peuvent pas fonctionner.",
+   "title": "Raye Linux 1.0 › Problèmes connus",
    "url": "/telecharger/"
   },
   {
    "id": "notes:fr:4",
    "lang": "fr",
-   "text": "Dites-le-nous sur Discord, https://discord.gg/TrxhUkabyB, ou écrivez à\nbonjour@rayelinux.com. Dites quel ordinateur vous avez, ce que vous avez\nfait, ce que vous attendiez et ce qui s'est passé. Une photo de l'écran\naide.",
-   "title": "Raye Linux 1.0 Bêta Sundog › Signaler un problème",
-   "url": "/telecharger/"
-  },
-  {
-   "id": "notes:fr:5",
-   "lang": "fr",
-   "text": "La première bêta de Raye Linux 1.0 : un bureau disposé comme Windows 11,\ndessiné aux couleurs de Raye, avec des mises à jour qui s'installent toutes\nseules. C'est une bêta. Installez-la sur un ordinateur de rechange ou à côté\nde votre système actuel, pas sur la seule machine dont vous dépendez. Une\n0.5 Bêta déjà installée reçoit tout ceci par Raye Update ; le nouvel\ninstallateur ne compte que pour les nouvelles installations.",
-   "title": "Raye Linux 1.0 Bêta Sundog › Avant : Raye Linux 1.0 Bêta Brocken (19 novembre 2026)",
-   "url": "/telecharger/"
-  },
-  {
-   "id": "notes:fr:6",
-   "lang": "fr",
-   "text": "- **Horloge**, une nouvelle appli : des alarmes qui sonnent même fenêtre\n fermée (jours, son, Répéter), des minuteurs, un chronomètre avec tours et\n des horloges du monde.\n- **Carte graphique**, une nouvelle appli : l'état de votre carte graphique\n en direct. Sur les cartes AMD Radeon, elle règle le mode de performance,\n le profil de charge, la limite de puissance et une courbe de ventilateur,\n gardés au redémarrage. Les cartes NVIDIA ont le Panneau de configuration\n NVIDIA, installé avec le pilote et nommé ainsi dans Démarrer.\n- **Paramètres > Système > Options de performances** : un seul choix coupe\n les animations, la transparence et les ombres sur un PC lent, ou réglez\n chaque effet à part.\n- **Le Raye Store** est bien plus grand : cherchez un programme Windows\n (Photoshop, Office, Battle.net...) et il trouve les applis qui font le\n même travail. Steam et Heroic sont mis en avant, et Steam Play est activé\n pour tous les jeux dès que le Store installe Steam. TeamViewer, Mullvad VPN\n et balenaEtcher ont été ajoutés.\n- **Des avis dans le Raye Store** : la page de chaque appli montre ses\n étoiles et ce que les gens en disent, et une fois l'appli installée, vous\n pouvez la noter et écrire votre propre avis. Les avis sont partagés avec\n d'autres magasins d'applis Linux.\n- **Les fichiers .deb** s'installent d'un double-clic, dans une petite\n fenêtre qui va chercher ce qu'il leur faut et explique tout problème en\n mots simples.\n- **Les programmes Windows** ont les polices qu'ils demandent, démarrent dans\n leur propre dossier, et les jeux 32 bits peuvent utiliser 4 Go de mémoire.\n Les paquets du Microsoft Store (.msix, .appx) s'ouvrent avec Raye, ou\n disent clairement pourquoi ils ne peuvent pas.\n- **Explorateur** : la molette défile de trois lignes par cran comme sous\n Windows, une copie vers une clé USB montre ce qui est vraiment écrit et ne\n se termine que lorsque la clé peut être retirée, et Propriétés et Options\n des dossiers sont plus clairs.\n- **Raye Update** est plus discret et plus fiable : les mises à jour de\n Plasma arrivent d'un seul bloc, un fichier qui n'a pas pu être téléchargé\n est simplement réessayé plus tard, la recherche de mises à jour ne reste\n plus bloquée des minutes quand un serveur ne répond plus, et Paramètres\n montre la vitesse, le temps restant et l'état de chaque mise à jour.\n- **Démarrage plus rapide** : plus d'attente sur le menu de démarrage tant\n que tout va bien, des fichiers de démarrage plus petits, et les aides des\n vieux programmes ne démarrent que quand l'un d'eux en a besoin.\n- **Cartes graphiques plus anciennes** : si le bureau ne s'affiche pas deux\n fois de suite, Raye passe tout seul à un mode d'affichage plus simple.\n- **L'installateur** sait installer à côté d'un autre Linux (il peut\n réduire des partitions ext4 et btrfs), fonctionne sur les PC démarrés en\n mode BIOS, et demande avant d'effacer un disque, de supprimer une\n partition ou d'en réduire une. Le menu de la clé a « Check the USB stick\n for errors », et une clé mal écrite le dit au lieu d'une erreur obscure.\n- **Essayer Raye Linux sans l'installer** : le menu de la clé a un nouveau\n choix qui ouvre le bureau directement depuis la clé, sans que\n l'installation s'ouvre. Rien ne change sur le PC.\n- **Remplacer et garder vos fichiers** : quand Raye remplace Windows ou un\n autre système, l'installation peut emporter votre Bureau, vos Documents,\n Téléchargements, Musique, Images et Vidéos. Elle vérifie d'abord qu'il y a\n la place et demande avant d'effacer quoi que ce soit.\n- **Machines virtuelles** : Raye apporte maintenant les outils invités de\n VirtualBox et de VMware, et le PC reste éveillé pendant l'installation.\n- **Les applis web** installées depuis votre navigateur et épinglées à la\n barre des tâches gardent leur propre icône et leur nom.\n- Ctrl+Win+Entrée active ou coupe le lecteur d'écran.",
-   "title": "Raye Linux 1.0 Bêta Sundog › Nouveautés de la 1.0 Bêta Brocken",
-   "url": "/telecharger/"
-  },
-  {
-   "id": "notes:fr:7",
-   "lang": "fr",
-   "text": "Raye Linux est basé sur Ubuntu. Il n'est ni affilié à Canonical Ltd. ni\napprouvé par elle.",
-   "title": "Raye Linux 1.0 Bêta Sundog › Nouveautés de la 1.0 Bêta Brocken (2)",
+   "text": "Dites-le-nous sur Discord, https://discord.gg/TrxhUkabyB, ou écrivez à\nbonjour@rayelinux.com. Indiquez votre ordinateur, ce que vous avez fait, ce\nque vous attendiez et ce qui s'est passé. Une photo de l'écran aide.\n\nRaye Linux est basé sur Ubuntu. Il n'est ni affilié à Canonical Ltd. ni\napprouvé par elle.",
+   "title": "Raye Linux 1.0 › Signaler un problème",
    "url": "/telecharger/"
   },
   {
@@ -2360,11 +2332,11 @@
    "url": null
   }
  ],
- "release": "Raye Linux 1.0 Beta Sundog",
+ "release": "Raye Linux 1.0",
  "site": "https://rayelinux.com",
  "sources": {
-  "1.0-beta/release-notes-1.0-beta.fr.md": "2bf6d9d7b93d1bd3",
-  "1.0-beta/release-notes-1.0-beta.md": "8e317bfec331ba3c",
+  "1.0/release-notes-1.0.fr.md": "7d78f2f8c28642a9",
+  "1.0/release-notes-1.0.md": "a93c8d35931324b7",
   "bureau/index.html": "4e4a7f7790bce2d4",
   "deux-bureaux/index.html": "438142e0df215099",
   "discord/texts.py": "5bff52e13c468251",
@@ -2381,7 +2353,7 @@
   "en/11-chromebooks.md": "0b0a8099e4fe5196",
   "en/12-hyprland.md": "f62a6125c1c73390",
   "en/desktop/index.html": "9b3a5bdd9b9000a7",
-  "en/download/index.html": "3e798e89726a58f2",
+  "en/download/index.html": "3b9d957b9c97a15f",
   "en/games/index.html": "5ae6623b0d412090",
   "en/hardware/index.html": "03aa1d919ba84c5e",
   "en/install/index.html": "95cec68fd31f4b9a",
@@ -2412,7 +2384,7 @@
   "programmes-windows/index.html": "c725fcb0c9e2246a",
   "questions/index.html": "08be06913df547da",
   "securite/index.html": "c23e54f6dcc97449",
-  "telecharger/index.html": "e31f1ba3671971fc",
+  "telecharger/index.html": "d470da85e37634b7",
   "vieux-pc/index.html": "8ca390b8ec671d24"
  }
 }

@@ -73,28 +73,45 @@
 </header>
 <main id="main" class="download wrap">
 <header class="dl-head">
-<p class="status"><span class="dot" aria-hidden="true"></span>En préparation</p>
+<p class="status"><span class="dot" aria-hidden="true"></span>Version 1.0</p>
 <h1>Télécharger Raye Linux 1.0</h1>
-<p class="lede">L'image de Raye Linux 1.0 sera ici à la sortie. La taille et la somme de contrôle seront inscrites le jour de la publication, pas avant : celles d'une autre image ne vérifieraient rien. En attendant, lisez ce qui suit.</p>
+<p class="lede">L'image de Raye Linux, à écrire sur une clé USB pour l'installer. Si quelque chose ne marche pas, écrivez-moi.</p>
 </header>
 
 <section class="dl-file card" aria-labelledby="file-title">
 <div class="dl-file-top">
 <div>
 <h2 id="file-title">raye-1.0-amd64.iso</h2>
-<p class="dl-meta">Taille : à renseigner à la publication</p>
+<p class="dl-meta">3,3 Go · ISO 64 bits, démarrage UEFI ou BIOS · 26 novembre 2026</p>
 </div>
 <div class="dl-actions">
-<span class="btn btn-held">Téléchargement à la sortie</span>
+<a class="btn btn-accent" href="#accept" data-accept>Télécharger l'ISO</a>
 </div>
 </div>
 <dl class="dl-facts">
-<div><dt>SHA-256</dt><dd>À renseigner à la publication</dd></div>
+<div><dt>SHA-256</dt><dd><code class="hash">a2532801ee84985cbbcf43270b2e33a66a2f3cd004a648bddce271ad81a13687</code></dd></div>
 <div><dt>Empreinte de la clé</dt><dd><code>EA73 69D4 C3A3 10B2 DF3D  FC16 D3AA 2E62 5DDE 161E</code></dd></div>
 </dl>
-
+<ul class="dl-links">
+<li><a href="https://dl.rayelinux.com/iso/1.0/SHA256SUMS">SHA256SUMS</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0/SHA256SUMS.asc">Signature</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0/raye-archive.asc">Clé publique</a></li>
+<li><a href="https://dl.rayelinux.com/iso/1.0/release-notes-1.0.fr.md">Notes de version</a></li>
+</ul>
 </section>
 
+<section id="accept" class="card dl-card dl-accept" aria-labelledby="accept-title">
+<h2 id="accept-title">Avant de télécharger</h2>
+<ul class="plain">
+<li>Sauvegardez vos fichiers importants avant d'installer : l'installation peut effacer tout le disque choisi.</li>
+<li>Le logiciel est fourni « tel quel », sans garantie, comme le prévoient ses licences libres. Dans toute la mesure permise par la loi, Raye Linux et ses contributeurs ne sont pas responsables des dommages ou pertes de données liés à son téléchargement, son installation ou son utilisation.</li>
+<li>Vous êtes responsable de l'ordinateur sur lequel vous l'installez.</li>
+<li>En téléchargeant, vous acceptez les <a href="/conditions/">conditions d'utilisation</a>.</li>
+</ul>
+<label class="dl-check"><input type="checkbox" id="accept-check"> <span>Je confirme avoir lu ces avertissements et avoir sauvegardé mes données.</span></label>
+<p class="dl-accept-actions"><a class="btn btn-accent dl-go" href="https://dl.rayelinux.com/iso/1.0/raye-1.0-amd64.iso">J'accepte, télécharger l'ISO</a>
+<button type="button" class="btn btn-quiet dl-cancel" hidden>Annuler</button></p>
+</section>
 <div class="dl-grid">
 <section class="card dl-card" aria-labelledby="verify-title">
 <h2 id="verify-title">Vérifier le téléchargement</h2>
