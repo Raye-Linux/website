@@ -10,14 +10,6 @@
      "Steam sees your other drives"
     ],
     [
-     "doing",
-     "Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution"
-    ],
-    [
-     "doing",
-     "Fix for the flicker on NVIDIA cards at 144 Hz"
-    ],
-    [
      "done",
      "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM"
     ],
@@ -50,7 +42,7 @@
      "Unneeded services removed and global optimizations, for a lighter and more stable Raye"
     ],
     [
-     "doing",
+     "done",
      "Website refresh: a cleaner, more professional look and more pages"
     ],
     [
@@ -90,7 +82,7 @@
      "Settings and every Raye app work well on Hyprland"
     ],
     [
-     "doing",
+     "done",
      "Complete Hyprland guide: change everything, Raye apps included, step by step"
     ],
     [
@@ -126,11 +118,11 @@
      "The V1 website, with fresh screenshots of the real system"
     ],
     [
-     "doing",
+     "done",
      "Legal pages and FAQ"
     ],
     [
-     "doing",
+     "done",
      "Join the team and a staff panel on the website"
     ],
     [
@@ -138,7 +130,7 @@
      "Public profiles and badges"
     ],
     [
-     "doing",
+     "done",
      "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
     ],
     [
@@ -166,71 +158,7 @@
      "Upgraded Windows layer: newest version, faster, more Windows apps tested and working"
     ],
     [
-     "doing",
-     "Windows apps install silently with a real progress bar, start to finish"
-    ],
-    [
-     "doing",
-     "Printers & scanners page and a Scan app, plus longer laptop battery life"
-    ],
-    [
-     "doing",
-     "A real Raye screen to unlock an encrypted disk at startup"
-    ],
-    [
-     "doing",
-     "Complete Windows bridge: share drivers and settings with Windows"
-    ],
-    [
-     "planned",
-     "Taskbar on top or on the side of the screen"
-    ],
-    [
-     "planned",
-     "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
-    ],
-    [
-     "doing",
-     "The V1 website, with fresh screenshots of the real system"
-    ],
-    [
-     "doing",
-     "Legal pages and FAQ"
-    ],
-    [
-     "doing",
-     "Join the team and a staff panel on the website"
-    ],
-    [
-     "planned",
-     "Public profiles and badges"
-    ],
-    [
-     "planned",
-     "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
-    ],
-    [
-     "planned",
-     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
-    ],
-    [
-     "planned",
-     "Raye account: your settings follow you to every PC"
-    ],
-    [
-     "planned",
-     "New account website and emails, with two-factor sign-in"
-    ],
-    [
-     "planned",
-     "Raye Proton: pick Raye's Windows layer for Steam games"
-    ],
-    [
-     "doing",
-     "Upgraded Windows layer: newest version, faster, more Windows apps tested and working"
-    ],
-    [
-     "doing",
+     "done",
      "New Raye logo everywhere: system, installer, website, Discord"
     ],
     [
@@ -246,7 +174,7 @@
      "Raye kernel only (Ubuntu's kernel removed)"
     ],
     [
-     "doing",
+     "done",
      "Ready for Easy Anti-Cheat v2 (Fortnite): Raye's kernel key sent to Epic"
     ],
     [
@@ -278,11 +206,11 @@
      "Developer options and remote web page"
     ],
     [
-     "doing",
+     "done",
      "Final polish and fixes from both betas"
     ],
     [
-     "planned",
+     "done",
      "New ISO for everyone"
     ]
    ]
@@ -291,6 +219,14 @@
    "title": "🕒 V1.1 · early December",
    "color": "8a8f98",
    "items": [
+    [
+     "doing",
+     "Fix for the flicker on NVIDIA cards at 144 Hz"
+    ],
+    [
+     "doing",
+     "Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution"
+    ],
     [
      "planned",
      "Welcome app after install: quick setup (drivers, updates, apps, Raye account, look) and where to get help"
