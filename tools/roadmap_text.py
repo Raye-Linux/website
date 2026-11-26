@@ -76,6 +76,7 @@ FR = {
     "V1 Beta 4": "V1 Bêta 4",
     "V1 Beta 3": "V1 Bêta 3",
     "Every language: all of Raye translated": "Toutes les langues : tout Raye traduit",
+    "Forgot your password? Reset it from the sign-in screen, with a recovery key made in Setup or with your Raye account": "Mot de passe oublié ? Réinitialisez-le depuis l'écran de connexion, avec une clé de récupération créée dans l'installation ou avec votre compte Raye",
     "Complete Windows bridge: Windows programs see your drives, printers, network and ports": "Pont Windows complet : les programmes Windows voient vos disques, imprimantes, réseau et ports",
     "Raye Proton built on GE-Proton, with per-game fixes from Raye Update": "Raye Proton construit sur GE-Proton, avec des correctifs par jeu livrés par Raye Update",
     "Raye in Spanish, German, Brazilian Portuguese and Italian": "Raye en espagnol, allemand, portugais du Brésil et italien",
