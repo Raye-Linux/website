@@ -1,14 +1,90 @@
 {
   "desktop-fr": {
-    "version": "1.0 Beta 2 (development build)",
-    "date": "2026-11-19",
-    "source": "/root/raye-final/beta1/win10-shots/windows11-fr-open-1920x1080.png",
-    "replace": "take again on the 1.0 image: real icons, a real user name"
+    "version": "1.0",
+    "date": "2026-11-26"
   },
   "desktop-en": {
-    "version": "1.0 Beta 2 (development build)",
-    "date": "2026-11-19",
-    "source": "/root/raye-final/beta1/win10-shots/windows11-en-open-1920x1080.png",
-    "replace": "take again on the 1.0 image: real icons, a real user name"
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "control-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "control-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "desktop-choice-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "desktop-choice-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "explorer-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "explorer-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "lock-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "lock-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "quick-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "quick-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "settings-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "settings-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "steam-store-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "steam-store-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "taskmgr-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "taskmgr-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "uac-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "uac-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "win-x-en": {
+    "version": "1.0",
+    "date": "2026-11-26"
+  },
+  "win-x-fr": {
+    "version": "1.0",
+    "date": "2026-11-26"
   }
 }
