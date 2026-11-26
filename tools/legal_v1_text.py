@@ -5,7 +5,8 @@ terms. Written like tools/legal_text.py, whose helpers it uses, French and
 English side by side.
 
 These texts are a DRAFT, marked as such on every page: version 3.0 (live)
-applies until the V1 site goes online. A lawyer should read them before."""
+applies until the V1 site goes online. They are written by the Raye team in plain
+words and not reviewed by a lawyer (the project's choice)."""
 
 from legal_text import (H, L, P, PRIVACY, PRIVACY_SUMMARY, S, T, TERMS, TERMS_SUMMARY)
 
@@ -13,11 +14,11 @@ UPDATED = {"fr": "25 novembre 2026", "en": "November 25, 2026"}
 VERSION = "4.0"
 DRAFT = {
     "fr": "Version préparée pour la V1 du site. Elle s'appliquera à sa mise en ligne ; "
-          "d'ici là, la version 3.0 publiée sur rayelinux.com reste celle qui vaut. Ce texte est à "
-          "faire relire par un juriste avant sa mise en ligne.",
+          "d'ici là, la version 3.0 publiée sur rayelinux.com reste celle qui vaut. Ces pages sont "
+          "rédigées par l'équipe Raye en mots simples ; elles n'ont pas été relues par un avocat.",
     "en": "Version prepared for the V1 site. It will apply when that site goes online; until "
-          "then, version 3.0 published on rayelinux.com is the one in force. This text still has to "
-          "be read by a lawyer before it goes online.",
+          "then, version 3.0 published on rayelinux.com is the one in force. These pages are written "
+          "by the Raye team in plain words; they were not reviewed by a lawyer.",
 }
 
 # how a V1 page names the new pages inside a sentence ({betaterms}, ...)

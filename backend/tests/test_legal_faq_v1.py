@@ -25,13 +25,23 @@ class LegalFaqTests(unittest.TestCase):
         self.assertIn("uses no cookies", page("en/cookies"))
         self.assertIn("n'utilise aucun témoin", page("temoins"))
 
-    def test_every_legal_page_carries_the_lawyer_notice(self):
-        for rel, word in (("en/privacy", "lawyer"), ("en/terms", "lawyer"),
-                          ("en/cookies", "lawyer"), ("en/beta-terms", "lawyer"),
-                          ("confidentialite", "juriste"), ("conditions", "juriste"),
-                          ("temoins", "juriste"), ("conditions-beta", "juriste")):
+    def test_every_legal_page_carries_the_honest_lawyer_notice(self):
+        # Decision of the project: no lawyer reads these pages. They say who
+        # wrote them and that no lawyer reviewed them, never that one will.
+        for rel, notice, promise in (
+                ("en/privacy", "not reviewed by a lawyer", "has to be read by a lawyer"),
+                ("en/terms", "not reviewed by a lawyer", "has to be read by a lawyer"),
+                ("en/cookies", "not reviewed by a lawyer", "has to be read by a lawyer"),
+                ("en/beta-terms", "not reviewed by a lawyer", "has to be read by a lawyer"),
+                ("confidentialite", "pas été relues par un avocat", "faire relire par un juriste"),
+                ("conditions", "pas été relues par un avocat", "faire relire par un juriste"),
+                ("temoins", "pas été relues par un avocat", "faire relire par un juriste"),
+                ("conditions-beta", "pas été relues par un avocat", "faire relire par un juriste")):
             with self.subTest(page=rel):
-                self.assertIn(word, page(rel))
+                text = page(rel)
+                self.assertIn(notice, text)
+                self.assertIn("Raye" , text)
+                self.assertNotIn(promise, text)
 
     def test_privacy_describes_the_staff_panel_as_the_code_keeps_it(self):
         en, fr = page("en/privacy"), page("confidentialite")
