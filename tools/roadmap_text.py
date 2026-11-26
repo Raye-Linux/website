@@ -76,6 +76,11 @@ FR = {
     "V1 Beta 4": "V1 Bêta 4",
     "V1 Beta 3": "V1 Bêta 3",
     "Every language: all of Raye translated": "Toutes les langues : tout Raye traduit",
+    "Raye Community: the same channels as the Discord server, set up for you, and support tickets": "Raye Community : les mêmes salons que le serveur Discord, déjà en place, et des tickets d'aide",
+    "Forgot your password? Reset it from the sign-in screen, with a recovery key made in Setup or with your Raye account": "Mot de passe oublié ? Réinitialisez-le depuis l'écran de connexion, avec une clé de récupération créée dans l'installation ou avec votre compte Raye",
+    "Complete Windows bridge: Windows programs see your drives, printers, network and ports": "Pont Windows complet : les programmes Windows voient vos disques, imprimantes, réseau et ports",
+    "Raye Proton built on GE-Proton, with per-game fixes from Raye Update": "Raye Proton construit sur GE-Proton, avec des correctifs par jeu livrés par Raye Update",
+    "Raye in Spanish, German, Brazilian Portuguese and Italian": "Raye en espagnol, allemand, portugais du Brésil et italien",
     "Raye Community: Raye's own chat on the website and in Raye Linux, with your Raye account, friends, roles, moderation, images and videos, private messages and staff tools, then it replaces the Discord server":
         "Raye Community : le chat de Raye, sur le site et dans Raye Linux, avec votre compte Raye, les amis, les rôles, la modération, les images et vidéos, les messages privés et les outils du staff, puis il remplace le serveur Discord",
     "The V1 website, with fresh screenshots of the real system":

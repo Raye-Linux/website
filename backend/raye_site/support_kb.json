@@ -736,6 +736,76 @@
    "url": null
   },
   {
+   "id": "handbook:fr:12-hyprland:0",
+   "lang": "fr",
+   "text": "Hyprland est le bureau en mosaïque de Raye : les fenêtres se rangent côte à\ncôte toutes seules, et on fait presque tout au clavier. Cette page montre\ncomment changer presque tout, sans jamais abîmer les réglages de Raye.\n\nCe que vous changez tient dans **un seul fichier**, et vous pouvez revenir en\narrière à tout moment.",
+   "title": "Hyprland sur Raye : tout changer",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:1",
+   "lang": "fr",
+   "text": "| Fichier | À qui | Que faire |\n|---|---|---|\n| `/usr/share/raye/hyprland/hyprland.conf` | Les réglages de Raye, pour tous les comptes | À lire, jamais à modifier : une mise à jour le remplace |\n| `~/.config/raye-hyprland/user.conf` | **Le vôtre** | À modifier. Raye n'y touche jamais |\n\nHyprland lit les réglages de Raye d'abord et votre fichier **en dernier** :\nune ligne de vous gagne toujours. Les autres fichiers de\n`~/.config/raye-hyprland/` (`hyprland.conf`, `keyboard.conf`,\n`monitors.conf`, `hyprlock.conf`) sont réécrits par Raye à chaque connexion :\nn'y touchez pas.",
+   "title": "Hyprland sur Raye : tout changer › Deux sortes de fichiers",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:2",
+   "lang": "fr",
+   "text": "Dans un terminal, utilisez la commande `raye-hyprland-config`, ou allez dans\n**Paramètres → Personnalisation → Environnement de bureau** et appuyez sur\n**Ouvrir mes réglages Hyprland**. Le bouton **Guide Hyprland** juste à côté\nouvre cette page.\n\n raye-hyprland-config open # crée le fichier si besoin, l'ouvre\n raye-hyprland-config reload # l'applique tout de suite\n raye-hyprland-config reset # retour aux réglages de Raye\n\nHyprland applique un changement **dès l'enregistrement** : inutile de se\ndéconnecter. Si une ligne est fausse, une barre rouge en haut de l'écran\nindique le problème ; corrigez la ligne et enregistrez de nouveau. **reset**\ngarde une copie de votre fichier à côté (`user.conf.<date>.bak`) avant de le\nvider.",
+   "title": "Hyprland sur Raye : tout changer › Ouvrir son fichier, l'appliquer, revenir",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:3",
+   "lang": "fr",
+   "text": "À mettre dans `user.conf`. Chacun ne remplace que la valeur nommée.\n\n**Écarts et bordures**\n\n general {\n gaps_in = 2\n gaps_out = 4\n border_size = 2\n col.active_border = rgba(ff8800ff)\n }\n\n**Coins carrés, sans ombre**\n\n decoration {\n rounding = 0\n shadow {\n enabled = false\n }\n }\n\n**Flou** (Raye ne floute que la barre des tâches et Démarrer ; pour flouter\nderrière une appli)\n\n windowrule {\n name = my-terminal-blur\n match:class = ^(konsole)$\n no_blur = off\n }\n decoration {\n blur {\n size = 6\n }\n }\n\n**Animations** : plus rapides, ou aucune\n\n animations {\n enabled = false\n }\n\nPour les garder mais accélérer l'ouverture des fenêtres :\n\n animation = windowsIn, 1, 1.5, rayeIn, popin 94%\n\n(le nombre après `1,` est la durée en dixièmes de seconde).\n\n**Vos propres raccourcis**\n\n bind = SUPER, T, exec, konsole\n bind = SUPER SHIFT, B, exec, firefox\n unbind = SUPER, M\n\n`SUPER` est la touche Windows. `bind` sert pour un appui, `bindm` pour la\nsouris, `bindel` pour les touches qui se répètent (volume). Les raccourcis de\nRaye sont à la fin de `/usr/share/raye/hyprland/hyprland.conf` ; `unbind`\nlibère l'un d'eux.\n\n**Règles de fenêtres** (une appli flotte toujours, ou s'ouvre toujours sur un\nbureau)\n\n windowrule {\n name = calculator-floats\n match:class = ^(org\\.kde\\.kcalc)$\n float = yes\n center = yes\n }\n windowrule {\n name = browser-on-2\n match:class = ^(firefox)$\n workspace = 2\n }\n\nPour connaître la classe d'une appli, ouvrez-la et lancez `hyprctl clients` :\nla ligne `class:` est ce qui va après `match:class`.\n\n**Écrans** : un second écran, et la taille des choses\n\n raye-hyprland-config open # puis ajoutez :\n monitor = DP-1, 2560x1440@144, 0x0, 1\n monitor = HDMI-A-1, preferred, 2560x0, 1.25",
+   "title": "Hyprland sur Raye : tout changer › Exemples à copier",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:4",
+   "lang": "fr",
+   "text": "Listez vos écrans avec `hyprctl monitors`. Le dernier nombre est l'échelle\n(1,25 vaut 125 %). Raye écrit dans `monitors.conf` l'échelle choisie dans\nles Paramètres ; une ligne `monitor =` de votre fichier l'emporte.\n\n**Clavier et souris**\n\n input {\n kb_layout = ca\n repeat_rate = 40\n sensitivity = -0.3\n touchpad {\n natural_scroll = false\n }\n }\n\n**Programmes à la connexion**\n\n exec-once = discord --start-minimized\n exec-once = nm-applet\n\n**Fond d'écran** : choisissez-le dans **Paramètres → Personnalisation →\nArrière-plan** ; le shell de Raye le dessine. Rien à écrire dans le fichier.\n\n**Barre des tâches et Démarrer** : **Paramètres → Personnalisation → Barre\ndes tâches** (taille, position, masquage automatique). Le shell s'appelle\n`raye-hypr-shell` ; relancez-le avec `hyprctl dispatch exec raye-hypr-shell`\nsi vous l'avez fermé.",
+   "title": "Hyprland sur Raye : tout changer › Exemples à copier (2)",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:5",
+   "lang": "fr",
+   "text": "Win+L, et la fermeture du capot, verrouillent l'écran (`hyprlock`). L'écran\ns'éteint après 10 minutes et se verrouille une minute plus tard (`hypridle`).\nPour changer les durées, copiez le fichier de Raye et faites le vôtre :\n\n mkdir -p ~/.config/hypr\n cp /usr/share/raye/hyprland/hypridle.conf ~/.config/hypr/hypridle.conf\n\npuis modifiez les nombres `timeout =` (en secondes). Un fichier dans\n`~/.config/hypr/` est utilisé à la place de celui de Raye.",
+   "title": "Hyprland sur Raye : tout changer › Verrouillage et veille",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:6",
+   "lang": "fr",
+   "text": "Les applis de Raye (Paramètres, Fichiers, Store, Gestionnaire des tâches,\nHorloge...) suivent le style, les couleurs et les icônes de Raye sous\nHyprland comme sous KDE Plasma. La session s'en charge ; voici ce qu'elle\nfait et où le changer.\n\n- **Thème et couleurs.** Les applis Qt et KDE utilisent le style Raye\n (`QT_QPA_PLATFORMTHEME=kde`). Changez les couleurs et le mode clair ou\n sombre dans **Paramètres → Personnalisation → Couleurs**, pas dans Hyprland.\n- **Applis GTK** (Firefox, GIMP...) lisent le même choix. Si l'une est de\n travers, lancez\n `gsettings set org.gnome.desktop.interface color-scheme prefer-dark`\n (ou `default`).\n- **Icônes et curseur.** **Paramètres → Personnalisation**. Le curseur est\n `Raye`, taille 24 ; pour changer la taille, ajoutez à `user.conf` :\n\n env = XCURSOR_SIZE, 32\n env = HYPRCURSOR_SIZE, 32\n\n- **Polices** et taille du texte : **Paramètres → Personnalisation →\n Polices**.\n- **Échelle.** Réglez-la par écran dans **Paramètres → Système → Écran**, ou\n avec une ligne `monitor =` (voir plus haut). Les programmes qui passent\n encore par X11 restent nets : Raye coupe leur mise à l'échelle floue.\n- **Barres de titre.** Hyprland n'en dessine pas ; les applis Qt de Raye\n dessinent la leur. Les applis GTK dessinent la leur.\n- **Où les applis gardent leurs réglages** (pour les copier ou les\n réinitialiser) :\n\n | Appli | Fichier dans `~/.config/` |\n |---|---|\n | Paramètres | `raye-settingsrc` |\n | Barre des tâches, Démarrer, shell | `rayeshellrc` |\n | Style Raye et barres de titre | `rayerc` |\n | Fichiers | `dolphinrc` |",
+   "title": "Hyprland sur Raye : tout changer › Que les applis de Raye s'affichent bien",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:7",
+   "lang": "fr",
+   "text": " Supprimez un fichier pour rendre ses réglages d'origine à une appli\n (fermez-la d'abord).\n- **Règles de fenêtres pour les applis de Raye.** Trouvez la classe avec\n `hyprctl clients` pendant que l'appli est ouverte, puis servez-vous des\n exemples `windowrule` ci-dessus. Le Gestionnaire des tâches et les boîtes\n de dialogue flottent déjà ; Paramètres et Fichiers se rangent en mosaïque.\n- **Une appli s'affiche mal ?** Essayez dans l'ordre : la fermer et la rouvrir ;\n se déconnecter puis se reconnecter ; supprimer son fichier du tableau ;\n vérifier qu'aucune ligne de votre `user.conf` ne la touche (écartez le\n fichier avec `mv ~/.config/raye-hyprland/user.conf ~/user.conf.test`,\n reconnectez-vous et regardez). Toujours de travers : voir *Signaler un\n problème*.",
+   "title": "Hyprland sur Raye : tout changer › Que les applis de Raye s'affichent bien (2)",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:8",
+   "lang": "fr",
+   "text": "La communauté Hyprland partage des réglages complets (« dotfiles »), comme\nCaelestia. Raye peut en essayer un et vous ramener en arrière :\n\n raye-hyprland-config dots install https://github.com/<qui>/<depot>\n\nLa commande **sauvegarde d'abord tous vos réglages Hyprland et du shell** dans\nune archive datée sous `~/.local/share/raye-hyprland/backups/`, télécharge le\ndépôt, vous montre ce que son script d'installation va faire et **vous\ndemande de taper `yes`**. Ce script est du code d'un tiers : il peut installer\ndes programmes et remplacer vos réglages. Lisez-le, et n'utilisez que des\nréglages en qui vous avez confiance.\n\n raye-hyprland-config dots restore # exactement ce que vous aviez\n raye-hyprland-config dots off # les réglages de Raye, on garde les leurs\n raye-hyprland-config reset # revient aussi aux réglages de Raye\n\nSi le réglage ne démarre pas, Raye revient tout seul à la connexion suivante.\nDepuis l'écran de connexion vous pouvez aussi choisir **KDE Plasma** ; depuis\nune console texte (Ctrl+Alt+F3) lancez `raye-hyprland-config dots restore`.",
+   "title": "Hyprland sur Raye : tout changer › Les réglages des autres (dots)",
+   "url": null
+  },
+  {
+   "id": "handbook:fr:12-hyprland:9",
+   "lang": "fr",
+   "text": "Le manuel complet de Hyprland, avec chaque réglage :\nwiki.hypr.land. Commencez par\n*Variables* (chaque réglage et ses valeurs), *Binds*, *Window Rules* et\n*Monitors*.",
+   "title": "Hyprland sur Raye : tout changer › Aller plus loin",
+   "url": null
+  },
+  {
    "id": "handbook:en:01-installing:0",
    "lang": "en",
    "text": "- A 64-bit PC (Intel or AMD) that starts in UEFI mode, 4 GB of memory (8 GB\n recommended) and 25 GB of free disk space.\n- A USB stick of 8 GB or more. Everything on it will be erased.\n- About 20 minutes, and a backup of your important files: installing can\n erase the disk you pick.",
@@ -1121,6 +1191,76 @@
    "url": null
   },
   {
+   "id": "handbook:en:12-hyprland:0",
+   "lang": "en",
+   "text": "Hyprland is the tiling desktop of Raye: windows line up side by side on\ntheir own, and you do most things with the keyboard. This page shows how to\nchange nearly anything, without ever breaking Raye's own settings.\n\nYou can change what you like in **one file**, and go back at any time.",
+   "title": "Hyprland on Raye: change everything",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:1",
+   "lang": "en",
+   "text": "| File | Whose | What to do |\n|---|---|---|\n| `/usr/share/raye/hyprland/hyprland.conf` | Raye's settings, for every account | Read it, never edit it: an update replaces it |\n| `~/.config/raye-hyprland/user.conf` | **Yours** | Edit it. Raye never changes it |\n\nHyprland reads Raye's settings first and your file **last**, so a line of\nyours always wins. The other files in `~/.config/raye-hyprland/`\n(`hyprland.conf`, `keyboard.conf`, `monitors.conf`, `hyprlock.conf`) are\nwritten by Raye at each sign-in: leave them alone.",
+   "title": "Hyprland on Raye: change everything › Two kinds of files",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:2",
+   "lang": "en",
+   "text": "Open a terminal and use the `raye-hyprland-config` command, or go to\n**Settings → Personalization → Desktop environment** and press\n**Open my Hyprland settings**. The **Hyprland guide** button next to it\nopens this page.\n\n raye-hyprland-config open # makes the file if needed, opens it\n raye-hyprland-config reload # applies it now\n raye-hyprland-config reset # back to Raye's settings\n\nHyprland applies a change **as soon as you save**: no need to sign out. If\na line is wrong, a red bar shows the problem at the top of the screen; fix\nthe line and save again. **reset** keeps a copy of your file next to it\n(`user.conf.<date>.bak`) before emptying it.",
+   "title": "Hyprland on Raye: change everything › Open your file, apply it, go back",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:3",
+   "lang": "en",
+   "text": "Put them in `user.conf`. Each one replaces only the value you name.\n\n**Gaps and borders**\n\n general {\n gaps_in = 2\n gaps_out = 4\n border_size = 2\n col.active_border = rgba(ff8800ff)\n }\n\n**Square corners, no shadow**\n\n decoration {\n rounding = 0\n shadow {\n enabled = false\n }\n }\n\n**Blur** (Raye blurs only the taskbar and Start; to blur behind one app)\n\n windowrule {\n name = my-terminal-blur\n match:class = ^(konsole)$\n no_blur = off\n }\n decoration {\n blur {\n size = 6\n }\n }\n\n**Animations**: faster, or none\n\n animations {\n enabled = false\n }\n\nTo keep them but speed up windows opening:\n\n animation = windowsIn, 1, 1.5, rayeIn, popin 94%\n\n(the number after `1,` is the time in tenths of a second).\n\n**Your own shortcuts**\n\n bind = SUPER, T, exec, konsole\n bind = SUPER SHIFT, B, exec, firefox\n unbind = SUPER, M\n\n`SUPER` is the Windows key. `bind` is for one press, `bindm` for the mouse,\n`bindel` for keys that repeat (volume). Raye's own shortcuts are at the\nend of `/usr/share/raye/hyprland/hyprland.conf`; `unbind` frees one of them.\n\n**Window rules** (an app always floats, or always opens on a desktop)\n\n windowrule {\n name = calculator-floats\n match:class = ^(org\\.kde\\.kcalc)$\n float = yes\n center = yes\n }\n windowrule {\n name = browser-on-2\n match:class = ^(firefox)$\n workspace = 2\n }\n\nTo learn an app's class, open it and run `hyprctl clients`: the line\n`class:` is what goes after `match:class`.\n\n**Screens**: a second screen, and the size of things\n\n raye-hyprland-config open # then add:\n monitor = DP-1, 2560x1440@144, 0x0, 1\n monitor = HDMI-A-1, preferred, 2560x0, 1.25\n\nList your screens with `hyprctl monitors`. The last number is the scale\n(1.25 is 125 %). Raye writes the scale you pick in Settings into\n`monitors.conf`; a `monitor =` line in your file wins over it.",
+   "title": "Hyprland on Raye: change everything › Examples to copy",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:4",
+   "lang": "en",
+   "text": "**Keyboard and mouse**\n\n input {\n kb_layout = ca\n repeat_rate = 40\n sensitivity = -0.3\n touchpad {\n natural_scroll = false\n }\n }\n\n**Programs at sign-in**\n\n exec-once = discord --start-minimized\n exec-once = nm-applet\n\n**Wallpaper**: pick it in **Settings → Personalization → Background**; the\nRaye shell draws it. Nothing to write in the file.\n\n**Taskbar and Start**: **Settings → Personalization → Taskbar** (size,\nposition, hide by itself). The shell is `raye-hypr-shell`; restart it with\n`hyprctl dispatch exec raye-hypr-shell` if you ever close it.",
+   "title": "Hyprland on Raye: change everything › Examples to copy (2)",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:5",
+   "lang": "en",
+   "text": "Win+L, and closing the lid, lock the screen (`hyprlock`). The screen turns\noff after 10 minutes and locks a minute later (`hypridle`). To change the\ntimes, copy Raye's file and make your own:\n\n mkdir -p ~/.config/hypr\n cp /usr/share/raye/hyprland/hypridle.conf ~/.config/hypr/hypridle.conf\n\nthen edit the `timeout =` numbers (in seconds). A file in\n`~/.config/hypr/` is used instead of Raye's.",
+   "title": "Hyprland on Raye: change everything › Lock and sleep",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:6",
+   "lang": "en",
+   "text": "Raye's apps (Settings, Files, Store, Task Manager, Clock...) follow the\nRaye style, colours and icons on Hyprland the same way as on KDE Plasma.\nThe session sets it for you; this is what it does and where to change it.\n\n- **Theme and colours.** Qt and KDE apps use the Raye style\n (`QT_QPA_PLATFORMTHEME=kde`). Change the colours and the light or dark\n mode in **Settings → Personalization → Colors**, not in Hyprland.\n- **GTK apps** (Firefox, GIMP...) read the same choice. If one looks wrong,\n run `gsettings set org.gnome.desktop.interface color-scheme prefer-dark`\n (or `default`).\n- **Icons and cursor.** **Settings → Personalization**. The cursor is\n `Raye`, size 24; to change the size add to `user.conf`:\n\n env = XCURSOR_SIZE, 32\n env = HYPRCURSOR_SIZE, 32\n\n- **Fonts** and text size: **Settings → Personalization → Fonts**.\n- **Scale.** Set it per screen in **Settings → System → Display**, or with\n a `monitor =` line (see above). Programs that still run through X11 stay\n sharp: Raye turns off their blurry scaling.\n- **Title bars.** Hyprland draws none; Raye's Qt apps draw their own. GTK\n apps draw theirs.\n- **Where the apps keep their settings** (to copy or reset them):\n\n | App | File in `~/.config/` |\n |---|---|\n | Settings | `raye-settingsrc` |\n | Taskbar, Start, shell | `rayeshellrc` |\n | Raye style and title bars | `rayerc` |\n | Files | `dolphinrc` |",
+   "title": "Hyprland on Raye: change everything › Make the Raye apps look right",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:7",
+   "lang": "en",
+   "text": " Delete a file to give an app its defaults again (close the app first).\n- **Window rules for the Raye apps.** Find the class with `hyprctl clients`\n while the app is open, then use the `windowrule` examples above. The\n Task Manager and dialogs already float; Settings and Files tile.\n- **An app looks wrong?** Try, in order: close and open it again; sign out\n and in; delete its file from the table; make sure no line of your\n `user.conf` touches it (move the file aside with\n `mv ~/.config/raye-hyprland/user.conf ~/user.conf.test`, sign out and in,\n and look). Still wrong: see *Reporting a problem*.",
+   "title": "Hyprland on Raye: change everything › Make the Raye apps look right (2)",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:8",
+   "lang": "en",
+   "text": "The Hyprland community shares complete setups (\"dotfiles\") such as\nCaelestia. Raye can try one and bring you back:\n\n raye-hyprland-config dots install https://github.com/<who>/<repo>\n\nIt **saves all your Hyprland and shell settings first** in a dated archive\nunder `~/.local/share/raye-hyprland/backups/`, downloads the repository,\nshows you what its install script will do and **asks you to type `yes`**.\nThat script is somebody else's code: it can install programs and replace\nyour settings. Read it, and use only setups you trust.\n\n raye-hyprland-config dots restore # exactly what you had before\n raye-hyprland-config dots off # use Raye's settings again, keep theirs\n raye-hyprland-config reset # also goes back to Raye's settings\n\nIf the setup does not start, Raye comes back by itself at the next sign-in.\nFrom the sign-in screen you can also choose **KDE Plasma**; from a text\nconsole (Ctrl+Alt+F3) run `raye-hyprland-config dots restore`.",
+   "title": "Hyprland on Raye: change everything › Other people's setups (dots)",
+   "url": null
+  },
+  {
+   "id": "handbook:en:12-hyprland:9",
+   "lang": "en",
+   "text": "The whole Hyprland manual, with every setting:\nwiki.hypr.land. Start with *Variables*\n(every setting and its values), *Binds*, *Window Rules* and *Monitors*.",
+   "title": "Hyprland on Raye: change everything › Go further",
+   "url": null
+  },
+  {
    "id": "notes:en:0",
    "lang": "en",
    "text": "The second beta of Raye Linux 1.0, out November 21, 2026. It brings a\nsecond desktop you can pick, a Windows 10 look, your files from Windows,\nan automatic game mode and many fixes. It is still a beta: install it on a\nspare computer or next to your current system, not on the only machine you\ndepend on.\n\nFrançais : https://dl.rayelinux.com/iso/1.0-beta/release-notes-1.0-beta.fr.md",
@@ -1391,6 +1531,7 @@
   "en/09-windows-alongside.md": "4378c466bd1baa82",
   "en/10-for-developers.md": "53a32eb41ce34dbd",
   "en/11-chromebooks.md": "0b0a8099e4fe5196",
+  "en/12-hyprland.md": "f62a6125c1c73390",
   "en/index.html": "95384c76fbd6dc79",
   "fr/01-installer.md": "d0c40af24cf33b3f",
   "fr/02-premiers-pas.md": "e2de18c9ed2d16cf",
@@ -1403,6 +1544,7 @@
   "fr/09-windows-a-cote.md": "ab889732288946c1",
   "fr/10-pour-les-developpeurs.md": "107a3c65b7a3b576",
   "fr/11-chromebooks.md": "655c79fe7f20dfb5",
+  "fr/12-hyprland.md": "50124c843b13d09d",
   "fr/index.html": "8218383394013a45",
   "telecharger/index.html": "730250c6ee8dfe12"
  }

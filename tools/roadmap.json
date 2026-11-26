@@ -22,7 +22,7 @@
      "Same low RAM use at idle on every PC (about 850 MB), even with lots of RAM"
     ],
     [
-     "doing",
+     "done",
      "No more freezes when RAM runs out: the PC slows down a little instead"
     ],
     [
@@ -30,7 +30,7 @@
      "Fix for apps that crash on start (Qoder and other Electron apps)"
     ],
     [
-     "doing",
+     "done",
      "Wi-Fi password box keeps the cursor while networks refresh"
     ],
     [
@@ -38,15 +38,15 @@
      "File Explorer opens right away, even when a network drive is out of reach"
     ],
     [
-     "doing",
+     "done",
      "Windows programs page lists the ones installed from the Store"
     ],
     [
-     "doing",
+     "done",
      "Smoother Hyprland"
     ],
     [
-     "doing",
+     "done",
      "Unneeded services removed and global optimizations, for a lighter and more stable Raye"
     ],
     [
@@ -54,7 +54,7 @@
      "Website refresh: a cleaner, more professional look and more pages"
     ],
     [
-     "doing",
+     "done",
      "Taskbar settings: left or center, icon size, taskbar height, auto-hide"
     ],
     [
@@ -62,7 +62,7 @@
      "Customize Hyprland your way: your own settings file, simple instructions, never overwritten"
     ],
     [
-     "doing",
+     "done",
      "USB copies show the real speed, with close and minimize buttons"
     ],
     [
@@ -74,7 +74,7 @@
      "Store: APT apps first, Flatpak only when not on APT, plus AppImage"
     ],
     [
-     "doing",
+     "done",
      "WireGuard VPN in one click: import a file, turn it on from Quick Settings"
     ],
     [
@@ -82,11 +82,11 @@
      "Info Center opens Raye's Task Manager and looks like Raye"
     ],
     [
-     "doing",
+     "done",
      "Wobbly windows: a switch in Settings"
     ],
     [
-     "doing",
+     "done",
      "Settings and every Raye app work well on Hyprland"
     ],
     [
@@ -96,6 +96,74 @@
     [
      "done",
      "Install other Hyprland setups (dotfiles like Caelestia) in one step, and go back to Raye's anytime"
+    ],
+    [
+     "done",
+     "Windows apps install silently with a real progress bar, start to finish"
+    ],
+    [
+     "done",
+     "Printers & scanners page and a Scan app, plus longer laptop battery life"
+    ],
+    [
+     "done",
+     "A real Raye screen to unlock an encrypted disk at startup"
+    ],
+    [
+     "done",
+     "Complete Windows bridge: Windows programs see your drives, printers, network and ports"
+    ],
+    [
+     "done",
+     "Taskbar on top or on the side of the screen"
+    ],
+    [
+     "done",
+     "Raye Community beta: Raye's own chat, on the website and in Raye Linux, with your Raye account, roles, moderation and friends"
+    ],
+    [
+     "doing",
+     "The V1 website, with fresh screenshots of the real system"
+    ],
+    [
+     "doing",
+     "Legal pages and FAQ"
+    ],
+    [
+     "doing",
+     "Join the team and a staff panel on the website"
+    ],
+    [
+     "done",
+     "Public profiles and badges"
+    ],
+    [
+     "doing",
+     "More hardware works out of the box: Realtek and other Wi-Fi, webcam and sound drivers installed on their own when a device needs them"
+    ],
+    [
+     "done",
+     "Quadra in the Store (AppImage), with game mode on while Roblox runs"
+    ],
+    [
+     "done",
+     "Raye account: your settings follow you to every PC"
+    ],
+    [
+     "done",
+     "New account website and emails, with two-factor sign-in"
+    ],
+    [
+     "done",
+     "Raye Proton: pick Raye's Windows layer for Steam games"
+    ],
+    [
+     "done",
+     "Raye Proton built on GE-Proton, with per-game fixes from Raye Update"
+    ],
+    [
+     "done",
+     "Upgraded Windows layer: newest version, faster, more Windows apps tested and working"
     ],
     [
      "doing",
@@ -182,7 +250,7 @@
      "Ready for Easy Anti-Cheat v2 (Fortnite): Raye's kernel key sent to Epic"
     ],
     [
-     "planned",
+     "done",
      "Works on older PCs too (legacy BIOS, older processors like Core 2 Duo, 2–4 GB RAM)"
     ],
     [
@@ -190,8 +258,24 @@
      "New install: start in Try Raye with an Install icon, full-screen Setup, English boot menu, Setup fixes"
     ],
     [
-     "planned",
+     "doing",
      "Everything checked in French, screen by screen (installer included)"
+    ],
+    [
+     "done",
+     "Raye in Spanish, German, Brazilian Portuguese and Italian"
+    ],
+    [
+     "done",
+     "Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime"
+    ],
+    [
+     "done",
+     "Accounts: badges, community and admin panel"
+    ],
+    [
+     "done",
+     "Developer options and remote web page"
     ],
     [
      "doing",
@@ -213,19 +297,11 @@
     ],
     [
      "planned",
-     "Accounts: badges, community and admin panel"
-    ],
-    [
-     "planned",
-     "Developer options and remote web page"
+     "Raye Community: the same channels as the Discord server, set up for you, and support tickets"
     ],
     [
      "planned",
      "Every language: all of Raye translated"
-    ],
-    [
-     "planned",
-     "Raye Insider in Settings: Public Beta (sign up on the website), Beta and Dev update channels (application, access tied to your Raye account), leave anytime"
     ],
     [
      "doing",
@@ -234,6 +310,10 @@
     [
      "planned",
      "Arch edition, kept in sync with the Ubuntu edition"
+    ],
+    [
+     "planned",
+     "Forgot your password? Reset it from the sign-in screen, with a recovery key made in Setup or with your Raye account"
     ]
    ]
   },
