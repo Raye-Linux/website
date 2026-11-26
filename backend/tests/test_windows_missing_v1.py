@@ -11,8 +11,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 WEBSITE = os.path.normpath(os.path.join(HERE, "..", ".."))
 
 
+def v1_root():
+    """Where the V1 site is: site/ since the launch (build_pages.V1_LIVE),
+    site-v1/ before. Reading site-v1/ after the launch would check a stale copy."""
+    import sys
+    sys.path.insert(0, os.path.join(WEBSITE, "tools"))
+    import build_pages
+    return os.path.join(WEBSITE, "site" if build_pages.V1_LIVE else "site-v1")
+
+
 def section(rel, anchor="missing"):
-    with open(os.path.join(WEBSITE, "site-v1", rel, "index.html"), encoding="utf-8") as f:
+    with open(os.path.join(v1_root(), rel, "index.html"), encoding="utf-8") as f:
         html = f.read()
     start = html.index('id="%s"' % anchor)
     end = html.find("<h2", start + 1)

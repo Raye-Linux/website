@@ -281,7 +281,8 @@ class PanelTests(unittest.TestCase):
 
     def test_nothing_staff_is_in_the_public_pages(self):
         root = os.path.join(os.path.dirname(__file__), "..", "..")
-        for base, _, files in os.walk(os.path.join(root, "site-v1")):
+        for base, _, files in [w for sub in ("site", "site-v1")
+                               for w in os.walk(os.path.join(root, sub))]:
             for f in files:
                 if f.endswith((".html", ".xml", ".txt", ".js")):
                     with open(os.path.join(base, f), encoding="utf-8") as fh:
