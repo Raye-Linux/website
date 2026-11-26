@@ -71,6 +71,7 @@ HELD = ("/telecharger/", "/en/download/")
 SOURCE = {rel_of(V.PAGES["source"]["path"][l]) for l in ("fr", "en")}
 SOURCE_HOSTS = ("https://github.com/Raye-Linux/", "https://codeberg.org/Raye-Linux/",
                 "https://gitlab.com/raye-linux/", "https://dl.rayelinux.com/git/")
+COMMUNITY = {rel_of(V.PAGES["community"]["path"][l]) for l in ("fr", "en")}
 # the licenses must name the parts they license (and the trademark notice);
 # tests/test_site.py checks these pages with the live site's rule
 LICENSES = {rel_of(V.PAGES["licenses"]["path"][l]) for l in ("fr", "en")}
@@ -130,6 +131,9 @@ class V1Tests(unittest.TestCase):
                     # the community server, where bugs are reported
                     if tag == "a" and value == B.DISCORD:
                         allowed += (B.DISCORD,)
+                    # Raye Community, our own chat, from the Community page
+                    if rel in COMMUNITY and tag == "a" and value == B.COMMUNITY_CHAT:
+                        allowed += (B.COMMUNITY_CHAT,)
                     with self.subTest(page=rel, value=value):
                         self.assertTrue(value.startswith(allowed), value)
         for name in ("v1.css", "lang.js", "app.js", "site.css"):
@@ -457,6 +461,16 @@ class LaunchTests(unittest.TestCase):
                 with self.subTest(page=key, lang=lang):
                     self.assertIn('<aside class="limits"', text)
 
+    def test_the_download_page_says_1_0_starts_in_uefi_and_bios(self):
+        # 1.0 starts in UEFI and in the older BIOS mode, MBR disks too
+        for lang, words in (("fr", ("UEFI", "BIOS", "MBR")), ("en", ("UEFI", "BIOS", "MBR"))):
+            text = read(rel_of(V.PAGES["download"]["path"][lang]))
+            with self.subTest(lang=lang):
+                for w in words:
+                    self.assertIn(w, text)
+                self.assertNotRegex(text, r"(being tried|en cours d'essai)")
+                self.assertIn("BIOS", self.download.V1_TEXT[lang]["kind"])
+
     def test_the_games_page_does_not_promise_an_anti_cheat(self):
         for lang, ask in (("fr", "n'est pas arrivée"), ("en", "hasn't come")):
             text = " ".join(parse(read(rel_of(V.PAGES["games"]["path"][lang]))).text)
@@ -541,6 +555,7 @@ class PeopleAndLegalTests(unittest.TestCase):
             with self.subTest(lang=lang):
                 self.assertIn("data-community", text)
                 self.assertIn(f'href="{B.DISCORD}"', text)
+                self.assertIn(f'href="{B.COMMUNITY_CHAT}"', text)
                 self.assertNotIn("<iframe", text)
         js = read("assets/v1.js")
         self.assertIn('"/api/community"', js)

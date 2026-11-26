@@ -30,6 +30,7 @@ V1_TEXT = {
         "pending_size": "Taille : à renseigner à la publication",
         "pending_sha": "À renseigner à la publication",
         "pending_get": "Téléchargement à la sortie",
+        "kind": "ISO 64 bits, démarrage UEFI ou BIOS",
         "accept_title": "Avant de télécharger",
         "accept_items": [
             "Sauvegardez vos fichiers importants avant d'installer : l'installation peut effacer "
@@ -45,8 +46,8 @@ V1_TEXT = {
         "accept_check": "Je confirme avoir lu ces avertissements et avoir sauvegardé mes données.",
         "accept_go": "J'accepte, télécharger l'ISO",
         "needs_items": [
-            "Un processeur Intel ou AMD 64 bits et un PC qui démarre en mode UEFI (le mode BIOS "
-            "d'autrefois est en cours d'essai : page Vieux PC)",
+            "Un processeur Intel ou AMD 64 bits et un PC qui démarre en mode UEFI ou dans "
+            "l'ancien mode BIOS (disques MBR compris)",
             "8 Go de mémoire conseillés",
             "{free} Go d'espace disque libre",
             "Une clé USB de 8 Go ou plus",
@@ -78,6 +79,7 @@ V1_TEXT = {
         "pending_size": "Size: to be filled in at release",
         "pending_sha": "To be filled in at release",
         "pending_get": "Download at release",
+        "kind": "64-bit ISO, UEFI or BIOS start",
         "accept_title": "Before you download",
         "accept_items": [
             "Back up your important files before you install: installing can erase the whole "
@@ -91,8 +93,8 @@ V1_TEXT = {
         "accept_check": "I have read these warnings and backed up my data.",
         "accept_go": "I agree, download the ISO",
         "needs_items": [
-            "A 64-bit Intel or AMD processor and a PC that starts in UEFI mode (the old BIOS "
-            "mode is being tried: Older PCs page)",
+            "A 64-bit Intel or AMD processor and a PC that starts in UEFI mode or the older "
+            "BIOS mode (MBR disks too)",
             "8 GB of memory recommended",
             "{free} GB of free disk space",
             "A USB stick of 8 GB or more",

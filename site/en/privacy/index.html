@@ -77,7 +77,7 @@
 <h1>Privacy policy</h1>
 </header>
 <div class="article prose-v1 legal-v1">
-<p class="updated">Last updated: November 25, 2026 · version 4.0</p>
+<p class="updated">Last updated: November 26, 2026 · version 4.0</p>
 
 <p class="legal-draft">Version prepared for the V1 site. It will apply when that site goes online; until then, version 3.0 published on rayelinux.com is the one in force. These pages are written by the Raye team in plain words; they were not reviewed by a lawyer.</p>
 
@@ -112,9 +112,9 @@
 <li><a href="#community-page">The Community page</a></li>
 <li><a href="#beta-channels">The beta program and update channels</a></li>
 <li><a href="#email">When you write to me</a></li>
-<li><a href="#accounts">Raye accounts (once they open)</a></li>
+<li><a href="#accounts">Raye accounts</a></li>
 <li><a href="#profiles">Public profiles and badges</a></li>
-<li><a href="#raye-community">Raye Community (beta, not open yet)</a></li>
+<li><a href="#raye-community">Raye Community (beta)</a></li>
 <li><a href="#software">What Raye Linux contacts from your PC</a></li>
 <li><a href="#bases">Purposes and legal bases, in short</a></li>
 <li><a href="#recipients">Who receives your information, and outside Québec</a></li>
@@ -167,6 +167,8 @@
 <tr><td>Language choice</td><td>your browser</td><td>until you clear it</td></tr>
 <tr><td>Application to join the team (role, email, Discord name, text, dates, decision)</td><td>my server, in Québec; without the email: private Discord channel</td><td>waiting: 180 days; declined: 30 days; accepted: while you hold the role</td></tr>
 <tr><td>Community page numbers</td><td>my server's memory</td><td>10 minutes; nothing about you</td></tr>
+<tr><td>Raye account (email, name, picture, settings, library, PCs)</td><td>my server, in Québec</td><td>until you delete the account</td></tr>
+<tr><td>Raye Community (profile, messages, friends, reports, moderation)</td><td>my server, in Québec</td><td>until they are deleted</td></tr>
 </tbody>
 </table></div>
 </section>
@@ -248,7 +250,7 @@
 <p>The "Join the team" pages have a form. When you send it, I keep, on my server in Québec:</p>
 <ul>
 <li>the role asked for and the page language;</li>
-<li>your <strong>email address</strong>, to answer you (or, once Raye accounts open, your account id instead);</li>
+<li>your <strong>email address</strong>, to answer you;</li>
 <li>your <strong>Discord username</strong>, to give you the role;</li>
 <li>what you write: languages, what you're good at, why you want to help;</li>
 <li>the version of the consent text you ticked, and the dates: sent, decided, role given;</li>
@@ -282,7 +284,7 @@
 
 <section id="beta-channels" tabindex="-1">
 <h2>The beta program and update channels</h2>
-<p>The beta program goes through the applications described above. Today, being accepted gives a role and a channel on Discord. Raye Update will later have channels (stable, public beta, beta, dev); access to the non-public ones will be kept for accepted people. That mechanism is <strong>not built yet</strong>: before it opens, this section will say exactly what Raye Update sends to prove access, and nothing will be sent before then.</p>
+<p>The beta program goes through the applications described above. Being accepted gives a role and a channel on Discord, and the team adds the matching badge (beta tester, developer) to your Raye account. Raye Update has four channels, in Settings › Raye Update › Raye Insider: Stable, Public Beta, Beta and Dev. Public Beta is open to everyone. Beta and Dev unlock from the badges of the Raye account signed in on this PC, which Settings reads from the account server; nothing else is sent to prove access. Each channel's updates are published at the same public addresses as Stable's.</p>
 <p>Whatever the channel, update checks stay the ones of the section "What Raye Linux contacts from your PC": a download, with no usage report.</p>
 </section>
 
@@ -292,16 +294,16 @@
 </section>
 
 <section id="accounts" tabindex="-1">
-<h2>Raye accounts (once they open)</h2>
-<p>Raye accounts are <strong>not open yet</strong>: no account server is running. What follows describes what an account will keep, from its code. Raye works the same without an account, and nothing in the system needs one.</p>
+<h2>Raye accounts</h2>
+<p>Raye accounts have been open since Raye Linux 1.0, on account.rayelinux.com and in Settings › Accounts. An account is optional: Raye works the same without one, and nothing in the system needs one. What follows describes what an account keeps, from the code of the account server, which runs on my server, in Québec.</p>
 <ul>
 <li>Kept: your email, your name, your picture (redrawn as a 256-pixel image, which removes its GPS location and other data), a closed list of 161 Raye settings (appearance, taskbar, language and region, accessibility and a few more), your Store app library and one row per PC.</li>
 <li>Never readable: your password, tokens and recovery codes are only kept as hashes; your two-step secret is sealed with a key that is not in the database.</li>
 <li>Not kept: your IP address, what you browse, your files, what you run, when you use your PC. The server keeps no request log. Wi-Fi and other passwords: not synced.</li>
-<li>The accounts site will set one session cookie and, if you pick a language, one cookie that remembers it; no other.</li>
-<li>You will be able to export everything as one file and delete the account in one go, with your password. The basis will then be performing the service you ask for.</li>
+<li>The accounts site sets one session cookie, 14 days at most, and, if you pick a language, one cookie that remembers it for a year; no other.</li>
+<li>You can export everything as one file and delete the account in one go, with your password, on account.rayelinux.com. The basis is performing the service you ask for.</li>
 </ul>
-<p>Before they open, this section will be completed (where the server runs, how long backups last after a deletion) and dated in the history below.</p>
+<p>How long the server's backups keep a deleted account will be added to this section and dated in the history below.</p>
 </section>
 
 <section id="profiles" tabindex="-1">
@@ -311,12 +313,15 @@
 </section>
 
 <section id="raye-community" tabindex="-1">
-<h2>Raye Community (beta, not open yet)</h2>
-<p>Raye Community will be Raye's own chat, on the website and in the system, with your Raye account. It is <strong>not open yet</strong>: no chat server is running for the public. Until then the community stays on the Discord server described above, and nothing in this section applies yet.</p>
+<h2>Raye Community (beta)</h2>
+<p>Raye Community is Raye's own chat, on community.rayelinux.com and in Raye Linux. It has been open as a beta since Raye Linux 1.0. You enter it with your Raye account, which never passes it your password. It runs on my server, in Québec, and keeps:</p>
 <ul>
-<li>What you write there will be seen by the members of the channel you write it in, and by moderation, which can delete it under the <a href="/en/rules/">community rules</a>.</li>
-<li>Before it opens, this section will say exactly what is kept (messages, attachments, profile), for how long, where, and how you export or delete your messages. Nothing will open before that is written and dated in the history.</li>
+<li>your profile: your account id, your name, your role and your badges, taken from your Raye account at each sign-in, and when you joined and last came by;</li>
+<li>your messages, text only (no images or attachments in this beta), seen by the members of the channel and by moderation. A message you delete is erased at once; a message moderation deletes keeps its text in the moderation log, for appeals and repeated abuse;</li>
+<li>your friends and friend requests, the reports you make, and the moderation actions about you (mute, ban, with their reason), written in the moderation log;</li>
+<li>two cookies: a session cookie, 30 days at most, and, while you sign in, a check cookie that lasts 10 minutes.</li>
 </ul>
+<p>What is kept stays until it is deleted. Raye Community has no button yet to export or delete everything: to see, get or erase what it keeps about you, write to <a href="mailto:bonjour@rayelinux.com">bonjour@rayelinux.com</a>, as for your other rights.</p>
 </section>
 
 <section id="software" tabindex="-1">

@@ -129,7 +129,7 @@
   {
    "id": "faq:fr:18",
    "lang": "fr",
-   "text": "Non, et les comptes ne sont pas encore ouverts. Raye marche pareil sans. Plus tard, un compte servira à garder une liste de réglages, votre photo et votre bibliothèque d'applications d'un PC à l'autre ; jamais vos mots de passe ni vos fichiers.",
+   "text": "Non, il est facultatif : Raye marche pareil sans. Un compte Raye, ouvert depuis la 1.0 sur account.rayelinux.com, garde une liste de réglages, votre photo et votre bibliothèque d'applications d'un PC à l'autre ; jamais vos mots de passe ni vos fichiers. Il sert aussi à entrer dans Raye Community et à débloquer les canaux Bêta et Dev de Raye Insider.",
    "title": "Faut-il un compte Raye ?",
    "url": "/questions/#q19"
   },
@@ -171,7 +171,7 @@
   {
    "id": "download:fr:3.0",
    "lang": "fr",
-   "text": "Un processeur Intel ou AMD 64 bits et un PC qui démarre en mode UEFI (le mode BIOS d'autrefois est en cours d'essai : page Vieux PC)\n\n8 Go de mémoire conseillés\n\n25 Go d'espace disque libre\n\nUne clé USB de 8 Go ou plus\n\nSecure Boot et puce TPM pris en charge, sans être obligatoires",
+   "text": "Un processeur Intel ou AMD 64 bits et un PC qui démarre en mode UEFI ou dans l'ancien mode BIOS (disques MBR compris)\n\n8 Go de mémoire conseillés\n\n25 Go d'espace disque libre\n\nUne clé USB de 8 Go ou plus\n\nSecure Boot et puce TPM pris en charge, sans être obligatoires",
    "title": "Configuration minimale",
    "url": "/telecharger/#needs-title"
   },
@@ -248,7 +248,7 @@
   {
    "id": "hardware:fr:0.0",
    "lang": "fr",
-   "text": "Un processeur Intel ou AMD 64 bits, et un PC qui démarre en mode UEFI (la plupart des PC depuis 2012). Le mode BIOS d'autrefois est en cours d'essai pour la V1 : voir Vieux PC.\n\n8 Go de mémoire conseillés. L'installateur accepte moins, mais je n'ai pas essayé Raye sur un PC de 4 Go.\n\n25 Go d'espace disque libre : c'est ce que l'installateur exige lui-même.\n\nUne clé USB de 8 Go ou plus pour l'installation.\n\nSecure Boot et une puce TPM sont pris en charge, sans être obligatoires.",
+   "text": "Un processeur Intel ou AMD 64 bits, et un PC qui démarre en mode UEFI (la plupart des PC depuis 2012) ou dans l'ancien mode BIOS, disques MBR compris : voir Vieux PC.\n\n8 Go de mémoire conseillés. L'installateur accepte moins, mais je n'ai pas essayé Raye sur un PC de 4 Go.\n\n25 Go d'espace disque libre : c'est ce que l'installateur exige lui-même.\n\nUne clé USB de 8 Go ou plus pour l'installation.\n\nSecure Boot et une puce TPM sont pris en charge, sans être obligatoires.",
    "title": "Ce qu'il faut",
    "url": "/materiel/#needs"
   },
@@ -731,7 +731,7 @@
   {
    "id": "faq:en:18",
    "lang": "en",
-   "text": "No, and accounts are not open yet. Raye works the same without one. Later, an account will keep a list of settings, your picture and your app library from one PC to another; never your passwords or your files.",
+   "text": "No, it's optional: Raye works the same without one. A Raye account, open since 1.0 on account.rayelinux.com, keeps a list of settings, your picture and your app library from one PC to another; never your passwords or your files. It is also how you enter Raye Community and unlock the Beta and Dev channels of Raye Insider.",
    "title": "Do I need a Raye account?",
    "url": "/en/questions/#q19"
   },
@@ -773,7 +773,7 @@
   {
    "id": "download:en:3.0",
    "lang": "en",
-   "text": "A 64-bit Intel or AMD processor and a PC that starts in UEFI mode (the old BIOS mode is being tried: Older PCs page)\n\n8 GB of memory recommended\n\n25 GB of free disk space\n\nA USB stick of 8 GB or more\n\nSecure Boot and a TPM chip are supported, not required",
+   "text": "A 64-bit Intel or AMD processor and a PC that starts in UEFI mode or the older BIOS mode (MBR disks too)\n\n8 GB of memory recommended\n\n25 GB of free disk space\n\nA USB stick of 8 GB or more\n\nSecure Boot and a TPM chip are supported, not required",
    "title": "What you need",
    "url": "/en/download/#needs-title"
   },
@@ -850,7 +850,7 @@
   {
    "id": "hardware:en:0.0",
    "lang": "en",
-   "text": "A 64-bit Intel or AMD processor, and a PC that starts in UEFI mode (most PCs since 2012). The old BIOS mode is being tried for V1: see Older PCs.\n\n8 GB of memory recommended. The installer accepts less, but I haven't tried Raye on a 4 GB PC.\n\n25 GB of free disk space: that's what the installer itself demands.\n\nA USB stick of 8 GB or more to install.\n\nSecure Boot and a TPM chip are supported, not required.",
+   "text": "A 64-bit Intel or AMD processor, and a PC that starts in UEFI mode (most PCs since 2012) or the older BIOS mode, MBR disks too: see Older PCs.\n\n8 GB of memory recommended. The installer accepts less, but I haven't tried Raye on a 4 GB PC.\n\n25 GB of free disk space: that's what the installer itself demands.\n\nA USB stick of 8 GB or more to install.\n\nSecure Boot and a TPM chip are supported, not required.",
    "title": "What you need",
    "url": "/en/hardware/#needs"
   },
@@ -2381,12 +2381,12 @@
   "en/11-chromebooks.md": "0b0a8099e4fe5196",
   "en/12-hyprland.md": "f62a6125c1c73390",
   "en/desktop/index.html": "ff880fb0e516ce11",
-  "en/download/index.html": "1ac5a6c052d065fd",
+  "en/download/index.html": "3e798e89726a58f2",
   "en/games/index.html": "a04950210177ff3e",
-  "en/hardware/index.html": "c7122f233e913769",
+  "en/hardware/index.html": "03aa1d919ba84c5e",
   "en/install/index.html": "b9d569914e2bec55",
   "en/old-pcs/index.html": "42330469d9d7a5b9",
-  "en/questions/index.html": "d639c6e2517e9468",
+  "en/questions/index.html": "e101527c62f1e21b",
   "en/security/index.html": "eadcdb7a9f0c1098",
   "en/two-desktops/index.html": "5e60bb4138c0d3f4",
   "en/updates/index.html": "1b427b1cc3456b28",
@@ -2406,13 +2406,13 @@
   "fr/12-hyprland.md": "50124c843b13d09d",
   "installer/index.html": "3a102ef8e666e04c",
   "jeux/index.html": "28d0da016d6ce3d2",
-  "materiel/index.html": "3d278729c74d2539",
+  "materiel/index.html": "e495aeb668b52a4a",
   "mises-a-jour/index.html": "2a425f5a27798c5e",
   "nouveautes/index.html": "0f6e7f1717e94a5a",
   "programmes-windows/index.html": "eb9153738af5209f",
-  "questions/index.html": "3f37264a60b7912d",
+  "questions/index.html": "08be06913df547da",
   "securite/index.html": "3d658dc59a4ffb86",
-  "telecharger/index.html": "14c1753f309e2779",
+  "telecharger/index.html": "e31f1ba3671971fc",
   "vieux-pc/index.html": "8ca390b8ec671d24"
  }
 }
