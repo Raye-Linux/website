@@ -317,7 +317,9 @@ def take_release(path):
         json.dump(keep, f, indent=2, ensure_ascii=False)
         f.write("\n")
     # the V1 download page holds no size and no checksum until this moment
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "release-v1.json"), "w",
+    # next to RELEASE, so that a caller which redirects RELEASE (the tests)
+    # never clears the real pending mark by accident
+    with open(os.path.join(os.path.dirname(RELEASE), "release-v1.json"), "w",
               encoding="utf-8") as f:
         json.dump({"pending": False}, f)
         f.write("\n")
