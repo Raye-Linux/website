@@ -270,6 +270,10 @@
         [
           "planned",
           "Join the team: emails from the staff panel (application received, accepted or not, a reply written by staff for each application)"
+        ],
+        [
+          "planned",
+          "Raye Community: its own right-click menu (reply, react, edit, copy text or link, report) instead of the web browser's"
         ]
       ]
     },
