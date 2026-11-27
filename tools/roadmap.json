@@ -253,31 +253,7 @@
         ],
         [
           "planned",
-          "Raye Community complete: images and videos, private messages, staff tools, then it replaces the Discord server"
-        ],
-        [
-          "planned",
-          "Raye Community: end-to-end encryption everywhere, private messages and channels (only the people in the conversation can read it, not even Raye's server)"
-        ],
-        [
-          "planned",
-          "Raye Community: your Raye account's profile picture in the chat, with settings like Discord's (show it or not)"
-        ],
-        [
-          "planned",
-          "Raye Community built on Matrix: your Raye account handles the encryption keys and their backup, nothing to set up"
-        ],
-        [
-          "planned",
-          "Raye Community: who's online in the member list, and a status like Discord's: online, idle, do not disturb, invisible"
-        ],
-        [
-          "planned",
-          "Raye Community: the same channels as the Discord server, set up for you, and support tickets"
-        ],
-        [
-          "planned",
-          "Raye Community: older messages load as you scroll up, and a layout like Discord's (channel categories, member list with roles, unread markers)"
+          "Raye Community complete, built on Matrix: end-to-end encryption everywhere (your Raye account handles the keys), images and videos, private messages, the same channels as the Discord server and support tickets, a layout like Discord's with older messages as you scroll, who's online and a status (online, idle, do not disturb, invisible), your Raye profile picture, its own right-click menu, bots and commands with Raye Assistant answering, staff tools, then it replaces the Discord server"
         ],
         [
           "planned",
@@ -297,15 +273,7 @@
         ],
         [
           "planned",
-          "Raye Community: bots and commands like RivenBot (welcome, roles, polls, levels) and Raye Assistant answering in the chat"
-        ],
-        [
-          "planned",
           "Join the team: emails from the staff panel (application received, accepted or not, a reply written by staff for each application)"
-        ],
-        [
-          "planned",
-          "Raye Community: its own right-click menu (reply, react, edit, copy text or link, report) instead of the web browser's"
         ],
         [
           "planned",
