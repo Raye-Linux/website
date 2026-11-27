@@ -318,6 +318,18 @@
         [
           "planned",
           "Join the team: the form takes links to your past work (GitHub, projects, translations) to show what you've collaborated on"
+        ],
+        [
+          "planned",
+          "Join the team: a starting trust score from what you write in the form, then it grows with your work"
+        ],
+        [
+          "planned",
+          "Join the team: changes from new developers, once built and tested, go to the Dev channel of Raye Insider so testers can try them"
+        ],
+        [
+          "planned",
+          "Join the team: people already in the team (accepted on the website or on Discord) are added to the new system and told by private message"
         ]
       ]
     },
