@@ -61,7 +61,7 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
-    "Raye Community: end-to-end encrypted private messages (only you and the people you talk to can read them)": "Raye Community : des messages privés chiffrés de bout en bout (seuls vous et vos interlocuteurs pouvez les lire)",
+    "Raye Community: end-to-end encryption everywhere, private messages and channels (only the people in the conversation can read it, not even Raye's server)": "Raye Community : chiffrement de bout en bout partout, messages privés et salons (seules les personnes de la conversation peuvent lire, pas même le serveur de Raye)",
     "V1.1 · early December": "V1.1 · début décembre",
     "V1.2 · December 11–12": "V1.2 · 11-12 décembre",
     "Later": "Plus tard",
