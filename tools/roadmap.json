@@ -256,7 +256,7 @@
           "Fix for older AMD cards (RX 400/500) stuck on a black screen or low resolution"
         ],
         [
-          "planned",
+          "done",
           "Fix for the sign-in screen that shows only its background on some PCs (it still works when you type your password)"
         ],
         [

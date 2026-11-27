@@ -300,8 +300,9 @@ class RoadmapTests(unittest.TestCase):
             b.roadmap_load = load
         # its own icon and words, and its version's progress counts it
         self.assertRegex(page, r'<li class="rm-item rm-done"><svg class="rm-icon rm-icon-done"')
-        self.assertIn('<span class="rm-count" id="rm-%d-count">1 of %d done<'
-                      % (data["sections"].index(section) + 1, len(section["items"])), page)
+        done = sum(1 for state, _ in section["items"] if state == "done")
+        self.assertIn('<span class="rm-count" id="rm-%d-count">%d of %d done<'
+                      % (data["sections"].index(section) + 1, done, len(section["items"])), page)
 
     def test_the_style_stays_flat(self):
         with open(os.path.join(ROOT, "assets", "site.css"), encoding="utf-8") as f:
