@@ -244,6 +244,10 @@
           "Community idea: Horizon (Minecraft Java rewritten in Rust, faster) in the Store, with Game Mode while you play"
         ],
         [
+          "planned",
+          "Community idea: DankMaterialShell (DMS) as a one-click setup for Hyprland, and for niri and MangoWC once Raye offers them"
+        ],
+        [
           "doing",
           "Fix for the flicker on NVIDIA cards at 144 Hz"
         ],
