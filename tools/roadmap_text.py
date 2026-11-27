@@ -61,6 +61,7 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
+    "Join the team: accepting someone gives their Discord role, then access step by step (a safe test mirror, GitHub, the server mirror) as their trust score grows, with an email at each step": "Rejoindre l'équipe : accepter quelqu'un lui donne son rôle Discord, puis ses accès petit à petit (un miroir de test sans danger, GitHub, le miroir du serveur) selon son score de confiance, avec un courriel à chaque étape",
     "Community idea: app icons closer to the Windows 11 look, drawn by Raye": "Idée de la communauté : des icônes d'applis plus proches du style de Windows 11, dessinées par Raye",
     "Community idea: a lock screen you can customize (picture, clock, what it shows)": "Idée de la communauté : un écran de verrouillage personnalisable (image, horloge, ce qu'il affiche)",
     "Community idea: more blur, like Windows' acrylic, on the taskbar, Start, menus and panels": "Idée de la communauté : plus de flou, comme l'acrylique de Windows, sur la barre des tâches, Démarrer, les menus et les panneaux",

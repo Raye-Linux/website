@@ -306,6 +306,10 @@
         [
           "planned",
           "Raye Community: its own right-click menu (reply, react, edit, copy text or link, report) instead of the web browser's"
+        ],
+        [
+          "planned",
+          "Join the team: accepting someone gives their Discord role, then access step by step (a safe test mirror, GitHub, the server mirror) as their trust score grows, with an email at each step"
         ]
       ]
     },
