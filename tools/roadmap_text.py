@@ -61,6 +61,7 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
+    "Join the team: emails from the staff panel (application received, accepted or not, a reply written by staff for each application)": "Rejoindre l'équipe : des courriels depuis le panneau du staff (candidature reçue, acceptée ou non, une réponse écrite par le staff pour chaque candidature)",
     "Raye Community: end-to-end encryption everywhere, private messages and channels (only the people in the conversation can read it, not even Raye's server)": "Raye Community : chiffrement de bout en bout partout, messages privés et salons (seules les personnes de la conversation peuvent lire, pas même le serveur de Raye)",
     "V1.1 · early December": "V1.1 · début décembre",
     "V1.2 · December 11–12": "V1.2 · 11-12 décembre",
