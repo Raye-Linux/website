@@ -310,6 +310,10 @@
         [
           "planned",
           "Join the team: accepting someone gives their Discord role, then access step by step (a safe test mirror, GitHub, the server mirror) as their trust score grows, with an email at each step"
+        ],
+        [
+          "planned",
+          "Raye Team panel: new moderators and team members start on probation with a trust score, then get full access, their Discord role and their own staff key by email (sign in with your Raye account plus your key)"
         ]
       ]
     },
