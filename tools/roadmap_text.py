@@ -64,6 +64,8 @@ FR = {
     "V1.1 · early December": "V1.1 · début décembre",
     "V1.2 · December 11–12": "V1.2 · 11-12 décembre",
     "Later": "Plus tard",
+    "V1.2 · December": "V1.2 · décembre",
+    "Raye Community: bots and commands like RivenBot (welcome, roles, polls, levels) and Raye Assistant answering in the chat": "Raye Community : des bots et des commandes comme RivenBot (bienvenue, rôles, sondages, niveaux) et Raye Assistant qui répond dans le chat",
     "Fix for apps that crash on start (Qoder and other Electron apps)": "Correctif des applis qui plantent au démarrage (Qoder et autres applis Electron)",
     "Wi-Fi password box keeps the cursor while networks refresh": "La case du mot de passe Wi-Fi garde le curseur pendant le rafraîchissement des réseaux",
     "File Explorer opens right away, even when a network drive is out of reach": "L'Explorateur s'ouvre tout de suite, même si un disque réseau est injoignable",
