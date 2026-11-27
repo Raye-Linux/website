@@ -278,6 +278,10 @@
         [
           "planned",
           "Raye Team panel: new moderators and team members start on probation, then get full access and their own staff key by email (Raye account plus key to sign in); people already in the team are added and told by private message"
+        ],
+        [
+          "planned",
+          "A Team page on the website: everyone accepted into the Raye team shows up on their own, grouped by role (team, developers, translators, contributors, testers), with their Discord name and picture, or their Raye account's picture"
         ]
       ]
     },
