@@ -273,31 +273,11 @@
         ],
         [
           "planned",
-          "Join the team: emails from the staff panel (application received, accepted or not, a reply written by staff for each application)"
+          "Join the team: links to your past work in the form, a starting trust score that grows with your work, emails at each step; accepting someone gives their Discord role, then access step by step (a safe test mirror, GitHub, the server mirror), and new developers' changes go to the Dev channel for testers"
         ],
         [
           "planned",
-          "Join the team: accepting someone gives their Discord role, then access step by step (a safe test mirror, GitHub, the server mirror) as their trust score grows, with an email at each step"
-        ],
-        [
-          "planned",
-          "Raye Team panel: new moderators and team members start on probation with a trust score, then get full access, their Discord role and their own staff key by email (sign in with your Raye account plus your key)"
-        ],
-        [
-          "planned",
-          "Join the team: the form takes links to your past work (GitHub, projects, translations) to show what you've collaborated on"
-        ],
-        [
-          "planned",
-          "Join the team: a starting trust score from what you write in the form, then it grows with your work"
-        ],
-        [
-          "planned",
-          "Join the team: changes from new developers, once built and tested, go to the Dev channel of Raye Insider so testers can try them"
-        ],
-        [
-          "planned",
-          "Join the team: people already in the team (accepted on the website or on Discord) are added to the new system and told by private message"
+          "Raye Team panel: new moderators and team members start on probation, then get full access and their own staff key by email (Raye account plus key to sign in); people already in the team are added and told by private message"
         ]
       ]
     },
