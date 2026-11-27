@@ -220,6 +220,10 @@
       "color": "8a8f98",
       "items": [
         [
+          "planned",
+          "Taskbars on several screens show the same apps in the same order"
+        ],
+        [
           "doing",
           "Fix for the flicker on NVIDIA cards at 144 Hz"
         ],

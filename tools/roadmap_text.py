@@ -61,6 +61,7 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
+    "Taskbars on several screens show the same apps in the same order": "Les barres des tâches de plusieurs écrans montrent les mêmes applis dans le même ordre",
     "Raye Community: who's online in the member list, and a status like Discord's: online, idle, do not disturb, invisible": "Raye Community : qui est en ligne dans la liste des membres, et un statut comme Discord : en ligne, inactif, ne pas déranger, invisible",
     "Raye Community built on Matrix: your Raye account handles the encryption keys and their backup, nothing to set up": "Raye Community basé sur Matrix : votre compte Raye s'occupe des clés de chiffrement et de leur sauvegarde, rien à configurer",
     "Raye Community: your Raye account's profile picture in the chat, with settings like Discord's (show it or not)": "Raye Community : la photo de profil de votre compte Raye dans le chat, avec des réglages comme Discord (l'afficher ou non)",
