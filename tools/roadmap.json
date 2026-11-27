@@ -257,15 +257,15 @@
         ],
         [
           "planned",
-          "Arch edition, kept in sync with the Ubuntu edition"
-        ],
-        [
-          "planned",
           "Forgot your password? Reset it from the sign-in screen, with a recovery key made in Setup or with your Raye account"
         ],
         [
           "planned",
           "Taskbar: a transparency slider and an apps-only taskbar"
+        ],
+        [
+          "planned",
+          "Raye Community: bots and commands like RivenBot (welcome, roles, polls, levels) and Raye Assistant answering in the chat"
         ]
       ]
     },
@@ -274,7 +274,7 @@
       "items": [
         [
           "planned",
-          "Raye Community: bots and commands like RivenBot (welcome, roles, polls, levels) and Raye Assistant answering in the chat"
+          "Arch edition, kept in sync with the Ubuntu edition"
         ]
       ],
       "color": "8a8f98"
