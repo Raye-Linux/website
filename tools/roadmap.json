@@ -314,6 +314,10 @@
         [
           "planned",
           "Raye Team panel: new moderators and team members start on probation with a trust score, then get full access, their Discord role and their own staff key by email (sign in with your Raye account plus your key)"
+        ],
+        [
+          "planned",
+          "Join the team: the form takes links to your past work (GitHub, projects, translations) to show what you've collaborated on"
         ]
       ]
     },
