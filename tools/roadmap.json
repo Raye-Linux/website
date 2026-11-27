@@ -257,6 +257,10 @@
         ],
         [
           "planned",
+          "Fix for the sign-in screen that shows only its background on some PCs (it still works when you type your password)"
+        ],
+        [
+          "planned",
           "Welcome app after install: quick setup (drivers, updates, apps, Raye account, look) and where to get help"
         ],
         [
