@@ -61,6 +61,8 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
+    "Raye ASIO: low-latency audio for music apps like FL Studio, through PipeWire": "Raye ASIO : un son à faible latence pour les logiciels de musique comme FL Studio, grâce à PipeWire",
+    "Fix: a Windows program installed by double-click always shows up in Start and as installed in the Store, even if the PC went to sleep or was turned off during setup, and its space is never lost": "Correctif : un programme Windows installé par double-clic apparaît toujours dans Démarrer et comme installé dans le Store, même si le PC s'est mis en veille ou a été éteint pendant l'installation, et son espace n'est jamais perdu",
     "V1.3 · December": "V1.3 · décembre",
     "Raye WinLayer: the common Windows parts (COM, controls, Explorer pieces) rewritten by Raye, app by app from the lab's list": "Raye WinLayer : les parties communes de Windows (COM, contrôles, morceaux de l'Explorateur) réécrites par Raye, appli par appli d'après la liste du labo",
     "Raye WinLayer: Direct3D 9, 10 and 11 games on Raye's own engine, and a published list of real apps tested and compared": "Raye WinLayer : des jeux Direct3D 9, 10 et 11 sur le moteur de Raye, et une liste publiée de vraies applis testées et comparées",

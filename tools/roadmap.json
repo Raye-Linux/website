@@ -261,6 +261,10 @@
         ],
         [
           "planned",
+          "Fix: a Windows program installed by double-click always shows up in Start and as installed in the Store, even if the PC went to sleep or was turned off during setup, and its space is never lost"
+        ],
+        [
+          "planned",
           "Welcome app after install: quick setup (drivers, updates, apps, Raye account, look) and where to get help"
         ],
         [
@@ -327,6 +331,10 @@
         [
           "planned",
           "Raye WinLayer engine: real console tools, the registry and small apps without the heavy Windows parts run on Raye's own engine (experimental)"
+        ],
+        [
+          "planned",
+          "Raye ASIO: low-latency audio for music apps like FL Studio, through PipeWire"
         ]
       ],
       "color": "8a8f98"
