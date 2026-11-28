@@ -73,6 +73,10 @@
         ],
         [
           "planned",
+          "Fix: choosing a file from a browser or an app (\"Select file\") opens Raye's File Explorer without turning the window behind it grey"
+        ],
+        [
+          "planned",
           "Welcome app after install: quick setup (drivers, updates, apps, Raye account, look) and where to get help"
         ],
         [

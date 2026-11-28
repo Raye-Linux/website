@@ -61,6 +61,7 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
+    "Fix: choosing a file from a browser or an app (\"Select file\") opens Raye's File Explorer without turning the window behind it grey": "Correctif : choisir un fichier depuis un navigateur ou une appli (« Choisir un fichier ») ouvre l'Explorateur de fichiers de Raye sans rendre grise la fenêtre derrière",
     "Raye Linux 1.0 is out, with the 1.0.1 and 1.0.2 updates: everything it brought is in #release-notes and on rayelinux.com/en/whats-new": "Raye Linux 1.0 est sortie, avec les mises à jour 1.0.1 et 1.0.2 : tout ce qu'elle apporte est dans #release-notes et sur rayelinux.com/nouveautes",
     "Fix: Bluetooth devices with no screen or code (adapters, headphones) pair without asking for a PIN or saying the code does not match": "Correctif : les appareils Bluetooth sans écran ni code (adaptateurs, écouteurs) s'appairent sans demander de code PIN ni dire que le code ne correspond pas",
     "Fix: Windows apps from the Store are checked after install, so a missing file (like FL Studio's \"QuickFontCache DLL not found\") is caught and repaired by itself, for every app": "Correctif : les applis Windows du Store sont vérifiées après l'installation, pour qu'un fichier manquant (comme « QuickFontCache DLL not found » de FL Studio) soit repéré et réparé tout seul, pour chaque appli",
