@@ -284,6 +284,10 @@
           "Raye WinLayer engine: new parts built by Raye on the ReactOS foundation take over step by step, first for console tools and small apps"
         ],
         [
+          "planned",
+          "Raye WinLayer tuned for Raye: the Raye kernel's speedups, lab-tested recipes sent to every Raye PC, and graphics drivers already in place"
+        ],
+        [
           "doing",
           "40+ popular Windows apps in the Store, each one tested, and \"Optimized for Raye\" badges"
         ],
@@ -319,9 +323,27 @@
         [
           "planned",
           "Arch edition, kept in sync with the Ubuntu edition"
+        ],
+        [
+          "planned",
+          "Raye WinLayer engine: real console tools, the registry and small apps without the heavy Windows parts run on Raye's own engine (experimental)"
         ]
       ],
       "color": "8a8f98"
+    },
+    {
+      "title": "🕒 V1.3 · December",
+      "color": "8a8f98",
+      "items": [
+        [
+          "planned",
+          "Raye WinLayer: Direct3D 9, 10 and 11 games on Raye's own engine, and a published list of real apps tested and compared"
+        ],
+        [
+          "planned",
+          "Raye WinLayer: the common Windows parts (COM, controls, Explorer pieces) rewritten by Raye, app by app from the lab's list"
+        ]
+      ]
     },
     {
       "title": "🕒 Later",
