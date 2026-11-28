@@ -277,6 +277,10 @@
         ],
         [
           "planned",
+          "Windows programs: a Raye window with a progress bar when one gets ready, showing each step live (preparing, installing, setting up) instead of a single notification"
+        ],
+        [
+          "planned",
           "Forgot your password? Reset it from the sign-in screen, with a recovery key made in Setup or with your Raye account"
         ],
         [

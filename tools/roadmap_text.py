@@ -61,6 +61,7 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
+    "Windows programs: a Raye window with a progress bar when one gets ready, showing each step live (preparing, installing, setting up) instead of a single notification": "Programmes Windows : une fenêtre Raye avec une barre de progression quand un programme se prépare, qui montre chaque étape en direct (préparation, installation, configuration) au lieu d'une seule notification",
     "Fix for the sign-in screen that shows only its background on some PCs (it still works when you type your password)": "Correctif pour l'écran de connexion qui n'affiche que son fond sur certains PC (il fonctionne quand même quand on tape son mot de passe)",
     "Community idea: DankMaterialShell (DMS) as a one-click setup for Hyprland, and for niri and MangoWC once Raye offers them": "Idée de la communauté : DankMaterialShell (DMS) comme configuration en un clic pour Hyprland, et pour niri et MangoWC quand Raye les proposera",
     "Community idea: Horizon (Minecraft Java rewritten in Rust, faster) in the Store, with Game Mode while you play": "Idée de la communauté : Horizon (Minecraft Java réécrit en Rust, plus rapide) dans le Store, avec le mode Jeu pendant la partie",
