@@ -272,6 +272,18 @@
           "Every language: all of Raye translated"
         ],
         [
+          "planned",
+          "Raye WinLayer: Raye's Windows layer, faster with ntsync, a ready recipe for each tested app (components installed by themselves), and a diagnosis that suggests a fix when an app crashes"
+        ],
+        [
+          "planned",
+          "An automated lab that installs and tests Windows apps on its own, compares them with Windows and fixes what breaks"
+        ],
+        [
+          "planned",
+          "Raye WinLayer engine: new parts built by Raye on the ReactOS foundation take over step by step, first for console tools and small apps"
+        ],
+        [
           "doing",
           "40+ popular Windows apps in the Store, each one tested, and \"Optimized for Raye\" badges"
         ],
