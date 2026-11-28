@@ -269,6 +269,10 @@
         ],
         [
           "planned",
+          "Fix: Windows apps from the Store are checked after install, so a missing file (like FL Studio's \"QuickFontCache DLL not found\") is caught and repaired by itself, for every app"
+        ],
+        [
+          "planned",
           "Welcome app after install: quick setup (drivers, updates, apps, Raye account, look) and where to get help"
         ],
         [
