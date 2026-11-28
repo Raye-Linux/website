@@ -146,6 +146,10 @@
         [
           "planned",
           "Verified boot: the kernel, its startup files and its boot options in one image signed with Raye's key (UKI), so the PC refuses to start anything that was changed"
+        ],
+        [
+          "planned",
+          "An immutable edition: the whole system checked at every start (dm-verity), with updates that switch in one go"
         ]
       ]
     },
@@ -192,10 +196,6 @@
         [
           "planned",
           "More desktops to choose from: GNOME and niri, with a Windows look"
-        ],
-        [
-          "planned",
-          "An immutable edition: the whole system checked at every start (dm-verity), with updates that switch in one go"
         ]
       ]
     }
