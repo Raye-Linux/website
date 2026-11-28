@@ -142,6 +142,10 @@
         [
           "planned",
           "A new website: a simpler, hand-made look with one real screenshot on the home page, an honest \"Is Raye for you?\" part, and full documentation with a sidebar and search (install, updates, games, Windows programs, help)"
+        ],
+        [
+          "planned",
+          "Verified boot: the kernel, its startup files and its boot options in one image signed with Raye's key (UKI), so the PC refuses to start anything that was changed"
         ]
       ]
     },
@@ -188,6 +192,10 @@
         [
           "planned",
           "More desktops to choose from: GNOME and niri, with a Windows look"
+        ],
+        [
+          "planned",
+          "An immutable edition: the whole system checked at every start (dm-verity), with updates that switch in one go"
         ]
       ]
     }
