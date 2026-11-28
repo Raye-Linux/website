@@ -61,6 +61,7 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
+    "FL Studio runs great on Raye: tested in the lab, its own recipe, low latency, and Open in the Store launches FL Studio itself, not one of its plugins": "FL Studio tourne super bien sur Raye : testé au labo, sa propre recette, faible latence, et Ouvrir dans le Store lance FL Studio lui-même, pas un de ses plugins",
     "Raye ASIO: low-latency audio for music apps like FL Studio, through PipeWire": "Raye ASIO : un son à faible latence pour les logiciels de musique comme FL Studio, grâce à PipeWire",
     "Fix: a Windows program installed by double-click always shows up in Start and as installed in the Store, even if the PC went to sleep or was turned off during setup, and its space is never lost": "Correctif : un programme Windows installé par double-clic apparaît toujours dans Démarrer et comme installé dans le Store, même si le PC s'est mis en veille ou a été éteint pendant l'installation, et son espace n'est jamais perdu",
     "V1.3 · December": "V1.3 · décembre",
