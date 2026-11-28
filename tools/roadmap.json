@@ -273,6 +273,10 @@
         ],
         [
           "planned",
+          "Fix: Bluetooth devices with no screen or code (adapters, headphones) pair without asking for a PIN or saying the code does not match"
+        ],
+        [
+          "planned",
           "Welcome app after install: quick setup (drivers, updates, apps, Raye account, look) and where to get help"
         ],
         [

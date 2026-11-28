@@ -61,6 +61,7 @@ FR = {
     "V1 Beta 2 · out November 21": "V1 Bêta 2 · sortie le 21 novembre",
     "V1 final": "V1 finale",
     "V1 · end of November": "V1 · fin novembre",
+    "Fix: Bluetooth devices with no screen or code (adapters, headphones) pair without asking for a PIN or saying the code does not match": "Correctif : les appareils Bluetooth sans écran ni code (adaptateurs, écouteurs) s'appairent sans demander de code PIN ni dire que le code ne correspond pas",
     "Fix: Windows apps from the Store are checked after install, so a missing file (like FL Studio's \"QuickFontCache DLL not found\") is caught and repaired by itself, for every app": "Correctif : les applis Windows du Store sont vérifiées après l'installation, pour qu'un fichier manquant (comme « QuickFontCache DLL not found » de FL Studio) soit repéré et réparé tout seul, pour chaque appli",
     "FL Studio runs great on Raye: tested in the lab, its own recipe, low latency, and Open in the Store launches FL Studio itself, not one of its plugins": "FL Studio tourne super bien sur Raye : testé au labo, sa propre recette, faible latence, et Ouvrir dans le Store lance FL Studio lui-même, pas un de ses plugins",
     "Raye ASIO: low-latency audio for music apps like FL Studio, through PipeWire": "Raye ASIO : un son à faible latence pour les logiciels de musique comme FL Studio, grâce à PipeWire",
