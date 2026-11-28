@@ -134,6 +134,14 @@
         [
           "planned",
           "A Team page on the website: everyone accepted into the Raye team shows up on their own, grouped by role (team, developers, translators, contributors, testers), with their Discord name and picture, or their Raye account's picture"
+        ],
+        [
+          "planned",
+          "Raye's own code forge (Forgejo) for all the source code, with issues and pull requests; GitHub, Codeberg and GitLab stay as mirrors"
+        ],
+        [
+          "planned",
+          "A new website: a simpler, hand-made look with one real screenshot on the home page, an honest \"Is Raye for you?\" part, and full documentation with a sidebar and search (install, updates, games, Windows programs, help)"
         ]
       ]
     },
