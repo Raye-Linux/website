@@ -77,6 +77,10 @@
         ],
         [
           "planned",
+          "Fix: the Devices page of the Raye account shows the version of Raye each PC really runs, kept up to date"
+        ],
+        [
+          "planned",
           "Raye Setup: the slides shown during the install use the new screenshots of the real system, the same as the website"
         ],
         [
@@ -106,6 +110,14 @@
         [
           "planned",
           "Raye WinLayer tuned for Raye: the Raye kernel's speedups, lab-tested recipes sent to every Raye PC, and graphics drivers already in place"
+        ],
+        [
+          "planned",
+          "Raye WinLayer: programs that need the original .NET Framework or Edge's WebView2 start too"
+        ],
+        [
+          "planned",
+          "Raye WinLayer: the first program opens fast after install, and installers no longer show an old-style gray window"
         ],
         [
           "doing",
